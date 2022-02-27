@@ -1,0 +1,162 @@
+{
+  "ver": "2.1.10",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "92bd926b-ce01-4dbd-b826-8cf62e61d532",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "6f07a": {
+      "importer": "gltf-mesh",
+      "uuid": "92bd926b-ce01-4dbd-b826-8cf62e61d532@6f07a",
+      "displayName": "",
+      "id": "6f07a",
+      "name": "Arrow5.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "73b7f": {
+      "importer": "gltf-animation",
+      "uuid": "92bd926b-ce01-4dbd-b826-8cf62e61d532@73b7f",
+      "displayName": "",
+      "id": "73b7f",
+      "name": "Take 001.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 3.3333332538604736
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "8ed8f": {
+      "importer": "texture",
+      "uuid": "92bd926b-ce01-4dbd-b826-8cf62e61d532@8ed8f",
+      "displayName": "",
+      "id": "8ed8f",
+      "name": "Map #53.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/3D/GeneralAssets/Materials/Arrow5Albedo.png"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f15f6": {
+      "importer": "texture",
+      "uuid": "92bd926b-ce01-4dbd-b826-8cf62e61d532@f15f6",
+      "displayName": "",
+      "id": "f15f6",
+      "name": "Map #55.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/3D/GeneralAssets/Materials/Arrow5Normal.png"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "091f9": {
+      "importer": "gltf-scene",
+      "uuid": "92bd926b-ce01-4dbd-b826-8cf62e61d532@091f9",
+      "displayName": "",
+      "id": "091f9",
+      "name": "Arrow5.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Map #53",
+        "remap": "db://assets/3D/GeneralAssets/Materials/Arrow5Albedo.png",
+        "uri": "db://assets/3D/GeneralAssets/Materials/Arrow5Albedo.png"
+      },
+      {
+        "name": "Map #55",
+        "remap": "db://assets/3D/GeneralAssets/Materials/Arrow5Normal.png",
+        "uri": "db://assets/3D/GeneralAssets/Materials/Arrow5Normal.png"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "Take 001",
+        "duration": 3.3333332538604736,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Take 001",
+            "from": 0,
+            "to": 3.3333332538604736,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "92bd926b-ce01-4dbd-b826-8cf62e61d532@091f9",
+    "assetFinder": {
+      "meshes": [
+        "92bd926b-ce01-4dbd-b826-8cf62e61d532@6f07a"
+      ],
+      "skeletons": [],
+      "textures": [
+        "92bd926b-ce01-4dbd-b826-8cf62e61d532@8ed8f",
+        "92bd926b-ce01-4dbd-b826-8cf62e61d532@f15f6"
+      ],
+      "materials": [
+        "4ad8f02e-1500-4b2b-93d2-e5ad8154aa6a"
+      ],
+      "scenes": [
+        "92bd926b-ce01-4dbd-b826-8cf62e61d532@091f9"
+      ]
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/3D/GeneralAssets/Materials"
+  }
+}
