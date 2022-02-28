@@ -1,0 +1,429 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 703,
+      "max": [
+        0.9118397235870361,
+        2.6856958866119385,
+        0.8711321949958801
+      ],
+      "min": [
+        -0.9517479538917542,
+        0.0020513921044766903,
+        -0.8779948353767395
+      ],
+      "name": "Tree_02/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 703,
+      "name": "Tree_02/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 703,
+      "name": "Tree_02/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 32,
+      "componentType": 5123,
+      "count": 703,
+      "name": "Tree_02/JOINTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 40,
+      "componentType": 5126,
+      "count": 703,
+      "name": "Tree_02/WEIGHTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 3828,
+      "name": "Tree_02/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 2,
+      "name": "/InverseBindMatrices",
+      "type": "MAT4"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 200,
+      "max": [
+        8.291666984558105
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "joint1/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 200,
+      "name": "joint1/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 200,
+      "name": "joint1/rotation/Output",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 200,
+      "name": "joint1/scale/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 200,
+      "max": [
+        8.291666984558105
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "joint2/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 200,
+      "name": "joint2/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 200,
+      "name": "joint2/rotation/Output",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 200,
+      "name": "joint2/scale/Output",
+      "type": "VEC3"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 2,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 2,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 2,
+          "target": {
+            "node": 2,
+            "path": "scale"
+          }
+        },
+        {
+          "sampler": 3,
+          "target": {
+            "node": 3,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 4,
+          "target": {
+            "node": 3,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 5,
+          "target": {
+            "node": 3,
+            "path": "scale"
+          }
+        }
+      ],
+      "name": "Take 001",
+      "samplers": [
+        {
+          "input": 7,
+          "output": 8
+        },
+        {
+          "input": 7,
+          "output": 9
+        },
+        {
+          "input": 7,
+          "output": 10
+        },
+        {
+          "input": 11,
+          "output": 12
+        },
+        {
+          "input": 11,
+          "output": 13
+        },
+        {
+          "input": 11,
+          "output": 14
+        }
+      ]
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 39368,
+      "byteStride": 56,
+      "name": "Tree_02",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 15312,
+      "byteOffset": 39368
+    },
+    {
+      "buffer": 0,
+      "byteLength": 128,
+      "byteOffset": 54680
+    },
+    {
+      "buffer": 0,
+      "byteLength": 800,
+      "byteOffset": 54808
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2400,
+      "byteOffset": 55608
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3200,
+      "byteOffset": 58008
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2400,
+      "byteOffset": 61208
+    },
+    {
+      "buffer": 0,
+      "byteLength": 800,
+      "byteOffset": 63608
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2400,
+      "byteOffset": 64408
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3200,
+      "byteOffset": 66808
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2400,
+      "byteOffset": 70008
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 72408,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/39ea6d81-79ba-4d30-ae61-41c0474dc700/output/.fbm/6D7925C2/Drvo 2.fbm/Medieval_Obj_resize.png",
+          "relativeFileName": "../../../temp/asset-db/assets/fbx.FBX-glTF-conv/39ea6d81-79ba-4d30-ae61-41c0474dc700/output/.fbm/6D7925C2/Drvo 2.fbm/Medieval_Obj_resize.png"
+        }
+      },
+      "name": "DiffuseColor_Texture",
+      "uri": "Medieval_Obj_resize.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "BLEND",
+      "name": "Medieval_Obj",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Tree_02",
+      "primitives": [
+        {
+          "attributes": {
+            "JOINTS_0": 3,
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "WEIGHTS_0": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "mesh": 0,
+      "name": "Tree_02",
+      "scale": [
+        0.02916947565972805,
+        0.02916947565972805,
+        0.02916947565972805
+      ],
+      "skin": 0
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "transform1",
+      "scale": [
+        34.282413482666016,
+        34.282413482666016,
+        34.282413482666016
+      ]
+    },
+    {
+      "children": [
+        3
+      ],
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "joint1",
+      "rotation": [
+        0.020943161100149155,
+        0.0,
+        0.0,
+        0.9997806549072266
+      ]
+    },
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "joint2",
+      "rotation": [
+        0.08643286675214767,
+        0.0,
+        0.0,
+        0.9962576627731323
+      ],
+      "scale": [
+        1.0,
+        0.9648851752281189,
+        1.0975326299667358
+      ],
+      "translation": [
+        0.001090202247723937,
+        0.018488649278879166,
+        1.3877787497621727e-19
+      ]
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "inverseBindMatrices": 6,
+      "joints": [
+        2,
+        3
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "DiffuseColor_Texture",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

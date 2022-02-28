@@ -1,0 +1,343 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 96,
+      "max": [
+        1.0000001192092896,
+        0.007976963184773922,
+        0.9999998211860657
+      ],
+      "min": [
+        -0.9999994039535522,
+        -4.76837147544984e-09,
+        -0.9999991059303284
+      ],
+      "name": "Voda/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 96,
+      "name": "Voda/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 96,
+      "name": "Voda/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 32,
+      "componentType": 5123,
+      "count": 96,
+      "name": "Voda/JOINTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 40,
+      "componentType": 5126,
+      "count": 96,
+      "name": "Voda/WEIGHTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 372,
+      "name": "Voda/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1,
+      "name": "/InverseBindMatrices",
+      "type": "MAT4"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 100,
+      "max": [
+        4.166666507720947
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "joint18/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 100,
+      "name": "joint18/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 100,
+      "name": "joint18/rotation/Output",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 100,
+      "name": "joint18/scale/Output",
+      "type": "VEC3"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 2,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 2,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 2,
+          "target": {
+            "node": 2,
+            "path": "scale"
+          }
+        }
+      ],
+      "name": "Take 001",
+      "samplers": [
+        {
+          "input": 7,
+          "output": 8
+        },
+        {
+          "input": 7,
+          "output": 9
+        },
+        {
+          "input": 7,
+          "output": 10
+        }
+      ]
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 5376,
+      "byteStride": 56,
+      "name": "Voda",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1488,
+      "byteOffset": 5376
+    },
+    {
+      "buffer": 0,
+      "byteLength": 64,
+      "byteOffset": 6864
+    },
+    {
+      "buffer": 0,
+      "byteLength": 400,
+      "byteOffset": 6928
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1200,
+      "byteOffset": 7328
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1600,
+      "byteOffset": 8528
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1200,
+      "byteOffset": 10128
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 11328,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/0133b546-fb9a-42c6-a767-72a559837e3b/output/.fbm/FF227EB/Voda.fbm/Water 0339normal.jpg",
+          "relativeFileName": "../../../temp/asset-db/assets/fbx.FBX-glTF-conv/0133b546-fb9a-42c6-a767-72a559837e3b/output/.fbm/FF227EB/Voda.fbm/Water 0339normal.jpg"
+        }
+      },
+      "name": "file7",
+      "uri": "Water 0339normal.jpg"
+    }
+  ],
+  "materials": [
+    {
+      "emissiveFactor": [
+        0.0,
+        0.21632865071296692,
+        0.3970588445663452
+      ],
+      "name": "Crystal01Diffuse",
+      "normalTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.3966025114059448,
+          0.7279411554336548,
+          1.0
+        ]
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Voda",
+      "primitives": [
+        {
+          "attributes": {
+            "JOINTS_0": 3,
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "WEIGHTS_0": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "mesh": 0,
+      "name": "Voda",
+      "rotation": [
+        0.0,
+        0.6904217600822449,
+        0.0,
+        0.7234070897102356
+      ],
+      "scale": [
+        0.8732422590255737,
+        0.8732422590255737,
+        0.8732422590255737
+      ],
+      "skin": 0,
+      "translation": [
+        -2.8018396847073745e-07,
+        0.017110755667090416,
+        2.8704971555271186e-07
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "transform92",
+      "rotation": [
+        0.0,
+        -0.6904217600822449,
+        0.0,
+        0.7234070897102356
+      ],
+      "scale": [
+        1.1451575756072998,
+        1.1451575756072998,
+        1.1451575756072998
+      ],
+      "translation": [
+        3.4332276754867053e-07,
+        -0.01959451101720333,
+        3.0517577442878974e-07
+      ]
+    },
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "joint18",
+      "rotation": [
+        0.0,
+        -0.005740764085203409,
+        0.0,
+        0.999983549118042
+      ],
+      "translation": [
+        0.0,
+        0.022293107584118843,
+        0.0
+      ]
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "inverseBindMatrices": 6,
+      "joints": [
+        2
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "file7",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
