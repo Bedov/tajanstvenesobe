@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 9639.449667006731,
+    "mTimestamp": 10653.096332999994,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -425,7 +425,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 21295.813833028078,
+    "mTimestamp": 22353.516458,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -1426,7 +1426,7 @@
     ]
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1646081580835,
+    "mTimestamp": 1646127309261,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -1565,6 +1565,206 @@
       }
     ]
   },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/DetectTypeOfDevice.ts": {
+    "mTimestamp": 1646062592771.793,
+    "chunkId": "assets/Scripts/DetectTypeOfDevice.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 91
+          },
+          "end": {
+            "line": 2,
+            "column": 95
+          }
+        }
+      },
+      {
+        "value": "./GameManager",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 28
+          },
+          "end": {
+            "line": 3,
+            "column": 43
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/BackUp/FirstPersonCameraRotate.ts": {
+    "mTimestamp": 1646062592771.0393,
+    "chunkId": "assets/Scripts/BackUp/FirstPersonCameraRotate.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 15
+          },
+          "end": {
+            "line": 15,
+            "column": 19
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/BackUp/FirstPersonCameraGroundMovement.ts": {
+    "mTimestamp": 1646062592770.92,
+    "chunkId": "assets/Scripts/BackUp/FirstPersonCameraGroundMovement.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 18
+          },
+          "end": {
+            "line": 17,
+            "column": 22
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/FirstPersonCameraMovement.ts": {
+    "mTimestamp": 1646062592771.9143,
+    "chunkId": "assets/Scripts/FirstPersonCameraMovement.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 17
+          },
+          "end": {
+            "line": 23,
+            "column": 21
+          }
+        }
+      },
+      {
+        "value": "./GameManager",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 28,
+            "column": 43
+          },
+          "end": {
+            "line": 28,
+            "column": 58
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      }
+    ]
+  },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Checkpoint/Checkpoint.ts": {
     "mTimestamp": 1646062592771.2454,
     "chunkId": "assets/Scripts/Checkpoint/Checkpoint.js",
@@ -1680,328 +1880,6 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Consequences/ConsequenceTurnOff.ts": {
-    "mTimestamp": 1646062592771.6765,
-    "chunkId": "assets/Scripts/Consequences/ConsequenceTurnOff.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 60
-          },
-          "end": {
-            "line": 2,
-            "column": 64
-          }
-        }
-      },
-      {
-        "value": "./Consequence",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 28
-          },
-          "end": {
-            "line": 3,
-            "column": 43
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Consequences/Consequence.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/FirstPersonCameraMovement.ts": {
-    "mTimestamp": 1646062592771.9143,
-    "chunkId": "assets/Scripts/FirstPersonCameraMovement.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 23,
-            "column": 17
-          },
-          "end": {
-            "line": 23,
-            "column": 21
-          }
-        }
-      },
-      {
-        "value": "./GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 28,
-            "column": 43
-          },
-          "end": {
-            "line": 28,
-            "column": 58
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/FollowGoForward.ts": {
-    "mTimestamp": 1646062592772.0303,
-    "chunkId": "assets/Scripts/FollowGoForward.js",
-    "imports": [
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 56
-          },
-          "end": {
-            "line": 2,
-            "column": 60
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts": {
-    "mTimestamp": 1646062592772.495,
-    "chunkId": "assets/Scripts/RemoteScripts/JSONloader.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 142
-          },
-          "end": {
-            "line": 2,
-            "column": 146
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 23,
-            "column": 28
-          },
-          "end": {
-            "line": 23,
-            "column": 44
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GhostCameraMovement.ts": {
-    "mTimestamp": 1646062592772.2686,
-    "chunkId": "assets/Scripts/GhostCameraMovement.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 17,
-            "column": 18
-          },
-          "end": {
-            "line": 17,
-            "column": 22
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/DetectTypeOfDevice.ts": {
-    "mTimestamp": 1646062592771.793,
-    "chunkId": "assets/Scripts/DetectTypeOfDevice.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 91
-          },
-          "end": {
-            "line": 2,
-            "column": 95
-          }
-        }
-      },
-      {
-        "value": "./GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 28
-          },
-          "end": {
-            "line": 3,
-            "column": 43
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      }
-    ]
-  },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts": {
     "mTimestamp": 1646062592772.1484,
     "chunkId": "assets/Scripts/GameManager.js",
@@ -2063,9 +1941,9 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/SlideRotateCamera.ts": {
-    "mTimestamp": 1646062592772.6182,
-    "chunkId": "assets/Scripts/SlideRotateCamera.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GhostCameraMovement.ts": {
+    "mTimestamp": 1646062592772.2686,
+    "chunkId": "assets/Scripts/GhostCameraMovement.js",
     "imports": [
       {
         "value": "cce:/internal/code-quality/cr.mjs",
@@ -2078,26 +1956,12 @@
         "value": "cc",
         "loc": {
           "start": {
-            "line": 13,
-            "column": 15
+            "line": 17,
+            "column": 18
           },
           "end": {
-            "line": 13,
-            "column": 19
-          }
-        }
-      },
-      {
-        "value": "./GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 32,
-            "column": 43
-          },
-          "end": {
-            "line": 32,
-            "column": 58
+            "line": 17,
+            "column": 22
           }
         }
       }
@@ -2117,107 +1981,6 @@
       {
         "isExternal": false,
         "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts": {
-    "mTimestamp": 1646062592772.818,
-    "chunkId": "assets/Scripts/Tasks/Task.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 71
-          },
-          "end": {
-            "line": 2,
-            "column": 75
-          }
-        }
-      },
-      {
-        "value": "../Utilities/GenericUI",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 7,
-            "column": 26
-          },
-          "end": {
-            "line": 7,
-            "column": 50
-          }
-        }
-      },
-      {
-        "value": "../Consequences/Consequence",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 8,
-            "column": 28
-          },
-          "end": {
-            "line": 8,
-            "column": 57
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_3",
-        "loc": {
-          "start": {
-            "line": 9,
-            "column": 28
-          },
-          "end": {
-            "line": 9,
-            "column": 44
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Consequences/Consequence.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
       }
     ]
   },
@@ -2315,182 +2078,6 @@
       {
         "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.ts": {
-    "mTimestamp": 1646062592773.1636,
-    "chunkId": "assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 112
-          },
-          "end": {
-            "line": 2,
-            "column": 116
-          }
-        }
-      },
-      {
-        "value": "./Task",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 9,
-            "column": 21
-          },
-          "end": {
-            "line": 9,
-            "column": 29
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts": {
-    "mTimestamp": 1646062592773.277,
-    "chunkId": "assets/Scripts/Tasks/TaskInput.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 112
-          },
-          "end": {
-            "line": 2,
-            "column": 116
-          }
-        }
-      },
-      {
-        "value": "./Task",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 9,
-            "column": 21
-          },
-          "end": {
-            "line": 9,
-            "column": 29
-          }
-        }
-      },
-      {
-        "value": "../RemoteScripts/JSONloader",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 11,
-            "column": 38
-          },
-          "end": {
-            "line": 11,
-            "column": 67
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_3",
-        "loc": {
-          "start": {
-            "line": 13,
-            "column": 28
-          },
-          "end": {
-            "line": 13,
-            "column": 44
-          }
-        }
-      },
-      {
-        "value": "../Utilities/GenericUI-Input",
-        "rewritten": "__unresolved_4",
-        "loc": {
-          "start": {
-            "line": 14,
-            "column": 31
-          },
-          "end": {
-            "line": 14,
-            "column": 61
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Input.ts"
       }
     ]
   },
@@ -2627,9 +2214,9 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskSimplePanel.ts": {
-    "mTimestamp": 1646062592773.5012,
-    "chunkId": "assets/Scripts/Tasks/TaskSimplePanel.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Consequences/ConsequenceTurnOff.ts": {
+    "mTimestamp": 1646062592771.6765,
+    "chunkId": "assets/Scripts/Consequences/ConsequenceTurnOff.js",
     "imports": [
       {
         "value": "cce:/internal/code-quality/cr.mjs",
@@ -2643,67 +2230,25 @@
         "loc": {
           "start": {
             "line": 2,
-            "column": 64
+            "column": 60
           },
           "end": {
             "line": 2,
-            "column": 68
+            "column": 64
           }
         }
       },
       {
-        "value": "../RemoteScripts/JSONloader",
+        "value": "./Consequence",
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
-            "line": 6,
-            "column": 31
-          },
-          "end": {
-            "line": 6,
-            "column": 60
-          }
-        }
-      },
-      {
-        "value": "../Utilities/GenericUI",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 7,
-            "column": 26
-          },
-          "end": {
-            "line": 7,
-            "column": 50
-          }
-        }
-      },
-      {
-        "value": "./Task",
-        "rewritten": "__unresolved_3",
-        "loc": {
-          "start": {
-            "line": 8,
-            "column": 21
-          },
-          "end": {
-            "line": 8,
-            "column": 29
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_4",
-        "loc": {
-          "start": {
-            "line": 9,
+            "line": 3,
             "column": 28
           },
           "end": {
-            "line": 9,
-            "column": 44
+            "line": 3,
+            "column": 43
           }
         }
       }
@@ -2726,19 +2271,42 @@
       },
       {
         "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts"
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Consequences/Consequence.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/FollowGoForward.ts": {
+    "mTimestamp": 1646062592772.0303,
+    "chunkId": "assets/Scripts/FollowGoForward.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 56
+          },
+          "end": {
+            "line": 2,
+            "column": 60
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+        "url": "cce:/internal/x/cc"
       }
     ]
   },
@@ -2875,6 +2443,243 @@
       }
     ]
   },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.ts": {
+    "mTimestamp": 1646062592773.1636,
+    "chunkId": "assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 112
+          },
+          "end": {
+            "line": 2,
+            "column": 116
+          }
+        }
+      },
+      {
+        "value": "./Task",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 21
+          },
+          "end": {
+            "line": 9,
+            "column": 29
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/SlideRotateCamera.ts": {
+    "mTimestamp": 1646062592772.6182,
+    "chunkId": "assets/Scripts/SlideRotateCamera.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 15
+          },
+          "end": {
+            "line": 13,
+            "column": 19
+          }
+        }
+      },
+      {
+        "value": "./GameManager",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 32,
+            "column": 43
+          },
+          "end": {
+            "line": 32,
+            "column": 58
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts": {
+    "mTimestamp": 1646062592773.277,
+    "chunkId": "assets/Scripts/Tasks/TaskInput.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 112
+          },
+          "end": {
+            "line": 2,
+            "column": 116
+          }
+        }
+      },
+      {
+        "value": "./Task",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 21
+          },
+          "end": {
+            "line": 9,
+            "column": 29
+          }
+        }
+      },
+      {
+        "value": "../RemoteScripts/JSONloader",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 38
+          },
+          "end": {
+            "line": 11,
+            "column": 67
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 28
+          },
+          "end": {
+            "line": 13,
+            "column": 44
+          }
+        }
+      },
+      {
+        "value": "../Utilities/GenericUI-Input",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 31
+          },
+          "end": {
+            "line": 14,
+            "column": 61
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Input.ts"
+      }
+    ]
+  },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskSubtitle.ts": {
     "mTimestamp": 1646062592773.725,
     "chunkId": "assets/Scripts/Tasks/TaskSubtitle.js",
@@ -2951,6 +2756,473 @@
       {
         "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonActivate.ts": {
+    "mTimestamp": 1646062592774.175,
+    "chunkId": "assets/Scripts/UI/3DbuttonActivate.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 55
+          },
+          "end": {
+            "line": 2,
+            "column": 59
+          }
+        }
+      },
+      {
+        "value": "../Tasks/Task",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 22
+          },
+          "end": {
+            "line": 17,
+            "column": 37
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonRaycast.ts": {
+    "mTimestamp": 1646062592774.2876,
+    "chunkId": "assets/Scripts/UI/3DbuttonRaycast.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 17
+          },
+          "end": {
+            "line": 24,
+            "column": 21
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 25,
+            "column": 43
+          },
+          "end": {
+            "line": 25,
+            "column": 59
+          }
+        }
+      },
+      {
+        "value": "../UI/3DbuttonActivate",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 40,
+            "column": 33
+          },
+          "end": {
+            "line": 40,
+            "column": 57
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonActivate.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/ButtonDelegator.ts": {
+    "mTimestamp": 1646062592774.4048,
+    "chunkId": "assets/Scripts/UI/ButtonDelegator.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 44
+          },
+          "end": {
+            "line": 2,
+            "column": 48
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 28
+          },
+          "end": {
+            "line": 3,
+            "column": 44
+          }
+        }
+      },
+      {
+        "value": "../Tasks/TaskManager",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 28
+          },
+          "end": {
+            "line": 4,
+            "column": 50
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskSimplePanelClickableObject.ts": {
+    "mTimestamp": 1646062592773.61,
+    "chunkId": "assets/Scripts/Tasks/TaskSimplePanelClickableObject.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 71
+          },
+          "end": {
+            "line": 2,
+            "column": 75
+          }
+        }
+      },
+      {
+        "value": "../RemoteScripts/JSONloader",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 31
+          },
+          "end": {
+            "line": 6,
+            "column": 60
+          }
+        }
+      },
+      {
+        "value": "../Utilities/ScriptEffects",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 30
+          },
+          "end": {
+            "line": 7,
+            "column": 58
+          }
+        }
+      },
+      {
+        "value": "../Utilities/GenericUI",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 26
+          },
+          "end": {
+            "line": 8,
+            "column": 50
+          }
+        }
+      },
+      {
+        "value": "./Task",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 21
+          },
+          "end": {
+            "line": 9,
+            "column": 29
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_5",
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 28
+          },
+          "end": {
+            "line": 10,
+            "column": 44
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskSimplePanel.ts": {
+    "mTimestamp": 1646062592773.5012,
+    "chunkId": "assets/Scripts/Tasks/TaskSimplePanel.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 64
+          },
+          "end": {
+            "line": 2,
+            "column": 68
+          }
+        }
+      },
+      {
+        "value": "../RemoteScripts/JSONloader",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 31
+          },
+          "end": {
+            "line": 6,
+            "column": 60
+          }
+        }
+      },
+      {
+        "value": "../Utilities/GenericUI",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 26
+          },
+          "end": {
+            "line": 7,
+            "column": 50
+          }
+        }
+      },
+      {
+        "value": "./Task",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 21
+          },
+          "end": {
+            "line": 8,
+            "column": 29
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 28
+          },
+          "end": {
+            "line": 9,
+            "column": 44
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
       }
     ]
   },
@@ -3105,131 +3377,9 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/TouchInput.ts": {
-    "mTimestamp": 1646062592773.991,
-    "chunkId": "assets/Scripts/TouchInput.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 109
-          },
-          "end": {
-            "line": 2,
-            "column": 113
-          }
-        }
-      },
-      {
-        "value": "./GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 18,
-            "column": 28
-          },
-          "end": {
-            "line": 18,
-            "column": 43
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonActivate.ts": {
-    "mTimestamp": 1646062592774.175,
-    "chunkId": "assets/Scripts/UI/3DbuttonActivate.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 55
-          },
-          "end": {
-            "line": 2,
-            "column": 59
-          }
-        }
-      },
-      {
-        "value": "../Tasks/Task",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 17,
-            "column": 22
-          },
-          "end": {
-            "line": 17,
-            "column": 37
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/ButtonDelegator.ts": {
-    "mTimestamp": 1646062592774.4048,
-    "chunkId": "assets/Scripts/UI/ButtonDelegator.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/ButtonTopview.ts": {
+    "mTimestamp": 1646062592774.6335,
+    "chunkId": "assets/Scripts/UI/ButtonTopview.js",
     "imports": [
       {
         "value": "cce:/internal/code-quality/cr.mjs",
@@ -3266,215 +3416,80 @@
         }
       },
       {
-        "value": "../Tasks/TaskManager",
+        "value": "../Utilities/TopCameraLook",
         "rewritten": "__unresolved_2",
         "loc": {
           "start": {
             "line": 4,
-            "column": 28
-          },
-          "end": {
-            "line": 4,
-            "column": 50
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonRaycast.ts": {
-    "mTimestamp": 1646062592774.2876,
-    "chunkId": "assets/Scripts/UI/3DbuttonRaycast.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 24,
-            "column": 17
-          },
-          "end": {
-            "line": 24,
-            "column": 21
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 25,
-            "column": 43
-          },
-          "end": {
-            "line": 25,
-            "column": 59
-          }
-        }
-      },
-      {
-        "value": "../UI/3DbuttonActivate",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 40,
-            "column": 33
-          },
-          "end": {
-            "line": 40,
-            "column": 57
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonActivate.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskSimplePanelClickableObject.ts": {
-    "mTimestamp": 1646062592773.61,
-    "chunkId": "assets/Scripts/Tasks/TaskSimplePanelClickableObject.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 71
-          },
-          "end": {
-            "line": 2,
-            "column": 75
-          }
-        }
-      },
-      {
-        "value": "../RemoteScripts/JSONloader",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 6,
-            "column": 31
-          },
-          "end": {
-            "line": 6,
-            "column": 60
-          }
-        }
-      },
-      {
-        "value": "../Utilities/ScriptEffects",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 7,
             "column": 30
           },
           "end": {
-            "line": 7,
+            "line": 4,
             "column": 58
           }
         }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
       },
       {
-        "value": "../Utilities/GenericUI",
-        "rewritten": "__unresolved_3",
-        "loc": {
-          "start": {
-            "line": 8,
-            "column": 26
-          },
-          "end": {
-            "line": 8,
-            "column": 50
-          }
-        }
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
       },
       {
-        "value": "./Task",
-        "rewritten": "__unresolved_4",
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/TopCameraLook.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/KeyboardNumericInput.ts": {
+    "mTimestamp": 1646062592774.753,
+    "chunkId": "assets/Scripts/UI/KeyboardNumericInput.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
         "loc": {
           "start": {
-            "line": 9,
-            "column": 21
+            "line": 2,
+            "column": 44
           },
           "end": {
-            "line": 9,
-            "column": 29
+            "line": 2,
+            "column": 48
           }
         }
       },
       {
         "value": "../GameManager",
-        "rewritten": "__unresolved_5",
+        "rewritten": "__unresolved_1",
         "loc": {
           "start": {
-            "line": 10,
+            "line": 3,
             "column": 28
           },
           "end": {
-            "line": 10,
+            "line": 3,
             "column": 44
           }
         }
@@ -3498,15 +3513,106 @@
       },
       {
         "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts"
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Input.ts": {
+    "mTimestamp": 1646062592775.6313,
+    "chunkId": "assets/Scripts/Utilities/GenericUI-Input.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 161
+          },
+          "end": {
+            "line": 2,
+            "column": 165
+          }
+        }
+      },
+      {
+        "value": "../Tasks/Task",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 21
+          },
+          "end": {
+            "line": 3,
+            "column": 36
+          }
+        }
+      },
+      {
+        "value": "./ScriptEffects",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 30
+          },
+          "end": {
+            "line": 4,
+            "column": 47
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 43
+          },
+          "end": {
+            "line": 20,
+            "column": 59
+          }
+        }
+      },
+      {
+        "value": "../Tasks/TaskInput",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 26
+          },
+          "end": {
+            "line": 21,
+            "column": 46
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
+        "url": "cce:/internal/x/cc"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts"
+        "url": "cce:/internal/x/cc"
       },
       {
         "isExternal": false,
@@ -3514,7 +3620,15 @@
       },
       {
         "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
+      },
+      {
+        "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts"
       }
     ]
   },
@@ -3597,9 +3711,9 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/KeyboardNumericInput.ts": {
-    "mTimestamp": 1646062592774.753,
-    "chunkId": "assets/Scripts/UI/KeyboardNumericInput.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts": {
+    "mTimestamp": 1646062592772.495,
+    "chunkId": "assets/Scripts/RemoteScripts/JSONloader.js",
     "imports": [
       {
         "value": "cce:/internal/code-quality/cr.mjs",
@@ -3613,11 +3727,11 @@
         "loc": {
           "start": {
             "line": 2,
-            "column": 44
+            "column": 142
           },
           "end": {
             "line": 2,
-            "column": 48
+            "column": 146
           }
         }
       },
@@ -3626,11 +3740,11 @@
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
-            "line": 3,
+            "line": 23,
             "column": 28
           },
           "end": {
-            "line": 3,
+            "line": 23,
             "column": 44
           }
         }
@@ -3655,6 +3769,304 @@
       {
         "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GetFPS.ts": {
+    "mTimestamp": 1646062592775.9006,
+    "chunkId": "assets/Scripts/Utilities/GetFPS.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 71
+          },
+          "end": {
+            "line": 2,
+            "column": 75
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/OpenLevelByName.ts": {
+    "mTimestamp": 1646062592776.0217,
+    "chunkId": "assets/Scripts/Utilities/OpenLevelByName.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 104
+          },
+          "end": {
+            "line": 2,
+            "column": 108
+          }
+        }
+      },
+      {
+        "value": "./ScriptEffects",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 30
+          },
+          "end": {
+            "line": 3,
+            "column": 47
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ArrowLookAt.ts": {
+    "mTimestamp": 1646062592774.9387,
+    "chunkId": "assets/Scripts/Utilities/ArrowLookAt.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 61
+          },
+          "end": {
+            "line": 2,
+            "column": 65
+          }
+        }
+      },
+      {
+        "value": "../Checkpoint/Checkpoint",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 27
+          },
+          "end": {
+            "line": 3,
+            "column": 53
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 28
+          },
+          "end": {
+            "line": 4,
+            "column": 44
+          }
+        }
+      },
+      {
+        "value": "../Tasks/TaskManager",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 28
+          },
+          "end": {
+            "line": 5,
+            "column": 50
+          }
+        }
+      },
+      {
+        "value": "./ButtonDisabler",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 31
+          },
+          "end": {
+            "line": 6,
+            "column": 49
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Checkpoint/Checkpoint.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ButtonDisabler.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts": {
+    "mTimestamp": 1646062592776.1394,
+    "chunkId": "assets/Scripts/Utilities/ScriptEffects.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 66
+          },
+          "end": {
+            "line": 2,
+            "column": 70
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/migrate-canvas.ts": {
+    "mTimestamp": 1646062592800.0457,
+    "chunkId": "assets/migrate-canvas.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 85
+          },
+          "end": {
+            "line": 14,
+            "column": 89
+          }
+        }
+      },
+      {
+        "value": "cc/env",
+        "loc": {
+          "start": {
+            "line": 15,
+            "column": 23
+          },
+          "end": {
+            "line": 15,
+            "column": 31
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "specifierOrURL": "cc/env",
+        "isExternal": true
       }
     ]
   },
@@ -3716,164 +4128,6 @@
       {
         "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/ButtonTopview.ts": {
-    "mTimestamp": 1646062592774.6335,
-    "chunkId": "assets/Scripts/UI/ButtonTopview.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 44
-          },
-          "end": {
-            "line": 2,
-            "column": 48
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 28
-          },
-          "end": {
-            "line": 3,
-            "column": 44
-          }
-        }
-      },
-      {
-        "value": "../Utilities/TopCameraLook",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 30
-          },
-          "end": {
-            "line": 4,
-            "column": 58
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/TopCameraLook.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Image.ts": {
-    "mTimestamp": 1646062592775.37,
-    "chunkId": "assets/Scripts/Utilities/GenericUI-Image.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 72
-          },
-          "end": {
-            "line": 2,
-            "column": 76
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 43
-          },
-          "end": {
-            "line": 3,
-            "column": 59
-          }
-        }
-      },
-      {
-        "value": "./ScriptEffects",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 5,
-            "column": 30
-          },
-          "end": {
-            "line": 5,
-            "column": 47
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
       }
     ]
   },
@@ -4027,14 +4281,10 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ArrowLookAt.ts": {
-    "mTimestamp": 1646062592774.9387,
-    "chunkId": "assets/Scripts/Utilities/ArrowLookAt.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/base/UIBase.ts": {
+    "mTimestamp": 1646062592800.513,
+    "chunkId": "assets/resources/qfw/base/UIBase.js",
     "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
       {
         "value": "cc"
       },
@@ -4042,401 +4292,65 @@
         "value": "cc",
         "loc": {
           "start": {
-            "line": 2,
-            "column": 61
-          },
-          "end": {
-            "line": 2,
-            "column": 65
-          }
-        }
-      },
-      {
-        "value": "../Checkpoint/Checkpoint",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 27
-          },
-          "end": {
-            "line": 3,
-            "column": 53
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 28
-          },
-          "end": {
-            "line": 4,
+            "line": 1,
             "column": 44
+          },
+          "end": {
+            "line": 1,
+            "column": 48
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/TouchInput.ts": {
+    "mTimestamp": 1646062592773.991,
+    "chunkId": "assets/Scripts/TouchInput.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 109
+          },
+          "end": {
+            "line": 2,
+            "column": 113
           }
         }
       },
       {
-        "value": "../Tasks/TaskManager",
-        "rewritten": "__unresolved_3",
+        "value": "./GameManager",
+        "rewritten": "__unresolved_1",
         "loc": {
           "start": {
-            "line": 5,
+            "line": 18,
             "column": 28
           },
           "end": {
-            "line": 5,
-            "column": 50
-          }
-        }
-      },
-      {
-        "value": "./ButtonDisabler",
-        "rewritten": "__unresolved_4",
-        "loc": {
-          "start": {
-            "line": 6,
-            "column": 31
-          },
-          "end": {
-            "line": 6,
-            "column": 49
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Checkpoint/Checkpoint.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ButtonDisabler.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Input.ts": {
-    "mTimestamp": 1646062592775.6313,
-    "chunkId": "assets/Scripts/Utilities/GenericUI-Input.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 161
-          },
-          "end": {
-            "line": 2,
-            "column": 165
-          }
-        }
-      },
-      {
-        "value": "../Tasks/Task",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 21
-          },
-          "end": {
-            "line": 3,
-            "column": 36
-          }
-        }
-      },
-      {
-        "value": "./ScriptEffects",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 30
-          },
-          "end": {
-            "line": 4,
-            "column": 47
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_3",
-        "loc": {
-          "start": {
-            "line": 20,
+            "line": 18,
             "column": 43
-          },
-          "end": {
-            "line": 20,
-            "column": 59
-          }
-        }
-      },
-      {
-        "value": "../Tasks/TaskInput",
-        "rewritten": "__unresolved_4",
-        "loc": {
-          "start": {
-            "line": 21,
-            "column": 26
-          },
-          "end": {
-            "line": 21,
-            "column": 46
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/OpenLevelByName.ts": {
-    "mTimestamp": 1646062592776.0217,
-    "chunkId": "assets/Scripts/Utilities/OpenLevelByName.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 104
-          },
-          "end": {
-            "line": 2,
-            "column": 108
-          }
-        }
-      },
-      {
-        "value": "./ScriptEffects",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 30
-          },
-          "end": {
-            "line": 3,
-            "column": 47
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts": {
-    "mTimestamp": 1646062592776.1394,
-    "chunkId": "assets/Scripts/Utilities/ScriptEffects.js",
-    "imports": [
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 66
-          },
-          "end": {
-            "line": 2,
-            "column": 70
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/BackUp/FirstPersonCameraRotate.ts": {
-    "mTimestamp": 1646062592771.0393,
-    "chunkId": "assets/Scripts/BackUp/FirstPersonCameraRotate.js",
-    "imports": [
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 15,
-            "column": 15
-          },
-          "end": {
-            "line": 15,
-            "column": 19
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/SettingsUI.ts": {
-    "mTimestamp": 1646062592776.2603,
-    "chunkId": "assets/Scripts/Utilities/SettingsUI.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 99
-          },
-          "end": {
-            "line": 2,
-            "column": 103
-          }
-        }
-      },
-      {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 43
-          },
-          "end": {
-            "line": 3,
-            "column": 59
-          }
-        }
-      },
-      {
-        "value": "./ScriptEffects",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 30
-          },
-          "end": {
-            "line": 4,
-            "column": 47
           }
         }
       }
@@ -4460,10 +4374,84 @@
       {
         "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/base/UIMgr.ts": {
+    "mTimestamp": 1646062592800.8008,
+    "chunkId": "assets/resources/qfw/base/UIMgr.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 184
+          },
+          "end": {
+            "line": 1,
+            "column": 188
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/LogicPoint.ts": {
+    "mTimestamp": 1646062592801.288,
+    "chunkId": "assets/resources/qfw/components/LogicPoint.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 44
+          },
+          "end": {
+            "line": 1,
+            "column": 48
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
       }
     ]
   },
@@ -4564,122 +4552,9 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/migrate-canvas.ts": {
-    "mTimestamp": 1646062592800.0457,
-    "chunkId": "assets/migrate-canvas.js",
-    "imports": [
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 14,
-            "column": 85
-          },
-          "end": {
-            "line": 14,
-            "column": 89
-          }
-        }
-      },
-      {
-        "value": "cc/env",
-        "loc": {
-          "start": {
-            "line": 15,
-            "column": 23
-          },
-          "end": {
-            "line": 15,
-            "column": 31
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "specifierOrURL": "cc/env",
-        "isExternal": true
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/base/UIController.ts": {
-    "mTimestamp": 1646062592800.6592,
-    "chunkId": "assets/resources/qfw/base/UIController.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 173
-          },
-          "end": {
-            "line": 1,
-            "column": 177
-          }
-        }
-      },
-      {
-        "value": "./UIMgr",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 22
-          },
-          "end": {
-            "line": 2,
-            "column": 31
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/base/UIMgr.ts"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/base/UIBase.ts": {
-    "mTimestamp": 1646062592800.513,
-    "chunkId": "assets/resources/qfw/base/UIBase.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/NodeFloatingAnim.ts": {
+    "mTimestamp": 1646062592801.4111,
+    "chunkId": "assets/resources/qfw/components/NodeFloatingAnim.js",
     "imports": [
       {
         "value": "cc"
@@ -4689,194 +4564,11 @@
         "loc": {
           "start": {
             "line": 1,
-            "column": 44
+            "column": 80
           },
           "end": {
             "line": 1,
-            "column": 48
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/base/UIMgr.ts": {
-    "mTimestamp": 1646062592800.8008,
-    "chunkId": "assets/resources/qfw/base/UIMgr.js",
-    "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 184
-          },
-          "end": {
-            "line": 1,
-            "column": 188
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/FollowCamera.ts": {
-    "mTimestamp": 1646062592801.1604,
-    "chunkId": "assets/resources/qfw/components/FollowCamera.js",
-    "imports": [
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 126
-          },
-          "end": {
-            "line": 1,
-            "column": 130
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/LogicPoint.ts": {
-    "mTimestamp": 1646062592801.288,
-    "chunkId": "assets/resources/qfw/components/LogicPoint.js",
-    "imports": [
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 44
-          },
-          "end": {
-            "line": 1,
-            "column": 48
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/EntryPoint.ts": {
-    "mTimestamp": 1646062592801.0288,
-    "chunkId": "assets/resources/qfw/components/EntryPoint.js",
-    "imports": [
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 44
-          },
-          "end": {
-            "line": 1,
-            "column": 48
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/NpcPoint.ts": {
-    "mTimestamp": 1646062592801.544,
-    "chunkId": "assets/resources/qfw/components/NpcPoint.js",
-    "imports": [
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 44
-          },
-          "end": {
-            "line": 1,
-            "column": 48
+            "column": 84
           }
         }
       }
@@ -4992,44 +4684,9 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/NodeFloatingAnim.ts": {
-    "mTimestamp": 1646062592801.4111,
-    "chunkId": "assets/resources/qfw/components/NodeFloatingAnim.js",
-    "imports": [
-      {
-        "value": "cc"
-      },
-      {
-        "value": "cc",
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 80
-          },
-          "end": {
-            "line": 1,
-            "column": 84
-          }
-        }
-      }
-    ],
-    "modLoMetadata": {
-      "type": "esm"
-    },
-    "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "cce:/internal/x/cc"
-      }
-    ]
-  },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/TeleportPoint.ts": {
-    "mTimestamp": 1646062592801.7896,
-    "chunkId": "assets/resources/qfw/components/TeleportPoint.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/NpcPoint.ts": {
+    "mTimestamp": 1646062592801.544,
+    "chunkId": "assets/resources/qfw/components/NpcPoint.js",
     "imports": [
       {
         "value": "cc"
@@ -5062,14 +4719,10 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/BackUp/FirstPersonCameraGroundMovement.ts": {
-    "mTimestamp": 1646062592770.92,
-    "chunkId": "assets/Scripts/BackUp/FirstPersonCameraGroundMovement.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/PlayerCtrl.ts": {
+    "mTimestamp": 1646062592801.6675,
+    "chunkId": "assets/resources/qfw/components/PlayerCtrl.js",
     "imports": [
-      {
-        "value": "cce:/internal/code-quality/cr.mjs",
-        "rewritten": "__unresolved_0"
-      },
       {
         "value": "cc"
       },
@@ -5077,12 +4730,12 @@
         "value": "cc",
         "loc": {
           "start": {
-            "line": 17,
-            "column": 18
+            "line": 1,
+            "column": 249
           },
           "end": {
-            "line": 17,
-            "column": 22
+            "line": 1,
+            "column": 253
           }
         }
       }
@@ -5091,10 +4744,6 @@
       "type": "esm"
     },
     "resolvedImports": [
-      {
-        "isExternal": false,
-        "url": "cce:/internal/code-quality/cr.mjs"
-      },
       {
         "isExternal": false,
         "url": "cce:/internal/x/cc"
@@ -5166,9 +4815,264 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/PlayerCtrl.ts": {
-    "mTimestamp": 1646062592801.6675,
-    "chunkId": "assets/resources/qfw/components/PlayerCtrl.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/SettingsUI.ts": {
+    "mTimestamp": 1646062592776.2603,
+    "chunkId": "assets/Scripts/Utilities/SettingsUI.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 99
+          },
+          "end": {
+            "line": 2,
+            "column": 103
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 43
+          },
+          "end": {
+            "line": 3,
+            "column": 59
+          }
+        }
+      },
+      {
+        "value": "./ScriptEffects",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 30
+          },
+          "end": {
+            "line": 4,
+            "column": 47
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts": {
+    "mTimestamp": 1646062592772.818,
+    "chunkId": "assets/Scripts/Tasks/Task.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 71
+          },
+          "end": {
+            "line": 2,
+            "column": 75
+          }
+        }
+      },
+      {
+        "value": "../Utilities/GenericUI",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 26
+          },
+          "end": {
+            "line": 7,
+            "column": 50
+          }
+        }
+      },
+      {
+        "value": "../Consequences/Consequence",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 28
+          },
+          "end": {
+            "line": 8,
+            "column": 57
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 28
+          },
+          "end": {
+            "line": 9,
+            "column": 44
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Consequences/Consequence.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Image.ts": {
+    "mTimestamp": 1646062592775.37,
+    "chunkId": "assets/Scripts/Utilities/GenericUI-Image.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 72
+          },
+          "end": {
+            "line": 2,
+            "column": 76
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 43
+          },
+          "end": {
+            "line": 3,
+            "column": 59
+          }
+        }
+      },
+      {
+        "value": "./ScriptEffects",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 30
+          },
+          "end": {
+            "line": 5,
+            "column": 47
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/EntryPoint.ts": {
+    "mTimestamp": 1646062592801.0288,
+    "chunkId": "assets/resources/qfw/components/EntryPoint.js",
     "imports": [
       {
         "value": "cc"
@@ -5178,11 +5082,11 @@
         "loc": {
           "start": {
             "line": 1,
-            "column": 249
+            "column": 44
           },
           "end": {
             "line": 1,
-            "column": 253
+            "column": 48
           }
         }
       }
@@ -5201,9 +5105,70 @@
       }
     ]
   },
-  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GetFPS.ts": {
-    "mTimestamp": 1646062592775.9006,
-    "chunkId": "assets/Scripts/Utilities/GetFPS.js",
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/base/UIController.ts": {
+    "mTimestamp": 1646062592800.6592,
+    "chunkId": "assets/resources/qfw/base/UIController.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 173
+          },
+          "end": {
+            "line": 1,
+            "column": 177
+          }
+        }
+      },
+      {
+        "value": "./UIMgr",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 22
+          },
+          "end": {
+            "line": 2,
+            "column": 31
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/base/UIMgr.ts"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/TeleportPoint.ts": {
+    "mTimestamp": 1646062592801.7896,
+    "chunkId": "assets/resources/qfw/components/TeleportPoint.js",
     "imports": [
       {
         "value": "cc"
@@ -5212,12 +5177,47 @@
         "value": "cc",
         "loc": {
           "start": {
-            "line": 2,
-            "column": 71
+            "line": 1,
+            "column": 44
           },
           "end": {
-            "line": 2,
-            "column": 75
+            "line": 1,
+            "column": 48
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/resources/qfw/components/FollowCamera.ts": {
+    "mTimestamp": 1646062592801.1604,
+    "chunkId": "assets/resources/qfw/components/FollowCamera.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 126
+          },
+          "end": {
+            "line": 1,
+            "column": 130
           }
         }
       }

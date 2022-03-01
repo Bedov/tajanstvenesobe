@@ -11,9 +11,9 @@
           0
         ],
         "indexView": {
-          "offset": 1876128,
-          "length": 308628,
-          "count": 77157,
+          "offset": 1814304,
+          "length": 282132,
+          "count": 70533,
           "stride": 4
         }
       },
@@ -23,9 +23,9 @@
           1
         ],
         "indexView": {
-          "offset": 4943940,
-          "length": 481128,
-          "count": 120282,
+          "offset": 4549284,
+          "length": 437364,
+          "count": 109341,
           "stride": 4
         }
       },
@@ -35,9 +35,33 @@
           2
         ],
         "indexView": {
-          "offset": 5542812,
-          "length": 46632,
-          "count": 11658,
+          "offset": 5033592,
+          "length": 21720,
+          "count": 5430,
+          "stride": 4
+        }
+      },
+      {
+        "primitiveMode": 7,
+        "vertexBundelIndices": [
+          3
+        ],
+        "indexView": {
+          "offset": 5115360,
+          "length": 19920,
+          "count": 4980,
+          "stride": 4
+        }
+      },
+      {
+        "primitiveMode": 7,
+        "vertexBundelIndices": [
+          4
+        ],
+        "indexView": {
+          "offset": 5197104,
+          "length": 26496,
+          "count": 6624,
           "stride": 4
         }
       }
@@ -46,8 +70,8 @@
       {
         "view": {
           "offset": 0,
-          "length": 1876128,
-          "count": 39086,
+          "length": 1814304,
+          "count": 37798,
           "stride": 48
         },
         "attributes": [
@@ -75,9 +99,9 @@
       },
       {
         "view": {
-          "offset": 2184756,
-          "length": 2759184,
-          "count": 57483,
+          "offset": 2096436,
+          "length": 2452848,
+          "count": 51101,
           "stride": 48
         },
         "attributes": [
@@ -105,9 +129,69 @@
       },
       {
         "view": {
-          "offset": 5425068,
-          "length": 117744,
-          "count": 2453,
+          "offset": 4986648,
+          "length": 46944,
+          "count": 978,
+          "stride": 48
+        },
+        "attributes": [
+          {
+            "name": "a_position",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_normal",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_texCoord",
+            "format": 21,
+            "isNormalized": false
+          },
+          {
+            "name": "a_tangent",
+            "format": 44,
+            "isNormalized": false
+          }
+        ]
+      },
+      {
+        "view": {
+          "offset": 5055312,
+          "length": 60048,
+          "count": 1251,
+          "stride": 48
+        },
+        "attributes": [
+          {
+            "name": "a_position",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_normal",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_texCoord",
+            "format": 21,
+            "isNormalized": false
+          },
+          {
+            "name": "a_tangent",
+            "format": 44,
+            "isNormalized": false
+          }
+        ]
+      },
+      {
+        "view": {
+          "offset": 5135280,
+          "length": 61824,
+          "count": 1288,
           "stride": 48
         },
         "attributes": [
@@ -147,5 +231,5 @@
       "z": 0.16294904053211212
     }
   },
-  "_hash": 3998195811
+  "_hash": 233506040
 }
