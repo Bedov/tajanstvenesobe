@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "Egg_House_06",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -10,12 +10,16 @@
   "_techIdx": 0,
   "_defines": [
     {
-      "USE_ALBEDO_MAP": true
-    }
+      "USE_ALBEDO_MAP": true,
+      "USE_ALPHA_TEST": true
+    },
+    {},
+    {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {
@@ -25,24 +29,19 @@
             "blendDstAlpha": 4
           }
         ]
-      },
-      "depthStencilState": {
-        "depthWrite": true
       }
-    }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
       "mainTexture": {
         "__uuid__": "8c77a1a7-9423-4971-9127-baa0156c30d0@95e1c",
         "__expectedType__": "cc.Texture2D"
-      },
-      "albedoScale": {
-        "__type__": "cc.Vec3",
-        "x": 1,
-        "y": 1,
-        "z": 1
       }
-    }
+    },
+    {},
+    {}
   ]
 }
