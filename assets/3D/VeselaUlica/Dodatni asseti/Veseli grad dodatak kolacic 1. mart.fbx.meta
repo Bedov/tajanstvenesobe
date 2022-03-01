@@ -1,0 +1,123 @@
+{
+  "ver": "2.1.10",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5",
+  "files": [],
+  "subMetas": {
+    "d193e": {
+      "importer": "gltf-mesh",
+      "uuid": "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@d193e",
+      "displayName": "",
+      "id": "d193e",
+      "name": "SE_Muffin_01.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fd73d": {
+      "importer": "gltf-embeded-image",
+      "uuid": "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@fd73d",
+      "displayName": "",
+      "id": "fd73d",
+      "name": "DiffuseColor_Texture.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f17a": {
+      "importer": "texture",
+      "uuid": "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@4f17a",
+      "displayName": "",
+      "id": "4f17a",
+      "name": "DiffuseColor_Texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@fd73d"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fd4e2": {
+      "importer": "gltf-material",
+      "uuid": "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@fd4e2",
+      "displayName": "",
+      "id": "fd4e2",
+      "name": "SE_Cupcake_Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1aec6": {
+      "importer": "gltf-scene",
+      "uuid": "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@1aec6",
+      "displayName": "",
+      "id": "1aec6",
+      "name": "Veseli grad dodatak kolacic 1. mart.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "DiffuseColor_Texture",
+        "uri": "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@fd73d"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "redirect": "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@1aec6",
+    "assetFinder": {
+      "meshes": [
+        "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@d193e"
+      ],
+      "skeletons": [],
+      "textures": [
+        "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@4f17a"
+      ],
+      "materials": [
+        "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@fd4e2"
+      ],
+      "scenes": [
+        "f1ba82fd-3cc9-4abe-85dd-b18f09573bc5@1aec6"
+      ]
+    }
+  }
+}

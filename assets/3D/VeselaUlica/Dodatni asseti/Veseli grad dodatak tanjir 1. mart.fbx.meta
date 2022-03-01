@@ -1,0 +1,123 @@
+{
+  "ver": "2.1.10",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1b92179b-100d-491a-9e94-a85e7e324fa1",
+  "files": [],
+  "subMetas": {
+    "092ca": {
+      "importer": "gltf-mesh",
+      "uuid": "1b92179b-100d-491a-9e94-a85e7e324fa1@092ca",
+      "displayName": "",
+      "id": "092ca",
+      "name": "SE_Plate_01.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fd73d": {
+      "importer": "gltf-embeded-image",
+      "uuid": "1b92179b-100d-491a-9e94-a85e7e324fa1@fd73d",
+      "displayName": "",
+      "id": "fd73d",
+      "name": "DiffuseColor_Texture.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".jpg",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f17a": {
+      "importer": "texture",
+      "uuid": "1b92179b-100d-491a-9e94-a85e7e324fa1@4f17a",
+      "displayName": "",
+      "id": "4f17a",
+      "name": "DiffuseColor_Texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1b92179b-100d-491a-9e94-a85e7e324fa1@fd73d"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a91ea": {
+      "importer": "gltf-material",
+      "uuid": "1b92179b-100d-491a-9e94-a85e7e324fa1@a91ea",
+      "displayName": "",
+      "id": "a91ea",
+      "name": "SE_Dishes_Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a727b": {
+      "importer": "gltf-scene",
+      "uuid": "1b92179b-100d-491a-9e94-a85e7e324fa1@a727b",
+      "displayName": "",
+      "id": "a727b",
+      "name": "Veseli grad dodatak tanjir 1. mart.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "DiffuseColor_Texture",
+        "uri": "1b92179b-100d-491a-9e94-a85e7e324fa1@fd73d"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "redirect": "1b92179b-100d-491a-9e94-a85e7e324fa1@a727b",
+    "assetFinder": {
+      "meshes": [
+        "1b92179b-100d-491a-9e94-a85e7e324fa1@092ca"
+      ],
+      "skeletons": [],
+      "textures": [
+        "1b92179b-100d-491a-9e94-a85e7e324fa1@4f17a"
+      ],
+      "materials": [
+        "1b92179b-100d-491a-9e94-a85e7e324fa1@a91ea"
+      ],
+      "scenes": [
+        "1b92179b-100d-491a-9e94-a85e7e324fa1@a727b"
+      ]
+    }
+  }
+}
