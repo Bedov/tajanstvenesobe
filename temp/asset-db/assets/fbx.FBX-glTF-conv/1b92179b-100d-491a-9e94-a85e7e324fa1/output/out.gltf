@@ -1,0 +1,135 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 178,
+      "max": [
+        1.4363124370574951,
+        0.36717259883880615,
+        1.4363124370574951
+      ],
+      "min": [
+        -1.4363124370574951,
+        0.0,
+        -1.4363124370574951
+      ],
+      "name": "SE_Plate_01/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 178,
+      "name": "SE_Plate_01/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 178,
+      "name": "SE_Plate_01/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 864,
+      "name": "SE_Plate_01/INDICES",
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 5696,
+      "byteStride": 32,
+      "name": "SE_Plate_01",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3456,
+      "byteOffset": 5696
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 9152,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/1b92179b-100d-491a-9e94-a85e7e324fa1/output/.fbm/8F603471/Veseli grad dodatak tanjir 1. mart.fbm/SE_Dishes_Diffuse.jpg",
+          "relativeFileName": "../../../../temp/asset-db/assets/fbx.FBX-glTF-conv/1b92179b-100d-491a-9e94-a85e7e324fa1/output/.fbm/8F603471/Veseli grad dodatak tanjir 1. mart.fbm/SE_Dishes_Diffuse.jpg"
+        }
+      },
+      "name": "DiffuseColor_Texture",
+      "uri": "SE_Dishes_Diffuse.jpg"
+    }
+  ],
+  "materials": [
+    {
+      "name": "SE_Dishes_Mat",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SE_Plate_01",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "SE_Plate_01"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "DiffuseColor_Texture",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

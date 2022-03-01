@@ -1,0 +1,135 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 209,
+      "max": [
+        0.7779901027679443,
+        0.6599886417388916,
+        0.6786743998527527
+      ],
+      "min": [
+        -0.9158758521080017,
+        0.0,
+        -1.0387547016143799
+      ],
+      "name": "SE_Sandwich_02/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 209,
+      "name": "SE_Sandwich_02/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 209,
+      "name": "SE_Sandwich_02/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 516,
+      "name": "SE_Sandwich_02/INDICES",
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6688,
+      "byteStride": 32,
+      "name": "SE_Sandwich_02",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2064,
+      "byteOffset": 6688
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 8752,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/6ef0ce5b-4057-4cb9-b538-889393bf98a2/output/.fbm/C53134D5/Veseli grad dodatak sendvic 1. mart.fbm/SE_Sandwich_Diffuse.jpg",
+          "relativeFileName": "../../../../temp/asset-db/assets/fbx.FBX-glTF-conv/6ef0ce5b-4057-4cb9-b538-889393bf98a2/output/.fbm/C53134D5/Veseli grad dodatak sendvic 1. mart.fbm/SE_Sandwich_Diffuse.jpg"
+        }
+      },
+      "name": "DiffuseColor_Texture",
+      "uri": "SE_Sandwich_Diffuse.jpg"
+    }
+  ],
+  "materials": [
+    {
+      "name": "SE_Sandwich_Mat",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SE_Sandwich_02",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "SE_Sandwich_02"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "DiffuseColor_Texture",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

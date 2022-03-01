@@ -1,0 +1,135 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 112,
+      "max": [
+        0.6499456167221069,
+        0.931274950504303,
+        0.6500591039657593
+      ],
+      "min": [
+        -0.6499456167221069,
+        0.0,
+        -0.6500591039657593
+      ],
+      "name": "SE_Muffin_01/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 112,
+      "name": "SE_Muffin_01/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 112,
+      "name": "SE_Muffin_01/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 432,
+      "name": "SE_Muffin_01/INDICES",
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 3584,
+      "byteStride": 32,
+      "name": "SE_Muffin_01",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1728,
+      "byteOffset": 3584
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 5312,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/f1ba82fd-3cc9-4abe-85dd-b18f09573bc5/output/.fbm/C3DE34BF/Veseli grad dodatak kolacic 1. mart.fbm/SE_Cupcake_Diffuse.jpg",
+          "relativeFileName": "../../../../temp/asset-db/assets/fbx.FBX-glTF-conv/f1ba82fd-3cc9-4abe-85dd-b18f09573bc5/output/.fbm/C3DE34BF/Veseli grad dodatak kolacic 1. mart.fbm/SE_Cupcake_Diffuse.jpg"
+        }
+      },
+      "name": "DiffuseColor_Texture",
+      "uri": "SE_Cupcake_Diffuse.jpg"
+    }
+  ],
+  "materials": [
+    {
+      "name": "SE_Cupcake_Mat",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SE_Muffin_01",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "SE_Muffin_01"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "DiffuseColor_Texture",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
