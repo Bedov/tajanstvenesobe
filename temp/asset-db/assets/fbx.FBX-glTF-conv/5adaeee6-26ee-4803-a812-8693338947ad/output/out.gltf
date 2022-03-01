@@ -1,0 +1,562 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 726,
+      "max": [
+        1.0877948999404907,
+        2.328396797180176,
+        5.1419901847839355
+      ],
+      "min": [
+        -1.087794542312622,
+        -2.328397035598755,
+        -0.00335693359375
+      ],
+      "name": "Snow_windmill/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 726,
+      "name": "Snow_windmill/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 726,
+      "name": "Snow_windmill/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 32,
+      "componentType": 5123,
+      "count": 726,
+      "name": "Snow_windmill/JOINTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 40,
+      "componentType": 5126,
+      "count": 726,
+      "name": "Snow_windmill/WEIGHTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 1608,
+      "name": "Snow_windmill/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 2,
+      "name": "/InverseBindMatrices",
+      "type": "MAT4"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        5.0
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "Bone009/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 18,
+      "name": "Bone009/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 18,
+      "name": "Bone009/rotation/Output",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 18,
+      "name": "Bone009/scale/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 7,
+      "max": [
+        5.0
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "Bone010/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 7,
+      "name": "Bone010/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 7,
+      "name": "Bone010/rotation/Output",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 7,
+      "name": "Bone010/scale/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 2,
+      "max": [
+        5.0
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "Bone011/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 2,
+      "name": "Bone011/rotation/Output",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 2,
+      "max": [
+        5.0
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "Bone012/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 14,
+      "componentType": 5126,
+      "count": 2,
+      "name": "Bone012/rotation/Output",
+      "type": "VEC4"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 1,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 1,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 2,
+          "target": {
+            "node": 1,
+            "path": "scale"
+          }
+        },
+        {
+          "sampler": 3,
+          "target": {
+            "node": 2,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 4,
+          "target": {
+            "node": 2,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 5,
+          "target": {
+            "node": 2,
+            "path": "scale"
+          }
+        },
+        {
+          "sampler": 6,
+          "target": {
+            "node": 3,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 7,
+          "target": {
+            "node": 4,
+            "path": "rotation"
+          }
+        }
+      ],
+      "name": "Take 001",
+      "samplers": [
+        {
+          "input": 7,
+          "output": 8
+        },
+        {
+          "input": 7,
+          "output": 9
+        },
+        {
+          "input": 7,
+          "output": 10
+        },
+        {
+          "input": 11,
+          "output": 12
+        },
+        {
+          "input": 11,
+          "output": 13
+        },
+        {
+          "input": 11,
+          "output": 14
+        },
+        {
+          "input": 15,
+          "output": 16
+        },
+        {
+          "input": 17,
+          "output": 18
+        }
+      ]
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 40656,
+      "byteStride": 56,
+      "name": "Snow_windmill",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6432,
+      "byteOffset": 40656
+    },
+    {
+      "buffer": 0,
+      "byteLength": 128,
+      "byteOffset": 47088
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72,
+      "byteOffset": 47216
+    },
+    {
+      "buffer": 0,
+      "byteLength": 216,
+      "byteOffset": 47288
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 47504
+    },
+    {
+      "buffer": 0,
+      "byteLength": 216,
+      "byteOffset": 47792
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28,
+      "byteOffset": 48008
+    },
+    {
+      "buffer": 0,
+      "byteLength": 84,
+      "byteOffset": 48036
+    },
+    {
+      "buffer": 0,
+      "byteLength": 112,
+      "byteOffset": 48120
+    },
+    {
+      "buffer": 0,
+      "byteLength": 84,
+      "byteOffset": 48232
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8,
+      "byteOffset": 48316
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32,
+      "byteOffset": 48324
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8,
+      "byteOffset": 48356
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32,
+      "byteOffset": 48364
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 48396,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/5adaeee6-26ee-4803-a812-8693338947ad/output/.fbm/A67A2D09/Bozicna 1. mart samo vetrenjaca.fbm/Atlas_Xmas_Mountain-Buildings.png",
+          "relativeFileName": "../../../temp/asset-db/assets/fbx.FBX-glTF-conv/5adaeee6-26ee-4803-a812-8693338947ad/output/.fbm/A67A2D09/Bozicna 1. mart samo vetrenjaca.fbm/Atlas_Xmas_Mountain-Buildings.png"
+        }
+      },
+      "name": "DiffuseColor_Texture",
+      "uri": "Atlas_Xmas_Mountain-Buildings.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "Atlas_Xmas_Mountain_Buildings",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Snow_windmill",
+      "primitives": [
+        {
+          "attributes": {
+            "JOINTS_0": 3,
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "WEIGHTS_0": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        3,
+        5
+      ],
+      "name": "Windmill",
+      "scale": [
+        1.3966749906539917,
+        1.3966749906539917,
+        1.3966749906539917
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "Bone009",
+      "rotation": [
+        0.4999598264694214,
+        -0.5000620484352112,
+        0.49993792176246643,
+        0.5000402331352234
+      ],
+      "scale": [
+        0.7159861922264099,
+        0.7159863114356995,
+        0.7159863710403442
+      ],
+      "translation": [
+        -0.004098204895853996,
+        2.0190420150756836,
+        0.3114212155342102
+      ]
+    },
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "Root"
+          }
+        }
+      },
+      "name": "Bone010",
+      "scale": [
+        0.9999998807907104,
+        0.9999998807907104,
+        1.0
+      ],
+      "translation": [
+        0.7251529693603516,
+        -1.1102229998097382e-18,
+        0.0
+      ]
+    },
+    {
+      "children": [
+        4
+      ],
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "Bone011",
+      "rotation": [
+        -0.4980953633785248,
+        -0.501897394657135,
+        0.49809548258781433,
+        0.5018972754478455
+      ],
+      "scale": [
+        0.7159862518310547,
+        0.7159862518310547,
+        0.7159861922264099
+      ],
+      "translation": [
+        -0.0057061766274273396,
+        0.03766113147139549,
+        -0.09072937071323395
+      ]
+    },
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "Root"
+          }
+        }
+      },
+      "name": "Bone012",
+      "translation": [
+        2.7547335624694824,
+        0.0,
+        -6.103515488575795e-07
+      ]
+    },
+    {
+      "mesh": 0,
+      "name": "Snow_windmill",
+      "rotation": [
+        -0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "scale": [
+        0.7159861922264099,
+        0.7159861922264099,
+        0.7159861922264099
+      ],
+      "skin": 0,
+      "translation": [
+        -0.0057061766274273396,
+        0.008856200613081455,
+        0.0561230443418026
+      ]
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "inverseBindMatrices": 6,
+      "joints": [
+        1,
+        3
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "DiffuseColor_Texture",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
