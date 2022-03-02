@@ -28,20 +28,12 @@ import { ScriptEffects } from "./Utilities/ScriptEffects";
 @ccclass('DetectTypeOfDevice')
 export class DetectTypeOfDevice extends Component {
 
-    @property(Node)
     KeyboardMoveSymbol!: Node;
-
-    @property(Node)
-    MobileMoveSymbol!: Node;
-
-    @property(Node)
     MobileMoveJoystick!: Node;
-
-    @property(Node)
     KeyboardSeeSymbol!: Node;
-
-    @property(Node)
     MobileSeeSymbol!: Node;
+
+    MobileMoveSymbol!: Node;
 
     _moveTimerBool = true;
     _moveTutorialEndBool = false;
@@ -56,8 +48,36 @@ export class DetectTypeOfDevice extends Component {
     onLoad() {
         systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
 
+        this.KeyboardMoveSymbol = this.node.getChildByName("DesktopMoveTutorial")!;
+        this.KeyboardSeeSymbol = this.node.getChildByName("DesktopLookTutorial")!;
+        this.MobileSeeSymbol = this.node.getChildByName("MobileLookTutorial")!;
+        this.MobileMoveSymbol = this.node.getChildByName("MobileMoveTutorial")!;
+
+        this.MobileMoveJoystick = this.node.getChildByName("joystick")!;
+
         this.checkProgressForTutorial();
         //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
+    }
+
+    start() {
+        
+
+        if(GameManager.getInstance().isMobileOrTablet) {
+            this.KeyboardMoveSymbol.active = false;
+            this.MobileMoveJoystick.active = true;
+            this.MobileMoveSymbol.active = true;
+
+
+            this.KeyboardSeeSymbol.active = false;
+            this.MobileSeeSymbol.active = true;
+        } else {
+            this.KeyboardMoveSymbol.active = true;
+            this.MobileMoveJoystick.active = false;
+            this.MobileMoveSymbol.active = false;
+
+            this.KeyboardSeeSymbol.active = true;
+            this.MobileSeeSymbol.active = false;
+        }
     }
 
     checkProgressForTutorial() {
@@ -151,28 +171,6 @@ export class DetectTypeOfDevice extends Component {
         if(!this._lookdontRepeatTutorialEndevent)
             this._lookTutorialEndBool = true;
     }
-
-    start () {
-        if(GameManager.getInstance().isMobileOrTablet) {
-            this.KeyboardMoveSymbol.active = false;
-            this.MobileMoveJoystick.active = true;
-            this.MobileMoveSymbol.active = true;
-
-
-            this.KeyboardSeeSymbol.active = false;
-            this.MobileSeeSymbol.active = true;
-        } else {
-            this.KeyboardMoveSymbol.active = true;
-            this.MobileMoveJoystick.active = false;
-            this.MobileMoveSymbol.active = false;
-
-            this.KeyboardSeeSymbol.active = true;
-            this.MobileSeeSymbol.active = false;
-        }
-        
-       
-    }
-
     // update (deltaTime: number) {
     //     // [4]
     // }

@@ -1,15 +1,9 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, systemEvent, SystemEvent, macro, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, KEYCODE, DetectTypeOfDevice;
-
-  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, macro, GameManager, _dec, _class, _temp, _crd, ccclass, property, KEYCODE, DetectTypeOfDevice;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
-
-  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
@@ -26,7 +20,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
       Component = _cc.Component;
-      Node = _cc.Node;
       systemEvent = _cc.systemEvent;
       SystemEvent = _cc.SystemEvent;
       macro = _cc.macro;
@@ -62,19 +55,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         SHIFT: macro.KEY.shift
       };
 
-      _export("DetectTypeOfDevice", DetectTypeOfDevice = (_dec = ccclass('DetectTypeOfDevice'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec(_class = (_class2 = (_temp = class DetectTypeOfDevice extends Component {
+      _export("DetectTypeOfDevice", DetectTypeOfDevice = (_dec = ccclass('DetectTypeOfDevice'), _dec(_class = (_temp = class DetectTypeOfDevice extends Component {
         constructor(...args) {
           super(...args);
-
-          _initializerDefineProperty(this, "KeyboardMoveSymbol", _descriptor, this);
-
-          _initializerDefineProperty(this, "MobileMoveSymbol", _descriptor2, this);
-
-          _initializerDefineProperty(this, "MobileMoveJoystick", _descriptor3, this);
-
-          _initializerDefineProperty(this, "KeyboardSeeSymbol", _descriptor4, this);
-
-          _initializerDefineProperty(this, "MobileSeeSymbol", _descriptor5, this);
 
           _defineProperty(this, "_moveTimerBool", true);
 
@@ -95,7 +78,30 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         onLoad() {
           systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+          this.KeyboardMoveSymbol = this.node.getChildByName("DesktopMoveTutorial");
+          this.KeyboardSeeSymbol = this.node.getChildByName("DesktopLookTutorial");
+          this.MobileSeeSymbol = this.node.getChildByName("MobileLookTutorial");
+          this.MobileMoveSymbol = this.node.getChildByName("MobileMoveTutorial");
+          this.MobileMoveJoystick = this.node.getChildByName("joystick");
           this.checkProgressForTutorial(); //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
+        }
+
+        start() {
+          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().isMobileOrTablet) {
+            this.KeyboardMoveSymbol.active = false;
+            this.MobileMoveJoystick.active = true;
+            this.MobileMoveSymbol.active = true;
+            this.KeyboardSeeSymbol.active = false;
+            this.MobileSeeSymbol.active = true;
+          } else {
+            this.KeyboardMoveSymbol.active = true;
+            this.MobileMoveJoystick.active = false;
+            this.MobileMoveSymbol.active = false;
+            this.KeyboardSeeSymbol.active = true;
+            this.MobileSeeSymbol.active = false;
+          }
         }
 
         checkProgressForTutorial() {
@@ -177,55 +183,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         joystick_Mouse_Move() {
           if (!this._lookdontRepeatTutorialEndevent) this._lookTutorialEndBool = true;
-        }
-
-        start() {
-          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().isMobileOrTablet) {
-            this.KeyboardMoveSymbol.active = false;
-            this.MobileMoveJoystick.active = true;
-            this.MobileMoveSymbol.active = true;
-            this.KeyboardSeeSymbol.active = false;
-            this.MobileSeeSymbol.active = true;
-          } else {
-            this.KeyboardMoveSymbol.active = true;
-            this.MobileMoveJoystick.active = false;
-            this.MobileMoveSymbol.active = false;
-            this.KeyboardSeeSymbol.active = true;
-            this.MobileSeeSymbol.active = false;
-          }
         } // update (deltaTime: number) {
         //     // [4]
         // }
 
 
-      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "KeyboardMoveSymbol", [_dec2], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "MobileMoveSymbol", [_dec3], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "MobileMoveJoystick", [_dec4], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "KeyboardSeeSymbol", [_dec5], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "MobileSeeSymbol", [_dec6], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      })), _class2)) || _class));
+      }, _temp)) || _class));
       /**
        * [1] Class member could be defined like this.
        * [2] Use `property` decorator if your want the member to be serializable.
