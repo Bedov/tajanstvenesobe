@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "lambert2",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -12,31 +12,53 @@
     {
       "HAS_SECOND_UV": true,
       "USE_ALBEDO_MAP": true
-    }
+    },
+    {},
+    {}
   ],
   "_states": [
     {
-      "rasterizerState": {},
+      "priority": 222,
+      "rasterizerState": {
+        "cullMode": 0,
+        "isDepthClip": false
+      },
+      "depthStencilState": {
+        "stencilFuncFront": 0,
+        "stencilFailOpFront": 0,
+        "stencilZFailOpFront": 0,
+        "stencilPassOpFront": 0,
+        "stencilFuncBack": 0,
+        "stencilFailOpBack": 0,
+        "stencilZFailOpBack": 0,
+        "stencilPassOpBack": 0,
+        "stencilRefBack": 44
+      },
       "blendState": {
+        "isA2C": true,
+        "isIndepend": true,
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
-      "mainTexture": {
-        "__uuid__": "8f96618e-d389-4258-bb72-90ae83005190@d20e9",
-        "__expectedType__": "cc.Texture2D"
-      },
       "albedoScale": {
         "__type__": "cc.Vec3",
         "x": 0.800000011920929,
         "y": 0.800000011920929,
         "z": 0.800000011920929
+      },
+      "mainTexture": {
+        "__uuid__": "8f96618e-d389-4258-bb72-90ae83005190@d20e9",
+        "__expectedType__": "cc.Texture2D"
       }
-    }
+    },
+    {},
+    {}
   ]
 }
