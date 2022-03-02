@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "NOVA_Rodjendanska_proslava_9:SE_Roses_Mat3",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -10,12 +10,18 @@
   "_techIdx": 0,
   "_defines": [
     {
-      "USE_ALBEDO_MAP": true
-    }
+      "USE_ALBEDO_MAP": true,
+      "USE_ALPHA_TEST": true
+    },
+    {},
+    {}
   ],
   "_states": [
     {
-      "rasterizerState": {},
+      "rasterizerState": {
+        "cullMode": 0
+      },
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {
@@ -25,24 +31,19 @@
             "blendDstAlpha": 4
           }
         ]
-      },
-      "depthStencilState": {
-        "depthWrite": false
       }
-    }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
       "mainTexture": {
         "__uuid__": "147ed7d4-3545-4e44-8efc-0f9505847abc@ad70f",
         "__expectedType__": "cc.Texture2D"
-      },
-      "albedoScale": {
-        "__type__": "cc.Vec3",
-        "x": 1,
-        "y": 1,
-        "z": 1
       }
-    }
+    },
+    {},
+    {}
   ]
 }
