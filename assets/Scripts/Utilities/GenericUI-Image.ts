@@ -1,6 +1,7 @@
 
 import { _decorator, Component, Node, Label, AudioSource, Sprite } from 'cc';
 import { GameManager, GameStatuType } from '../GameManager';
+import { GlobalManager } from '../GlobalManager';
 import { JSONimage, JSONquestTekst, JSONtask1 } from '../RemoteScripts/JSONloader';
 import { ScriptEffects } from './ScriptEffects';
 const { ccclass, property } = _decorator;
@@ -45,7 +46,8 @@ export class GenericUIimage extends Component {
         GameManager.getInstance().gameStatus = GameStatuType.gamePaused; 
 
         this.genericImage.getComponent(Sprite)!.spriteFrame = this.JSONtask.questImage!;
-
+        
+        this.solveIntroTaskButton();
         this.solveSoundActivness();
     }
 
@@ -64,6 +66,10 @@ export class GenericUIimage extends Component {
 
         this.turningOff = false;
     }
+
+    solveIntroTaskButton() {
+        this.node.getChildByName("GenericButton")!.getChildByName("Label")!.getComponent(Label)!.string = GlobalManager.getGlobal().goButton!;
+    } 
 
     turnOnGenericTask(tekst: string) {
 

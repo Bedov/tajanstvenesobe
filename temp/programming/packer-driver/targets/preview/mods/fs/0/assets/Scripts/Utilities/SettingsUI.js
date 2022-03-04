@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Slider, Toggle, GameManager, GameStatuType, ScriptEffects, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, SettingsUI;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, Slider, Toggle, GameManager, GameStatuType, ScriptEffects, GlobalManager, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, SettingsUI;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,6 +23,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("ScriptEffects", "./ScriptEffects", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -31,6 +35,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       _decorator = _cc._decorator;
       Component = _cc.Component;
       Node = _cc.Node;
+      Label = _cc.Label;
       Slider = _cc.Slider;
       Toggle = _cc.Toggle;
     }, function (_unresolved_2) {
@@ -38,6 +43,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       GameStatuType = _unresolved_2.GameStatuType;
     }, function (_unresolved_3) {
       ScriptEffects = _unresolved_3.ScriptEffects;
+    }, function (_unresolved_4) {
+      GlobalManager = _unresolved_4.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -107,11 +114,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), GameManager) : GameManager).getInstance().invertedRotation);
         }
 
+        solveIntroTaskButton() {
+          this.node.getChildByName("GenericButton").getChildByName("Label").getComponent(Label).string = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getGlobal().exitButton;
+          this.node.getChildByName("Speed").getComponent(Label).string = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getGlobal().choseSpeedSettingsText;
+          this.node.getChildByName("Inverse").getComponent(Label).string = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getGlobal().inverseSettingsText;
+        }
+
         turnOnSetting() {
           this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
           }), ScriptEffects) : ScriptEffects).fadeInActive(); //this.genericTekst.getComponent(Label)!.string = tekst.toString();
 
+          this.solveIntroTaskButton();
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({

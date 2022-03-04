@@ -22,16 +22,22 @@
       },
       {
         "__id__": 7
+      },
+      {
+        "__id__": 132
+      },
+      {
+        "__id__": 138
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 116
+      "__id__": 140
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 117
+      "__id__": 141
     },
     "_id": "3660340f-48c7-4c25-bdae-831717fa9973"
   },
@@ -244,21 +250,27 @@
       },
       {
         "__id__": 108
+      },
+      {
+        "__id__": 112
+      },
+      {
+        "__id__": 124
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 112
+        "__id__": 134
       },
       {
-        "__id__": 113
+        "__id__": 135
       },
       {
-        "__id__": 114
+        "__id__": 136
       },
       {
-        "__id__": 115
+        "__id__": 137
       }
     ],
     "_prefab": null,
@@ -313,8 +325,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 274.265,
+      "x": -302.529,
+      "y": 167.942,
       "z": 0
     },
     "_lrot": {
@@ -351,7 +363,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1000,
+      "width": 350,
       "height": 80
     },
     "_anchorPoint": {
@@ -381,8 +393,8 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Ovaj demo predstavlja dinamičko učitavanje asset-a, njihovu optimizaciju i postavku scena. ",
-    "_horizontalAlign": 1,
+    "_string": "IMPLEMENTIRANI: SRB | ENG",
+    "_horizontalAlign": 0,
     "_verticalAlign": 1,
     "_actualFontSize": 24,
     "_fontSize": 24,
@@ -412,7 +424,7 @@
     "_target": null,
     "_left": 0,
     "_right": 0,
-    "_top": 10.735000000000014,
+    "_top": 117.05799999999999,
     "_bottom": 0,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
@@ -484,7 +496,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 362.6811594202898,
+    "_orthoHeight": 391.6275430359937,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -514,7 +526,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Button4",
+    "_name": "Button1",
     "_objFlags": 0,
     "_parent": {
       "__id__": 7
@@ -539,7 +551,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -5.273,
+      "x": -331.463,
       "y": 91.386,
       "z": 0
     },
@@ -563,7 +575,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "cbYMRzuGxDVrzxn07JaGI9"
+    "_id": "d5rn4wFKtG8KFnl/WcU9FF"
   },
   {
     "__type__": "cc.Node",
@@ -609,7 +621,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "f1nCudXbtBya0HYRIloHub"
+    "_id": "0buXKrrRBAoKJ8OU66p+ZB"
   },
   {
     "__type__": "cc.UITransform",
@@ -630,7 +642,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "46JB0U8mFDRI/BggwUzzmf"
+    "_id": "2fiHbsKtVM/YWPEzN6+/Zw"
   },
   {
     "__type__": "cc.Label",
@@ -652,7 +664,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Uskršnje selo",
+    "_string": "Razigani Grad",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -668,7 +680,7 @@
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_id": "5bLxErXahFtJzaFEhJfdtx"
+    "_id": "08AsEePlRB06SK8zK10tWJ"
   },
   {
     "__type__": "cc.UITransform",
@@ -689,7 +701,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "f9U8ROna9LbZGu6LfWq3RO"
+    "_id": "23xUu2jlVKEYiXEv5yU5uS"
   },
   {
     "__type__": "cc.Sprite",
@@ -728,7 +740,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "f3t+xnzYtCMaPpWkzJtCjI"
+    "_id": "b9d3S2LFtNKKs+Msoq7y+8"
   },
   {
     "__type__": "cc.Button",
@@ -795,7 +807,7 @@
     "_target": {
       "__id__": 14
     },
-    "_id": "05IgKSfw9Igb9QahOJd/dG"
+    "_id": "c0lnEG/wxNMJeRbAtN3vgh"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -805,11 +817,11 @@
     "component": "",
     "_componentId": "ff492Jb5VJF54WfhLbZ2yTn",
     "handler": "loadAndPlaySceneByName",
-    "customEventData": "Uskrs"
+    "customEventData": "RaziganiGrad"
   },
   {
     "__type__": "cc.Node",
-    "_name": "Button5",
+    "_name": "Button2",
     "_objFlags": 0,
     "_parent": {
       "__id__": 7
@@ -834,7 +846,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -5.273,
+      "x": -331.463,
       "y": -11.788,
       "z": 0
     },
@@ -858,7 +870,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "8cRhYbSPdHjK67dhIgAyHo"
+    "_id": "bcvSgPxRFOzrgEgKFb1NdH"
   },
   {
     "__type__": "cc.Node",
@@ -904,7 +916,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "8daOkAjP1OD4fWiRT3dTWx"
+    "_id": "c6C93zmLxCvJLZD5g66kdI"
   },
   {
     "__type__": "cc.UITransform",
@@ -926,7 +938,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "94rcbgHKpNlKex1M38MiIu"
+    "_id": "edcb64dIRGULi4sYUb92Vx"
   },
   {
     "__type__": "cc.Label",
@@ -948,7 +960,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Srednjovekovni grad",
+    "_string": "Božićno seoce",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -964,7 +976,7 @@
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_id": "346GX+juZN06z6vXhT5Lba"
+    "_id": "ae71k1y3ZJ7bleLc3Qjj32"
   },
   {
     "__type__": "cc.UITransform",
@@ -985,7 +997,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "beWLg2wQ1BDaQdeqls+Bnf"
+    "_id": "3eam4lDrtKAa2gHNzR36ee"
   },
   {
     "__type__": "cc.Sprite",
@@ -1024,7 +1036,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "42ZyMHTZpH8aZpgLKCdFQc"
+    "_id": "0csSX77bxGGbK7jzoT6sxC"
   },
   {
     "__type__": "cc.Button",
@@ -1091,7 +1103,7 @@
     "_target": {
       "__id__": 22
     },
-    "_id": "d8UfbbHqBCCp30H6rQfEbZ"
+    "_id": "f50El2lExPab+/lSnmFjMM"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -1101,11 +1113,11 @@
     "component": "",
     "_componentId": "ff492Jb5VJF54WfhLbZ2yTn",
     "handler": "loadAndPlaySceneByName",
-    "customEventData": "MedivalVillage"
+    "customEventData": "BozicnoSeoce"
   },
   {
     "__type__": "cc.Node",
-    "_name": "Button6",
+    "_name": "Button3",
     "_objFlags": 0,
     "_parent": {
       "__id__": 7
@@ -1130,8 +1142,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -5.273,
-      "y": -117.008,
+      "x": -331.463,
+      "y": -116.998,
       "z": 0
     },
     "_lrot": {
@@ -1154,7 +1166,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "11T7yh5mNGAp4y6+pocz6+"
+    "_id": "53mMQGB3lEgLT+U0LD0gaw"
   },
   {
     "__type__": "cc.Node",
@@ -1200,7 +1212,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "c1oTtnEFFCdp854dAP9R/W"
+    "_id": "ccg3GTuHlK+rdulz0GBYCD"
   },
   {
     "__type__": "cc.UITransform",
@@ -1222,7 +1234,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "8eGxBjEO9JGYzVf45ZzA7W"
+    "_id": "d92AGxv49A7rPPB5ln7sLe"
   },
   {
     "__type__": "cc.Label",
@@ -1244,7 +1256,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Podzemna odaja",
+    "_string": "Povratak u vrtić",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -1260,7 +1272,7 @@
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_id": "f2m4gg1ZhPxpgYc1BDkAqw"
+    "_id": "5dwFkrSalEu45yv9tqBtxU"
   },
   {
     "__type__": "cc.UITransform",
@@ -1281,7 +1293,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "f1cCnXuudPdIXCd6zaHzVg"
+    "_id": "b5Ut8gvS1HCLbjwh2K1KJZ"
   },
   {
     "__type__": "cc.Sprite",
@@ -1320,7 +1332,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "a8kkNL40FOMZ+49TCCO939"
+    "_id": "2f/mJE1W1Na5lawZw2WRlz"
   },
   {
     "__type__": "cc.Button",
@@ -1387,7 +1399,7 @@
     "_target": {
       "__id__": 30
     },
-    "_id": "edI/xIrfVGBbnTIYwhsgjw"
+    "_id": "00PDobxddPkrdQ3w8ZbSFH"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -1397,11 +1409,11 @@
     "component": "",
     "_componentId": "ff492Jb5VJF54WfhLbZ2yTn",
     "handler": "loadAndPlaySceneByName",
-    "customEventData": "PodzemnaOdaja"
+    "customEventData": "KinderGarden"
   },
   {
     "__type__": "cc.Node",
-    "_name": "Button1",
+    "_name": "Button4",
     "_objFlags": 0,
     "_parent": {
       "__id__": 7
@@ -1426,7 +1438,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -331.463,
+      "x": -5.273,
       "y": 91.386,
       "z": 0
     },
@@ -1450,7 +1462,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "d5rn4wFKtG8KFnl/WcU9FF"
+    "_id": "cbYMRzuGxDVrzxn07JaGI9"
   },
   {
     "__type__": "cc.Node",
@@ -1496,7 +1508,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "0buXKrrRBAoKJ8OU66p+ZB"
+    "_id": "f1nCudXbtBya0HYRIloHub"
   },
   {
     "__type__": "cc.UITransform",
@@ -1517,7 +1529,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "2fiHbsKtVM/YWPEzN6+/Zw"
+    "_id": "46JB0U8mFDRI/BggwUzzmf"
   },
   {
     "__type__": "cc.Label",
@@ -1539,7 +1551,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Razigani Grad",
+    "_string": "Uskršnje selo",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -1555,7 +1567,7 @@
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_id": "08AsEePlRB06SK8zK10tWJ"
+    "_id": "5bLxErXahFtJzaFEhJfdtx"
   },
   {
     "__type__": "cc.UITransform",
@@ -1576,7 +1588,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "23xUu2jlVKEYiXEv5yU5uS"
+    "_id": "f9U8ROna9LbZGu6LfWq3RO"
   },
   {
     "__type__": "cc.Sprite",
@@ -1615,7 +1627,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "b9d3S2LFtNKKs+Msoq7y+8"
+    "_id": "f3t+xnzYtCMaPpWkzJtCjI"
   },
   {
     "__type__": "cc.Button",
@@ -1682,7 +1694,7 @@
     "_target": {
       "__id__": 38
     },
-    "_id": "c0lnEG/wxNMJeRbAtN3vgh"
+    "_id": "05IgKSfw9Igb9QahOJd/dG"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -1692,11 +1704,11 @@
     "component": "",
     "_componentId": "ff492Jb5VJF54WfhLbZ2yTn",
     "handler": "loadAndPlaySceneByName",
-    "customEventData": "RaziganiGrad"
+    "customEventData": "Uskrs"
   },
   {
     "__type__": "cc.Node",
-    "_name": "Button2",
+    "_name": "Button5",
     "_objFlags": 0,
     "_parent": {
       "__id__": 7
@@ -1721,7 +1733,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -331.463,
+      "x": -5.273,
       "y": -11.788,
       "z": 0
     },
@@ -1745,7 +1757,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "bcvSgPxRFOzrgEgKFb1NdH"
+    "_id": "8cRhYbSPdHjK67dhIgAyHo"
   },
   {
     "__type__": "cc.Node",
@@ -1791,7 +1803,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "c6C93zmLxCvJLZD5g66kdI"
+    "_id": "8daOkAjP1OD4fWiRT3dTWx"
   },
   {
     "__type__": "cc.UITransform",
@@ -1813,7 +1825,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "edcb64dIRGULi4sYUb92Vx"
+    "_id": "94rcbgHKpNlKex1M38MiIu"
   },
   {
     "__type__": "cc.Label",
@@ -1835,7 +1847,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Božićno seoce",
+    "_string": "Srednjovekovni grad",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -1851,7 +1863,7 @@
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_id": "ae71k1y3ZJ7bleLc3Qjj32"
+    "_id": "346GX+juZN06z6vXhT5Lba"
   },
   {
     "__type__": "cc.UITransform",
@@ -1872,7 +1884,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "3eam4lDrtKAa2gHNzR36ee"
+    "_id": "beWLg2wQ1BDaQdeqls+Bnf"
   },
   {
     "__type__": "cc.Sprite",
@@ -1911,7 +1923,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "0csSX77bxGGbK7jzoT6sxC"
+    "_id": "42ZyMHTZpH8aZpgLKCdFQc"
   },
   {
     "__type__": "cc.Button",
@@ -1978,7 +1990,7 @@
     "_target": {
       "__id__": 46
     },
-    "_id": "f50El2lExPab+/lSnmFjMM"
+    "_id": "d8UfbbHqBCCp30H6rQfEbZ"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -1988,11 +2000,11 @@
     "component": "",
     "_componentId": "ff492Jb5VJF54WfhLbZ2yTn",
     "handler": "loadAndPlaySceneByName",
-    "customEventData": "BozicnoSeoce"
+    "customEventData": "MedivalVillage"
   },
   {
     "__type__": "cc.Node",
-    "_name": "Button3",
+    "_name": "Button6",
     "_objFlags": 0,
     "_parent": {
       "__id__": 7
@@ -2017,8 +2029,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -331.463,
-      "y": -116.998,
+      "x": -5.273,
+      "y": -117.008,
       "z": 0
     },
     "_lrot": {
@@ -2041,7 +2053,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "53mMQGB3lEgLT+U0LD0gaw"
+    "_id": "11T7yh5mNGAp4y6+pocz6+"
   },
   {
     "__type__": "cc.Node",
@@ -2087,7 +2099,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "ccg3GTuHlK+rdulz0GBYCD"
+    "_id": "c1oTtnEFFCdp854dAP9R/W"
   },
   {
     "__type__": "cc.UITransform",
@@ -2109,7 +2121,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "d92AGxv49A7rPPB5ln7sLe"
+    "_id": "8eGxBjEO9JGYzVf45ZzA7W"
   },
   {
     "__type__": "cc.Label",
@@ -2131,7 +2143,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Povratak u vrtić",
+    "_string": "Podzemna odaja",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
@@ -2147,7 +2159,7 @@
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_id": "5dwFkrSalEu45yv9tqBtxU"
+    "_id": "f2m4gg1ZhPxpgYc1BDkAqw"
   },
   {
     "__type__": "cc.UITransform",
@@ -2168,7 +2180,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "b5Ut8gvS1HCLbjwh2K1KJZ"
+    "_id": "f1cCnXuudPdIXCd6zaHzVg"
   },
   {
     "__type__": "cc.Sprite",
@@ -2207,7 +2219,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "2f/mJE1W1Na5lawZw2WRlz"
+    "_id": "a8kkNL40FOMZ+49TCCO939"
   },
   {
     "__type__": "cc.Button",
@@ -2274,7 +2286,7 @@
     "_target": {
       "__id__": 54
     },
-    "_id": "00PDobxddPkrdQ3w8ZbSFH"
+    "_id": "edI/xIrfVGBbnTIYwhsgjw"
   },
   {
     "__type__": "cc.ClickEvent",
@@ -2284,7 +2296,7 @@
     "component": "",
     "_componentId": "ff492Jb5VJF54WfhLbZ2yTn",
     "handler": "loadAndPlaySceneByName",
-    "customEventData": "KinderGarden"
+    "customEventData": "PodzemnaOdaja"
   },
   {
     "__type__": "cc.Node",
@@ -3204,7 +3216,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -5.273,
+      "x": 316.986,
       "y": 193.496,
       "z": 0
     },
@@ -4066,6 +4078,817 @@
     "_id": "451NMm3rNBNowpuK3b2gFb"
   },
   {
+    "__type__": "cc.Node",
+    "_name": "Wraper",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 7
+    },
+    "_children": [
+      {
+        "__id__": 113
+      }
+    ],
+    "_active": true,
+    "_components": [],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": -358.179,
+      "y": 218.675,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "21YwramRhJAoSovRA5m6qN"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "ChoseLanguage",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 112
+    },
+    "_children": [
+      {
+        "__id__": 114
+      },
+      {
+        "__id__": 117
+      }
+    ],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 120
+      },
+      {
+        "__id__": 121
+      },
+      {
+        "__id__": 122
+      },
+      {
+        "__id__": 123
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 33554432,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "53LArTIflHDYgTP38JxR4v"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "TEXT_LABEL",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 113
+    },
+    "_children": [],
+    "_active": false,
+    "_components": [
+      {
+        "__id__": 115
+      },
+      {
+        "__id__": 116
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": -123,
+      "y": 30,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 33554432,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "f521CYCV9IC5hUuOhltb2f"
+  },
+  {
+    "__type__": "cc.UITransform",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 114
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 248,
+      "height": 60
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 1
+    },
+    "_id": "17QnhUIP1BkblZKms2EzSW"
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 114
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_visFlags": 0,
+    "_customMaterial": null,
+    "_srcBlendFactor": 2,
+    "_dstBlendFactor": 4,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_string": "",
+    "_horizontalAlign": 0,
+    "_verticalAlign": 1,
+    "_actualFontSize": 40,
+    "_fontSize": 20,
+    "_fontFamily": "Arial",
+    "_lineHeight": 40,
+    "_overflow": 1,
+    "_enableWrapText": false,
+    "_font": null,
+    "_isSystemFontUsed": true,
+    "_isItalic": false,
+    "_isBold": false,
+    "_isUnderline": false,
+    "_underlineHeight": 2,
+    "_cacheMode": 0,
+    "_id": "16Lj2c425ORosR9pOnBmQJ"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "PLACEHOLDER_LABEL",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 113
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 118
+      },
+      {
+        "__id__": 119
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": -123,
+      "y": 30,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 33554432,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "74544SjY1EiaUlE0dHo8qW"
+  },
+  {
+    "__type__": "cc.UITransform",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 117
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 248,
+      "height": 60
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 1
+    },
+    "_id": "27iCHZKTxKjoIuEqq6RBqv"
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 117
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_visFlags": 0,
+    "_customMaterial": null,
+    "_srcBlendFactor": 2,
+    "_dstBlendFactor": 4,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 187,
+      "g": 187,
+      "b": 187,
+      "a": 255
+    },
+    "_string": "Skracenica jezika",
+    "_horizontalAlign": 0,
+    "_verticalAlign": 1,
+    "_actualFontSize": 20,
+    "_fontSize": 20,
+    "_fontFamily": "Arial",
+    "_lineHeight": 60,
+    "_overflow": 1,
+    "_enableWrapText": false,
+    "_font": null,
+    "_isSystemFontUsed": true,
+    "_isItalic": false,
+    "_isBold": false,
+    "_isUnderline": false,
+    "_underlineHeight": 2,
+    "_cacheMode": 0,
+    "_id": "35UHCA9BVHsbbhskoXcqrB"
+  },
+  {
+    "__type__": "cc.UITransform",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 113
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 250,
+      "height": 60
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_id": "cczhZFaWFI+qh32yWvtGXy"
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 113
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_visFlags": 0,
+    "_customMaterial": null,
+    "_srcBlendFactor": 2,
+    "_dstBlendFactor": 4,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_spriteFrame": {
+      "__uuid__": "bd1bcaba-bd7d-4a71-b143-997c882383e4@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    "_type": 1,
+    "_fillType": 0,
+    "_sizeMode": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_useGrayscale": false,
+    "_atlas": null,
+    "_id": "afQi/oEoVNMKJSy5jiDAMO"
+  },
+  {
+    "__type__": "cc.EditBox",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 113
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "editingDidBegan": [],
+    "textChanged": [],
+    "editingDidEnded": [],
+    "editingReturn": [],
+    "_textLabel": {
+      "__id__": 116
+    },
+    "_placeholderLabel": {
+      "__id__": 119
+    },
+    "_returnType": 0,
+    "_string": "",
+    "_tabIndex": 0,
+    "_backgroundImage": {
+      "__uuid__": "bd1bcaba-bd7d-4a71-b143-997c882383e4@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    "_inputFlag": 5,
+    "_inputMode": 6,
+    "_maxLength": 8,
+    "_id": "b4SMtPgi5BsIpzYg+pf0Kb"
+  },
+  {
+    "__type__": "cc.Animation",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 113
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "playOnLoad": false,
+    "_clips": [
+      {
+        "__uuid__": "4566f2f1-9df4-4ce0-a02d-acc483fc2b27",
+        "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "38c4d7c8-3573-4614-9239-1cf3cdae0110",
+        "__expectedType__": "cc.AnimationClip"
+      }
+    ],
+    "_defaultClip": null,
+    "_id": "f1x3+IetpH+qaT4kMi5JBp"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "ChangeLanguage",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 7
+    },
+    "_children": [
+      {
+        "__id__": 125
+      }
+    ],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 128
+      },
+      {
+        "__id__": 129
+      },
+      {
+        "__id__": 130
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": -75.632,
+      "y": 217.032,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 33554432,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "15U94wQmpOmrAPq7TOme7n"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Label",
+    "_objFlags": 512,
+    "_parent": {
+      "__id__": 124
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 126
+      },
+      {
+        "__id__": 127
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 33554432,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "92HbjgMHxDu7On91/gELO9"
+  },
+  {
+    "__type__": "cc.UITransform",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 125
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 100,
+      "height": 40
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_id": "795c+Iyt9M/q9gHORHeCwe"
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 125
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_visFlags": 0,
+    "_customMaterial": null,
+    "_srcBlendFactor": 2,
+    "_dstBlendFactor": 4,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "a": 255
+    },
+    "_string": "PROMENI",
+    "_horizontalAlign": 1,
+    "_verticalAlign": 1,
+    "_actualFontSize": 20,
+    "_fontSize": 20,
+    "_fontFamily": "Arial",
+    "_lineHeight": 40,
+    "_overflow": 1,
+    "_enableWrapText": false,
+    "_font": null,
+    "_isSystemFontUsed": true,
+    "_isItalic": false,
+    "_isBold": false,
+    "_isUnderline": false,
+    "_underlineHeight": 2,
+    "_cacheMode": 0,
+    "_id": "1eUoscO2tEna2snY4Qrhbf"
+  },
+  {
+    "__type__": "cc.UITransform",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 124
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 250,
+      "height": 60
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_id": "69hXaoiW1Hwp7e+p4xQWyc"
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 124
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_visFlags": 0,
+    "_customMaterial": null,
+    "_srcBlendFactor": 2,
+    "_dstBlendFactor": 4,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_spriteFrame": {
+      "__uuid__": "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    "_type": 1,
+    "_fillType": 0,
+    "_sizeMode": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_useGrayscale": false,
+    "_atlas": null,
+    "_id": "06PJEfSPBJr4MGlPoGdxBS"
+  },
+  {
+    "__type__": "cc.Button",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 124
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "clickEvents": [
+      {
+        "__id__": 131
+      }
+    ],
+    "_interactable": true,
+    "_transition": 2,
+    "_normalColor": {
+      "__type__": "cc.Color",
+      "r": 214,
+      "g": 214,
+      "b": 214,
+      "a": 255
+    },
+    "_hoverColor": {
+      "__type__": "cc.Color",
+      "r": 211,
+      "g": 211,
+      "b": 211,
+      "a": 255
+    },
+    "_pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_disabledColor": {
+      "__type__": "cc.Color",
+      "r": 124,
+      "g": 124,
+      "b": 124,
+      "a": 255
+    },
+    "_normalSprite": {
+      "__uuid__": "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    "_hoverSprite": {
+      "__uuid__": "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    "_pressedSprite": {
+      "__uuid__": "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    "_disabledSprite": {
+      "__uuid__": "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
+    "_duration": 0.1,
+    "_zoomScale": 1.2,
+    "_target": {
+      "__id__": 124
+    },
+    "_id": "b1Nv2VoYJD9rS0MxFpxB02"
+  },
+  {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 132
+    },
+    "component": "",
+    "_componentId": "b73808StSRJNbd0es5AR9IN",
+    "handler": "changeLanguage",
+    "customEventData": ""
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "GlobalManager",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 133
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "41Srl2KQ1Ll4kt/S3DAkrx"
+  },
+  {
+    "__type__": "b73808StSRJNbd0es5AR9IN",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 132
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "LanguageName": "ENG",
+    "springFest": {
+      "__id__": 89
+    },
+    "playfullCity": {
+      "__id__": 17
+    },
+    "easterVillage": {
+      "__id__": 41
+    },
+    "birthdayParty": {
+      "__id__": 65
+    },
+    "christmasVillage": {
+      "__id__": 25
+    },
+    "medievalTown": {
+      "__id__": 49
+    },
+    "happyStreet": {
+      "__id__": 73
+    },
+    "backToKindergarden": {
+      "__id__": 33
+    },
+    "undergroundChamber": {
+      "__id__": 57
+    },
+    "invisablePeopleCity": {
+      "__id__": 81
+    },
+    "LanguageBox": {
+      "__id__": 122
+    },
+    "_id": "822chryyRAza2yCwcRJjxV"
+  },
+  {
     "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
@@ -4148,25 +4971,79 @@
     "_id": "01Xb8+W9JMjqrfOHrbGc16"
   },
   {
+    "__type__": "cc.Node",
+    "_name": "RoomTranslator",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 139
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "4b2lDa1XJA9anlQRA5f5PZ"
+  },
+  {
+    "__type__": "7a069foXapGS45UrAZzI+gH",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 138
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_id": "c7scmtjtdBA5qve4b5y2U9"
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "fileId": "3660340f-48c7-4c25-bdae-831717fa9973"
   },
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 118
+      "__id__": 142
     },
     "shadows": {
-      "__id__": 119
+      "__id__": 143
     },
     "_skybox": {
-      "__id__": 120
+      "__id__": 144
     },
     "fog": {
-      "__id__": 121
+      "__id__": 145
     },
     "octree": {
-      "__id__": 122
+      "__id__": 146
     }
   },
   {

@@ -1,6 +1,7 @@
 
 import { _decorator, Component, Node, Label, AudioSource, Sprite } from 'cc';
 import { GameManager, GameStatuType } from '../GameManager';
+import { GlobalManager } from '../GlobalManager';
 import { JSONquestTekst, JSONtask1, JSONimage, JSONobject } from '../RemoteScripts/JSONloader';
 import { Task } from '../Tasks/Task';
 
@@ -88,7 +89,7 @@ export class GenericUI extends Component {
             if(this.tempTask.getComponent(Task)?.uvodniTask == true)
                 this.node.getChildByName("GenericButton")!.getChildByName("Label")!.getComponent(Label)!.string = ">";
             else
-                this.node.getChildByName("GenericButton")!.getChildByName("Label")!.getComponent(Label)!.string = "KRENI";
+                this.node.getChildByName("GenericButton")!.getChildByName("Label")!.getComponent(Label)!.string = GlobalManager.getGlobal().goButton!;
     } 
 
     solveSoundActivness(task: JSONobject) {

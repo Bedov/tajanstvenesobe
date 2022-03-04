@@ -1,0 +1,606 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1701,
+      "max": [
+        1.5281089544296265,
+        4.803449630737305,
+        1.697108268737793
+      ],
+      "min": [
+        -1.630225419998169,
+        -1.138422966003418,
+        -1.8013824224472046
+      ],
+      "name": "TRG_SE_Baloons_01/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 1701,
+      "name": "TRG_SE_Baloons_01/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 1701,
+      "name": "TRG_SE_Baloons_01/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 32,
+      "componentType": 5123,
+      "count": 1701,
+      "name": "TRG_SE_Baloons_01/JOINTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 40,
+      "componentType": 5126,
+      "count": 1701,
+      "name": "TRG_SE_Baloons_01/WEIGHTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 7452,
+      "name": "TRG_SE_Baloons_01/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1,
+      "name": "/InverseBindMatrices",
+      "type": "MAT4"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1701,
+      "max": [
+        1.5281089544296265,
+        4.803449630737305,
+        1.697108268737793
+      ],
+      "min": [
+        -1.630225419998169,
+        -1.138422966003418,
+        -1.8013824224472046
+      ],
+      "name": "NOVA_Prolecna_scena_31_MAC:TRG_SE_Baloons_01/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 1701,
+      "name": "NOVA_Prolecna_scena_31_MAC:TRG_SE_Baloons_01/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 1701,
+      "name": "NOVA_Prolecna_scena_31_MAC:TRG_SE_Baloons_01/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 32,
+      "componentType": 5123,
+      "count": 1701,
+      "name": "NOVA_Prolecna_scena_31_MAC:TRG_SE_Baloons_01/JOINTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 40,
+      "componentType": 5126,
+      "count": 1701,
+      "name": "NOVA_Prolecna_scena_31_MAC:TRG_SE_Baloons_01/WEIGHTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 7452,
+      "name": "NOVA_Prolecna_scena_31_MAC:TRG_SE_Baloons_01/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 1,
+      "name": "/InverseBindMatrices",
+      "type": "MAT4"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 202,
+      "max": [
+        9.791666984558105
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "joint13/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 202,
+      "name": "joint13/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 202,
+      "name": "joint13/rotation/Output",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 202,
+      "name": "joint13/scale/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 202,
+      "max": [
+        9.791666984558105
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "joint12/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 202,
+      "name": "joint12/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 202,
+      "name": "joint12/rotation/Output",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 202,
+      "name": "joint12/scale/Output",
+      "type": "VEC3"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 3,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 3,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 2,
+          "target": {
+            "node": 3,
+            "path": "scale"
+          }
+        },
+        {
+          "sampler": 3,
+          "target": {
+            "node": 6,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 4,
+          "target": {
+            "node": 6,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 5,
+          "target": {
+            "node": 6,
+            "path": "scale"
+          }
+        }
+      ],
+      "name": "Take 001",
+      "samplers": [
+        {
+          "input": 14,
+          "output": 15
+        },
+        {
+          "input": 14,
+          "output": 16
+        },
+        {
+          "input": 14,
+          "output": 17
+        },
+        {
+          "input": 18,
+          "output": 19
+        },
+        {
+          "input": 18,
+          "output": 20
+        },
+        {
+          "input": 18,
+          "output": 21
+        }
+      ]
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 95256,
+      "byteStride": 56,
+      "name": "TRG_SE_Baloons_01",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 29808,
+      "byteOffset": 95256
+    },
+    {
+      "buffer": 0,
+      "byteLength": 64,
+      "byteOffset": 125064
+    },
+    {
+      "buffer": 0,
+      "byteLength": 95256,
+      "byteOffset": 125128,
+      "byteStride": 56,
+      "name": "NOVA_Prolecna_scena_31_MAC:TRG_SE_Baloons_01",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 29808,
+      "byteOffset": 220384
+    },
+    {
+      "buffer": 0,
+      "byteLength": 64,
+      "byteOffset": 250192
+    },
+    {
+      "buffer": 0,
+      "byteLength": 808,
+      "byteOffset": 250256
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2424,
+      "byteOffset": 251064
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3232,
+      "byteOffset": 253488
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2424,
+      "byteOffset": 256720
+    },
+    {
+      "buffer": 0,
+      "byteLength": 808,
+      "byteOffset": 259144
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2424,
+      "byteOffset": 259952
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3232,
+      "byteOffset": 262376
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2424,
+      "byteOffset": 265608
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 268032,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/299386a8-50e9-4d06-a3c3-39c514f085d8/output/.fbm/F0D22B40/Prolecna 3. samo mali baloni.fbm/SE_Baloons_Diffuse.jpg",
+          "relativeFileName": "../../../temp/asset-db/assets/fbx.FBX-glTF-conv/299386a8-50e9-4d06-a3c3-39c514f085d8/output/.fbm/F0D22B40/Prolecna 3. samo mali baloni.fbm/SE_Baloons_Diffuse.jpg"
+        }
+      },
+      "name": "NOVA_Prolecna_scena_31_MAC:DiffuseColor_Texture_208",
+      "uri": "SE_Baloons_Diffuse.jpg"
+    }
+  ],
+  "materials": [
+    {
+      "name": "NOVA_Prolecna_scena_31_MAC:SE_Baloons_Mat6",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "TRG_SE_Baloons_01",
+      "primitives": [
+        {
+          "attributes": {
+            "JOINTS_0": 3,
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "WEIGHTS_0": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "name": "NOVA_Prolecna_scena_31_MAC:TRG_SE_Baloons_01",
+      "primitives": [
+        {
+          "attributes": {
+            "JOINTS_0": 10,
+            "NORMAL": 8,
+            "POSITION": 7,
+            "TEXCOORD_0": 9,
+            "WEIGHTS_0": 11
+          },
+          "indices": 12,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        4
+      ],
+      "name": "ANIM_scena"
+    },
+    {
+      "children": [
+        2
+      ],
+      "mesh": 0,
+      "name": "TRG_SE_Baloons_01",
+      "rotation": [
+        0.0,
+        -0.21808187663555145,
+        0.0,
+        0.9759304523468018
+      ],
+      "scale": [
+        0.001379375346004963,
+        0.001379375346004963,
+        0.001379375346004963
+      ],
+      "skin": 0,
+      "translation": [
+        -0.05209972709417343,
+        0.0023971761111170053,
+        0.026654865592718124
+      ]
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "transform2",
+      "rotation": [
+        0.0,
+        0.21808187663555145,
+        0.0,
+        0.9759304523468018
+      ],
+      "scale": [
+        724.9658203125,
+        724.9658203125,
+        724.9658203125
+      ],
+      "translation": [
+        25.952312469482422,
+        -1.7378709316253662,
+        -33.56340026855469
+      ]
+    },
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "joint13",
+      "rotation": [
+        0.0034889678936451674,
+        0.08929159492254257,
+        -0.0388878732919693,
+        0.9952399730682373
+      ],
+      "scale": [
+        1.0568773746490479,
+        1.0162315368652344,
+        1.0
+      ],
+      "translation": [
+        -0.05209488421678543,
+        0.002348623936995864,
+        0.02668311819434166
+      ]
+    },
+    {
+      "children": [
+        5
+      ],
+      "mesh": 1,
+      "name": "NOVA_Prolecna_scena_31_MAC:TRG_SE_Baloons_01",
+      "rotation": [
+        0.0,
+        -0.21808187663555145,
+        0.0,
+        0.9759304523468018
+      ],
+      "scale": [
+        0.001379375346004963,
+        0.001379375346004963,
+        0.001379375346004963
+      ],
+      "skin": 1,
+      "translation": [
+        -0.06906113028526306,
+        0.0023971761111170053,
+        0.027613915503025055
+      ]
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "transform1",
+      "rotation": [
+        0.0,
+        0.21808187663555145,
+        0.0,
+        0.9759304523468018
+      ],
+      "scale": [
+        724.9658203125,
+        724.9658203125,
+        724.9658203125
+      ],
+      "translation": [
+        36.78315734863281,
+        -1.7378709316253662,
+        -39.42671203613281
+      ]
+    },
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "joint12",
+      "rotation": [
+        0.017126193270087242,
+        0.08073411136865616,
+        -0.014924823306500912,
+        0.9964767694473267
+      ],
+      "scale": [
+        1.072527527809143,
+        0.961016058921814,
+        0.9924220442771912
+      ],
+      "translation": [
+        -0.0690641775727272,
+        0.0025301638524979353,
+        0.02765600197017193
+      ]
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "inverseBindMatrices": 6,
+      "joints": [
+        3
+      ]
+    },
+    {
+      "inverseBindMatrices": 13,
+      "joints": [
+        6
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "NOVA_Prolecna_scena_31_MAC:DiffuseColor_Texture_208",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

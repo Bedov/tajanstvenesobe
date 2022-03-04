@@ -103,7 +103,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "turningOff", false);
         }
 
-        start() {
+        fillAudioWithAnswers() {
           this.node.children.forEach(element => {
             var _this$soundParent;
 
@@ -114,6 +114,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               if (element2.name == "Aaudio" || element2.name == "Baudio" || element2.name == "Caudio" || element2.name == "QuestionAudio") (_this$soundParent2 = this.soundParent) === null || _this$soundParent2 === void 0 ? void 0 : _this$soundParent2.push(element2);
             });
           });
+        }
+
+        fillAudioJustQuestion() {
+          var _this$soundParent3;
+
+          (_this$soundParent3 = this.soundParent) === null || _this$soundParent3 === void 0 ? void 0 : _this$soundParent3.push(this.node.getChildByName("QuestionAudio"));
+        }
+
+        start() {
+          this.fillAudioJustQuestion();
           this.audioSource = this.node.getComponent(AudioSource);
           if (this.node.getChildByName("Wrong") != undefined && this.node.getChildByName("Wrong") != null) this.ScriptableFromWrong = this.node.getChildByName("Wrong").getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()

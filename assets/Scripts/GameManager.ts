@@ -60,6 +60,8 @@ export class GameManager extends Component {
 
     isMobileOrTablet : boolean = false;
 
+    trophies? : Node ;
+
     public static getInstance(): GameManager {
         if (!this.instance) {
             GameManager.instance = new GameManager();
@@ -74,6 +76,8 @@ export class GameManager extends Component {
         GameManager.instance = this;
         this.jsonLoader = this.node.getComponent(JSONloader)!;
         this.typeInputResult = this.Canvas?.getChildByName("GenericUI-Input")?.getChildByName("EditBoxPC")?.getChildByName("Result")!.getComponent(Label)!;
+    
+        this.trophies = this.Canvas!.getChildByName("BottomUI")!.getChildByName("TrofejiLayout")!;
     }
 
     setTheKeyboard() {

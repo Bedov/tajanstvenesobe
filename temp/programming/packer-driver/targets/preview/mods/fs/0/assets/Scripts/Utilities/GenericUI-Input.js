@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Animation, EditBoxComponent, Task, ScriptEffects, GameManager, GameStatuType, TaskInput, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, GenericUIinput;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Animation, EditBoxComponent, Task, ScriptEffects, GameManager, GameStatuType, TaskInput, GlobalManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, GenericUIinput;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -35,6 +35,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("TaskInput", "../Tasks/TaskInput", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -56,6 +60,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       GameStatuType = _unresolved_4.GameStatuType;
     }, function (_unresolved_5) {
       TaskInput = _unresolved_5.TaskInput;
+    }, function (_unresolved_6) {
+      GlobalManager = _unresolved_6.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -130,6 +136,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.turningOff = false;
         }
 
+        solveIntroTaskButton() {
+          this.node.getChildByName("GenericButton").getChildByName("Label").getComponent(Label).string = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getGlobal().goButton;
+        }
+
         soundButtonClicked(event, customData) {
           if (this.JSONtask.questionAudio != undefined) this.audioSource.playOneShot(this.JSONtask.questionAudio, 1);
         }
@@ -178,6 +190,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent === void 0 ? void 0 : _this$getComponent.fadeInActive();
           this.setRandomTask();
+          this.solveIntroTaskButton();
 
           if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()

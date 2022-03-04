@@ -115,12 +115,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         showTask() {
-          console.log("NOT IMPLEMENTED");
+          this.taskManager.refreshExecutedTasks(this.node.parent);
         }
 
         taskCompleted() {
           this.executed = true;
-          this.taskManager.refreshExecutedTasks(this.node.parent);
+          this.taskManager.checkReadinesForTasks();
           this.resolveConsequnces();
           this.executeNextTasksByForce();
         }

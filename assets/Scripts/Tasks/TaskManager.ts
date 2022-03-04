@@ -17,6 +17,7 @@ const { ccclass, property } = _decorator;
  import { DetectTypeOfDevice } from "../DetectTypeOfDevice";
 import { FollowGoForward } from '../FollowGoForward';
 import { GameManager } from '../GameManager';
+import { TrophiesManagment } from '../TrophiesManagment';
 import { ButtonDisabler } from '../Utilities/ButtonDisabler';
 import { GenericUI } from '../Utilities/GenericUI';
 import { Task } from './Task';
@@ -94,7 +95,9 @@ export class TaskManager extends Component {
         if(this.checkpoints.indexOf(checkpoint) != undefined)
             if(this.checkpoints.indexOf(checkpoint) > GameManager.getInstance().Progress)
                 GameManager.getInstance().Progress = this.checkpoints.indexOf(checkpoint);
-        this.checkReadinesForTasks();
+       // this.checkReadinesForTasks();
+
+        GameManager.getInstance().trophies?.getComponent(TrophiesManagment)?.calculateLocked();
     }
 
     checkReadinesForTasks() {

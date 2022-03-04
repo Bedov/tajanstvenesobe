@@ -19,6 +19,7 @@ const { ccclass, property } = _decorator;
  import { JSONtask2 } from "../RemoteScripts/JSONloader";
 import { GameManager, GameStatuType } from '../GameManager';
 import { TaskInput } from '../Tasks/TaskInput';
+import { GlobalManager } from '../GlobalManager';
  
 @ccclass('GenericUI-Input')
 export class GenericUIinput extends Component {
@@ -80,6 +81,10 @@ export class GenericUIinput extends Component {
         this.turningOff = false;
     }
 
+    solveIntroTaskButton() {
+        this.node.getChildByName("GenericButton")!.getChildByName("Label")!.getComponent(Label)!.string = GlobalManager.getGlobal().goButton!;
+    } 
+
     soundButtonClicked(event: Event, customData: string) {
                 if(this.JSONtask.questionAudio != undefined)
                     this.audioSource.playOneShot(this.JSONtask.questionAudio!, 1);
@@ -131,6 +136,7 @@ export class GenericUIinput extends Component {
         this.getComponent(ScriptEffects)?.fadeInActive();
 
         this.setRandomTask();
+        this.solveIntroTaskButton();
 
         if(GameManager.getInstance().isMobileOrTablet) {
             GameManager.getInstance().inputKeyboard!.active = true;

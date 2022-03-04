@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Sprite, GameManager, GameStatuType, ScriptEffects, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, GenericUIimage;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Sprite, GameManager, GameStatuType, GlobalManager, ScriptEffects, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, GenericUIimage;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -17,6 +17,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _reportPossibleCrUseOfGameStatuType(extras) {
     _reporterNs.report("GameStatuType", "../GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfJSONimage(extras) {
@@ -42,7 +46,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       GameManager = _unresolved_2.GameManager;
       GameStatuType = _unresolved_2.GameStatuType;
     }, function (_unresolved_3) {
-      ScriptEffects = _unresolved_3.ScriptEffects;
+      GlobalManager = _unresolved_3.GlobalManager;
+    }, function (_unresolved_4) {
+      ScriptEffects = _unresolved_4.ScriptEffects;
     }],
     execute: function () {
       _crd = true;
@@ -97,6 +103,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             error: Error()
           }), GameStatuType) : GameStatuType).gamePaused;
           this.genericImage.getComponent(Sprite).spriteFrame = this.JSONtask.questImage;
+          this.solveIntroTaskButton();
           this.solveSoundActivness();
         }
 
@@ -112,6 +119,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           } else this.soundParent.active = true;
 
           this.turningOff = false;
+        }
+
+        solveIntroTaskButton() {
+          this.node.getChildByName("GenericButton").getChildByName("Label").getComponent(Label).string = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getGlobal().goButton;
         }
 
         turnOnGenericTask(tekst) {

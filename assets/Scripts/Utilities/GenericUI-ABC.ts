@@ -19,6 +19,7 @@ const { ccclass, property } = _decorator;
  import { JSONtask1 } from "../RemoteScripts/JSONloader";
 import { TaskABCquestion } from '../Tasks/TaskABCquestion';
 import { GameManager, GameStatuType } from '../GameManager';
+import { GlobalManager } from '../GlobalManager';
  
 @ccclass('GenericUI-ABC')
 export class GenericUIABC extends Component {
@@ -48,7 +49,7 @@ export class GenericUIABC extends Component {
 
     turningOff = false;
 
-    start () {
+    fillAudioWithAnswers() {
         this.node.children.forEach(element => {
             if(element.name == "Aaudio" || element.name == "Baudio" || element.name == "Caudio" || element.name == "QuestionAudio") 
                 this.soundParent?.push(element);
@@ -58,6 +59,14 @@ export class GenericUIABC extends Component {
                         this.soundParent?.push(element2);
             });
         });
+    }
+
+    fillAudioJustQuestion() {
+        this.soundParent?.push(this.node.getChildByName("QuestionAudio")!);
+    }
+
+    start () {
+        this.fillAudioJustQuestion();
 
 
         this.audioSource = this.node.getComponent(AudioSource)!;
@@ -65,6 +74,7 @@ export class GenericUIABC extends Component {
         if(this.node.getChildByName("Wrong") != undefined && this.node.getChildByName("Wrong") != null)
             this.ScriptableFromWrong =  this.node.getChildByName("Wrong")!.getComponent(ScriptEffects)! ;
     }
+
 
     solveSoundActivness() {
        // this.soundParent = this.node.getChildByName("SoundButtons")! ;

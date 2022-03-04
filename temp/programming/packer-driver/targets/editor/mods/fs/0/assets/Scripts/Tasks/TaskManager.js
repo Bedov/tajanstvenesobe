@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, Animation, Prefab, instantiate, Checkpoint, FollowGoForward, GameManager, ButtonDisabler, Task, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _temp, _crd, ccclass, property, TaskManager;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, Animation, Prefab, instantiate, Checkpoint, FollowGoForward, GameManager, TrophiesManagment, ButtonDisabler, Task, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _temp, _crd, ccclass, property, TaskManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -21,6 +21,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfTrophiesManagment(extras) {
+    _reporterNs.report("TrophiesManagment", "../TrophiesManagment", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfButtonDisabler(extras) {
@@ -51,9 +55,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_4) {
       GameManager = _unresolved_4.GameManager;
     }, function (_unresolved_5) {
-      ButtonDisabler = _unresolved_5.ButtonDisabler;
+      TrophiesManagment = _unresolved_5.TrophiesManagment;
     }, function (_unresolved_6) {
-      Task = _unresolved_6.Task;
+      ButtonDisabler = _unresolved_6.ButtonDisabler;
+    }, function (_unresolved_7) {
+      Task = _unresolved_7.Task;
     }],
     execute: function () {
       _crd = true;
@@ -153,12 +159,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         refreshExecutedTasks(checkpoint) {
+          var _getInstance$trophies, _getInstance$trophies2;
+
           if (this.checkpoints.indexOf(checkpoint) != undefined) if (this.checkpoints.indexOf(checkpoint) > (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().Progress) (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress = this.checkpoints.indexOf(checkpoint);
-          this.checkReadinesForTasks();
+          }), GameManager) : GameManager).getInstance().Progress = this.checkpoints.indexOf(checkpoint); // this.checkReadinesForTasks();
+
+          (_getInstance$trophies = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().trophies) === null || _getInstance$trophies === void 0 ? void 0 : (_getInstance$trophies2 = _getInstance$trophies.getComponent(_crd && TrophiesManagment === void 0 ? (_reportPossibleCrUseOfTrophiesManagment({
+            error: Error()
+          }), TrophiesManagment) : TrophiesManagment)) === null || _getInstance$trophies2 === void 0 ? void 0 : _getInstance$trophies2.calculateLocked();
         }
 
         checkReadinesForTasks() {

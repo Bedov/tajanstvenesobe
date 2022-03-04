@@ -91,6 +91,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _defineProperty(this, "invertedRotation", false);
 
           _defineProperty(this, "isMobileOrTablet", false);
+
+          _defineProperty(this, "trophies", void 0);
         }
 
         static getInstance() {
@@ -109,6 +111,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             error: Error()
           }), JSONloader) : JSONloader);
           this.typeInputResult = ((_this$Canvas = this.Canvas) === null || _this$Canvas === void 0 ? void 0 : (_this$Canvas$getChild = _this$Canvas.getChildByName("GenericUI-Input")) === null || _this$Canvas$getChild === void 0 ? void 0 : (_this$Canvas$getChild2 = _this$Canvas$getChild.getChildByName("EditBoxPC")) === null || _this$Canvas$getChild2 === void 0 ? void 0 : _this$Canvas$getChild2.getChildByName("Result")).getComponent(Label);
+          this.trophies = this.Canvas.getChildByName("BottomUI").getChildByName("TrofejiLayout");
         }
 
         setTheKeyboard() {

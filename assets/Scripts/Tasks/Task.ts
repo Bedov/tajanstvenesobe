@@ -78,14 +78,16 @@ export class Task extends Component {
     }
 
     showTask() {
-        console.log("NOT IMPLEMENTED");
+        this.taskManager.refreshExecutedTasks(this.node.parent!);
     }
 
     
 
     taskCompleted () {
         this.executed = true;
-        this.taskManager.refreshExecutedTasks(this.node.parent!);
+        
+        this.taskManager.checkReadinesForTasks();
+        
         this.resolveConsequnces();
         this.executeNextTasksByForce();
     }

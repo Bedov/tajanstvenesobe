@@ -15,6 +15,7 @@ const { ccclass, property } = _decorator;
  * ManualUrl = https://docs.cocos.com/creator/3.3/manual/en/
  *
  */
+ import { GlobalManager } from '../GlobalManager';
  
 @ccclass('SettingsUI')
 export class SettingsUI extends Component {
@@ -64,9 +65,17 @@ export class SettingsUI extends Component {
         
     }
 
+    solveIntroTaskButton() {
+         this.node.getChildByName("GenericButton")!.getChildByName("Label")!.getComponent(Label)!.string = GlobalManager.getGlobal().exitButton!;
+
+         this.node.getChildByName("Speed")!.getComponent(Label)!.string = GlobalManager.getGlobal().choseSpeedSettingsText!;
+         this.node.getChildByName("Inverse")!.getComponent(Label)!.string = GlobalManager.getGlobal().inverseSettingsText!;
+    } 
+
     turnOnSetting() {
         this.getComponent(ScriptEffects)!.fadeInActive();
         //this.genericTekst.getComponent(Label)!.string = tekst.toString();
+        this.solveIntroTaskButton();
 
         GameManager.getInstance().gameStatus = GameStatuType.gamePaused; 
     }

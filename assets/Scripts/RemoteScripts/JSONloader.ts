@@ -21,6 +21,7 @@ const { ccclass, property } = _decorator;
 //var static instance: JSONloader;
  
 import { GameManager } from "../GameManager";
+import { GlobalManager } from '../GlobalManager';
 import { Task } from '../Tasks/Task';
 
 @ccclass('JSONloader')
@@ -33,7 +34,6 @@ export class JSONloader extends Component {
     onLoad(){
 
         this.gameManager = this.node.getComponent(GameManager)!;
-        
         
     }
 
@@ -286,6 +286,8 @@ export class JSONloader extends Component {
 
        
     }
+
+    
     
 }
 
