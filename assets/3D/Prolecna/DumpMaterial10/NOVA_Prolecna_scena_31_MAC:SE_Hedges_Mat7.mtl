@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "NOVA_Prolecna_scena_31_MAC:SE_Hedges_Mat7",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -11,11 +11,14 @@
   "_defines": [
     {
       "USE_ALBEDO_MAP": true
-    }
+    },
+    {},
+    {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {
@@ -25,24 +28,19 @@
             "blendDstAlpha": 4
           }
         ]
-      },
-      "depthStencilState": {
-        "depthWrite": true
       }
-    }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
       "mainTexture": {
         "__uuid__": "be4fe8bc-feff-4165-bc44-88997f916982@55d02",
         "__expectedType__": "cc.Texture2D"
-      },
-      "albedoScale": {
-        "__type__": "cc.Vec3",
-        "x": 1,
-        "y": 1,
-        "z": 1
       }
-    }
+    },
+    {},
+    {}
   ]
 }
