@@ -34,7 +34,7 @@ export class TaskABCquestion extends Task {
         this.audioSource = this.node.getComponent(AudioSource)!;
 
         
-        this.scheduleOnce(this.fillQuestionsShownFalse, 1);
+        this.scheduleOnce(this.fillQuestionsShownFalse, 4);
     }
 
     fillQuestionsShownFalse() {
@@ -47,17 +47,27 @@ export class TaskABCquestion extends Task {
     getQuestions() {
         if(this.remoteName != "") {
             GameManager.getInstance().jsonLoader?.fetchQuestions(this.remoteName, this.questionsTempArray)!;
+            //this.scheduleOnce(this.logQuestionsFetched, 4);
+            
+            
             //JSONloader.getInstance().returnTask1(this.remoteName, this.taskTemp)!;
             //this.JSONloader.returnTask1(this.remoteName, this.taskTemp)!;
         }
+    }
+
+    logQuestionsFetched() {
+        //this.questionsTempArray.forEach(element => {
+        //    console.log("QUESTION + " + element.question );
+            
+            
+        //});
+        console.log("QUESTION ARRAY LENGHT " + this.questionsTempArray.length);
     }
 
     getRandomTask() {
         var imamoNekoriscene = false;
         var nasaoNekoriscenog = false;
         var randomIndex = randomRangeInt(0, this.questionsShown.length);
-
-        console.log("Radnom index: " + randomIndex);
         
 
         this.questionsShown.forEach(element => {
@@ -72,15 +82,11 @@ export class TaskABCquestion extends Task {
                 randomIndex = randomRangeInt(0, this.questionsShown.length);
                 if( !this.questionsShown[randomIndex])
                     nasaoNekoriscenog = true;
-
-                   
-                console.log(" this.questionsShown.length: " +  this.questionsShown.length);
-                console.log("nasaoNekoriscenog: " + nasaoNekoriscenog);
-                console.log("randomIndex: " + randomIndex);
             }
+            
         }
-
-        console.log("imamoNekoriscene: " + imamoNekoriscene);
+        console.log("QUESTION ARRAY LENGHT" +  this.questionsShown.length);
+        console.log("randomIndex: " + randomIndex);
 
         this.questionsShown[randomIndex] = true;
 

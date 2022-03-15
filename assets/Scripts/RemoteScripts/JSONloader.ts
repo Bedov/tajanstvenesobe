@@ -38,18 +38,18 @@ export class JSONloader extends Component {
     }
 
 
-
     fetchQuestions(folderURL: String, taskJSON: Array<JSONtask1>) {
 
         let remoteUrlRoot = this.originUrl + "/" + this.gameManager?.LanguageName + "/" + this.gameManager?.LevelName + "/" + folderURL + "/" ;
 
 
-        for (let index = 1; index < 3; index++) {
+        for (let index = 1; index < 10; index++) {
             //console.log("URL: " + remoteUrlRoot + index.toString() + ".txt");
             var questionURL = remoteUrlRoot + index.toString() + ".txt";
 
             if(!this.returnQuestion(remoteUrlRoot, questionURL, taskJSON, index)) {
                 taskJSON.pop();
+                
                 index = 13;
             }
                 
@@ -120,21 +120,13 @@ export class JSONloader extends Component {
                     tempTask.netacanOdgovor1 = parsedJSON["netacanOdgovor1"];
                     tempTask.netacanOdgovor2 = parsedJSON["netacanOdgovor2"];
                     
-                    if( parsedJSON["questionAudio"] != undefined && parsedJSON["tacanOdgovorAudio"] != undefined && parsedJSON["netacanOdgovor1Audio"] != undefined && parsedJSON["netacanOdgovor2Audio"] != undefined)  {
+                    if( parsedJSON["questionAudio"] != undefined)  {
 
                         try {
                             assetManager.loadRemote<AudioClip>(remoteUrlRoot + parsedJSON["questionAudio"], (AudioClip), (err, audioClip) =>  {
                                 tempTask.questionAudio =  audioClip ;
                             });
-                            assetManager.loadRemote<AudioClip>(remoteUrlRoot + parsedJSON["tacanOdgovorAudio"], (AudioClip), (err, audioClip) =>  {
-                                tempTask.tacanOdgovorAudio =  audioClip ;
-                            });
-                            assetManager.loadRemote<AudioClip>(remoteUrlRoot + parsedJSON["netacanOdgovor1Audio"], (AudioClip), (err, audioClip) =>  {
-                                tempTask.netacanOdgovor1Audio =  audioClip ;
-                            });
-                            assetManager.loadRemote<AudioClip>(remoteUrlRoot + parsedJSON["netacanOdgovor2Audio"], (AudioClip), (err, audioClip) =>  {
-                                tempTask.netacanOdgovor2Audio =  audioClip ;
-                            });
+
                         } catch (error) {
                             console.log("Zvuk nije dobro ucitan");
                             tempTask.audioIsLoaded = false;
@@ -188,7 +180,8 @@ export class JSONloader extends Component {
                    tekstObject.quest = parsedJSON["quest"];
                    
                    if( parsedJSON["questAudio"] != undefined)  {
-
+                        console.log("QUEST AUDIO NIJE UNDEFINED");
+                        
                        try {
                            assetManager.loadRemote<AudioClip>(audioURL + parsedJSON["questAudio"], (AudioClip), (err, audioClip) =>  {
                             tekstObject.questAudio =  audioClip ;

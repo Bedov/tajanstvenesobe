@@ -161,6 +161,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (task.questAudio == undefined || task.questAudio == null) {
             this.soundParent.active = false;
+            console.log("task.questAudio mi je undefined ili null" + task.questAudio);
           } else this.soundParent.active = true;
 
           this.turningOff = false;

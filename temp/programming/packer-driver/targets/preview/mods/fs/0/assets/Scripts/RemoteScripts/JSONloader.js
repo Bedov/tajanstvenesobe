@@ -76,7 +76,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           var remoteUrlRoot = this.originUrl + "/" + ((_this$gameManager = this.gameManager) === null || _this$gameManager === void 0 ? void 0 : _this$gameManager.LanguageName) + "/" + ((_this$gameManager2 = this.gameManager) === null || _this$gameManager2 === void 0 ? void 0 : _this$gameManager2.LevelName) + "/" + folderURL + "/";
 
-          for (var index = 1; index < 3; index++) {
+          for (var index = 1; index < 10; index++) {
             //console.log("URL: " + remoteUrlRoot + index.toString() + ".txt");
             var questionURL = remoteUrlRoot + index.toString() + ".txt";
 
@@ -139,19 +139,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 tempTask.netacanOdgovor1 = parsedJSON["netacanOdgovor1"];
                 tempTask.netacanOdgovor2 = parsedJSON["netacanOdgovor2"];
 
-                if (parsedJSON["questionAudio"] != undefined && parsedJSON["tacanOdgovorAudio"] != undefined && parsedJSON["netacanOdgovor1Audio"] != undefined && parsedJSON["netacanOdgovor2Audio"] != undefined) {
+                if (parsedJSON["questionAudio"] != undefined) {
                   try {
                     assetManager.loadRemote(remoteUrlRoot + parsedJSON["questionAudio"], AudioClip, (err, audioClip) => {
                       tempTask.questionAudio = audioClip;
-                    });
-                    assetManager.loadRemote(remoteUrlRoot + parsedJSON["tacanOdgovorAudio"], AudioClip, (err, audioClip) => {
-                      tempTask.tacanOdgovorAudio = audioClip;
-                    });
-                    assetManager.loadRemote(remoteUrlRoot + parsedJSON["netacanOdgovor1Audio"], AudioClip, (err, audioClip) => {
-                      tempTask.netacanOdgovor1Audio = audioClip;
-                    });
-                    assetManager.loadRemote(remoteUrlRoot + parsedJSON["netacanOdgovor2Audio"], AudioClip, (err, audioClip) => {
-                      tempTask.netacanOdgovor2Audio = audioClip;
                     });
                   } catch (error) {
                     console.log("Zvuk nije dobro ucitan");
@@ -196,6 +187,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 tekstObject.quest = parsedJSON["quest"];
 
                 if (parsedJSON["questAudio"] != undefined) {
+                  console.log("QUEST AUDIO NIJE UNDEFINED");
+
                   try {
                     assetManager.loadRemote(audioURL + parsedJSON["questAudio"], AudioClip, (err, audioClip) => {
                       tekstObject.questAudio = audioClip;

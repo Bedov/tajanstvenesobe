@@ -1,35 +1,51 @@
 {
   "__type__": "cc.Material",
-  "_name": "xilofono1",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+    "__uuid__": "ba5cc420-8aad-4af3-9618-527a43ea7170",
     "__expectedType__": "cc.EffectAsset"
   },
   "_techIdx": 0,
   "_defines": [
     {
       "USE_ALBEDO_MAP": true
-    }
+    },
+    {},
+    {},
+    {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {},
+    {}
   ],
   "_props": [
     {
+      "rimLightColor": {
+        "__type__": "cc.Color",
+        "r": 0,
+        "g": 255,
+        "b": 82,
+        "a": 255
+      },
       "mainTexture": {
         "__uuid__": "497e0137-f757-47d5-ac23-4cc71a83d97e@8b7f2",
         "__expectedType__": "cc.Texture2D"
       }
-    }
+    },
+    {},
+    {},
+    {}
   ]
 }

@@ -14,10 +14,10 @@ export class TrophiesManagment extends Component {
     start () {
         var trophyNode = this.node.children[0];
 
-        GameManager.getInstance().TaskManager?.getComponent(TaskManager)?.checkpoints.forEach(element => {
+        for (let index = 0; index < GameManager.getInstance().TaskManager!.getComponent(TaskManager)!.checkpoints.length - 1; index++) {
             var newTrophy = instantiate(trophyNode);
             newTrophy.parent = this.node;
-        });
+        }
 
         this.calculateLocked();
 
@@ -33,6 +33,7 @@ export class TrophiesManagment extends Component {
             this.node.children[index].children[0].active = true;
         }
 
+        /*
         if(GameManager.getInstance().Progress != 0)  {
             var trophiePosition = this.node.children[Number(GameManager.getInstance().Progress)].worldPosition;
             this.particleEffect?.setWorldPosition(new Vec3( trophiePosition)) ;
@@ -42,6 +43,7 @@ export class TrophiesManagment extends Component {
             this.particleEffect!.children[0].active = true;
             this.particleEffect!.children[0].getComponent(ParticleSystem2D)!.enabled = true;
         }
+        */
     }
 
     // update (deltaTime: number) {

@@ -112,7 +112,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), GameManager) : GameManager).getInstance().Progress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
               error: Error()
             }), Checkpoint) : Checkpoint).QuestionItem.worldPosition);
-            if (this.arrowDot != undefined) this.node.position = new Vec3(this.arrowDot.worldPosition.x, Number(this.arrowHeight), this.arrowDot.worldPosition.z);
+            if (this.arrowDot != undefined) this.node.worldPosition = new Vec3(this.arrowDot.worldPosition.x, Number(this.arrowHeight), this.arrowDot.worldPosition.z);
             this.node.lookAt(itemPosition); //    itemPosition.x * this.worldScale, itemPosition.y * this.worldScale, itemPosition.z * this.worldScale) );
           }
         }

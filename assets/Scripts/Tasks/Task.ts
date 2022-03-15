@@ -84,6 +84,8 @@ export class Task extends Component {
     
 
     taskCompleted () {
+        //this.taskManager.refreshExecutedTasks(this.node.parent!);
+
         this.executed = true;
         
         this.taskManager.checkReadinesForTasks();

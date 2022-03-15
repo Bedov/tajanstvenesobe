@@ -60,7 +60,7 @@ export class ArrowLookAt extends Component {
             var itemPosition: Vec3 = new Vec3( this.checkPoints[ Number(GameManager.getInstance().Progress)].getComponent(Checkpoint)!.QuestionItem!.worldPosition ) ;
   
             if(this.arrowDot != undefined  ) 
-                this.node.position = new Vec3 (this.arrowDot!.worldPosition.x, Number(this.arrowHeight), this.arrowDot!.worldPosition.z);
+                this.node.worldPosition = new Vec3 (this.arrowDot!.worldPosition.x, Number(this.arrowHeight), this.arrowDot!.worldPosition.z);
 
             this.node.lookAt( itemPosition); //    itemPosition.x * this.worldScale, itemPosition.y * this.worldScale, itemPosition.z * this.worldScale) );
         }

@@ -6148,3 +6148,1322 @@
 03-03-2022 17:20-debug: build success in 12947 ms!
 03-03-2022 17:20-debug: cocos-service:(onAfterBuild)90%
 03-03-2022 17:20-debug: Stop record console. {file(/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/builder/log/web-mobile09-11-2021 13-28.log)}
+04-03-2022 21:55-debug: Start record console... {file(/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/builder/log/web-mobile09-11-2021 13-28.log)}
+04-03-2022 21:55-debug: =================================== Build Task (builds) Start ================================
+04-03-2022 21:55-debug: Build with Cocos Creator 3.4.0
+04-03-2022 21:55-debug: Start build task, options:{"name":"Klett - Demo scene","platform":"web-mobile","buildPath":"project://..","debug":false,"md5Cache":true,"sourceMaps":false,"replaceSplashScreen":true,"mainBundleCompressionType":"merge_dep","mainBundleIsRemote":false,"mergeStartScene":false,"experimentalEraseModules":false,"compressTexture":true,"packAutoAtlas":true,"startScene":"3660340f-48c7-4c25-bdae-831717fa9973","scenes":[{"url":"db://assets/Scenes/MainMenu.scene","uuid":"3660340f-48c7-4c25-bdae-831717fa9973","inBundle":false},{"url":"db://assets/Scenes/KinderGarden.scene","uuid":"8822f1d8-0a2d-4e4b-a8eb-f111477f7dd0"}],"outputName":"builds","packages":{"web-mobile":{"orientation":"landscape","polyfills":{"asyncFunctions":true}},"cocos-service":{"configID":"8e3570","services":[]}}}
+04-03-2022 21:55-debug: Process: heapTotal 222.74MB heapUsed 204.15MB rss 139.96MB
+04-03-2022 21:55-debug: // ---- cocos-service:(onBeforeBuild) ----
+04-03-2022 21:55-debug: cocos-service:(onBeforeBuild) start...0%
+04-03-2022 21:55-debug: // ---- cocos-service:(onBeforeBuild) success ----
+04-03-2022 21:55-debug: cocos-service:(onBeforeBuild)3%
+04-03-2022 21:55-debug: Query all assets info in project
+04-03-2022 21:55-debug: init custom config: keepNodeUuid: false, useCache: true
+04-03-2022 21:55-debug: BuildAssetLibrary query-assets with assets 3426
+04-03-2022 21:55-debug:   Number of all scripts: 59
+04-03-2022 21:55-debug:   Number of other assets: 24763
+04-03-2022 21:55-debug: web-mobile:(onAfterInit) start...3%
+04-03-2022 21:55-debug: // ---- web-mobile:(onAfterInit) ----
+04-03-2022 21:55-debug:   Number of all scenes: 15
+04-03-2022 21:55-debug: web-mobile:(onAfterInit)5%
+04-03-2022 21:55-debug: Reload project scripts start5%
+04-03-2022 21:55-log: // ---- Reload project scripts ----
+04-03-2022 21:55-debug: Process: heapTotal 238.84MB heapUsed 218.28MB rss 259.75MB
+04-03-2022 21:55-debug: reload all scripts.
+04-03-2022 21:55-debug: BuildAssetLibrary initialized with asset 14208!
+04-03-2022 21:55-debug: Process: heapTotal 238.84MB heapUsed 217.02MB rss 259.63MB
+04-03-2022 21:55-debug: // ---- web-mobile:(onAfterInit) success ----
+04-03-2022 21:55-debug: Incremental keys: 
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "pack:///mods/cce/internal/x/cc.js" loaded.
+04-03-2022 21:55-debug: Invalidating 'pack:///mods/cce/internal/x/cc.js'
+04-03-2022 21:55-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "pack:///mods/cce/internal/x/cc.js" loaded.
+04-03-2022 21:55-debug: [[Executor]] Register CameraControll
+04-03-2022 21:55-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/BackUp/CameraControll.js" loaded.
+04-03-2022 21:55-debug: [[Executor]] Module "pack:///mods/cce/internal/code-quality/cr.js" loaded.
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+04-03-2022 21:56-debug: [[Executor]] Register FirstPersonCameraGroundMovement
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/BackUp/FirstPersonCameraGroundMovement.js" loaded.
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+04-03-2022 21:56-debug: [[Executor]] Register FirstPersonCameraRotate
+04-03-2022 21:56-warn: The type of "FirstPersonCameraRotate.degreesLocked" must be CCBoolean, not Boolean.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/BackUp/FirstPersonCameraRotate.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register JSONloader
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/RemoteScripts/JSONloader.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register GameManager
+04-03-2022 21:56-warn: The type of "GameManager.LevelName" must be CCString, not String.
+04-03-2022 21:56-warn: The type of "GameManager.LanguageName" must be CCString, not String.
+04-03-2022 21:56-warn: The type of "GameManager.Progress" must be CCFloat or CCInteger, not Number.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/GameManager.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register GlobalManager
+04-03-2022 21:56-warn: The type of "GlobalManager.LanguageName" must be CCString, not String.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/GlobalManager.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register ScriptEffects
+04-03-2022 21:56-warn: The type of "ScriptEffects._fadeOutCounterMax" must be CCFloat or CCInteger, not Number.
+04-03-2022 21:56-warn: The type of "ScriptEffects.defaultOff" must be CCBoolean, not Boolean.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ScriptEffects.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register GenericUI
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register Consequence
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Consequences/Consequence.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register Task
+04-03-2022 21:56-warn: The type of "Task.uvodniTask" must be CCBoolean, not Boolean.
+04-03-2022 21:56-warn: The type of "Task.repeatToogle" must be CCBoolean, not Boolean.
+04-03-2022 21:56-warn: The type of "Task.checkPointBelong" must be CCFloat or CCInteger, not Number.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/Task.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register GenericUIABC
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-ABC.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register TaskABCquestion
+04-03-2022 21:56-warn: The type of "TaskABCquestion.correctAnswer" must be CCFloat or CCInteger, not Number.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskABCquestion.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register GenericUIinput
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-Input.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register TaskInput
+04-03-2022 21:56-warn: The type of "TaskInput.remoteName" must be CCString, not String.
+04-03-2022 21:56-warn: The type of "TaskInput.correctAnswer" must be CCFloat or CCInteger, not Number.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskInput.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register DbuttonActivate
+04-03-2022 21:56-warn: The type of "DbuttonActivate.taskCompletedAutomaticly" must be CCBoolean, not Boolean.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Checkpoint/Checkpoint.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register Checkpoint
+04-03-2022 21:56-debug: [[Executor]] Register ConsequenceGoDarkVeselaUlica
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Consequences/ConsequenceGoDarkVeselaUlica.js" loaded.
+04-03-2022 21:56-warn: The type of "TaskABCquestion.remoteName" must be CCString, not String.
+04-03-2022 21:56-debug: [[Executor]] Register ConsequenceTurnOff
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Consequences/ConsequenceTurnOff.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/DetectTypeOfDevice.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register FirstPersonCameraMovement
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/FirstPersonCameraMovement.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register FollowGoForward
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/FollowGoForward.js" loaded.
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+04-03-2022 21:56-debug: [[Executor]] Register GhostCameraMovement
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/GhostCameraMovement.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register LevelTranslator
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/RemoteScripts/LevelTranslator.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register RoomTranslator
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/RoomTranslator.js" loaded.
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+04-03-2022 21:56-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+04-03-2022 21:56-debug: [[Executor]] Register SlideRotateCamera
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/SlideRotateCamera.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register DetectTypeOfDevice
+04-03-2022 21:56-warn: The type of "TaskAutoActive.remoteName" must be CCString, not String.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskAutoActive.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register TaskAutoActive
+04-03-2022 21:56-warn: The type of "TaskAutoActiveLocalAudio.remoteName" must be CCString, not String.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register TrophiesManagment
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/TrophiesManagment.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register ButtonDisabler
+04-03-2022 21:56-debug: [[Executor]] Register TaskAutoActiveLocalAudio
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ButtonDisabler.js" loaded.
+04-03-2022 21:56-warn: The type of "Task.reportToUser" must be CCBoolean, not Boolean.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskManager.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register TaskSimplePanel
+04-03-2022 21:56-warn: The type of "TaskSimplePanel.remoteName" must be CCString, not String.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskSimplePanel.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/3DbuttonActivate.js" loaded.
+04-03-2022 21:56-warn: The type of "TaskSimplePanelClickableObject.remoteName" must be CCString, not String.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskSimplePanelClickableObject.js" loaded.
+04-03-2022 21:56-warn: The type of "ButtonDisabler.justTutorialLock" must be CCBoolean, not Boolean.
+04-03-2022 21:56-warn: The type of "TaskSubtitle.tekst" must be CCString, not String.
+04-03-2022 21:56-debug: [[Executor]] Register TaskSimplePanelClickableObject
+04-03-2022 21:56-debug: [[Executor]] Register TaskTutorialTask
+04-03-2022 21:56-warn: The type of "TaskTutorialTask.remoteName" must be CCString, not String.
+04-03-2022 21:56-debug: [[Executor]] Register TaskManager
+04-03-2022 21:56-debug: [[Executor]] Register TouchInput
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/TouchInput.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register DbuttonRaycast
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/3DbuttonRaycast.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register ButtonDelegator
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/ButtonDelegator.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register SettingsUI
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/SettingsUI.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register ButtonSettings
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/ButtonSettings.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register TopCameraLook
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/TopCameraLook.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register TaskSubtitle
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/ButtonTopview.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register KeyboardNumericInput
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/KeyboardNumericInput.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskSubtitle.js" loaded.
+04-03-2022 21:56-warn: The type of "ArrowLookAt.arrowHeight" must be CCFloat or CCInteger, not Number.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ArrowLookAt.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register ComponentUtility
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ComponentUtility.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register GenericUIimage
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-Image.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register GetFPS
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GetFPS.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register OpenLevelByName
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/OpenLevelByName.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Module "cce:/internal/x/editor-exports/cc/editor/populate-internal-constants" loaded.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/migrate-canvas.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register UIBase
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/base/UIBase.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/base/UIMgr.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register ClickEventAgent
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/base/UIController.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register EntryPoint
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/EntryPoint.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register FollowCamera
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/FollowCamera.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register LogicPoint
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/LogicPoint.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register NodeFloatingAnim
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/NodeFloatingAnim.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register NpcPoint
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/NpcPoint.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register PlayerCtrl
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/PlayerCtrl.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register TeleportPoint
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/TeleportPoint.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register TitleBar
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/TitleBar.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+04-03-2022 21:56-debug: Reload project scripts √6%
+04-03-2022 21:56-debug: Query asset bundle start6%
+04-03-2022 21:56-log: // ---- Query asset bundle ----
+04-03-2022 21:56-debug: Process: heapTotal 241.60MB heapUsed 221.19MB rss 283.16MB
+04-03-2022 21:56-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskTutorialTask.js" loaded.
+04-03-2022 21:56-debug: [[Executor]] Register ArrowLookAt
+04-03-2022 21:56-debug: [[Executor]] Register ButtonTopview
+04-03-2022 21:56-debug: Query asset bundle √8%
+04-03-2022 21:56-debug: Number of scenes: 2
+04-03-2022 21:56-debug: Query and organize assets start8%
+04-03-2022 21:56-debug: Process: heapTotal 241.60MB heapUsed 221.46MB rss 283.41MB
+04-03-2022 21:56-log: // ---- Query and organize assets ----
+04-03-2022 21:56-debug: Number of assets: 378
+04-03-2022 21:56-log: // ---- Organize scripts ----
+04-03-2022 21:56-debug: Process: heapTotal 244.38MB heapUsed 225.75MB rss 289.39MB
+04-03-2022 21:56-debug: sort script group...
+04-03-2022 21:56-debug: Organize scripts √10%
+04-03-2022 21:56-debug: Number of asset bundle: 2
+04-03-2022 21:56-log: // ---- Organize texture compression tasks ----
+04-03-2022 21:56-debug: Process: heapTotal 244.38MB heapUsed 225.79MB rss 289.40MB
+04-03-2022 21:56-debug: Query and organize assets √9%
+04-03-2022 21:56-debug: Organize scripts start9%
+04-03-2022 21:56-debug: Organize texture compression tasks start10%
+04-03-2022 21:56-debug: Number of image-compress task: 0
+04-03-2022 21:56-debug: Organize texture compression tasks √11%
+04-03-2022 21:56-debug: Process: heapTotal 244.38MB heapUsed 226.25MB rss 290.13MB
+04-03-2022 21:56-debug: Number of json group: 3
+04-03-2022 21:56-debug: Group json √12%
+04-03-2022 21:56-debug: Merging Texture2D json start12%
+04-03-2022 21:56-log: // ---- Merging Texture2D json ----
+04-03-2022 21:56-debug: Process: heapTotal 244.38MB heapUsed 226.44MB rss 290.14MB
+04-03-2022 21:56-debug: Merging Texture2D json √14%
+04-03-2022 21:56-debug:  start14%
+04-03-2022 21:56-log: // ----  ----
+04-03-2022 21:56-debug: Process: heapTotal 244.38MB heapUsed 226.60MB rss 290.72MB
+04-03-2022 21:56-debug:  √15%
+04-03-2022 21:56-debug: web-mobile:(onBeforeBuildAssets) start...15%
+04-03-2022 21:56-debug: // ---- web-mobile:(onBeforeBuildAssets) ----
+04-03-2022 21:56-debug: Process: heapTotal 244.38MB heapUsed 226.62MB rss 290.74MB
+04-03-2022 21:56-debug: Group json start11%
+04-03-2022 21:56-debug: web-mobile:(onBeforeBuildAssets)18%
+04-03-2022 21:56-debug:  start18%
+04-03-2022 21:56-log: // ----  ----
+04-03-2022 21:56-debug: Process: heapTotal 244.38MB heapUsed 226.66MB rss 290.75MB
+04-03-2022 21:56-debug: // ---- web-mobile:(onBeforeBuildAssets) success ----
+04-03-2022 21:56-log: // ---- Group json ----
+04-03-2022 21:56-debug: Process: heapTotal 253.79MB heapUsed 205.08MB rss 271.88MB
+04-03-2022 21:56-debug: Build script18%
+04-03-2022 21:56-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts
+04-03-2022 21:56-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts
+04-03-2022 21:56-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskABCquestion.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-ABC.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskABCquestion.ts
+04-03-2022 21:56-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/TrophiesManagment.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts
+04-03-2022 21:56-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Input.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts
+04-03-2022 21:56-debug: Copy externalScripts success!
+04-03-2022 21:56-debug: Build script√18%
+04-03-2022 21:56-debug: Build engine18%
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 274.85MB rss 130.69MB
+04-03-2022 21:56-debug: Use cache engine: {link(/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2)}
+04-03-2022 21:56-debug: {"debug":false,"sourceMaps":false,"includeModules":["base","gfx-webgl","3d","2d","ui","particle","physics-ammo","physics-2d-box2d","intersection-2d","primitive","profiler","particle-2d","audio","video","webview","tween","terrain","tiled-map","spine","dragon-bones","marionette"],"engineVersion":"3.4.0","platform":"HTML5","md5Map":[],"engineName":"cocos-js","useCache":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","entry":"/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine"}
+04-03-2022 21:56-debug: Build engine√18%
+04-03-2022 21:56-debug:  √24%
+04-03-2022 21:56-log: // ---- Build auto-atlas ----
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 276.68MB rss 141.72MB
+04-03-2022 21:56-debug: Build auto-atlas start24%
+04-03-2022 21:56-debug: There is no spriteFrame in dictionary(db://assets/3D/MedivalVillage/Test).
+04-03-2022 21:56-debug: Build auto-atlas √31%
+04-03-2022 21:56-debug: Compress Image √37%
+04-03-2022 21:56-debug: Copy the resource start37%
+04-03-2022 21:56-log: // ---- Copy the resource ----
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 277.71MB rss 155.63MB
+04-03-2022 21:56-debug: Asset Bundle(resources) handle assets: 2
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 277.70MB rss 155.60MB
+04-03-2022 21:56-debug: Compress Image start31%
+04-03-2022 21:56-log: // ---- Compress Image ----
+04-03-2022 21:56-debug: Asset Bundle(main) handle assets: 376
+04-03-2022 21:56-log: // ---- Build the grouped json and scatter files to the specified location ----
+04-03-2022 21:56-debug: Build the grouped json and scatter files to the specified location start44%
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 276.34MB rss 162.48MB
+04-03-2022 21:56-debug: Copy the resource √44%
+04-03-2022 21:56-debug: Json group(build-task/json) compile success，json number: 6
+04-03-2022 21:56-debug: Json group(build-task/json) compile success，json number: 6
+04-03-2022 21:56-debug: Json group(build-task/json) compile success，json number: 6
+04-03-2022 21:56-debug: Build the grouped json and scatter files to the specified location √51%
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 280.95MB rss 192.67MB
+04-03-2022 21:56-debug: Add md5 suffix to assets start57%
+04-03-2022 21:56-log: // ---- Add md5 suffix to assets ----
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 280.97MB rss 192.83MB
+04-03-2022 21:56-debug: Compress zip bundle start51%
+04-03-2022 21:56-debug: Compress zip bundle √57%
+04-03-2022 21:56-log: // ---- Compress zip bundle ----
+04-03-2022 21:56-debug: add suffix to assets(126) success!
+04-03-2022 21:56-debug: Add md5 suffix to assets √68%
+04-03-2022 21:56-debug: Init settings and config start68%
+04-03-2022 21:56-log: // ---- Init settings and config ----
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 278.00MB rss 203.21MB
+04-03-2022 21:56-debug: Init settings and config √68%
+04-03-2022 21:56-debug: tasks.settings.macro does not defined in i18n
+04-03-2022 21:56-debug: tasks.settings.macro start68%
+04-03-2022 21:56-log: // ---- tasks.settings.macro ----
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 278.03MB rss 203.26MB
+04-03-2022 21:56-debug: tasks.settings.macro √69%
+04-03-2022 21:56-debug: Use cached settings start69%
+04-03-2022 21:56-debug: Process: heapTotal 305.55MB heapUsed 278.07MB rss 203.27MB
+04-03-2022 21:56-log: // ---- Use cached settings ----
+04-03-2022 21:56-debug: Use cached settings √69%
+04-03-2022 21:56-debug: custom joint texture layouts start69%
+04-03-2022 21:56-log: // ---- custom joint texture layouts ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.24MB rss 203.48MB
+04-03-2022 21:56-debug: custom joint texture layouts √70%
+04-03-2022 21:56-debug: custom joint physics start70%
+04-03-2022 21:56-debug: Fill script data to settings start70%
+04-03-2022 21:56-log: // ---- Fill script data to settings ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.28MB rss 203.48MB
+04-03-2022 21:56-debug: Fill script data to settings √71%
+04-03-2022 21:56-debug: Fill scene data to settings start71%
+04-03-2022 21:56-log: // ---- Fill scene data to settings ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.29MB rss 203.51MB
+04-03-2022 21:56-debug: Fill scene data to settings √71%
+04-03-2022 21:56-debug: Organize assets groups，generate packedAssets and rawAssets data start71%
+04-03-2022 21:56-log: // ---- Organize assets groups，generate packedAssets and rawAssets data ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.31MB rss 203.53MB
+04-03-2022 21:56-debug: Organize assets groups，generate packedAssets and rawAssets data √72%
+04-03-2022 21:56-debug: custom joint physics √70%
+04-03-2022 21:56-log: // ---- Generate md5AssetsMap from suffixMap to settings ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.32MB rss 203.55MB
+04-03-2022 21:56-debug: Generate md5AssetsMap from suffixMap to settings √72%
+04-03-2022 21:56-debug: web-mobile:(onBeforeCompressSettings) start...72%
+04-03-2022 21:56-debug: // ---- web-mobile:(onBeforeCompressSettings) ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.34MB rss 203.58MB
+04-03-2022 21:56-debug: // ---- web-mobile:(onBeforeCompressSettings) success ----
+04-03-2022 21:56-debug: web-mobile:(onBeforeCompressSettings)75%
+04-03-2022 21:56-debug: cocos-service:(onBeforeCompressSettings) start...75%
+04-03-2022 21:56-debug: // ---- cocos-service:(onBeforeCompressSettings) ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.36MB rss 203.61MB
+04-03-2022 21:56-log: // ---- custom joint physics ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.27MB rss 203.48MB
+04-03-2022 21:56-debug: Generate md5AssetsMap from suffixMap to settings start72%
+04-03-2022 21:56-debug: // ---- cocos-service:(onBeforeCompressSettings) success ----
+04-03-2022 21:56-debug: cocos-service:(onBeforeCompressSettings)77%
+04-03-2022 21:56-debug:  start77%
+04-03-2022 21:56-log: // ----  ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.48MB rss 203.73MB
+04-03-2022 21:56-debug:  √78%
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.51MB rss 203.74MB
+04-03-2022 21:56-debug: Save config.json start79%
+04-03-2022 21:56-log: // ---- Save config.json ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.84MB rss 203.81MB
+04-03-2022 21:56-debug: Save config.json √80%
+04-03-2022 21:56-debug: Save Settings.json start80%
+04-03-2022 21:56-log: // ---- Save Settings.json ----
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 278.94MB rss 203.96MB
+04-03-2022 21:56-debug: Save Settings.json √81%
+04-03-2022 21:56-debug: Sort build template start81%
+04-03-2022 21:56-log: // ---- Sort build template ----
+04-03-2022 21:56-debug: Process: heapTotal 306.18MB heapUsed 279.71MB rss 204.00MB
+04-03-2022 21:56-debug: Sort build template √82%
+04-03-2022 21:56-debug: cocos-service:(onAfterCompressSettings) start...82%
+04-03-2022 21:56-debug: // ---- cocos-service:(onAfterCompressSettings) ----
+04-03-2022 21:56-debug: Process: heapTotal 306.18MB heapUsed 283.94MB rss 213.55MB
+04-03-2022 21:56-log: // ---- Compress settings.json and config.json ----
+04-03-2022 21:56-debug: Compress settings.json and config.json start78%
+04-03-2022 21:56-debug: Compress settings.json and config.json √79%
+04-03-2022 21:56-debug: // ---- cocos-service:(onAfterCompressSettings) success ----
+04-03-2022 21:56-debug: Process: heapTotal 306.18MB heapUsed 284.54MB rss 213.67MB
+04-03-2022 21:56-debug: cocos-service:(onAfterCompressSettings)85%
+04-03-2022 21:56-debug: web-mobile:(onAfterBuild) start...85%
+04-03-2022 21:56-debug: // ---- web-mobile:(onAfterBuild) ----
+04-03-2022 21:56-debug: // ---- web-mobile:(onAfterBuild) success ----
+04-03-2022 21:56-debug: cocos-service:(onAfterBuild) start...87%
+04-03-2022 21:56-debug: Process: heapTotal 305.71MB heapUsed 279.65MB rss 212.33MB
+04-03-2022 21:56-debug: web-mobile:(onAfterBuild)87%
+04-03-2022 21:56-debug: // ---- cocos-service:(onAfterBuild) ----
+04-03-2022 21:56-debug: // ---- cocos-service:(onAfterBuild) success ----
+04-03-2022 21:56-debug: cocos-service:(onAfterBuild)90%
+04-03-2022 21:56-debug: build success in 15374 ms!
+04-03-2022 21:56-debug: Stop record console. {file(/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/builder/log/web-mobile09-11-2021 13-28.log)}
+06-03-2022 18:08-debug: Start build task, options:{"name":"Klett - Demo scene","platform":"web-mobile","buildPath":"project://..","debug":false,"md5Cache":true,"sourceMaps":false,"replaceSplashScreen":true,"mainBundleCompressionType":"merge_dep","mainBundleIsRemote":false,"mergeStartScene":false,"experimentalEraseModules":false,"compressTexture":true,"packAutoAtlas":true,"startScene":"3660340f-48c7-4c25-bdae-831717fa9973","scenes":[{"url":"db://assets/Scenes/MainMenu.scene","uuid":"3660340f-48c7-4c25-bdae-831717fa9973","inBundle":false},{"url":"db://assets/Scenes/KinderGarden.scene","uuid":"8822f1d8-0a2d-4e4b-a8eb-f111477f7dd0"}],"outputName":"builds","packages":{"web-mobile":{"orientation":"landscape","polyfills":{"asyncFunctions":true}},"cocos-service":{"configID":"8e3570","services":[]}}}
+06-03-2022 18:08-debug: Build with Cocos Creator 3.4.0
+06-03-2022 18:08-debug: // ---- cocos-service:(onBeforeBuild) ----
+06-03-2022 18:08-debug: Process: heapTotal 213.96MB heapUsed 204.53MB rss 36.18MB
+06-03-2022 18:08-debug: cocos-service:(onBeforeBuild) start...0%
+06-03-2022 18:08-debug: =================================== Build Task (builds) Start ================================
+06-03-2022 18:08-debug: Start record console... {file(/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/builder/log/web-mobile09-11-2021 13-28.log)}
+06-03-2022 18:08-debug: // ---- cocos-service:(onBeforeBuild) success ----
+06-03-2022 18:08-debug: cocos-service:(onBeforeBuild)3%
+06-03-2022 18:08-debug: Query all assets info in project
+06-03-2022 18:08-debug: init custom config: keepNodeUuid: false, useCache: true
+06-03-2022 18:08-debug: BuildAssetLibrary query-assets with assets 3426
+06-03-2022 18:08-debug: BuildAssetLibrary initialized with asset 14208!
+06-03-2022 18:08-debug: web-mobile:(onAfterInit) start...3%
+06-03-2022 18:08-debug: // ---- web-mobile:(onAfterInit) ----
+06-03-2022 18:08-debug: Process: heapTotal 256.92MB heapUsed 234.27MB rss 209.88MB
+06-03-2022 18:08-debug: // ---- web-mobile:(onAfterInit) success ----
+06-03-2022 18:08-debug: web-mobile:(onAfterInit)5%
+06-03-2022 18:08-debug: Reload project scripts start5%
+06-03-2022 18:08-log: // ---- Reload project scripts ----
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 215.07MB rss 229.99MB
+06-03-2022 18:08-debug: reload all scripts.
+06-03-2022 18:08-debug:   Number of all scenes: 15
+06-03-2022 18:08-debug:   Number of all scripts: 59
+06-03-2022 18:08-debug:   Number of other assets: 24763
+06-03-2022 18:08-debug: Incremental keys: 
+06-03-2022 18:08-debug: Unregister CameraControll
+06-03-2022 18:08-debug: Unregister JSONloader
+06-03-2022 18:08-debug: Unregister GlobalManager
+06-03-2022 18:08-debug: Unregister ScriptEffects
+06-03-2022 18:08-debug: Unregister GenericUI
+06-03-2022 18:08-debug: Unregister Consequence
+06-03-2022 18:08-debug: Unregister Task
+06-03-2022 18:08-debug: Unregister GenericUIABC
+06-03-2022 18:08-debug: Unregister TaskABCquestion
+06-03-2022 18:08-debug: Unregister FirstPersonCameraRotate
+06-03-2022 18:08-debug: Unregister TaskInput
+06-03-2022 18:08-debug: Unregister DbuttonActivate
+06-03-2022 18:08-debug: Unregister Checkpoint
+06-03-2022 18:08-debug: Unregister ConsequenceGoDarkVeselaUlica
+06-03-2022 18:08-debug: Unregister ConsequenceTurnOff
+06-03-2022 18:08-debug: Unregister DetectTypeOfDevice
+06-03-2022 18:08-debug: Unregister FirstPersonCameraMovement
+06-03-2022 18:08-debug: Unregister FollowGoForward
+06-03-2022 18:08-debug: Unregister GhostCameraMovement
+06-03-2022 18:08-debug: Unregister LevelTranslator
+06-03-2022 18:08-debug: Unregister RoomTranslator
+06-03-2022 18:08-debug: Unregister SlideRotateCamera
+06-03-2022 18:08-debug: Unregister TaskAutoActive
+06-03-2022 18:08-debug: Unregister TaskAutoActiveLocalAudio
+06-03-2022 18:08-debug: Unregister TrophiesManagment
+06-03-2022 18:08-debug: Unregister ButtonDisabler
+06-03-2022 18:08-debug: Unregister TaskManager
+06-03-2022 18:08-debug: Unregister TaskSimplePanel
+06-03-2022 18:08-debug: Unregister TaskSimplePanelClickableObject
+06-03-2022 18:08-debug: Unregister TaskSubtitle
+06-03-2022 18:08-debug: Unregister TaskTutorialTask
+06-03-2022 18:08-debug: Unregister GameManager
+06-03-2022 18:08-debug: Unregister DbuttonRaycast
+06-03-2022 18:08-debug: Unregister FirstPersonCameraGroundMovement
+06-03-2022 18:08-debug: Unregister SettingsUI
+06-03-2022 18:08-debug: Unregister ButtonSettings
+06-03-2022 18:08-debug: Unregister TopCameraLook
+06-03-2022 18:08-debug: Unregister ButtonTopview
+06-03-2022 18:08-debug: Unregister KeyboardNumericInput
+06-03-2022 18:08-debug: Unregister ArrowLookAt
+06-03-2022 18:08-debug: Unregister ComponentUtility
+06-03-2022 18:08-debug: Unregister GenericUIimage
+06-03-2022 18:08-debug: Unregister GetFPS
+06-03-2022 18:08-debug: Unregister OpenLevelByName
+06-03-2022 18:08-debug: Unregister UIBase
+06-03-2022 18:08-debug: Unregister ClickEventAgent
+06-03-2022 18:08-debug: Unregister EntryPoint
+06-03-2022 18:08-debug: Unregister FollowCamera
+06-03-2022 18:08-debug: Unregister LogicPoint
+06-03-2022 18:08-debug: Unregister NodeFloatingAnim
+06-03-2022 18:08-debug: Unregister TouchInput
+06-03-2022 18:08-debug: Unregister NpcPoint
+06-03-2022 18:08-debug: Unregister PlayerCtrl
+06-03-2022 18:08-debug: Unregister TeleportPoint
+06-03-2022 18:08-debug: Unregister TitleBar
+06-03-2022 18:08-debug: Unregister ButtonDelegator
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/cce/internal/x/cc.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/BackUp/FirstPersonCameraGroundMovement.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/cce/internal/code-quality/cr.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/BackUp/FirstPersonCameraRotate.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Checkpoint/Checkpoint.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/GameManager.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/TaskABCquestion.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/TaskInput.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/UI/3DbuttonActivate.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/RemoteScripts/JSONloader.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-ABC.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/Task.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-Input.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/ScriptEffects.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Consequences/Consequence.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/GlobalManager.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Consequences/ConsequenceGoDarkVeselaUlica.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Consequences/ConsequenceTurnOff.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/DetectTypeOfDevice.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/FirstPersonCameraMovement.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/FollowGoForward.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/GhostCameraMovement.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/RemoteScripts/LevelTranslator.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/RoomTranslator.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/SlideRotateCamera.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/TaskAutoActive.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/TaskManager.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/TrophiesManagment.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/ButtonDisabler.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/TaskSimplePanel.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/TaskSimplePanelClickableObject.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/TaskSubtitle.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Tasks/TaskTutorialTask.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/TouchInput.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/UI/3DbuttonRaycast.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/UI/ButtonDelegator.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/UI/ButtonSettings.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/SettingsUI.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/UI/ButtonTopview.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/TopCameraLook.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/UI/KeyboardNumericInput.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/ArrowLookAt.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/ComponentUtility.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-Image.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/GetFPS.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/Utilities/OpenLevelByName.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/migrate-canvas.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/base/UIBase.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/base/UIController.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/base/UIMgr.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/components/EntryPoint.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/components/FollowCamera.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/components/LogicPoint.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/components/NodeFloatingAnim.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/components/NpcPoint.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/components/PlayerCtrl.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/components/TeleportPoint.js'
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/resources/qfw/components/TitleBar.js'
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/cce/internal/x/cc.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register CameraControll
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/BackUp/CameraControll.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/cce/internal/code-quality/cr.js" loaded.
+06-03-2022 18:08-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+06-03-2022 18:08-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+06-03-2022 18:08-debug: [[Executor]] Register FirstPersonCameraGroundMovement
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/BackUp/FirstPersonCameraGroundMovement.js" loaded.
+06-03-2022 18:08-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+06-03-2022 18:08-debug: [[Executor]] Register FirstPersonCameraRotate
+06-03-2022 18:08-warn: The type of "FirstPersonCameraRotate.degreesLocked" must be CCBoolean, not Boolean.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/BackUp/FirstPersonCameraRotate.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register JSONloader
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/RemoteScripts/JSONloader.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register GameManager
+06-03-2022 18:08-warn: The type of "GameManager.LevelName" must be CCString, not String.
+06-03-2022 18:08-warn: The type of "GameManager.LanguageName" must be CCString, not String.
+06-03-2022 18:08-warn: The type of "GameManager.Progress" must be CCFloat or CCInteger, not Number.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/GameManager.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register GlobalManager
+06-03-2022 18:08-warn: The type of "GlobalManager.LanguageName" must be CCString, not String.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/GlobalManager.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register ScriptEffects
+06-03-2022 18:08-warn: The type of "ScriptEffects._fadeOutCounterMax" must be CCFloat or CCInteger, not Number.
+06-03-2022 18:08-warn: The type of "ScriptEffects.defaultOff" must be CCBoolean, not Boolean.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ScriptEffects.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register GenericUI
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register Consequence
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Consequences/Consequence.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register Task
+06-03-2022 18:08-warn: The type of "Task.uvodniTask" must be CCBoolean, not Boolean.
+06-03-2022 18:08-warn: The type of "Task.repeatToogle" must be CCBoolean, not Boolean.
+06-03-2022 18:08-warn: The type of "Task.reportToUser" must be CCBoolean, not Boolean.
+06-03-2022 18:08-warn: The type of "Task.checkPointBelong" must be CCFloat or CCInteger, not Number.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/Task.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register GenericUIABC
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-ABC.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TaskABCquestion
+06-03-2022 18:08-warn: The type of "TaskABCquestion.remoteName" must be CCString, not String.
+06-03-2022 18:08-warn: The type of "TaskABCquestion.correctAnswer" must be CCFloat or CCInteger, not Number.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskABCquestion.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register GenericUIinput
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-Input.js" loaded.
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/cce/internal/x/prerequisite-imports.js'
+06-03-2022 18:08-warn: The type of "TaskInput.remoteName" must be CCString, not String.
+06-03-2022 18:08-debug: Unregister GenericUIinput
+06-03-2022 18:08-debug: Invalidating 'pack:///mods/fs/0/assets/Scripts/BackUp/CameraControll.js'
+06-03-2022 18:08-debug: [[Executor]] Register DbuttonActivate
+06-03-2022 18:08-warn: The type of "DbuttonActivate.taskCompletedAutomaticly" must be CCBoolean, not Boolean.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/3DbuttonActivate.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register Checkpoint
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Checkpoint/Checkpoint.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register ConsequenceGoDarkVeselaUlica
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Consequences/ConsequenceGoDarkVeselaUlica.js" loaded.
+06-03-2022 18:08-warn: The type of "TaskInput.correctAnswer" must be CCFloat or CCInteger, not Number.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Consequences/ConsequenceTurnOff.js" loaded.
+06-03-2022 18:08-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+06-03-2022 18:08-debug: [[Executor]] Register DetectTypeOfDevice
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/DetectTypeOfDevice.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register FirstPersonCameraMovement
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/FirstPersonCameraMovement.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register FollowGoForward
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/FollowGoForward.js" loaded.
+06-03-2022 18:08-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+06-03-2022 18:08-debug: [[Executor]] Register GhostCameraMovement
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/GhostCameraMovement.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register LevelTranslator
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/RemoteScripts/LevelTranslator.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register RoomTranslator
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/RoomTranslator.js" loaded.
+06-03-2022 18:08-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+06-03-2022 18:08-debug: [[Executor]] Register SlideRotateCamera
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/SlideRotateCamera.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TaskAutoActive
+06-03-2022 18:08-debug: [[Executor]] Register TaskInput
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskAutoActive.js" loaded.
+06-03-2022 18:08-warn: The type of "TaskAutoActive.remoteName" must be CCString, not String.
+06-03-2022 18:08-warn: The type of "TaskAutoActiveLocalAudio.remoteName" must be CCString, not String.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TrophiesManagment
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/TrophiesManagment.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register ButtonDisabler
+06-03-2022 18:08-warn: The type of "ButtonDisabler.justTutorialLock" must be CCBoolean, not Boolean.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ButtonDisabler.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TaskManager
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskManager.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TaskSimplePanel
+06-03-2022 18:08-warn: The type of "TaskSimplePanel.remoteName" must be CCString, not String.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskSimplePanel.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TaskSimplePanelClickableObject
+06-03-2022 18:08-warn: The type of "TaskSimplePanelClickableObject.remoteName" must be CCString, not String.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskSimplePanelClickableObject.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskInput.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TaskAutoActiveLocalAudio
+06-03-2022 18:08-debug: [[Executor]] Register TaskSubtitle
+06-03-2022 18:08-debug: [[Executor]] Register TaskTutorialTask
+06-03-2022 18:08-warn: The type of "TaskTutorialTask.remoteName" must be CCString, not String.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskTutorialTask.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TouchInput
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/TouchInput.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register DbuttonRaycast
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/3DbuttonRaycast.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register ButtonDelegator
+06-03-2022 18:08-debug: [[Executor]] Register ConsequenceTurnOff
+06-03-2022 18:08-debug: [[Executor]] Register SettingsUI
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/SettingsUI.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register ButtonSettings
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/ButtonSettings.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TopCameraLook
+06-03-2022 18:08-warn: The type of "TaskSubtitle.tekst" must be CCString, not String.
+06-03-2022 18:08-debug: [[Executor]] Register ButtonTopview
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/ButtonTopview.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register KeyboardNumericInput
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/KeyboardNumericInput.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register ArrowLookAt
+06-03-2022 18:08-warn: The type of "ArrowLookAt.arrowHeight" must be CCFloat or CCInteger, not Number.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ArrowLookAt.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register ComponentUtility
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/TopCameraLook.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register GenericUIimage
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-Image.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register GetFPS
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GetFPS.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register OpenLevelByName
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/OpenLevelByName.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/migrate-canvas.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register UIBase
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/base/UIBase.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/base/UIMgr.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register ClickEventAgent
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/base/UIController.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskSubtitle.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/EntryPoint.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register FollowCamera
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/FollowCamera.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register LogicPoint
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/LogicPoint.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register EntryPoint
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/NodeFloatingAnim.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register NpcPoint
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ComponentUtility.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register PlayerCtrl
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/PlayerCtrl.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TeleportPoint
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/TeleportPoint.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register TitleBar
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/TitleBar.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+06-03-2022 18:08-debug: Reload project scripts √6%
+06-03-2022 18:08-debug: Query asset bundle start6%
+06-03-2022 18:08-log: // ---- Query asset bundle ----
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 218.60MB rss 235.51MB
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/ButtonDelegator.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/NpcPoint.js" loaded.
+06-03-2022 18:08-debug: [[Executor]] Register NodeFloatingAnim
+06-03-2022 18:08-debug: Query asset bundle √8%
+06-03-2022 18:08-log: // ---- Query and organize assets ----
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 218.92MB rss 235.66MB
+06-03-2022 18:08-debug: Query and organize assets start8%
+06-03-2022 18:08-debug: Number of scenes: 2
+06-03-2022 18:08-debug: Number of assets: 378
+06-03-2022 18:08-debug: Number of asset bundle: 2
+06-03-2022 18:08-debug: Query and organize assets √9%
+06-03-2022 18:08-debug: Organize scripts start9%
+06-03-2022 18:08-debug: sort script group...
+06-03-2022 18:08-debug: Organize scripts √10%
+06-03-2022 18:08-debug: Organize texture compression tasks start10%
+06-03-2022 18:08-log: // ---- Organize texture compression tasks ----
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 220.92MB rss 250.41MB
+06-03-2022 18:08-log: // ---- Organize scripts ----
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 220.88MB rss 250.40MB
+06-03-2022 18:08-debug: Number of image-compress task: 0
+06-03-2022 18:08-debug: Organize texture compression tasks √11%
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 221.37MB rss 250.76MB
+06-03-2022 18:08-debug: Number of json group: 3
+06-03-2022 18:08-debug: Group json √12%
+06-03-2022 18:08-debug: Merging Texture2D json start12%
+06-03-2022 18:08-log: // ---- Merging Texture2D json ----
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 221.57MB rss 250.84MB
+06-03-2022 18:08-debug: Merging Texture2D json √14%
+06-03-2022 18:08-debug:  start14%
+06-03-2022 18:08-log: // ----  ----
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 221.73MB rss 251.48MB
+06-03-2022 18:08-debug:  √15%
+06-03-2022 18:08-debug: web-mobile:(onBeforeBuildAssets) start...15%
+06-03-2022 18:08-debug: // ---- web-mobile:(onBeforeBuildAssets) ----
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 221.75MB rss 251.52MB
+06-03-2022 18:08-debug: // ---- web-mobile:(onBeforeBuildAssets) success ----
+06-03-2022 18:08-debug: web-mobile:(onBeforeBuildAssets)18%
+06-03-2022 18:08-debug:  start18%
+06-03-2022 18:08-log: // ----  ----
+06-03-2022 18:08-debug: Process: heapTotal 253.54MB heapUsed 221.79MB rss 251.52MB
+06-03-2022 18:08-debug: Group json start11%
+06-03-2022 18:08-log: // ---- Group json ----
+06-03-2022 18:08-debug: Build script18%
+06-03-2022 18:08-debug: Process: heapTotal 254.79MB heapUsed 230.02MB rss 121.26MB
+06-03-2022 18:08-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts
+06-03-2022 18:08-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts
+06-03-2022 18:08-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskABCquestion.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-ABC.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskABCquestion.ts
+06-03-2022 18:08-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Input.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts
+06-03-2022 18:08-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/TrophiesManagment.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts
+06-03-2022 18:08-debug: Copy externalScripts success!
+06-03-2022 18:08-debug: Build script√18%
+06-03-2022 18:08-debug: Build engine18%
+06-03-2022 18:08-debug: Process: heapTotal 303.59MB heapUsed 242.05MB rss 109.59MB
+06-03-2022 18:08-debug: {"incremental":"/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2.watch-files.json","engine":"/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine","out":"/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2","moduleFormat":2,"compress":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","buildTimeConstants":{"HTML5":true,"WECHAT":false,"ALIPAY":false,"BAIDU":false,"XIAOMI":false,"BYTEDANCE":false,"OPPO":false,"VIVO":false,"HUAWEI":false,"NATIVE":false,"COCOSPLAY":false,"LINKSURE":false,"QTT":false,"EDITOR":false,"PREVIEW":false,"BUILD":true,"TEST":false,"DEBUG":false,"UI_GPU_DRIVEN":false,"DEV":false,"RUNTIME_BASED":false,"MINIGAME":false,"JSB":false,"SUPPORT_JIT":true},"loose":true,"features":["base","gfx-webgl","3d","2d","ui","particle","physics-ammo","physics-2d-box2d","intersection-2d","primitive","profiler","particle-2d","audio","video","webview","tween","terrain","tiled-map","spine","dragon-bones","marionette"],"platform":"HTML5","mode":"BUILD"}
+06-03-2022 18:08-debug: Build-engine options: {  "incremental": "/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2.watch-files.json",  "engine": "/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine",  "out": "/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2",  "moduleFormat": 2,  "compress": true,  "split": false,  "ammoJsWasm": "fallback",  "assetURLFormat": "runtime-resolved",  "buildTimeConstants": {    "HTML5": true,    "WECHAT": false,    "ALIPAY": false,    "BAIDU": false,    "XIAOMI": false,    "BYTEDANCE": false,    "OPPO": false,    "VIVO": false,    "HUAWEI": false,    "NATIVE": false,    "COCOSPLAY": false,    "LINKSURE": false,    "QTT": false,    "EDITOR": false,    "PREVIEW": false,    "BUILD": true,    "TEST": false,    "DEBUG": false,    "UI_GPU_DRIVEN": false,    "DEV": false,    "RUNTIME_BASED": false,    "MINIGAME": false,    "JSB": false,    "SUPPORT_JIT": true  },  "loose": true,  "features": [    "base",    "gfx-webgl",    "3d",    "2d",    "ui",    "particle",    "physics-ammo",    "physics-2d-box2d",    "intersection-2d",    "primitive",    "profiler",    "particle-2d",    "audio",    "video",    "webview",    "tween",    "terrain",    "tiled-map",    "spine",    "dragon-bones",    "marionette"  ],  "platform": "HTML5",  "mode": "BUILD"}
+06-03-2022 18:08-debug: Module source "internal-constants":export const EXPORT_TO_GLOBAL = true;export const MARIONETTE = true;export const HTML5 = true;export const WECHAT = false;export const ALIPAY = false;export const BAIDU = false;export const XIAOMI = false;export const BYTEDANCE = false;export const OPPO = false;export const VIVO = false;export const HUAWEI = false;export const NATIVE = false;export const COCOSPLAY = false;export const LINKSURE = false;export const QTT = false;export const EDITOR = false;export const PREVIEW = false;export const BUILD = true;export const TEST = false;export const DEBUG = false;export const UI_GPU_DRIVEN = false;export const DEV = false;export const RUNTIME_BASED = false;export const MINIGAME = false;export const JSB = false;export const SUPPORT_JIT = true;
+06-03-2022 18:08-debug: Module source "cc":export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/base.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/gfx-webgl.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/3d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/2d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/ui.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/particle.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-ammo.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-framework.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-2d-box2d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-2d-framework.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/intersection-2d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/primitive.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/profiler.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/particle-2d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/audio.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/video.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/webview.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/tween.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/terrain.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/tiled-map.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/spine.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/dragon-bones.ts';
+06-03-2022 18:08-debug: Redirect module pal/system-info to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/system-info/web/system-info.ts
+06-03-2022 18:08-debug: Redirect module pal/input to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/input/web/index.ts
+06-03-2022 18:08-debug: Redirect module pal/screen-adapter to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/screen-adapter/web/screen-adapter.ts
+06-03-2022 18:08-debug: Redirect module pal/minigame to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/minigame/non-minigame.ts
+06-03-2022 18:08-debug: Redirect module pal/audio to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/audio/web/player.ts
+06-03-2022 18:08-debug: Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/spine/lib/spine-core.js
+06-03-2022 18:08-debug: Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/spine/lib/spine-core.js
+06-03-2022 18:08-debug: Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/node_modules/@cocos/dragonbones-js/out/dragonBones.js
+06-03-2022 18:08-debug: Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/node_modules/@cocos/dragonbones-js/out/dragonBones.js
+06-03-2022 18:09-debug: ==== Performance ====
+06-03-2022 18:09-debug: {"# BUILD":[55956.119125,1092739220,1348949024],"## generate module graph":[52724.742709,975509032,1231721128],"- plugin 0 (@cocos/build-engine|code-asset) - resolveId":[968.4781789999995,650812,1236848732],"- plugin 1 (@cocos/build-engine|load-asset) - resolveId":[962.1097519999997,937760,1236853124],"- plugin 1 (@cocos/build-engine|load-asset) - resolveId (async)":[4833.336479000008,3388708,1236853940],"- plugin 2 (@cocos/build-engine|module-overrides) - resolveId":[966.8208269999986,322916,1236856556],"- plugin 3 (virtual) - resolveId":[982.7788350000008,5569952,1236868056],"- plugin 4 (ts-paths) - resolveId":[910.8379499999999,368776,1236870672],"- plugin 5 (node-resolve) - resolveId":[973.9892169999989,-2702708,1236888400],"- plugin 5 (node-resolve) - resolveId (async)":[207263.59126800028,-212894728,1236888696],"load modules":[522281.9000449998,1670955380,1231577840],"- plugin 0 (@cocos/build-engine|code-asset) - load":[183.37182799999994,275076,1231549744],"- plugin 0 (@cocos/build-engine|code-asset) - load (async)":[177.49877200000006,182720,1231550040],"- plugin 1 (@cocos/build-engine|load-asset) - load":[177.57795700000008,196520,1231550636],"- plugin 1 (@cocos/build-engine|load-asset) - load (async)":[267.6374930000001,2586764,1231550932],"- plugin 2 (@cocos/build-engine|module-overrides) - load":[179.08076900000006,75684,1231551364],"- plugin 3 (virtual) - load":[175.10293300000004,62172,1231551796],"- plugin 6 (json) - transform":[191.5501509999999,617108,1231582884],"- plugin 7 (commonjs) - transform":[1333.3126109999985,36671668,1231586028],"- plugin 8 (babel) - transform":[613.8873669999996,3290240,1231618540],"generate ast":[1727.9172749999996,17005844,1236542312],"analyse ast":[1563.9692040000011,130235452,1236832288],"- plugin 5 (node-resolve) - load":[174.9231020000001,61316,1231552268],"- plugin 7 (commonjs) - load":[176.90632499999998,100380,1231552788],"- plugin 8 (babel) - load":[230.651157,-1606264,1231553220],"- plugin 8 (babel) - transform (async)":[26548.26053799998,790005704,1236199568],"- plugin 7 (commonjs) - resolveId":[104.60271300000005,45052,1236901340],"- plugin 8 (babel) - resolveId":[102.162197,27408,1236901776],"- plugin 7 (commonjs) - resolveId (async)":[11473.310833000001,217915096,1195311700],"- plugin 7 (commonjs) - load (async)":[2487.476708,44695672,1044694188],"## sort modules":[513.981042,24279324,1256000900],"## mark included statements":[2715.586083,92946740,1348947980],"treeshaking pass 1":[913.038167,33027208,1288866392],"treeshaking pass 2":[579.487625,16108728,1304975452],"treeshaking pass 3":[216.107959,12594288,1317570072],"treeshaking pass 4":[141.478333,3775392,1321345796],"treeshaking pass 5":[119.70275,-152660,1321193472],"treeshaking pass 6":[244.359709,9522284,1330716092],"treeshaking pass 7":[177.711625,4509756,1335226184],"treeshaking pass 8":[107.67475,6549700,1341776220],"treeshaking pass 9":[96.37375,44864,1341821420],"treeshaking pass 10":[88.568375,7125924,1348947676]}
+06-03-2022 18:09-debug: ====             ====
+06-03-2022 18:09-debug: Build engine√18%
+06-03-2022 18:09-debug: Process: heapTotal 1414.76MB heapUsed 1367.91MB rss 164.86MB
+06-03-2022 18:09-debug:  √24%
+06-03-2022 18:09-log: // ---- Build auto-atlas ----
+06-03-2022 18:09-debug: Build auto-atlas start24%
+06-03-2022 18:09-debug: There is no spriteFrame in dictionary(db://assets/3D/MedivalVillage/Test).
+06-03-2022 18:09-debug: Build auto-atlas √31%
+06-03-2022 18:09-debug: Compress Image start31%
+06-03-2022 18:09-log: // ---- Compress Image ----
+06-03-2022 18:09-debug: Process: heapTotal 1417.76MB heapUsed 1368.05MB rss 184.57MB
+06-03-2022 18:09-debug: Copy the resource start37%
+06-03-2022 18:09-debug: Compress Image √37%
+06-03-2022 18:09-log: // ---- Copy the resource ----
+06-03-2022 18:09-debug: Process: heapTotal 1417.76MB heapUsed 1368.06MB rss 184.69MB
+06-03-2022 18:09-debug: Asset Bundle(resources) handle assets: 2
+06-03-2022 18:09-debug: Asset Bundle(main) handle assets: 376
+06-03-2022 18:09-log: // ---- Build the grouped json and scatter files to the specified location ----
+06-03-2022 18:09-debug: Copy the resource √44%
+06-03-2022 18:09-debug: Process: heapTotal 1421.76MB heapUsed 1368.71MB rss 187.20MB
+06-03-2022 18:09-debug: Build the grouped json and scatter files to the specified location start44%
+06-03-2022 18:09-debug: Json group(build-task/json) compile success，json number: 6
+06-03-2022 18:09-debug: Json group(build-task/json) compile success，json number: 6
+06-03-2022 18:09-debug: Json group(build-task/json) compile success，json number: 6
+06-03-2022 18:09-debug: Build the grouped json and scatter files to the specified location √51%
+06-03-2022 18:09-debug: Process: heapTotal 1434.71MB heapUsed 1375.06MB rss 228.11MB
+06-03-2022 18:09-debug: Add md5 suffix to assets start57%
+06-03-2022 18:09-log: // ---- Add md5 suffix to assets ----
+06-03-2022 18:09-debug: Process: heapTotal 1434.71MB heapUsed 1375.09MB rss 228.32MB
+06-03-2022 18:09-log: // ---- Compress zip bundle ----
+06-03-2022 18:09-debug: Compress zip bundle start51%
+06-03-2022 18:09-debug: Compress zip bundle √57%
+06-03-2022 18:09-debug: add suffix to assets(126) success!
+06-03-2022 18:09-log: // ---- Init settings and config ----
+06-03-2022 18:09-debug: Init settings and config √68%
+06-03-2022 18:09-debug: tasks.settings.macro does not defined in i18n
+06-03-2022 18:09-debug: tasks.settings.macro start68%
+06-03-2022 18:09-log: // ---- tasks.settings.macro ----
+06-03-2022 18:09-debug: Add md5 suffix to assets √68%
+06-03-2022 18:09-debug: Init settings and config start68%
+06-03-2022 18:09-debug: Process: heapTotal 1434.96MB heapUsed 1372.89MB rss 240.80MB
+06-03-2022 18:09-debug: Process: heapTotal 1434.96MB heapUsed 1372.87MB rss 240.73MB
+06-03-2022 18:09-debug: tasks.settings.macro √69%
+06-03-2022 18:09-debug: Process: heapTotal 1434.96MB heapUsed 1372.94MB rss 240.84MB
+06-03-2022 18:09-log: // ---- Use cached settings ----
+06-03-2022 18:09-debug: Use cached settings start69%
+06-03-2022 18:09-debug: Use cached settings √69%
+06-03-2022 18:09-log: // ---- custom joint texture layouts ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.11MB rss 241.11MB
+06-03-2022 18:09-debug: custom joint texture layouts start69%
+06-03-2022 18:09-debug: custom joint texture layouts √70%
+06-03-2022 18:09-debug: custom joint physics start70%
+06-03-2022 18:09-debug: Fill script data to settings start70%
+06-03-2022 18:09-log: // ---- Fill script data to settings ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.15MB rss 241.15MB
+06-03-2022 18:09-debug: Fill script data to settings √71%
+06-03-2022 18:09-debug: Fill scene data to settings start71%
+06-03-2022 18:09-log: // ---- Fill scene data to settings ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.16MB rss 241.19MB
+06-03-2022 18:09-debug: Fill scene data to settings √71%
+06-03-2022 18:09-debug: Organize assets groups，generate packedAssets and rawAssets data start71%
+06-03-2022 18:09-log: // ---- Organize assets groups，generate packedAssets and rawAssets data ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.17MB rss 241.21MB
+06-03-2022 18:09-debug: Organize assets groups，generate packedAssets and rawAssets data √72%
+06-03-2022 18:09-debug: Generate md5AssetsMap from suffixMap to settings start72%
+06-03-2022 18:09-log: // ---- Generate md5AssetsMap from suffixMap to settings ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.19MB rss 241.29MB
+06-03-2022 18:09-debug: Generate md5AssetsMap from suffixMap to settings √72%
+06-03-2022 18:09-debug: web-mobile:(onBeforeCompressSettings) start...72%
+06-03-2022 18:09-debug: // ---- web-mobile:(onBeforeCompressSettings) ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.21MB rss 241.32MB
+06-03-2022 18:09-debug: // ---- web-mobile:(onBeforeCompressSettings) success ----
+06-03-2022 18:09-debug: web-mobile:(onBeforeCompressSettings)75%
+06-03-2022 18:09-debug: cocos-service:(onBeforeCompressSettings) start...75%
+06-03-2022 18:09-debug: // ---- cocos-service:(onBeforeCompressSettings) ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.23MB rss 241.35MB
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.14MB rss 241.13MB
+06-03-2022 18:09-log: // ---- custom joint physics ----
+06-03-2022 18:09-debug: custom joint physics √70%
+06-03-2022 18:09-debug: // ---- cocos-service:(onBeforeCompressSettings) success ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.35MB rss 241.54MB
+06-03-2022 18:09-debug:  start77%
+06-03-2022 18:09-log: // ----  ----
+06-03-2022 18:09-debug: cocos-service:(onBeforeCompressSettings)77%
+06-03-2022 18:09-debug:  √78%
+06-03-2022 18:09-log: // ---- Compress settings.json and config.json ----
+06-03-2022 18:09-debug: Save config.json start79%
+06-03-2022 18:09-log: // ---- Save config.json ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.38MB rss 241.61MB
+06-03-2022 18:09-debug: Save config.json √80%
+06-03-2022 18:09-log: // ---- Save Settings.json ----
+06-03-2022 18:09-debug: Save Settings.json start80%
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.81MB rss 242.20MB
+06-03-2022 18:09-debug: Compress settings.json and config.json start78%
+06-03-2022 18:09-debug: Compress settings.json and config.json √79%
+06-03-2022 18:09-log: // ---- Sort build template ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.58MB heapUsed 1374.58MB rss 242.41MB
+06-03-2022 18:09-debug: Sort build template √82%
+06-03-2022 18:09-debug: Save Settings.json √81%
+06-03-2022 18:09-debug: // ---- cocos-service:(onAfterCompressSettings) ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.58MB heapUsed 1378.26MB rss 261.06MB
+06-03-2022 18:09-debug: Sort build template start81%
+06-03-2022 18:09-debug: cocos-service:(onAfterCompressSettings) start...82%
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1373.70MB rss 241.80MB
+06-03-2022 18:09-debug: // ---- cocos-service:(onAfterCompressSettings) success ----
+06-03-2022 18:09-debug: web-mobile:(onAfterBuild) start...85%
+06-03-2022 18:09-debug: // ---- web-mobile:(onAfterBuild) ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.58MB heapUsed 1378.85MB rss 261.18MB
+06-03-2022 18:09-debug: cocos-service:(onAfterCompressSettings)85%
+06-03-2022 18:09-debug: // ---- web-mobile:(onAfterBuild) success ----
+06-03-2022 18:09-debug: // ---- cocos-service:(onAfterBuild) ----
+06-03-2022 18:09-debug: Process: heapTotal 1435.11MB heapUsed 1374.16MB rss 258.77MB
+06-03-2022 18:09-debug: web-mobile:(onAfterBuild)87%
+06-03-2022 18:09-debug: cocos-service:(onAfterBuild) start...87%
+06-03-2022 18:09-debug: // ---- cocos-service:(onAfterBuild) success ----
+06-03-2022 18:09-debug: cocos-service:(onAfterBuild)90%
+06-03-2022 18:09-debug: build success in 88099 ms!
+06-03-2022 18:09-debug: Stop record console. {file(/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/builder/log/web-mobile09-11-2021 13-28.log)}
+07-03-2022 20:24-debug: Start record console... {file(/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/builder/log/web-mobile09-11-2021 13-28.log)}
+07-03-2022 20:24-debug: =================================== Build Task (builds) Start ================================
+07-03-2022 20:24-debug: Build with Cocos Creator 3.4.0
+07-03-2022 20:24-debug: cocos-service:(onBeforeBuild) start...0%
+07-03-2022 20:24-debug: // ---- cocos-service:(onBeforeBuild) ----
+07-03-2022 20:24-debug: Process: heapTotal 217.65MB heapUsed 189.80MB rss 134.99MB
+07-03-2022 20:24-debug: Start build task, options:{"name":"Klett - Demo scene","platform":"web-mobile","buildPath":"project://..","debug":false,"md5Cache":true,"sourceMaps":false,"replaceSplashScreen":true,"mainBundleCompressionType":"merge_dep","mainBundleIsRemote":false,"mergeStartScene":false,"experimentalEraseModules":false,"compressTexture":true,"packAutoAtlas":true,"startScene":"3660340f-48c7-4c25-bdae-831717fa9973","scenes":[{"url":"db://assets/Scenes/MainMenu.scene","uuid":"3660340f-48c7-4c25-bdae-831717fa9973","inBundle":false},{"url":"db://assets/Scenes/KinderGarden.scene","uuid":"8822f1d8-0a2d-4e4b-a8eb-f111477f7dd0"}],"outputName":"builds","packages":{"web-mobile":{"orientation":"landscape","polyfills":{"asyncFunctions":true}},"cocos-service":{"configID":"8e3570","services":[]}}}
+07-03-2022 20:24-debug: Query all assets info in project
+07-03-2022 20:24-debug: Preview in build
+07-03-2022 20:24-debug: // ---- cocos-service:(onBeforeBuild) success ----
+07-03-2022 20:24-debug: cocos-service:(onBeforeBuild)3%
+07-03-2022 20:24-debug: Query all assets info in project
+07-03-2022 20:24-debug: init custom config: keepNodeUuid: false, useCache: true
+07-03-2022 20:24-debug: init custom config: keepNodeUuid: false, useCache: true
+07-03-2022 20:24-debug: BuildAssetLibrary query-assets with assets 3427
+07-03-2022 20:24-debug:   Number of other assets: 24764
+07-03-2022 20:24-debug: Query asset bundle start0%
+07-03-2022 20:24-log: // ---- Query asset bundle ----
+07-03-2022 20:24-debug: Process: heapTotal 238.59MB heapUsed 216.96MB rss 258.81MB
+07-03-2022 20:24-debug:   Number of all scripts: 59
+07-03-2022 20:24-debug:   Number of all scenes: 15
+07-03-2022 20:24-debug: BuildAssetLibrary initialized with asset 14209!
+07-03-2022 20:24-debug: BuildAssetLibrary query-assets with assets 3427
+07-03-2022 20:24-debug:   Number of other assets: 24764
+07-03-2022 20:24-debug: web-mobile:(onAfterInit) start...3%
+07-03-2022 20:24-debug: // ---- web-mobile:(onAfterInit) ----
+07-03-2022 20:24-debug: Process: heapTotal 267.97MB heapUsed 245.22MB rss 288.13MB
+07-03-2022 20:24-debug: // ---- web-mobile:(onAfterInit) success ----
+07-03-2022 20:24-debug: web-mobile:(onAfterInit)5%
+07-03-2022 20:24-debug:   Number of all scripts: 59
+07-03-2022 20:24-log: // ---- Reload project scripts ----
+07-03-2022 20:24-debug: Process: heapTotal 267.97MB heapUsed 246.38MB rss 288.22MB
+07-03-2022 20:24-debug: reload all scripts.
+07-03-2022 20:24-debug:   Number of all scenes: 15
+07-03-2022 20:24-debug: Reload project scripts start5%
+07-03-2022 20:24-debug: BuildAssetLibrary initialized with asset 14209!
+07-03-2022 20:24-debug: Query asset bundle √3%
+07-03-2022 20:24-debug: Number of scenes: 15
+07-03-2022 20:24-debug: Query and organize assets √7%
+07-03-2022 20:24-debug: Organize scripts start7%
+07-03-2022 20:24-log: // ---- Organize scripts ----
+07-03-2022 20:24-debug: Process: heapTotal 267.97MB heapUsed 247.04MB rss 290.18MB
+07-03-2022 20:24-debug: sort script group...
+07-03-2022 20:24-debug: Query and organize assets start3%
+07-03-2022 20:24-log: // ---- Query and organize assets ----
+07-03-2022 20:24-debug: Process: heapTotal 267.97MB heapUsed 249.99MB rss 290.28MB
+07-03-2022 20:24-debug: Incremental keys: 
+07-03-2022 20:24-debug: Organize scripts √10%
+07-03-2022 20:24-log: // ---- Init settings and config ----
+07-03-2022 20:24-debug: tasks.settings.macro does not defined in i18n
+07-03-2022 20:24-debug: tasks.settings.macro start11%
+07-03-2022 20:24-log: // ---- tasks.settings.macro ----
+07-03-2022 20:24-debug: Process: heapTotal 235.41MB heapUsed 188.67MB rss 290.48MB
+07-03-2022 20:24-debug: Init settings and config start10%
+07-03-2022 20:24-debug: Process: heapTotal 235.41MB heapUsed 188.66MB rss 290.46MB
+07-03-2022 20:24-debug: Init settings and config √11%
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/base" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/gfx-webgl2" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/3d" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/2d" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/ui" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-framework" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/physics-2d-framework" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/primitive" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/profiler" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/video" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/audio" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/webview" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tween" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/tiled-map" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/terrain" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/dragon-bones" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/cce/internal/x/cc.js" loaded.
+07-03-2022 20:24-debug: Invalidating 'pack:///mods/cce/internal/x/cc.js'
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/cce/internal/x/cc.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register CameraControll
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/BackUp/CameraControll.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/cce/internal/code-quality/cr.js" loaded.
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+07-03-2022 20:24-debug: [[Executor]] Register FirstPersonCameraGroundMovement
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/particle-2d" loaded.
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+07-03-2022 20:24-debug: [[Executor]] Register FirstPersonCameraRotate
+07-03-2022 20:24-warn: The type of "FirstPersonCameraRotate.degreesLocked" must be CCBoolean, not Boolean.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/BackUp/FirstPersonCameraRotate.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register JSONloader
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/RemoteScripts/JSONloader.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register GameManager
+07-03-2022 20:24-warn: The type of "GameManager.LevelName" must be CCString, not String.
+07-03-2022 20:24-warn: The type of "GameManager.LanguageName" must be CCString, not String.
+07-03-2022 20:24-warn: The type of "GameManager.Progress" must be CCFloat or CCInteger, not Number.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/GameManager.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register GlobalManager
+07-03-2022 20:24-warn: The type of "GlobalManager.LanguageName" must be CCString, not String.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/GlobalManager.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/BackUp/FirstPersonCameraGroundMovement.js" loaded.
+07-03-2022 20:24-warn: The type of "ScriptEffects._fadeOutCounterMax" must be CCFloat or CCInteger, not Number.
+07-03-2022 20:24-warn: The type of "ScriptEffects.defaultOff" must be CCBoolean, not Boolean.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ScriptEffects.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register GenericUI
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/intersection-2d" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Consequences/Consequence.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register Task
+07-03-2022 20:24-warn: The type of "Task.uvodniTask" must be CCBoolean, not Boolean.
+07-03-2022 20:24-warn: The type of "Task.repeatToogle" must be CCBoolean, not Boolean.
+07-03-2022 20:24-warn: The type of "Task.reportToUser" must be CCBoolean, not Boolean.
+07-03-2022 20:24-warn: The type of "Task.checkPointBelong" must be CCFloat or CCInteger, not Number.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/Task.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register GenericUIABC
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-ABC.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TaskABCquestion
+07-03-2022 20:24-warn: The type of "TaskABCquestion.remoteName" must be CCString, not String.
+07-03-2022 20:24-warn: The type of "TaskABCquestion.correctAnswer" must be CCFloat or CCInteger, not Number.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskABCquestion.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register GenericUIinput
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-Input.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TaskInput
+07-03-2022 20:24-warn: The type of "TaskInput.remoteName" must be CCString, not String.
+07-03-2022 20:24-warn: The type of "TaskInput.correctAnswer" must be CCFloat or CCInteger, not Number.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskInput.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register DbuttonActivate
+07-03-2022 20:24-warn: The type of "DbuttonActivate.taskCompletedAutomaticly" must be CCBoolean, not Boolean.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/3DbuttonActivate.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register Checkpoint
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Checkpoint/Checkpoint.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register ConsequenceGoDarkVeselaUlica
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Consequences/ConsequenceGoDarkVeselaUlica.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register ConsequenceTurnOff
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Consequences/ConsequenceTurnOff.js" loaded.
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+07-03-2022 20:24-debug: [[Executor]] Register DetectTypeOfDevice
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/cc-fu/spine" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register FirstPersonCameraMovement
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/FirstPersonCameraMovement.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register FollowGoForward
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/FollowGoForward.js" loaded.
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+07-03-2022 20:24-debug: [[Executor]] Register GhostCameraMovement
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/GhostCameraMovement.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register LevelTranslator
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/RemoteScripts/LevelTranslator.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register RoomTranslator
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/RoomTranslator.js" loaded.
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode instead)macro.KEY
+07-03-2022 20:24-warn: '%s' is deprecated. (please use KeyCode.SHIFT_LEFT instead)macro.KEY.shift
+07-03-2022 20:24-debug: [[Executor]] Register SlideRotateCamera
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/SlideRotateCamera.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TaskAutoActive
+07-03-2022 20:24-warn: The type of "TaskAutoActive.remoteName" must be CCString, not String.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskAutoActive.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TaskAutoActiveLocalAudio
+07-03-2022 20:24-warn: The type of "TaskAutoActiveLocalAudio.remoteName" must be CCString, not String.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TrophiesManagment
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/TrophiesManagment.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register ButtonDisabler
+07-03-2022 20:24-warn: The type of "ButtonDisabler.justTutorialLock" must be CCBoolean, not Boolean.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ButtonDisabler.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TaskManager
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskManager.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TaskSimplePanel
+07-03-2022 20:24-warn: The type of "TaskSimplePanel.remoteName" must be CCString, not String.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskSimplePanel.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TaskSimplePanelClickableObject
+07-03-2022 20:24-warn: The type of "TaskSimplePanelClickableObject.remoteName" must be CCString, not String.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskSimplePanelClickableObject.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TaskSubtitle
+07-03-2022 20:24-warn: The type of "TaskSubtitle.tekst" must be CCString, not String.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskSubtitle.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TaskTutorialTask
+07-03-2022 20:24-warn: The type of "TaskTutorialTask.remoteName" must be CCString, not String.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Tasks/TaskTutorialTask.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TouchInput
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/TouchInput.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register DbuttonRaycast
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/3DbuttonRaycast.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register ButtonDelegator
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/ButtonDelegator.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register SettingsUI
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/SettingsUI.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register ButtonSettings
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/ButtonSettings.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TopCameraLook
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/TopCameraLook.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register ButtonTopview
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/ButtonTopview.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register KeyboardNumericInput
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/UI/KeyboardNumericInput.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register ArrowLookAt
+07-03-2022 20:24-warn: The type of "ArrowLookAt.arrowHeight" must be CCFloat or CCInteger, not Number.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ArrowLookAt.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register ComponentUtility
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/ComponentUtility.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register GenericUIimage
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GenericUI-Image.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register GetFPS
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/GetFPS.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register OpenLevelByName
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/Utilities/OpenLevelByName.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "cce:/internal/x/editor-exports/cc/editor/populate-internal-constants" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/migrate-canvas.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register UIBase
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/base/UIBase.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/base/UIMgr.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register ClickEventAgent
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/base/UIController.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register EntryPoint
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/EntryPoint.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register FollowCamera
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/FollowCamera.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register Consequence
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/LogicPoint.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register NodeFloatingAnim
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/NodeFloatingAnim.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register NpcPoint
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/NpcPoint.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register PlayerCtrl
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/PlayerCtrl.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TeleportPoint
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/TeleportPoint.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Register TitleBar
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/resources/qfw/components/TitleBar.js" loaded.
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/cce/internal/x/prerequisite-imports.js" loaded.
+07-03-2022 20:24-debug: Reload project scripts √6%
+07-03-2022 20:24-debug: [[Executor]] Register ScriptEffects
+07-03-2022 20:24-log: // ---- Query asset bundle ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.34MB rss 308.43MB
+07-03-2022 20:24-debug: tasks.settings.macro √11%
+07-03-2022 20:24-debug: Use cached settings start11%
+07-03-2022 20:24-log: // ---- Use cached settings ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.40MB rss 308.53MB
+07-03-2022 20:24-debug: Query asset bundle start6%
+07-03-2022 20:24-debug: [[Executor]] Register LogicPoint
+07-03-2022 20:24-debug: [[Executor]] Module "pack:///mods/fs/0/assets/Scripts/DetectTypeOfDevice.js" loaded.
+07-03-2022 20:24-debug: Use cached settings √12%
+07-03-2022 20:24-debug: custom joint texture layouts start12%
+07-03-2022 20:24-log: // ---- custom joint texture layouts ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.68MB rss 308.67MB
+07-03-2022 20:24-debug: custom joint texture layouts √12%
+07-03-2022 20:24-debug: custom joint physics start12%
+07-03-2022 20:24-log: // ---- custom joint physics ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.69MB rss 308.68MB
+07-03-2022 20:24-debug: custom joint physics √13%
+07-03-2022 20:24-debug: Fill script data to settings start13%
+07-03-2022 20:24-log: // ---- Fill script data to settings ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.70MB rss 308.68MB
+07-03-2022 20:24-debug: Fill script data to settings √13%
+07-03-2022 20:24-debug: Fill scene data to settings start13%
+07-03-2022 20:24-log: // ---- Fill scene data to settings ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.72MB rss 308.70MB
+07-03-2022 20:24-debug: Fill scene data to settings √14%
+07-03-2022 20:24-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
+07-03-2022 20:24-log: // ---- Organize assets groups，generate packedAssets and rawAssets data ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.73MB rss 308.70MB
+07-03-2022 20:24-debug: Organize assets groups，generate packedAssets and rawAssets data √14%
+07-03-2022 20:24-debug: Generate md5AssetsMap from suffixMap to settings start14%
+07-03-2022 20:24-log: // ---- Generate md5AssetsMap from suffixMap to settings ----
+07-03-2022 20:24-debug: options.md5Cache is false.
+07-03-2022 20:24-debug: Generate md5AssetsMap from suffixMap to settings √15%
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.74MB rss 308.71MB
+07-03-2022 20:24-debug: Query asset bundle √8%
+07-03-2022 20:24-debug: Number of scenes: 2
+07-03-2022 20:24-debug: Query and organize assets start8%
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 191.78MB rss 308.80MB
+07-03-2022 20:24-log: // ---- Query and organize assets ----
+07-03-2022 20:24-debug: Number of assets: 379
+07-03-2022 20:24-debug: Number of asset bundle: 2
+07-03-2022 20:24-debug: Query and organize assets √9%
+07-03-2022 20:24-debug: Organize scripts start9%
+07-03-2022 20:24-log: // ---- Organize scripts ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 195.65MB rss 313.00MB
+07-03-2022 20:24-debug: sort script group...
+07-03-2022 20:24-debug: Organize scripts √10%
+07-03-2022 20:24-debug: Organize texture compression tasks start10%
+07-03-2022 20:24-log: // ---- Organize texture compression tasks ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 195.70MB rss 313.01MB
+07-03-2022 20:24-debug: Number of image-compress task: 0
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.17MB rss 313.80MB
+07-03-2022 20:24-debug: Number of json group: 3
+07-03-2022 20:24-debug: Group json √12%
+07-03-2022 20:24-debug: Merging Texture2D json start12%
+07-03-2022 20:24-log: // ---- Merging Texture2D json ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.37MB rss 313.82MB
+07-03-2022 20:24-debug: Merging Texture2D json √14%
+07-03-2022 20:24-debug:  start14%
+07-03-2022 20:24-log: // ----  ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.53MB rss 314.32MB
+07-03-2022 20:24-debug:  √15%
+07-03-2022 20:24-debug: web-mobile:(onBeforeBuildAssets) start...15%
+07-03-2022 20:24-debug: // ---- web-mobile:(onBeforeBuildAssets) ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.55MB rss 314.37MB
+07-03-2022 20:24-debug: // ---- web-mobile:(onBeforeBuildAssets) success ----
+07-03-2022 20:24-debug: web-mobile:(onBeforeBuildAssets)18%
+07-03-2022 20:24-debug:  start18%
+07-03-2022 20:24-log: // ----  ----
+07-03-2022 20:24-debug: Process: heapTotal 236.41MB heapUsed 196.59MB rss 314.38MB
+07-03-2022 20:24-debug: Organize texture compression tasks √11%
+07-03-2022 20:24-debug: Group json start11%
+07-03-2022 20:24-log: // ---- Group json ----
+07-03-2022 20:24-debug: Build script18%
+07-03-2022 20:24-debug: Process: heapTotal 244.78MB heapUsed 222.77MB rss 140.17MB
+07-03-2022 20:24-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts
+07-03-2022 20:24-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/TrophiesManagment.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts
+07-03-2022 20:24-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts
+07-03-2022 20:24-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskABCquestion.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-ABC.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskABCquestion.ts
+07-03-2022 20:24-warn: [[Build.Script.Rollup]] Circular dependency: file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Input.ts -> file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskInput.ts
+07-03-2022 20:24-debug: Copy externalScripts success!
+07-03-2022 20:24-debug: Build script√18%
+07-03-2022 20:24-debug: Build engine18%
+07-03-2022 20:24-debug: Process: heapTotal 327.29MB heapUsed 305.01MB rss 73.10MB
+07-03-2022 20:24-debug: Engine cache ({link(/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2)}) does not exist.
+07-03-2022 20:24-debug: {"incremental":"/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2.watch-files.json","engine":"/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine","out":"/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2","moduleFormat":2,"compress":true,"split":false,"ammoJsWasm":"fallback","assetURLFormat":"runtime-resolved","buildTimeConstants":{"HTML5":true,"WECHAT":false,"ALIPAY":false,"BAIDU":false,"XIAOMI":false,"BYTEDANCE":false,"OPPO":false,"VIVO":false,"HUAWEI":false,"NATIVE":false,"COCOSPLAY":false,"LINKSURE":false,"QTT":false,"EDITOR":false,"PREVIEW":false,"BUILD":true,"TEST":false,"DEBUG":false,"UI_GPU_DRIVEN":false,"DEV":false,"RUNTIME_BASED":false,"MINIGAME":false,"JSB":false,"SUPPORT_JIT":true},"loose":true,"features":["base","gfx-webgl","3d","2d","ui","particle","physics-ammo","physics-2d-box2d","intersection-2d","primitive","profiler","particle-2d","audio","video","webview","tween","terrain","tiled-map","spine","dragon-bones","marionette"],"platform":"HTML5","mode":"BUILD"}
+07-03-2022 20:24-debug: Build-engine options: {  "incremental": "/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2.watch-files.json",  "engine": "/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine",  "out": "/var/folders/wz/yk0lkzdn19bfhksh2m25zxxc0000gn/T/CocosCreator/3.4.0/builder/engine/f79970e0cf9d1c8d2d3d1d055a975da2",  "moduleFormat": 2,  "compress": true,  "split": false,  "ammoJsWasm": "fallback",  "assetURLFormat": "runtime-resolved",  "buildTimeConstants": {    "HTML5": true,    "WECHAT": false,    "ALIPAY": false,    "BAIDU": false,    "XIAOMI": false,    "BYTEDANCE": false,    "OPPO": false,    "VIVO": false,    "HUAWEI": false,    "NATIVE": false,    "COCOSPLAY": false,    "LINKSURE": false,    "QTT": false,    "EDITOR": false,    "PREVIEW": false,    "BUILD": true,    "TEST": false,    "DEBUG": false,    "UI_GPU_DRIVEN": false,    "DEV": false,    "RUNTIME_BASED": false,    "MINIGAME": false,    "JSB": false,    "SUPPORT_JIT": true  },  "loose": true,  "features": [    "base",    "gfx-webgl",    "3d",    "2d",    "ui",    "particle",    "physics-ammo",    "physics-2d-box2d",    "intersection-2d",    "primitive",    "profiler",    "particle-2d",    "audio",    "video",    "webview",    "tween",    "terrain",    "tiled-map",    "spine",    "dragon-bones",    "marionette"  ],  "platform": "HTML5",  "mode": "BUILD"}
+07-03-2022 20:24-debug: Module source "internal-constants":export const EXPORT_TO_GLOBAL = true;export const MARIONETTE = true;export const HTML5 = true;export const WECHAT = false;export const ALIPAY = false;export const BAIDU = false;export const XIAOMI = false;export const BYTEDANCE = false;export const OPPO = false;export const VIVO = false;export const HUAWEI = false;export const NATIVE = false;export const COCOSPLAY = false;export const LINKSURE = false;export const QTT = false;export const EDITOR = false;export const PREVIEW = false;export const BUILD = true;export const TEST = false;export const DEBUG = false;export const UI_GPU_DRIVEN = false;export const DEV = false;export const RUNTIME_BASED = false;export const MINIGAME = false;export const JSB = false;export const SUPPORT_JIT = true;
+07-03-2022 20:24-debug: Module source "cc":export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/base.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/gfx-webgl.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/3d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/2d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/ui.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/particle.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-ammo.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-framework.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-2d-box2d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/physics-2d-framework.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/intersection-2d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/primitive.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/profiler.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/particle-2d.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/audio.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/video.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/webview.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/tween.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/terrain.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/tiled-map.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/spine.ts';export * from '/Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/exports/dragon-bones.ts';
+07-03-2022 20:25-debug: Redirect module pal/system-info to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/system-info/web/system-info.ts
+07-03-2022 20:25-debug: Redirect module pal/input to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/input/web/index.ts
+07-03-2022 20:25-debug: Redirect module pal/audio to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/audio/web/player.ts
+07-03-2022 20:25-debug: Redirect module pal/screen-adapter to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/screen-adapter/web/screen-adapter.ts
+07-03-2022 20:25-debug: Redirect module pal/minigame to /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/pal/minigame/non-minigame.ts
+07-03-2022 20:25-debug: Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/spine/lib/spine-core.js
+07-03-2022 20:25-debug: Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/cocos/spine/lib/spine-core.js
+07-03-2022 20:25-debug: Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/node_modules/@cocos/dragonbones-js/out/dragonBones.js
+07-03-2022 20:25-debug: Rollup warning 'THIS_IS_UNDEFINED' is omitted for /Applications/Creator/3.4.0/CocosCreator.app/Contents/Resources/resources/3d/engine/node_modules/@cocos/dragonbones-js/out/dragonBones.js
+07-03-2022 20:25-debug: ==== Performance ====
+07-03-2022 20:25-debug: ====             ====
+07-03-2022 20:25-debug: {"# BUILD":[57341.989041,437647616,758397576],"## generate module graph":[55212.115541,405434972,726187220],"- plugin 0 (@cocos/build-engine|code-asset) - resolveId":[958.4932759999991,460360,1177387268],"- plugin 1 (@cocos/build-engine|load-asset) - resolveId":[948.5033759999994,1007828,1177390088],"- plugin 1 (@cocos/build-engine|load-asset) - resolveId (async)":[4704.297207000005,3391484,1177395036],"- plugin 2 (@cocos/build-engine|module-overrides) - resolveId":[950.9849560000017,366104,1177424688],"- plugin 3 (virtual) - resolveId":[982.4657079999979,198900,1177438432],"- plugin 4 (ts-paths) - resolveId":[894.8343780000018,333012,1177453744],"- plugin 5 (node-resolve) - resolveId":[970.7993720000009,5169548,1177482016],"- plugin 5 (node-resolve) - resolveId (async)":[266386.1287459995,-274654276,1173255488],"load modules":[507486.5659869998,-685378596,1177195356],"- plugin 0 (@cocos/build-engine|code-asset) - load":[178.7934120000002,288968,1173146316],"- plugin 0 (@cocos/build-engine|code-asset) - load (async)":[173.69816900000004,186568,1173146704],"- plugin 1 (@cocos/build-engine|load-asset) - load":[173.192245,205668,1173147364],"- plugin 1 (@cocos/build-engine|load-asset) - load (async)":[176.88136300000014,390864,1173147752],"- plugin 2 (@cocos/build-engine|module-overrides) - load":[173.81015700000012,85212,1173148248],"- plugin 3 (virtual) - load":[172.37936800000003,71116,1173148836],"- plugin 6 (json) - transform":[191.1528670000002,594260,1177266440],"- plugin 7 (commonjs) - transform":[1620.256716000001,41608308,1177301396],"- plugin 8 (babel) - transform":[661.7268680000006,3897976,1177329444],"generate ast":[1796.9771449999996,25092408,1177367184],"analyse ast":[1803.4561040000006,-456976800,1177373144],"- plugin 5 (node-resolve) - load":[171.50629899999984,70180,1173149464],"- plugin 7 (commonjs) - load":[174.76934999999992,114292,1173150140],"- plugin 8 (babel) - load":[219.34899599999991,3657868,1173150728],"- plugin 8 (babel) - transform (async)":[28906.07999999999,758645280,1172861212],"- plugin 7 (commonjs) - resolveId":[104.49280299999997,48764,1171702144],"- plugin 8 (babel) - resolveId":[100.50125499999994,31000,1171702732],"- plugin 7 (commonjs) - resolveId (async)":[12459.824792000001,212594212,1131398016],"- plugin 7 (commonjs) - load (async)":[2776.281625,45740096,1177146628],"## sort modules":[421.370041,22833828,749021428],"## mark included statements":[1706.993292,9374836,758396568],"treeshaking pass 1":[525.103209,4288588,752879844],"treeshaking pass 2":[330.619041,5414760,758294900],"treeshaking pass 3":[135.177041,-4956860,753338336],"treeshaking pass 4":[83.478458,3561784,756900420],"treeshaking pass 5":[85.199792,-11036,756892212],"treeshaking pass 6":[157.840084,-2009448,754883060],"treeshaking pass 7":[122.912875,-974840,753908520],"treeshaking pass 8":[87.777709,-95720,753813100],"treeshaking pass 9":[78.976125,2459948,756273344],"treeshaking pass 10":[74.668833,2122660,758396300]}
+07-03-2022 20:26-debug:  √24%
+07-03-2022 20:26-debug: Build auto-atlas start24%
+07-03-2022 20:26-log: // ---- Build auto-atlas ----
+07-03-2022 20:26-debug: Build engine√18%
+07-03-2022 20:26-debug: Process: heapTotal 1174.42MB heapUsed 803.10MB rss 145.37MB
+07-03-2022 20:26-debug: There is no spriteFrame in dictionary(db://assets/3D/MedivalVillage/Test).
+07-03-2022 20:26-debug: Process: heapTotal 1177.42MB heapUsed 803.25MB rss 163.80MB
+07-03-2022 20:26-debug: Compress Image √37%
+07-03-2022 20:26-debug: Copy the resource start37%
+07-03-2022 20:26-log: // ---- Copy the resource ----
+07-03-2022 20:26-debug: Process: heapTotal 1177.42MB heapUsed 803.26MB rss 163.86MB
+07-03-2022 20:26-debug: Asset Bundle(resources) handle assets: 2
+07-03-2022 20:26-log: // ---- Compress Image ----
+07-03-2022 20:26-debug: Build auto-atlas √31%
+07-03-2022 20:26-debug: Compress Image start31%
+07-03-2022 20:26-debug: Asset Bundle(main) handle assets: 377
+07-03-2022 20:26-debug: Process: heapTotal 1181.42MB heapUsed 804.00MB rss 168.17MB
+07-03-2022 20:26-debug: Build the grouped json and scatter files to the specified location start44%
+07-03-2022 20:26-log: // ---- Build the grouped json and scatter files to the specified location ----
+07-03-2022 20:26-debug: Copy the resource √44%
+07-03-2022 20:26-debug: Json group(build-task/json) compile success，json number: 6
+07-03-2022 20:26-debug: Json group(build-task/json) compile success，json number: 6
+07-03-2022 20:26-debug: Json group(build-task/json) compile success，json number: 6
+07-03-2022 20:26-debug: Build the grouped json and scatter files to the specified location √51%
+07-03-2022 20:26-debug: Process: heapTotal 1189.42MB heapUsed 808.08MB rss 209.98MB
+07-03-2022 20:26-debug: Add md5 suffix to assets start57%
+07-03-2022 20:26-log: // ---- Add md5 suffix to assets ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.42MB heapUsed 808.10MB rss 210.14MB
+07-03-2022 20:26-log: // ---- Compress zip bundle ----
+07-03-2022 20:26-debug: Compress zip bundle √57%
+07-03-2022 20:26-debug: Compress zip bundle start51%
+07-03-2022 20:26-debug: add suffix to assets(126) success!
+07-03-2022 20:26-debug: Add md5 suffix to assets √68%
+07-03-2022 20:26-debug: Init settings and config √68%
+07-03-2022 20:26-debug: tasks.settings.macro does not defined in i18n
+07-03-2022 20:26-log: // ---- Init settings and config ----
+07-03-2022 20:26-log: // ---- tasks.settings.macro ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.42MB heapUsed 807.36MB rss 224.21MB
+07-03-2022 20:26-debug: Process: heapTotal 1189.42MB heapUsed 807.34MB rss 224.17MB
+07-03-2022 20:26-debug: Init settings and config start68%
+07-03-2022 20:26-debug: tasks.settings.macro start68%
+07-03-2022 20:26-debug: tasks.settings.macro √69%
+07-03-2022 20:26-debug: Use cached settings start69%
+07-03-2022 20:26-log: // ---- Use cached settings ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.42MB heapUsed 807.40MB rss 224.29MB
+07-03-2022 20:26-debug: Use cached settings √69%
+07-03-2022 20:26-log: // ---- custom joint texture layouts ----
+07-03-2022 20:26-debug: custom joint texture layouts start69%
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.58MB rss 224.56MB
+07-03-2022 20:26-debug: custom joint texture layouts √70%
+07-03-2022 20:26-debug: custom joint physics √70%
+07-03-2022 20:26-log: // ---- custom joint physics ----
+07-03-2022 20:26-debug: Fill script data to settings start70%
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.62MB rss 224.61MB
+07-03-2022 20:26-debug: Fill script data to settings √71%
+07-03-2022 20:26-log: // ---- Fill script data to settings ----
+07-03-2022 20:26-log: // ---- Fill scene data to settings ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.63MB rss 224.64MB
+07-03-2022 20:26-debug: Fill scene data to settings √71%
+07-03-2022 20:26-debug: Organize assets groups，generate packedAssets and rawAssets data start71%
+07-03-2022 20:26-log: // ---- Organize assets groups，generate packedAssets and rawAssets data ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.64MB rss 224.66MB
+07-03-2022 20:26-debug: Organize assets groups，generate packedAssets and rawAssets data √72%
+07-03-2022 20:26-debug: Generate md5AssetsMap from suffixMap to settings start72%
+07-03-2022 20:26-log: // ---- Generate md5AssetsMap from suffixMap to settings ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.66MB rss 224.73MB
+07-03-2022 20:26-debug: Generate md5AssetsMap from suffixMap to settings √72%
+07-03-2022 20:26-debug: web-mobile:(onBeforeCompressSettings) start...72%
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.61MB rss 224.58MB
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.68MB rss 224.75MB
+07-03-2022 20:26-debug: // ---- web-mobile:(onBeforeCompressSettings) success ----
+07-03-2022 20:26-debug: web-mobile:(onBeforeCompressSettings)75%
+07-03-2022 20:26-debug: cocos-service:(onBeforeCompressSettings) start...75%
+07-03-2022 20:26-debug: // ---- cocos-service:(onBeforeCompressSettings) ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.70MB rss 224.78MB
+07-03-2022 20:26-debug: Fill scene data to settings start71%
+07-03-2022 20:26-debug: // ---- web-mobile:(onBeforeCompressSettings) ----
+07-03-2022 20:26-debug: custom joint physics start70%
+07-03-2022 20:26-debug: // ---- cocos-service:(onBeforeCompressSettings) success ----
+07-03-2022 20:26-debug: cocos-service:(onBeforeCompressSettings)77%
+07-03-2022 20:26-log: // ----  ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.83MB rss 224.95MB
+07-03-2022 20:26-debug:  start77%
+07-03-2022 20:26-debug:  √78%
+07-03-2022 20:26-log: // ---- Compress settings.json and config.json ----
+07-03-2022 20:26-debug: Compress settings.json and config.json √79%
+07-03-2022 20:26-log: // ---- Save config.json ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 808.18MB rss 225.10MB
+07-03-2022 20:26-debug: Save config.json √80%
+07-03-2022 20:26-log: // ---- Save Settings.json ----
+07-03-2022 20:26-debug: Save Settings.json start80%
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 808.29MB rss 225.46MB
+07-03-2022 20:26-debug: Save Settings.json √81%
+07-03-2022 20:26-debug: Sort build template start81%
+07-03-2022 20:26-log: // ---- Sort build template ----
+07-03-2022 20:26-debug: Process: heapTotal 1190.04MB heapUsed 809.06MB rss 226.16MB
+07-03-2022 20:26-debug: Sort build template √82%
+07-03-2022 20:26-debug: cocos-service:(onAfterCompressSettings) start...82%
+07-03-2022 20:26-debug: // ---- cocos-service:(onAfterCompressSettings) ----
+07-03-2022 20:26-debug: Process: heapTotal 1190.04MB heapUsed 813.13MB rss 243.13MB
+07-03-2022 20:26-debug: Save config.json start79%
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 807.85MB rss 224.98MB
+07-03-2022 20:26-debug: Compress settings.json and config.json start78%
+07-03-2022 20:26-debug: // ---- cocos-service:(onAfterCompressSettings) success ----
+07-03-2022 20:26-debug: // ---- web-mobile:(onAfterBuild) ----
+07-03-2022 20:26-debug: web-mobile:(onAfterBuild) start...85%
+07-03-2022 20:26-debug: Process: heapTotal 1190.04MB heapUsed 813.73MB rss 243.29MB
+07-03-2022 20:26-debug: cocos-service:(onAfterCompressSettings)85%
+07-03-2022 20:26-debug: // ---- web-mobile:(onAfterBuild) success ----
+07-03-2022 20:26-debug: Process: heapTotal 1189.57MB heapUsed 809.22MB rss 244.52MB
+07-03-2022 20:26-debug: // ---- cocos-service:(onAfterBuild) ----
+07-03-2022 20:26-debug: cocos-service:(onAfterBuild) start...87%
+07-03-2022 20:26-debug: web-mobile:(onAfterBuild)87%
+07-03-2022 20:26-debug: // ---- cocos-service:(onAfterBuild) success ----
+07-03-2022 20:26-debug: cocos-service:(onAfterBuild)90%
+07-03-2022 20:26-debug: build success in 93953 ms!
+07-03-2022 20:26-debug: Stop record console. {file(/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/builder/log/web-mobile09-11-2021 13-28.log)}

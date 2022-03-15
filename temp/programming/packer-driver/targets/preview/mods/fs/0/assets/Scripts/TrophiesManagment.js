@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, instantiate, Vec3, Animation, ParticleSystem2D, GameManager, TaskManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TrophiesManagment;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, instantiate, GameManager, TaskManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TrophiesManagment;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -28,9 +28,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       Component = _cc.Component;
       Node = _cc.Node;
       instantiate = _cc.instantiate;
-      Vec3 = _cc.Vec3;
-      Animation = _cc.Animation;
-      ParticleSystem2D = _cc.ParticleSystem2D;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }, function (_unresolved_3) {
@@ -56,17 +53,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         start() {
-          var _getInstance$TaskMana, _getInstance$TaskMana2;
-
           var trophyNode = this.node.children[0];
-          (_getInstance$TaskMana = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+
+          for (var index = 0; index < (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().TaskManager) === null || _getInstance$TaskMana === void 0 ? void 0 : (_getInstance$TaskMana2 = _getInstance$TaskMana.getComponent(_crd && TaskManager === void 0 ? (_reportPossibleCrUseOfTaskManager({
+          }), GameManager) : GameManager).getInstance().TaskManager.getComponent(_crd && TaskManager === void 0 ? (_reportPossibleCrUseOfTaskManager({
             error: Error()
-          }), TaskManager) : TaskManager)) === null || _getInstance$TaskMana2 === void 0 ? void 0 : _getInstance$TaskMana2.checkpoints.forEach(element => {
+          }), TaskManager) : TaskManager).checkpoints.length - 1; index++) {
             var newTrophy = instantiate(trophyNode);
             newTrophy.parent = this.node;
-          });
+          }
+
           this.calculateLocked(); //GameManager.getInstance().TaskManager?.getComponent(TaskManager)?.checkpoints.length
         }
 
@@ -82,21 +79,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), GameManager) : GameManager).getInstance().Progress); _index < this.node.children.length; _index++) {
             this.node.children[_index].children[0].active = true;
           }
-
-          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().Progress != 0) {
-            var _this$particleEffect;
-
-            var trophiePosition = this.node.children[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-              error: Error()
-            }), GameManager) : GameManager).getInstance().Progress)].worldPosition;
-            (_this$particleEffect = this.particleEffect) === null || _this$particleEffect === void 0 ? void 0 : _this$particleEffect.setWorldPosition(new Vec3(trophiePosition));
-            this.particleEffect.getComponent(Animation).play();
-            this.particleEffect.children[0].active = false;
-            this.particleEffect.children[0].active = true;
-            this.particleEffect.children[0].getComponent(ParticleSystem2D).enabled = true;
+          /*
+          if(GameManager.getInstance().Progress != 0)  {
+              var trophiePosition = this.node.children[Number(GameManager.getInstance().Progress)].worldPosition;
+              this.particleEffect?.setWorldPosition(new Vec3( trophiePosition)) ;
+              this.particleEffect!.getComponent(Animation)!.play();
+              this.particleEffect!.children[0].active = false;
+                this.particleEffect!.children[0].active = true;
+              this.particleEffect!.children[0].getComponent(ParticleSystem2D)!.enabled = true;
           }
+          */
+
         } // update (deltaTime: number) {
         //     // [4]
         // }

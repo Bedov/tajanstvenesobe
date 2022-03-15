@@ -97,6 +97,7 @@ export class GenericUI extends Component {
 
         if(task.questAudio == undefined || task.questAudio == null ) {
             this.soundParent.active = false;
+            console.log("task.questAudio mi je undefined ili null" + task.questAudio);
             
         }
         else

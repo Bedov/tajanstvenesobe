@@ -119,6 +119,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         taskCompleted() {
+          //this.taskManager.refreshExecutedTasks(this.node.parent!);
           this.executed = true;
           this.taskManager.checkReadinesForTasks();
           this.resolveConsequnces();
