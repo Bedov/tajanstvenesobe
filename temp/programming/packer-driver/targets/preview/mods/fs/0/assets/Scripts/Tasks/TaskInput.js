@@ -81,13 +81,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             (_getInstance$jsonLoad = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
-            }), GameManager) : GameManager).getInstance().jsonLoader) === null || _getInstance$jsonLoad === void 0 ? void 0 : _getInstance$jsonLoad.returnQuestionInput(this.remoteName, this.questionTemp);
+            }), GameManager) : GameManager).getInstance().jsonLoader) === null || _getInstance$jsonLoad === void 0 ? void 0 : _getInstance$jsonLoad.returnQuestionInput(this.remoteName.toString(), this.questionTemp);
           }
         }
 
-        showTask() {
-          console.log("Usao sam u Input Task");
+        update() {}
 
+        showTask() {
           if (this.isItOkToExecute()) {
             this.taskManager.genericUIinput.active = true;
             this.taskManager.genericUIinput.getComponent(_crd && GenericUIinput === void 0 ? (_reportPossibleCrUseOfGenericUIinput({

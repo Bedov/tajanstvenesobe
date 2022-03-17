@@ -38,10 +38,15 @@ export class DbuttonActivate extends Component {
 
     //Dodali smo animaciju kao prioritet da bismo u nekim slucajevima usporili pokretanje execute()
     startAnimation() { 
+        console.log("Jel sam bar dovde dosao");
+        
         if(this.node.getComponent(Animation))
             this.node.getComponent(Animation)?.play("ActivationButtonActiveFast");
-        else
+        else {
             this.execute();
+            
+            
+        }
     }
 
     start () {

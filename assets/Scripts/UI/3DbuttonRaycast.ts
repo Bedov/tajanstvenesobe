@@ -98,13 +98,20 @@ export class DbuttonRaycast extends Component {
         //var raycast: geometry.Ray = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z, 0, -1, 0);
         var hit: Vec3 = new Vec3();
         var distance = 0; 
+        console.log("OVDE1");
 
         if (PhysicsSystem.instance.raycast(_rayPrazan)) {
             const r = PhysicsSystem.instance.raycastResults;
 
+            
+            
+
             r.forEach(rayCastItem => {
+                console.log("OVDE2 + " + rayCastItem.collider.node.name);
                 this.tempItemArray.forEach(touchStartItem => {
                     console.log("TouchStartItem " + touchStartItem.name);
+                    console.log("Raycast End item: " + rayCastItem.collider.node.name);
+                    console.log("Game status: " + GameManager.getInstance().gameStatus);
                     
                     if(rayCastItem.collider.node == touchStartItem && GameManager.getInstance().gameStatus == GameStatuType.gameActive) {
                         touchStartItem.getComponent(DbuttonActivate)?.startAnimation();
@@ -128,7 +135,7 @@ export class DbuttonRaycast extends Component {
 
         //var raycast: geometry.Ray = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z, 0, -1, 0);
         var hit: Vec3 = new Vec3();
-        var distance = 0; 
+        var distance = 15; 
 
         if (PhysicsSystem.instance.raycast(_rayPrazan)) {
             const r = PhysicsSystem.instance.raycastResults;
@@ -148,9 +155,8 @@ export class DbuttonRaycast extends Component {
                 const item = rSorted[i];
                 var shortestDistance = rSorted[0].distance;
 
-                if( item.collider.node.getComponent(DbuttonActivate) ) {
-                    
-                    if( Math.abs(shortestDistance - item.distance) < 1)  {
+                if( item.collider.node.getComponent(DbuttonActivate) ) {   
+                    if( Math.abs(shortestDistance - item.distance) < distance)  {
                         //item.collider.node.getComponent(DbuttonActivate)?.startAnimation();
                         this.tempItemArray.push(item.collider.node);
                     }

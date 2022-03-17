@@ -40,12 +40,17 @@ export class GenericUIABC extends Component {
 
     soundParent?: Node[] = [];
 
+    @property(Node)
+    turnOffSoundButton!: Node;
+
 
     private audioSource: AudioSource = null!;
 
     ScriptableFromWrong? : ScriptEffects;
     corespondingTask? : Node;
     correctAnswer? : Number;
+
+    audioPlaying : boolean = false;
 
     turningOff = false;
 
@@ -114,6 +119,7 @@ export class GenericUIABC extends Component {
     }
 
     soundButtonClicked(event: Event, customData: string) {
+
         switch (parseInt(customData)) {
             case 0:
                 this.findThisSoundAndPlay(this.A.getComponent(Label)!.string);
@@ -125,8 +131,14 @@ export class GenericUIABC extends Component {
                 this.findThisSoundAndPlay(this.C.getComponent(Label)!.string);
                 break;
             case 3:
-                if(this.JSONtask.questionAudio != undefined)
-                    this.audioSource.playOneShot(this.JSONtask.questionAudio!, 1);
+                if(!this.audioSource?.playing) {
+                    this.audioSource.clip = this.JSONtask.questionAudio!;
+                    if(this.JSONtask.questionAudio != undefined) 
+                        this.audioSource.play();
+                        //Change button type
+                } else 
+                    this.audioSource.stop();
+                
                 break;
             default:
                 break;
@@ -134,28 +146,32 @@ export class GenericUIABC extends Component {
     }
 
     answered(event: Event, customData: string) {
-            switch (parseInt(customData)) {
-                case 0:
-                    if(this.A.getComponent(Label)!.string == this.JSONtask.tacanOdgovor)
-                        this.rightAnwer();
-                    else 
-                        this.wrongAnswer();
-                    break;
-                case 1:
-                    if(this.B.getComponent(Label)!.string == this.JSONtask.tacanOdgovor)
-                        this.rightAnwer();
-                    else 
-                        this.wrongAnswer();
-                    break;
-                case 2:
-                    if(this.C.getComponent(Label)!.string == this.JSONtask.tacanOdgovor)
-                        this.rightAnwer();
-                    else 
-                        this.wrongAnswer();
+
+        if(this.audioSource?.playing)
+            this.audioSource.stop();
+
+        switch (parseInt(customData)) {
+            case 0:
+                if(this.A.getComponent(Label)!.string == this.JSONtask.tacanOdgovor)
+                    this.rightAnwer();
+                else 
+                    this.wrongAnswer();
                 break;
-                default:
-                    break;
-            }
+            case 1:
+                if(this.B.getComponent(Label)!.string == this.JSONtask.tacanOdgovor)
+                    this.rightAnwer();
+                else 
+                    this.wrongAnswer();
+                break;
+            case 2:
+                if(this.C.getComponent(Label)!.string == this.JSONtask.tacanOdgovor)
+                    this.rightAnwer();
+                else 
+                    this.wrongAnswer();
+            break;
+            default:
+                break;
+        }
         
     }
 
@@ -168,6 +184,9 @@ export class GenericUIABC extends Component {
     }
 
     wrongAnswer() {
+        if(this.audioSource?.playing)
+            this.audioSource.stop();
+            
         this.node.getComponent(Animation)!.play("WrongNudge");
 
         this.setRandomTask();
@@ -206,7 +225,8 @@ export class GenericUIABC extends Component {
         GameManager.getInstance().gameStatus = GameStatuType.gamePaused; 
         
         this.getComponent(ScriptEffects)?.fadeInActive();
-        console.log("!!!! USAO OVDE SAM! ");
+
+        
         
 
         this.setRandomTask();
@@ -226,6 +246,14 @@ export class GenericUIABC extends Component {
 
         this.getComponent(ScriptEffects)?.fadeOutActive();
         //this.ScriptableFromWrong?.fadeOutActive();
+    }
+
+    update() {
+        if(this.audioSource?.playing) 
+            this.turnOffSoundButton.active = true;
+
+        else
+            this.turnOffSoundButton.active = false;
     }
 }
 

@@ -112,6 +112,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }), JSONloader) : JSONloader);
           this.typeInputResult = ((_this$Canvas = this.Canvas) === null || _this$Canvas === void 0 ? void 0 : (_this$Canvas$getChild = _this$Canvas.getChildByName("GenericUI-Input")) === null || _this$Canvas$getChild === void 0 ? void 0 : (_this$Canvas$getChild2 = _this$Canvas$getChild.getChildByName("EditBoxPC")) === null || _this$Canvas$getChild2 === void 0 ? void 0 : _this$Canvas$getChild2.getChildByName("Result")).getComponent(Label);
           this.trophies = this.Canvas.getChildByName("BottomUI").getChildByName("TrofejiLayout");
+          this.setPlatformType();
         }
 
         setTheKeyboard() {
@@ -130,13 +131,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           return this.TaskManager;
         }
 
-        start() {
+        start() {}
+
+        setPlatformType() {
           this.inputKeyboard = this.Canvas.getChildByName("BottomUI").getChildByName("Keyboard");
           this.settingsUI = this.Canvas.getChildByName("Settings");
           if (sys.os == sys.OS.ANDROID || sys.os == sys.OS.IOS || sys.platform == sys.Platform.MOBILE_BROWSER) this.isMobileOrTablet = true;
           this.setTheKeyboard();
-          console.log("Sys platform " + sys.platform);
-          console.log("isMobileOrTablet " + this.isMobileOrTablet);
         }
 
         backToMenu() {

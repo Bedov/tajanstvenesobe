@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Animation, EditBoxComponent, Task, ScriptEffects, GameManager, GameStatuType, TaskInput, GlobalManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, GenericUIinput;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Animation, EditBoxComponent, Task, ScriptEffects, GameManager, GameStatuType, TaskInput, GlobalManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, GenericUIinput;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -84,11 +84,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
        *
        */
 
-      _export("GenericUIinput", GenericUIinput = (_dec = ccclass('GenericUI-Input'), _dec2 = property(Node), _dec(_class = (_class2 = (_temp = class GenericUIinput extends Component {
+      _export("GenericUIinput", GenericUIinput = (_dec = ccclass('GenericUI-Input'), _dec2 = property(Node), _dec3 = property(Node), _dec(_class = (_class2 = (_temp = class GenericUIinput extends Component {
         constructor(...args) {
           super(...args);
 
           _initializerDefineProperty(this, "genericTekst", _descriptor, this);
+
+          _initializerDefineProperty(this, "turnOffSoundButton", _descriptor2, this);
 
           _defineProperty(this, "editBoxPC", void 0);
 
@@ -131,7 +133,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         solveSoundActivness() {
-          this.soundParent = this.node.getChildByName("SoundButtons");
+          console.log("Solve Sound Activness!!! " + this.JSONtask.questionAudio);
+          this.soundParent = this.node.getChildByName("SoundButtons").getChildByName("Question");
           if (this.JSONtask.questionAudio == undefined || this.JSONtask.questionAudio == null) this.soundParent.active = false;else this.soundParent.active = true;
           this.turningOff = false;
         }
@@ -143,7 +146,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         soundButtonClicked(event, customData) {
-          if (this.JSONtask.questionAudio != undefined) this.audioSource.playOneShot(this.JSONtask.questionAudio, 1);
+          if (!this.audioSource.playing) {
+            this.audioSource.clip = this.JSONtask.questionAudio;
+            if (this.JSONtask.questionAudio != undefined) this.audioSource.play();
+          } else this.audioSource.stop();
         }
 
         answered(event, customData) {
@@ -212,6 +218,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         turnOffGenericTask() {
           var _this$getComponent2;
 
+          if (this.audioSource.playing) this.audioSource.stop();
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
@@ -225,7 +232,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent2 === void 0 ? void 0 : _this$getComponent2.fadeOutActive(); //this.ScriptableFromWrong?.fadeOutActive();
         }
 
+        update() {
+          if (this.audioSource.playing) this.turnOffSoundButton.active = true;else this.turnOffSoundButton.active = false;
+        }
+
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "genericTekst", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "turnOffSoundButton", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,

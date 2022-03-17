@@ -87,6 +87,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         start() {
+          this.setPlatform(); //this.scheduleOnce(, 0.1); 
+        }
+
+        setPlatform() {
           if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().isMobileOrTablet) {

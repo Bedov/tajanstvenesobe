@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, sys, systemEvent, SystemEvent, macro, KeyCode } from 'cc';
+import { _decorator, Component, Node, sys, systemEvent, SystemEvent, macro, KeyCode, UIOpacityComponent } from 'cc';
 import { GameManager } from './GameManager';
 const { ccclass, property } = _decorator;
 
@@ -60,8 +60,13 @@ export class DetectTypeOfDevice extends Component {
     }
 
     start() {
-        
+        this.setPlatform();
+        //this.scheduleOnce(, 0.1); 
 
+    }
+
+    setPlatform() {
+        
         if(GameManager.getInstance().isMobileOrTablet) {
             this.KeyboardMoveSymbol.active = false;
             this.MobileMoveJoystick.active = true;
@@ -101,6 +106,7 @@ export class DetectTypeOfDevice extends Component {
     }
 
     update(deltaTime: number) {
+        
         if(this._lookTutorialEndBool && this._lookdontRepeatTutorialEndevent == false) {
             
             var mobileSeeSymbole = this.MobileSeeSymbol.getComponent('ScriptEffects') as ScriptEffects;

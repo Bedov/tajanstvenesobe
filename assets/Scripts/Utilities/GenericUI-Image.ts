@@ -29,6 +29,9 @@ export class GenericUIimage extends Component {
     @property(Node)
     genericTekst!: Node;
 
+    @property(Node)
+    turnOffSoundButton!: Node;
+
     private audioSource: AudioSource = null!;
 
     soundParent?: Node = undefined;
@@ -53,8 +56,6 @@ export class GenericUIimage extends Component {
 
     solveSoundActivness() {
         this.soundParent = this.node.getChildByName("SoundButtons")! ;
-
-        console.log("USAO   + " + this.JSONtask.questAudio?.toString());
 
         if(this.JSONtask.questAudio == undefined || this.JSONtask.questAudio == null ) {
             this.soundParent.active = false;
@@ -81,12 +82,29 @@ export class GenericUIimage extends Component {
     }
 
     turnOffGenericTask() {
+        if(this.audioSource.playing)
+            this.audioSource.stop();
+
         this.getComponent(ScriptEffects)?.fadeOutActive();
         GameManager.getInstance().gameStatus = GameStatuType.gameActive; 
     }
 
     soundButtonClicked(event: Event, customData: string) {
-        this.audioSource.playOneShot(this.JSONtask.questAudio!, 1);
+        if(!this.audioSource.playing) {
+            this.audioSource.clip = this.JSONtask.questAudio!;
+            if(this.JSONtask.questAudio != undefined) 
+                this.audioSource.play();
+        } else 
+            this.audioSource.stop();
+
+        
+    }
+
+    update() {
+        if(this.audioSource.playing)
+            this.turnOffSoundButton.active = true;
+        else
+            this.turnOffSoundButton.active = false;
     }
 
 }

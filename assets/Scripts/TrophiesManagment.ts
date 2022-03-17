@@ -26,11 +26,11 @@ export class TrophiesManagment extends Component {
 
     calculateLocked() {
         for (let index = 0; index < GameManager.getInstance().Progress; index++) {
-            this.node.children[index].children[0].active = false;
+            this.node.children[index].children[0].active = true;
         }
 
         for (let index = Number(GameManager.getInstance().Progress); index < this.node.children.length; index++) {
-            this.node.children[index].children[0].active = true;
+            this.node.children[index].children[0].active = false;
         }
 
         /*

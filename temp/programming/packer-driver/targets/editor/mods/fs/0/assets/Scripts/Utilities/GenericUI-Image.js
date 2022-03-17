@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Sprite, GameManager, GameStatuType, GlobalManager, ScriptEffects, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, GenericUIimage;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Sprite, GameManager, GameStatuType, GlobalManager, ScriptEffects, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, GenericUIimage;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -71,13 +71,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
        *
        */
 
-      _export("GenericUIimage", GenericUIimage = (_dec = ccclass('GenericUIimage'), _dec2 = property(Node), _dec3 = property(Node), _dec(_class = (_class2 = (_temp = class GenericUIimage extends Component {
+      _export("GenericUIimage", GenericUIimage = (_dec = ccclass('GenericUIimage'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec(_class = (_class2 = (_temp = class GenericUIimage extends Component {
         constructor(...args) {
           super(...args);
 
           _initializerDefineProperty(this, "genericImage", _descriptor, this);
 
           _initializerDefineProperty(this, "genericTekst", _descriptor2, this);
+
+          _initializerDefineProperty(this, "turnOffSoundButton", _descriptor3, this);
 
           _defineProperty(this, "audioSource", null);
 
@@ -108,10 +110,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         solveSoundActivness() {
-          var _this$JSONtask$questA;
-
           this.soundParent = this.node.getChildByName("SoundButtons");
-          console.log("USAO   + " + ((_this$JSONtask$questA = this.JSONtask.questAudio) === null || _this$JSONtask$questA === void 0 ? void 0 : _this$JSONtask$questA.toString()));
 
           if (this.JSONtask.questAudio == undefined || this.JSONtask.questAudio == null) {
             this.soundParent.active = false;
@@ -144,6 +143,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         turnOffGenericTask() {
           var _this$getComponent3;
 
+          if (this.audioSource.playing) this.audioSource.stop();
           (_this$getComponent3 = this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
           }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent3 === void 0 ? void 0 : _this$getComponent3.fadeOutActive();
@@ -155,7 +155,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         soundButtonClicked(event, customData) {
-          this.audioSource.playOneShot(this.JSONtask.questAudio, 1);
+          if (!this.audioSource.playing) {
+            this.audioSource.clip = this.JSONtask.questAudio;
+            if (this.JSONtask.questAudio != undefined) this.audioSource.play();
+          } else this.audioSource.stop();
+        }
+
+        update() {
+          if (this.audioSource.playing) this.turnOffSoundButton.active = true;else this.turnOffSoundButton.active = false;
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "genericImage", [_dec2], {
@@ -164,6 +171,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: null
       }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "genericTekst", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "turnOffSoundButton", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,

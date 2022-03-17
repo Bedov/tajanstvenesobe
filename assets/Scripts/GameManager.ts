@@ -78,6 +78,8 @@ export class GameManager extends Component {
         this.typeInputResult = this.Canvas?.getChildByName("GenericUI-Input")?.getChildByName("EditBoxPC")?.getChildByName("Result")!.getComponent(Label)!;
     
         this.trophies = this.Canvas!.getChildByName("BottomUI")!.getChildByName("TrofejiLayout")!;
+
+        this.setPlatformType();
     }
 
     setTheKeyboard() {
@@ -101,6 +103,14 @@ export class GameManager extends Component {
     }
 
     start () {
+        
+        
+
+       
+        
+    }
+
+    setPlatformType() {
         this.inputKeyboard = this.Canvas!.getChildByName("BottomUI")!.getChildByName("Keyboard")!;
         this.settingsUI = this.Canvas!.getChildByName("Settings")!;
  
@@ -108,11 +118,9 @@ export class GameManager extends Component {
             this.isMobileOrTablet = true;
 
         this.setTheKeyboard();
-
-        console.log("Sys platform " + sys.platform);
-        console.log("isMobileOrTablet " + this.isMobileOrTablet);
-        
     }
+
+
 
     backToMenu() {
         director.loadScene("MainMenu");

@@ -100,13 +100,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 taskJSON.question = parsedJSON["question"];
                 taskJSON.tacanOdgovor = parsedJSON["tacanOdgovor"];
 
-                if (parsedJSON["questionAudio"] != undefined && parsedJSON["tacanOdgovorAudio"] != undefined && parsedJSON["netacanOdgovor1Audio"] != undefined && parsedJSON["netacanOdgovor2Audio"] != undefined) {
+                if (parsedJSON["questionAudio"] != undefined) {
                   try {
                     assetManager.loadRemote(audioURL + parsedJSON["questionAudio"], AudioClip, (err, audioClip) => {
                       taskJSON.questionAudio = audioClip;
-                    }); //assetManager.loadRemote<AudioClip>(remoteUrlRoot + parsedJSON["tacanOdgovorAudio"], (AudioClip), (err, audioClip) =>  {
-                    //    tempTask.tacanOdgovorAudio =  audioClip ;
-                    //});
+                    });
                   } catch (error) {
                     console.log("Zvuk nije dobro ucitan");
                     taskJSON.audioIsLoaded = false;
@@ -116,6 +114,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
               }
+
+              console.log(" BITNOOO  " + taskJSON.questionAudio);
             });
             return true;
           } catch (error) {
@@ -187,8 +187,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 tekstObject.quest = parsedJSON["quest"];
 
                 if (parsedJSON["questAudio"] != undefined) {
-                  console.log("QUEST AUDIO NIJE UNDEFINED");
-
                   try {
                     assetManager.loadRemote(audioURL + parsedJSON["questAudio"], AudioClip, (err, audioClip) => {
                       tekstObject.questAudio = audioClip;
@@ -248,10 +246,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                     imageObject.audioIsLoaded = false;
                   }
                 } else console.log("Ne postoji slika za ovu putanju");
-
-                console.log("Stas to pojo: " + parsedJSON["quest"].toString());
-                console.log("Stas to pojo: " + parsedJSON["questAudio"].toString());
-                console.log("Stas to pojo: " + parsedJSON["questImage"].toString());
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -365,8 +359,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           this.quest = "";
           this.questImage = undefined;
-          this.questAudio = undefined;
-          this.audioIsLoaded = true;
         }
 
       });

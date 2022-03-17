@@ -71,16 +71,15 @@ export class JSONloader extends Component {
                     taskJSON.question = parsedJSON["question"];
                     taskJSON.tacanOdgovor = parsedJSON["tacanOdgovor"];
                     
-                    if( parsedJSON["questionAudio"] != undefined && parsedJSON["tacanOdgovorAudio"] != undefined && parsedJSON["netacanOdgovor1Audio"] != undefined && parsedJSON["netacanOdgovor2Audio"] != undefined)  {
+                    
+                    
+                    if( parsedJSON["questionAudio"] != undefined)  {
 
                         try {
                             assetManager.loadRemote<AudioClip>(audioURL + parsedJSON["questionAudio"], (AudioClip), (err, audioClip) =>  {
                                 taskJSON.questionAudio =  audioClip ;
                             });
-                            //assetManager.loadRemote<AudioClip>(remoteUrlRoot + parsedJSON["tacanOdgovorAudio"], (AudioClip), (err, audioClip) =>  {
-                            //    tempTask.tacanOdgovorAudio =  audioClip ;
-                            //});
-       
+                            
                         } catch (error) {
                             console.log("Zvuk nije dobro ucitan");
                             taskJSON.audioIsLoaded = false;
@@ -92,7 +91,7 @@ export class JSONloader extends Component {
                 } catch (error) {
                     console.log("Nisam nasao trazeno polje za parsiranje" + error );
                     return false;
-                }
+                }console.log(" BITNOOO  " + taskJSON.questionAudio);
             });
             return true;
         } catch (error) {
@@ -180,7 +179,6 @@ export class JSONloader extends Component {
                    tekstObject.quest = parsedJSON["quest"];
                    
                    if( parsedJSON["questAudio"] != undefined)  {
-                        console.log("QUEST AUDIO NIJE UNDEFINED");
                         
                        try {
                            assetManager.loadRemote<AudioClip>(audioURL + parsedJSON["questAudio"], (AudioClip), (err, audioClip) =>  {
@@ -259,11 +257,6 @@ export class JSONloader extends Component {
                         } 
                     } else 
                         console.log("Ne postoji slika za ovu putanju");
-
-
-                   console.log("Stas to pojo: " + parsedJSON["quest"].toString());
-                   console.log("Stas to pojo: " + parsedJSON["questAudio"].toString());
-                   console.log("Stas to pojo: " + parsedJSON["questImage"].toString());
 
                
                } catch (error) {
@@ -367,8 +360,6 @@ export class JSONimage extends JSONobject {
         super();
         this.quest = "";
         this.questImage = undefined;
-        this.questAudio = undefined;
-        this.audioIsLoaded = true;
     }
 }
 

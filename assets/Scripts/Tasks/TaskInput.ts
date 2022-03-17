@@ -37,15 +37,18 @@ export class TaskInput extends Task {
 
     getQuestions() {
         if(this.remoteName != "") {
-            GameManager.getInstance().jsonLoader?.returnQuestionInput(this.remoteName, this.questionTemp)!;
+            GameManager.getInstance().jsonLoader?.returnQuestionInput(this.remoteName.toString(), this.questionTemp)!;
  
         }
     }
 
+    update() {
+        
+        
+    }
 
 
     showTask () {
-        console.log("Usao sam u Input Task");
         
         if(this.isItOkToExecute()) {
             this.taskManager.genericUIinput!.active = true;

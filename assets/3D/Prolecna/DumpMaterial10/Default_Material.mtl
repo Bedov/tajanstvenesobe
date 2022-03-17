@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "Default_Material",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -9,27 +9,40 @@
   },
   "_techIdx": 0,
   "_defines": [
+    {},
+    {},
     {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 92,
+        "b": 92,
+        "a": 255
+      },
       "albedoScale": {
         "__type__": "cc.Vec3",
         "x": 0.5,
         "y": 0.5,
         "z": 0.5
       }
-    }
+    },
+    {},
+    {}
   ]
 }

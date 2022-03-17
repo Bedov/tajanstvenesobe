@@ -71,13 +71,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           for (var index = 0; index < (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().Progress; index++) {
-            this.node.children[index].children[0].active = false;
+            this.node.children[index].children[0].active = true;
           }
 
           for (var _index = Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().Progress); _index < this.node.children.length; _index++) {
-            this.node.children[_index].children[0].active = true;
+            this.node.children[_index].children[0].active = false;
           }
           /*
           if(GameManager.getInstance().Progress != 0)  {

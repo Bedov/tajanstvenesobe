@@ -29,6 +29,9 @@ export class GenericUIinput extends Component {
     @property(Node)
     genericTekst!: Node;
 
+    @property(Node)
+    turnOffSoundButton!: Node;
+
     editBoxPC? : EditBoxComponent;
     soundParent?: Node = undefined;
 
@@ -71,8 +74,12 @@ export class GenericUIinput extends Component {
     }
 
     solveSoundActivness() {
-        this.soundParent = this.node.getChildByName("SoundButtons")! ;
+        console.log("Solve Sound Activness!!! " + this.JSONtask.questionAudio);
 
+        this.soundParent = this.node.getChildByName("SoundButtons")!.getChildByName("Question")! ;
+        
+        
+        
         if(this.JSONtask.questionAudio == undefined || this.JSONtask.questionAudio == null)
             this.soundParent.active = false;
         else
@@ -86,15 +93,23 @@ export class GenericUIinput extends Component {
     } 
 
     soundButtonClicked(event: Event, customData: string) {
-                if(this.JSONtask.questionAudio != undefined)
-                    this.audioSource.playOneShot(this.JSONtask.questionAudio!, 1);
+        if(!this.audioSource.playing) {
+            this.audioSource.clip = this.JSONtask.questionAudio!;
+            if(this.JSONtask.questionAudio != undefined)
+                this.audioSource.play();
+        } else 
+            this.audioSource.stop();
+
+                
     }
 
     answered(event: Event, customData: string) {
-                    if(this.typeInputResult?.string == this.JSONtask.tacanOdgovor)
-                        this.rightAnwer();
-                    else 
-                        this.wrongAnswer();
+        
+
+        if(this.typeInputResult?.string == this.JSONtask.tacanOdgovor)
+            this.rightAnwer();
+        else 
+            this.wrongAnswer();
         
     }
 
@@ -132,11 +147,14 @@ export class GenericUIinput extends Component {
     turnOnGenericTask(task: Node) {
         this.corespondingTask = task; 
         GameManager.getInstance().gameStatus = GameStatuType.gamePaused; 
+
+        
         
         this.getComponent(ScriptEffects)?.fadeInActive();
 
         this.setRandomTask();
         this.solveIntroTaskButton();
+        
 
         if(GameManager.getInstance().isMobileOrTablet) {
             GameManager.getInstance().inputKeyboard!.active = true;
@@ -153,12 +171,22 @@ export class GenericUIinput extends Component {
     }
 
     turnOffGenericTask() {
+        if(this.audioSource.playing)
+            this.audioSource.stop();
+
         GameManager.getInstance().gameStatus = GameStatuType.gameActive; 
 
         GameManager.getInstance().inputKeyboard!.active = false;
 
         this.getComponent(ScriptEffects)?.fadeOutActive();
         //this.ScriptableFromWrong?.fadeOutActive();
+    }
+
+    update() {
+        if(this.audioSource.playing) 
+            this.turnOffSoundButton.active = true;
+        else
+            this.turnOffSoundButton.active = false;
     }
 }
 

@@ -103,12 +103,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           var hit = new Vec3();
           var distance = 0;
+          console.log("OVDE1");
 
           if (PhysicsSystem.instance.raycast(_rayPrazan)) {
             const r = PhysicsSystem.instance.raycastResults;
             r.forEach(rayCastItem => {
+              console.log("OVDE2 + " + rayCastItem.collider.node.name);
               this.tempItemArray.forEach(touchStartItem => {
                 console.log("TouchStartItem " + touchStartItem.name);
+                console.log("Raycast End item: " + rayCastItem.collider.node.name);
+                console.log("Game status: " + (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+                  error: Error()
+                }), GameManager) : GameManager).getInstance().gameStatus);
 
                 if (rayCastItem.collider.node == touchStartItem && (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
                   error: Error()
@@ -136,7 +142,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           (_this$cameraObject$ge2 = this.cameraObject.getComponent(Camera)) === null || _this$cameraObject$ge2 === void 0 ? void 0 : _this$cameraObject$ge2.screenPointToRay(e._point.x, e._point.y, _rayPrazan); //var raycast: geometry.Ray = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z, 0, -1, 0);
 
           var hit = new Vec3();
-          var distance = 0;
+          var distance = 15;
 
           if (PhysicsSystem.instance.raycast(_rayPrazan)) {
             const r = PhysicsSystem.instance.raycastResults; //if( r[0].collider.node.getComponent(DbuttonActivate) )
@@ -152,7 +158,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               if (item.collider.node.getComponent(_crd && DbuttonActivate === void 0 ? (_reportPossibleCrUseOfDbuttonActivate({
                 error: Error()
               }), DbuttonActivate) : DbuttonActivate)) {
-                if (Math.abs(shortestDistance - item.distance) < 1) {
+                if (Math.abs(shortestDistance - item.distance) < distance) {
                   //item.collider.node.getComponent(DbuttonActivate)?.startAnimation();
                   this.tempItemArray.push(item.collider.node);
                 }

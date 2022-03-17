@@ -16,12 +16,9 @@ const { ccclass, property } = _decorator;
  
 @ccclass('ComponentUtility')
 export class ComponentUtility extends Component {
-    // [1]
-    // dummy = '';
-
-    // [2]
-    // @property
-    // serializableDummy = 0;
+    
+    @property(Boolean)
+    turnOffMesh?: Boolean = false;
 
     start () {
         this.node.children.forEach(element => {
@@ -29,6 +26,9 @@ export class ComponentUtility extends Component {
             if(element.children.length != 0) {
                 element.children.forEach(element => {
                     if(element.getComponent(MeshRenderer) != null) {
+                        if(this.turnOffMesh)
+                            element.getComponent(MeshRenderer)!.enabled = false;
+
                         element.addComponent(MeshCollider);
                         element.getComponent(MeshCollider)!.mesh = element.getComponent(MeshRenderer)!.mesh;
                     }
@@ -36,13 +36,18 @@ export class ComponentUtility extends Component {
                     if(element.children.length != 0) {
                         element.children.forEach(element => {
                             if(element.getComponent(MeshRenderer) != null) {
+                                if(this.turnOffMesh)
+                                    element.getComponent(MeshRenderer)!.enabled = false;
                                 element.addComponent(MeshCollider);
                                 element.getComponent(MeshCollider)!.mesh = element.getComponent(MeshRenderer)!.mesh;
                             }
 
                             if(element.children.length != 0) {
                                 element.children.forEach(element => {
+                                    
                                     if(element.getComponent(MeshRenderer) != null) {
+                                        if(this.turnOffMesh)
+                                            element.getComponent(MeshRenderer)!.enabled = false;
                                         element.addComponent(MeshCollider);
                                         element.getComponent(MeshCollider)!.mesh = element.getComponent(MeshRenderer)!.mesh;
                                     }

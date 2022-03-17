@@ -31,6 +31,9 @@ export class GenericUI extends Component {
     @property(Node)
     genericImage!: Node;
 
+    @property(Node)
+    turnOffSoundButton!: Node;
+
     private audioSource: AudioSource = null!;
 
     soundParent?: Node = undefined;
@@ -80,6 +83,7 @@ export class GenericUI extends Component {
         this.genericImage.getComponent(Sprite)!.spriteFrame = JSONimage.questImage!;
 
         this.solveSoundActivness(JSONimage);
+        
 
         GameManager.getInstance().gameStatus = GameStatuType.gamePaused; 
     }
@@ -97,12 +101,10 @@ export class GenericUI extends Component {
 
         if(task.questAudio == undefined || task.questAudio == null ) {
             this.soundParent.active = false;
-            console.log("task.questAudio mi je undefined ili null" + task.questAudio);
-            
         }
         else
             this.soundParent.active = true;
-
+        
         this.turningOff = false;
     }
 
@@ -117,6 +119,7 @@ export class GenericUI extends Component {
     }
 
     turnOnGenericTask(tekst: string) {
+        
 
         this.getComponent(ScriptEffects)?.fadeInActive();
         this.genericTekst.getComponent(Label)!.string = tekst;
@@ -125,6 +128,10 @@ export class GenericUI extends Component {
     }
 
     turnOffGenericTask() {
+
+        if(this.audioSource?.playing)
+            this.audioSource.stop();
+
         this.getComponent(ScriptEffects)?.fadeOutActive();
 
         GameManager.getInstance().gameStatus = GameStatuType.gameActive; 
@@ -136,7 +143,28 @@ export class GenericUI extends Component {
     }
 
     soundButtonClicked(event: Event, customData: string) {
-        this.audioSource.playOneShot(this.JSONbasicReference.questAudio!, 1);
+        //if (!this.audioSource.playing) {
+        //    this.audioSource.playing;
+        //}
+        
+        if(!this.audioSource?.playing && this.JSONbasicReference.questAudio) {
+            this.audioSource.clip = this.JSONbasicReference.questAudio!;
+            
+            //this.audioSource.playOneShot(this.JSONbasicReference.questAudio!, 1);
+            this.audioSource.play();
+        } else  {
+            this.audioSource.stop();
+
+        }
+
+        
+    }
+
+    update() {
+        if(this.audioSource?.playing) 
+            this.turnOffSoundButton.active = true;
+        else
+            this.turnOffSoundButton.active = false;
     }
 
 }
