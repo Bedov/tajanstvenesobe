@@ -37,10 +37,17 @@ export class TaskAutoActive extends Task {
     start(){
         this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
 
+        this.fetchTheData();
+        //this.scheduleOnce(this.fetchTheData, this.orderNumber * 0.05);
+
+        
+    }
+
+    fetchTheData() {
         if(this.taskType == TypeOfTask.tekstType)
             this.getTekstRemotely();
         if(this.taskType == TypeOfTask.imageType)
-            this.getImageRemotely();
+         this.getImageRemotely();
     }
 
     getTekstRemotely() {

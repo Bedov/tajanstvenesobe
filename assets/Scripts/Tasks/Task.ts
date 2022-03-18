@@ -14,6 +14,8 @@ export class Task extends Component {
     requirementForTaskCompleted = false;
     executed = false;
 
+    orderNumber = 0;
+
     @property([Node])
     dependencies: Node[] = [];
 

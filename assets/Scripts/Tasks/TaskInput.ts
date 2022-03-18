@@ -27,6 +27,7 @@ export class TaskInput extends Task {
    
 
     start () {
+        //this.scheduleOnce(this.getQuestions, this.orderNumber * 0.05);
         this.getQuestions();
 
         this.audioSource = this.node.getComponent(AudioSource)!;

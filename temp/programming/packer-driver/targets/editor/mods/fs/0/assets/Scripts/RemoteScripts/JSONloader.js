@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, assetManager, AudioClip, SpriteFrame, Texture2D, GameManager, JSONtask2, JSONtask1, JSONobject, JSONquestTekst, JSONimage, _dec, _class, _temp, _crd, ccclass, property, JSONloader;
+  var _reporterNs, _cclegacy, _decorator, Component, assetManager, AudioClip, SpriteFrame, Texture2D, GameManager, JSONtask2, JSONtask1, JSONobject, JSONquestTekst, JSONimage, _dec, _class, _temp, _crd, ccclass, property, tasksInProgress, JSONloader;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -56,27 +56,31 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
        */
       //var static instance: JSONloader;
 
+      tasksInProgress = 0;
+
       _export("JSONloader", JSONloader = (_dec = ccclass('JSONloader'), _dec(_class = (_temp = class JSONloader extends Component {
         constructor(...args) {
           super(...args);
 
           _defineProperty(this, "gameManager", void 0);
 
-          _defineProperty(this, "originUrl", "https://abedov.com/json");
+          _defineProperty(this, "downloadTask", 0);
+
+          _defineProperty(this, "originUrl", "http://abedov.com/json");
         }
 
         onLoad() {
           this.gameManager = this.node.getComponent(_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager);
+          }), GameManager) : GameManager); //assetManager.
         }
 
-        fetchQuestions(folderURL, taskJSON) {
+        fetchQuestions(folderURL, taskJSON, expectedQuestions) {
           var _this$gameManager, _this$gameManager2;
 
           let remoteUrlRoot = this.originUrl + "/" + ((_this$gameManager = this.gameManager) === null || _this$gameManager === void 0 ? void 0 : _this$gameManager.LanguageName) + "/" + ((_this$gameManager2 = this.gameManager) === null || _this$gameManager2 === void 0 ? void 0 : _this$gameManager2.LevelName) + "/" + folderURL + "/";
 
-          for (let index = 1; index < 10; index++) {
+          for (let index = 1; index < Number(expectedQuestions) + 1; index++) {
             //console.log("URL: " + remoteUrlRoot + index.toString() + ".txt");
             var questionURL = remoteUrlRoot + index.toString() + ".txt";
 
@@ -94,6 +98,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           var audioURL = this.originUrl + "/" + ((_this$gameManager5 = this.gameManager) === null || _this$gameManager5 === void 0 ? void 0 : _this$gameManager5.LanguageName) + "/" + ((_this$gameManager6 = this.gameManager) === null || _this$gameManager6 === void 0 ? void 0 : _this$gameManager6.LevelName) + "/";
 
           try {
+            tasksInProgress++;
             assetManager.loadRemote(remoteUrlRoot.toString(), function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
@@ -102,14 +107,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (parsedJSON["questionAudio"] != undefined) {
                   try {
+                    tasksInProgress++;
                     assetManager.loadRemote(audioURL + parsedJSON["questionAudio"], AudioClip, (err, audioClip) => {
                       taskJSON.questionAudio = audioClip;
+                      tasksInProgress--;
                     });
                   } catch (error) {
                     console.log("Zvuk nije dobro ucitan");
                     taskJSON.audioIsLoaded = false;
                   }
                 } else console.log("Ne postoje zvukovi za ovu putanju");
+
+                tasksInProgress--;
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -132,6 +141,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           try {
             assetManager.loadRemote(questionURL, function (err, textAsset) {
               try {
+                tasksInProgress++;
                 var tempTask = new JSONtask1();
                 var parsedJSON = JSON.parse(textAsset.toString());
                 tempTask.question = parsedJSON["question"];
@@ -141,27 +151,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (parsedJSON["questionAudio"] != undefined) {
                   try {
+                    tasksInProgress++;
                     assetManager.loadRemote(remoteUrlRoot + parsedJSON["questionAudio"], AudioClip, (err, audioClip) => {
                       tempTask.questionAudio = audioClip;
+                      tasksInProgress--;
                     });
                   } catch (error) {
                     console.log("Zvuk nije dobro ucitan");
                     tempTask.audioIsLoaded = false;
                   }
-                } else console.log("Ne postoje zvukovi za ovu putanju"); //RAZMISLITI JOS
-
+                } else console.log("Ne postoje zvukovi za ovu putanju");
 
                 if (tempTask.question != undefined) taskJSON.push(tempTask);
-                /*
-                console.log("Stas to pojo: " + parsedJSON["question"].toString());
-                console.log("Stas to pojo: " + parsedJSON["tacanOdgovor"].toString());
-                console.log("Stas to pojo: " + parsedJSON["netacanOdgovor1"].toString());
-                console.log("Stas to pojo: " + parsedJSON["netacanOdgovor2"].toString());
-                console.log("Stas to pojo: " + parsedJSON["questionAudio"].toString());
-                console.log("Stas to pojo: " + parsedJSON["tacanOdgovorAudio"].toString());
-                console.log("Stas to pojo: " + parsedJSON["netacanOdgovor1Audio"].toString());
-                console.log("Stas to pojo: " + parsedJSON["netacanOdgovor2Audio"].toString());
-                */
+                tasksInProgress--;
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -174,6 +176,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }
         }
 
+        update() {
+          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).instance.taskInProgressManager = Number(tasksInProgress);
+        }
+
         fetchQuestTekst(questURL, tekstObject) {
           var _this$gameManager9, _this$gameManager10, _this$gameManager11, _this$gameManager12;
 
@@ -181,6 +189,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           var audioURL = this.originUrl + "/" + ((_this$gameManager11 = this.gameManager) === null || _this$gameManager11 === void 0 ? void 0 : _this$gameManager11.LanguageName) + "/" + ((_this$gameManager12 = this.gameManager) === null || _this$gameManager12 === void 0 ? void 0 : _this$gameManager12.LevelName) + "/"; //let questURLfull = remoteUrlRoot 
 
           try {
+            tasksInProgress++;
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
@@ -188,14 +197,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (parsedJSON["questAudio"] != undefined) {
                   try {
+                    tasksInProgress++;
                     assetManager.loadRemote(audioURL + parsedJSON["questAudio"], AudioClip, (err, audioClip) => {
                       tekstObject.questAudio = audioClip;
+                      tasksInProgress--;
                     });
                   } catch (error) {
                     console.log("Zvuk nije dobro ucitan");
                     tekstObject.audioIsLoaded = false;
                   }
                 } else console.log("Ne postoje zvukovi za ovu putanju");
+
+                tasksInProgress--;
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -215,6 +228,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           var rootURL = this.originUrl + "/" + ((_this$gameManager15 = this.gameManager) === null || _this$gameManager15 === void 0 ? void 0 : _this$gameManager15.LanguageName) + "/" + ((_this$gameManager16 = this.gameManager) === null || _this$gameManager16 === void 0 ? void 0 : _this$gameManager16.LevelName) + "/"; //let questURLfull = remoteUrlRoot 
 
           try {
+            tasksInProgress++;
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
@@ -222,8 +236,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (parsedJSON["questAudio"] != undefined) {
                   try {
+                    tasksInProgress++;
                     assetManager.loadRemote(rootURL + parsedJSON["questAudio"], AudioClip, (err, audioClip) => {
                       imageObject.questAudio = audioClip;
+                      tasksInProgress--;
                     });
                   } catch (error) {
                     console.log("Zvuk nije dobro ucitan");
@@ -246,6 +262,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                     imageObject.audioIsLoaded = false;
                   }
                 } else console.log("Ne postoji slika za ovu putanju");
+
+                tasksInProgress--;
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;

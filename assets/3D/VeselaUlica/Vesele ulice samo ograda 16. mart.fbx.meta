@@ -1,0 +1,123 @@
+{
+  "ver": "2.1.10",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "bc95b9e1-2367-4565-a940-f3e9d527e577",
+  "files": [],
+  "subMetas": {
+    "97323": {
+      "importer": "gltf-material",
+      "uuid": "bc95b9e1-2367-4565-a940-f3e9d527e577@97323",
+      "displayName": "",
+      "id": "97323",
+      "name": "ograda.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d801d": {
+      "importer": "gltf-mesh",
+      "uuid": "bc95b9e1-2367-4565-a940-f3e9d527e577@d801d",
+      "displayName": "",
+      "id": "d801d",
+      "name": "Kolajder.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8b540": {
+      "importer": "gltf-embeded-image",
+      "uuid": "bc95b9e1-2367-4565-a940-f3e9d527e577@8b540",
+      "displayName": "",
+      "id": "8b540",
+      "name": "ograda.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f913": {
+      "importer": "texture",
+      "uuid": "bc95b9e1-2367-4565-a940-f3e9d527e577@4f913",
+      "displayName": "",
+      "id": "4f913",
+      "name": "ograda.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bc95b9e1-2367-4565-a940-f3e9d527e577@8b540"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fb34e": {
+      "importer": "gltf-scene",
+      "uuid": "bc95b9e1-2367-4565-a940-f3e9d527e577@fb34e",
+      "displayName": "",
+      "id": "fb34e",
+      "name": "Vesele ulice samo ograda 16. mart.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "ograda.png",
+        "uri": "bc95b9e1-2367-4565-a940-f3e9d527e577@8b540"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "redirect": "bc95b9e1-2367-4565-a940-f3e9d527e577@fb34e",
+    "assetFinder": {
+      "meshes": [
+        "bc95b9e1-2367-4565-a940-f3e9d527e577@d801d"
+      ],
+      "skeletons": [],
+      "textures": [
+        "bc95b9e1-2367-4565-a940-f3e9d527e577@4f913"
+      ],
+      "materials": [
+        "bc95b9e1-2367-4565-a940-f3e9d527e577@97323"
+      ],
+      "scenes": [
+        "bc95b9e1-2367-4565-a940-f3e9d527e577@fb34e"
+      ]
+    }
+  }
+}

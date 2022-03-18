@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "Bush_02",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -10,12 +10,18 @@
   "_techIdx": 0,
   "_defines": [
     {
-      "USE_ALBEDO_MAP": true
-    }
+      "USE_ALBEDO_MAP": true,
+      "USE_ALPHA_TEST": true
+    },
+    {},
+    {}
   ],
   "_states": [
     {
-      "rasterizerState": {},
+      "rasterizerState": {
+        "cullMode": 0
+      },
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {
@@ -25,24 +31,19 @@
             "blendDstAlpha": 4
           }
         ]
-      },
-      "depthStencilState": {
-        "depthWrite": true
       }
-    }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
       "mainTexture": {
         "__uuid__": "bdb36cbc-f183-40e5-98a4-2c84a6b6cfca@52358",
         "__expectedType__": "cc.Texture2D"
-      },
-      "albedoScale": {
-        "__type__": "cc.Vec3",
-        "x": 1,
-        "y": 1,
-        "z": 1
       }
-    }
+    },
+    {},
+    {}
   ]
 }

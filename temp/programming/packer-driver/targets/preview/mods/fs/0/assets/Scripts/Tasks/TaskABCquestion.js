@@ -60,7 +60,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "remoteName", _descriptor, this);
 
-          _initializerDefineProperty(this, "correctAnswer", _descriptor2, this);
+          _initializerDefineProperty(this, "expectedQuestions", _descriptor2, this);
 
           _defineProperty(this, "questionsTempArray", new Array());
 
@@ -72,9 +72,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
+          // this.scheduleOnce(this.getQuestions, this.orderNumber * 0.05);
           this.getQuestions();
           this.audioSource = this.node.getComponent(AudioSource);
-          this.scheduleOnce(this.fillQuestionsShownFalse, 4);
+          this.scheduleOnce(this.fillQuestionsShownFalse, this.orderNumber * 0.05 + 2);
         }
 
         fillQuestionsShownFalse() {
@@ -89,7 +90,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             (_getInstance$jsonLoad = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
-            }), GameManager) : GameManager).getInstance().jsonLoader) === null || _getInstance$jsonLoad === void 0 ? void 0 : _getInstance$jsonLoad.fetchQuestions(this.remoteName, this.questionsTempArray); //this.scheduleOnce(this.logQuestionsFetched, 4);
+            }), GameManager) : GameManager).getInstance().jsonLoader) === null || _getInstance$jsonLoad === void 0 ? void 0 : _getInstance$jsonLoad.fetchQuestions(this.remoteName, this.questionsTempArray, this.expectedQuestions); //this.scheduleOnce(this.logQuestionsFetched, 4);
             //JSONloader.getInstance().returnTask1(this.remoteName, this.taskTemp)!;
             //this.JSONloader.returnTask1(this.remoteName, this.taskTemp)!;
           }
@@ -138,7 +139,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "correctAnswer", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "expectedQuestions", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,

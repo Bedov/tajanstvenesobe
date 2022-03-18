@@ -18,7 +18,9 @@ export class TaskABCquestion extends Task {
     remoteName!: String;
 
     @property(Number)
-    correctAnswer!: Number;
+    expectedQuestions!: Number;
+
+    
 
     questionsTempArray : Array<JSONtask1> = new Array<JSONtask1>();
 
@@ -29,12 +31,13 @@ export class TaskABCquestion extends Task {
    
 
     start () {
+       // this.scheduleOnce(this.getQuestions, this.orderNumber * 0.05);
         this.getQuestions();
 
         this.audioSource = this.node.getComponent(AudioSource)!;
 
         
-        this.scheduleOnce(this.fillQuestionsShownFalse, 4);
+        this.scheduleOnce(this.fillQuestionsShownFalse, this.orderNumber * 0.05 + 2);
     }
 
     fillQuestionsShownFalse() {
@@ -46,7 +49,7 @@ export class TaskABCquestion extends Task {
 
     getQuestions() {
         if(this.remoteName != "") {
-            GameManager.getInstance().jsonLoader?.fetchQuestions(this.remoteName, this.questionsTempArray)!;
+            GameManager.getInstance().jsonLoader?.fetchQuestions(this.remoteName, this.questionsTempArray, this.expectedQuestions)!;
             //this.scheduleOnce(this.logQuestionsFetched, 4);
             
             

@@ -46,6 +46,8 @@ export class GenericUIinput extends Component {
     turningOff = false;
 
     start () {
+        this.turnOffSoundButton.active = true;
+
         this.audioSource = this.node.getComponent(AudioSource)!;
 
         if(this.node.getChildByName("Wrong") != undefined && this.node.getChildByName("Wrong") != null)
@@ -76,7 +78,7 @@ export class GenericUIinput extends Component {
     solveSoundActivness() {
         console.log("Solve Sound Activness!!! " + this.JSONtask.questionAudio);
 
-        this.soundParent = this.node.getChildByName("SoundButtons")!.getChildByName("Question")! ;
+        this.soundParent = this.node.getChildByName("SoundButton")! ;
         
         
         
@@ -183,10 +185,20 @@ export class GenericUIinput extends Component {
     }
 
     update() {
-        if(this.audioSource.playing) 
+        
+        if(this.audioSource.playing) {
+            console.log("Sta koji kurac+ " + this.turnOffSoundButton.name);
             this.turnOffSoundButton.active = true;
-        else
+           
+        }
+        else {
             this.turnOffSoundButton.active = false;
+            console.log("Nisam ovde " + this.turnOffSoundButton.name);
+        }
+
+        this.turnOffSoundButton.active = true;
+        console.log("AKTIVNOST: + " + this.turnOffSoundButton.active.toString());
+        this.turnOffSoundButton.setPosition(this.soundParent!.position);
     }
 }
 

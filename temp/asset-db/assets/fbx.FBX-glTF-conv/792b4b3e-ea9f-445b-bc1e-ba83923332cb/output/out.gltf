@@ -1,0 +1,147 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 360,
+      "max": [
+        22.17171859741211,
+        4.975194931030273,
+        19.851564407348633
+      ],
+      "min": [
+        -17.465547561645508,
+        3.685988664627075,
+        -19.785707473754883
+      ],
+      "name": "Ograda/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 360,
+      "name": "Ograda/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 360,
+      "name": "Ograda/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 960,
+      "name": "Ograda/INDICES",
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 11520,
+      "byteStride": 32,
+      "name": "Ograda",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3840,
+      "byteOffset": 11520
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 15360,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/792b4b3e-ea9f-445b-bc1e-ba83923332cb/output/.fbm/468B2992/Uskrs samo ograda 16. mart.fbm/ograda.png",
+          "relativeFileName": "../../../temp/asset-db/assets/fbx.FBX-glTF-conv/792b4b3e-ea9f-445b-bc1e-ba83923332cb/output/.fbm/468B2992/Uskrs samo ograda 16. mart.fbm/ograda.png"
+        }
+      },
+      "name": "ograda.png",
+      "uri": "ograda.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "BLEND",
+      "name": "lambert2",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.0
+        ],
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Ograda",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Ograda",
+      "translation": [
+        0.0,
+        -3.8356094360351563,
+        0.0
+      ]
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "ograda.png",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

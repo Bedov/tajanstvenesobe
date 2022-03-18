@@ -88,9 +88,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
                  return 0;
            }); */
 
-          sortedArray.forEach(element => {
-            console.log("Element: + " + element.collider.name);
-          });
           return sortedArray;
         }
 
@@ -103,19 +100,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           var hit = new Vec3();
           var distance = 0;
-          console.log("OVDE1");
 
           if (PhysicsSystem.instance.raycast(_rayPrazan)) {
             const r = PhysicsSystem.instance.raycastResults;
             r.forEach(rayCastItem => {
-              console.log("OVDE2 + " + rayCastItem.collider.node.name);
               this.tempItemArray.forEach(touchStartItem => {
-                console.log("TouchStartItem " + touchStartItem.name);
-                console.log("Raycast End item: " + rayCastItem.collider.node.name);
-                console.log("Game status: " + (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-                  error: Error()
-                }), GameManager) : GameManager).getInstance().gameStatus);
-
                 if (rayCastItem.collider.node == touchStartItem && (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
                   error: Error()
                 }), GameManager) : GameManager).getInstance().gameStatus == (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({

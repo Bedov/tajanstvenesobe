@@ -92,6 +92,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _defineProperty(this, "isMobileOrTablet", false);
 
+          _defineProperty(this, "taskInProgressManager", 1);
+
           _defineProperty(this, "trophies", void 0);
         }
 

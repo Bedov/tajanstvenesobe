@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, JsonAsset, assetManager, Game, AudioClip, AudioSource, SpriteFrame, ImageAsset, Texture2D, Sprite} from 'cc';
+import { _decorator, Component, Node, JsonAsset, assetManager, Game, AudioClip, AudioSource, SpriteFrame, ImageAsset, Texture2D, Sprite, game} from 'cc';
 const { ccclass, property } = _decorator;
 
 //const fs = require('fs');
@@ -19,6 +19,7 @@ const { ccclass, property } = _decorator;
  */
 
 //var static instance: JSONloader;
+var tasksInProgress = 0;
  
 import { GameManager } from "../GameManager";
 import { GlobalManager } from '../GlobalManager';
@@ -28,22 +29,26 @@ import { Task } from '../Tasks/Task';
 export class JSONloader extends Component {
     
     gameManager? : GameManager ;
+    downloadTask: number = 0;
 
-    originUrl = "https://abedov.com/json"; 
+    //originUrl = "https://stickandrope.com/klett/json"; 
+    originUrl = "http://abedov.com/json"; 
 
     onLoad(){
 
         this.gameManager = this.node.getComponent(GameManager)!;
+
+        //assetManager.
         
     }
 
 
-    fetchQuestions(folderURL: String, taskJSON: Array<JSONtask1>) {
+    fetchQuestions(folderURL: String, taskJSON: Array<JSONtask1>, expectedQuestions: Number) {
 
         let remoteUrlRoot = this.originUrl + "/" + this.gameManager?.LanguageName + "/" + this.gameManager?.LevelName + "/" + folderURL + "/" ;
 
 
-        for (let index = 1; index < 10; index++) {
+        for (let index = 1; index < Number(expectedQuestions) + 1; index++) {
             //console.log("URL: " + remoteUrlRoot + index.toString() + ".txt");
             var questionURL = remoteUrlRoot + index.toString() + ".txt";
 
@@ -63,6 +68,7 @@ export class JSONloader extends Component {
         var audioURL = this.originUrl + "/" + this.gameManager?.LanguageName + "/" + this.gameManager?.LevelName + "/";
 
         try {
+            tasksInProgress++;
 
              assetManager.loadRemote(remoteUrlRoot.toString(), function (err, textAsset) {
 
@@ -76,8 +82,10 @@ export class JSONloader extends Component {
                     if( parsedJSON["questionAudio"] != undefined)  {
 
                         try {
+                            tasksInProgress++;
                             assetManager.loadRemote<AudioClip>(audioURL + parsedJSON["questionAudio"], (AudioClip), (err, audioClip) =>  {
                                 taskJSON.questionAudio =  audioClip ;
+                                tasksInProgress--;
                             });
                             
                         } catch (error) {
@@ -87,7 +95,7 @@ export class JSONloader extends Component {
                     } else 
                         console.log("Ne postoje zvukovi za ovu putanju");
 
-
+                    tasksInProgress--;
                 } catch (error) {
                     console.log("Nisam nasao trazeno polje za parsiranje" + error );
                     return false;
@@ -112,6 +120,7 @@ export class JSONloader extends Component {
              assetManager.loadRemote(questionURL, function (err, textAsset) {
 
                  try {
+                    tasksInProgress++;
                     var tempTask = new JSONtask1;
                     var parsedJSON = JSON.parse(textAsset.toString());
                     tempTask.question = parsedJSON["question"];
@@ -122,8 +131,10 @@ export class JSONloader extends Component {
                     if( parsedJSON["questionAudio"] != undefined)  {
 
                         try {
+                            tasksInProgress++;
                             assetManager.loadRemote<AudioClip>(remoteUrlRoot + parsedJSON["questionAudio"], (AudioClip), (err, audioClip) =>  {
                                 tempTask.questionAudio =  audioClip ;
+                                tasksInProgress--;
                             });
 
                         } catch (error) {
@@ -133,21 +144,11 @@ export class JSONloader extends Component {
                     } else 
                         console.log("Ne postoje zvukovi za ovu putanju");
                         
-                    //RAZMISLITI JOS
+                    
                     if(tempTask.question != undefined)
                         taskJSON.push(tempTask);
 
-                        /*
-                    console.log("Stas to pojo: " + parsedJSON["question"].toString());
-                    console.log("Stas to pojo: " + parsedJSON["tacanOdgovor"].toString());
-                    console.log("Stas to pojo: " + parsedJSON["netacanOdgovor1"].toString());
-                    console.log("Stas to pojo: " + parsedJSON["netacanOdgovor2"].toString());
-
-                    console.log("Stas to pojo: " + parsedJSON["questionAudio"].toString());
-                    console.log("Stas to pojo: " + parsedJSON["tacanOdgovorAudio"].toString());
-                    console.log("Stas to pojo: " + parsedJSON["netacanOdgovor1Audio"].toString());
-                    console.log("Stas to pojo: " + parsedJSON["netacanOdgovor2Audio"].toString());
-                    */
+                    tasksInProgress--;
                 } catch (error) {
                     console.log("Nisam nasao trazeno polje za parsiranje" + error );
                     return false;
@@ -161,6 +162,10 @@ export class JSONloader extends Component {
         
 
     }
+    update() {
+        GameManager.instance.taskInProgressManager = Number( tasksInProgress);
+        
+    }
 
     fetchQuestTekst(questURL: string, tekstObject: JSONquestTekst) {
 
@@ -170,6 +175,7 @@ export class JSONloader extends Component {
 
         try {
 
+            tasksInProgress++;
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
 
                 try {
@@ -181,8 +187,10 @@ export class JSONloader extends Component {
                    if( parsedJSON["questAudio"] != undefined)  {
                         
                        try {
+                            tasksInProgress++;
                            assetManager.loadRemote<AudioClip>(audioURL + parsedJSON["questAudio"], (AudioClip), (err, audioClip) =>  {
                             tekstObject.questAudio =  audioClip ;
+                            tasksInProgress--;
                            });
                         
                        } catch (error) {
@@ -193,7 +201,7 @@ export class JSONloader extends Component {
                        console.log("Ne postoje zvukovi za ovu putanju");
 
 
-               
+                    tasksInProgress--;
                } catch (error) {
                    console.log("Nisam nasao trazeno polje za parsiranje" + error );
                    return false;
@@ -214,7 +222,7 @@ export class JSONloader extends Component {
         //let questURLfull = remoteUrlRoot 
 
         try {
-
+            tasksInProgress++;
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
 
                 try {
@@ -226,8 +234,10 @@ export class JSONloader extends Component {
                    if( parsedJSON["questAudio"] != undefined)  {
 
                        try {
+                            tasksInProgress++;
                            assetManager.loadRemote<AudioClip>(rootURL + parsedJSON["questAudio"], (AudioClip), (err, audioClip) =>  {
                             imageObject.questAudio =  audioClip ;
+                            tasksInProgress--;
                            });
                         
                        } catch (error) {
@@ -258,7 +268,7 @@ export class JSONloader extends Component {
                     } else 
                         console.log("Ne postoji slika za ovu putanju");
 
-               
+                    tasksInProgress--;
                } catch (error) {
                    console.log("Nisam nasao trazeno polje za parsiranje" + error );
                    return false;

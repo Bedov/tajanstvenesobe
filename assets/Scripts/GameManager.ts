@@ -60,6 +60,8 @@ export class GameManager extends Component {
 
     isMobileOrTablet : boolean = false;
 
+    taskInProgressManager : number = 1;
+
     trophies? : Node ;
 
     public static getInstance(): GameManager {

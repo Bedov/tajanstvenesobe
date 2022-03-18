@@ -111,6 +111,9 @@ export class FirstPersonCameraMovement extends Component {
             return;
         
         var raycast: geometry.Ray = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z, 0, -1, 0);
+        var raycast2: geometry.Ray = new geometry.Ray(this.node.position.x + 0.01, this.node.position.y, this.node.position.z+ 0.01, 0, -1, 0);
+        var raycast3: geometry.Ray = new geometry.Ray(this.node.position.x- 0.01, this.node.position.y, this.node.position.z- 0.01, 0, -1, 0);
+
         var hit: Vec3 = new Vec3();
         var distance = 0; 
 

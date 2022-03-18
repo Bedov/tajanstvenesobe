@@ -110,6 +110,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
+          this.turnOffSoundButton.active = true;
           this.audioSource = this.node.getComponent(AudioSource);
           if (this.node.getChildByName("Wrong") != undefined && this.node.getChildByName("Wrong") != null) this.ScriptableFromWrong = this.node.getChildByName("Wrong").getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
@@ -134,7 +135,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         solveSoundActivness() {
           console.log("Solve Sound Activness!!! " + this.JSONtask.questionAudio);
-          this.soundParent = this.node.getChildByName("SoundButtons").getChildByName("Question");
+          this.soundParent = this.node.getChildByName("SoundButton");
           if (this.JSONtask.questionAudio == undefined || this.JSONtask.questionAudio == null) this.soundParent.active = false;else this.soundParent.active = true;
           this.turningOff = false;
         }
@@ -233,7 +234,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         update() {
-          if (this.audioSource.playing) this.turnOffSoundButton.active = true;else this.turnOffSoundButton.active = false;
+          if (this.audioSource.playing) {
+            console.log("Sta koji kurac+ " + this.turnOffSoundButton.name);
+            this.turnOffSoundButton.active = true;
+          } else {
+            this.turnOffSoundButton.active = false;
+            console.log("Nisam ovde " + this.turnOffSoundButton.name);
+          }
+
+          this.turnOffSoundButton.active = true;
+          console.log("AKTIVNOST: + " + this.turnOffSoundButton.active.toString());
+          this.turnOffSoundButton.setPosition(this.soundParent.position);
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "genericTekst", [_dec2], {

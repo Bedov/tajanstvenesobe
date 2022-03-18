@@ -136,6 +136,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             error: Error()
           }), GameStatuType) : GameStatuType).gamePaused) return;
           var raycast = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z, 0, -1, 0);
+          var raycast2 = new geometry.Ray(this.node.position.x + 0.01, this.node.position.y, this.node.position.z + 0.01, 0, -1, 0);
+          var raycast3 = new geometry.Ray(this.node.position.x - 0.01, this.node.position.y, this.node.position.z - 0.01, 0, -1, 0);
           var hit = new Vec3();
           var distance = 0;
 

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, Animation, Prefab, instantiate, Checkpoint, FollowGoForward, GameManager, TrophiesManagment, ButtonDisabler, Task, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _temp, _crd, ccclass, property, TaskManager;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, Animation, Prefab, instantiate, Checkpoint, FollowGoForward, GameManager, TrophiesManagment, ButtonDisabler, Task, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _temp, _crd, ccclass, property, TaskManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -103,6 +103,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       }), _dec11 = property({
         type: Node
       }), _dec12 = property({
+        type: Node
+      }), _dec13 = property({
         type: Prefab
       }), _dec(_class = (_class2 = (_temp = class TaskManager extends Component {
         constructor(...args) {
@@ -126,19 +128,32 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "arrow", _descriptor9, this);
 
-          _initializerDefineProperty(this, "follow", _descriptor10, this);
+          _initializerDefineProperty(this, "loadingPanel", _descriptor10, this);
 
-          _initializerDefineProperty(this, "followPrefab", _descriptor11, this);
+          _initializerDefineProperty(this, "follow", _descriptor11, this);
+
+          _initializerDefineProperty(this, "followPrefab", _descriptor12, this);
 
           _defineProperty(this, "checkpoints", []);
         }
 
         onLoad() {
           this.checkpoints = this.node.children;
+          this.giveOrderNumberToTasks();
         }
 
         start() {
           this.checkDoneTasks();
+        }
+
+        giveOrderNumberToTasks() {
+          var tasks = this.getTasks();
+
+          for (let index = 0; index < tasks.length; index++) {
+            tasks[index].getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
+              error: Error()
+            }), Task) : Task).orderNumber = index;
+          }
         }
 
         getTasks() {
@@ -346,14 +361,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         initializer: function () {
           return null;
         }
-      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "follow", [_dec11], {
+      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "loadingPanel", [_dec11], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return null;
         }
-      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "followPrefab", [_dec12], {
+      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "follow", [_dec12], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "followPrefab", [_dec13], {
         configurable: true,
         enumerable: true,
         writable: true,

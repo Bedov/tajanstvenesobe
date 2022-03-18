@@ -62,6 +62,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "executed", false);
 
+          _defineProperty(this, "orderNumber", 0);
+
           _initializerDefineProperty(this, "dependencies", _descriptor, this);
 
           _initializerDefineProperty(this, "uvodniTask", _descriptor2, this);

@@ -1,0 +1,137 @@
+{
+  "__type__": "cc.Mesh",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": ".bin",
+  "_struct": {
+    "primitives": [
+      {
+        "primitiveMode": 7,
+        "jointMapIndex": 0,
+        "vertexBundelIndices": [
+          0
+        ],
+        "indexView": {
+          "offset": 114984,
+          "length": 18624,
+          "count": 4656,
+          "stride": 4
+        }
+      },
+      {
+        "primitiveMode": 7,
+        "jointMapIndex": 0,
+        "vertexBundelIndices": [
+          1
+        ],
+        "indexView": {
+          "offset": 230376,
+          "length": 19968,
+          "count": 4992,
+          "stride": 4
+        }
+      }
+    ],
+    "vertexBundles": [
+      {
+        "view": {
+          "offset": 0,
+          "length": 114984,
+          "count": 1597,
+          "stride": 72
+        },
+        "attributes": [
+          {
+            "name": "a_position",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_normal",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_texCoord",
+            "format": 21,
+            "isNormalized": false
+          },
+          {
+            "name": "a_tangent",
+            "format": 44,
+            "isNormalized": false
+          },
+          {
+            "name": "a_joints",
+            "format": 42,
+            "isNormalized": false
+          },
+          {
+            "name": "a_weights",
+            "format": 44,
+            "isNormalized": false
+          }
+        ]
+      },
+      {
+        "view": {
+          "offset": 133608,
+          "length": 96768,
+          "count": 1344,
+          "stride": 72
+        },
+        "attributes": [
+          {
+            "name": "a_position",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_normal",
+            "format": 32,
+            "isNormalized": false
+          },
+          {
+            "name": "a_texCoord",
+            "format": 21,
+            "isNormalized": false
+          },
+          {
+            "name": "a_tangent",
+            "format": 44,
+            "isNormalized": false
+          },
+          {
+            "name": "a_joints",
+            "format": 42,
+            "isNormalized": false
+          },
+          {
+            "name": "a_weights",
+            "format": 44,
+            "isNormalized": false
+          }
+        ]
+      }
+    ],
+    "minPosition": {
+      "__type__": "cc.Vec3",
+      "x": -0.924694836139679,
+      "y": -0.009991302154958248,
+      "z": -0.924694836139679
+    },
+    "maxPosition": {
+      "__type__": "cc.Vec3",
+      "x": 0.924694836139679,
+      "y": 2.8518619537353516,
+      "z": 0.9246951341629028
+    },
+    "jointMaps": [
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "_hash": 1612905233
+}

@@ -55,6 +55,9 @@ export class TaskManager extends Component {
     public arrow: Node | null = null;
 
     @property({type: Node})
+    public loadingPanel: Node | null = null;
+
+    @property({type: Node})
     public follow: Node | null = null;
 
     @property({type: Prefab})
@@ -65,10 +68,19 @@ export class TaskManager extends Component {
 
     onLoad () {
         this.checkpoints = this.node.children; 
+        this.giveOrderNumberToTasks();
     }
 
     start() {
         this.checkDoneTasks();
+    }
+
+    giveOrderNumberToTasks() {
+        var tasks = this.getTasks();
+       for (let index = 0; index < tasks.length; index++) {
+           tasks[index].getComponent(Task)!.orderNumber = index;
+           
+       }
     }
 
     getTasks() {
