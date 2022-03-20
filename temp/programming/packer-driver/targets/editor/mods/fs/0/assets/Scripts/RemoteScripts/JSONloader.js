@@ -66,9 +66,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _defineProperty(this, "downloadTask", 0);
 
-          _defineProperty(this, "originUrl", "http://abedov.com/json");
+          _defineProperty(this, "originUrl", "https://stickandrope.com/klett/json");
         }
 
+        //originUrl = "http://abedov.com/json"; 
         onLoad() {
           this.gameManager = this.node.getComponent(_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()

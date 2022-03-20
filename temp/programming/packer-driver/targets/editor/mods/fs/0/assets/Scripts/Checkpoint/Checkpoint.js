@@ -86,12 +86,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), GameManager) : GameManager).getInstance().WorldRoot.children;
           arrayItems.forEach(element => {
+            var _element$children;
+
             this.testElement(element);
-            if (element.children.length != 0) element.children.forEach(element => {
+            if (((_element$children = element.children) === null || _element$children === void 0 ? void 0 : _element$children.length) != 0) element.children.forEach(element => {
+              var _element$children2;
+
               this.testElement(element);
-              if (element.children.length != 0) element.children.forEach(element => {
+              if (((_element$children2 = element.children) === null || _element$children2 === void 0 ? void 0 : _element$children2.length) != 0) element.children.forEach(element => {
+                var _element$children3;
+
                 this.testElement(element);
-                if (element.children.length != 0) element.children.forEach(element => {
+                if (((_element$children3 = element.children) === null || _element$children3 === void 0 ? void 0 : _element$children3.length) != 0) element.children.forEach(element => {
                   this.testElement(element);
                 });
               });

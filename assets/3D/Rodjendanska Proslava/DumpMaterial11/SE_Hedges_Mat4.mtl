@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "SE_Hedges_Mat4",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -10,19 +10,24 @@
   "_techIdx": 0,
   "_defines": [
     {
-      "USE_ALBEDO_MAP": true
-    }
+      "USE_ALBEDO_MAP": true,
+      "USE_ALPHA_TEST": true
+    },
+    {},
+    {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
@@ -30,6 +35,8 @@
         "__uuid__": "c2156832-7504-4b23-84e0-c7ce5564b01d@af8c1",
         "__expectedType__": "cc.Texture2D"
       }
-    }
+    },
+    {},
+    {}
   ]
 }

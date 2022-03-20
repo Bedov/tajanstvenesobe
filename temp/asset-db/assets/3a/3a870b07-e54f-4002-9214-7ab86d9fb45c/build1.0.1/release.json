@@ -12,12 +12,11 @@
         [
             "cc.Material",
             [
-                "_name",
                 "_states",
                 "_defines",
                 "_props"
             ],
-            0,
+            1,
             12
         ]
     ],
@@ -27,29 +26,32 @@
             0,
             1,
             2,
-            3,
-            4
+            3
         ]
     ],
     [
         [
             0,
-            "SE_Hedges_Mat4",
             [
                 {
                     "rasterizerState": {},
+                    "depthStencilState": {},
                     "blendState": {
                         "targets": [
                             {}
                         ]
-                    },
-                    "depthStencilState": {}
-                }
+                    }
+                },
+                {},
+                {}
             ],
             [
                 {
-                    "USE_ALBEDO_MAP": true
-                }
+                    "USE_ALBEDO_MAP": true,
+                    "USE_ALPHA_TEST": true
+                },
+                {},
+                {}
             ],
             [
                 [
@@ -58,9 +60,13 @@
                         "mainTexture",
                         6,
                         0
-                    ]
+                    ],
+                    {},
+                    {}
                 ],
-                11
+                11,
+                0,
+                0
             ]
         ]
     ],

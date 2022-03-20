@@ -43,13 +43,13 @@ export class Checkpoint extends Component {
         
         arrayItems.forEach(element => {
             this.testElement(element);
-            if(element.children.length != 0)
+            if(element.children?.length != 0)
                 element.children.forEach(element => {
                 this.testElement(element)
-                if(element.children.length != 0)
+                if(element.children?.length != 0)
                     element.children.forEach(element => {
                     this.testElement(element)
-                    if(element.children.length != 0)
+                    if(element.children?.length != 0)
                         element.children.forEach(element => {
                         this.testElement(element)
 

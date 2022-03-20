@@ -31,8 +31,8 @@ export class JSONloader extends Component {
     gameManager? : GameManager ;
     downloadTask: number = 0;
 
-    //originUrl = "https://stickandrope.com/klett/json"; 
-    originUrl = "http://abedov.com/json"; 
+    originUrl = "https://stickandrope.com/klett/json"; 
+    //originUrl = "http://abedov.com/json"; 
 
     onLoad(){
 
