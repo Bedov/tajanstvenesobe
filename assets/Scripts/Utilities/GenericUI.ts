@@ -161,10 +161,15 @@ export class GenericUI extends Component {
     }
 
     update() {
+        
+           
         if(this.audioSource?.playing) 
             this.turnOffSoundButton.active = true;
         else
             this.turnOffSoundButton.active = false;
+
+        console.log("Activness : " + this.turnOffSoundButton.active);
+        console.log("Name : " + this.turnOffSoundButton.name);
     }
 
 }

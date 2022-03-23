@@ -75,7 +75,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         findQuestion() {
-          this.node.children.forEach(task => {
+          var _this$node$children;
+
+          (_this$node$children = this.node.children) === null || _this$node$children === void 0 ? void 0 : _this$node$children.forEach(task => {
             if (task.getComponent(_crd && TaskABCquestion === void 0 ? (_reportPossibleCrUseOfTaskABCquestion({
               error: Error()
             }), TaskABCquestion) : TaskABCquestion) != undefined || task.getComponent(_crd && TaskInput === void 0 ? (_reportPossibleCrUseOfTaskInput({

@@ -235,6 +235,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var _this$audioSource3;
 
           if ((_this$audioSource3 = this.audioSource) === null || _this$audioSource3 === void 0 ? void 0 : _this$audioSource3.playing) this.turnOffSoundButton.active = true;else this.turnOffSoundButton.active = false;
+          console.log("Activness : " + this.turnOffSoundButton.active);
+          console.log("Name : " + this.turnOffSoundButton.name);
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "genericTekst", [_dec2], {

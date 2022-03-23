@@ -45,6 +45,4 @@ declare module "cc/env" {
 
     export const SERVER_MODE: boolean;
 
-    export const UI_GPU_DRIVEN: boolean;
-
 }

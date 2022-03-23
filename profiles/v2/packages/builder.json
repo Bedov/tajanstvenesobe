@@ -1,5 +1,5 @@
 {
-  "__version__": "1.3.0",
+  "__version__": "1.3.1",
   "log": {
     "level": 4
   },
@@ -10,19 +10,14 @@
     "replaceSplashScreen": true,
     "scenes": [
       {
-        "url": "db://assets/Scenes/MainMenu.scene",
-        "uuid": "3660340f-48c7-4c25-bdae-831717fa9973",
-        "inBundle": false
-      },
-      {
-        "url": "db://assets/Scenes/MedivalVillage.scene",
-        "uuid": "c2aa6861-27e9-469d-9d7d-d8550bb06f94"
+        "url": "db://assets/scene-glupa.scene",
+        "uuid": "1ee3d23c-74a6-4240-952d-b55439fb517c"
       }
     ],
     "mainBundleIsRemote": false,
     "sourceMaps": false,
     "md5Cache": true,
-    "startScene": "3660340f-48c7-4c25-bdae-831717fa9973",
+    "startScene": "1ee3d23c-74a6-4240-952d-b55439fb517c",
     "experimentalEraseModules": false,
     "buildPath": "project://.."
   },
@@ -123,7 +118,7 @@
         "id": "1636460932344",
         "progress": 1,
         "state": "success",
-        "message": "18-03-2022 15:33 Build success in 17335 ms!",
+        "message": "22-03-2022 23:46 Build success in 97492 ms!",
         "options": {
           "name": "Klett - Demo scene",
           "platform": "web-mobile",
@@ -138,16 +133,11 @@
           "experimentalEraseModules": false,
           "compressTexture": true,
           "packAutoAtlas": true,
-          "startScene": "3660340f-48c7-4c25-bdae-831717fa9973",
+          "startScene": "1ee3d23c-74a6-4240-952d-b55439fb517c",
           "scenes": [
             {
-              "url": "db://assets/Scenes/MainMenu.scene",
-              "uuid": "3660340f-48c7-4c25-bdae-831717fa9973",
-              "inBundle": false
-            },
-            {
-              "url": "db://assets/Scenes/MedivalVillage.scene",
-              "uuid": "c2aa6861-27e9-469d-9d7d-d8550bb06f94"
+              "url": "db://assets/scene-glupa.scene",
+              "uuid": "1ee3d23c-74a6-4240-952d-b55439fb517c"
             }
           ],
           "outputName": "builds2",
@@ -164,7 +154,7 @@
             }
           }
         },
-        "time": "18-03-2022 15:33",
+        "time": "22-03-2022 23:44",
         "dirty": false
       }
     }

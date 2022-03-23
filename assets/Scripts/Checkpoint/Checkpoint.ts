@@ -34,7 +34,7 @@ export class Checkpoint extends Component {
     }
 
     findQuestion() {
-        this.node.children.forEach(task => {
+        this.node.children?.forEach(task => {
             if( task.getComponent(TaskABCquestion) != undefined || task.getComponent(TaskInput) != undefined )
                 this.Question = task;
         });

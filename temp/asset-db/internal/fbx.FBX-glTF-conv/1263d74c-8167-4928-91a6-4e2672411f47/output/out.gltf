@@ -195,16 +195,16 @@
     {
       "bufferView": 8,
       "componentType": 5126,
-      "count": 1235,
+      "count": 1294,
       "max": [
+        0.49949654936790466,
         0.5,
-        0.5,
-        0.5
+        0.49899348616600037
       ],
       "min": [
+        -0.49748557806015015,
         -0.5,
-        -0.5,
-        -0.5
+        -0.49899333715438843
       ],
       "name": "sphere/POSITION",
       "type": "VEC3"
@@ -213,7 +213,7 @@
       "bufferView": 8,
       "byteOffset": 12,
       "componentType": 5126,
-      "count": 1235,
+      "count": 1294,
       "name": "sphere/NORMAL",
       "type": "VEC3"
     },
@@ -221,7 +221,7 @@
       "bufferView": 8,
       "byteOffset": 24,
       "componentType": 5126,
-      "count": 1235,
+      "count": 1294,
       "name": "sphere/TEXCOORD_0",
       "type": "VEC2"
     },
@@ -229,14 +229,14 @@
       "bufferView": 8,
       "byteOffset": 32,
       "componentType": 5126,
-      "count": 1235,
+      "count": 1294,
       "name": "sphere/TEXCOORD_1",
       "type": "VEC2"
     },
     {
       "bufferView": 9,
       "componentType": 5125,
-      "count": 6144,
+      "count": 7140,
       "name": "sphere/INDICES",
       "type": "SCALAR"
     },
@@ -444,7 +444,7 @@
     },
     {
       "buffer": 0,
-      "byteLength": 49400,
+      "byteLength": 51760,
       "byteOffset": 167176,
       "byteStride": 40,
       "name": "sphere",
@@ -452,13 +452,13 @@
     },
     {
       "buffer": 0,
-      "byteLength": 24576,
-      "byteOffset": 216576
+      "byteLength": 28560,
+      "byteOffset": 218936
     },
     {
       "buffer": 0,
       "byteLength": 160,
-      "byteOffset": 241152,
+      "byteOffset": 247496,
       "byteStride": 40,
       "name": "quad",
       "target": 34962
@@ -466,12 +466,12 @@
     {
       "buffer": 0,
       "byteLength": 24,
-      "byteOffset": 241312
+      "byteOffset": 247656
     },
     {
       "buffer": 0,
       "byteLength": 10400,
-      "byteOffset": 241336,
+      "byteOffset": 247680,
       "byteStride": 40,
       "name": "cylinder",
       "target": 34962
@@ -479,12 +479,12 @@
     {
       "buffer": 0,
       "byteLength": 1536,
-      "byteOffset": 251736
+      "byteOffset": 258080
     },
     {
       "buffer": 0,
       "byteLength": 960,
-      "byteOffset": 253272,
+      "byteOffset": 259616,
       "byteStride": 40,
       "name": "box",
       "target": 34962
@@ -492,20 +492,33 @@
     {
       "buffer": 0,
       "byteLength": 144,
-      "byteOffset": 254232
+      "byteOffset": 260576
     }
   ],
   "buffers": [
     {
-      "byteLength": 254376,
+      "byteLength": 260720,
       "uri": "out.bin"
     }
   ],
   "extras": {
     "FBX-glTF-conv": {
-      "animationFrameRate": 30.0
+      "animationFrameRate": 24.0
     }
   },
+  "materials": [
+    {
+      "name": "lambert1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.4000000059604645,
+          0.4000000059604645,
+          0.4000000059604645,
+          1.0
+        ]
+      }
+    }
+  ],
   "meshes": [
     {
       "name": "capsule",
@@ -517,7 +530,8 @@
             "TEXCOORD_0": 2,
             "TEXCOORD_1": 3
           },
-          "indices": 4
+          "indices": 4,
+          "material": 0
         }
       ]
     },
@@ -531,7 +545,8 @@
             "TEXCOORD_0": 7,
             "TEXCOORD_1": 8
           },
-          "indices": 9
+          "indices": 9,
+          "material": 0
         }
       ]
     },
@@ -545,7 +560,8 @@
             "TEXCOORD_0": 12,
             "TEXCOORD_1": 13
           },
-          "indices": 14
+          "indices": 14,
+          "material": 0
         }
       ]
     },
@@ -559,7 +575,8 @@
             "TEXCOORD_0": 17,
             "TEXCOORD_1": 18
           },
-          "indices": 19
+          "indices": 19,
+          "material": 0
         }
       ]
     },
@@ -573,7 +590,8 @@
             "TEXCOORD_0": 22,
             "TEXCOORD_1": 23
           },
-          "indices": 24
+          "indices": 24,
+          "material": 0
         }
       ]
     },
@@ -587,7 +605,8 @@
             "TEXCOORD_0": 27,
             "TEXCOORD_1": 28
           },
-          "indices": 29
+          "indices": 29,
+          "material": 0
         }
       ]
     },
@@ -601,7 +620,8 @@
             "TEXCOORD_0": 32,
             "TEXCOORD_1": 33
           },
-          "indices": 34
+          "indices": 34,
+          "material": 0
         }
       ]
     },
@@ -615,7 +635,8 @@
             "TEXCOORD_0": 37,
             "TEXCOORD_1": 38
           },
-          "indices": 39
+          "indices": 39,
+          "material": 0
         }
       ]
     }
@@ -674,9 +695,9 @@
       "mesh": 4,
       "name": "sphere",
       "scale": [
-        100.00000762939453,
-        100.00000762939453,
-        100.00000762939453
+        100.0,
+        100.0,
+        100.0
       ]
     },
     {

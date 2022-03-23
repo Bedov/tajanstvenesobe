@@ -62,6 +62,8 @@ export class GameManager extends Component {
 
     taskInProgressManager : number = 1;
 
+    downloadedCheckpoint : number = -1;
+
     trophies? : Node ;
 
     public static getInstance(): GameManager {

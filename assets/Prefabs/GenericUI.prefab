@@ -8,6 +8,7 @@
       "__id__": 1
     },
     "optimizationPolicy": 0,
+    "persistent": false,
     "asyncLoadAssets": false
   },
   {
@@ -187,7 +188,7 @@
     "_string": "Пронађи предмет  који се крије иза загонетке и кликни на њега: \n\nЊегов леп звук ушима прија, \nударањем о њега ствара се мелодија. \nОво ћеш решити лако, без помоћи другара: \nШта је то што музику ствара? \n",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 23,
+    "_actualFontSize": 25,
     "_fontSize": 24,
     "_fontFamily": "Arial",
     "_lineHeight": 35,
@@ -198,6 +199,7 @@
       "__expectedType__": "cc.TTFFont"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_isItalic": false,
     "_isBold": false,
     "_isUnderline": false,
@@ -290,7 +292,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -160.556,
+      "y": -135.556,
       "z": 0
     },
     "_lrot": {
@@ -426,6 +428,7 @@
       "__expectedType__": "cc.TTFFont"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_isItalic": false,
     "_isBold": false,
     "_isUnderline": false,
@@ -685,8 +688,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -341.67,
-      "y": -190.562,
+      "x": -346.801,
+      "y": -170.41,
       "z": 0
     },
     "_lrot": {
@@ -720,7 +723,7 @@
       "__id__": 27
     },
     "_children": [],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 29
@@ -732,7 +735,7 @@
         "__id__": 33
       },
       {
-        "__id__": 35
+        "__id__": 36
       }
     ],
     "_prefab": {
@@ -841,7 +844,7 @@
     "fileId": "d3cfSUFQdJZqpHi+2K9VTJ"
   },
   {
-    "__type__": "cc.Widget",
+    "__type__": "cc.Button",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -852,45 +855,9 @@
     "__prefab": {
       "__id__": 34
     },
-    "_alignFlags": 9,
-    "_target": null,
-    "_left": 0,
-    "_right": 857.1700000000001,
-    "_top": 0,
-    "_bottom": 483.313,
-    "_horizontalCenter": 320,
-    "_verticalCenter": -205,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_isAbsHorizontalCenter": true,
-    "_isAbsVerticalCenter": true,
-    "_originalWidth": 74,
-    "_originalHeight": 74,
-    "_alignMode": 2,
-    "_lockFlags": 0,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "d3c3kuU6lMFo8o/6748DAb"
-  },
-  {
-    "__type__": "cc.Button",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {},
-    "node": {
-      "__id__": 28
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 36
-    },
     "clickEvents": [
       {
-        "__id__": 37
+        "__id__": 35
       }
     ],
     "_interactable": true,
@@ -923,7 +890,10 @@
       "b": 124,
       "a": 255
     },
-    "_normalSprite": null,
+    "_normalSprite": {
+      "__uuid__": "7782227c-f275-42e5-88bb-a2dfd50c62c7@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
     "_hoverSprite": null,
     "_pressedSprite": null,
     "_disabledSprite": null,
@@ -945,6 +915,42 @@
     "_componentId": "27b26tXhJpAmqyX0ZVyBte1",
     "handler": "soundButtonClicked",
     "customEventData": "3"
+  },
+  {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 28
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 37
+    },
+    "_alignFlags": 9,
+    "_target": null,
+    "_left": 0,
+    "_right": 0,
+    "_top": 0,
+    "_bottom": 0,
+    "_horizontalCenter": 0,
+    "_verticalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 74,
+    "_originalHeight": 74,
+    "_alignMode": 2,
+    "_lockFlags": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "bb3iAJWVtNN6vYsrtKj+FL"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1042,12 +1048,12 @@
     "__prefab": {
       "__id__": 44
     },
-    "_alignFlags": 9,
+    "_alignFlags": 12,
     "_target": null,
-    "_left": 28.829999999999984,
+    "_left": 23.699000000000012,
     "_right": 857.1700000000001,
     "_top": 403.562,
-    "_bottom": 483.313,
+    "_bottom": 17.590000000000003,
     "_horizontalCenter": 320,
     "_verticalCenter": -205,
     "_isAbsLeft": true,
@@ -1164,7 +1170,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 815,
-      "height": 500
+      "height": 450
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
