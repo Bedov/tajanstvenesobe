@@ -31,11 +31,21 @@ export class TaskTutorialTask extends Task {
     imageObject: JSONimage = new JSONimage ;
 
     start(){
-        if(this.taskType == TypeOfTask.tekstType)
-            this.getTekstRemotely();
-        if(this.taskType == TypeOfTask.imageType)
-            this.getImageRemotely();
+        
+        this.schedule(this.isItMyTimeForDownloading, 0.1);
      
+    }
+
+    isItMyTimeForDownloading() {
+        if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted ) {
+            if(this.taskType == TypeOfTask.tekstType)
+                this.getTekstRemotely();
+            if(this.taskType == TypeOfTask.imageType)
+                this.getImageRemotely();
+
+                this.downloadStarted = true;
+        }
+            
     }
 
     getTekstRemotely() {
@@ -58,7 +68,22 @@ export class TaskTutorialTask extends Task {
     }
 
     showUI (){
+        if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
+            GameManager.getInstance().loadingHandler?.turnOnLoading();
+            this.scheduleOnce(this.showTask, 0.2);
+            console.log("DownloadedCheckpoint : " + GameManager.getInstance().downloadedCheckpoint);
+
+            console.log("this.orderNumber : " + this.orderNumber);
+            return;
+        }
+
         super.showTask();
+
+
+
+        GameManager.getInstance().loadingHandler?.turnOffLoading();
+
+        
         
         if(this.taskType == TypeOfTask.tekstType) {
             this.taskManager.genericUI!.active = true;

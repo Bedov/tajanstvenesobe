@@ -68,7 +68,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          console.log("USAO SAM");
+          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().downloadedCheckpoint++;
           this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
           this.schedule(this.checkIfDownloadIsCompleted, 0.1, macro.REPEAT_FOREVER);
         }

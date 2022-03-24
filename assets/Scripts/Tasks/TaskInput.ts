@@ -27,14 +27,19 @@ export class TaskInput extends Task {
    
 
     start () {
-        //this.scheduleOnce(this.getQuestions, this.orderNumber * 0.05);
-        this.getQuestions();
+        this.schedule(this.isItMyTimeForDownloading, 0.1);
 
         this.audioSource = this.node.getComponent(AudioSource)!;
         
 
     }
 
+    isItMyTimeForDownloading() {
+        if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted ) {
+            this.getQuestions();
+            this.downloadStarted = true;
+        }
+    }
 
     getQuestions() {
         if(this.remoteName != "") {
@@ -52,6 +57,17 @@ export class TaskInput extends Task {
     showTask () {
         
         if(this.isItOkToExecute()) {
+            if(GameManager.getInstance().downloadedCheckpoint < this.orderNumber) {
+                GameManager.getInstance().loadingHandler?.turnOnLoading();
+                this.scheduleOnce(this.showTask, 0.2);
+                console.log("DownloadedCheckpoint : " + GameManager.getInstance().downloadedCheckpoint);
+    
+                console.log("this.orderNumber : " + this.orderNumber);
+                return;
+            }
+            
+            GameManager.getInstance().loadingHandler?.turnOffLoading();
+
             this.taskManager.genericUIinput!.active = true;
 
             this.taskManager.genericUIinput!.getComponent(GenericUIinput)!.turnOnGenericTask(this.node); //Čestitam! Stigao si do časovničara.

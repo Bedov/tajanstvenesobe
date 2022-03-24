@@ -20,6 +20,7 @@ const { ccclass, property } = _decorator;
 
 //var static instance: JSONloader;
 var tasksInProgress = 0;
+
  
 import { GameManager } from "../GameManager";
 import { GlobalManager } from '../GlobalManager';
@@ -31,6 +32,10 @@ export class JSONloader extends Component {
     gameManager? : GameManager ;
     downloadTask: number = 0;
 
+    downloadInProgress = false;
+
+    public downloadedCheckpoint = -1;
+
     originUrl = "https://stickandrope.com/klett/json"; 
     //originUrl = "http://abedov.com/json"; 
 
@@ -38,7 +43,7 @@ export class JSONloader extends Component {
 
         this.gameManager = this.node.getComponent(GameManager)!;
 
-        //assetManager.
+        //   
         
     }
 
@@ -62,7 +67,7 @@ export class JSONloader extends Component {
     }
 
     returnQuestionInput(questionURL: String, taskJSON: JSONtask2) {
-
+        this.downloadInProgress = true;
 
         let remoteUrlRoot = this.originUrl + "/" + this.gameManager?.LanguageName + "/" + this.gameManager?.LevelName + "/" + questionURL;
         var audioURL = this.originUrl + "/" + this.gameManager?.LanguageName + "/" + this.gameManager?.LevelName + "/";
@@ -111,7 +116,7 @@ export class JSONloader extends Component {
     }
 
     returnQuestion(remoteUrlRoot: string, questionURL: string, taskJSON: Array<JSONtask1>, index : number) {
-
+        this.downloadInProgress = true;
         
         let remoteUrl = this.originUrl + "/" + this.gameManager?.LevelName  + "/" + this.gameManager?.LanguageName + "/" + questionURL + ".txt";
 
@@ -163,11 +168,17 @@ export class JSONloader extends Component {
 
     }
     update() {
+        if( this.downloadInProgress == true && tasksInProgress == 0) {
+            this.downloadInProgress = false;
+            GameManager.getInstance().downloadedCheckpoint++;
+        }
+
         GameManager.instance.taskInProgressManager = Number( tasksInProgress);
         
     }
 
     fetchQuestTekst(questURL: string, tekstObject: JSONquestTekst) {
+        this.downloadInProgress = true;
 
         let remoteUrlRoot = this.originUrl + "/" + this.gameManager?.LanguageName + "/" + this.gameManager?.LevelName + "/" + questURL ;
         var audioURL = this.originUrl + "/" + this.gameManager?.LanguageName + "/" + this.gameManager?.LevelName + "/";
@@ -216,6 +227,7 @@ export class JSONloader extends Component {
 
     
     fetchImageQuestTekst(questURL: string, imageObject: JSONimage) {
+        this.downloadInProgress = true;
 
         let remoteUrlRoot = this.originUrl + "/" + this.gameManager?.LanguageName + "/" + this.gameManager?.LevelName + "/" + questURL ;
         var rootURL = this.originUrl + "/" + this.gameManager?.LanguageName + "/" + this.gameManager?.LevelName + "/";

@@ -66,6 +66,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _defineProperty(this, "downloadTask", 0);
 
+          _defineProperty(this, "downloadInProgress", false);
+
+          _defineProperty(this, "downloadedCheckpoint", -1);
+
           _defineProperty(this, "originUrl", "https://stickandrope.com/klett/json");
         }
 
@@ -73,7 +77,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         onLoad() {
           this.gameManager = this.node.getComponent(_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager); //assetManager.
+          }), GameManager) : GameManager); //   
         }
 
         fetchQuestions(folderURL, taskJSON, expectedQuestions) {
@@ -95,6 +99,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         returnQuestionInput(questionURL, taskJSON) {
           var _this$gameManager3, _this$gameManager4, _this$gameManager5, _this$gameManager6;
 
+          this.downloadInProgress = true;
           let remoteUrlRoot = this.originUrl + "/" + ((_this$gameManager3 = this.gameManager) === null || _this$gameManager3 === void 0 ? void 0 : _this$gameManager3.LanguageName) + "/" + ((_this$gameManager4 = this.gameManager) === null || _this$gameManager4 === void 0 ? void 0 : _this$gameManager4.LevelName) + "/" + questionURL;
           var audioURL = this.originUrl + "/" + ((_this$gameManager5 = this.gameManager) === null || _this$gameManager5 === void 0 ? void 0 : _this$gameManager5.LanguageName) + "/" + ((_this$gameManager6 = this.gameManager) === null || _this$gameManager6 === void 0 ? void 0 : _this$gameManager6.LevelName) + "/";
 
@@ -137,6 +142,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         returnQuestion(remoteUrlRoot, questionURL, taskJSON, index) {
           var _this$gameManager7, _this$gameManager8;
 
+          this.downloadInProgress = true;
           let remoteUrl = this.originUrl + "/" + ((_this$gameManager7 = this.gameManager) === null || _this$gameManager7 === void 0 ? void 0 : _this$gameManager7.LevelName) + "/" + ((_this$gameManager8 = this.gameManager) === null || _this$gameManager8 === void 0 ? void 0 : _this$gameManager8.LanguageName) + "/" + questionURL + ".txt";
 
           try {
@@ -178,6 +184,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         update() {
+          if (this.downloadInProgress == true && tasksInProgress == 0) {
+            this.downloadInProgress = false;
+            (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().downloadedCheckpoint++;
+          }
+
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).instance.taskInProgressManager = Number(tasksInProgress);
@@ -186,6 +199,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         fetchQuestTekst(questURL, tekstObject) {
           var _this$gameManager9, _this$gameManager10, _this$gameManager11, _this$gameManager12;
 
+          this.downloadInProgress = true;
           let remoteUrlRoot = this.originUrl + "/" + ((_this$gameManager9 = this.gameManager) === null || _this$gameManager9 === void 0 ? void 0 : _this$gameManager9.LanguageName) + "/" + ((_this$gameManager10 = this.gameManager) === null || _this$gameManager10 === void 0 ? void 0 : _this$gameManager10.LevelName) + "/" + questURL;
           var audioURL = this.originUrl + "/" + ((_this$gameManager11 = this.gameManager) === null || _this$gameManager11 === void 0 ? void 0 : _this$gameManager11.LanguageName) + "/" + ((_this$gameManager12 = this.gameManager) === null || _this$gameManager12 === void 0 ? void 0 : _this$gameManager12.LevelName) + "/"; //let questURLfull = remoteUrlRoot 
 
@@ -225,6 +239,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         fetchImageQuestTekst(questURL, imageObject) {
           var _this$gameManager13, _this$gameManager14, _this$gameManager15, _this$gameManager16;
 
+          this.downloadInProgress = true;
           let remoteUrlRoot = this.originUrl + "/" + ((_this$gameManager13 = this.gameManager) === null || _this$gameManager13 === void 0 ? void 0 : _this$gameManager13.LanguageName) + "/" + ((_this$gameManager14 = this.gameManager) === null || _this$gameManager14 === void 0 ? void 0 : _this$gameManager14.LevelName) + "/" + questURL;
           var rootURL = this.originUrl + "/" + ((_this$gameManager15 = this.gameManager) === null || _this$gameManager15 === void 0 ? void 0 : _this$gameManager15.LanguageName) + "/" + ((_this$gameManager16 = this.gameManager) === null || _this$gameManager16 === void 0 ? void 0 : _this$gameManager16.LevelName) + "/"; //let questURLfull = remoteUrlRoot 
 

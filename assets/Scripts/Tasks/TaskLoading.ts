@@ -25,7 +25,7 @@ export class TaskLoading extends Task {
     loadingCompleted = false;
 
     start () {
-        console.log("USAO SAM");
+        GameManager.getInstance().downloadedCheckpoint++;
         this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
         this.schedule(this.checkIfDownloadIsCompleted, 0.1, macro.REPEAT_FOREVER);
     }
@@ -49,7 +49,7 @@ export class TaskLoading extends Task {
             this.loadingCompleted = true;
             
         }
-        
+
         if(this.taskManager.canvas?.getComponent(DetectTypeOfDevice)?._moveTutorialEndBool && this.taskManager.canvas?.getComponent(DetectTypeOfDevice)?._lookTutorialEndBool && !this.executed && this.loadingCompleted)
         this.taskCompleted();
         

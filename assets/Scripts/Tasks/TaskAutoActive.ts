@@ -37,10 +37,20 @@ export class TaskAutoActive extends Task {
     start(){
         this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
 
-        this.fetchTheData();
+        this.schedule(this.isItMyTimeForDownloading, 0.1);
+
+        
         //this.scheduleOnce(this.fetchTheData, this.orderNumber * 0.05);
 
         
+    }
+
+    isItMyTimeForDownloading() {
+        if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted) {
+            this.fetchTheData();
+            this.downloadStarted = true;
+        }
+            
     }
 
     fetchTheData() {
@@ -73,7 +83,23 @@ export class TaskAutoActive extends Task {
 
 
     showTask() {
+        if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
+            GameManager.getInstance().loadingHandler?.turnOnLoading();
+            this.scheduleOnce(this.showTask, 0.2);
+            console.log("DownloadedCheckpoint : " + GameManager.getInstance().downloadedCheckpoint);
+
+            console.log("this.orderNumber : " + this.orderNumber);
+            return;
+        }
+
+        console.log("Kako dospem ovde? ");
+        
+
         super.showTask();
+
+
+
+        GameManager.getInstance().loadingHandler?.turnOffLoading();
 
         if(this.taskType == TypeOfTask.tekstType) {
             this.taskManager.genericUI!.active = true;

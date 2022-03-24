@@ -71,9 +71,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          //this.scheduleOnce(this.getQuestions, this.orderNumber * 0.05);
-          this.getQuestions();
+          this.schedule(this.isItMyTimeForDownloading, 0.1);
           this.audioSource = this.node.getComponent(AudioSource);
+        }
+
+        isItMyTimeForDownloading() {
+          if (this.orderNumber <= (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().downloadedCheckpoint && !this.downloadStarted) {
+            this.getQuestions();
+            this.downloadStarted = true;
+          }
         }
 
         getQuestions() {
@@ -90,6 +98,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         showTask() {
           if (this.isItOkToExecute()) {
+            var _getInstance$loadingH2;
+
+            if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().downloadedCheckpoint < this.orderNumber) {
+              var _getInstance$loadingH;
+
+              (_getInstance$loadingH = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+                error: Error()
+              }), GameManager) : GameManager).getInstance().loadingHandler) === null || _getInstance$loadingH === void 0 ? void 0 : _getInstance$loadingH.turnOnLoading();
+              this.scheduleOnce(this.showTask, 0.2);
+              console.log("DownloadedCheckpoint : " + (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+                error: Error()
+              }), GameManager) : GameManager).getInstance().downloadedCheckpoint);
+              console.log("this.orderNumber : " + this.orderNumber);
+              return;
+            }
+
+            (_getInstance$loadingH2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().loadingHandler) === null || _getInstance$loadingH2 === void 0 ? void 0 : _getInstance$loadingH2.turnOffLoading();
             this.taskManager.genericUIinput.active = true;
             this.taskManager.genericUIinput.getComponent(_crd && GenericUIinput === void 0 ? (_reportPossibleCrUseOfGenericUIinput({
               error: Error()

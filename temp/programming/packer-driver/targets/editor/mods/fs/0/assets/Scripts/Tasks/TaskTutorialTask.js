@@ -106,8 +106,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          if (this.taskType == TypeOfTask.tekstType) this.getTekstRemotely();
-          if (this.taskType == TypeOfTask.imageType) this.getImageRemotely();
+          this.schedule(this.isItMyTimeForDownloading, 0.1);
+        }
+
+        isItMyTimeForDownloading() {
+          if (this.orderNumber <= (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().downloadedCheckpoint && !this.downloadStarted) {
+            if (this.taskType == TypeOfTask.tekstType) this.getTekstRemotely();
+            if (this.taskType == TypeOfTask.imageType) this.getImageRemotely();
+            this.downloadStarted = true;
+          }
         }
 
         getTekstRemotely() {
@@ -148,9 +157,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         showUI() {
-          var _getComponent;
+          var _getInstance$loadingH2, _getComponent;
+
+          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().downloadedCheckpoint <= this.orderNumber) {
+            var _getInstance$loadingH;
+
+            (_getInstance$loadingH = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().loadingHandler) === null || _getInstance$loadingH === void 0 ? void 0 : _getInstance$loadingH.turnOnLoading();
+            this.scheduleOnce(this.showTask, 0.2);
+            console.log("DownloadedCheckpoint : " + (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().downloadedCheckpoint);
+            console.log("this.orderNumber : " + this.orderNumber);
+            return;
+          }
 
           super.showTask();
+          (_getInstance$loadingH2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().loadingHandler) === null || _getInstance$loadingH2 === void 0 ? void 0 : _getInstance$loadingH2.turnOffLoading();
 
           if (this.taskType == TypeOfTask.tekstType) {
             this.taskManager.genericUI.active = true;

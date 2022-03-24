@@ -62,6 +62,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "executed", false);
 
+          _defineProperty(this, "downloadStarted", false);
+
           _defineProperty(this, "orderNumber", 0);
 
           _initializerDefineProperty(this, "dependencies", _descriptor, this);
@@ -84,8 +86,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.taskManager = (_this$node$parent = this.node.parent) === null || _this$node$parent === void 0 ? void 0 : (_this$node$parent$par = _this$node$parent.parent) === null || _this$node$parent$par === void 0 ? void 0 : _this$node$parent$par.getComponent("TaskManager");
           ; //  GameManager.getInstance().TaskManager?.getComponent("TaskManager") as TaskManager;
-          //console.log("TaskManager !!!!! + " + GameManager.getInstance().TaskManager!.name);
-          //this.schedule(this.getNeeded(), 0.1 );
+
+          console.log("My name: + " + this.name + "  My Checkpoint " + this.orderNumber); //this.schedule(this.getNeeded(), 0.1 );
           //console.log("Canvas !!!!! + " + GameManager.getInstance().jsonLoader?.name);
 
           this.checkReadienes();
@@ -114,6 +116,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             return false;
           }
+        }
+
+        loadingBlocker() {
+          var _getInstance$loadingH;
+
+          (_getInstance$loadingH = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().loadingHandler) === null || _getInstance$loadingH === void 0 ? void 0 : _getInstance$loadingH.turnOnLoading();
         }
 
         showTask() {

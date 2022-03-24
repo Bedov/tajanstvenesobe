@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, AudioSource, director, Collider, Animation, random, randomRangeInt } from 'cc';
+import { _decorator, Component, Node, AudioSource, director, Collider, Animation, random, randomRangeInt, Game } from 'cc';
 const { ccclass, property } = _decorator;
 
 import { TaskManager } from "./TaskManager";
@@ -32,12 +32,22 @@ export class TaskABCquestion extends Task {
 
     start () {
        // this.scheduleOnce(this.getQuestions, this.orderNumber * 0.05);
-        this.getQuestions();
+
+       this.schedule(this.isItMyTimeForDownloading, 0.1);
+       
 
         this.audioSource = this.node.getComponent(AudioSource)!;
 
+
         
         this.scheduleOnce(this.fillQuestionsShownFalse, this.orderNumber * 0.05 + 2);
+    }
+
+    isItMyTimeForDownloading() {
+        if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted) {
+            this.getQuestions();
+            this.downloadStarted = true;
+        }
     }
 
     fillQuestionsShownFalse() {
@@ -99,10 +109,21 @@ export class TaskABCquestion extends Task {
     showTask () {
         
         if(this.isItOkToExecute()) {
+            if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
+                GameManager.getInstance().loadingHandler?.turnOnLoading();
+                this.scheduleOnce(this.showTask, 0.2);
+                console.log("DownloadedCheckpoint : " + GameManager.getInstance().downloadedCheckpoint);
+    
+                console.log("this.orderNumber : " + this.orderNumber);
+                return;
+            }
+
+            GameManager.getInstance().loadingHandler?.turnOffLoading();
             this.taskManager.genericUIABC!.active = true;
             this.taskManager.genericUIABC!.getComponent(GenericUIABC)!.turnOnGenericTask(this.node); //Čestitam! Stigao si do časovničara.
         }
     }
+
 
 
 }

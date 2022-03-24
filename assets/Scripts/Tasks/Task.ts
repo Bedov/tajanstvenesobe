@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, director, Collider, macro } from 'cc';
+import { _decorator, Component, Node, director, Collider, macro, Game } from 'cc';
 const { ccclass, property } = _decorator;
 
 import { TaskManager } from "./TaskManager";
@@ -13,6 +13,8 @@ export class Task extends Component {
 
     requirementForTaskCompleted = false;
     executed = false;
+
+    downloadStarted = false;
 
     orderNumber = 0;
 
@@ -44,7 +46,7 @@ export class Task extends Component {
 
         this.taskManager = this.node.parent?.parent?.getComponent("TaskManager") as TaskManager;; //  GameManager.getInstance().TaskManager?.getComponent("TaskManager") as TaskManager;
 
-        //console.log("TaskManager !!!!! + " + GameManager.getInstance().TaskManager!.name);
+        console.log("My name: + " + this.name + "  My Checkpoint " + this.orderNumber);
         //this.schedule(this.getNeeded(), 0.1 );
         //console.log("Canvas !!!!! + " + GameManager.getInstance().jsonLoader?.name);
 
@@ -79,7 +81,13 @@ export class Task extends Component {
         }
     }
 
+    loadingBlocker() {
+        GameManager.getInstance().loadingHandler?.turnOnLoading();        
+    }
+
     showTask() {
+ 
+
         this.taskManager.refreshExecutedTasks(this.node.parent!);
     }
 

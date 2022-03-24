@@ -16,6 +16,7 @@ const { ccclass, property } = _decorator;
 
  
 import { JSONloader } from "./RemoteScripts/JSONloader";
+import { LoadingHandler } from './RemoteScripts/LoadingHandler';
  
  export enum GameStatuType {
     gamePaused =    0,
@@ -29,6 +30,7 @@ export class GameManager extends Component {
     gameStatus? : GameStatuType = GameStatuType.gameTutorial;
     typeInputResult? : Label ;
     jsonLoader? : JSONloader ;
+    loadingHandler? : LoadingHandler;
 
     inputKeyboard? : Node ;
 
@@ -62,7 +64,7 @@ export class GameManager extends Component {
 
     taskInProgressManager : number = 1;
 
-    downloadedCheckpoint : number = -1;
+    downloadedCheckpoint : number = 0;
 
     trophies? : Node ;
 
@@ -79,6 +81,8 @@ export class GameManager extends Component {
     onLoad() {
         GameManager.instance = this;
         this.jsonLoader = this.node.getComponent(JSONloader)!;
+        this.loadingHandler = this.node.getComponent(LoadingHandler)!;
+
         this.typeInputResult = this.Canvas?.getChildByName("GenericUI-Input")?.getChildByName("EditBoxPC")?.getChildByName("Result")!.getComponent(Label)!;
     
         this.trophies = this.Canvas!.getChildByName("BottomUI")!.getChildByName("TrofejiLayout")!;

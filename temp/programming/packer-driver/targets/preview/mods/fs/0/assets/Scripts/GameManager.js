@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, JSONloader, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -13,6 +13,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
   function _reportPossibleCrUseOfJSONloader(extras) {
     _reporterNs.report("JSONloader", "./RemoteScripts/JSONloader", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLoadingHandler(extras) {
+    _reporterNs.report("LoadingHandler", "./RemoteScripts/LoadingHandler", _context.meta, extras);
   }
 
   _export("GameStatuType", void 0);
@@ -30,6 +34,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       sys = _cc.sys;
     }, function (_unresolved_2) {
       JSONloader = _unresolved_2.JSONloader;
+    }, function (_unresolved_3) {
+      LoadingHandler = _unresolved_3.LoadingHandler;
     }],
     execute: function () {
       _crd = true;
@@ -68,6 +74,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _defineProperty(this, "jsonLoader", void 0);
 
+          _defineProperty(this, "loadingHandler", void 0);
+
           _defineProperty(this, "inputKeyboard", void 0);
 
           _defineProperty(this, "settingsUI", void 0);
@@ -94,6 +102,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _defineProperty(this, "taskInProgressManager", 1);
 
+          _defineProperty(this, "downloadedCheckpoint", -1);
+
           _defineProperty(this, "trophies", void 0);
         }
 
@@ -112,6 +122,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           this.jsonLoader = this.node.getComponent(_crd && JSONloader === void 0 ? (_reportPossibleCrUseOfJSONloader({
             error: Error()
           }), JSONloader) : JSONloader);
+          this.loadingHandler = this.node.getComponent(_crd && LoadingHandler === void 0 ? (_reportPossibleCrUseOfLoadingHandler({
+            error: Error()
+          }), LoadingHandler) : LoadingHandler);
           this.typeInputResult = ((_this$Canvas = this.Canvas) === null || _this$Canvas === void 0 ? void 0 : (_this$Canvas$getChild = _this$Canvas.getChildByName("GenericUI-Input")) === null || _this$Canvas$getChild === void 0 ? void 0 : (_this$Canvas$getChild2 = _this$Canvas$getChild.getChildByName("EditBoxPC")) === null || _this$Canvas$getChild2 === void 0 ? void 0 : _this$Canvas$getChild2.getChildByName("Result")).getComponent(Label);
           this.trophies = this.Canvas.getChildByName("BottomUI").getChildByName("TrofejiLayout");
           this.setPlatformType();

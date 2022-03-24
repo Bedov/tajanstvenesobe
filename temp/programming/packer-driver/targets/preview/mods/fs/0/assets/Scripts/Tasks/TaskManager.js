@@ -135,6 +135,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "followPrefab", _descriptor12, this);
 
           _defineProperty(this, "checkpoints", []);
+
+          _defineProperty(this, "numberOfCurrentTask", 0);
         }
 
         onLoad() {
