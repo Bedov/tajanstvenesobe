@@ -19,9 +19,13 @@ export class TaskInput extends Task {
     remoteName!: String;
 
     @property(Number)
-    correctAnswer!: Number;
+    expectedQuestions!: Number;
 
-    questionTemp: JSONtask2 = new JSONtask2;
+
+    questionsTempArray : Array<JSONtask1> = new Array<JSONtask1>();
+
+    questionsShown : Array<boolean> = new Array<boolean>();
+    questionShownFilled = false;
 
     private audioSource: AudioSource = null!;
    
@@ -31,7 +35,14 @@ export class TaskInput extends Task {
 
         this.audioSource = this.node.getComponent(AudioSource)!;
         
+        this.scheduleOnce(this.fillQuestionsShownFalse, this.orderNumber * 0.05 + 2);
+    }
 
+    fillQuestionsShownFalse() {
+        this.questionsTempArray.forEach(element => {
+            this.questionsShown.push(false);
+             
+        });
     }
 
     isItMyTimeForDownloading() {
@@ -43,21 +54,45 @@ export class TaskInput extends Task {
 
     getQuestions() {
         if(this.remoteName != "") {
-            GameManager.getInstance().jsonLoader?.returnQuestionInput(this.remoteName.toString(), this.questionTemp)!;
+             GameManager.getInstance().jsonLoader?.fetchQuestions(this.remoteName, this.questionsTempArray, this.expectedQuestions)!;
  
         }
     }
 
-    update() {
+    
+    getRandomTask() {
+        var imamoNekoriscene = false;
+        var nasaoNekoriscenog = false;
+        var randomIndex = randomRangeInt(0, this.questionsShown.length);
         
-        
-    }
 
+        this.questionsShown.forEach(element => {
+            if(element == false)
+                imamoNekoriscene = true;
+        });
+
+        console.log("imamoNekoriscene: " + imamoNekoriscene);
+        
+        if(imamoNekoriscene) {
+            while(!nasaoNekoriscenog) {
+                randomIndex = randomRangeInt(0, this.questionsShown.length);
+                if( !this.questionsShown[randomIndex])
+                    nasaoNekoriscenog = true;
+            }
+            
+        }
+        console.log("QUESTION ARRAY LENGHT" +  this.questionsShown.length);
+        console.log("randomIndex: " + randomIndex);
+
+        this.questionsShown[randomIndex] = true;
+
+        return this.questionsTempArray[randomIndex];
+    }
 
     showTask () {
         
         if(this.isItOkToExecute()) {
-            if(GameManager.getInstance().downloadedCheckpoint < this.orderNumber) {
+            if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
                 GameManager.getInstance().loadingHandler?.turnOnLoading();
                 this.scheduleOnce(this.showTask, 0.2);
                 console.log("DownloadedCheckpoint : " + GameManager.getInstance().downloadedCheckpoint);
@@ -65,7 +100,7 @@ export class TaskInput extends Task {
                 console.log("this.orderNumber : " + this.orderNumber);
                 return;
             }
-            
+
             GameManager.getInstance().loadingHandler?.turnOffLoading();
 
             this.taskManager.genericUIinput!.active = true;

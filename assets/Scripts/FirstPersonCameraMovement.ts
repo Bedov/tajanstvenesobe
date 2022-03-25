@@ -82,6 +82,7 @@ export class FirstPersonCameraMovement extends Component {
     _jumpBool : boolean = false;
 
     scaledSpeedCoeficient = 1;
+    phoneCoeficient: number = 1.3;
 
     start() {
         systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
@@ -89,6 +90,9 @@ export class FirstPersonCameraMovement extends Component {
 
         this.scaledSpeedCoeficient = 1;//GameManager.getInstance().WorldRoot!.scale.x / 100 ;
         //director.getPhysicsManager().enabled = true;
+
+        if(!GameManager.getInstance().isMobileOrTablet)
+            this.phoneCoeficient = 1;
 
         Vec3.copy(this._position, this.node.position);
     }
@@ -167,10 +171,11 @@ export class FirstPersonCameraMovement extends Component {
 
         //if(this._keyPresed && this.fpsMovement._pointerLockLocal ) 
         if(this._keyPresed ){
-            this.creatingFinalVectorKeyboard();
+            if(this.phoneCoeficient == 1)
+                this.creatingFinalVectorKeyboard();
             //this.node.getComponent(RigidBody)?.applyImpulse(this._finalMoveVector.multiplyScalar(this.forceStrenght));
             //this.node.getComponent(RigidBody)?.applyForce(this._finalMoveVector.multiplyScalar(this.forceStrenght));
-            this.node.getComponent(RigidBody)?.setLinearVelocity(this._finalMoveVector.multiplyScalar( GameManager.getInstance().moveSpeed * this.scaledSpeedCoeficient + runningSpeed ))
+            this.node.getComponent(RigidBody)?.setLinearVelocity(this._finalMoveVector.multiplyScalar( GameManager.getInstance().moveSpeed * this.scaledSpeedCoeficient * this.phoneCoeficient  + runningSpeed ))
             
             //this.node.position.add(this._finalMoveVector.multiplyScalar(this.moveSpeed) );
         }     
@@ -264,7 +269,7 @@ export class FirstPersonCameraMovement extends Component {
         this._finalMoveVector = this.multiplyQuatVec3(this.node.rotation,temp);
         
 
-        this._finalMoveVector.multiplyScalar(GameManager.getInstance().moveSpeed);
+        this._finalMoveVector.multiplyScalar(GameManager.getInstance().moveSpeed * this.phoneCoeficient);
         
         if(moveVec.x != 0 || moveVec.y != 0)
             this.tutorialEnd();

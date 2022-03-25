@@ -153,19 +153,19 @@ export class GenericUIABC extends Component {
         switch (parseInt(customData)) {
             case 0:
                 if(this.A.getComponent(Label)!.string == this.JSONtask.tacanOdgovor)
-                    this.rightAnwer();
+                    this.rightAnwerA();
                 else 
                     this.wrongAnswer();
                 break;
             case 1:
                 if(this.B.getComponent(Label)!.string == this.JSONtask.tacanOdgovor)
-                    this.rightAnwer();
+                    this.rightAnwerB();
                 else 
                     this.wrongAnswer();
                 break;
             case 2:
                 if(this.C.getComponent(Label)!.string == this.JSONtask.tacanOdgovor)
-                    this.rightAnwer();
+                    this.rightAnwerC();
                 else 
                     this.wrongAnswer();
             break;
@@ -175,18 +175,32 @@ export class GenericUIABC extends Component {
         
     }
 
-    rightAnwer() {
+    rightAnwerA() {
+        this.getComponent(Animation)?.play("CorrectAnswerA");
+        
+    }
+
+    rightAnwerB() {
+        this.getComponent(Animation)?.play("CorrectAnswerB");
+        
+    }
+
+    rightAnwerC() {
+        this.getComponent(Animation)?.play("CorrectAnswerC");
+        
+    }
+
+    rightAnwerAfterTheAnimation(){
         this.corespondingTask?.getComponent(Task)?.taskCompleted();
  
         this.turnOffGenericTask();
         this.turningOff = true;
-        
     }
 
     wrongAnswer() {
         if(this.audioSource?.playing)
             this.audioSource.stop();
-            
+
         this.node.getComponent(Animation)!.play("WrongNudge");
 
         this.setRandomTask();
@@ -221,6 +235,8 @@ export class GenericUIABC extends Component {
     }
 
     turnOnGenericTask(task: Node) {
+        this.getComponent(Animation)?.play("BackToNormal");
+
         this.corespondingTask = task; 
         GameManager.getInstance().gameStatus = GameStatuType.gamePaused; 
         

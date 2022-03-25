@@ -102,7 +102,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           _defineProperty(this, "taskInProgressManager", 1);
 
-          _defineProperty(this, "downloadedCheckpoint", -1);
+          _defineProperty(this, "downloadedCheckpoint", 0);
 
           _defineProperty(this, "trophies", void 0);
         }

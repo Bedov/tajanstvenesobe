@@ -65,8 +65,6 @@ export class TaskManager extends Component {
 
     checkpoints: Node[] = [];
 
-    numberOfCurrentTask = 0;
-
     onLoad () {
         this.checkpoints = this.node.children; 
         this.giveOrderNumberToTasks();

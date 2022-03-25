@@ -20,7 +20,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
   }
 
   function _reportPossibleCrUseOfJSONtask(extras) {
-    _reporterNs.report("JSONtask2", "../RemoteScripts/JSONloader", _context.meta, extras);
+    _reporterNs.report("JSONtask1", "../RemoteScripts/JSONloader", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGameManager(extras) {
@@ -160,6 +160,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         rightAnwer() {
+          var _this$getComponent;
+
+          (_this$getComponent = this.getComponent(Animation)) === null || _this$getComponent === void 0 ? void 0 : _this$getComponent.play("CorrectAnswer");
+        }
+
+        rightAnwerAfterTheAnimation() {
           var _this$corespondingTas, _this$corespondingTas2;
 
           (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
@@ -185,17 +191,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         turnOnGenericTask(task) {
-          var _this$getComponent;
+          var _this$getComponent2, _this$getComponent3;
 
+          (_this$getComponent2 = this.getComponent(Animation)) === null || _this$getComponent2 === void 0 ? void 0 : _this$getComponent2.play("BackToNormal");
           this.corespondingTask = task;
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
             error: Error()
           }), GameStatuType) : GameStatuType).gamePaused;
-          (_this$getComponent = this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
+          (_this$getComponent3 = this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
-          }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent === void 0 ? void 0 : _this$getComponent.fadeInActive();
+          }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent3 === void 0 ? void 0 : _this$getComponent3.fadeInActive();
           this.setRandomTask();
           this.solveIntroTaskButton();
 
@@ -211,13 +218,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         setRandomTask() {
           this.JSONtask = this.corespondingTask.getComponent(_crd && TaskInput === void 0 ? (_reportPossibleCrUseOfTaskInput({
             error: Error()
-          }), TaskInput) : TaskInput).questionTemp;
+          }), TaskInput) : TaskInput).getRandomTask();
           this.genericTekst.getComponent(Label).string = this.JSONtask.question;
           this.solveSoundActivness();
         }
 
         turnOffGenericTask() {
-          var _this$getComponent2;
+          var _this$getComponent4;
 
           if (this.audioSource.playing) this.audioSource.stop();
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
@@ -228,9 +235,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().inputKeyboard.active = false;
-          (_this$getComponent2 = this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
+          (_this$getComponent4 = this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
-          }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent2 === void 0 ? void 0 : _this$getComponent2.fadeOutActive(); //this.ScriptableFromWrong?.fadeOutActive();
+          }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent4 === void 0 ? void 0 : _this$getComponent4.fadeOutActive(); //this.ScriptableFromWrong?.fadeOutActive();
         }
 
         update() {

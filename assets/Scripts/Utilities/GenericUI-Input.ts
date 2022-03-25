@@ -16,7 +16,7 @@ const { ccclass, property } = _decorator;
  *
  */
  import { JSONloader } from "../RemoteScripts/JSONloader";
- import { JSONtask2 } from "../RemoteScripts/JSONloader";
+ import { JSONtask1 } from "../RemoteScripts/JSONloader";
 import { GameManager, GameStatuType } from '../GameManager';
 import { TaskInput } from '../Tasks/TaskInput';
 import { GlobalManager } from '../GlobalManager';
@@ -24,7 +24,7 @@ import { GlobalManager } from '../GlobalManager';
 @ccclass('GenericUI-Input')
 export class GenericUIinput extends Component {
     
-    JSONtask!: JSONtask2;
+    JSONtask!: JSONtask1;
 
     @property(Node)
     genericTekst!: Node;
@@ -114,8 +114,12 @@ export class GenericUIinput extends Component {
             this.wrongAnswer();
         
     }
-
     rightAnwer() {
+        this.getComponent(Animation)?.play("CorrectAnswer");
+        
+    }
+
+    rightAnwerAfterTheAnimation() {
         this.corespondingTask?.getComponent(Task)?.taskCompleted();
         //this.ScriptableFromWrong?.fadeOutActive();
         this.clearStringFromEditBox();
@@ -147,6 +151,8 @@ export class GenericUIinput extends Component {
 
 
     turnOnGenericTask(task: Node) {
+        this.getComponent(Animation)?.play("BackToNormal");
+        
         this.corespondingTask = task; 
         GameManager.getInstance().gameStatus = GameStatuType.gamePaused; 
 
@@ -166,7 +172,7 @@ export class GenericUIinput extends Component {
     }
 
     setRandomTask() {
-        this.JSONtask = this.corespondingTask!.getComponent(TaskInput)!.questionTemp;
+        this.JSONtask = this.corespondingTask!.getComponent(TaskInput)!.getRandomTask();
         this.genericTekst.getComponent(Label)!.string = this.JSONtask.question!;
 
         this.solveSoundActivness();

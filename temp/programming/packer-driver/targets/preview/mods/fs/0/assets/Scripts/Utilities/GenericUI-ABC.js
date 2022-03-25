@@ -199,15 +199,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           switch (parseInt(customData)) {
             case 0:
-              if (this.A.getComponent(Label).string == this.JSONtask.tacanOdgovor) this.rightAnwer();else this.wrongAnswer();
+              if (this.A.getComponent(Label).string == this.JSONtask.tacanOdgovor) this.rightAnwerA();else this.wrongAnswer();
               break;
 
             case 1:
-              if (this.B.getComponent(Label).string == this.JSONtask.tacanOdgovor) this.rightAnwer();else this.wrongAnswer();
+              if (this.B.getComponent(Label).string == this.JSONtask.tacanOdgovor) this.rightAnwerB();else this.wrongAnswer();
               break;
 
             case 2:
-              if (this.C.getComponent(Label).string == this.JSONtask.tacanOdgovor) this.rightAnwer();else this.wrongAnswer();
+              if (this.C.getComponent(Label).string == this.JSONtask.tacanOdgovor) this.rightAnwerC();else this.wrongAnswer();
               break;
 
             default:
@@ -215,7 +215,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
         }
 
-        rightAnwer() {
+        rightAnwerA() {
+          var _this$getComponent;
+
+          (_this$getComponent = this.getComponent(Animation)) === null || _this$getComponent === void 0 ? void 0 : _this$getComponent.play("CorrectAnswerA");
+        }
+
+        rightAnwerB() {
+          var _this$getComponent2;
+
+          (_this$getComponent2 = this.getComponent(Animation)) === null || _this$getComponent2 === void 0 ? void 0 : _this$getComponent2.play("CorrectAnswerB");
+        }
+
+        rightAnwerC() {
+          var _this$getComponent3;
+
+          (_this$getComponent3 = this.getComponent(Animation)) === null || _this$getComponent3 === void 0 ? void 0 : _this$getComponent3.play("CorrectAnswerC");
+        }
+
+        rightAnwerAfterTheAnimation() {
           var _this$corespondingTas, _this$corespondingTas2;
 
           (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
@@ -259,17 +277,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         turnOnGenericTask(task) {
-          var _this$getComponent;
+          var _this$getComponent4, _this$getComponent5;
 
+          (_this$getComponent4 = this.getComponent(Animation)) === null || _this$getComponent4 === void 0 ? void 0 : _this$getComponent4.play("BackToNormal");
           this.corespondingTask = task;
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
             error: Error()
           }), GameStatuType) : GameStatuType).gamePaused;
-          (_this$getComponent = this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
+          (_this$getComponent5 = this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
-          }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent === void 0 ? void 0 : _this$getComponent.fadeInActive();
+          }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent5 === void 0 ? void 0 : _this$getComponent5.fadeInActive();
           this.setRandomTask();
         }
 
@@ -283,16 +302,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         turnOffGenericTask() {
-          var _this$getComponent2;
+          var _this$getComponent6;
 
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
             error: Error()
           }), GameStatuType) : GameStatuType).gameActive;
-          (_this$getComponent2 = this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
+          (_this$getComponent6 = this.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
-          }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent2 === void 0 ? void 0 : _this$getComponent2.fadeOutActive(); //this.ScriptableFromWrong?.fadeOutActive();
+          }), ScriptEffects) : ScriptEffects)) === null || _this$getComponent6 === void 0 ? void 0 : _this$getComponent6.fadeOutActive(); //this.ScriptableFromWrong?.fadeOutActive();
         }
 
         update() {

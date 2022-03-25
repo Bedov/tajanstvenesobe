@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, AudioSource, Task, JSONtask2, GameManager, GenericUIinput, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, TaskInput;
+  var _reporterNs, _cclegacy, _decorator, AudioSource, randomRangeInt, Task, GameManager, GenericUIinput, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, TaskInput;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -16,7 +16,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
   }
 
   function _reportPossibleCrUseOfJSONtask(extras) {
-    _reporterNs.report("JSONtask2", "../RemoteScripts/JSONloader", _context.meta, extras);
+    _reporterNs.report("JSONtask1", "../RemoteScripts/JSONloader", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGameManager(extras) {
@@ -34,14 +34,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
       AudioSource = _cc.AudioSource;
+      randomRangeInt = _cc.randomRangeInt;
     }, function (_unresolved_2) {
       Task = _unresolved_2.Task;
     }, function (_unresolved_3) {
-      JSONtask2 = _unresolved_3.JSONtask2;
+      GameManager = _unresolved_3.GameManager;
     }, function (_unresolved_4) {
-      GameManager = _unresolved_4.GameManager;
-    }, function (_unresolved_5) {
-      GenericUIinput = _unresolved_5.GenericUIinput;
+      GenericUIinput = _unresolved_4.GenericUIinput;
     }],
     execute: function () {
       _crd = true;
@@ -61,11 +60,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "remoteName", _descriptor, this);
 
-          _initializerDefineProperty(this, "correctAnswer", _descriptor2, this);
+          _initializerDefineProperty(this, "expectedQuestions", _descriptor2, this);
 
-          _defineProperty(this, "questionTemp", new (_crd && JSONtask2 === void 0 ? (_reportPossibleCrUseOfJSONtask({
-            error: Error()
-          }), JSONtask2) : JSONtask2)());
+          _defineProperty(this, "questionsTempArray", new Array());
+
+          _defineProperty(this, "questionsShown", new Array());
+
+          _defineProperty(this, "questionShownFilled", false);
 
           _defineProperty(this, "audioSource", null);
         }
@@ -73,6 +74,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         start() {
           this.schedule(this.isItMyTimeForDownloading, 0.1);
           this.audioSource = this.node.getComponent(AudioSource);
+          this.scheduleOnce(this.fillQuestionsShownFalse, this.orderNumber * 0.05 + 2);
+        }
+
+        fillQuestionsShownFalse() {
+          this.questionsTempArray.forEach(element => {
+            this.questionsShown.push(false);
+          });
         }
 
         isItMyTimeForDownloading() {
@@ -90,11 +98,31 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             (_getInstance$jsonLoad = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
-            }), GameManager) : GameManager).getInstance().jsonLoader) === null || _getInstance$jsonLoad === void 0 ? void 0 : _getInstance$jsonLoad.returnQuestionInput(this.remoteName.toString(), this.questionTemp);
+            }), GameManager) : GameManager).getInstance().jsonLoader) === null || _getInstance$jsonLoad === void 0 ? void 0 : _getInstance$jsonLoad.fetchQuestions(this.remoteName, this.questionsTempArray, this.expectedQuestions);
           }
         }
 
-        update() {}
+        getRandomTask() {
+          var imamoNekoriscene = false;
+          var nasaoNekoriscenog = false;
+          var randomIndex = randomRangeInt(0, this.questionsShown.length);
+          this.questionsShown.forEach(element => {
+            if (element == false) imamoNekoriscene = true;
+          });
+          console.log("imamoNekoriscene: " + imamoNekoriscene);
+
+          if (imamoNekoriscene) {
+            while (!nasaoNekoriscenog) {
+              randomIndex = randomRangeInt(0, this.questionsShown.length);
+              if (!this.questionsShown[randomIndex]) nasaoNekoriscenog = true;
+            }
+          }
+
+          console.log("QUESTION ARRAY LENGHT" + this.questionsShown.length);
+          console.log("randomIndex: " + randomIndex);
+          this.questionsShown[randomIndex] = true;
+          return this.questionsTempArray[randomIndex];
+        }
 
         showTask() {
           if (this.isItOkToExecute()) {
@@ -102,7 +130,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
-            }), GameManager) : GameManager).getInstance().downloadedCheckpoint < this.orderNumber) {
+            }), GameManager) : GameManager).getInstance().downloadedCheckpoint <= this.orderNumber) {
               var _getInstance$loadingH;
 
               (_getInstance$loadingH = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
@@ -131,7 +159,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "correctAnswer", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "expectedQuestions", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,

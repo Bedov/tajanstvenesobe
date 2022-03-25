@@ -130,8 +130,11 @@ export class JSONloader extends Component {
                     var parsedJSON = JSON.parse(textAsset.toString());
                     tempTask.question = parsedJSON["question"];
                     tempTask.tacanOdgovor = parsedJSON["tacanOdgovor"];
-                    tempTask.netacanOdgovor1 = parsedJSON["netacanOdgovor1"];
-                    tempTask.netacanOdgovor2 = parsedJSON["netacanOdgovor2"];
+                    
+                    if(parsedJSON["netacanOdgovor1"] != undefined) {
+                        tempTask.netacanOdgovor1 = parsedJSON["netacanOdgovor1"];
+                        tempTask.netacanOdgovor2 = parsedJSON["netacanOdgovor2"];
+                    }                    
                     
                     if( parsedJSON["questionAudio"] != undefined)  {
 

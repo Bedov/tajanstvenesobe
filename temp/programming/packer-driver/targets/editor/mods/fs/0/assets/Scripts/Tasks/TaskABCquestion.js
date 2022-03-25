@@ -99,17 +99,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             (_getInstance$jsonLoad = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
-            }), GameManager) : GameManager).getInstance().jsonLoader) === null || _getInstance$jsonLoad === void 0 ? void 0 : _getInstance$jsonLoad.fetchQuestions(this.remoteName, this.questionsTempArray, this.expectedQuestions); //this.scheduleOnce(this.logQuestionsFetched, 4);
-            //JSONloader.getInstance().returnTask1(this.remoteName, this.taskTemp)!;
-            //this.JSONloader.returnTask1(this.remoteName, this.taskTemp)!;
+            }), GameManager) : GameManager).getInstance().jsonLoader) === null || _getInstance$jsonLoad === void 0 ? void 0 : _getInstance$jsonLoad.fetchQuestions(this.remoteName, this.questionsTempArray, this.expectedQuestions);
           }
-        }
-
-        logQuestionsFetched() {
-          //this.questionsTempArray.forEach(element => {
-          //    console.log("QUESTION + " + element.question );
-          //});
-          console.log("QUESTION ARRAY LENGHT " + this.questionsTempArray.length);
         }
 
         getRandomTask() {

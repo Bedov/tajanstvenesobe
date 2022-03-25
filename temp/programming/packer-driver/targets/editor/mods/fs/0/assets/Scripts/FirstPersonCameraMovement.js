@@ -106,6 +106,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _defineProperty(this, "_jumpBool", false);
 
           _defineProperty(this, "scaledSpeedCoeficient", 1);
+
+          _defineProperty(this, "phoneCoeficient", 1.3);
         }
 
         start() {
@@ -114,6 +116,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           this.scaledSpeedCoeficient = 1; //GameManager.getInstance().WorldRoot!.scale.x / 100 ;
           //director.getPhysicsManager().enabled = true;
 
+          if (!(_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().isMobileOrTablet) this.phoneCoeficient = 1;
           Vec3.copy(this._position, this.node.position);
         }
 
@@ -176,12 +181,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           if (this._keyPresed) {
             var _this$node$getCompone;
 
-            this.creatingFinalVectorKeyboard(); //this.node.getComponent(RigidBody)?.applyImpulse(this._finalMoveVector.multiplyScalar(this.forceStrenght));
+            if (this.phoneCoeficient == 1) this.creatingFinalVectorKeyboard(); //this.node.getComponent(RigidBody)?.applyImpulse(this._finalMoveVector.multiplyScalar(this.forceStrenght));
             //this.node.getComponent(RigidBody)?.applyForce(this._finalMoveVector.multiplyScalar(this.forceStrenght));
 
             (_this$node$getCompone = this.node.getComponent(RigidBody)) === null || _this$node$getCompone === void 0 ? void 0 : _this$node$getCompone.setLinearVelocity(this._finalMoveVector.multiplyScalar((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
-            }), GameManager) : GameManager).getInstance().moveSpeed * this.scaledSpeedCoeficient + runningSpeed)); //this.node.position.add(this._finalMoveVector.multiplyScalar(this.moveSpeed) );
+            }), GameManager) : GameManager).getInstance().moveSpeed * this.scaledSpeedCoeficient * this.phoneCoeficient + runningSpeed)); //this.node.position.add(this._finalMoveVector.multiplyScalar(this.moveSpeed) );
           }
         }
 
@@ -275,7 +280,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           this._finalMoveVector.multiplyScalar((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().moveSpeed);
+          }), GameManager) : GameManager).getInstance().moveSpeed * this.phoneCoeficient);
 
           if (moveVec.x != 0 || moveVec.y != 0) this.tutorialEnd();
         }
