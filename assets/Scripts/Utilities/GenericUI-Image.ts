@@ -38,7 +38,11 @@ export class GenericUIimage extends Component {
     turningOff = false;
 
     start () {
+        
+        
         this.audioSource = this.node.getComponent(AudioSource)!;
+
+        GameManager.getInstance().pushMeToAudioArray(this.audioSource);
     }
 
     turnOnGenericTaskJSONimage(JSONimage: JSONimage) {

@@ -102,6 +102,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         start() {
           this.audioSource = this.node.getComponent(AudioSource);
+          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().pushMeToAudioArray(this.audioSource);
         }
 
         turnOnGenericTaskJSONwithReturn(JSONtask, tempTask) {
@@ -223,7 +226,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           //    this.audioSource.playing;
           //}
           if (!((_this$audioSource2 = this.audioSource) === null || _this$audioSource2 === void 0 ? void 0 : _this$audioSource2.playing) && this.JSONbasicReference.questAudio) {
-            this.audioSource.clip = this.JSONbasicReference.questAudio; //this.audioSource.playOneShot(this.JSONbasicReference.questAudio!, 1);
+            this.audioSource.clip = this.JSONbasicReference.questAudio;
+            console.log("Volumen: " + this.audioSource.volume); //this.audioSource.playOneShot(this.JSONbasicReference.questAudio!, 1);
 
             this.audioSource.play();
           } else {

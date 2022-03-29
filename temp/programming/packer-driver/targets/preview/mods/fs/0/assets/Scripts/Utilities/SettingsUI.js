@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, Slider, Toggle, GameManager, GameStatuType, ScriptEffects, GlobalManager, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, SettingsUI;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Slider, Toggle, GameManager, GameStatuType, ScriptEffects, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, SettingsUI;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,10 +23,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("ScriptEffects", "./ScriptEffects", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGlobalManager(extras) {
-    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
-  }
-
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -35,7 +31,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _decorator = _cc._decorator;
       Component = _cc.Component;
       Node = _cc.Node;
-      Label = _cc.Label;
       Slider = _cc.Slider;
       Toggle = _cc.Toggle;
     }, function (_unresolved_2) {
@@ -43,8 +38,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       GameStatuType = _unresolved_2.GameStatuType;
     }, function (_unresolved_3) {
       ScriptEffects = _unresolved_3.ScriptEffects;
-    }, function (_unresolved_4) {
-      GlobalManager = _unresolved_4.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -67,15 +60,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
        *
        */
 
-      _export("SettingsUI", SettingsUI = (_dec = ccclass('SettingsUI'), _dec2 = property(Node), _dec3 = property(Slider), _dec4 = property(Toggle), _dec(_class = (_class2 = (_temp = class SettingsUI extends Component {
+      _export("SettingsUI", SettingsUI = (_dec = ccclass('SettingsUI'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Slider), _dec8 = property(Toggle), _dec9 = property(Toggle), _dec(_class = (_class2 = (_temp = class SettingsUI extends Component {
         constructor() {
           super(...arguments);
 
           _initializerDefineProperty(this, "genericTekst", _descriptor, this);
 
-          _initializerDefineProperty(this, "speedSlider", _descriptor2, this);
+          _initializerDefineProperty(this, "normalRotationIcon", _descriptor2, this);
 
-          _initializerDefineProperty(this, "inversionToggle", _descriptor3, this);
+          _initializerDefineProperty(this, "inverseRotationIcon", _descriptor3, this);
+
+          _initializerDefineProperty(this, "normalSoundIcon", _descriptor4, this);
+
+          _initializerDefineProperty(this, "muteSoundIcon", _descriptor5, this);
+
+          _initializerDefineProperty(this, "speedSlider", _descriptor6, this);
+
+          _initializerDefineProperty(this, "inversionToggle", _descriptor7, this);
+
+          _initializerDefineProperty(this, "zvukCheckpoint", _descriptor8, this);
 
           _defineProperty(this, "defaultMoveSpeed", 1.5);
         }
@@ -103,9 +106,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameManager) : GameManager).getInstance().moveSpeed = this.speedSlider.progress + this.defaultMoveSpeed;
         }
 
-        toggleChanged(event, customEventData) {}
+        toggleCheckedMute(event, customEventData) {
+          this.normalSoundIcon.active = this.zvukCheckpoint.isChecked;
+          this.muteSoundIcon.active = !this.zvukCheckpoint.isChecked;
+          var volume;
+          if (this.zvukCheckpoint.isChecked) volume = 1;else volume = 0;
+          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().setVolume(volume);
+        }
 
         toggleChecked(event, customEventData) {
+          this.inverseRotationIcon.active = this.inversionToggle.isChecked;
+          this.normalRotationIcon.active = !this.inversionToggle.isChecked;
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().invertedRotation = this.inversionToggle.isChecked;
@@ -114,16 +127,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameManager) : GameManager).getInstance().invertedRotation);
         }
 
-        solveIntroTaskButton() {
-          this.node.getChildByName("GenericButton").getChildByName("Label").getComponent(Label).string = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getGlobal().exitButton;
-          this.node.getChildByName("Speed").getComponent(Label).string = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getGlobal().choseSpeedSettingsText;
-          this.node.getChildByName("Inverse").getComponent(Label).string = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getGlobal().inverseSettingsText;
+        solveIntroTaskButton() {//Translate -> Trebace nam kasnije
+          //this.node.getChildByName("GenericButton")!.getChildByName("Label")!.getComponent(Label)!.string = GlobalManager.getGlobal().exitButton!;
+          //this.node.getChildByName("Speed")!.getComponent(Label)!.string = GlobalManager.getGlobal().choseSpeedSettingsText!;
+          // this.node.getChildByName("Inverse")!.getComponent(Label)!.string = GlobalManager.getGlobal().inverseSettingsText!;
         }
 
         turnOnSetting() {
@@ -157,12 +164,37 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "speedSlider", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "normalRotationIcon", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "inversionToggle", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "inverseRotationIcon", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "normalSoundIcon", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "muteSoundIcon", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "speedSlider", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "inversionToggle", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "zvukCheckpoint", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,

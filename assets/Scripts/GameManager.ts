@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, director, Label, sys } from 'cc';
+import { _decorator, Component, Node, director, Label, sys, AudioSource } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -66,6 +66,8 @@ export class GameManager extends Component {
 
     downloadedCheckpoint : number = 0;
 
+    audioArray?: Array<AudioSource> = [];
+
     trophies? : Node ;
 
     public static getInstance(): GameManager {
@@ -111,11 +113,27 @@ export class GameManager extends Component {
     }
 
     start () {
-        
-        
-
+       
        
         
+    }
+
+    pushMeToAudioArray(audioComponent: AudioSource) {
+        this.audioArray?.push(audioComponent);
+    }
+
+    setVolume(volume: number){
+        console.log("Lenght " +  this.audioArray?.length );
+        
+        this.audioArray?.forEach(element => {
+            console.log("element " + element.name + "  VOLUME: " + element.volume);
+            
+        });
+        
+        this.audioArray?.forEach(element => {
+            element.volume = volume;
+            console.log("Volumen " +  element.volume);
+        });
     }
 
     setPlatformType() {

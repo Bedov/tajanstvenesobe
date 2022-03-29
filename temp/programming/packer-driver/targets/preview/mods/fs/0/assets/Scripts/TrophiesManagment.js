@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, instantiate, GameManager, TaskManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TrophiesManagment;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, instantiate, Animation, GameManager, TaskManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TrophiesManagment;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -28,6 +28,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       Component = _cc.Component;
       Node = _cc.Node;
       instantiate = _cc.instantiate;
+      Animation = _cc.Animation;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }, function (_unresolved_3) {
@@ -90,10 +91,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }
           */
 
-        } // update (deltaTime: number) {
-        //     // [4]
-        // }
+        }
 
+        calculateLockedWithEffect() {
+          var _this$node$children$N;
+
+          console.log(" OVDE SAM! 111");
+          this.calculateLocked();
+          console.log("Ovde sam: " + this.node.children[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().Progress)].name);
+          (_this$node$children$N = this.node.children[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().Progress)].getComponent(Animation)) === null || _this$node$children$N === void 0 ? void 0 : _this$node$children$N.play("TrophyUnlocked");
+        }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "particleEffect", [_dec2], {
         configurable: true,

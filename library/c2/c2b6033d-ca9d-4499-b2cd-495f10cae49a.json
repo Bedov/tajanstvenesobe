@@ -8,6 +8,7 @@
       "__id__": 1
     },
     "optimizationPolicy": 0,
+    "persistent": false,
     "asyncLoadAssets": false
   },
   {
@@ -46,15 +47,18 @@
       },
       {
         "__id__": 65
+      },
+      {
+        "__id__": 67
       }
     ],
     "_prefab": {
-      "__id__": 67
+      "__id__": 69
     },
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 33.364,
       "z": 0
     },
     "_lrot": {
@@ -366,11 +370,12 @@
       "__expectedType__": "cc.TTFFont"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_isItalic": false,
     "_isBold": false,
     "_isUnderline": false,
     "_underlineHeight": 2,
-    "_cacheMode": 0,
+    "_cacheMode": 2,
     "_id": ""
   },
   {
@@ -594,6 +599,7 @@
       "__expectedType__": "cc.TTFFont"
     },
     "_isSystemFontUsed": false,
+    "_spacingX": 0,
     "_isItalic": false,
     "_isBold": false,
     "_isUnderline": false,
@@ -667,7 +673,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "117ea4ec-a689-4fc7-998f-d1285da64ff0@f9941",
+      "__uuid__": "7ec6d3aa-2aee-4ff5-ad3e-19e799b755a9@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 1,
@@ -737,7 +743,7 @@
       "a": 255
     },
     "_normalSprite": {
-      "__uuid__": "117ea4ec-a689-4fc7-998f-d1285da64ff0@f9941",
+      "__uuid__": "7ec6d3aa-2aee-4ff5-ad3e-19e799b755a9@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_hoverSprite": null,
@@ -1450,6 +1456,28 @@
   {
     "__type__": "cc.CompPrefabInfo",
     "fileId": "75wBTzAIJC+Z9kFVFvfpqO"
+  },
+  {
+    "__type__": "cc.AudioSource",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 68
+    },
+    "_clip": null,
+    "_loop": false,
+    "_playOnAwake": true,
+    "_volume": 1,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "fbwqgeqIlCjqxr+SvvAO93"
   },
   {
     "__type__": "cc.PrefabInfo",

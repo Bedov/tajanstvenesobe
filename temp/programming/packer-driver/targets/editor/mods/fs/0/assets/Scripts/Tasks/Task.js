@@ -126,16 +126,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameManager) : GameManager).getInstance().loadingHandler) === null || _getInstance$loadingH === void 0 ? void 0 : _getInstance$loadingH.turnOnLoading();
         }
 
-        showTask() {
-          this.taskManager.refreshExecutedTasks(this.node.parent);
+        showTask() {//this.taskManager.refreshExecutedTasks(this.node.parent!);
         }
 
         taskCompleted() {
-          //this.taskManager.refreshExecutedTasks(this.node.parent!);
           this.executed = true;
           this.taskManager.checkReadinesForTasks();
           this.resolveConsequnces();
           this.executeNextTasksByForce();
+          this.taskManager.refreshExecutedTasks(this.node.parent);
         }
 
         resolveConsequnces() {

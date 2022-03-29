@@ -104,6 +104,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           _defineProperty(this, "downloadedCheckpoint", 0);
 
+          _defineProperty(this, "audioArray", []);
+
           _defineProperty(this, "trophies", void 0);
         }
 
@@ -147,6 +149,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         start() {}
+
+        pushMeToAudioArray(audioComponent) {
+          var _this$audioArray;
+
+          (_this$audioArray = this.audioArray) === null || _this$audioArray === void 0 ? void 0 : _this$audioArray.push(audioComponent);
+        }
+
+        setVolume(volume) {
+          var _this$audioArray2, _this$audioArray3, _this$audioArray4;
+
+          console.log("Lenght " + ((_this$audioArray2 = this.audioArray) === null || _this$audioArray2 === void 0 ? void 0 : _this$audioArray2.length));
+          (_this$audioArray3 = this.audioArray) === null || _this$audioArray3 === void 0 ? void 0 : _this$audioArray3.forEach(element => {
+            console.log("element " + element.name + "  VOLUME: " + element.volume);
+          });
+          (_this$audioArray4 = this.audioArray) === null || _this$audioArray4 === void 0 ? void 0 : _this$audioArray4.forEach(element => {
+            element.volume = volume;
+            console.log("Volumen " + element.volume);
+          });
+        }
 
         setPlatformType() {
           this.inputKeyboard = this.Canvas.getChildByName("BottomUI").getChildByName("Keyboard");

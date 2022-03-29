@@ -112,6 +112,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         start() {
           this.turnOffSoundButton.active = true;
           this.audioSource = this.node.getComponent(AudioSource);
+          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().pushMeToAudioArray(this.audioSource);
           if (this.node.getChildByName("Wrong") != undefined && this.node.getChildByName("Wrong") != null) this.ScriptableFromWrong = this.node.getChildByName("Wrong").getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
           }), ScriptEffects) : ScriptEffects);

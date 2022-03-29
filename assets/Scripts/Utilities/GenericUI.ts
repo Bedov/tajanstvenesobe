@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Label, AudioSource, Sprite } from 'cc';
+import { _decorator, Component, Node, Label, AudioSource, Sprite, Game } from 'cc';
 import { GameManager, GameStatuType } from '../GameManager';
 import { GlobalManager } from '../GlobalManager';
 import { JSONquestTekst, JSONtask1, JSONimage, JSONobject } from '../RemoteScripts/JSONloader';
@@ -43,6 +43,8 @@ export class GenericUI extends Component {
 
     start () {
         this.audioSource = this.node.getComponent(AudioSource)!;
+
+        GameManager.getInstance().pushMeToAudioArray(this.audioSource);
 
     }
 
@@ -150,6 +152,8 @@ export class GenericUI extends Component {
         if(!this.audioSource?.playing && this.JSONbasicReference.questAudio) {
             this.audioSource.clip = this.JSONbasicReference.questAudio!;
             
+        console.log("Volumen: " + this.audioSource.volume);
+        
             //this.audioSource.playOneShot(this.JSONbasicReference.questAudio!, 1);
             this.audioSource.play();
         } else  {

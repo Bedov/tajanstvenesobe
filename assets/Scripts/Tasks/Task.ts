@@ -88,13 +88,13 @@ export class Task extends Component {
     showTask() {
  
 
-        this.taskManager.refreshExecutedTasks(this.node.parent!);
+        //this.taskManager.refreshExecutedTasks(this.node.parent!);
     }
 
     
 
     taskCompleted () {
-        //this.taskManager.refreshExecutedTasks(this.node.parent!);
+        
 
         this.executed = true;
         
@@ -102,6 +102,8 @@ export class Task extends Component {
         
         this.resolveConsequnces();
         this.executeNextTasksByForce();
+
+        this.taskManager.refreshExecutedTasks(this.node.parent!);
     }
 
     resolveConsequnces() {

@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, EventHandler, SliderComponent,  Label, Slider, Toggle } from 'cc';
+import { _decorator, Component, Node, EventHandler, SliderComponent,  Label, Slider, Toggle, Game } from 'cc';
 import { GameManager, GameStatuType } from '../GameManager';
 import { ScriptEffects } from './ScriptEffects';
 const { ccclass, property } = _decorator;
@@ -23,11 +23,26 @@ export class SettingsUI extends Component {
     @property(Node)
     genericTekst!: Node;
 
+    @property(Node)
+    normalRotationIcon!: Node;
+
+    @property(Node)
+    inverseRotationIcon!: Node;
+
+    @property(Node)
+    normalSoundIcon!: Node;
+
+    @property(Node)
+    muteSoundIcon!: Node;
+
     @property(Slider)
     speedSlider!: Slider;
 
     @property(Toggle)
     inversionToggle!: Toggle;
+
+    @property(Toggle)
+    zvukCheckpoint!: Toggle;
 
     defaultMoveSpeed : number = 1.5;
 
@@ -52,13 +67,23 @@ export class SettingsUI extends Component {
         GameManager.getInstance().moveSpeed = this.speedSlider.progress + this.defaultMoveSpeed;
     }
 
-    toggleChanged(event: Event, customEventData: string){
-        
-        
-        
+    toggleCheckedMute(event: Event, customEventData: string){
+        this.normalSoundIcon.active = this.zvukCheckpoint.isChecked;
+        this.muteSoundIcon.active = !this.zvukCheckpoint.isChecked;
+
+        var volume;
+        if(this.zvukCheckpoint.isChecked)
+            volume = 1;
+        else
+            volume = 0;
+
+        GameManager.getInstance().setVolume(volume);
     }
 
     toggleChecked(event: Event, customEventData: string){
+        this.inverseRotationIcon.active = this.inversionToggle.isChecked;
+        this.normalRotationIcon.active = !this.inversionToggle.isChecked;
+
         GameManager.getInstance().invertedRotation = this.inversionToggle.isChecked!;
         console.log(" TOGGLE " + GameManager.getInstance().invertedRotation );
         
@@ -66,10 +91,11 @@ export class SettingsUI extends Component {
     }
 
     solveIntroTaskButton() {
-         this.node.getChildByName("GenericButton")!.getChildByName("Label")!.getComponent(Label)!.string = GlobalManager.getGlobal().exitButton!;
+        //Translate -> Trebace nam kasnije
+         //this.node.getChildByName("GenericButton")!.getChildByName("Label")!.getComponent(Label)!.string = GlobalManager.getGlobal().exitButton!;
 
-         this.node.getChildByName("Speed")!.getComponent(Label)!.string = GlobalManager.getGlobal().choseSpeedSettingsText!;
-         this.node.getChildByName("Inverse")!.getComponent(Label)!.string = GlobalManager.getGlobal().inverseSettingsText!;
+         //this.node.getChildByName("Speed")!.getComponent(Label)!.string = GlobalManager.getGlobal().choseSpeedSettingsText!;
+        // this.node.getChildByName("Inverse")!.getComponent(Label)!.string = GlobalManager.getGlobal().inverseSettingsText!;
     } 
 
     turnOnSetting() {
