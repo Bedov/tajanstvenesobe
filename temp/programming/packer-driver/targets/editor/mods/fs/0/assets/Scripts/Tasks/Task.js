@@ -133,8 +133,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.executed = true;
           this.taskManager.checkReadinesForTasks();
           this.resolveConsequnces();
-          this.executeNextTasksByForce();
-          this.taskManager.refreshExecutedTasks(this.node.parent);
+          this.executeNextTasksByForce(); //this.taskManager.refreshCheckpoint(this.node.parent!);
+        }
+
+        taskQuestionCompleted() {
+          this.taskCompleted();
+          this.taskManager.refreshCheckpoint(this.node.parent);
         }
 
         resolveConsequnces() {

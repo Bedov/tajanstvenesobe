@@ -68,15 +68,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             }), Task) : Task)) === null || _this$myTask$getCompo === void 0 ? void 0 : _this$myTask$getCompo.taskCompleted();else (_this$myTask$getCompo2 = this.myTask.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
               error: Error()
             }), Task) : Task)) === null || _this$myTask$getCompo2 === void 0 ? void 0 : _this$myTask$getCompo2.showTask();
-          }
+          } else console.log("Dugme nije dobro namesteno");
         } //Dodali smo animaciju kao prioritet da bismo u nekim slucajevima usporili pokretanje execute()
 
 
         startAnimation() {
           var _this$node$getCompone;
 
-          console.log("Jel sam bar dovde dosao");
-          if (this.node.getComponent(Animation)) (_this$node$getCompone = this.node.getComponent(Animation)) === null || _this$node$getCompone === void 0 ? void 0 : _this$node$getCompone.play("ActivationButtonActiveFast");else {
+          if (this.node.getComponent(Animation)) (_this$node$getCompone = this.node.getComponent(Animation)) === null || _this$node$getCompone === void 0 ? void 0 : _this$node$getCompone.play();else {
             this.execute();
           }
         }

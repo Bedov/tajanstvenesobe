@@ -173,16 +173,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return tasks;
         }
 
-        refreshExecutedTasks(checkpoint) {
+        refreshCheckpoint(checkpoint) {
           var _getInstance$trophies, _getInstance$trophies2;
 
-          console.log("Refresh checpoints");
-          if (this.checkpoints.indexOf(checkpoint) != undefined) if (this.checkpoints.indexOf(checkpoint) > (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          var newProgress = this.checkpoints.indexOf(checkpoint) + 1;
+          if (newProgress != undefined) if (newProgress > (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().Progress) (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress = this.checkpoints.indexOf(checkpoint); // this.checkReadinesForTasks();
-
+          }), GameManager) : GameManager).getInstance().Progress = newProgress;
           (_getInstance$trophies = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().trophies) === null || _getInstance$trophies === void 0 ? void 0 : (_getInstance$trophies2 = _getInstance$trophies.getComponent(_crd && TrophiesManagment === void 0 ? (_reportPossibleCrUseOfTrophiesManagment({

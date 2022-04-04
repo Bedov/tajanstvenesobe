@@ -140,9 +140,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }), GameManager) : GameManager).getInstance().gameStatus == (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
             error: Error()
           }), GameStatuType) : GameStatuType).gamePaused) return;
-          var raycast = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z, 0, -1, 0);
-          var raycast2 = new geometry.Ray(this.node.position.x + 0.01, this.node.position.y, this.node.position.z + 0.01, 0, -1, 0);
-          var raycast3 = new geometry.Ray(this.node.position.x - 0.01, this.node.position.y, this.node.position.z - 0.01, 0, -1, 0);
           var hit = new Vec3();
           var distance = 0;
 
@@ -154,6 +151,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
               this._jumpBool = false;
             }
           }
+
+          var raycast = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z, 0, -1, 0);
 
           if (PhysicsSystem.instance.raycast(raycast)) {
             var r = PhysicsSystem.instance.raycastResults;
@@ -186,7 +185,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
             (_this$node$getCompone = this.node.getComponent(RigidBody)) === null || _this$node$getCompone === void 0 ? void 0 : _this$node$getCompone.setLinearVelocity(this._finalMoveVector.multiplyScalar((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
-            }), GameManager) : GameManager).getInstance().moveSpeed * this.scaledSpeedCoeficient * this.phoneCoeficient + runningSpeed)); //this.node.position.add(this._finalMoveVector.multiplyScalar(this.moveSpeed) );
+            }), GameManager) : GameManager).getInstance().moveSpeed * this.moveSpeed * this.scaledSpeedCoeficient * this.phoneCoeficient + runningSpeed)); //this.node.position.add(this._finalMoveVector.multiplyScalar(this.moveSpeed) );
           }
         }
 
@@ -308,7 +307,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         enumerable: true,
         writable: true,
         initializer: function initializer() {
-          return 1;
+          return 1.5;
         }
       }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "forceStrenght", [property], {
         configurable: true,

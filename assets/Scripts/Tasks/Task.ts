@@ -94,7 +94,6 @@ export class Task extends Component {
     
 
     taskCompleted () {
-        
 
         this.executed = true;
         
@@ -103,7 +102,14 @@ export class Task extends Component {
         this.resolveConsequnces();
         this.executeNextTasksByForce();
 
-        this.taskManager.refreshExecutedTasks(this.node.parent!);
+        //this.taskManager.refreshCheckpoint(this.node.parent!);
+    }
+
+    taskQuestionCompleted() {
+        this.taskCompleted();
+
+        
+        this.taskManager.refreshCheckpoint(this.node.parent!);
     }
 
     resolveConsequnces() {

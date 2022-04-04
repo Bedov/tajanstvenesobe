@@ -101,14 +101,12 @@ export class TaskManager extends Component {
         return tasks;
     }
 
-    refreshExecutedTasks(checkpoint: Node) {
-        console.log("Refresh checpoints");
+    refreshCheckpoint(checkpoint: Node) {
+        var newProgress = this.checkpoints.indexOf(checkpoint) + 1;
         
-        
-        if(this.checkpoints.indexOf(checkpoint) != undefined)
-            if(this.checkpoints.indexOf(checkpoint) > GameManager.getInstance().Progress)
-                GameManager.getInstance().Progress = this.checkpoints.indexOf(checkpoint);
-       // this.checkReadinesForTasks();
+        if(newProgress != undefined)
+            if(newProgress > GameManager.getInstance().Progress)
+                GameManager.getInstance().Progress = newProgress;
 
         GameManager.getInstance().trophies?.getComponent(TrophiesManagment)?.calculateLockedWithEffect();
     }

@@ -163,18 +163,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         rightAnwer() {
-          var _this$getComponent;
+          var _this$getComponent, _this$corespondingTas, _this$corespondingTas2;
 
           (_this$getComponent = this.getComponent(Animation)) === null || _this$getComponent === void 0 ? void 0 : _this$getComponent.play("CorrectAnswer");
+          (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
+            error: Error()
+          }), Task) : Task)) === null || _this$corespondingTas2 === void 0 ? void 0 : _this$corespondingTas2.taskQuestionCompleted();
         }
 
         rightAnwerAfterTheAnimation() {
-          var _this$corespondingTas, _this$corespondingTas2;
-
-          (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
-            error: Error()
-          }), Task) : Task)) === null || _this$corespondingTas2 === void 0 ? void 0 : _this$corespondingTas2.taskCompleted(); //this.ScriptableFromWrong?.fadeOutActive();
-
+          //this.ScriptableFromWrong?.fadeOutActive();
           this.clearStringFromEditBox();
           this.turnOffGenericTask();
           this.turningOff = true;

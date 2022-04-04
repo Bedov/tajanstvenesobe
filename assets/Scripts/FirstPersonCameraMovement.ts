@@ -49,7 +49,7 @@ var _keyEvent = [false];
 export class FirstPersonCameraMovement extends Component {
 
     @property
-    moveSpeed = 1;
+    moveSpeed = 1.5;
 
     @property
     forceStrenght = 1;
@@ -114,9 +114,6 @@ export class FirstPersonCameraMovement extends Component {
         if(GameManager.getInstance().gameStatus == GameStatuType.gamePaused)
             return;
         
-        var raycast: geometry.Ray = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z, 0, -1, 0);
-        var raycast2: geometry.Ray = new geometry.Ray(this.node.position.x + 0.01, this.node.position.y, this.node.position.z+ 0.01, 0, -1, 0);
-        var raycast3: geometry.Ray = new geometry.Ray(this.node.position.x- 0.01, this.node.position.y, this.node.position.z- 0.01, 0, -1, 0);
 
         var hit: Vec3 = new Vec3();
         var distance = 0; 
@@ -138,12 +135,17 @@ export class FirstPersonCameraMovement extends Component {
                     this._jumpBool = false;
                 }
         }
+        
+
+        var raycast: geometry.Ray = new geometry.Ray(this.node.position.x, this.node.position.y, this.node.position.z, 0, -1, 0);
 
         if (PhysicsSystem.instance.raycast(raycast)) {
+            
             const r = PhysicsSystem.instance.raycastResults;
 
             var visina = new Vec3(0,-200,0);
 
+            
             for (let i = 0; i < r.length; i++){
 
                 const item = r[i];
@@ -158,7 +160,7 @@ export class FirstPersonCameraMovement extends Component {
                 } catch (error) {
                     
                 }
-            }
+            } 
             this.node.position = visina;
 
         }
@@ -175,7 +177,7 @@ export class FirstPersonCameraMovement extends Component {
                 this.creatingFinalVectorKeyboard();
             //this.node.getComponent(RigidBody)?.applyImpulse(this._finalMoveVector.multiplyScalar(this.forceStrenght));
             //this.node.getComponent(RigidBody)?.applyForce(this._finalMoveVector.multiplyScalar(this.forceStrenght));
-            this.node.getComponent(RigidBody)?.setLinearVelocity(this._finalMoveVector.multiplyScalar( GameManager.getInstance().moveSpeed * this.scaledSpeedCoeficient * this.phoneCoeficient  + runningSpeed ))
+            this.node.getComponent(RigidBody)?.setLinearVelocity(this._finalMoveVector.multiplyScalar( GameManager.getInstance().moveSpeed * this.moveSpeed * this.scaledSpeedCoeficient * this.phoneCoeficient  + runningSpeed ))
             
             //this.node.position.add(this._finalMoveVector.multiplyScalar(this.moveSpeed) );
         }     
@@ -250,7 +252,7 @@ export class FirstPersonCameraMovement extends Component {
             this.tutorialEnd();
          }
 
-        this._finalMoveVector.normalize().multiplyScalar(GameManager.getInstance().moveSpeed);
+        this._finalMoveVector.normalize().multiplyScalar(GameManager.getInstance().moveSpeed );
     }
 
     tutorialEnd() {
@@ -269,7 +271,7 @@ export class FirstPersonCameraMovement extends Component {
         this._finalMoveVector = this.multiplyQuatVec3(this.node.rotation,temp);
         
 
-        this._finalMoveVector.multiplyScalar(GameManager.getInstance().moveSpeed * this.phoneCoeficient);
+        this._finalMoveVector.multiplyScalar(GameManager.getInstance().moveSpeed * this.phoneCoeficient );
         
         if(moveVec.x != 0 || moveVec.y != 0)
             this.tutorialEnd();

@@ -105,6 +105,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             var r = PhysicsSystem.instance.raycastResults;
             r.forEach(rayCastItem => {
               this.tempItemArray.forEach(touchStartItem => {
+                console.log("Game status " + (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+                  error: Error()
+                }), GameManager) : GameManager).getInstance().gameStatus);
+
                 if (rayCastItem.collider.node == touchStartItem && (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
                   error: Error()
                 }), GameManager) : GameManager).getInstance().gameStatus == (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
@@ -145,6 +149,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             for (var i = 0; i < r.length; i++) {
               var item = rSorted[i];
               var shortestDistance = rSorted[0].distance;
+              console.log("Touching " + item.collider.node.name);
 
               if (item.collider.node.getComponent(_crd && DbuttonActivate === void 0 ? (_reportPossibleCrUseOfDbuttonActivate({
                 error: Error()

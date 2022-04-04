@@ -1,6 +1,6 @@
 
 import { _decorator, Component, Node, sys, systemEvent, SystemEvent, macro, KeyCode, UIOpacityComponent } from 'cc';
-import { GameManager } from './GameManager';
+import { GameManager, GameStatuType } from './GameManager';
 const { ccclass, property } = _decorator;
 
 /**
@@ -44,6 +44,8 @@ export class DetectTypeOfDevice extends Component {
     _lookTutorialEndBool = false;
     _lookdontRepeatTutorialEndevent = false;
     _lookCounter = 0.2;
+
+    _tutorialEnded = false;
 
     onLoad() {
         systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
@@ -164,6 +166,11 @@ export class DetectTypeOfDevice extends Component {
 
             }
             this._moveTimerBool = false;
+        }
+
+        if(this._lookTutorialEndBool && this._moveTutorialEndBool && !this._tutorialEnded) {
+            GameManager.getInstance().gameStatus = GameStatuType.gameActive; 
+            this._tutorialEnded = true;
         }
         
 

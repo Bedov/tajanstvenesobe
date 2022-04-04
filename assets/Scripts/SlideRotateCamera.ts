@@ -35,7 +35,7 @@ import { GameManager, GameStatuType } from './GameManager';
 export class SlideRotateCamera extends Component {
  
     @property
-    moveSpeed = 1;
+    moveSpeed = 1.5;
  
     @property
     moveSpeedShiftScale = 5;

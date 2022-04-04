@@ -180,21 +180,21 @@ export class GenericUIABC extends Component {
 
     rightAnwerA() {
         this.getComponent(Animation)?.play("CorrectAnswerA");
-        
+        this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
     }
 
     rightAnwerB() {
         this.getComponent(Animation)?.play("CorrectAnswerB");
-        
+        this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
     }
 
     rightAnwerC() {
         this.getComponent(Animation)?.play("CorrectAnswerC");
-        
+        this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
     }
 
     rightAnwerAfterTheAnimation(){
-        this.corespondingTask?.getComponent(Task)?.taskCompleted();
+        
  
         this.turnOffGenericTask();
         this.turningOff = true;

@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, _decorator, Component, MeshCollider, MeshRenderer, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, ComponentUtility;
+  var _cclegacy, _decorator, Component, Node, MeshCollider, MeshRenderer, RigidBody, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, ComponentUtility;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -16,8 +16,10 @@ System.register(["cc"], function (_export, _context) {
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
       Component = _cc.Component;
+      Node = _cc.Node;
       MeshCollider = _cc.MeshCollider;
       MeshRenderer = _cc.MeshRenderer;
+      RigidBody = _cc.RigidBody;
     }],
     execute: function () {
       _crd = true;
@@ -40,37 +42,55 @@ System.register(["cc"], function (_export, _context) {
        *
        */
 
-      _export("ComponentUtility", ComponentUtility = (_dec = ccclass('ComponentUtility'), _dec2 = property(Boolean), _dec(_class = (_class2 = (_temp = class ComponentUtility extends Component {
+      _export("ComponentUtility", ComponentUtility = (_dec = ccclass('ComponentUtility'), _dec2 = property(Boolean), _dec3 = property(Boolean), _dec4 = property(Boolean), _dec5 = property(Node), _dec(_class = (_class2 = (_temp = class ComponentUtility extends Component {
         constructor(...args) {
           super(...args);
 
           _initializerDefineProperty(this, "turnOffMesh", _descriptor, this);
+
+          _initializerDefineProperty(this, "turnOnConvex", _descriptor2, this);
+
+          _initializerDefineProperty(this, "rigidBody", _descriptor3, this);
+
+          _initializerDefineProperty(this, "batchedRoot", _descriptor4, this);
+        }
+
+        setProperties(element) {
+          if (this.turnOffMesh) element.getComponent(MeshRenderer).enabled = false;
+          element.addComponent(MeshCollider);
+          element.getComponent(MeshCollider).on;
+          element.getComponent(MeshCollider).mesh = element.getComponent(MeshRenderer).mesh;
+          if (this.turnOnConvex) element.getComponent(MeshCollider).convex = true;
+
+          if (this.rigidBody) {
+            element.addComponent(RigidBody);
+            element.getComponent(RigidBody).isStatic = true;
+          } //if(element.getComponent(RigidBody))
+          //    this.useCCD( element.getComponent(RigidBody)!, true);
+
         }
 
         start() {
+          //PhysicsSystem.instance.enable = true;
+          //var manager = director.getCollisionManager();
+          //manager.enabled = true;
           this.node.children.forEach(element => {
             if (element.children.length != 0) {
               element.children.forEach(element => {
                 if (element.getComponent(MeshRenderer) != null) {
-                  if (this.turnOffMesh) element.getComponent(MeshRenderer).enabled = false;
-                  element.addComponent(MeshCollider);
-                  element.getComponent(MeshCollider).mesh = element.getComponent(MeshRenderer).mesh;
+                  this.setProperties(element);
                 }
 
                 if (element.children.length != 0) {
                   element.children.forEach(element => {
                     if (element.getComponent(MeshRenderer) != null) {
-                      if (this.turnOffMesh) element.getComponent(MeshRenderer).enabled = false;
-                      element.addComponent(MeshCollider);
-                      element.getComponent(MeshCollider).mesh = element.getComponent(MeshRenderer).mesh;
+                      this.setProperties(element);
                     }
 
                     if (element.children.length != 0) {
                       element.children.forEach(element => {
                         if (element.getComponent(MeshRenderer) != null) {
-                          if (this.turnOffMesh) element.getComponent(MeshRenderer).enabled = false;
-                          element.addComponent(MeshCollider);
-                          element.getComponent(MeshCollider).mesh = element.getComponent(MeshRenderer).mesh;
+                          this.setProperties(element);
                         }
                       });
                     }
@@ -80,8 +100,7 @@ System.register(["cc"], function (_export, _context) {
             }
 
             if (element.getComponent(MeshRenderer) != null) {
-              element.addComponent(MeshCollider);
-              element.getComponent(MeshCollider).mesh = element.getComponent(MeshRenderer).mesh;
+              this.setProperties(element);
             }
             /*
             var mesh = element.addComponent(MeshCollider);
@@ -102,6 +121,25 @@ System.register(["cc"], function (_export, _context) {
         initializer: function () {
           return false;
         }
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "turnOnConvex", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return false;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "rigidBody", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return false;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "batchedRoot", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
       })), _class2)) || _class));
       /**
        * [1] Class member could be defined like this.

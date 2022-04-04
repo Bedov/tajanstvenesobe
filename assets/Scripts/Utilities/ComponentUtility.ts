@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, MeshColliderComponent, MeshCollider, MeshRenderer } from 'cc';
+import { _decorator, Component, Node, MeshColliderComponent, MeshCollider, MeshRenderer, BatchingUtility, director, PhysicsSystem, RigidBody, physics } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -20,36 +20,58 @@ export class ComponentUtility extends Component {
     @property(Boolean)
     turnOffMesh?: Boolean = false;
 
+    @property(Boolean)
+    turnOnConvex?: Boolean = false;
+
+    @property(Boolean)
+    rigidBody?: Boolean = false;
+
+    @property(Node)
+    batchedRoot!: Node;
+
+    setProperties(element: Node) {
+        if(this.turnOffMesh)
+            element.getComponent(MeshRenderer)!.enabled = false;
+
+        element.addComponent(MeshCollider);
+        element.getComponent(MeshCollider)!.on;
+        element.getComponent(MeshCollider)!.mesh = element.getComponent(MeshRenderer)!.mesh;
+       
+        if(this.turnOnConvex)
+            element.getComponent(MeshCollider)!.convex = true;
+
+        if(this.rigidBody) {
+            element.addComponent(RigidBody);
+            element.getComponent(RigidBody)!.isStatic = true;
+        }
+        //if(element.getComponent(RigidBody))
+        //    this.useCCD( element.getComponent(RigidBody)!, true);
+    }
+
     start () {
+        //PhysicsSystem.instance.enable = true;
+        //var manager = director.getCollisionManager();
+        //manager.enabled = true;
+
         this.node.children.forEach(element => {
 
             if(element.children.length != 0) {
                 element.children.forEach(element => {
                     if(element.getComponent(MeshRenderer) != null) {
-                        if(this.turnOffMesh)
-                            element.getComponent(MeshRenderer)!.enabled = false;
-
-                        element.addComponent(MeshCollider);
-                        element.getComponent(MeshCollider)!.mesh = element.getComponent(MeshRenderer)!.mesh;
+                        this.setProperties(element);
                     }
 
                     if(element.children.length != 0) {
                         element.children.forEach(element => {
                             if(element.getComponent(MeshRenderer) != null) {
-                                if(this.turnOffMesh)
-                                    element.getComponent(MeshRenderer)!.enabled = false;
-                                element.addComponent(MeshCollider);
-                                element.getComponent(MeshCollider)!.mesh = element.getComponent(MeshRenderer)!.mesh;
+                                this.setProperties(element);
                             }
 
                             if(element.children.length != 0) {
                                 element.children.forEach(element => {
                                     
                                     if(element.getComponent(MeshRenderer) != null) {
-                                        if(this.turnOffMesh)
-                                            element.getComponent(MeshRenderer)!.enabled = false;
-                                        element.addComponent(MeshCollider);
-                                        element.getComponent(MeshCollider)!.mesh = element.getComponent(MeshRenderer)!.mesh;
+                                        this.setProperties(element);
                                     }
                                 });
                             }
@@ -59,8 +81,7 @@ export class ComponentUtility extends Component {
                 });
             }
             if(element.getComponent(MeshRenderer) != null) {
-                element.addComponent(MeshCollider);
-                element.getComponent(MeshCollider)!.mesh = element.getComponent(MeshRenderer)!.mesh;
+                this.setProperties(element);
             }
             /*
             var mesh = element.addComponent(MeshCollider);

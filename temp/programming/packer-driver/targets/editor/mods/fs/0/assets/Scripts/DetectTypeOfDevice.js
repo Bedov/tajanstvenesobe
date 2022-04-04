@@ -1,12 +1,16 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, macro, GameManager, _dec, _class, _temp, _crd, ccclass, property, KEYCODE, DetectTypeOfDevice;
+  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, macro, GameManager, GameStatuType, _dec, _class, _temp, _crd, ccclass, property, KEYCODE, DetectTypeOfDevice;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGameStatuType(extras) {
+    _reporterNs.report("GameStatuType", "./GameManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfScriptEffects(extras) {
@@ -25,6 +29,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       macro = _cc.macro;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
+      GameStatuType = _unresolved_2.GameStatuType;
     }],
     execute: function () {
       _crd = true;
@@ -74,6 +79,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _defineProperty(this, "_lookdontRepeatTutorialEndevent", false);
 
           _defineProperty(this, "_lookCounter", 0.2);
+
+          _defineProperty(this, "_tutorialEnded", false);
         }
 
         onLoad() {
@@ -178,6 +185,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             }
 
             this._moveTimerBool = false;
+          }
+
+          if (this._lookTutorialEndBool && this._moveTutorialEndBool && !this._tutorialEnded) {
+            (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
+              error: Error()
+            }), GameStatuType) : GameStatuType).gameActive;
+            this._tutorialEnded = true;
           }
         }
 

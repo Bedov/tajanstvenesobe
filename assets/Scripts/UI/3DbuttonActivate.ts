@@ -33,15 +33,16 @@ export class DbuttonActivate extends Component {
             else
                 this.myTask.getComponent(Task)?.showTask(); 
 
-        }
+        } else
+            console.log("Dugme nije dobro namesteno");
+            
     }
 
     //Dodali smo animaciju kao prioritet da bismo u nekim slucajevima usporili pokretanje execute()
     startAnimation() { 
-        console.log("Jel sam bar dovde dosao");
         
         if(this.node.getComponent(Animation))
-            this.node.getComponent(Animation)?.play("ActivationButtonActiveFast");
+            this.node.getComponent(Animation)?.play();
         else {
             this.execute();
             

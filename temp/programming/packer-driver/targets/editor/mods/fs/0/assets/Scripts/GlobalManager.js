@@ -1,7 +1,7 @@
-System.register(["cc"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, GeneralInformations, _decorator, Component, assetManager, Label, EditBoxComponent, Animation, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _temp, _crd, downloading, settingData, globalInformations, ccclass, property, GlobalManager;
+  var _reporterNs, _cclegacy, GeneralInformations, _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, sys, GameStatuType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _temp, _crd, downloading, settingData, globalInformations, ccclass, property, GlobalManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,17 +11,27 @@ System.register(["cc"], function (_export, _context) {
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+  function _reportPossibleCrUseOfGameStatuType(extras) {
+    _reporterNs.report("GameStatuType", "./GameManager", _context.meta, extras);
+  }
+
   _export("GeneralInformations", void 0);
 
   return {
-    setters: [function (_cc) {
+    setters: [function (_unresolved_) {
+      _reporterNs = _unresolved_;
+    }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
       Component = _cc.Component;
+      Node = _cc.Node;
       assetManager = _cc.assetManager;
       Label = _cc.Label;
       EditBoxComponent = _cc.EditBoxComponent;
       Animation = _cc.Animation;
+      sys = _cc.sys;
+    }, function (_unresolved_2) {
+      GameStatuType = _unresolved_2.GameStatuType;
     }],
     execute: function () {
       _crd = true;
@@ -87,33 +97,47 @@ System.register(["cc"], function (_export, _context) {
         property
       } = _decorator);
 
-      _export("GlobalManager", GlobalManager = (_dec = ccclass('GlobalManager'), _dec2 = property(String), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(EditBoxComponent), _dec(_class = (_class2 = (_temp = class GlobalManager extends Component {
+      _export("GlobalManager", GlobalManager = (_dec = ccclass('GlobalManager'), _dec2 = property(Node), _dec3 = property(String), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(Node), _dec15 = property(EditBoxComponent), _dec(_class = (_class2 = (_temp = _class3 = class GlobalManager extends Component {
         constructor(...args) {
           super(...args);
 
-          _initializerDefineProperty(this, "LanguageName", _descriptor, this);
+          _defineProperty(this, "isMobileOrTablet", false);
 
-          _initializerDefineProperty(this, "springFest", _descriptor2, this);
+          _defineProperty(this, "invertedRotation", false);
 
-          _initializerDefineProperty(this, "playfullCity", _descriptor3, this);
+          _defineProperty(this, "gameStatus", (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
+            error: Error()
+          }), GameStatuType) : GameStatuType).gameTutorial);
 
-          _initializerDefineProperty(this, "easterVillage", _descriptor4, this);
+          _initializerDefineProperty(this, "canvas", _descriptor, this);
 
-          _initializerDefineProperty(this, "birthdayParty", _descriptor5, this);
+          _defineProperty(this, "Progress", 0);
 
-          _initializerDefineProperty(this, "christmasVillage", _descriptor6, this);
+          _initializerDefineProperty(this, "LanguageName", _descriptor2, this);
 
-          _initializerDefineProperty(this, "medievalTown", _descriptor7, this);
+          _initializerDefineProperty(this, "springFest", _descriptor3, this);
 
-          _initializerDefineProperty(this, "happyStreet", _descriptor8, this);
+          _initializerDefineProperty(this, "playfullCity", _descriptor4, this);
 
-          _initializerDefineProperty(this, "backToKindergarden", _descriptor9, this);
+          _initializerDefineProperty(this, "easterVillage", _descriptor5, this);
 
-          _initializerDefineProperty(this, "undergroundChamber", _descriptor10, this);
+          _initializerDefineProperty(this, "birthdayParty", _descriptor6, this);
 
-          _initializerDefineProperty(this, "invisablePeopleCity", _descriptor11, this);
+          _initializerDefineProperty(this, "christmasVillage", _descriptor7, this);
 
-          _initializerDefineProperty(this, "LanguageBox", _descriptor12, this);
+          _initializerDefineProperty(this, "medievalTown", _descriptor8, this);
+
+          _initializerDefineProperty(this, "happyStreet", _descriptor9, this);
+
+          _initializerDefineProperty(this, "backToKindergarden", _descriptor10, this);
+
+          _initializerDefineProperty(this, "undergroundChamber", _descriptor11, this);
+
+          _initializerDefineProperty(this, "invisablePeopleCity", _descriptor12, this);
+
+          _initializerDefineProperty(this, "Player", _descriptor13, this);
+
+          _initializerDefineProperty(this, "LanguageBox", _descriptor14, this);
 
           _defineProperty(this, "originUrl", "https://abedov.com/json");
         }
@@ -122,8 +146,22 @@ System.register(["cc"], function (_export, _context) {
           return globalInformations;
         }
 
+        static getInstance() {
+          if (!this.instance) {
+            GlobalManager.instance = new GlobalManager();
+          }
+
+          return GlobalManager.instance;
+        }
+
         onLoad() {
-          this.fetchGeneralDictionary();
+          GlobalManager.instance = this;
+          this.setPlatformType();
+        }
+
+        setPlatformType() {
+          console.log("OVDE SAM");
+          if (sys.os == sys.OS.ANDROID || sys.os == sys.OS.IOS || sys.platform == sys.Platform.MOBILE_BROWSER) this.isMobileOrTablet = true;
         }
 
         languageChanged() {}
@@ -199,62 +237,72 @@ System.register(["cc"], function (_export, _context) {
           this.invisablePeopleCity.string = globalInformations.invisablePeopleCity;
         }
 
-      }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "LanguageName", [_dec2], {
+      }, _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "canvas", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "springFest", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "LanguageName", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "playfullCity", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "springFest", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "easterVillage", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "playfullCity", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "birthdayParty", [_dec6], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "easterVillage", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "christmasVillage", [_dec7], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "birthdayParty", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "medievalTown", [_dec8], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "christmasVillage", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "happyStreet", [_dec9], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "medievalTown", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "backToKindergarden", [_dec10], {
+      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "happyStreet", [_dec10], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "undergroundChamber", [_dec11], {
+      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "backToKindergarden", [_dec11], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "invisablePeopleCity", [_dec12], {
+      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "undergroundChamber", [_dec12], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "LanguageBox", [_dec13], {
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "invisablePeopleCity", [_dec13], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "Player", [_dec14], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "LanguageBox", [_dec15], {
         configurable: true,
         enumerable: true,
         writable: true,

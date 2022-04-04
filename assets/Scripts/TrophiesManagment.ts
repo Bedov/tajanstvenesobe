@@ -33,8 +33,6 @@ export class TrophiesManagment extends Component {
             this.node.children[index].children[0].active = false;
         }
 
-   
-
         /*
         if(GameManager.getInstance().Progress != 0)  {
             var trophiePosition = this.node.children[Number(GameManager.getInstance().Progress)].worldPosition;
@@ -49,12 +47,13 @@ export class TrophiesManagment extends Component {
     }
 
     calculateLockedWithEffect() {
-        console.log(" OVDE SAM! 111");
+        var checkpointForEffect =  Number(GameManager.getInstance().Progress) - 1;
         
-        this.calculateLocked();
-        console.log("Ovde sam: " + this.node.children[ Number(GameManager.getInstance().Progress)].name);
+        //this.calculateLocked();
+
+        //console.log("Sta sam to ulovio:  " +  this.node.children[ Number(GameManager.getInstance().Progress)].getComponent(Animation));
         
-        this.node.children[ Number(GameManager.getInstance().Progress)].getComponent(Animation)?.play("TrophyUnlocked");
+        this.node.children[checkpointForEffect].getComponent(Animation)!.play();
     }
 }
 

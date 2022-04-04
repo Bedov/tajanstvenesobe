@@ -94,16 +94,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         calculateLockedWithEffect() {
-          var _this$node$children$N;
+          var checkpointForEffect = Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().Progress) - 1; //this.calculateLocked();
+          //console.log("Sta sam to ulovio:  " +  this.node.children[ Number(GameManager.getInstance().Progress)].getComponent(Animation));
 
-          console.log(" OVDE SAM! 111");
-          this.calculateLocked();
-          console.log("Ovde sam: " + this.node.children[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().Progress)].name);
-          (_this$node$children$N = this.node.children[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().Progress)].getComponent(Animation)) === null || _this$node$children$N === void 0 ? void 0 : _this$node$children$N.play("TrophyUnlocked");
+          this.node.children[checkpointForEffect].getComponent(Animation).play();
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "particleEffect", [_dec2], {

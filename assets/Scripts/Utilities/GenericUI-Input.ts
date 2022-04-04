@@ -120,11 +120,11 @@ export class GenericUIinput extends Component {
     }
     rightAnwer() {
         this.getComponent(Animation)?.play("CorrectAnswer");
-        
+        this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
     }
 
     rightAnwerAfterTheAnimation() {
-        this.corespondingTask?.getComponent(Task)?.taskCompleted();
+        
         //this.ScriptableFromWrong?.fadeOutActive();
         this.clearStringFromEditBox();
         this.turnOffGenericTask();

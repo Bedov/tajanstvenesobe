@@ -47,7 +47,8 @@ var settingData = false;
 
 var globalInformations = new GeneralInformations;
 
-import { _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, AffineTransform } from 'cc';
+import { _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, AffineTransform, sys } from 'cc';
+import { GameStatuType } from './GameManager';
 const { ccclass, property } = _decorator;
 
 
@@ -58,6 +59,17 @@ export class GlobalManager extends Component {
     static getGlobal() {
         return globalInformations;
     }
+
+    isMobileOrTablet : boolean = false;
+
+    invertedRotation : boolean = false;
+
+    gameStatus? : GameStatuType = GameStatuType.gameTutorial;
+
+    @property(Node)
+    canvas?: Node;
+
+    Progress : number = 0;
 
     @property(String)
     LanguageName?: String;
@@ -83,14 +95,38 @@ export class GlobalManager extends Component {
     @property(Label)
     invisablePeopleCity?: Label;
 
+    
+    @property(Node)
+    Player?: Node;
+
 
     @property(EditBoxComponent)
     LanguageBox?: EditBoxComponent;
+
+    public static getInstance(): GlobalManager {
+        if (!this.instance) {
+            GlobalManager.instance = new GlobalManager();
+            
+        }
+        return GlobalManager.instance;
+    }
+
+    static instance: GlobalManager;
     
     originUrl = "https://abedov.com/json"; 
 
     onLoad() {
-        this.fetchGeneralDictionary();
+        GlobalManager.instance = this;
+        this.setPlatformType();
+    }
+
+    
+    setPlatformType() {
+ 
+        console.log("OVDE SAM");
+        
+        if(sys.os == sys.OS.ANDROID || sys.os == sys.OS.IOS || sys.platform == sys.Platform.MOBILE_BROWSER) 
+            this.isMobileOrTablet = true;
     }
 
     languageChanged() {

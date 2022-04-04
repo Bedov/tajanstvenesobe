@@ -219,29 +219,33 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         rightAnwerA() {
-          var _this$getComponent;
+          var _this$getComponent, _this$corespondingTas, _this$corespondingTas2;
 
           (_this$getComponent = this.getComponent(Animation)) === null || _this$getComponent === void 0 ? void 0 : _this$getComponent.play("CorrectAnswerA");
+          (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
+            error: Error()
+          }), Task) : Task)) === null || _this$corespondingTas2 === void 0 ? void 0 : _this$corespondingTas2.taskQuestionCompleted();
         }
 
         rightAnwerB() {
-          var _this$getComponent2;
+          var _this$getComponent2, _this$corespondingTas3, _this$corespondingTas4;
 
           (_this$getComponent2 = this.getComponent(Animation)) === null || _this$getComponent2 === void 0 ? void 0 : _this$getComponent2.play("CorrectAnswerB");
+          (_this$corespondingTas3 = this.corespondingTask) === null || _this$corespondingTas3 === void 0 ? void 0 : (_this$corespondingTas4 = _this$corespondingTas3.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
+            error: Error()
+          }), Task) : Task)) === null || _this$corespondingTas4 === void 0 ? void 0 : _this$corespondingTas4.taskQuestionCompleted();
         }
 
         rightAnwerC() {
-          var _this$getComponent3;
+          var _this$getComponent3, _this$corespondingTas5, _this$corespondingTas6;
 
           (_this$getComponent3 = this.getComponent(Animation)) === null || _this$getComponent3 === void 0 ? void 0 : _this$getComponent3.play("CorrectAnswerC");
+          (_this$corespondingTas5 = this.corespondingTask) === null || _this$corespondingTas5 === void 0 ? void 0 : (_this$corespondingTas6 = _this$corespondingTas5.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
+            error: Error()
+          }), Task) : Task)) === null || _this$corespondingTas6 === void 0 ? void 0 : _this$corespondingTas6.taskQuestionCompleted();
         }
 
         rightAnwerAfterTheAnimation() {
-          var _this$corespondingTas, _this$corespondingTas2;
-
-          (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
-            error: Error()
-          }), Task) : Task)) === null || _this$corespondingTas2 === void 0 ? void 0 : _this$corespondingTas2.taskCompleted();
           this.turnOffGenericTask();
           this.turningOff = true;
         }
