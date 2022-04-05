@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "Lift_SAMO_RAM_LIFTA_I_GOLDBERG:postolje",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -9,18 +9,22 @@
   },
   "_techIdx": 0,
   "_defines": [
+    {},
+    {},
     {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
@@ -30,8 +34,12 @@
         "y": 0.46829333901405334,
         "z": 0
       },
-      "metallic": 0.4000000059604645,
-      "roughness": 0.49053239822387695
-    }
+      "occlusion": 0.671,
+      "roughness": 0.281,
+      "metallic": 0.193,
+      "SpecularIntensity": 0.377
+    },
+    {},
+    {}
   ]
 }

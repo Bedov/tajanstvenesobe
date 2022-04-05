@@ -23,6 +23,7 @@ import { _decorator,
     RigidBody,
     Layers} from 'cc';
 import { GameManager, GameStatuType } from '../GameManager';
+import { GlobalManager } from '../GlobalManager';
 const { ccclass, property } = _decorator;
 
 /**
@@ -103,9 +104,8 @@ export class DbuttonRaycast extends Component {
 
             r.forEach(rayCastItem => {
                 this.tempItemArray.forEach(touchStartItem => {
-                    console.log("Game status " + GameManager.getInstance().gameStatus);
                     
-                    if(rayCastItem.collider.node == touchStartItem && GameManager.getInstance().gameStatus == GameStatuType.gameActive) {
+                    if(rayCastItem.collider.node == touchStartItem && GlobalManager.getInstance().gameStatus == GameStatuType.gameActive) {
                         touchStartItem.getComponent(DbuttonActivate)?.startAnimation();
                     }
                 });
@@ -146,8 +146,6 @@ export class DbuttonRaycast extends Component {
                 
                 const item = rSorted[i];
                 var shortestDistance = rSorted[0].distance;
-
-                console.log("Touching " + item.collider.node.name);
 
                 if( item.collider.node.getComponent(DbuttonActivate) ) {   
                     if( Math.abs(shortestDistance - item.distance) < distance)  {

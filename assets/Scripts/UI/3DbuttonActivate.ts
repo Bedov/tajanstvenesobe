@@ -40,6 +40,7 @@ export class DbuttonActivate extends Component {
 
     //Dodali smo animaciju kao prioritet da bismo u nekim slucajevima usporili pokretanje execute()
     startAnimation() { 
+        console.log("Jel stignem dovde?");
         
         if(this.node.getComponent(Animation))
             this.node.getComponent(Animation)?.play();

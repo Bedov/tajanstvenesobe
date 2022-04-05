@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, GlobalManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TouchInputElevator;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, GameManager, GlobalManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TouchInputElevator;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -10,6 +10,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  function _reportPossibleCrUseOfGameManager(extras) {
+    _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfFirstPersonCameraMovementElevator(extras) {
     _reporterNs.report("FirstPersonCameraMovementElevator", "./FirstPersonCameraMovementElevator", _context.meta, extras);
@@ -36,7 +40,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Vec3 = _cc.Vec3;
       UITransform = _cc.UITransform;
     }, function (_unresolved_2) {
-      GlobalManager = _unresolved_2.GlobalManager;
+      GameManager = _unresolved_2.GameManager;
+    }, function (_unresolved_3) {
+      GlobalManager = _unresolved_3.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -84,9 +90,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         start() {
-          this.Player = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+          this.Player = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().Player;
+          }), GameManager) : GameManager).getInstance().Player;
           this.node.on(SystemEvent.EventType.TOUCH_START, this.Joystick_Touch_Start, this);
           this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.Joystick_Touch_Move, this);
           this.node.on(SystemEvent.EventType.TOUCH_END, this.Joystick_Touch_End, this);

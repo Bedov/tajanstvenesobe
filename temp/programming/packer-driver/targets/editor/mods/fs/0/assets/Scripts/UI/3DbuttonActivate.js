@@ -75,6 +75,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         startAnimation() {
           var _this$node$getCompone;
 
+          console.log("Jel stignem dovde?");
           if (this.node.getComponent(Animation)) (_this$node$getCompone = this.node.getComponent(Animation)) === null || _this$node$getCompone === void 0 ? void 0 : _this$node$getCompone.play();else {
             this.execute();
           }

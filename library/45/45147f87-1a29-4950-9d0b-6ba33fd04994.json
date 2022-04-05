@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "Trunk01Diffuse1",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -11,19 +11,26 @@
   "_defines": [
     {
       "HAS_SECOND_UV": true,
-      "USE_ALBEDO_MAP": true
-    }
+      "USE_ALBEDO_MAP": true,
+      "USE_ALPHA_TEST": true
+    },
+    {},
+    {}
   ],
   "_states": [
     {
-      "rasterizerState": {},
+      "rasterizerState": {
+        "cullMode": 0
+      },
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
@@ -31,6 +38,8 @@
         "__uuid__": "b00e6fde-3f3c-4a81-9b2f-9c3397651b9a@76f31",
         "__expectedType__": "cc.Texture2D"
       }
-    }
+    },
+    {},
+    {}
   ]
 }

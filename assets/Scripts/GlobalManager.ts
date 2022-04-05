@@ -42,6 +42,8 @@ export class GeneralInformations {
     } 
 }
 
+var generalProgress = 0;
+
 var downloading = false;
 var settingData = false;
 
@@ -115,15 +117,23 @@ export class GlobalManager extends Component {
     
     originUrl = "https://abedov.com/json"; 
 
+
+
+
     onLoad() {
         GlobalManager.instance = this;
         this.setPlatformType();
     }
 
+    setGeneralProgress(progress: number) {
+        generalProgress = progress;
+    }
+
+    getGeneralProgress() {
+        return generalProgress;
+    }
     
     setPlatformType() {
- 
-        console.log("OVDE SAM");
         
         if(sys.os == sys.OS.ANDROID || sys.os == sys.OS.IOS || sys.platform == sys.Platform.MOBILE_BROWSER) 
             this.isMobileOrTablet = true;
@@ -216,6 +226,20 @@ export class GlobalManager extends Component {
     }
     
 }
+
+export class levelObject {
+    
+    name?: string;
+    ID?: number;
+    status? : levelStatus;
+
+}
+
+export enum levelStatus {
+    locked =    0,
+    unlocked =   1,
+    finished =   2,
+    }
 
 
 /**

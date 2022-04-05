@@ -57,8 +57,9 @@ System.register(["cc"], function (_export, _context) {
 
         setProperties(element) {
           if (this.turnOffMesh) element.getComponent(MeshRenderer).enabled = false;
+          var meshic = new MeshCollider(); //meshic.
+
           element.addComponent(MeshCollider);
-          element.getComponent(MeshCollider).on;
           element.getComponent(MeshCollider).mesh = element.getComponent(MeshRenderer).mesh;
           if (this.turnOnConvex) element.getComponent(MeshCollider).convex = true;
 

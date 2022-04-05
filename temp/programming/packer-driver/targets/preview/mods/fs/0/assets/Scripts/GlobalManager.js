@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, GeneralInformations, _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, sys, GameStatuType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _temp, _crd, downloading, settingData, globalInformations, ccclass, property, GlobalManager;
+  var _reporterNs, _cclegacy, GeneralInformations, _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, sys, GameStatuType, levelObject, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _temp, _crd, generalProgress, downloading, settingData, globalInformations, ccclass, property, GlobalManager, levelStatus;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,7 +15,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     _reporterNs.report("GameStatuType", "./GameManager", _context.meta, extras);
   }
 
-  _export("GeneralInformations", void 0);
+  _export({
+    GeneralInformations: void 0,
+    levelObject: void 0,
+    levelStatus: void 0
+  });
 
   return {
     setters: [function (_unresolved_) {
@@ -89,6 +93,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       });
 
+      generalProgress = 0;
       downloading = false;
       settingData = false;
       globalInformations = new GeneralInformations();
@@ -159,8 +164,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           this.setPlatformType();
         }
 
+        setGeneralProgress(progress) {
+          generalProgress = progress;
+        }
+
+        getGeneralProgress() {
+          return generalProgress;
+        }
+
         setPlatformType() {
-          console.log("OVDE SAM");
           if (sys.os == sys.OS.ANDROID || sys.os == sys.OS.IOS || sys.platform == sys.Platform.MOBILE_BROWSER) this.isMobileOrTablet = true;
         }
 
@@ -308,17 +320,23 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         writable: true,
         initializer: null
       })), _class2)) || _class));
-      /**
-       * [1] Class member could be defined like this.
-       * [2] Use `property` decorator if your want the member to be serializable.
-       * [3] Your initialization goes here.
-       * [4] Your update function goes here.
-       *
-       * Learn more about scripting: https://docs.cocos.com/creator/3.4/manual/en/scripting/
-       * Learn more about CCClass: https://docs.cocos.com/creator/3.4/manual/en/scripting/ccclass.html
-       * Learn more about life-cycle callbacks: https://docs.cocos.com/creator/3.4/manual/en/scripting/life-cycle-callbacks.html
-       */
 
+      _export("levelObject", levelObject = class levelObject {
+        constructor() {
+          _defineProperty(this, "name", void 0);
+
+          _defineProperty(this, "ID", void 0);
+
+          _defineProperty(this, "status", void 0);
+        }
+
+      });
+
+      (function (levelStatus) {
+        levelStatus[levelStatus["locked"] = 0] = "locked";
+        levelStatus[levelStatus["unlocked"] = 1] = "unlocked";
+        levelStatus[levelStatus["finished"] = 2] = "finished";
+      })(levelStatus || _export("levelStatus", levelStatus = {}));
 
       _cclegacy._RF.pop();
 

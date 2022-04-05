@@ -50,7 +50,7 @@ export class TouchInputElevator extends Component {
     }
 
     start () {
-        this.Player = GlobalManager.getInstance().Player!;
+        this.Player = GameManager.getInstance().Player!;
 
         this.node.on(SystemEvent.EventType.TOUCH_START, this.Joystick_Touch_Start, this);
         this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.Joystick_Touch_Move, this);

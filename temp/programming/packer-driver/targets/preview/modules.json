@@ -443,7 +443,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 13439415.351541996,
+    "mTimestamp": 272863821.561125,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -2010,7 +2010,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GlobalManager.ts": {
     "mTimestamp": {
-      "mtime": 1648825133501.0125,
+      "mtime": 1649072314993.3599,
       "uuid": "b7380f12-b524-4935-b774-7ace4047d20d"
     },
     "chunkId": "assets/Scripts/GlobalManager.js",
@@ -2026,11 +2026,11 @@
         "value": "cc",
         "loc": {
           "start": {
-            "line": 50,
+            "line": 52,
             "column": 116
           },
           "end": {
-            "line": 50,
+            "line": 52,
             "column": 120
           }
         }
@@ -2040,11 +2040,11 @@
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
-            "line": 51,
+            "line": 53,
             "column": 30
           },
           "end": {
-            "line": 51,
+            "line": 53,
             "column": 45
           }
         }
@@ -3852,7 +3852,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ComponentUtility.ts": {
     "mTimestamp": {
-      "mtime": 1648806220412.4956,
+      "mtime": 1649081972124.4194,
       "uuid": "a66f8bfa-f5bd-49cc-a672-15868d356f27"
     },
     "chunkId": "assets/Scripts/Utilities/ComponentUtility.js",
@@ -3890,7 +3890,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonActivate.ts": {
     "mTimestamp": {
-      "mtime": 1648815315057.3826,
+      "mtime": 1649067570572.892,
       "uuid": "39cafa82-4638-4b81-8e11-8b635ce36ae0"
     },
     "chunkId": "assets/Scripts/UI/3DbuttonActivate.js",
@@ -4336,7 +4336,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonRaycast.ts": {
     "mTimestamp": {
-      "mtime": 1648817180460.342,
+      "mtime": 1649067976570.9287,
       "uuid": "93400e16-d1aa-45ea-9e25-831a188e1da6"
     },
     "chunkId": "assets/Scripts/UI/3DbuttonRaycast.js",
@@ -4376,15 +4376,29 @@
         }
       },
       {
-        "value": "../UI/3DbuttonActivate",
+        "value": "../GlobalManager",
         "rewritten": "__unresolved_2",
         "loc": {
           "start": {
-            "line": 40,
+            "line": 26,
+            "column": 30
+          },
+          "end": {
+            "line": 26,
+            "column": 48
+          }
+        }
+      },
+      {
+        "value": "../UI/3DbuttonActivate",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 41,
             "column": 33
           },
           "end": {
-            "line": 40,
+            "line": 41,
             "column": 57
           }
         }
@@ -4409,6 +4423,10 @@
       {
         "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GlobalManager.ts"
       },
       {
         "isExternal": false,
@@ -6499,7 +6517,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/DetectTypeOfDeviceElevator.ts": {
     "mTimestamp": {
-      "mtime": 1648824672224.2559,
+      "mtime": 1649067897210.051,
       "uuid": "585d7ae7-fda4-49e4-8311-3a4c7c35fe2f"
     },
     "chunkId": "assets/Scripts/DetectTypeOfDeviceElevator.js",
@@ -6955,7 +6973,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/TouchInputElevator.ts": {
     "mTimestamp": {
-      "mtime": 1648825108972.7898,
+      "mtime": 1649081972124.454,
       "uuid": "d8a7893c-fa9c-49b6-86d0-83fa45ebebb0"
     },
     "chunkId": "assets/Scripts/TouchInputElevator.js",
@@ -6981,8 +6999,22 @@
         }
       },
       {
-        "value": "./GlobalManager",
+        "value": "./GameManager",
         "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 28
+          },
+          "end": {
+            "line": 18,
+            "column": 43
+          }
+        }
+      },
+      {
+        "value": "./GlobalManager",
+        "rewritten": "__unresolved_2",
         "loc": {
           "start": {
             "line": 23,
@@ -7010,6 +7042,10 @@
       {
         "isExternal": false,
         "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
       },
       {
         "isExternal": false,

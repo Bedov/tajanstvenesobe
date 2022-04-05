@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "svetlo",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -9,29 +9,37 @@
   },
   "_techIdx": 0,
   "_defines": [
+    {},
+    {},
     {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
-      "albedoScale": {
-        "__type__": "cc.Vec3",
-        "x": 0.800000011920929,
-        "y": 0.800000011920929,
-        "z": 0.800000011920929
-      },
-      "metallic": 0.4000000059604645,
-      "roughness": 0.30151134729385376
-    }
+      "roughness": 0.796,
+      "metallic": 0,
+      "SpecularIntensity": 0.509,
+      "emissive": {
+        "__type__": "cc.Color",
+        "r": 190,
+        "g": 190,
+        "b": 190,
+        "a": 255
+      }
+    },
+    {},
+    {}
   ]
 }

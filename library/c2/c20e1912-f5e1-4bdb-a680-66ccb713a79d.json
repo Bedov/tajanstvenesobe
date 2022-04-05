@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "metalna_kutija_za_tastere",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -9,29 +9,35 @@
   },
   "_techIdx": 0,
   "_defines": [
+    {},
+    {},
     {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
       "albedoScale": {
         "__type__": "cc.Vec3",
-        "x": 0.800000011920929,
-        "y": 0.46829333901405334,
+        "x": 0.85,
+        "y": 0.4,
         "z": 0
       },
-      "metallic": 0.4000000059604645,
-      "roughness": 0.23158922791481018
-    }
+      "roughness": 0.866,
+      "metallic": 0.12
+    },
+    {},
+    {}
   ]
 }
