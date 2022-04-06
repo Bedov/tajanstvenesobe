@@ -1,14 +1,13 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, _decorator, Component, MeshCollider, _dec, _class, _crd, ccclass, property, ColliderChecker;
+  var _cclegacy, _decorator, Component, _dec, _class, _crd, ccclass, property, ColliderChecker;
 
   return {
     setters: [function (_cc) {
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
       Component = _cc.Component;
-      MeshCollider = _cc.MeshCollider;
     }],
     execute: function () {
       _crd = true;
@@ -40,13 +39,7 @@ System.register(["cc"], function (_export, _context) {
         start() {// [3]
         }
 
-        update(deltaTime) {
-          var _this$node$getCompone, _this$node$getCompone2;
-
-          console.log("Scene Mesh Collider: " + ((_this$node$getCompone = this.node.getComponent(MeshCollider)) === null || _this$node$getCompone === void 0 ? void 0 : _this$node$getCompone._id));
-          console.log("Scene Mesh Collider: " + ((_this$node$getCompone2 = this.node.getComponent(MeshCollider)) === null || _this$node$getCompone2 === void 0 ? void 0 : _this$node$getCompone2.mesh));
-          console.log("Scene Mesh Collider: " + this.node.getComponent(MeshCollider));
-        }
+        update(deltaTime) {}
 
       }) || _class));
       /**

@@ -13,7 +13,7 @@ const { ccclass, property } = _decorator;
  * ManualUrl = https://docs.cocos.com/creator/3.3/manual/en/
  *
  */
- import { FirstPersonCameraMovement } from "./FirstPersonCameraMovement"; 
+ import { FirstPersonCameraMovementTest } from "./FirstPersonCameraMovementTest"; 
  import { DetectTypeOfDevice } from "./DetectTypeOfDevice"; 
 import { GameManager } from './GameManager';
 import { Task } from './Tasks/Task';
@@ -34,7 +34,7 @@ export class TouchInput extends Component {
     Joystick_Max = 1;
 
     _JoystickSize = 0;
-    _firstPersonCameraMovement!: FirstPersonCameraMovement;
+    _firstPersonCameraMovement!: FirstPersonCameraMovementTest;
 
     update() {
 
@@ -54,7 +54,7 @@ export class TouchInput extends Component {
         this.node.on(SystemEvent.EventType.TOUCH_END, this.Joystick_Touch_End, this);
         this.node.on(SystemEvent.EventType.TOUCH_CANCEL, this.Joystick_Touch_End, this);
 //GameManager.instance
-        this._firstPersonCameraMovement = this.Player!.getComponent("FirstPersonCameraMovement") as FirstPersonCameraMovement;
+        this._firstPersonCameraMovement = this.Player!.getComponent("FirstPersonCameraMovementTest") as FirstPersonCameraMovementTest;
 
         if(this.getComponent(UITransform) != null)
             this._JoystickSize = this.getComponent(UITransform)!.width;

@@ -1,16 +1,16 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, Vec3, Camera, geometry, PhysicsSystem, GameStatuType, GlobalManager, DbuttonActivate, _dec, _class, _temp, _crd, ccclass, property, DbuttonRaycast;
+  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, Vec3, Camera, geometry, PhysicsSystem, GameManager, GameStatuType, DbuttonActivate, _dec, _class, _temp, _crd, ccclass, property, DbuttonRaycast;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  function _reportPossibleCrUseOfGameStatuType(extras) {
-    _reporterNs.report("GameStatuType", "../GameManager", _context.meta, extras);
+  function _reportPossibleCrUseOfGameManager(extras) {
+    _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGlobalManager(extras) {
-    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
+  function _reportPossibleCrUseOfGameStatuType(extras) {
+    _reporterNs.report("GameStatuType", "../GameManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfDbuttonActivate(extras) {
@@ -31,11 +31,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       geometry = _cc.geometry;
       PhysicsSystem = _cc.PhysicsSystem;
     }, function (_unresolved_2) {
+      GameManager = _unresolved_2.GameManager;
       GameStatuType = _unresolved_2.GameStatuType;
     }, function (_unresolved_3) {
-      GlobalManager = _unresolved_3.GlobalManager;
-    }, function (_unresolved_4) {
-      DbuttonActivate = _unresolved_4.DbuttonActivate;
+      DbuttonActivate = _unresolved_3.DbuttonActivate;
     }],
     execute: function () {
       _crd = true;
@@ -106,9 +105,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             var r = PhysicsSystem.instance.raycastResults;
             r.forEach(rayCastItem => {
               this.tempItemArray.forEach(touchStartItem => {
-                if (rayCastItem.collider.node == touchStartItem && (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+                if (rayCastItem.collider.node == touchStartItem && (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
                   error: Error()
-                }), GlobalManager) : GlobalManager).getInstance().gameStatus == (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
+                }), GameManager) : GameManager).getInstance().gameStatus == (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
                   error: Error()
                 }), GameStatuType) : GameStatuType).gameActive) {
                   var _touchStartItem$getCo;

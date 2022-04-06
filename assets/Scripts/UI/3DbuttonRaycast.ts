@@ -21,7 +21,8 @@ import { _decorator,
     PhysicsRayResult,
     PhysicsSystem,
     RigidBody,
-    Layers} from 'cc';
+    Layers,
+    Game} from 'cc';
 import { GameManager, GameStatuType } from '../GameManager';
 import { GlobalManager } from '../GlobalManager';
 const { ccclass, property } = _decorator;
@@ -105,7 +106,7 @@ export class DbuttonRaycast extends Component {
             r.forEach(rayCastItem => {
                 this.tempItemArray.forEach(touchStartItem => {
                     
-                    if(rayCastItem.collider.node == touchStartItem && GlobalManager.getInstance().gameStatus == GameStatuType.gameActive) {
+                    if(rayCastItem.collider.node == touchStartItem && GameManager.getInstance().gameStatus == GameStatuType.gameActive) {
                         touchStartItem.getComponent(DbuttonActivate)?.startAnimation();
                     }
                 });

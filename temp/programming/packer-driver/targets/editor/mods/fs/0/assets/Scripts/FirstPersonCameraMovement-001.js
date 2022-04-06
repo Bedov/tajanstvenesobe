@@ -44,7 +44,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     execute: function () {
       _crd = true;
 
-      _cclegacy._RF.push({}, "1e229k9y7lBwLuZk3zWCzjS", "FirstPersonCameraMovement-001", undefined);
+      _cclegacy._RF.push({}, "aff9fcmgnRAv6/ZwXTsi9l9", "FirstPersonCameraMovement-001", undefined);
 
       ({
         ccclass,

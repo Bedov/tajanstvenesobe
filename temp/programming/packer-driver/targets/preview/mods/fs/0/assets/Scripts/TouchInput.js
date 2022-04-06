@@ -11,8 +11,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
-  function _reportPossibleCrUseOfFirstPersonCameraMovement(extras) {
-    _reporterNs.report("FirstPersonCameraMovement", "./FirstPersonCameraMovement", _context.meta, extras);
+  function _reportPossibleCrUseOfFirstPersonCameraMovementTest(extras) {
+    _reporterNs.report("FirstPersonCameraMovementTest", "./FirstPersonCameraMovementTest", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfDetectTypeOfDevice(extras) {
@@ -92,7 +92,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           this.node.on(SystemEvent.EventType.TOUCH_END, this.Joystick_Touch_End, this);
           this.node.on(SystemEvent.EventType.TOUCH_CANCEL, this.Joystick_Touch_End, this); //GameManager.instance
 
-          this._firstPersonCameraMovement = this.Player.getComponent("FirstPersonCameraMovement");
+          this._firstPersonCameraMovement = this.Player.getComponent("FirstPersonCameraMovementTest");
           if (this.getComponent(UITransform) != null) this._JoystickSize = this.getComponent(UITransform).width;
         }
 

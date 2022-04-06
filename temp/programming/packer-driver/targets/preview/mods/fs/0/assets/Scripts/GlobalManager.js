@@ -108,6 +108,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _defineProperty(this, "isMobileOrTablet", false);
 
+          _defineProperty(this, "moveSpeed", 1.5);
+
           _defineProperty(this, "invertedRotation", false);
 
           _defineProperty(this, "gameStatus", (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({

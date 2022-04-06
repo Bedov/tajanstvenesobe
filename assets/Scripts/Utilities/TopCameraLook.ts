@@ -1,6 +1,6 @@
 
-import { _decorator, Component, Node, Vec3, Quat, TiledObjectGroup, Prefab, Game, systemEvent, SystemEvent } from 'cc';
-import { FirstPersonCameraMovement } from '../FirstPersonCameraMovement';
+import { _decorator, Component, Node, Vec3, Quat, TiledObjectGroup, Prefab, Game, systemEvent, SystemEvent, RigidBody } from 'cc';
+import { FirstPersonCameraMovementTest } from '../FirstPersonCameraMovementTest';
 import { GameManager, GameStatuType } from '../GameManager';
 import { SlideRotateCamera } from '../SlideRotateCamera';
 const { ccclass, property } = _decorator;
@@ -79,11 +79,12 @@ export class TopCameraLook extends Component {
     playAnimationTop() {
         
 
-        if(this.getComponent(FirstPersonCameraMovement)!.enabled == false) {
+        if(this.getComponent(FirstPersonCameraMovementTest)!.enabled == false) {
 
           GameManager.getInstance().gameStatus = GameStatuType.gameActive;
 
-            this.getComponent(FirstPersonCameraMovement)!.enabled = true; 
+          this.getComponent(RigidBody)!.useGravity = true;
+            this.getComponent(FirstPersonCameraMovementTest)!.enabled = true; 
             this.getComponent(SlideRotateCamera)!.enabled = true;
 
             if(this.pin)
@@ -114,7 +115,9 @@ export class TopCameraLook extends Component {
 
 
 
-          this.getComponent(FirstPersonCameraMovement)!.enabled = false; 
+          this.getComponent(FirstPersonCameraMovementTest)!.enabled = false; 
+          this.getComponent(RigidBody)!.useGravity = false;
+
           this.getComponent(SlideRotateCamera)!.enabled = false;
 
           

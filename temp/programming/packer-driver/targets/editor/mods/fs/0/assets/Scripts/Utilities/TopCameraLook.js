@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, systemEvent, SystemEvent, FirstPersonCameraMovement, GameManager, GameStatuType, SlideRotateCamera, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TopCameraLook;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, systemEvent, SystemEvent, RigidBody, FirstPersonCameraMovementTest, GameManager, GameStatuType, SlideRotateCamera, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TopCameraLook;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,8 +11,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
-  function _reportPossibleCrUseOfFirstPersonCameraMovement(extras) {
-    _reporterNs.report("FirstPersonCameraMovement", "../FirstPersonCameraMovement", _context.meta, extras);
+  function _reportPossibleCrUseOfFirstPersonCameraMovementTest(extras) {
+    _reporterNs.report("FirstPersonCameraMovementTest", "../FirstPersonCameraMovementTest", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGameManager(extras) {
@@ -39,8 +39,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Quat = _cc.Quat;
       systemEvent = _cc.systemEvent;
       SystemEvent = _cc.SystemEvent;
+      RigidBody = _cc.RigidBody;
     }, function (_unresolved_2) {
-      FirstPersonCameraMovement = _unresolved_2.FirstPersonCameraMovement;
+      FirstPersonCameraMovementTest = _unresolved_2.FirstPersonCameraMovementTest;
     }, function (_unresolved_3) {
       GameManager = _unresolved_3.GameManager;
       GameStatuType = _unresolved_3.GameStatuType;
@@ -146,17 +147,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         playAnimationTop() {
-          if (this.getComponent(_crd && FirstPersonCameraMovement === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovement({
+          if (this.getComponent(_crd && FirstPersonCameraMovementTest === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovementTest({
             error: Error()
-          }), FirstPersonCameraMovement) : FirstPersonCameraMovement).enabled == false) {
+          }), FirstPersonCameraMovementTest) : FirstPersonCameraMovementTest).enabled == false) {
             (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
             }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
               error: Error()
             }), GameStatuType) : GameStatuType).gameActive;
-            this.getComponent(_crd && FirstPersonCameraMovement === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovement({
+            this.getComponent(RigidBody).useGravity = true;
+            this.getComponent(_crd && FirstPersonCameraMovementTest === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovementTest({
               error: Error()
-            }), FirstPersonCameraMovement) : FirstPersonCameraMovement).enabled = true;
+            }), FirstPersonCameraMovementTest) : FirstPersonCameraMovementTest).enabled = true;
             this.getComponent(_crd && SlideRotateCamera === void 0 ? (_reportPossibleCrUseOfSlideRotateCamera({
               error: Error()
             }), SlideRotateCamera) : SlideRotateCamera).enabled = true;
@@ -182,9 +184,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             this.tempPosition = new Vec3(this.node.position);
             this.tempPinPosition = new Vec3(this.node.worldPosition);
-            this.getComponent(_crd && FirstPersonCameraMovement === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovement({
+            this.getComponent(_crd && FirstPersonCameraMovementTest === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovementTest({
               error: Error()
-            }), FirstPersonCameraMovement) : FirstPersonCameraMovement).enabled = false;
+            }), FirstPersonCameraMovementTest) : FirstPersonCameraMovementTest).enabled = false;
+            this.getComponent(RigidBody).useGravity = false;
             this.getComponent(_crd && SlideRotateCamera === void 0 ? (_reportPossibleCrUseOfSlideRotateCamera({
               error: Error()
             }), SlideRotateCamera) : SlideRotateCamera).enabled = false;

@@ -28,9 +28,7 @@ export class ColliderChecker extends Component {
     }
 
     update (deltaTime: number) {
-        console.log("Scene Mesh Collider: " + this.node.getComponent(MeshCollider)?._id);
-        console.log("Scene Mesh Collider: " + this.node.getComponent(MeshCollider)?.mesh);
-        console.log("Scene Mesh Collider: " + this.node.getComponent(MeshCollider));
+
     }
 
     

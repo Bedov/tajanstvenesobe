@@ -64,7 +64,10 @@ export class GlobalManager extends Component {
 
     isMobileOrTablet : boolean = false;
 
+    moveSpeed : number = 1.5;
+    
     invertedRotation : boolean = false;
+
 
     gameStatus? : GameStatuType = GameStatuType.gameTutorial;
 

@@ -1,0 +1,471 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 529,
+      "max": [
+        228.7899169921875,
+        317.1934814453125,
+        252.84298706054688
+      ],
+      "min": [
+        -251.35653686523438,
+        -325.814208984375,
+        0.475677490234375
+      ],
+      "name": "Cirkus_2/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 529,
+      "name": "Cirkus_2/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 529,
+      "name": "Cirkus_2/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 32,
+      "componentType": 5123,
+      "count": 529,
+      "name": "Cirkus_2/JOINTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 40,
+      "componentType": 5126,
+      "count": 529,
+      "name": "Cirkus_2/WEIGHTS_0",
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 1452,
+      "name": "Cirkus_2/INDICES",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3,
+      "name": "/InverseBindMatrices",
+      "type": "MAT4"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 81,
+      "max": [
+        4.958333492279053
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "joint5/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 81,
+      "name": "joint5/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 81,
+      "name": "joint5/scale/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 81,
+      "max": [
+        4.958333492279053
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "joint6/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 81,
+      "name": "joint6/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 81,
+      "name": "joint6/scale/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 81,
+      "max": [
+        4.958333492279053
+      ],
+      "min": [
+        0.0
+      ],
+      "name": "joint7/Trs/Input",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 81,
+      "name": "joint7/translation/Output",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 81,
+      "name": "joint7/scale/Output",
+      "type": "VEC3"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 1,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 1,
+            "path": "scale"
+          }
+        },
+        {
+          "sampler": 2,
+          "target": {
+            "node": 2,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 3,
+          "target": {
+            "node": 2,
+            "path": "scale"
+          }
+        },
+        {
+          "sampler": 4,
+          "target": {
+            "node": 3,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 5,
+          "target": {
+            "node": 3,
+            "path": "scale"
+          }
+        }
+      ],
+      "name": "Take 001",
+      "samplers": [
+        {
+          "input": 7,
+          "output": 8
+        },
+        {
+          "input": 7,
+          "output": 9
+        },
+        {
+          "input": 10,
+          "output": 11
+        },
+        {
+          "input": 10,
+          "output": 12
+        },
+        {
+          "input": 13,
+          "output": 14
+        },
+        {
+          "input": 13,
+          "output": 15
+        }
+      ]
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 29624,
+      "byteStride": 56,
+      "name": "Cirkus_2",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5808,
+      "byteOffset": 29624
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 35432
+    },
+    {
+      "buffer": 0,
+      "byteLength": 324,
+      "byteOffset": 35624
+    },
+    {
+      "buffer": 0,
+      "byteLength": 972,
+      "byteOffset": 35948
+    },
+    {
+      "buffer": 0,
+      "byteLength": 972,
+      "byteOffset": 36920
+    },
+    {
+      "buffer": 0,
+      "byteLength": 324,
+      "byteOffset": 37892
+    },
+    {
+      "buffer": 0,
+      "byteLength": 972,
+      "byteOffset": 38216
+    },
+    {
+      "buffer": 0,
+      "byteLength": 972,
+      "byteOffset": 39188
+    },
+    {
+      "buffer": 0,
+      "byteLength": 324,
+      "byteOffset": 40160
+    },
+    {
+      "buffer": 0,
+      "byteLength": 972,
+      "byteOffset": 40484
+    },
+    {
+      "buffer": 0,
+      "byteLength": 972,
+      "byteOffset": 41456
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 42428,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/0734ad0a-42b5-453b-993f-468060eeeb86/output/.fbm/4A3829E8/Uskrs samo Cirkus 6. april.fbm/Circus.png",
+          "relativeFileName": "../../../temp/asset-db/assets/fbx.FBX-glTF-conv/0734ad0a-42b5-453b-993f-468060eeeb86/output/.fbm/4A3829E8/Uskrs samo Cirkus 6. april.fbm/Circus.png"
+        }
+      },
+      "name": "Circus.png",
+      "uri": "Circus.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "BLEND",
+      "name": "Circus1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cirkus_2",
+      "primitives": [
+        {
+          "attributes": {
+            "JOINTS_0": 3,
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "WEIGHTS_0": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        4
+      ],
+      "name": "Cirkus"
+    },
+    {
+      "children": [
+        2,
+        3
+      ],
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "joint5",
+      "scale": [
+        1.0,
+        0.9999111294746399,
+        1.0
+      ],
+      "translation": [
+        -3.547912359237671,
+        0.10080251842737198,
+        -7.773193836212158
+      ]
+    },
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "joint6",
+      "scale": [
+        1.0,
+        0.9999520778656006,
+        1.0
+      ],
+      "translation": [
+        -0.45443370938301086,
+        0.008888818323612213,
+        3.3179900646209717
+      ]
+    },
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "skeleton": {
+            "skeletonType": "LimbNode"
+          }
+        }
+      },
+      "name": "joint7",
+      "scale": [
+        1.0,
+        0.9999237060546875,
+        1.0
+      ],
+      "translation": [
+        3.160501003265381,
+        0.008888818323612213,
+        -0.08617686480283737
+      ]
+    },
+    {
+      "mesh": 0,
+      "name": "Cirkus_2",
+      "rotation": [
+        -0.2735430896282196,
+        0.6520538330078125,
+        0.6520538330078125,
+        0.2735430896282196
+      ],
+      "scale": [
+        0.009999990463256836,
+        0.009999990463256836,
+        0.009999990463256836
+      ],
+      "skin": 0,
+      "translation": [
+        -3.3431038856506348,
+        -0.022374708205461502,
+        -7.361110687255859
+      ]
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "inverseBindMatrices": 6,
+      "joints": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "Circus.png",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
