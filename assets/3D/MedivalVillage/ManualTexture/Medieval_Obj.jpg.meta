@@ -15,9 +15,9 @@
       "id": "6c48a",
       "name": "texture",
       "userData": {
-        "wrapModeS": "repeat",
-        "wrapModeT": "repeat",
-        "minfilter": "linear",
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "nearest",
         "magfilter": "linear",
         "mipfilter": "none",
         "anisotropy": 0,
@@ -35,10 +35,11 @@
   "userData": {
     "hasAlpha": false,
     "type": "texture",
-    "redirect": "b38461a3-a3c8-4fd1-aef5-ad6f146985b0@6c48a",
     "compressSettings": {
       "useCompressTexture": true,
       "presetId": "20j+07ERZO7b6gudq54/1w"
-    }
+    },
+    "redirect": "b38461a3-a3c8-4fd1-aef5-ad6f146985b0@6c48a",
+    "flipVertical": false
   }
 }
