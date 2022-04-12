@@ -389,7 +389,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 153273286.65970802,
+    "mTimestamp": 155926791.09724998,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -3676,7 +3676,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GlobalManager.ts": {
     "mTimestamp": {
-      "mtime": 1649760739566.2935,
+      "mtime": 1649761157946.8909,
       "uuid": "b7380f12-b524-4935-b774-7ace4047d20d"
     },
     "chunkId": "assets/Scripts/GlobalManager.js",
@@ -4344,7 +4344,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/OpenLevelByName.ts": {
     "mTimestamp": {
-      "mtime": 1649424982870.7183,
+      "mtime": 1649763516326.211,
       "uuid": "ff49225b-e552-45e7-859f-84b6d9db24e7"
     },
     "chunkId": "assets/Scripts/Utilities/OpenLevelByName.js",
@@ -4361,24 +4361,38 @@
         "loc": {
           "start": {
             "line": 2,
-            "column": 104
+            "column": 110
           },
           "end": {
             "line": 2,
-            "column": 108
+            "column": 114
+          }
+        }
+      },
+      {
+        "value": "../GameManager",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 48
+          },
+          "end": {
+            "line": 3,
+            "column": 64
           }
         }
       },
       {
         "value": "./ScriptEffects",
-        "rewritten": "__unresolved_1",
+        "rewritten": "__unresolved_2",
         "loc": {
           "start": {
-            "line": 3,
+            "line": 4,
             "column": 30
           },
           "end": {
-            "line": 3,
+            "line": 4,
             "column": 47
           }
         }
@@ -4399,6 +4413,10 @@
       {
         "isExternal": false,
         "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
       },
       {
         "isExternal": false,
@@ -5680,7 +5698,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts": {
     "mTimestamp": {
-      "mtime": 1649693643164.6223,
+      "mtime": 1649763471841.6987,
       "uuid": "69fcfb76-de3f-4141-be46-42dade9e6168"
     },
     "chunkId": "assets/Scripts/GameManager.js",

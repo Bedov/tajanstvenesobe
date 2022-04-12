@@ -1,5 +1,6 @@
 
-import { _decorator, Component, Node, director, loader, Label, assetManager, AssetManager, Scene } from 'cc';
+import { _decorator, Component, Node, director, loader, Label, assetManager, AssetManager, Scene, Game } from 'cc';
+import { bar, GameManager, LocalProgress } from '../GameManager';
 import { ScriptEffects } from './ScriptEffects';
 const { ccclass, property } = _decorator;
 
@@ -48,6 +49,11 @@ export class OpenLevelByName extends Component {
 
     loadAndPlaySceneByNameD(customEventData: string) {
       this.loadingPanel.getComponent(ScriptEffects)?.fadeInActive();
+
+      //GameManager.getInstance().Progress = 0;
+      bar.waka2();
+
+
 
       director.preloadScene(customEventData, function  (completedCount, totalCount, item) {
           if (labelTemp) {

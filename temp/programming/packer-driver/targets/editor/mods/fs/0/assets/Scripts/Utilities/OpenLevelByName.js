@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, ScriptEffects, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, labelTemp, OpenLevelByName;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, bar, ScriptEffects, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, labelTemp, OpenLevelByName;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -10,6 +10,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  function _reportPossibleCrUseOfbar(extras) {
+    _reporterNs.report("bar", "../GameManager", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfScriptEffects(extras) {
     _reporterNs.report("ScriptEffects", "./ScriptEffects", _context.meta, extras);
@@ -26,7 +30,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       director = _cc.director;
       Label = _cc.Label;
     }, function (_unresolved_2) {
-      ScriptEffects = _unresolved_2.ScriptEffects;
+      bar = _unresolved_2.bar;
+    }, function (_unresolved_3) {
+      ScriptEffects = _unresolved_3.ScriptEffects;
     }],
     execute: function () {
       _crd = true;
@@ -88,7 +94,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           (_this$loadingPanel$ge2 = this.loadingPanel.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
-          }), ScriptEffects) : ScriptEffects)) === null || _this$loadingPanel$ge2 === void 0 ? void 0 : _this$loadingPanel$ge2.fadeInActive();
+          }), ScriptEffects) : ScriptEffects)) === null || _this$loadingPanel$ge2 === void 0 ? void 0 : _this$loadingPanel$ge2.fadeInActive(); //GameManager.getInstance().Progress = 0;
+
+          (_crd && bar === void 0 ? (_reportPossibleCrUseOfbar({
+            error: Error()
+          }), bar) : bar).waka2();
           director.preloadScene(customEventData, function (completedCount, totalCount, item) {
             if (labelTemp) {
               var percent = 0;

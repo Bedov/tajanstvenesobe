@@ -17,7 +17,34 @@ const { ccclass, property } = _decorator;
 import { JSONloader } from "./RemoteScripts/JSONloader";
 import { LoadingHandler } from './RemoteScripts/LoadingHandler';
  
- 
+export  class LocalProgress {
+    worldProgress = 0;
+
+    static waka1() {
+        //throw new Error('Method not implemented.');
+        console.log("Jel se ovo desi nekad1 ");
+    }
+    
+    waka2() {
+        console.log("Jel se ovo desi nekad2");
+        
+      }
+
+    constructor() {
+        console.log("Jel se ovo desi nekad3 ");
+    }
+
+    }
+
+
+//let localProgress1 = new LocalProgress();
+
+const bar = new LocalProgress();
+export { bar };
+
+//var localProgress2 = new LocalProgress;
+//localProgress2.waka2();
+
 
 var worldProgress = 0;
 

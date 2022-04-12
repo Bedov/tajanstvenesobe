@@ -275,7 +275,7 @@ export enum levelStatus {
 export class globalProgress {
 
     //Needs to fetch the data from the server
-    KinderGardenLevel : levelObject = new levelObject;
+    KinderGardenLevel : levelObject = new levelObject; 
 
 }
 
