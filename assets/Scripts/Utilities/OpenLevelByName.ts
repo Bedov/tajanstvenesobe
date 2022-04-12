@@ -46,6 +46,23 @@ export class OpenLevelByName extends Component {
        // director.loadScene(sceneName);
     }
 
+    loadAndPlaySceneByNameD(customEventData: string) {
+      this.loadingPanel.getComponent(ScriptEffects)?.fadeInActive();
+
+      director.preloadScene(customEventData, function  (completedCount, totalCount, item) {
+          if (labelTemp) {
+            var percent = 0;
+            if (totalCount > 0) {
+              percent = 100 * completedCount / totalCount;
+            }
+            labelTemp.string = Math.round(percent) + '%';
+          }  
+
+      },function() {  director.loadScene(customEventData) } ) ;
+
+     // director.loadScene(sceneName);
+  }
+
     // update (deltaTime: number) {
     //     // [4]
     // }

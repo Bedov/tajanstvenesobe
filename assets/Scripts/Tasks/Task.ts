@@ -53,6 +53,8 @@ export class Task extends Component {
         this.checkReadienes();
     }
 
+    startScheduling() {}
+
     getNeeded(){
   
         if(GameManager.getInstance().jsonLoader == undefined)

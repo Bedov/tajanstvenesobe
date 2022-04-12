@@ -189,21 +189,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }
 
           if (this._lookTutorialEndBool && this._moveTutorialEndBool && !this._tutorialEnded) {
-            console.log("Zavrsen tutorial");
             (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
             }), GlobalManager) : GlobalManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
               error: Error()
             }), GameStatuType) : GameStatuType).gameActive;
-            console.log("GlobalManager.getInstance().gameStatus 1" + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-              error: Error()
-            }), GlobalManager) : GlobalManager).getInstance().gameStatus);
             this._tutorialEnded = true;
           }
-
-          console.log("GlobalManager.getInstance().gameStatus 2" + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().gameStatus);
         }
 
         keyboard_Move() {

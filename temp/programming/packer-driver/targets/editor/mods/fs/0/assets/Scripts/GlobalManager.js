@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, GeneralInformations, _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, sys, GameStatuType, levelObject, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _temp, _crd, generalProgress, downloading, settingData, globalInformations, ccclass, property, GlobalManager, levelStatus;
+  var _reporterNs, _cclegacy, GeneralInformations, _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, sys, GameStatuType, OpenLevelByName, levelObject, globalProgress, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _temp, _crd, generalProgress, downloading, settingData, globalInformations, ccclass, property, GlobalManager, levelStatus;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,9 +15,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     _reporterNs.report("GameStatuType", "./GameManager", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfOpenLevelByName(extras) {
+    _reporterNs.report("OpenLevelByName", "./Utilities/OpenLevelByName", _context.meta, extras);
+  }
+
   _export({
     GeneralInformations: void 0,
     levelObject: void 0,
+    globalProgress: void 0,
     levelStatus: void 0
   });
 
@@ -36,6 +41,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       sys = _cc.sys;
     }, function (_unresolved_2) {
       GameStatuType = _unresolved_2.GameStatuType;
+    }, function (_unresolved_3) {
+      OpenLevelByName = _unresolved_3.OpenLevelByName;
     }],
     execute: function () {
       _crd = true;
@@ -116,6 +123,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             error: Error()
           }), GameStatuType) : GameStatuType).gameTutorial);
 
+          _defineProperty(this, "globalProgress", 0);
+
           _initializerDefineProperty(this, "canvas", _descriptor, this);
 
           _defineProperty(this, "Progress", 0);
@@ -144,6 +153,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _initializerDefineProperty(this, "Player", _descriptor13, this);
 
+          _defineProperty(this, "openLevelByName", void 0);
+
           _initializerDefineProperty(this, "LanguageBox", _descriptor14, this);
 
           _defineProperty(this, "originUrl", "https://abedov.com/json");
@@ -163,8 +174,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         onLoad() {
           GlobalManager.instance = this;
+          this.openLevelByName = this.canvas.getComponent(_crd && OpenLevelByName === void 0 ? (_reportPossibleCrUseOfOpenLevelByName({
+            error: Error()
+          }), OpenLevelByName) : OpenLevelByName);
           this.setPlatformType();
         }
+
+        addProgressTest() {
+          this.globalProgress++;
+          this.refreshLevelButtons();
+        }
+
+        refreshLevelButtons() {}
 
         setGeneralProgress(progress) {
           generalProgress = progress;
@@ -330,6 +351,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _defineProperty(this, "ID", void 0);
 
           _defineProperty(this, "status", void 0);
+
+          _defineProperty(this, "levelProgress", void 0);
+
+          this.name = "";
+          this.ID = 0;
+          this.status = 0;
+          this.levelProgress = 0;
         }
 
       });
@@ -339,6 +367,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         levelStatus[levelStatus["unlocked"] = 1] = "unlocked";
         levelStatus[levelStatus["finished"] = 2] = "finished";
       })(levelStatus || _export("levelStatus", levelStatus = {}));
+
+      _export("globalProgress", globalProgress = class globalProgress {
+        constructor() {
+          _defineProperty(this, "KinderGardenLevel", new levelObject());
+        }
+
+      });
+      /**
+       * [1] Class member could be defined like this.
+       * [2] Use `property` decorator if your want the member to be serializable.
+       * [3] Your initialization goes here.
+       * [4] Your update function goes here.
+       *
+       * Learn more about scripting: https://docs.cocos.com/creator/3.4/manual/en/scripting/
+       * Learn more about CCClass: https://docs.cocos.com/creator/3.4/manual/en/scripting/ccclass.html
+       * Learn more about life-cycle callbacks: https://docs.cocos.com/creator/3.4/manual/en/scripting/life-cycle-callbacks.html
+       */
+
 
       _cclegacy._RF.pop();
 

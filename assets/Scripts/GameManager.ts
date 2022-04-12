@@ -12,12 +12,15 @@ const { ccclass, property } = _decorator;
  * URL = db://assets/Scripts/GameManager.ts
  * ManualUrl = https://docs.cocos.com/creator/3.3/manual/en/
  *
- */
 
- 
+ */
 import { JSONloader } from "./RemoteScripts/JSONloader";
 import { LoadingHandler } from './RemoteScripts/LoadingHandler';
  
+ 
+
+var worldProgress = 0;
+
  export enum GameStatuType {
     gamePaused =    0,
     gameActive =   1,
@@ -80,6 +83,14 @@ export class GameManager extends Component {
 
     static instance: GameManager;
 
+    setProgress(tempProgress: number){
+        worldProgress = tempProgress;
+    }
+
+    getProgress() {
+        return worldProgress;
+    }
+
     onLoad() {
         GameManager.instance = this;
         this.jsonLoader = this.node.getComponent(JSONloader)!;
@@ -88,6 +99,8 @@ export class GameManager extends Component {
         this.typeInputResult = this.Canvas?.getChildByName("GenericUI-Input")?.getChildByName("EditBoxPC")?.getChildByName("Result")!.getComponent(Label)!;
     
         this.trophies = this.Canvas!.getChildByName("BottomUI")!.getChildByName("TrofejiLayout")!;
+
+        this.Progress = worldProgress;
 
         this.setPlatformType();
     }

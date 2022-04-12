@@ -57,7 +57,7 @@ export class DetectTypeOfDevice extends Component {
 
         this.MobileMoveJoystick = this.node.getChildByName("joystick")!;
 
-        this.checkProgressForTutorial();
+        //this.checkProgressForTutorial();
         //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
     }
 

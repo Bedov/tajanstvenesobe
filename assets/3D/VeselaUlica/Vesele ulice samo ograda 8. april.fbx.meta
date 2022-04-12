@@ -1,0 +1,110 @@
+{
+  "ver": "2.1.10",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "e92d83fe-7bbb-4072-9f69-2f72701acc2c",
+  "files": [],
+  "subMetas": {
+    "d801d": {
+      "importer": "gltf-mesh",
+      "uuid": "e92d83fe-7bbb-4072-9f69-2f72701acc2c@d801d",
+      "displayName": "",
+      "id": "d801d",
+      "name": "Kolajder.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8b540": {
+      "importer": "gltf-embeded-image",
+      "uuid": "e92d83fe-7bbb-4072-9f69-2f72701acc2c@8b540",
+      "displayName": "",
+      "id": "8b540",
+      "name": "ograda.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f913": {
+      "importer": "texture",
+      "uuid": "e92d83fe-7bbb-4072-9f69-2f72701acc2c@4f913",
+      "displayName": "",
+      "id": "4f913",
+      "name": "ograda.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "e92d83fe-7bbb-4072-9f69-2f72701acc2c@8b540"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "81c9f": {
+      "importer": "gltf-scene",
+      "uuid": "e92d83fe-7bbb-4072-9f69-2f72701acc2c@81c9f",
+      "displayName": "",
+      "id": "81c9f",
+      "name": "Vesele ulice samo ograda 8. april.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "ograda.png",
+        "uri": "e92d83fe-7bbb-4072-9f69-2f72701acc2c@8b540"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "redirect": "e92d83fe-7bbb-4072-9f69-2f72701acc2c@81c9f",
+    "assetFinder": {
+      "meshes": [
+        "e92d83fe-7bbb-4072-9f69-2f72701acc2c@d801d"
+      ],
+      "skeletons": [],
+      "textures": [
+        "e92d83fe-7bbb-4072-9f69-2f72701acc2c@4f913"
+      ],
+      "materials": [
+        "b245db47-ded0-42e0-b744-486a156b4ba6"
+      ],
+      "scenes": [
+        "e92d83fe-7bbb-4072-9f69-2f72701acc2c@81c9f"
+      ]
+    },
+    "dumpMaterials": true,
+    "depthWriteInAlphaModeBlend": true,
+    "materialDumpDir": "db://assets/3D/VeselaUlica/Materials_Vesele ulice samo ograda 8. april"
+  }
+}

@@ -12,12 +12,11 @@
         [
             "cc.Material",
             [
-                "_name",
                 "_states",
                 "_defines",
                 "_props"
             ],
-            0,
+            1,
             12
         ]
     ],
@@ -27,17 +26,18 @@
             0,
             1,
             2,
-            3,
-            4
+            3
         ]
     ],
     [
         [
             0,
-            "Market_01",
             [
                 {
-                    "rasterizerState": {},
+                    "rasterizerState": {
+                        "cullMode": 0
+                    },
+                    "depthStencilState": {},
                     "blendState": {
                         "targets": [
                             {
@@ -47,35 +47,32 @@
                                 "blendDstAlpha": 4
                             }
                         ]
-                    },
-                    "depthStencilState": {
-                        "depthWrite": true
                     }
-                }
+                },
+                {},
+                {}
             ],
             [
                 {
                     "USE_ALBEDO_MAP": true
-                }
+                },
+                {},
+                {}
             ],
             [
                 [
                     [
                         {},
-                        "albedoScale",
-                        8,
-                        [
-                            1,
-                            1,
-                            1,
-                            1
-                        ],
                         "mainTexture",
                         6,
                         0
-                    ]
+                    ],
+                    {},
+                    {}
                 ],
-                11
+                11,
+                0,
+                0
             ]
         ]
     ],

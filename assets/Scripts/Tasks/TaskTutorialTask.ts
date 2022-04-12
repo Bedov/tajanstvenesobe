@@ -93,7 +93,7 @@ export class TaskTutorialTask extends Task {
         if(this.taskType == TypeOfTask.imageType) {
             this.taskManager.genericUIimage!.active = true;
             this.taskManager.genericUIimage!.getComponent(ScriptEffects)!.fadeInActive();
-            this.taskManager.genericUIimage!.getComponent(GenericUI)!.turnOnGenericTaskJSONimagewithReturn(this.imageObject, this); 
+            this.taskManager.genericUIimage!.getComponent(GenericUI)!.turnOnGenericTaskJSONimagewithReturn(this.imageObject, this, false); 
         }
 
         this.taskManager.subtitle!.getComponent(ScriptEffects)?.fadeOutActive();

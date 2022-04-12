@@ -280,9 +280,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), Checkpoint) : Checkpoint)) === null || _this$checkpoints$Num === void 0 ? void 0 : _this$checkpoints$Num.Question) != taskInCheckpoint) {
               if (taskInCheckpoint.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
                 error: Error()
-              }), Task) : Task).uvodniTask == false) taskInCheckpoint.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
-                error: Error()
-              }), Task) : Task).executed = false;
+              }), Task) : Task).uvodniTask == false) {
+                taskInCheckpoint.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
+                  error: Error()
+                }), Task) : Task).executed = false; //taskInCheckpoint.getComponent(Task)?.startScheduling();
+              }
             }
           });
           this.checkReadinesForTasks();

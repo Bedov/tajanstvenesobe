@@ -1,0 +1,135 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1164,
+      "max": [
+        -0.05602622404694557,
+        0.0042587039060890675,
+        -0.040140412747859955
+      ],
+      "min": [
+        -0.07336154580116272,
+        0.0025862136390060186,
+        -0.05954602360725403
+      ],
+      "name": "polySurface24/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 1164,
+      "name": "polySurface24/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 1164,
+      "name": "polySurface24/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 6474,
+      "name": "polySurface24/INDICES",
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 37248,
+      "byteStride": 32,
+      "name": "polySurface24",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 25896,
+      "byteOffset": 37248
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 63144,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/7c242620-dad4-43ec-9417-b5b490650ec1/output/.fbm/9C593130/Srednjevekovna samo napitci 8. april.fbm/Medieval_Obj edited 8bit.png",
+          "relativeFileName": "../../../temp/asset-db/assets/fbx.FBX-glTF-conv/7c242620-dad4-43ec-9417-b5b490650ec1/output/.fbm/9C593130/Srednjevekovna samo napitci 8. april.fbm/Medieval_Obj edited 8bit.png"
+        }
+      },
+      "name": "NOVA_Sredjnevekovna_scena_62_Cocos_combined_14:DiffuseColor_Texture",
+      "uri": "Medieval_Obj edited 8bit.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "NOVA_Sredjnevekovna_scena_62_Cocos_combined_14:Medieval_Obj",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "polySurface24",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "polySurface24"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "NOVA_Sredjnevekovna_scena_62_Cocos_combined_14:DiffuseColor_Texture",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

@@ -81,6 +81,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }, function () {
             director.loadScene(customEventData);
           }); // director.loadScene(sceneName);
+        }
+
+        loadAndPlaySceneByNameD(customEventData) {
+          var _this$loadingPanel$ge2;
+
+          (_this$loadingPanel$ge2 = this.loadingPanel.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
+            error: Error()
+          }), ScriptEffects) : ScriptEffects)) === null || _this$loadingPanel$ge2 === void 0 ? void 0 : _this$loadingPanel$ge2.fadeInActive();
+          director.preloadScene(customEventData, function (completedCount, totalCount, item) {
+            if (labelTemp) {
+              var percent = 0;
+
+              if (totalCount > 0) {
+                percent = 100 * completedCount / totalCount;
+              }
+
+              labelTemp.string = Math.round(percent) + '%';
+            }
+          }, function () {
+            director.loadScene(customEventData);
+          }); // director.loadScene(sceneName);
         } // update (deltaTime: number) {
         //     // [4]
         // }

@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "lambert2",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -12,31 +12,39 @@
     {
       "HAS_SECOND_UV": true,
       "USE_ALBEDO_MAP": true
-    }
+    },
+    {},
+    {}
   ],
   "_states": [
     {
-      "rasterizerState": {},
+      "rasterizerState": {
+        "cullMode": 0
+      },
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
-      "mainTexture": {
-        "__uuid__": "053d81ee-cfe8-4d92-bdd8-0d7d8d5de84e@d20e9",
-        "__expectedType__": "cc.Texture2D"
-      },
       "albedoScale": {
         "__type__": "cc.Vec3",
         "x": 0.800000011920929,
         "y": 0.800000011920929,
         "z": 0.800000011920929
+      },
+      "mainTexture": {
+        "__uuid__": "053d81ee-cfe8-4d92-bdd8-0d7d8d5de84e@d20e9",
+        "__expectedType__": "cc.Texture2D"
       }
-    }
+    },
+    {},
+    {}
   ]
 }

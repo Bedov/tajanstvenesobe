@@ -24,6 +24,8 @@ export class TaskAutoActive extends Task {
     @property(String)
     remoteName!: String;
 
+    @property(Boolean)
+    lastTask: Boolean = false;
 
 
     @property ({type:Enum(TypeOfTask)})
@@ -34,19 +36,20 @@ export class TaskAutoActive extends Task {
     tekstObject: JSONquestTekst = new JSONquestTekst ;
     imageObject: JSONimage = new JSONimage ;
 
+
+
     start(){
         this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
-
         this.schedule(this.isItMyTimeForDownloading, 0.1);
-
         
-        //this.scheduleOnce(this.fetchTheData, this.orderNumber * 0.05);
+    }
 
+    startScheduling() {
         
     }
 
     isItMyTimeForDownloading() {
-        if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted) {
+        if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted ) {
             this.fetchTheData();
             this.downloadStarted = true;
         }
@@ -77,8 +80,10 @@ export class TaskAutoActive extends Task {
     }
 
     checkExecution() {
-        if(this.isItOkToExecute())
+        if(this.isItOkToExecute() && this.taskManager.canvas?.getComponent(DetectTypeOfDevice)?._moveTutorialEndBool && this.taskManager.canvas?.getComponent(DetectTypeOfDevice)?._lookTutorialEndBool)
             this.showTask();
+
+        
     }
 
 
@@ -92,12 +97,9 @@ export class TaskAutoActive extends Task {
             return;
         }
 
-        console.log("Kako dospem ovde? ");
-        
-
         super.showTask();
 
-
+       // this.unscheduleAllCallbacks();
 
         GameManager.getInstance().loadingHandler?.turnOffLoading();
 
@@ -109,7 +111,7 @@ export class TaskAutoActive extends Task {
         if(this.taskType == TypeOfTask.imageType) {
             this.taskManager.genericUIimage!.active = true;
             this.taskManager.genericUIimage!.getComponent(ScriptEffects)!.fadeInActive();
-            this.taskManager.genericUIimage!.getComponent(GenericUI)!.turnOnGenericTaskJSONimagewithReturn(this.imageObject,this); 
+            this.taskManager.genericUIimage!.getComponent(GenericUI)!.turnOnGenericTaskJSONimagewithReturn(this.imageObject,this, this.lastTask); 
         }
         
 

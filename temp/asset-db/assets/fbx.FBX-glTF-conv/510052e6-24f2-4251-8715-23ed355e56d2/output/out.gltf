@@ -1,0 +1,135 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        -0.03914487734436989,
+        0.023972883820533752,
+        0.1620524823665619
+      ],
+      "min": [
+        -0.06068023666739464,
+        0.010338162072002888,
+        0.16205236315727234
+      ],
+      "name": "Samo_zid_kuce/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 4,
+      "name": "Samo_zid_kuce/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 4,
+      "name": "Samo_zid_kuce/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 6,
+      "name": "Samo_zid_kuce/INDICES",
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 128,
+      "byteStride": 32,
+      "name": "Samo_zid_kuce",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24,
+      "byteOffset": 128
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 152,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/510052e6-24f2-4251-8715-23ed355e56d2/output/.fbm/C3812EF0/Vesele ulice samo zid kuce 8. april.fbm/CityPack.png",
+          "relativeFileName": "../../../temp/asset-db/assets/fbx.FBX-glTF-conv/510052e6-24f2-4251-8715-23ed355e56d2/output/.fbm/C3812EF0/Vesele ulice samo zid kuce 8. april.fbm/CityPack.png"
+        }
+      },
+      "name": "CityPack.png",
+      "uri": "CityPack.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "CityPack_Brick",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Samo_zid_kuce",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Samo_zid_kuce"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "CityPack.png",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

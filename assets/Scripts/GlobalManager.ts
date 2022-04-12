@@ -42,6 +42,9 @@ export class GeneralInformations {
     } 
 }
 
+
+
+
 var generalProgress = 0;
 
 var downloading = false;
@@ -51,6 +54,7 @@ var globalInformations = new GeneralInformations;
 
 import { _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, AffineTransform, sys } from 'cc';
 import { GameStatuType } from './GameManager';
+import { OpenLevelByName } from './Utilities/OpenLevelByName';
 const { ccclass, property } = _decorator;
 
 
@@ -70,6 +74,8 @@ export class GlobalManager extends Component {
 
 
     gameStatus? : GameStatuType = GameStatuType.gameTutorial;
+
+    globalProgress : number = 0;
 
     @property(Node)
     canvas?: Node;
@@ -103,7 +109,9 @@ export class GlobalManager extends Component {
     
     @property(Node)
     Player?: Node;
+    
 
+    openLevelByName?: OpenLevelByName;
 
     @property(EditBoxComponent)
     LanguageBox?: EditBoxComponent;
@@ -125,7 +133,18 @@ export class GlobalManager extends Component {
 
     onLoad() {
         GlobalManager.instance = this;
+
+        this.openLevelByName = this.canvas!.getComponent(OpenLevelByName)!;
         this.setPlatformType();
+    }
+
+    addProgressTest () {
+        this.globalProgress ++;
+        this.refreshLevelButtons();
+    }
+
+    refreshLevelButtons() {
+
     }
 
     setGeneralProgress(progress: number) {
@@ -235,6 +254,14 @@ export class levelObject {
     name?: string;
     ID?: number;
     status? : levelStatus;
+    levelProgress? : number;
+
+    constructor() {
+        this.name = "";
+        this.ID = 0;
+        this.status = 0
+        this.levelProgress = 0;
+    }
 
 }
 
@@ -244,6 +271,13 @@ export enum levelStatus {
     finished =   2,
     }
 
+    
+export class globalProgress {
+
+    //Needs to fetch the data from the server
+    KinderGardenLevel : levelObject = new levelObject;
+
+}
 
 /**
  * [1] Class member could be defined like this.

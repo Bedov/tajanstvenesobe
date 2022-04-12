@@ -197,7 +197,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), ScriptEffects) : ScriptEffects).fadeInActive();
             this.taskManager.genericUIimage.getComponent(_crd && GenericUI === void 0 ? (_reportPossibleCrUseOfGenericUI({
               error: Error()
-            }), GenericUI) : GenericUI).turnOnGenericTaskJSONimagewithReturn(this.imageObject, this);
+            }), GenericUI) : GenericUI).turnOnGenericTaskJSONimagewithReturn(this.imageObject, this, false);
           }
 
           (_getComponent = this.taskManager.subtitle.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({

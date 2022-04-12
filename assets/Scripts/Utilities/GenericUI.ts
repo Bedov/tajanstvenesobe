@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Label, AudioSource, Sprite, Game } from 'cc';
+import { _decorator, Component, Node, Label, AudioSource, Sprite, Game, Animation } from 'cc';
 import { GameManager, GameStatuType } from '../GameManager';
 import { GlobalManager } from '../GlobalManager';
 import { JSONquestTekst, JSONtask1, JSONimage, JSONobject } from '../RemoteScripts/JSONloader';
@@ -41,6 +41,8 @@ export class GenericUI extends Component {
 
     tempTask?: Task = undefined;
 
+    aniationPlaying: boolean = false;
+
     start () {
         this.audioSource = this.node.getComponent(AudioSource)!;
 
@@ -68,10 +70,18 @@ export class GenericUI extends Component {
     }
 
 
-    turnOnGenericTaskJSONimagewithReturn(JSONtask: JSONquestTekst, tempTask: Task) {
+    turnOnGenericTaskJSONimagewithReturn(JSONtask: JSONquestTekst, tempTask: Task, lastTask: Boolean) {
         this.tempTask = tempTask;
 
         this.turnOnGenericTaskJSONimage(JSONtask);
+
+        console.log("TEST TEST");
+        
+        if(lastTask && !this.aniationPlaying) {
+            this.aniationPlaying = true;
+            this.getComponent(Animation)!.play("EndPanelAnimation");
+        }
+            
 
     }
 

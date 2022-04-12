@@ -184,8 +184,10 @@ export class TaskManager extends Component {
     readAgain() {
         this.checkpoints[ Number(GameManager.getInstance().Progress)].children.forEach(taskInCheckpoint => {
             if( this.checkpoints[ Number(GameManager.getInstance().Progress)].getComponent(Checkpoint)?.Question != taskInCheckpoint ) {
-                if(taskInCheckpoint.getComponent(Task)!.uvodniTask == false)
+                if(taskInCheckpoint.getComponent(Task)!.uvodniTask == false) {
                     taskInCheckpoint.getComponent(Task)!.executed = false;
+                    //taskInCheckpoint.getComponent(Task)?.startScheduling();
+                }
                 
             }
         });

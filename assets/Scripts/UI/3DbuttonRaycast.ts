@@ -43,16 +43,26 @@ const { ccclass, property } = _decorator;
 
 @ccclass('DbuttonRaycast')
 export class DbuttonRaycast extends Component {
-    // [1]
-    // dummy = '';
+   
+    @property(Boolean)
+    globalManagerReference!: Boolean;
 
     cameraObject! : Node ; 
+
+    gameStatus? : GameStatuType;
     // [2]
     // @property
     // serializableDummy = 0;
     maxDepth = 15;
 
     tempItemArray: Node[] = [];
+
+    onLoad() {
+        if(this.globalManagerReference) 
+            this.gameStatus = GlobalManager.getInstance().gameStatus;
+        else
+            this.gameStatus = GameManager.getInstance().gameStatus;
+    }
 
     start () {
         systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onTouchStart, this);
@@ -100,13 +110,15 @@ export class DbuttonRaycast extends Component {
         if (PhysicsSystem.instance.raycast(_rayPrazan)) {
             const r = PhysicsSystem.instance.raycastResults;
 
-            
-            
 
             r.forEach(rayCastItem => {
                 this.tempItemArray.forEach(touchStartItem => {
-                    
-                    if(rayCastItem.collider.node == touchStartItem && GameManager.getInstance().gameStatus == GameStatuType.gameActive) {
+                    if(this.globalManagerReference) 
+                        this.gameStatus = GlobalManager.getInstance().gameStatus;
+                    else
+                        this.gameStatus = GameManager.getInstance().gameStatus;
+
+                    if(rayCastItem.collider.node == touchStartItem && this.gameStatus == GameStatuType.gameActive) {
                         touchStartItem.getComponent(DbuttonActivate)?.startAnimation();
                     }
                 });

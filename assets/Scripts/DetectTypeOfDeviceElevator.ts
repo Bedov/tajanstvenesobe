@@ -170,14 +170,13 @@ export class DetectTypeOfDeviceElevator extends Component {
         }
 
         if(this._lookTutorialEndBool && this._moveTutorialEndBool && !this._tutorialEnded) {
-            console.log("Zavrsen tutorial");
             
             GlobalManager.getInstance().gameStatus = GameStatuType.gameActive; 
-            console.log("GlobalManager.getInstance().gameStatus 1" + GlobalManager.getInstance().gameStatus);
+
             this._tutorialEnded = true;
         }
 
-        console.log("GlobalManager.getInstance().gameStatus 2" + GlobalManager.getInstance().gameStatus);
+
         
 
     }

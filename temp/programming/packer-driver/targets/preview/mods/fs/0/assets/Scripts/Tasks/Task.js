@@ -93,6 +93,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.checkReadienes();
         }
 
+        startScheduling() {}
+
         getNeeded() {
           if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()

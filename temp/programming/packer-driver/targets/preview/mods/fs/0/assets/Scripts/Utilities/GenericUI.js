@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Sprite, GameManager, GameStatuType, GlobalManager, Task, ScriptEffects, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, GenericUI;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Sprite, Animation, GameManager, GameStatuType, GlobalManager, Task, ScriptEffects, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, GenericUI;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -50,6 +50,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Label = _cc.Label;
       AudioSource = _cc.AudioSource;
       Sprite = _cc.Sprite;
+      Animation = _cc.Animation;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
       GameStatuType = _unresolved_2.GameStatuType;
@@ -98,6 +99,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "turningOff", false);
 
           _defineProperty(this, "tempTask", undefined);
+
+          _defineProperty(this, "aniationPlaying", false);
         }
 
         start() {
@@ -129,9 +132,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameStatuType) : GameStatuType).gamePaused;
         }
 
-        turnOnGenericTaskJSONimagewithReturn(JSONtask, tempTask) {
+        turnOnGenericTaskJSONimagewithReturn(JSONtask, tempTask, lastTask) {
           this.tempTask = tempTask;
           this.turnOnGenericTaskJSONimage(JSONtask);
+          console.log("TEST TEST");
+
+          if (lastTask && !this.aniationPlaying) {
+            this.aniationPlaying = true;
+            this.getComponent(Animation).play("EndPanelAnimation");
+          }
         }
 
         turnOnGenericTaskJSONimage(JSONimage) {
