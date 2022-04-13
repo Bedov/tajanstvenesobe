@@ -1,6 +1,7 @@
 
 import { _decorator, Component, Node, director, loader, Label, assetManager, AssetManager, Scene, Game } from 'cc';
-import { bar, GameManager, LocalProgress } from '../GameManager';
+import { GameManager, localSceneData } from '../GameManager';
+import { GlobalManager, levelObject } from '../GlobalManager';
 import { ScriptEffects } from './ScriptEffects';
 const { ccclass, property } = _decorator;
 
@@ -30,8 +31,22 @@ export class OpenLevelByName extends Component {
         labelTemp = this.loadingPercentLable;
     }
 
+    findSceneDataByName(sceneName: string) {
+      var levelsArray = GlobalManager.getInstance().levelsArray;
+
+      levelsArray.forEach(element => {
+          if(element.sceneName == sceneName)
+            return element;
+      });
+
+
+      return new levelObject;
+    }
+
     loadAndPlaySceneByName(event : Event, customEventData: string) {
         this.loadingPanel.getComponent(ScriptEffects)?.fadeInActive();
+          
+        
 
         director.preloadScene(customEventData, function  (completedCount, totalCount, item) {
             if (labelTemp) {
@@ -49,11 +64,12 @@ export class OpenLevelByName extends Component {
 
     loadAndPlaySceneByNameD(customEventData: string) {
       this.loadingPanel.getComponent(ScriptEffects)?.fadeInActive();
-
-      //GameManager.getInstance().Progress = 0;
-      bar.waka2();
-
-
+      
+      if( this.findSceneDataByName(customEventData)  != null) 
+        localSceneData.setData( this.findSceneDataByName(customEventData) );
+        //localSceneData = this.findSceneDataByName(customEventData);
+      else
+        console.log("Can't find the right scene!");
 
       director.preloadScene(customEventData, function  (completedCount, totalCount, item) {
           if (labelTemp) {

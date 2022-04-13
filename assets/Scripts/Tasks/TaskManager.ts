@@ -16,7 +16,8 @@ const { ccclass, property } = _decorator;
  */
  import { DetectTypeOfDevice } from "../DetectTypeOfDevice";
 import { FollowGoForward } from '../FollowGoForward';
-import { GameManager } from '../GameManager';
+import { GameManager, localSceneData } from '../GameManager';
+import { GlobalManager, levelObject } from '../GlobalManager';
 import { TrophiesManagment } from '../TrophiesManagment';
 import { ButtonDisabler } from '../Utilities/ButtonDisabler';
 import { GenericUI } from '../Utilities/GenericUI';
@@ -109,6 +110,12 @@ export class TaskManager extends Component {
                 GameManager.getInstance().Progress = newProgress;
 
         GameManager.getInstance().trophies?.getComponent(TrophiesManagment)?.calculateLockedWithEffect();
+
+        
+        GlobalManager.getInstance().levelsArray.forEach(element => {
+            if(localSceneData.sceneName == element.sceneName)
+                element.setData(localSceneData);            
+        });
     }
 
     checkReadinesForTasks() {

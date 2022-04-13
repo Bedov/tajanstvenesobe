@@ -70,18 +70,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         levelButtonClicked() {
-          var _getInstance$openLeve;
-
-          console.log("  GlobalManager.getInstance().openLevelByName " + ((_getInstance$openLeve = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().openLevelByName) === null || _getInstance$openLeve === void 0 ? void 0 : _getInstance$openLeve.name));
-
           if (!this.lockedButton) {
-            var _getInstance$openLeve2;
+            var _getInstance$openLeve;
 
-            (_getInstance$openLeve2 = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            (_getInstance$openLeve = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
-            }), GlobalManager) : GlobalManager).getInstance().openLevelByName) === null || _getInstance$openLeve2 === void 0 ? void 0 : _getInstance$openLeve2.loadAndPlaySceneByNameD(this.levelName.toString());
+            }), GlobalManager) : GlobalManager).getInstance().openLevelByName) === null || _getInstance$openLeve === void 0 ? void 0 : _getInstance$openLeve.loadAndPlaySceneByNameD(this.levelName.toString());
             this.buttonColorsLogic.lockAllButtons();
           }
         } // update (deltaTime: number) {

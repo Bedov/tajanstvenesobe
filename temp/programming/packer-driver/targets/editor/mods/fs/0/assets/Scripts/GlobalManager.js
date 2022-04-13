@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, GeneralInformations, _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, sys, GameStatuType, OpenLevelByName, levelObject, globalProgress, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _temp, _crd, generalProgress, downloading, settingData, globalInformations, ccclass, property, GlobalManager, levelStatus;
+  var _reporterNs, _cclegacy, GeneralInformations, _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, sys, GameStatuType, OpenLevelByName, levelObject, globalProgress, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _class3, _temp, _crd, downloading, settingData, ccclass, property, globalInformations, kinderGardenData, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, christmasVillage, easterVillageData, happyStreetData, undergroundChamberData, invisablePeopleCity, GlobalManager, levelStatus;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -51,6 +51,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
       _export("GeneralInformations", GeneralInformations = class GeneralInformations {
         constructor() {
+          _defineProperty(this, "globalProgress", 0);
+
           _defineProperty(this, "springFest", void 0);
 
           _defineProperty(this, "playfullCity", void 0);
@@ -100,16 +102,72 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
       });
 
-      generalProgress = 0;
       downloading = false;
       settingData = false;
-      globalInformations = new GeneralInformations();
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("GlobalManager", GlobalManager = (_dec = ccclass('GlobalManager'), _dec2 = property(Node), _dec3 = property(String), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(Node), _dec15 = property(EditBoxComponent), _dec(_class = (_class2 = (_temp = _class3 = class GlobalManager extends Component {
+      _export("levelObject", levelObject = class levelObject {
+        constructor() {
+          _defineProperty(this, "sceneName", void 0);
+
+          _defineProperty(this, "ID", void 0);
+
+          _defineProperty(this, "status", void 0);
+
+          _defineProperty(this, "levelProgress", void 0);
+
+          this.sceneName = "";
+          this.ID = 0;
+          this.status = 0;
+          this.levelProgress = 0;
+        }
+
+        setData(level) {
+          this.sceneName = level.sceneName;
+          this.ID = level.ID;
+          this.status = level.status;
+          this.levelProgress = level.levelProgress;
+        }
+
+      });
+
+      _export("globalInformations", globalInformations = new GeneralInformations()); //Prvi Razred
+
+
+      _export("kinderGardenData", kinderGardenData = new levelObject());
+
+      kinderGardenData.sceneName = "KinderGarden";
+
+      _export("birthdayPartyData", birthdayPartyData = new levelObject());
+
+      birthdayPartyData.sceneName = "BirthdayParty";
+
+      _export("playfulCityData", playfulCityData = new levelObject());
+
+      playfulCityData.sceneName = "RaziganiGrad";
+
+      _export("springFestData", springFestData = new levelObject());
+
+      springFestData.sceneName = "ProlecniKarneval";
+
+      _export("medivalVillageData", medivalVillageData = new levelObject());
+
+      medivalVillageData.sceneName = "MedivalVillage"; //Drugi Razred
+
+      _export("christmasVillage", christmasVillage = new levelObject());
+
+      _export("easterVillageData", easterVillageData = new levelObject());
+
+      _export("happyStreetData", happyStreetData = new levelObject());
+
+      _export("undergroundChamberData", undergroundChamberData = new levelObject());
+
+      _export("invisablePeopleCity", invisablePeopleCity = new levelObject());
+
+      _export("GlobalManager", GlobalManager = (_dec = ccclass('GlobalManager'), _dec2 = property(Number), _dec3 = property(Node), _dec4 = property(String), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(Label), _dec15 = property(Node), _dec16 = property(EditBoxComponent), _dec(_class = (_class2 = (_temp = _class3 = class GlobalManager extends Component {
         constructor(...args) {
           super(...args);
 
@@ -123,39 +181,39 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             error: Error()
           }), GameStatuType) : GameStatuType).gameTutorial);
 
-          _defineProperty(this, "globalProgress", 0);
+          _initializerDefineProperty(this, "projectNumber", _descriptor, this);
 
-          _initializerDefineProperty(this, "canvas", _descriptor, this);
+          _defineProperty(this, "levelsArray", []);
 
-          _defineProperty(this, "Progress", 0);
+          _initializerDefineProperty(this, "canvas", _descriptor2, this);
 
-          _initializerDefineProperty(this, "LanguageName", _descriptor2, this);
+          _initializerDefineProperty(this, "LanguageName", _descriptor3, this);
 
-          _initializerDefineProperty(this, "springFest", _descriptor3, this);
+          _initializerDefineProperty(this, "springFest", _descriptor4, this);
 
-          _initializerDefineProperty(this, "playfullCity", _descriptor4, this);
+          _initializerDefineProperty(this, "playfullCity", _descriptor5, this);
 
-          _initializerDefineProperty(this, "easterVillage", _descriptor5, this);
+          _initializerDefineProperty(this, "easterVillage", _descriptor6, this);
 
-          _initializerDefineProperty(this, "birthdayParty", _descriptor6, this);
+          _initializerDefineProperty(this, "birthdayParty", _descriptor7, this);
 
-          _initializerDefineProperty(this, "christmasVillage", _descriptor7, this);
+          _initializerDefineProperty(this, "christmasVillage", _descriptor8, this);
 
-          _initializerDefineProperty(this, "medievalTown", _descriptor8, this);
+          _initializerDefineProperty(this, "medievalTown", _descriptor9, this);
 
-          _initializerDefineProperty(this, "happyStreet", _descriptor9, this);
+          _initializerDefineProperty(this, "happyStreet", _descriptor10, this);
 
-          _initializerDefineProperty(this, "backToKindergarden", _descriptor10, this);
+          _initializerDefineProperty(this, "backToKindergarden", _descriptor11, this);
 
-          _initializerDefineProperty(this, "undergroundChamber", _descriptor11, this);
+          _initializerDefineProperty(this, "undergroundChamber", _descriptor12, this);
 
-          _initializerDefineProperty(this, "invisablePeopleCity", _descriptor12, this);
+          _initializerDefineProperty(this, "invisablePeopleCity", _descriptor13, this);
 
-          _initializerDefineProperty(this, "Player", _descriptor13, this);
+          _initializerDefineProperty(this, "Player", _descriptor14, this);
 
           _defineProperty(this, "openLevelByName", void 0);
 
-          _initializerDefineProperty(this, "LanguageBox", _descriptor14, this);
+          _initializerDefineProperty(this, "LanguageBox", _descriptor15, this);
 
           _defineProperty(this, "originUrl", "https://abedov.com/json");
         }
@@ -172,8 +230,32 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           return GlobalManager.instance;
         }
 
+        setWorldArray() {
+          switch (this.projectNumber) {
+            case 1:
+              this.levelsArray.push(kinderGardenData);
+              this.levelsArray.push(birthdayPartyData);
+              this.levelsArray.push(playfulCityData);
+              this.levelsArray.push(springFestData);
+              this.levelsArray.push(medivalVillageData);
+              break;
+
+            case 2:
+              this.levelsArray.push(christmasVillage);
+              this.levelsArray.push(easterVillageData);
+              this.levelsArray.push(happyStreetData);
+              this.levelsArray.push(undergroundChamberData);
+              this.levelsArray.push(invisablePeopleCity);
+              break;
+
+            default:
+              break;
+          }
+        }
+
         onLoad() {
           GlobalManager.instance = this;
+          this.setWorldArray();
           this.openLevelByName = this.canvas.getComponent(_crd && OpenLevelByName === void 0 ? (_reportPossibleCrUseOfOpenLevelByName({
             error: Error()
           }), OpenLevelByName) : OpenLevelByName);
@@ -181,19 +263,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         addProgressTest() {
-          this.globalProgress++;
+          globalInformations.globalProgress++;
           this.refreshLevelButtons();
         }
 
         refreshLevelButtons() {}
-
-        setGeneralProgress(progress) {
-          generalProgress = progress;
-        }
-
-        getGeneralProgress() {
-          return generalProgress;
-        }
 
         setPlatformType() {
           if (sys.os == sys.OS.ANDROID || sys.os == sys.OS.IOS || sys.platform == sys.Platform.MOBILE_BROWSER) this.isMobileOrTablet = true;
@@ -272,95 +346,84 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.invisablePeopleCity.string = globalInformations.invisablePeopleCity;
         }
 
-      }, _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "canvas", [_dec2], {
+      }, _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "projectNumber", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return 0;
+        }
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "canvas", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "LanguageName", [_dec3], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "LanguageName", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "springFest", [_dec4], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "springFest", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "playfullCity", [_dec5], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "playfullCity", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "easterVillage", [_dec6], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "easterVillage", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "birthdayParty", [_dec7], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "birthdayParty", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "christmasVillage", [_dec8], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "christmasVillage", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "medievalTown", [_dec9], {
+      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "medievalTown", [_dec10], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "happyStreet", [_dec10], {
+      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "happyStreet", [_dec11], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "backToKindergarden", [_dec11], {
+      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "backToKindergarden", [_dec12], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "undergroundChamber", [_dec12], {
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "undergroundChamber", [_dec13], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "invisablePeopleCity", [_dec13], {
+      }), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "invisablePeopleCity", [_dec14], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "Player", [_dec14], {
+      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "Player", [_dec15], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "LanguageBox", [_dec15], {
+      }), _descriptor15 = _applyDecoratedDescriptor(_class2.prototype, "LanguageBox", [_dec16], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
       })), _class2)) || _class));
-
-      _export("levelObject", levelObject = class levelObject {
-        constructor() {
-          _defineProperty(this, "name", void 0);
-
-          _defineProperty(this, "ID", void 0);
-
-          _defineProperty(this, "status", void 0);
-
-          _defineProperty(this, "levelProgress", void 0);
-
-          this.name = "";
-          this.ID = 0;
-          this.status = 0;
-          this.levelProgress = 0;
-        }
-
-      });
 
       (function (levelStatus) {
         levelStatus[levelStatus["locked"] = 0] = "locked";

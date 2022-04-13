@@ -18,6 +18,7 @@ const { ccclass, property } = _decorator;
  
 @ccclass('LevelButtonClicked')
 export class LevelButtonClicked extends Component {
+    
     @property(String)
     levelName!: String;
 
@@ -31,7 +32,6 @@ export class LevelButtonClicked extends Component {
     }
 
     levelButtonClicked() {
-        console.log("  GlobalManager.getInstance().openLevelByName " +  GlobalManager.getInstance().openLevelByName?.name);
         
         if(!this.lockedButton) {
             GlobalManager.getInstance().openLevelByName?.loadAndPlaySceneByNameD( this.levelName.toString() );

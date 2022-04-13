@@ -1,5 +1,6 @@
 
 import { _decorator, Component, Node, director, Label, sys, AudioSource } from 'cc';
+import { levelObject } from './GlobalManager';
 const { ccclass, property } = _decorator;
 
 /**
@@ -16,37 +17,11 @@ const { ccclass, property } = _decorator;
  */
 import { JSONloader } from "./RemoteScripts/JSONloader";
 import { LoadingHandler } from './RemoteScripts/LoadingHandler';
- 
-export  class LocalProgress {
-    worldProgress = 0;
-
-    static waka1() {
-        //throw new Error('Method not implemented.');
-        console.log("Jel se ovo desi nekad1 ");
-    }
-    
-    waka2() {
-        console.log("Jel se ovo desi nekad2");
-        
-      }
-
-    constructor() {
-        console.log("Jel se ovo desi nekad3 ");
-    }
-
-    }
 
 
-//let localProgress1 = new LocalProgress();
 
-const bar = new LocalProgress();
-export { bar };
-
-//var localProgress2 = new LocalProgress;
-//localProgress2.waka2();
-
-
-var worldProgress = 0;
+var localSceneData = new  levelObject();
+export { localSceneData };
 
  export enum GameStatuType {
     gamePaused =    0,
@@ -111,11 +86,11 @@ export class GameManager extends Component {
     static instance: GameManager;
 
     setProgress(tempProgress: number){
-        worldProgress = tempProgress;
+        localSceneData.levelProgress = tempProgress;
     }
 
     getProgress() {
-        return worldProgress;
+        return localSceneData.levelProgress;
     }
 
     onLoad() {
@@ -127,7 +102,7 @@ export class GameManager extends Component {
     
         this.trophies = this.Canvas!.getChildByName("BottomUI")!.getChildByName("TrofejiLayout")!;
 
-        this.Progress = worldProgress;
+        this.Progress = Number (localSceneData.levelProgress);
 
         this.setPlatformType();
     }

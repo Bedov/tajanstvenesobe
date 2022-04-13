@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Material, MeshRenderer, LevelButtonClicked, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, ButtonColorsLogic;
+  var _reporterNs, _cclegacy, _decorator, Component, Material, MeshRenderer, globalInformations, GlobalManager, LevelButtonClicked, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, ButtonColorsLogic;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -10,6 +10,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  function _reportPossibleCrUseOfglobalInformations(extras) {
+    _reporterNs.report("globalInformations", "../GlobalManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfLevelButtonClicked(extras) {
     _reporterNs.report("LevelButtonClicked", "../UI/LevelButtoClicked", _context.meta, extras);
@@ -25,7 +33,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Material = _cc.Material;
       MeshRenderer = _cc.MeshRenderer;
     }, function (_unresolved_2) {
-      LevelButtonClicked = _unresolved_2.LevelButtonClicked;
+      globalInformations = _unresolved_2.globalInformations;
+      GlobalManager = _unresolved_2.GlobalManager;
+    }, function (_unresolved_3) {
+      LevelButtonClicked = _unresolved_3.LevelButtonClicked;
     }],
     execute: function () {
       _crd = true;
@@ -61,12 +72,30 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         start() {
+          console.log("!!!!");
           this.buttonsArray.push(this.node.getChildByName("1"));
           this.buttonsArray.push(this.node.getChildByName("2"));
           this.buttonsArray.push(this.node.getChildByName("3"));
           this.buttonsArray.push(this.node.getChildByName("4"));
           this.buttonsArray.push(this.node.getChildByName("5"));
-          this.refreshColors(3);
+          this.refreshColors((_crd && globalInformations === void 0 ? (_reportPossibleCrUseOfglobalInformations({
+            error: Error()
+          }), globalInformations) : globalInformations).globalProgress);
+          this.setSceneNamesToButtons();
+        }
+
+        setSceneNamesToButtons() {
+          var levelArray = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().levelsArray;
+
+          for (var index = 0; index < levelArray.length; index++) {
+            this.buttonsArray[index].getComponent(_crd && LevelButtonClicked === void 0 ? (_reportPossibleCrUseOfLevelButtonClicked({
+              error: Error()
+            }), LevelButtonClicked) : LevelButtonClicked).levelName = String(levelArray[index].sceneName);
+          }
+
+          console.log("!!!! String (levelArray[index].sceneName)" + String(levelArray[1].sceneName));
         }
 
         refreshColors(progress) {

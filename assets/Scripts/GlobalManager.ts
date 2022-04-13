@@ -1,5 +1,6 @@
 export class GeneralInformations {
-    
+    public globalProgress : number = 0;
+
     springFest?: string;
     playfullCity?: string;
     easterVillage?: string;
@@ -43,21 +44,66 @@ export class GeneralInformations {
 }
 
 
-
-
-var generalProgress = 0;
-
 var downloading = false;
 var settingData = false;
 
-var globalInformations = new GeneralInformations;
+
 
 import { _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, AffineTransform, sys } from 'cc';
 import { GameStatuType } from './GameManager';
 import { OpenLevelByName } from './Utilities/OpenLevelByName';
 const { ccclass, property } = _decorator;
 
+export class levelObject {
+    
+    sceneName?: string;
+    ID?: number;
+    status? : levelStatus;
+    levelProgress? : number;
 
+    constructor() {
+        this.sceneName = "";
+        this.ID = 0;
+        this.status = 0
+        this.levelProgress = 0;
+    }
+
+    setData(level: levelObject) {
+        this.sceneName = level.sceneName;
+        this.ID = level.ID;
+        this.status = level.status;
+        this.levelProgress = level.levelProgress;
+    }
+    
+
+}
+
+var globalInformations = new GeneralInformations;
+
+//Prvi Razred
+var kinderGardenData = new levelObject();
+kinderGardenData.sceneName = "KinderGarden";
+
+var birthdayPartyData = new levelObject();
+birthdayPartyData.sceneName = "BirthdayParty";
+
+var playfulCityData = new levelObject();
+playfulCityData.sceneName = "RaziganiGrad";
+
+var springFestData = new levelObject();
+springFestData.sceneName = "ProlecniKarneval";
+
+var medivalVillageData = new levelObject();
+medivalVillageData.sceneName = "MedivalVillage";
+
+//Drugi Razred
+var christmasVillage = new levelObject();
+var easterVillageData = new levelObject();
+var happyStreetData = new levelObject();
+var undergroundChamberData = new levelObject();
+var invisablePeopleCity = new levelObject();
+
+export { kinderGardenData, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, christmasVillage, easterVillageData, happyStreetData, undergroundChamberData, invisablePeopleCity, globalInformations};
  
 @ccclass('GlobalManager')
 export class GlobalManager extends Component {
@@ -75,12 +121,15 @@ export class GlobalManager extends Component {
 
     gameStatus? : GameStatuType = GameStatuType.gameTutorial;
 
-    globalProgress : number = 0;
+    
+    @property(Number)
+    projectNumber : Number = 0;
+
+    levelsArray: Array<levelObject> = [];
 
     @property(Node)
     canvas?: Node;
 
-    Progress : number = 0;
 
     @property(String)
     LanguageName?: String;
@@ -129,17 +178,39 @@ export class GlobalManager extends Component {
     originUrl = "https://abedov.com/json"; 
 
 
-
+    setWorldArray() {
+        switch (this.projectNumber) {
+            case 1:
+                this.levelsArray.push(kinderGardenData);
+                this.levelsArray.push(birthdayPartyData);
+                this.levelsArray.push(playfulCityData);
+                this.levelsArray.push(springFestData);
+                this.levelsArray.push(medivalVillageData);
+                break;
+            case 2:
+                this.levelsArray.push(christmasVillage);
+                this.levelsArray.push(easterVillageData);
+                this.levelsArray.push(happyStreetData);
+                this.levelsArray.push(undergroundChamberData);
+                this.levelsArray.push(invisablePeopleCity);
+                break;
+            default:
+                break;
+        }
+    }
+    
 
     onLoad() {
         GlobalManager.instance = this;
+
+        this.setWorldArray();
 
         this.openLevelByName = this.canvas!.getComponent(OpenLevelByName)!;
         this.setPlatformType();
     }
 
     addProgressTest () {
-        this.globalProgress ++;
+        globalInformations.globalProgress ++;
         this.refreshLevelButtons();
     }
 
@@ -147,13 +218,6 @@ export class GlobalManager extends Component {
 
     }
 
-    setGeneralProgress(progress: number) {
-        generalProgress = progress;
-    }
-
-    getGeneralProgress() {
-        return generalProgress;
-    }
     
     setPlatformType() {
         
@@ -225,6 +289,8 @@ export class GlobalManager extends Component {
        
     } 
 
+    
+
     update(){
         if(settingData == true)
             if(downloading == false) {
@@ -247,22 +313,6 @@ export class GlobalManager extends Component {
         this.invisablePeopleCity!.string = globalInformations.invisablePeopleCity!;
     }
     
-}
-
-export class levelObject {
-    
-    name?: string;
-    ID?: number;
-    status? : levelStatus;
-    levelProgress? : number;
-
-    constructor() {
-        this.name = "";
-        this.ID = 0;
-        this.status = 0
-        this.levelProgress = 0;
-    }
-
 }
 
 export enum levelStatus {

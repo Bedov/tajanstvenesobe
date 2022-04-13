@@ -90,8 +90,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.KeyboardSeeSymbol = this.node.getChildByName("DesktopLookTutorial");
           this.MobileSeeSymbol = this.node.getChildByName("MobileLookTutorial");
           this.MobileMoveSymbol = this.node.getChildByName("MobileMoveTutorial");
-          this.MobileMoveJoystick = this.node.getChildByName("joystick");
-          this.checkProgressForTutorial(); //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
+          this.MobileMoveJoystick = this.node.getChildByName("joystick"); //this.checkProgressForTutorial();
+          //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
         }
 
         start() {
@@ -117,14 +117,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         checkProgressForTutorial() {
-          if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().Progress != 0) {
-            this._moveTutorialEndBool = true;
-            this._moveTimerBool = false;
-            this._lookdontRepeatTutorialEndevent = true;
-            this._lookTimerBool = false;
-          }
+          //if(GlobalManager.getInstance().Progress != 0) {
+          this._moveTutorialEndBool = true;
+          this._moveTimerBool = false;
+          this._lookdontRepeatTutorialEndevent = true;
+          this._lookTimerBool = false; //}
         }
 
         onDestroy() {

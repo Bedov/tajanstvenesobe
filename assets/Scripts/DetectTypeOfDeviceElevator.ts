@@ -58,7 +58,7 @@ export class DetectTypeOfDeviceElevator extends Component {
 
         this.MobileMoveJoystick = this.node.getChildByName("joystick")!;
 
-        this.checkProgressForTutorial();
+        //this.checkProgressForTutorial();
         //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
     }
 
@@ -89,12 +89,12 @@ export class DetectTypeOfDeviceElevator extends Component {
     }
 
     checkProgressForTutorial() {
-        if(GlobalManager.getInstance().Progress != 0) {
+        //if(GlobalManager.getInstance().Progress != 0) {
             this._moveTutorialEndBool = true;
             this._moveTimerBool = false;
             this._lookdontRepeatTutorialEndevent = true;
             this._lookTimerBool = false;
-        }
+       //}
     }
 
     onDestroy(){

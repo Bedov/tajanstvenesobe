@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, bar, ScriptEffects, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, labelTemp, OpenLevelByName;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, localSceneData, GlobalManager, levelObject, ScriptEffects, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, labelTemp, OpenLevelByName;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,8 +11,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
-  function _reportPossibleCrUseOfbar(extras) {
-    _reporterNs.report("bar", "../GameManager", _context.meta, extras);
+  function _reportPossibleCrUseOflocalSceneData(extras) {
+    _reporterNs.report("localSceneData", "../GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOflevelObject(extras) {
+    _reporterNs.report("levelObject", "../GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfScriptEffects(extras) {
@@ -30,9 +38,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       director = _cc.director;
       Label = _cc.Label;
     }, function (_unresolved_2) {
-      bar = _unresolved_2.bar;
+      localSceneData = _unresolved_2.localSceneData;
     }, function (_unresolved_3) {
-      ScriptEffects = _unresolved_3.ScriptEffects;
+      GlobalManager = _unresolved_3.GlobalManager;
+      levelObject = _unresolved_3.levelObject;
+    }, function (_unresolved_4) {
+      ScriptEffects = _unresolved_4.ScriptEffects;
     }],
     execute: function () {
       _crd = true;
@@ -68,6 +79,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           labelTemp = this.loadingPercentLable;
         }
 
+        findSceneDataByName(sceneName) {
+          var levelsArray = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().levelsArray;
+          levelsArray.forEach(element => {
+            if (element.sceneName == sceneName) return element;
+          });
+          return new (_crd && levelObject === void 0 ? (_reportPossibleCrUseOflevelObject({
+            error: Error()
+          }), levelObject) : levelObject)();
+        }
+
         loadAndPlaySceneByName(event, customEventData) {
           var _this$loadingPanel$ge;
 
@@ -94,11 +117,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           (_this$loadingPanel$ge2 = this.loadingPanel.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
-          }), ScriptEffects) : ScriptEffects)) === null || _this$loadingPanel$ge2 === void 0 ? void 0 : _this$loadingPanel$ge2.fadeInActive(); //GameManager.getInstance().Progress = 0;
-
-          (_crd && bar === void 0 ? (_reportPossibleCrUseOfbar({
+          }), ScriptEffects) : ScriptEffects)) === null || _this$loadingPanel$ge2 === void 0 ? void 0 : _this$loadingPanel$ge2.fadeInActive();
+          if (this.findSceneDataByName(customEventData) != null) (_crd && localSceneData === void 0 ? (_reportPossibleCrUseOflocalSceneData({
             error: Error()
-          }), bar) : bar).waka2();
+          }), localSceneData) : localSceneData).setData(this.findSceneDataByName(customEventData)); //localSceneData = this.findSceneDataByName(customEventData);
+          else console.log("Can't find the right scene!");
           director.preloadScene(customEventData, function (completedCount, totalCount, item) {
             if (labelTemp) {
               var percent = 0;
