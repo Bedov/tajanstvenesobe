@@ -180,15 +180,6 @@
     "physicalLocation": "fs/0/assets/Scripts/Utilities/GetFPS.js",
     "mTimestamp": 1647790820377
   },
-  "assets/Scripts/Utilities/ButtonDisabler.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Utilities/ButtonDisabler.js",
-    "mTimestamp": 1647790820481
-  },
   "assets/Scripts/Utilities/ScriptEffects.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
@@ -329,15 +320,6 @@
     "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskInput.js",
     "mTimestamp": 1648134581601
   },
-  "assets/Scripts/RemoteScripts/JSONloader.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/RemoteScripts/JSONloader.js",
-    "mTimestamp": 1648151338228
-  },
   "assets/Scripts/Utilities/GenericUI-Image.js": {
     "imports": {
       "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
@@ -358,17 +340,6 @@
     },
     "physicalLocation": "fs/0/assets/Scripts/Utilities/SettingsUI.js",
     "mTimestamp": 1648478525896
-  },
-  "assets/Scripts/Tasks/TaskABCquestion.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_2": "assets/Scripts/Tasks/Task.js",
-      "__unresolved_3": "assets/Scripts/GameManager.js",
-      "__unresolved_1": "assets/Scripts/Utilities/GenericUI-ABC.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskABCquestion.js",
-    "mTimestamp": 1648481104335
   },
   "assets/Scripts/TrophiesManagment.js": {
     "imports": {
@@ -474,26 +445,6 @@
     "physicalLocation": "fs/0/assets/Scripts/SlideRotateCamera.js",
     "mTimestamp": 1648822028531
   },
-  "assets/Scripts/SlideRotateCameraElevator.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js",
-      "__unresolved_2": "assets/Scripts/GlobalManager.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/SlideRotateCameraElevator.js",
-    "mTimestamp": 1648823311789
-  },
-  "assets/Scripts/FirstPersonCameraMovementElevator.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js",
-      "__unresolved_2": "assets/Scripts/GlobalManager.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/FirstPersonCameraMovementElevator.js",
-    "mTimestamp": 1648823311898
-  },
   "assets/Scripts/TouchInput-001.js": {
     "imports": {
       "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
@@ -502,15 +453,6 @@
     },
     "physicalLocation": "fs/0/assets/Scripts/TouchInput-001.js",
     "mTimestamp": 1648824877074
-  },
-  "assets/Scripts/UI/3DbuttonActivate.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/Tasks/Task.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/UI/3DbuttonActivate.js",
-    "mTimestamp": 1649067573851
   },
   "assets/Scripts/TouchInputElevator.js": {
     "imports": {
@@ -566,21 +508,253 @@
     "physicalLocation": "fs/0/assets/Scripts/Utilities/TopCameraLook.js",
     "mTimestamp": 1649181263367
   },
-  "assets/Scripts/TouchInput.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/TouchInput.js",
-    "mTimestamp": 1649252656819
-  },
   "assets/Scripts/Utilities/TurnOffNode.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
     },
     "physicalLocation": "fs/0/assets/Scripts/Utilities/TurnOffNode.js",
     "mTimestamp": 1649410926251
+  },
+  "assets/Scripts/Tasks/TaskABCquestion-001.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/Utilities/GenericUI-ABC.js",
+      "__unresolved_2": "assets/Scripts/Tasks/Task.js",
+      "__unresolved_3": "assets/Scripts/GameManager.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskABCquestion-001.js",
+    "mTimestamp": 1649685238321
+  },
+  "assets/Scripts/Tasks/TaskAutoActive-001.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/Utilities/ScriptEffects.js",
+      "__unresolved_5": "assets/Scripts/RemoteScripts/JSONloader.js",
+      "__unresolved_4": "assets/Scripts/GameManager.js",
+      "__unresolved_2": "assets/Scripts/Utilities/GenericUI.js",
+      "__unresolved_3": "assets/Scripts/Tasks/Task.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskAutoActive-001.js",
+    "mTimestamp": 1649685599635
+  },
+  "assets/Scripts/Tasks/TaskTutorialTask.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_3": "assets/Scripts/DetectTypeOfDevice.js",
+      "__unresolved_4": "assets/Scripts/Tasks/Task.js",
+      "__unresolved_5": "assets/Scripts/GameManager.js",
+      "__unresolved_6": "assets/Scripts/RemoteScripts/JSONloader.js",
+      "__unresolved_2": "assets/Scripts/Utilities/GenericUI.js",
+      "__unresolved_1": "assets/Scripts/Utilities/ScriptEffects.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskTutorialTask.js",
+    "mTimestamp": 1649690262180
+  },
+  "assets/Scripts/Utilities/GenericUI.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GameManager.js",
+      "__unresolved_2": "assets/Scripts/GlobalManager.js",
+      "__unresolved_3": "assets/Scripts/Tasks/Task.js",
+      "__unresolved_4": "assets/Scripts/Utilities/ScriptEffects.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Utilities/GenericUI.js",
+    "mTimestamp": 1649691150551
+  },
+  "assets/Scripts/DetectTypeOfDevice.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GameManager.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/DetectTypeOfDevice.js",
+    "mTimestamp": 1649691669912
+  },
+  "assets/Scripts/Tasks/TaskManager.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/Checkpoint/Checkpoint.js",
+      "__unresolved_2": "assets/Scripts/FollowGoForward.js",
+      "__unresolved_3": "assets/Scripts/GameManager.js",
+      "__unresolved_4": "assets/Scripts/GlobalManager.js",
+      "__unresolved_7": "assets/Scripts/Tasks/Task.js",
+      "__unresolved_5": "assets/Scripts/TrophiesManagment.js",
+      "__unresolved_6": "assets/Scripts/Utilities/ButtonDisabler.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskManager.js",
+    "mTimestamp": 1649853530785
+  },
+  "assets/Scripts/SlideRotateCameraElevator.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GameManager.js",
+      "__unresolved_2": "assets/Scripts/GlobalManager.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/SlideRotateCameraElevator.js",
+    "mTimestamp": 1649857581604
+  },
+  "assets/Scripts/FirstPersonCameraMovementElevator.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GameManager.js",
+      "__unresolved_2": "assets/Scripts/GlobalManager.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/FirstPersonCameraMovementElevator.js",
+    "mTimestamp": 1649857636219
+  },
+  "assets/Scripts/Utilities/OpenLevelByName.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GlobalManager.js",
+      "__unresolved_2": "assets/Scripts/Utilities/ScriptEffects.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Utilities/OpenLevelByName.js",
+    "mTimestamp": 1649858086219
+  },
+  "assets/Scripts/UI/LevelButtoClicked.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/Goldberg/ButtonColorsLogic.js",
+      "__unresolved_2": "assets/Scripts/Utilities/OpenLevelByName.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/UI/LevelButtoClicked.js",
+    "mTimestamp": 1649858502974
+  },
+  "assets/Scripts/Goldberg/ButtonColorsLogic.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GlobalManager.js",
+      "__unresolved_2": "assets/Scripts/UI/LevelButtoClicked.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Goldberg/ButtonColorsLogic.js",
+    "mTimestamp": 1649859846813
+  },
+  "assets/Scripts/Utilities/ButtonDisabler.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GameManager.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Utilities/ButtonDisabler.js",
+    "mTimestamp": 1649862481705
+  },
+  "assets/Scripts/UI/3DbuttonActivate.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/Tasks/Task.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/UI/3DbuttonActivate.js",
+    "mTimestamp": 1649864505862
+  },
+  "assets/Scripts/GameManager.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GlobalManager.js",
+      "__unresolved_2": "assets/Scripts/RemoteScripts/JSONloader.js",
+      "__unresolved_3": "assets/Scripts/RemoteScripts/LoadingHandler.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/GameManager.js",
+    "mTimestamp": 1649866369709
+  },
+  "assets/Scripts/Tasks/Task.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_2": "assets/Scripts/Consequences/Consequence.js",
+      "__unresolved_3": "assets/Scripts/GameManager.js",
+      "__unresolved_1": "assets/Scripts/Utilities/GenericUI.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Tasks/Task.js",
+    "mTimestamp": 1649936080382
+  },
+  "assets/Scripts/Tasks/TaskABCquestion.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_2": "assets/Scripts/Tasks/Task.js",
+      "__unresolved_3": "assets/Scripts/GameManager.js",
+      "__unresolved_1": "assets/Scripts/Utilities/GenericUI-ABC.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskABCquestion.js",
+    "mTimestamp": 1650016490090
+  },
+  "assets/Scripts/Tasks/TaskAutoActive.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_3": "assets/Scripts/DetectTypeOfDevice.js",
+      "__unresolved_4": "assets/Scripts/Tasks/Task.js",
+      "__unresolved_5": "assets/Scripts/GameManager.js",
+      "__unresolved_6": "assets/Scripts/RemoteScripts/JSONloader.js",
+      "__unresolved_2": "assets/Scripts/Utilities/GenericUI.js",
+      "__unresolved_1": "assets/Scripts/Utilities/ScriptEffects.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskAutoActive.js",
+    "mTimestamp": 1650017390090
+  },
+  "assets/Scripts/UI/3DbuttonRaycast.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GameManager.js",
+      "__unresolved_2": "assets/Scripts/GlobalManager.js",
+      "__unresolved_3": "assets/Scripts/UI/3DbuttonActivate.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/UI/3DbuttonRaycast.js",
+    "mTimestamp": 1650017656096
+  },
+  "assets/Scripts/RemoteScripts/JSONloader.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GameManager.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/RemoteScripts/JSONloader.js",
+    "mTimestamp": 1650018548499
+  },
+  "assets/Scripts/TouchInput.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/FirstPersonCameraMovementTest.js",
+      "__unresolved_2": "assets/Scripts/DetectTypeOfDevice.js",
+      "__unresolved_4": "assets/Scripts/FirstPersonCameraMovementElevator.js",
+      "__unresolved_3": "assets/Scripts/DetectTypeOfDeviceElevator.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/TouchInput.js",
+    "mTimestamp": 1650021406449
+  },
+  "assets/Scripts/Tasks/TaskEnding.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/Tasks/Task.js",
+      "__unresolved_2": "assets/Scripts/GameManager.js",
+      "__unresolved_3": "assets/Scripts/GlobalManager.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskEnding.js",
+    "mTimestamp": 1650023458471
+  },
+  "assets/Scripts/GlobalManager.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/GameManager.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/GlobalManager.js",
+    "mTimestamp": 1650023484476
   },
   "quick-pack:/cce/internal/x/cc.js": {
     "imports": {
@@ -682,196 +856,14 @@
       }
     },
     "physicalLocation": "cce/internal/x/cc.js",
-    "mTimestamp": 1649607617415,
+    "mTimestamp": 1650364912168,
     "isEntry": true,
     "exposeAs": "cce:/internal/x/cc"
   },
   "quick-pack:/cce/internal/code-quality/cr.js": {
     "imports": {},
     "physicalLocation": "cce/internal/code-quality/cr.js",
-    "mTimestamp": 1649607617544
-  },
-  "assets/Scripts/Tasks/TaskABCquestion-001.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/Utilities/GenericUI-ABC.js",
-      "__unresolved_2": "assets/Scripts/Tasks/Task.js",
-      "__unresolved_3": "assets/Scripts/GameManager.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskABCquestion-001.js",
-    "mTimestamp": 1649685238321
-  },
-  "assets/Scripts/Tasks/TaskAutoActive-001.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/Utilities/ScriptEffects.js",
-      "__unresolved_5": "assets/Scripts/RemoteScripts/JSONloader.js",
-      "__unresolved_4": "assets/Scripts/GameManager.js",
-      "__unresolved_2": "assets/Scripts/Utilities/GenericUI.js",
-      "__unresolved_3": "assets/Scripts/Tasks/Task.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskAutoActive-001.js",
-    "mTimestamp": 1649685599635
-  },
-  "assets/Scripts/Tasks/TaskTutorialTask.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_3": "assets/Scripts/DetectTypeOfDevice.js",
-      "__unresolved_4": "assets/Scripts/Tasks/Task.js",
-      "__unresolved_5": "assets/Scripts/GameManager.js",
-      "__unresolved_6": "assets/Scripts/RemoteScripts/JSONloader.js",
-      "__unresolved_2": "assets/Scripts/Utilities/GenericUI.js",
-      "__unresolved_1": "assets/Scripts/Utilities/ScriptEffects.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskTutorialTask.js",
-    "mTimestamp": 1649690262180
-  },
-  "assets/Scripts/Tasks/Task.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_2": "assets/Scripts/Consequences/Consequence.js",
-      "__unresolved_3": "assets/Scripts/GameManager.js",
-      "__unresolved_1": "assets/Scripts/Utilities/GenericUI.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Tasks/Task.js",
-    "mTimestamp": 1649690813711
-  },
-  "assets/Scripts/Tasks/TaskAutoActive.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_3": "assets/Scripts/DetectTypeOfDevice.js",
-      "__unresolved_4": "assets/Scripts/Tasks/Task.js",
-      "__unresolved_5": "assets/Scripts/GameManager.js",
-      "__unresolved_6": "assets/Scripts/RemoteScripts/JSONloader.js",
-      "__unresolved_2": "assets/Scripts/Utilities/GenericUI.js",
-      "__unresolved_1": "assets/Scripts/Utilities/ScriptEffects.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskAutoActive.js",
-    "mTimestamp": 1649691150442
-  },
-  "assets/Scripts/Utilities/GenericUI.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js",
-      "__unresolved_2": "assets/Scripts/GlobalManager.js",
-      "__unresolved_3": "assets/Scripts/Tasks/Task.js",
-      "__unresolved_4": "assets/Scripts/Utilities/ScriptEffects.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Utilities/GenericUI.js",
-    "mTimestamp": 1649691150551
-  },
-  "assets/Scripts/Tasks/TaskEnding.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/Tasks/Task.js",
-      "__unresolved_2": "assets/Scripts/GameManager.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskEnding.js",
-    "mTimestamp": 1649691377797
-  },
-  "assets/Scripts/DetectTypeOfDevice.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/DetectTypeOfDevice.js",
-    "mTimestamp": 1649691669912
-  },
-  "assets/Scripts/UI/3DbuttonRaycast.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js",
-      "__unresolved_2": "assets/Scripts/GlobalManager.js",
-      "__unresolved_3": "assets/Scripts/UI/3DbuttonActivate.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/UI/3DbuttonRaycast.js",
-    "mTimestamp": 1649771963569
-  },
-  "assets/Scripts/DetectTypeOfDeviceElevator.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js",
-      "__unresolved_2": "assets/Scripts/GlobalManager.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/DetectTypeOfDeviceElevator.js",
-    "mTimestamp": 1649772349098
-  },
-  "assets/Scripts/UI/LevelButtoClicked.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GlobalManager.js",
-      "__unresolved_2": "assets/Scripts/Goldberg/ButtonColorsLogic.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/UI/LevelButtoClicked.js",
-    "mTimestamp": 1649773953948
-  },
-  "assets/Scripts/GameManager.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GlobalManager.js",
-      "__unresolved_2": "assets/Scripts/RemoteScripts/JSONloader.js",
-      "__unresolved_3": "assets/Scripts/RemoteScripts/LoadingHandler.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/GameManager.js",
-    "mTimestamp": 1649833742101
-  },
-  "assets/Scripts/GlobalManager.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js",
-      "__unresolved_2": "assets/Scripts/Utilities/OpenLevelByName.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/GlobalManager.js",
-    "mTimestamp": 1649833742242
-  },
-  "assets/Scripts/Goldberg/ButtonColorsLogic.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GlobalManager.js",
-      "__unresolved_2": "assets/Scripts/UI/LevelButtoClicked.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Goldberg/ButtonColorsLogic.js",
-    "mTimestamp": 1649833742281
-  },
-  "assets/Scripts/Tasks/TaskManager.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/Checkpoint/Checkpoint.js",
-      "__unresolved_2": "assets/Scripts/FollowGoForward.js",
-      "__unresolved_3": "assets/Scripts/GameManager.js",
-      "__unresolved_4": "assets/Scripts/GlobalManager.js",
-      "__unresolved_7": "assets/Scripts/Tasks/Task.js",
-      "__unresolved_5": "assets/Scripts/TrophiesManagment.js",
-      "__unresolved_6": "assets/Scripts/Utilities/ButtonDisabler.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskManager.js",
-    "mTimestamp": 1649833742411
-  },
-  "assets/Scripts/Utilities/OpenLevelByName.js": {
-    "imports": {
-      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
-      "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_1": "assets/Scripts/GameManager.js",
-      "__unresolved_2": "assets/Scripts/GlobalManager.js",
-      "__unresolved_3": "assets/Scripts/Utilities/ScriptEffects.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Utilities/OpenLevelByName.js",
-    "mTimestamp": 1649833742455
+    "mTimestamp": 1650364912269
   },
   "quick-pack:/cce/internal/x/prerequisite-imports.js": {
     "imports": {
@@ -883,15 +875,14 @@
       "__unresolved_5": "assets/Scripts/Consequences/ConsequenceGoDarkVeselaUlica.js",
       "__unresolved_6": "assets/Scripts/Consequences/ConsequenceTurnOff.js",
       "__unresolved_7": "assets/Scripts/DetectTypeOfDevice.js",
-      "__unresolved_8": "assets/Scripts/DetectTypeOfDeviceElevator.js",
       "__unresolved_9": "assets/Scripts/FirstPersonCameraMovement.js",
       "__unresolved_10": "assets/Scripts/FirstPersonCameraMovementElevator.js",
       "__unresolved_11": "assets/Scripts/FirstPersonCameraMovementTest.js",
       "__unresolved_12": "assets/Scripts/FollowGoForward.js",
       "__unresolved_13": "assets/Scripts/GameManager.js",
       "__unresolved_14": "assets/Scripts/GhostCameraMovement.js",
-      "__unresolved_15": "assets/Scripts/GlobalManager.js",
       "__unresolved_16": "assets/Scripts/Goldberg/ButtonColorsLogic.js",
+      "__unresolved_15": "assets/Scripts/GlobalManager.js",
       "__unresolved_17": "assets/Scripts/Goldberg/Trigger1.js",
       "__unresolved_18": "assets/Scripts/RemoteScripts/JSONloader.js",
       "__unresolved_19": "assets/Scripts/RemoteScripts/LevelTranslator.js",
@@ -901,8 +892,8 @@
       "__unresolved_23": "assets/Scripts/SlideRotateCameraElevator.js",
       "__unresolved_24": "assets/Scripts/Tasks/Task.js",
       "__unresolved_25": "assets/Scripts/Tasks/TaskABCquestion.js",
-      "__unresolved_26": "assets/Scripts/Tasks/TaskAutoActive.js",
       "__unresolved_27": "assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js",
+      "__unresolved_26": "assets/Scripts/Tasks/TaskAutoActive.js",
       "__unresolved_28": "assets/Scripts/Tasks/TaskEnding.js",
       "__unresolved_29": "assets/Scripts/Tasks/TaskInput.js",
       "__unresolved_30": "assets/Scripts/Tasks/TaskLoading.js",
@@ -917,8 +908,8 @@
       "__unresolved_39": "assets/Scripts/UI/3DbuttonActivate.js",
       "__unresolved_40": "assets/Scripts/UI/3DbuttonRaycast.js",
       "__unresolved_41": "assets/Scripts/UI/3DbuttonRestart.js",
-      "__unresolved_42": "assets/Scripts/UI/ButtonDelegator.js",
       "__unresolved_43": "assets/Scripts/UI/ButtonSettings.js",
+      "__unresolved_42": "assets/Scripts/UI/ButtonDelegator.js",
       "__unresolved_44": "assets/Scripts/UI/ButtonTopview.js",
       "__unresolved_45": "assets/Scripts/UI/KeyboardNumericInput.js",
       "__unresolved_46": "assets/Scripts/UI/LevelButtoClicked.js",
@@ -944,15 +935,26 @@
       "__unresolved_66": "assets/resources/qfw/components/EntryPoint.js",
       "__unresolved_67": "assets/resources/qfw/components/FollowCamera.js",
       "__unresolved_68": "assets/resources/qfw/components/LogicPoint.js",
-      "__unresolved_69": "assets/resources/qfw/components/NodeFloatingAnim.js",
       "__unresolved_70": "assets/resources/qfw/components/NpcPoint.js",
+      "__unresolved_69": "assets/resources/qfw/components/NodeFloatingAnim.js",
       "__unresolved_71": "assets/resources/qfw/components/PlayerCtrl.js",
       "__unresolved_72": "assets/resources/qfw/components/TeleportPoint.js",
-      "__unresolved_73": "assets/resources/qfw/components/TitleBar.js"
+      "__unresolved_73": "assets/resources/qfw/components/TitleBar.js",
+      "__unresolved_8": "assets/Scripts/DetectTypeOfDeviceElevator.js"
     },
     "physicalLocation": "cce/internal/x/prerequisite-imports.js",
-    "mTimestamp": 1649833742632,
+    "mTimestamp": 1650366722872,
     "isEntry": true,
     "exposeAs": "cce:/internal/x/prerequisite-imports"
+  },
+  "assets/Scripts/DetectTypeOfDeviceElevator.js": {
+    "imports": {
+      "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js",
+      "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_2": "assets/Scripts/GlobalManager.js",
+      "__unresolved_1": "assets/Scripts/GameManager.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/DetectTypeOfDeviceElevator.js",
+    "mTimestamp": 1650366722959
   }
 }

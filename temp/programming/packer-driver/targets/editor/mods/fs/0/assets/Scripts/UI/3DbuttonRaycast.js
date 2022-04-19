@@ -129,14 +129,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             const r = PhysicsSystem.instance.raycastResults;
             r.forEach(rayCastItem => {
               this.tempItemArray.forEach(touchStartItem => {
-                var _this$gameStatus;
-
                 if (this.globalManagerReference) this.gameStatus = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
                   error: Error()
                 }), GlobalManager) : GlobalManager).getInstance().gameStatus;else this.gameStatus = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
                   error: Error()
                 }), GameManager) : GameManager).getInstance().gameStatus;
-                console.log("this.gameStatus " + ((_this$gameStatus = this.gameStatus) === null || _this$gameStatus === void 0 ? void 0 : _this$gameStatus.toString()));
 
                 if (rayCastItem.collider.node == touchStartItem && this.gameStatus == (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
                   error: Error()

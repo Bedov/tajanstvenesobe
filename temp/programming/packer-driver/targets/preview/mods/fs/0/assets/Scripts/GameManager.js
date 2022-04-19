@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, levelObject, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _temp, _crd, ccclass, property, localSceneData, GameStatuType, GameManager;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, GlobalManager, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,8 +11,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
-  function _reportPossibleCrUseOflevelObject(extras) {
-    _reporterNs.report("levelObject", "./GlobalManager", _context.meta, extras);
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "./GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfJSONloader(extras) {
@@ -37,7 +37,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Label = _cc.Label;
       sys = _cc.sys;
     }, function (_unresolved_2) {
-      levelObject = _unresolved_2.levelObject;
+      GlobalManager = _unresolved_2.GlobalManager;
     }, function (_unresolved_3) {
       JSONloader = _unresolved_3.JSONloader;
     }, function (_unresolved_4) {
@@ -64,10 +64,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
        *
       
        */
-
-      _export("localSceneData", localSceneData = new (_crd && levelObject === void 0 ? (_reportPossibleCrUseOflevelObject({
-        error: Error()
-      }), levelObject) : levelObject)());
 
       (function (GameStatuType) {
         GameStatuType[GameStatuType["gamePaused"] = 0] = "gamePaused";
@@ -118,6 +114,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _defineProperty(this, "audioArray", []);
 
           _defineProperty(this, "trophies", void 0);
+
+          _defineProperty(this, "debugMode", true);
         }
 
         static getInstance() {
@@ -129,11 +127,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         setProgress(tempProgress) {
-          localSceneData.levelProgress = tempProgress;
+          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = tempProgress;
         }
 
         getProgress() {
-          return localSceneData.levelProgress;
+          return (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress;
         }
 
         onLoad() {
@@ -148,7 +150,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), LoadingHandler) : LoadingHandler);
           this.typeInputResult = ((_this$Canvas = this.Canvas) === null || _this$Canvas === void 0 ? void 0 : (_this$Canvas$getChild = _this$Canvas.getChildByName("GenericUI-Input")) === null || _this$Canvas$getChild === void 0 ? void 0 : (_this$Canvas$getChild2 = _this$Canvas$getChild.getChildByName("EditBoxPC")) === null || _this$Canvas$getChild2 === void 0 ? void 0 : _this$Canvas$getChild2.getChildByName("Result")).getComponent(Label);
           this.trophies = this.Canvas.getChildByName("BottomUI").getChildByName("TrofejiLayout");
-          this.Progress = Number(localSceneData.levelProgress);
+          console.log("GlobalManager.getInstance().activeLevelData  + " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData);
+          this.Progress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress);
           this.setPlatformType();
         }
 
@@ -197,7 +204,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         backToMenu() {
-          director.loadScene("MainMenu");
+          if (this.debugMode == true) director.loadScene("MainMenu");else director.loadScene("MainMenuLift1");
         } // update (deltaTime: number) {
         //     // [4]
         // }

@@ -1,6 +1,6 @@
 
 import { _decorator, Component, Node, director, loader, Label, assetManager, AssetManager, Scene, Game } from 'cc';
-import { GameManager, localSceneData } from '../GameManager';
+import { GameManager } from '../GameManager';
 import { GlobalManager, levelObject } from '../GlobalManager';
 import { ScriptEffects } from './ScriptEffects';
 const { ccclass, property } = _decorator;
@@ -33,20 +33,25 @@ export class OpenLevelByName extends Component {
 
     findSceneDataByName(sceneName: string) {
       var levelsArray = GlobalManager.getInstance().levelsArray;
-
+      
+      var returnLevel = new levelObject;
+      
       levelsArray.forEach(element => {
-          if(element.sceneName == sceneName)
-            return element;
+          if(element.sceneName == sceneName) 
+            returnLevel = element;
       });
 
-
-      return new levelObject;
+      return returnLevel;
     }
 
     loadAndPlaySceneByName(event : Event, customEventData: string) {
         this.loadingPanel.getComponent(ScriptEffects)?.fadeInActive();
           
+      
         
+        GlobalManager.getInstance().activeLevelData = this.findSceneDataByName(customEventData);
+
+        console.log("ActiveLevel " + GlobalManager.getInstance().activeLevelData.sceneName );
 
         director.preloadScene(customEventData, function  (completedCount, totalCount, item) {
             if (labelTemp) {
@@ -65,11 +70,7 @@ export class OpenLevelByName extends Component {
     loadAndPlaySceneByNameD(customEventData: string) {
       this.loadingPanel.getComponent(ScriptEffects)?.fadeInActive();
       
-      if( this.findSceneDataByName(customEventData)  != null) 
-        localSceneData.setData( this.findSceneDataByName(customEventData) );
-        //localSceneData = this.findSceneDataByName(customEventData);
-      else
-        console.log("Can't find the right scene!");
+      GlobalManager.getInstance().activeLevelData = this.findSceneDataByName(customEventData);
 
       director.preloadScene(customEventData, function  (completedCount, totalCount, item) {
           if (labelTemp) {

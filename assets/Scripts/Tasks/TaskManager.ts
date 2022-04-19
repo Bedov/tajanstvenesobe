@@ -16,7 +16,7 @@ const { ccclass, property } = _decorator;
  */
  import { DetectTypeOfDevice } from "../DetectTypeOfDevice";
 import { FollowGoForward } from '../FollowGoForward';
-import { GameManager, localSceneData } from '../GameManager';
+import { GameManager } from '../GameManager';
 import { GlobalManager, levelObject } from '../GlobalManager';
 import { TrophiesManagment } from '../TrophiesManagment';
 import { ButtonDisabler } from '../Utilities/ButtonDisabler';
@@ -111,11 +111,8 @@ export class TaskManager extends Component {
 
         GameManager.getInstance().trophies?.getComponent(TrophiesManagment)?.calculateLockedWithEffect();
 
-        
-        GlobalManager.getInstance().levelsArray.forEach(element => {
-            if(localSceneData.sceneName == element.sceneName)
-                element.setData(localSceneData);            
-        });
+        console.log("Level Data WAKA " +  GlobalManager.getInstance().activeLevelData.sceneName );
+       GlobalManager.getInstance().activeLevelData!.levelProgress = Number( newProgress );
     }
 
     checkReadinesForTasks() {

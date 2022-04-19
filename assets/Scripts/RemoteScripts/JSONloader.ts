@@ -43,7 +43,12 @@ export class JSONloader extends Component {
 
         this.gameManager = this.node.getComponent(GameManager)!;
 
-        //   
+        this.schedule(this.printTasks, 1);
+        
+    }
+
+    printTasks() {
+        console.log("Tasks in Progress: " + tasksInProgress);
         
     }
 
@@ -74,6 +79,7 @@ export class JSONloader extends Component {
 
         try {
             tasksInProgress++;
+console.log("Task Added 1");
 
              assetManager.loadRemote(remoteUrlRoot.toString(), function (err, textAsset) {
 
@@ -87,10 +93,12 @@ export class JSONloader extends Component {
                     if( parsedJSON["questionAudio"] != undefined)  {
 
                         try {
-                            tasksInProgress++;
+                            //tasksInProgress++;
+                            //console.log("Task Added 2");
                             assetManager.loadRemote<AudioClip>(audioURL + parsedJSON["questionAudio"], (AudioClip), (err, audioClip) =>  {
                                 taskJSON.questionAudio =  audioClip ;
-                                tasksInProgress--;
+                                //tasksInProgress--;
+                                //console.log("Task reduced 2");
                             });
                             
                         } catch (error) {
@@ -101,6 +109,7 @@ export class JSONloader extends Component {
                         console.log("Ne postoje zvukovi za ovu putanju");
 
                     tasksInProgress--;
+console.log("Task reduced 1");
                 } catch (error) {
                     console.log("Nisam nasao trazeno polje za parsiranje" + error );
                     return false;
@@ -126,6 +135,7 @@ export class JSONloader extends Component {
 
                  try {
                     tasksInProgress++;
+                    console.log("Task Added 3");
                     var tempTask = new JSONtask1;
                     var parsedJSON = JSON.parse(textAsset.toString());
                     tempTask.question = parsedJSON["question"];
@@ -138,11 +148,15 @@ export class JSONloader extends Component {
                     
                     if( parsedJSON["questionAudio"] != undefined)  {
 
+                        console.log("Sta je : parsedJSON[questionAudio] " + parsedJSON["questionAudio"]);
+
                         try {
-                            tasksInProgress++;
+                            //tasksInProgress++;
+                            //console.log("Task Added 4");
                             assetManager.loadRemote<AudioClip>(remoteUrlRoot + parsedJSON["questionAudio"], (AudioClip), (err, audioClip) =>  {
                                 tempTask.questionAudio =  audioClip ;
-                                tasksInProgress--;
+                                //tasksInProgress--;
+                                //console.log("Task reduced 4");
                             });
 
                         } catch (error) {
@@ -157,6 +171,7 @@ export class JSONloader extends Component {
                         taskJSON.push(tempTask);
 
                     tasksInProgress--;
+console.log("Task reduced 3");
                 } catch (error) {
                     console.log("Nisam nasao trazeno polje za parsiranje" + error );
                     return false;
@@ -190,6 +205,7 @@ export class JSONloader extends Component {
         try {
 
             tasksInProgress++;
+            console.log("Task Added 5");
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
 
                 try {
@@ -201,10 +217,12 @@ export class JSONloader extends Component {
                    if( parsedJSON["questAudio"] != undefined)  {
                         
                        try {
-                            tasksInProgress++;
+                            //tasksInProgress++;
+                                //console.log("Task Added 6");
                            assetManager.loadRemote<AudioClip>(audioURL + parsedJSON["questAudio"], (AudioClip), (err, audioClip) =>  {
                             tekstObject.questAudio =  audioClip ;
-                            tasksInProgress--;
+                            //tasksInProgress--;
+                            //console.log("Task reduced 6");
                            });
                         
                        } catch (error) {
@@ -216,6 +234,7 @@ export class JSONloader extends Component {
 
 
                     tasksInProgress--;
+console.log("Task reduced 5");
                } catch (error) {
                    console.log("Nisam nasao trazeno polje za parsiranje" + error );
                    return false;
@@ -238,6 +257,7 @@ export class JSONloader extends Component {
 
         try {
             tasksInProgress++;
+            console.log("Task Added 7");
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
 
                 try {
@@ -246,13 +266,43 @@ export class JSONloader extends Component {
 
                    imageObject.quest = parsedJSON["quest"];
                    
+                   if( parsedJSON["questImage"] != undefined)  {
+
+                    tasksInProgress++;
+                    console.log("Task Added 9");
+
+                    try {
+                        assetManager.loadRemote<ImageAsset>(rootURL + parsedJSON["questImage"], (err, fetchedImage) =>  {
+                            console.log("Sta skidam " + rootURL + parsedJSON["questImage"]);
+                            
+                            const spriteFrame = new SpriteFrame();
+                            const texture = new Texture2D();
+                            texture.image = fetchedImage;
+                            spriteFrame.texture = texture;
+                            imageObject.questImage = spriteFrame ;
+
+                            tasksInProgress--;
+                            console.log("Task reduced 9");
+
+                        });
+                     
+                    } catch (error) {
+                        console.log("Slika nije dobro ucitana");
+                        imageObject.audioIsLoaded = false;
+                    } 
+                } else 
+                    console.log("Ne postoji slika za ovu putanju");
+
+                    
                    if( parsedJSON["questAudio"] != undefined)  {
 
                        try {
-                            tasksInProgress++;
+                            //tasksInProgress++;
+                            //console.log("Task Added 8");
                            assetManager.loadRemote<AudioClip>(rootURL + parsedJSON["questAudio"], (AudioClip), (err, audioClip) =>  {
                             imageObject.questAudio =  audioClip ;
-                            tasksInProgress--;
+                            //tasksInProgress--;
+                            //console.log("Task reduced 8");
                            });
                         
                        } catch (error) {
@@ -263,27 +313,10 @@ export class JSONloader extends Component {
                        console.log("Ne postoje zvukovi za ovu putanju");
 
 
-                    if( parsedJSON["questImage"] != undefined)  {
-
-                        try {
-                            assetManager.loadRemote<ImageAsset>(rootURL + parsedJSON["questImage"], (err, fetchedImage) =>  {
-                                console.log("Sta skidam " + rootURL + parsedJSON["questImage"]);
-                                
-                                const spriteFrame = new SpriteFrame();
-                                const texture = new Texture2D();
-                                texture.image = fetchedImage;
-                                spriteFrame.texture = texture;
-                                imageObject.questImage = spriteFrame ;
-                            });
-                         
-                        } catch (error) {
-                            console.log("Slika nije dobro ucitana");
-                            imageObject.audioIsLoaded = false;
-                        } 
-                    } else 
-                        console.log("Ne postoji slika za ovu putanju");
+                    
 
                     tasksInProgress--;
+console.log("Task reduced 7");
                } catch (error) {
                    console.log("Nisam nasao trazeno polje za parsiranje" + error );
                    return false;

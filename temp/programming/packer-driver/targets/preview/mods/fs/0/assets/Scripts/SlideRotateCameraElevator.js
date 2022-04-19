@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, math, macro, systemEvent, SystemEvent, setDisplayStats, GameStatuType, GlobalManager, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, Vec2, Vec3, Quat, v2_1, v2_2, v3_1, qt_1, KEYCODE, SlideRotateCameraElevator;
+  var _reporterNs, _cclegacy, _decorator, Component, math, macro, systemEvent, SystemEvent, setDisplayStats, find, GameStatuType, GlobalManager, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, Vec2, Vec3, Quat, v2_1, v2_2, v3_1, qt_1, KEYCODE, SlideRotateCameraElevator;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -35,6 +35,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       systemEvent = _cc.systemEvent;
       SystemEvent = _cc.SystemEvent;
       setDisplayStats = _cc.setDisplayStats;
+      find = _cc.find;
     }, function (_unresolved_2) {
       GameStatuType = _unresolved_2.GameStatuType;
     }, function (_unresolved_3) {
@@ -96,9 +97,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           _defineProperty(this, "_position", new Vec3());
 
           _defineProperty(this, "_speedScale", 1);
+
+          _defineProperty(this, "canvas", void 0);
         }
 
-        onLoad() {}
+        onLoad() {
+          this.canvas = find("Canvas");
+        }
 
         start() {
           systemEvent.on(SystemEvent.EventType.MOUSE_WHEEL, this.onMouseWheel, this);
@@ -146,9 +151,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             return;
           }
 
-          var detectType = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).instance.canvas.getComponent("DetectTypeOfDeviceElevator");
+          var detectType = this.canvas.getComponent("DetectTypeOfDeviceElevator");
           detectType.joystick_Mouse_Move();
           var touches = even.getTouches();
           e.getStartLocation(v2_1); //if (v2_1.x > view.getFrameSize().width * 0.4) { // rotation

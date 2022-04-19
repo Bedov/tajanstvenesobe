@@ -1,0 +1,50 @@
+{
+  "__type__": "cc.Material",
+  "_name": "elf_rudoft_ginger_gift",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "HAS_SECOND_UV": true,
+      "USE_ALBEDO_MAP": true,
+      "ALBEDO_UV": "v_uv1"
+    }
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "blendState": {
+        "targets": [
+          {
+            "blend": true,
+            "blendSrc": 2,
+            "blendDst": 4,
+            "blendDstAlpha": 4
+          }
+        ]
+      },
+      "depthStencilState": {
+        "depthWrite": true
+      }
+    }
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "a2a4db3c-b3bd-4973-a7ff-c2ff64ff784c@262be",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "albedoScale": {
+        "__type__": "cc.Vec3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    }
+  ]
+}

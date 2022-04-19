@@ -77,7 +77,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         onLoad() {
           this.gameManager = this.node.getComponent(_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager); //   
+          }), GameManager) : GameManager);
+          this.schedule(this.printTasks, 1);
+        }
+
+        printTasks() {
+          console.log("Tasks in Progress: " + tasksInProgress);
         }
 
         fetchQuestions(folderURL, taskJSON, expectedQuestions) {
@@ -105,6 +110,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           try {
             tasksInProgress++;
+            console.log("Task Added 1");
             assetManager.loadRemote(remoteUrlRoot.toString(), function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
@@ -113,10 +119,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (parsedJSON["questionAudio"] != undefined) {
                   try {
-                    tasksInProgress++;
+                    //tasksInProgress++;
+                    //console.log("Task Added 2");
                     assetManager.loadRemote(audioURL + parsedJSON["questionAudio"], AudioClip, (err, audioClip) => {
-                      taskJSON.questionAudio = audioClip;
-                      tasksInProgress--;
+                      taskJSON.questionAudio = audioClip; //tasksInProgress--;
+                      //console.log("Task reduced 2");
                     });
                   } catch (error) {
                     console.log("Zvuk nije dobro ucitan");
@@ -125,6 +132,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 } else console.log("Ne postoje zvukovi za ovu putanju");
 
                 tasksInProgress--;
+                console.log("Task reduced 1");
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -149,6 +157,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             assetManager.loadRemote(questionURL, function (err, textAsset) {
               try {
                 tasksInProgress++;
+                console.log("Task Added 3");
                 var tempTask = new JSONtask1();
                 var parsedJSON = JSON.parse(textAsset.toString());
                 tempTask.question = parsedJSON["question"];
@@ -160,11 +169,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 }
 
                 if (parsedJSON["questionAudio"] != undefined) {
+                  console.log("Sta je : parsedJSON[questionAudio] " + parsedJSON["questionAudio"]);
+
                   try {
-                    tasksInProgress++;
+                    //tasksInProgress++;
+                    //console.log("Task Added 4");
                     assetManager.loadRemote(remoteUrlRoot + parsedJSON["questionAudio"], AudioClip, (err, audioClip) => {
-                      tempTask.questionAudio = audioClip;
-                      tasksInProgress--;
+                      tempTask.questionAudio = audioClip; //tasksInProgress--;
+                      //console.log("Task reduced 4");
                     });
                   } catch (error) {
                     console.log("Zvuk nije dobro ucitan");
@@ -174,6 +186,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (tempTask.question != undefined) taskJSON.push(tempTask);
                 tasksInProgress--;
+                console.log("Task reduced 3");
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -208,6 +221,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           try {
             tasksInProgress++;
+            console.log("Task Added 5");
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
@@ -215,10 +229,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (parsedJSON["questAudio"] != undefined) {
                   try {
-                    tasksInProgress++;
+                    //tasksInProgress++;
+                    //console.log("Task Added 6");
                     assetManager.loadRemote(audioURL + parsedJSON["questAudio"], AudioClip, (err, audioClip) => {
-                      tekstObject.questAudio = audioClip;
-                      tasksInProgress--;
+                      tekstObject.questAudio = audioClip; //tasksInProgress--;
+                      //console.log("Task reduced 6");
                     });
                   } catch (error) {
                     console.log("Zvuk nije dobro ucitan");
@@ -227,6 +242,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 } else console.log("Ne postoje zvukovi za ovu putanju");
 
                 tasksInProgress--;
+                console.log("Task reduced 5");
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -248,25 +264,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           try {
             tasksInProgress++;
+            console.log("Task Added 7");
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
                 imageObject.quest = parsedJSON["quest"];
 
-                if (parsedJSON["questAudio"] != undefined) {
-                  try {
-                    tasksInProgress++;
-                    assetManager.loadRemote(rootURL + parsedJSON["questAudio"], AudioClip, (err, audioClip) => {
-                      imageObject.questAudio = audioClip;
-                      tasksInProgress--;
-                    });
-                  } catch (error) {
-                    console.log("Zvuk nije dobro ucitan");
-                    imageObject.audioIsLoaded = false;
-                  }
-                } else console.log("Ne postoje zvukovi za ovu putanju");
-
                 if (parsedJSON["questImage"] != undefined) {
+                  tasksInProgress++;
+                  console.log("Task Added 9");
+
                   try {
                     assetManager.loadRemote(rootURL + parsedJSON["questImage"], (err, fetchedImage) => {
                       console.log("Sta skidam " + rootURL + parsedJSON["questImage"]);
@@ -275,6 +282,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                       texture.image = fetchedImage;
                       spriteFrame.texture = texture;
                       imageObject.questImage = spriteFrame;
+                      tasksInProgress--;
+                      console.log("Task reduced 9");
                     });
                   } catch (error) {
                     console.log("Slika nije dobro ucitana");
@@ -282,7 +291,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                   }
                 } else console.log("Ne postoji slika za ovu putanju");
 
+                if (parsedJSON["questAudio"] != undefined) {
+                  try {
+                    //tasksInProgress++;
+                    //console.log("Task Added 8");
+                    assetManager.loadRemote(rootURL + parsedJSON["questAudio"], AudioClip, (err, audioClip) => {
+                      imageObject.questAudio = audioClip; //tasksInProgress--;
+                      //console.log("Task reduced 8");
+                    });
+                  } catch (error) {
+                    console.log("Zvuk nije dobro ucitan");
+                    imageObject.audioIsLoaded = false;
+                  }
+                } else console.log("Ne postoje zvukovi za ovu putanju");
+
                 tasksInProgress--;
+                console.log("Task reduced 7");
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;

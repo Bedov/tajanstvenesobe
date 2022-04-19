@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 13109.90620803833,
+    "mTimestamp": 10698.862457990646,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -389,7 +389,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 226150942.93350005,
+    "mTimestamp": 1830986.1613330245,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -1788,7 +1788,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/TouchInput.ts": {
     "mTimestamp": {
-      "mtime": 1649252652122.0374,
+      "mtime": 1650021403716.1665,
       "uuid": "41fbf6a2-e73c-4a41-9739-8f4a41bef377"
     },
     "chunkId": "assets/Scripts/TouchInput.js",
@@ -1805,25 +1805,67 @@
         "loc": {
           "start": {
             "line": 2,
-            "column": 109
+            "column": 115
           },
           "end": {
             "line": 2,
-            "column": 113
+            "column": 119
           }
         }
       },
       {
-        "value": "./GameManager",
+        "value": "./FirstPersonCameraMovementTest",
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
+            "line": 16,
+            "column": 47
+          },
+          "end": {
+            "line": 16,
+            "column": 80
+          }
+        }
+      },
+      {
+        "value": "./DetectTypeOfDevice",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 36
+          },
+          "end": {
+            "line": 17,
+            "column": 58
+          }
+        }
+      },
+      {
+        "value": "./DetectTypeOfDeviceElevator",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
             "line": 18,
-            "column": 28
+            "column": 43
           },
           "end": {
             "line": 18,
-            "column": 43
+            "column": 73
+          }
+        }
+      },
+      {
+        "value": "./FirstPersonCameraMovementElevator",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 19,
+            "column": 50
+          },
+          "end": {
+            "line": 19,
+            "column": 87
           }
         }
       }
@@ -1846,7 +1888,19 @@
       },
       {
         "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/FirstPersonCameraMovementTest.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/DetectTypeOfDevice.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/DetectTypeOfDeviceElevator.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/FirstPersonCameraMovementElevator.ts"
       }
     ]
   },
@@ -2438,7 +2492,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/Task.ts": {
     "mTimestamp": {
-      "mtime": 1649690804357.1624,
+      "mtime": 1649936074573.4016,
       "uuid": "11302d2a-cd3c-4164-9bb2-bdda0e2fd866"
     },
     "chunkId": "assets/Scripts/Tasks/Task.js",
@@ -2904,7 +2958,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskManager.ts": {
     "mTimestamp": {
-      "mtime": 1649777961022.1565,
+      "mtime": 1649853527996.3179,
       "uuid": "9606f745-6fc5-44f0-9245-22d62bb6f788"
     },
     "chunkId": "assets/Scripts/Tasks/TaskManager.js",
@@ -2963,11 +3017,11 @@
         "loc": {
           "start": {
             "line": 19,
-            "column": 44
+            "column": 28
           },
           "end": {
             "line": 19,
-            "column": 60
+            "column": 44
           }
         }
       },
@@ -3694,7 +3748,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GlobalManager.ts": {
     "mTimestamp": {
-      "mtime": 1649777986906.8179,
+      "mtime": 1650023482468.8303,
       "uuid": "b7380f12-b524-4935-b774-7ace4047d20d"
     },
     "chunkId": "assets/Scripts/GlobalManager.js",
@@ -3711,11 +3765,11 @@
         "loc": {
           "start": {
             "line": 52,
-            "column": 116
+            "column": 145
           },
           "end": {
             "line": 52,
-            "column": 120
+            "column": 149
           }
         }
       },
@@ -3730,20 +3784,6 @@
           "end": {
             "line": 53,
             "column": 45
-          }
-        }
-      },
-      {
-        "value": "./Utilities/OpenLevelByName",
-        "rewritten": "__unresolved_2",
-        "loc": {
-          "start": {
-            "line": 54,
-            "column": 32
-          },
-          "end": {
-            "line": 54,
-            "column": 61
           }
         }
       }
@@ -3767,10 +3807,6 @@
       {
         "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/OpenLevelByName.ts"
       }
     ]
   },
@@ -3814,7 +3850,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonActivate.ts": {
     "mTimestamp": {
-      "mtime": 1649067570572.892,
+      "mtime": 1649864501768.3013,
       "uuid": "39cafa82-4638-4b81-8e11-8b635ce36ae0"
     },
     "chunkId": "assets/Scripts/UI/3DbuttonActivate.js",
@@ -4060,7 +4096,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/3DbuttonRaycast.ts": {
     "mTimestamp": {
-      "mtime": 1649771960741.934,
+      "mtime": 1650017642995.9797,
       "uuid": "93400e16-d1aa-45ea-9e25-831a188e1da6"
     },
     "chunkId": "assets/Scripts/UI/3DbuttonRaycast.js",
@@ -4362,7 +4398,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/OpenLevelByName.ts": {
     "mTimestamp": {
-      "mtime": 1649778003121.9265,
+      "mtime": 1649858081133.7559,
       "uuid": "ff49225b-e552-45e7-859f-84b6d9db24e7"
     },
     "chunkId": "assets/Scripts/Utilities/OpenLevelByName.js",
@@ -4388,22 +4424,8 @@
         }
       },
       {
-        "value": "../GameManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 44
-          },
-          "end": {
-            "line": 3,
-            "column": 60
-          }
-        }
-      },
-      {
         "value": "../GlobalManager",
-        "rewritten": "__unresolved_2",
+        "rewritten": "__unresolved_1",
         "loc": {
           "start": {
             "line": 4,
@@ -4417,7 +4439,7 @@
       },
       {
         "value": "./ScriptEffects",
-        "rewritten": "__unresolved_3",
+        "rewritten": "__unresolved_2",
         "loc": {
           "start": {
             "line": 5,
@@ -4445,10 +4467,6 @@
       {
         "isExternal": false,
         "url": "cce:/internal/x/cc"
-      },
-      {
-        "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
       },
       {
         "isExternal": false,
@@ -4798,7 +4816,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/RemoteScripts/JSONloader.ts": {
     "mTimestamp": {
-      "mtime": 1648151238294.4375,
+      "mtime": 1650018542745.7083,
       "uuid": "688cb264-0125-4b71-9621-ea09fef84459"
     },
     "chunkId": "assets/Scripts/RemoteScripts/JSONloader.js",
@@ -5286,7 +5304,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskABCquestion.ts": {
     "mTimestamp": {
-      "mtime": 1648481058165.94,
+      "mtime": 1650016268429.576,
       "uuid": "2e706214-726a-4ef1-9ed5-46f58324faee"
     },
     "chunkId": "assets/Scripts/Tasks/TaskABCquestion.js",
@@ -5580,7 +5598,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskAutoActive.ts": {
     "mTimestamp": {
-      "mtime": 1649691111220.5022,
+      "mtime": 1650017208742.4172,
       "uuid": "e1c9a0e5-598c-485c-981f-60f3b5dcf433"
     },
     "chunkId": "assets/Scripts/Tasks/TaskAutoActive.js",
@@ -5734,7 +5752,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts": {
     "mTimestamp": {
-      "mtime": 1649777967594.6582,
+      "mtime": 1649866366662.0488,
       "uuid": "69fcfb76-de3f-4141-be46-42dade9e6168"
     },
     "chunkId": "assets/Scripts/GameManager.js",
@@ -5751,11 +5769,11 @@
         "loc": {
           "start": {
             "line": 2,
-            "column": 79
+            "column": 108
           },
           "end": {
             "line": 2,
-            "column": 83
+            "column": 112
           }
         }
       },
@@ -5765,11 +5783,11 @@
         "loc": {
           "start": {
             "line": 3,
-            "column": 28
+            "column": 43
           },
           "end": {
             "line": 3,
-            "column": 45
+            "column": 60
           }
         }
       },
@@ -5872,7 +5890,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ButtonDisabler.ts": {
     "mTimestamp": {
-      "mtime": 1646062592775.0432,
+      "mtime": 1649862478729.6968,
       "uuid": "e9ae6f86-94dc-494c-9caa-d023bdcbd70b"
     },
     "chunkId": "assets/Scripts/Utilities/ButtonDisabler.js",
@@ -6281,7 +6299,7 @@
     ]
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1649607591679,
+    "mTimestamp": 1650364891849,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -6661,7 +6679,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/DetectTypeOfDeviceElevator.ts": {
     "mTimestamp": {
-      "mtime": 1649772347246.6643,
+      "mtime": 1650366721050.087,
       "uuid": "585d7ae7-fda4-49e4-8311-3a4c7c35fe2f"
     },
     "chunkId": "assets/Scripts/DetectTypeOfDeviceElevator.js",
@@ -6825,7 +6843,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/SlideRotateCameraElevator.ts": {
     "mTimestamp": {
-      "mtime": 1648823309580.2537,
+      "mtime": 1649857559531.54,
       "uuid": "b96f4204-e381-4efc-b528-83c590c46ca0"
     },
     "chunkId": "assets/Scripts/SlideRotateCameraElevator.js",
@@ -6841,11 +6859,11 @@
         "value": "cc",
         "loc": {
           "start": {
-            "line": 13,
+            "line": 14,
             "column": 15
           },
           "end": {
-            "line": 13,
+            "line": 14,
             "column": 19
           }
         }
@@ -6855,11 +6873,11 @@
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
-            "line": 32,
+            "line": 33,
             "column": 43
           },
           "end": {
-            "line": 32,
+            "line": 33,
             "column": 58
           }
         }
@@ -6869,11 +6887,11 @@
         "rewritten": "__unresolved_2",
         "loc": {
           "start": {
-            "line": 33,
+            "line": 34,
             "column": 30
           },
           "end": {
-            "line": 33,
+            "line": 34,
             "column": 47
           }
         }
@@ -6971,7 +6989,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/FirstPersonCameraMovementElevator.ts": {
     "mTimestamp": {
-      "mtime": 1648823295093.5947,
+      "mtime": 1649857632343.7134,
       "uuid": "1e22993d-cbb9-41c0-bb99-937cd60b38d2"
     },
     "chunkId": "assets/Scripts/FirstPersonCameraMovementElevator.js",
@@ -6987,12 +7005,12 @@
         "value": "cc",
         "loc": {
           "start": {
-            "line": 23,
-            "column": 17
+            "line": 24,
+            "column": 15
           },
           "end": {
-            "line": 23,
-            "column": 21
+            "line": 24,
+            "column": 19
           }
         }
       },
@@ -7001,11 +7019,11 @@
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
-            "line": 28,
+            "line": 29,
             "column": 43
           },
           "end": {
-            "line": 28,
+            "line": 29,
             "column": 58
           }
         }
@@ -7015,11 +7033,11 @@
         "rewritten": "__unresolved_2",
         "loc": {
           "start": {
-            "line": 29,
+            "line": 30,
             "column": 30
           },
           "end": {
-            "line": 29,
+            "line": 30,
             "column": 47
           }
         }
@@ -7319,7 +7337,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/UI/LevelButtoClicked.ts": {
     "mTimestamp": {
-      "mtime": 1649773363137.8945,
+      "mtime": 1649858497779.0676,
       "uuid": "197592e5-0eca-4f40-99dc-644a2ae2bb0e"
     },
     "chunkId": "assets/Scripts/UI/LevelButtoClicked.js",
@@ -7336,31 +7354,17 @@
         "loc": {
           "start": {
             "line": 2,
-            "column": 61
+            "column": 67
           },
           "end": {
             "line": 2,
-            "column": 65
-          }
-        }
-      },
-      {
-        "value": "../GlobalManager",
-        "rewritten": "__unresolved_1",
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 30
-          },
-          "end": {
-            "line": 3,
-            "column": 48
+            "column": 71
           }
         }
       },
       {
         "value": "../Goldberg/ButtonColorsLogic",
-        "rewritten": "__unresolved_2",
+        "rewritten": "__unresolved_1",
         "loc": {
           "start": {
             "line": 4,
@@ -7369,6 +7373,20 @@
           "end": {
             "line": 4,
             "column": 65
+          }
+        }
+      },
+      {
+        "value": "../Utilities/OpenLevelByName",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 32
+          },
+          "end": {
+            "line": 5,
+            "column": 62
           }
         }
       }
@@ -7391,17 +7409,17 @@
       },
       {
         "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GlobalManager.ts"
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Goldberg/ButtonColorsLogic.ts"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Goldberg/ButtonColorsLogic.ts"
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/OpenLevelByName.ts"
       }
     ]
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Goldberg/ButtonColorsLogic.ts": {
     "mTimestamp": {
-      "mtime": 1649777998688.7085,
+      "mtime": 1649859844090.1995,
       "uuid": "914bc47b-8743-4f5e-bee0-86c595a9e841"
     },
     "chunkId": "assets/Scripts/Goldberg/ButtonColorsLogic.js",
@@ -7432,11 +7450,11 @@
         "loc": {
           "start": {
             "line": 3,
-            "column": 50
+            "column": 63
           },
           "end": {
             "line": 3,
-            "column": 68
+            "column": 81
           }
         }
       },
@@ -7583,7 +7601,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Tasks/TaskEnding.ts": {
     "mTimestamp": {
-      "mtime": 1649691374424.19,
+      "mtime": 1650023456872.4941,
       "uuid": "2c696649-e685-4c6f-939a-2bdff69b7b7c"
     },
     "chunkId": "assets/Scripts/Tasks/TaskEnding.js",
@@ -7635,6 +7653,20 @@
             "column": 44
           }
         }
+      },
+      {
+        "value": "../GlobalManager",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 43
+          },
+          "end": {
+            "line": 12,
+            "column": 61
+          }
+        }
       }
     ],
     "modLoMetadata": {
@@ -7660,6 +7692,10 @@
       {
         "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GlobalManager.ts"
       }
     ]
   },

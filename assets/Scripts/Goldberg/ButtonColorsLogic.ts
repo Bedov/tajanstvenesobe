@@ -1,6 +1,6 @@
 
 import { _decorator, Component, Node, find, Material, Mesh, MeshRenderer, Button } from 'cc';
-import { globalInformations, GlobalManager } from '../GlobalManager';
+import { globalInformations, GlobalManager, levelStatus } from '../GlobalManager';
 import { LevelButtonClicked } from '../UI/LevelButtoClicked';
 const { ccclass, property } = _decorator;
  
@@ -25,7 +25,6 @@ export class ButtonColorsLogic extends Component {
     buttonsArray : Array<Node> = [];
 
     start () {
-        console.log("!!!!");
 
         this.buttonsArray!.push(this.node.getChildByName("1")!);
         this.buttonsArray!.push(this.node.getChildByName("2")!);
@@ -33,9 +32,23 @@ export class ButtonColorsLogic extends Component {
         this.buttonsArray!.push(this.node.getChildByName("4")!);
         this.buttonsArray!.push(this.node.getChildByName("5")!);
 
-        this.refreshColors( globalInformations.globalProgress);
+        this.refreshColors( this.findGeneralProgress());
 
         this.setSceneNamesToButtons();
+    }
+
+    findGeneralProgress(){
+        var generalProgress = 0;
+        for (let index = 0; index < GlobalManager.getInstance().levelsArray.length; index++) {
+            //const element = array[index];
+            if(GlobalManager.getInstance().levelsArray[index].status == levelStatus.unlocked) {
+                generalProgress = index;
+                return generalProgress;
+            }
+
+            
+        }
+        return generalProgress;
     }
 
     setSceneNamesToButtons() {
@@ -46,7 +59,6 @@ export class ButtonColorsLogic extends Component {
             this.buttonsArray[index].getComponent(LevelButtonClicked)!.levelName = String (levelArray[index].sceneName);
         }
 
-        console.log("!!!! String (levelArray[index].sceneName)" + String (levelArray[1].sceneName));
         
     }
 

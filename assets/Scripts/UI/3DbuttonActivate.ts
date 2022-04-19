@@ -30,8 +30,11 @@ export class DbuttonActivate extends Component {
         if(this.myTask.getComponent(Task)) {
             if(this.taskCompletedAutomaticly) 
                 this.myTask.getComponent(Task)?.taskCompleted(); 
-            else
+            else {
+                console.log("Sta se desava ");
                 this.myTask.getComponent(Task)?.showTask(); 
+            }
+                
 
         } else
             console.log("Dugme nije dobro namesteno");
@@ -40,8 +43,8 @@ export class DbuttonActivate extends Component {
 
     //Dodali smo animaciju kao prioritet da bismo u nekim slucajevima usporili pokretanje execute()
     startAnimation() { 
-        console.log("Jel stignem dovde?");
-        
+
+
         if(this.node.getComponent(Animation))
             this.node.getComponent(Animation)?.play();
         else {

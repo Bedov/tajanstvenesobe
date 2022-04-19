@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, GameManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TouchInput;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, find, FirstPersonCameraMovementTest, DetectTypeOfDevice, DetectTypeOfDeviceElevator, FirstPersonCameraMovementElevator, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, TouchInput;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,8 +19,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     _reporterNs.report("DetectTypeOfDevice", "./DetectTypeOfDevice", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGameManager(extras) {
-    _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
+  function _reportPossibleCrUseOfDetectTypeOfDeviceElevator(extras) {
+    _reporterNs.report("DetectTypeOfDeviceElevator", "./DetectTypeOfDeviceElevator", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfFirstPersonCameraMovementElevator(extras) {
+    _reporterNs.report("FirstPersonCameraMovementElevator", "./FirstPersonCameraMovementElevator", _context.meta, extras);
   }
 
   return {
@@ -35,8 +39,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       SystemEvent = _cc.SystemEvent;
       Vec3 = _cc.Vec3;
       UITransform = _cc.UITransform;
+      find = _cc.find;
     }, function (_unresolved_2) {
-      GameManager = _unresolved_2.GameManager;
+      FirstPersonCameraMovementTest = _unresolved_2.FirstPersonCameraMovementTest;
+    }, function (_unresolved_3) {
+      DetectTypeOfDevice = _unresolved_3.DetectTypeOfDevice;
+    }, function (_unresolved_4) {
+      DetectTypeOfDeviceElevator = _unresolved_4.DetectTypeOfDeviceElevator;
+    }, function (_unresolved_5) {
+      FirstPersonCameraMovementElevator = _unresolved_5.FirstPersonCameraMovementElevator;
     }],
     execute: function () {
       _crd = true;
@@ -59,7 +70,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
        *
        */
 
-      _export("TouchInput", TouchInput = (_dec = ccclass('TouchInput'), _dec2 = property(Node), _dec3 = property(Vec3), _dec(_class = (_class2 = (_temp = class TouchInput extends Component {
+      _export("TouchInput", TouchInput = (_dec = ccclass('TouchInput'), _dec2 = property(Node), _dec3 = property(Vec3), _dec4 = property(Boolean), _dec(_class = (_class2 = (_temp = class TouchInput extends Component {
         constructor(...args) {
           super(...args);
 
@@ -70,6 +81,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _initializerDefineProperty(this, "Joystick_Vector", _descriptor2, this);
 
           _initializerDefineProperty(this, "Joystick_Max", _descriptor3, this);
+
+          _initializerDefineProperty(this, "elevatorScript", _descriptor4, this);
 
           _defineProperty(this, "_JoystickSize", 0);
         }
@@ -84,15 +97,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         start() {
-          this.Player = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().Player;
+          this.Player = find("Player");
           this.node.on(SystemEvent.EventType.TOUCH_START, this.Joystick_Touch_Start, this);
           this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.Joystick_Touch_Move, this);
           this.node.on(SystemEvent.EventType.TOUCH_END, this.Joystick_Touch_End, this);
-          this.node.on(SystemEvent.EventType.TOUCH_CANCEL, this.Joystick_Touch_End, this); //GameManager.instance
-
-          this._firstPersonCameraMovement = this.Player.getComponent("FirstPersonCameraMovementTest");
+          this.node.on(SystemEvent.EventType.TOUCH_CANCEL, this.Joystick_Touch_End, this);
+          if (this.elevatorScript) this._firstPersonCameraMovement = this.Player.getComponent(_crd && FirstPersonCameraMovementElevator === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovementElevator({
+            error: Error()
+          }), FirstPersonCameraMovementElevator) : FirstPersonCameraMovementElevator);else this._firstPersonCameraMovement = this.Player.getComponent(_crd && FirstPersonCameraMovementTest === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovementTest({
+            error: Error()
+          }), FirstPersonCameraMovementTest) : FirstPersonCameraMovementTest);
           if (this.getComponent(UITransform) != null) this._JoystickSize = this.getComponent(UITransform).width;
         }
 
@@ -113,9 +127,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         Joystick_Touch_Move(event) {
-          var detectType = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          if (this.elevatorScript) var detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
             error: Error()
-          }), GameManager) : GameManager).instance.Canvas.getComponent("DetectTypeOfDevice");
+          }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator);else var detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
+            error: Error()
+          }), DetectTypeOfDevice) : DetectTypeOfDevice);
           detectType.joystick_Mouse_Move(); //Treba mozda pokriti dva prsta
 
           let touch_pos = new Vec3(event.getUILocation().x, event.getUILocation().y, 0);
@@ -160,6 +176,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         writable: true,
         initializer: function () {
           return 1;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "elevatorScript", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return false;
         }
       })), _class2)) || _class));
       /**

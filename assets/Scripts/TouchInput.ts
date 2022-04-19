@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, Touch, Canvas, game, Game } from 'cc';
+import { _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, Touch, Canvas, game, Game, find } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -15,9 +15,9 @@ const { ccclass, property } = _decorator;
  */
  import { FirstPersonCameraMovementTest } from "./FirstPersonCameraMovementTest"; 
  import { DetectTypeOfDevice } from "./DetectTypeOfDevice"; 
-import { GameManager } from './GameManager';
-import { Task } from './Tasks/Task';
-import { TaskManager } from './Tasks/TaskManager';
+import { DetectTypeOfDeviceElevator } from './DetectTypeOfDeviceElevator';
+import { FirstPersonCameraMovementElevator } from './FirstPersonCameraMovementElevator';
+
 
 @ccclass('TouchInput')
 export class TouchInput extends Component {
@@ -33,6 +33,9 @@ export class TouchInput extends Component {
     @property
     Joystick_Max = 1;
 
+    @property(Boolean)
+    elevatorScript = false;
+
     _JoystickSize = 0;
     _firstPersonCameraMovement!: FirstPersonCameraMovementTest;
 
@@ -47,14 +50,18 @@ export class TouchInput extends Component {
     }
 
     start () {
-        this.Player = GameManager.getInstance().Player!;
+        this.Player = find("Player")!;
 
         this.node.on(SystemEvent.EventType.TOUCH_START, this.Joystick_Touch_Start, this);
         this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.Joystick_Touch_Move, this);
         this.node.on(SystemEvent.EventType.TOUCH_END, this.Joystick_Touch_End, this);
         this.node.on(SystemEvent.EventType.TOUCH_CANCEL, this.Joystick_Touch_End, this);
-//GameManager.instance
-        this._firstPersonCameraMovement = this.Player!.getComponent("FirstPersonCameraMovementTest") as FirstPersonCameraMovementTest;
+
+        if(this.elevatorScript)
+            this._firstPersonCameraMovement = this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
+        else
+            this._firstPersonCameraMovement = this.Player!.getComponent(FirstPersonCameraMovementTest)!;
+
 
         if(this.getComponent(UITransform) != null)
             this._JoystickSize = this.getComponent(UITransform)!.width;
@@ -82,8 +89,13 @@ export class TouchInput extends Component {
     }
 
     Joystick_Touch_Move(event: Touch){
-        var detectType = GameManager.instance.Canvas!.getComponent("DetectTypeOfDevice") as DetectTypeOfDevice;
-        detectType.joystick_Mouse_Move();
+        var detectType;
+        if(this.elevatorScript)
+             detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator) ;
+        else
+             detectType = find("Canvas")!.getComponent(DetectTypeOfDevice);
+
+        detectType!.joystick_Mouse_Move();
 
         
         //Treba mozda pokriti dva prsta

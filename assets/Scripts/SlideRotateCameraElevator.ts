@@ -10,7 +10,8 @@ import { _decorator,
     view,
     setDisplayStats,
     Node,
-    Game} from 'cc';
+    Game,
+    find} from 'cc';
 const { ccclass, property } = _decorator;
 const { Vec2, Vec3, Quat } = math;
 
@@ -60,8 +61,10 @@ export class SlideRotateCameraElevator extends Component {
     _position = new Vec3();
     _speedScale = 1;
 
-    onLoad() {
+    canvas? : Node; 
 
+    onLoad() {
+        this.canvas = find("Canvas")!;
     }
 
     start() {
@@ -109,7 +112,7 @@ export class SlideRotateCameraElevator extends Component {
         }
         
 
-        var detectType = GlobalManager.instance.canvas!.getComponent("DetectTypeOfDeviceElevator") as DetectTypeOfDeviceElevator;
+        var detectType = this.canvas!.getComponent("DetectTypeOfDeviceElevator") as DetectTypeOfDeviceElevator;
         detectType.joystick_Mouse_Move();
  
         let touches = even.getTouches();

@@ -61,13 +61,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           if (this.myTask.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()
           }), Task) : Task)) {
-            var _this$myTask$getCompo, _this$myTask$getCompo2;
+            var _this$myTask$getCompo;
 
             if (this.taskCompletedAutomaticly) (_this$myTask$getCompo = this.myTask.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
               error: Error()
-            }), Task) : Task)) === null || _this$myTask$getCompo === void 0 ? void 0 : _this$myTask$getCompo.taskCompleted();else (_this$myTask$getCompo2 = this.myTask.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
-              error: Error()
-            }), Task) : Task)) === null || _this$myTask$getCompo2 === void 0 ? void 0 : _this$myTask$getCompo2.showTask();
+            }), Task) : Task)) === null || _this$myTask$getCompo === void 0 ? void 0 : _this$myTask$getCompo.taskCompleted();else {
+              var _this$myTask$getCompo2;
+
+              console.log("Sta se desava ");
+              (_this$myTask$getCompo2 = this.myTask.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
+                error: Error()
+              }), Task) : Task)) === null || _this$myTask$getCompo2 === void 0 ? void 0 : _this$myTask$getCompo2.showTask();
+            }
           } else console.log("Dugme nije dobro namesteno");
         } //Dodali smo animaciju kao prioritet da bismo u nekim slucajevima usporili pokretanje execute()
 
@@ -75,7 +80,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         startAnimation() {
           var _this$node$getCompone;
 
-          console.log("Jel stignem dovde?");
           if (this.node.getComponent(Animation)) (_this$node$getCompone = this.node.getComponent(Animation)) === null || _this$node$getCompone === void 0 ? void 0 : _this$node$getCompone.play();else {
             this.execute();
           }

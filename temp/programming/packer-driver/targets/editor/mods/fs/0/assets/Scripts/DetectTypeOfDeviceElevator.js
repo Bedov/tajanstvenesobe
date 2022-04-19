@@ -85,13 +85,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         onLoad() {
+          this.scheduleOnce(this.startTutorial, 6); //this.checkProgressForTutorial();
+          //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
+        }
+
+        startTutorial() {
           systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
           this.KeyboardMoveSymbol = this.node.getChildByName("DesktopMoveTutorial");
           this.KeyboardSeeSymbol = this.node.getChildByName("DesktopLookTutorial");
           this.MobileSeeSymbol = this.node.getChildByName("MobileLookTutorial");
           this.MobileMoveSymbol = this.node.getChildByName("MobileMoveTutorial");
-          this.MobileMoveJoystick = this.node.getChildByName("joystick"); //this.checkProgressForTutorial();
-          //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
+          this.MobileMoveJoystick = this.node.getChildByName("joystick");
         }
 
         start() {

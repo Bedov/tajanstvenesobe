@@ -1,7 +1,8 @@
 
-import { _decorator, Component, Node, ButtonComponent } from 'cc';
+import { _decorator, Component, Node, ButtonComponent, find } from 'cc';
 import { GlobalManager } from '../GlobalManager';
 import { ButtonColorsLogic } from '../Goldberg/ButtonColorsLogic';
+import { OpenLevelByName } from '../Utilities/OpenLevelByName';
 const { ccclass, property } = _decorator;
 
 /**
@@ -32,9 +33,10 @@ export class LevelButtonClicked extends Component {
     }
 
     levelButtonClicked() {
+        var canvas = find("Canvas")!;
         
         if(!this.lockedButton) {
-            GlobalManager.getInstance().openLevelByName?.loadAndPlaySceneByNameD( this.levelName.toString() );
+            canvas.getComponent(OpenLevelByName)!.loadAndPlaySceneByNameD( this.levelName.toString() );
             this.buttonColorsLogic!.lockAllButtons();
         }
     }

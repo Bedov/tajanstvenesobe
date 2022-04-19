@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Material, MeshRenderer, globalInformations, GlobalManager, LevelButtonClicked, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, ButtonColorsLogic;
+  var _reporterNs, _cclegacy, _decorator, Component, Material, MeshRenderer, GlobalManager, levelStatus, LevelButtonClicked, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, ButtonColorsLogic;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,12 +11,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
-  function _reportPossibleCrUseOfglobalInformations(extras) {
-    _reporterNs.report("globalInformations", "../GlobalManager", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfGlobalManager(extras) {
     _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOflevelStatus(extras) {
+    _reporterNs.report("levelStatus", "../GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfLevelButtonClicked(extras) {
@@ -33,8 +33,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       Material = _cc.Material;
       MeshRenderer = _cc.MeshRenderer;
     }, function (_unresolved_2) {
-      globalInformations = _unresolved_2.globalInformations;
       GlobalManager = _unresolved_2.GlobalManager;
+      levelStatus = _unresolved_2.levelStatus;
     }, function (_unresolved_3) {
       LevelButtonClicked = _unresolved_3.LevelButtonClicked;
     }],
@@ -72,16 +72,33 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         start() {
-          console.log("!!!!");
           this.buttonsArray.push(this.node.getChildByName("1"));
           this.buttonsArray.push(this.node.getChildByName("2"));
           this.buttonsArray.push(this.node.getChildByName("3"));
           this.buttonsArray.push(this.node.getChildByName("4"));
           this.buttonsArray.push(this.node.getChildByName("5"));
-          this.refreshColors((_crd && globalInformations === void 0 ? (_reportPossibleCrUseOfglobalInformations({
-            error: Error()
-          }), globalInformations) : globalInformations).globalProgress);
+          this.refreshColors(this.findGeneralProgress());
           this.setSceneNamesToButtons();
+        }
+
+        findGeneralProgress() {
+          var generalProgress = 0;
+
+          for (let index = 0; index < (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().levelsArray.length; index++) {
+            //const element = array[index];
+            if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().levelsArray[index].status == (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
+              error: Error()
+            }), levelStatus) : levelStatus).unlocked) {
+              generalProgress = index;
+              return generalProgress;
+            }
+          }
+
+          return generalProgress;
         }
 
         setSceneNamesToButtons() {
@@ -94,8 +111,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               error: Error()
             }), LevelButtonClicked) : LevelButtonClicked).levelName = String(levelArray[index].sceneName);
           }
-
-          console.log("!!!! String (levelArray[index].sceneName)" + String(levelArray[1].sceneName));
         }
 
         refreshColors(progress) {

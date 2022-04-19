@@ -24,10 +24,10 @@
         "__id__": 143
       },
       {
-        "__id__": 303
+        "__id__": 304
       },
       {
-        "__id__": 244
+        "__id__": 245
       },
       {
         "__id__": 8
@@ -36,11 +36,11 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 313
+      "__id__": 314
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 314
+      "__id__": 315
     },
     "_id": "86ffd746-92f8-4624-99a9-abdabcec3dfd"
   },
@@ -193,10 +193,10 @@
       "__id__": 142
     },
     "TaskManager": {
-      "__id__": 244
+      "__id__": 245
     },
     "Player": {
-      "__id__": 303
+      "__id__": 304
     },
     "LevelName": "eastern",
     "LanguageName": "SRB",
@@ -363,7 +363,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 300,
+    "_orthoHeight": 368.2142857142857,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -621,8 +621,8 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -422.69100000000003,
-      "y": 236.875,
+      "x": -447.564,
+      "y": 257.74,
       "z": 0
     }
   },
@@ -1905,7 +1905,7 @@
     "value": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 251.378,
+      "y": 273.878,
       "z": 0
     }
   },
@@ -2133,52 +2133,52 @@
     },
     "_children": [
       {
-        "__id__": 190
+        "__id__": 191
       },
       {
-        "__id__": 193
+        "__id__": 194
       },
       {
-        "__id__": 196
+        "__id__": 197
       },
       {
-        "__id__": 199
+        "__id__": 200
       },
       {
-        "__id__": 202
+        "__id__": 203
       },
       {
-        "__id__": 207
+        "__id__": 208
       },
       {
-        "__id__": 212
+        "__id__": 213
       },
       {
-        "__id__": 217
+        "__id__": 218
       },
       {
-        "__id__": 223
+        "__id__": 224
       },
       {
-        "__id__": 226
+        "__id__": 227
       },
       {
-        "__id__": 229
+        "__id__": 230
       },
       {
-        "__id__": 232
+        "__id__": 233
       },
       {
-        "__id__": 236
+        "__id__": 237
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 240
+        "__id__": 241
       },
       {
-        "__id__": 243
+        "__id__": 244
       }
     ],
     "_prefab": null,
@@ -2237,7 +2237,10 @@
         "__id__": 169
       },
       {
-        "__id__": 178
+        "__id__": 170
+      },
+      {
+        "__id__": 179
       },
       {
         "__id__": 142
@@ -2988,6 +2991,45 @@
   },
   {
     "__type__": "cc.Node",
+    "_name": "Uskrs samo pod 18. april",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 143
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": -2.54,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "6e2L/5/CZIIL2BA9ozh8Bz"
+  },
+  {
+    "__type__": "cc.Node",
     "_name": "Uskrs samo Cirkus 6. april",
     "_objFlags": 0,
     "_parent": {
@@ -2995,13 +3037,13 @@
     },
     "_children": [
       {
-        "__id__": 170
+        "__id__": 171
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 177
+        "__id__": 178
       }
     ],
     "_prefab": null,
@@ -3038,14 +3080,14 @@
     "_name": "Cirkus",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 169
+      "__id__": 170
     },
     "_children": [
       {
-        "__id__": 171
+        "__id__": 172
       },
       {
-        "__id__": 174
+        "__id__": 175
       }
     ],
     "_active": true,
@@ -3084,14 +3126,14 @@
     "_name": "joint5",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 170
+      "__id__": 171
     },
     "_children": [
       {
-        "__id__": 172
+        "__id__": 173
       },
       {
-        "__id__": 173
+        "__id__": 174
       }
     ],
     "_active": true,
@@ -3130,7 +3172,7 @@
     "_name": "joint6",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 171
+      "__id__": 172
     },
     "_children": [],
     "_active": true,
@@ -3169,7 +3211,7 @@
     "_name": "joint7",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 171
+      "__id__": 172
     },
     "_children": [],
     "_active": true,
@@ -3208,13 +3250,13 @@
     "_name": "Cirkus_2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 170
+      "__id__": 171
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 175
+        "__id__": 176
       }
     ],
     "_prefab": null,
@@ -3251,7 +3293,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 174
+      "__id__": 175
     },
     "_enabled": true,
     "__prefab": null,
@@ -3263,7 +3305,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 176
+      "__id__": 177
     },
     "_mesh": {
       "__uuid__": "0734ad0a-42b5-453b-993f-468060eeeb86@36eba",
@@ -3277,7 +3319,7 @@
       "__expectedType__": "cc.Skeleton"
     },
     "_skinningRoot": {
-      "__id__": 169
+      "__id__": 170
     },
     "_id": "74asnnB6JKcJ0/y0o9E00/"
   },
@@ -3302,7 +3344,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 169
+      "__id__": 170
     },
     "_enabled": true,
     "__prefab": null,
@@ -3330,16 +3372,16 @@
     },
     "_children": [
       {
-        "__id__": 179
+        "__id__": 180
       },
       {
-        "__id__": 184
+        "__id__": 185
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 188
+        "__id__": 189
       }
     ],
     "_prefab": null,
@@ -3376,14 +3418,14 @@
     "_name": "Bara",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 178
+      "__id__": 179
     },
     "_children": [
       {
-        "__id__": 180
+        "__id__": 181
       },
       {
-        "__id__": 183
+        "__id__": 184
       }
     ],
     "_active": true,
@@ -3422,13 +3464,13 @@
     "_name": "Bara_voda",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 179
+      "__id__": 180
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 181
+        "__id__": 182
       }
     ],
     "_prefab": null,
@@ -3465,7 +3507,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 180
+      "__id__": 181
     },
     "_enabled": true,
     "__prefab": null,
@@ -3477,7 +3519,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 182
+      "__id__": 183
     },
     "_mesh": {
       "__uuid__": "97e37576-2cf1-4d02-af4e-59f5bb3bac94@ade38",
@@ -3491,7 +3533,7 @@
       "__expectedType__": "cc.Skeleton"
     },
     "_skinningRoot": {
-      "__id__": 178
+      "__id__": 179
     },
     "_id": "b9ufMXXIRBJZdLZhEVu64t"
   },
@@ -3516,7 +3558,7 @@
     "_name": "joint1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 179
+      "__id__": 180
     },
     "_children": [],
     "_active": true,
@@ -3555,11 +3597,11 @@
     "_name": "Bara Socket",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 178
+      "__id__": 179
     },
     "_children": [
       {
-        "__id__": 185
+        "__id__": 186
       }
     ],
     "_active": true,
@@ -3598,13 +3640,13 @@
     "_name": "Bara_korito",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 184
+      "__id__": 185
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 186
+        "__id__": 187
       }
     ],
     "_prefab": null,
@@ -3642,7 +3684,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 185
+      "__id__": 186
     },
     "_enabled": true,
     "__prefab": null,
@@ -3670,7 +3712,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 187
+      "__id__": 188
     },
     "_mesh": {
       "__uuid__": "97e37576-2cf1-4d02-af4e-59f5bb3bac94@2730d",
@@ -3703,7 +3745,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 178
+      "__id__": 179
     },
     "_enabled": true,
     "__prefab": null,
@@ -3721,7 +3763,7 @@
     "_useBakedAnimation": true,
     "_sockets": [
       {
-        "__id__": 189
+        "__id__": 190
       }
     ],
     "_id": "badWWP3NREb6DHDi62V7wE"
@@ -3730,7 +3772,7 @@
     "__type__": "cc.SkeletalAnimation.Socket",
     "path": "Bara",
     "target": {
-      "__id__": 184
+      "__id__": 185
     }
   },
   {
@@ -3744,7 +3786,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 191
+        "__id__": 192
       }
     ],
     "_prefab": null,
@@ -3781,7 +3823,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 190
+      "__id__": 191
     },
     "_enabled": true,
     "__prefab": null,
@@ -3793,7 +3835,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 192
+      "__id__": 193
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@3fd13",
@@ -3831,7 +3873,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 194
+        "__id__": 195
       }
     ],
     "_prefab": null,
@@ -3868,7 +3910,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 193
+      "__id__": 194
     },
     "_enabled": true,
     "__prefab": null,
@@ -3880,7 +3922,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 195
+      "__id__": 196
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@dbbcd",
@@ -3918,7 +3960,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 197
+        "__id__": 198
       }
     ],
     "_prefab": null,
@@ -3955,7 +3997,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 196
+      "__id__": 197
     },
     "_enabled": true,
     "__prefab": null,
@@ -3967,7 +4009,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 198
+      "__id__": 199
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@e1c72",
@@ -4003,10 +4045,10 @@
     },
     "_children": [
       {
-        "__id__": 200
+        "__id__": 201
       },
       {
-        "__id__": 201
+        "__id__": 202
       }
     ],
     "_active": true,
@@ -4045,7 +4087,7 @@
     "_name": "Bara_voda",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 199
+      "__id__": 200
     },
     "_children": [],
     "_active": true,
@@ -4084,7 +4126,7 @@
     "_name": "joint1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 199
+      "__id__": 200
     },
     "_children": [],
     "_active": true,
@@ -4127,10 +4169,10 @@
     },
     "_children": [
       {
-        "__id__": 203
+        "__id__": 204
       },
       {
-        "__id__": 206
+        "__id__": 207
       }
     ],
     "_active": true,
@@ -4169,13 +4211,13 @@
     "_name": "Vetrenjaca_elise",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 202
+      "__id__": 203
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 204
+        "__id__": 205
       }
     ],
     "_prefab": null,
@@ -4212,7 +4254,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 203
+      "__id__": 204
     },
     "_enabled": true,
     "__prefab": null,
@@ -4224,7 +4266,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 205
+      "__id__": 206
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@7d5fe",
@@ -4263,7 +4305,7 @@
     "_name": "joint2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 202
+      "__id__": 203
     },
     "_children": [],
     "_active": true,
@@ -4306,10 +4348,10 @@
     },
     "_children": [
       {
-        "__id__": 208
+        "__id__": 209
       },
       {
-        "__id__": 209
+        "__id__": 210
       }
     ],
     "_active": true,
@@ -4348,7 +4390,7 @@
     "_name": "joint8",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 207
+      "__id__": 208
     },
     "_children": [],
     "_active": true,
@@ -4387,13 +4429,13 @@
     "_name": "Veliko_drvo_2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 207
+      "__id__": 208
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 210
+        "__id__": 211
       }
     ],
     "_prefab": null,
@@ -4430,7 +4472,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 209
+      "__id__": 210
     },
     "_enabled": true,
     "__prefab": null,
@@ -4442,7 +4484,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 211
+      "__id__": 212
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@1525f",
@@ -4485,10 +4527,10 @@
     },
     "_children": [
       {
-        "__id__": 213
+        "__id__": 214
       },
       {
-        "__id__": 216
+        "__id__": 217
       }
     ],
     "_active": true,
@@ -4527,14 +4569,14 @@
     "_name": "joint5",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 212
+      "__id__": 213
     },
     "_children": [
       {
-        "__id__": 214
+        "__id__": 215
       },
       {
-        "__id__": 215
+        "__id__": 216
       }
     ],
     "_active": true,
@@ -4573,7 +4615,7 @@
     "_name": "joint6",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 213
+      "__id__": 214
     },
     "_children": [],
     "_active": true,
@@ -4612,7 +4654,7 @@
     "_name": "joint7",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 213
+      "__id__": 214
     },
     "_children": [],
     "_active": true,
@@ -4651,7 +4693,7 @@
     "_name": "Cirkus_2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 212
+      "__id__": 213
     },
     "_children": [],
     "_active": true,
@@ -4694,10 +4736,10 @@
     },
     "_children": [
       {
-        "__id__": 218
+        "__id__": 219
       },
       {
-        "__id__": 220
+        "__id__": 221
       }
     ],
     "_active": true,
@@ -4736,11 +4778,11 @@
     "_name": "joint3",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 217
+      "__id__": 218
     },
     "_children": [
       {
-        "__id__": 219
+        "__id__": 220
       }
     ],
     "_active": true,
@@ -4779,7 +4821,7 @@
     "_name": "joint4",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 218
+      "__id__": 219
     },
     "_children": [],
     "_active": true,
@@ -4818,13 +4860,13 @@
     "_name": "Zeke_u_balonu",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 217
+      "__id__": 218
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 221
+        "__id__": 222
       }
     ],
     "_prefab": null,
@@ -4861,7 +4903,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 220
+      "__id__": 221
     },
     "_enabled": true,
     "__prefab": null,
@@ -4877,7 +4919,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 222
+      "__id__": 223
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@2a118",
@@ -4913,7 +4955,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Ground002",
+    "_name": "Pod",
     "_objFlags": 0,
     "_parent": {
       "__id__": 142
@@ -4922,7 +4964,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 224
+        "__id__": 225
       }
     ],
     "_prefab": null,
@@ -4952,14 +4994,14 @@
       "y": 0,
       "z": 0
     },
-    "_id": "9c6gXyBW1NOqmj4nLXQ98T"
+    "_id": "ffgDf2ULtMwbDDdUpFmm5n"
   },
   {
     "__type__": "cc.MeshRenderer",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 223
+      "__id__": 224
     },
     "_enabled": true,
     "__prefab": null,
@@ -4975,16 +5017,16 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 225
+      "__id__": 226
     },
     "_mesh": {
-      "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@86f6e",
+      "__uuid__": "f78af9da-412e-48cb-bee0-62fc3377b1c4@86f6e",
       "__expectedType__": "cc.Mesh"
     },
     "_shadowCastingMode": 0,
     "_shadowReceivingMode": 1,
     "_enableMorph": true,
-    "_id": "9bsP13dwpHcKiT96lsXaJ+"
+    "_id": "73vkxxJptPcaUtooIpPPsO"
   },
   {
     "__type__": "cc.ModelLightmapSettings",
@@ -5013,7 +5055,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 227
+        "__id__": 228
       }
     ],
     "_prefab": null,
@@ -5050,7 +5092,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 226
+      "__id__": 227
     },
     "_enabled": true,
     "__prefab": null,
@@ -5206,7 +5248,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 228
+      "__id__": 229
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@7215d",
@@ -5244,7 +5286,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 230
+        "__id__": 231
       }
     ],
     "_prefab": null,
@@ -5281,7 +5323,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 229
+      "__id__": 230
     },
     "_enabled": true,
     "__prefab": null,
@@ -5293,7 +5335,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 231
+      "__id__": 232
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@d4db3",
@@ -5329,7 +5371,7 @@
     },
     "_children": [
       {
-        "__id__": 233
+        "__id__": 234
       }
     ],
     "_active": false,
@@ -5368,13 +5410,13 @@
     "_name": "Bara_korito",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 232
+      "__id__": 233
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 234
+        "__id__": 235
       }
     ],
     "_prefab": null,
@@ -5411,7 +5453,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 233
+      "__id__": 234
     },
     "_enabled": true,
     "__prefab": null,
@@ -5439,7 +5481,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 235
+      "__id__": 236
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@2730d",
@@ -5475,7 +5517,7 @@
     },
     "_children": [
       {
-        "__id__": 237
+        "__id__": 238
       }
     ],
     "_active": true,
@@ -5514,13 +5556,13 @@
     "_name": "Vetrenjaca_telo",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 236
+      "__id__": 237
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 238
+        "__id__": 239
       }
     ],
     "_prefab": null,
@@ -5557,7 +5599,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 237
+      "__id__": 238
     },
     "_enabled": true,
     "__prefab": null,
@@ -5569,7 +5611,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 239
+      "__id__": 240
     },
     "_mesh": {
       "__uuid__": "6090e23d-4d82-45d7-9c3f-f267a4d47e10@841d7",
@@ -5619,10 +5661,10 @@
     "_useBakedAnimation": true,
     "_sockets": [
       {
-        "__id__": 241
+        "__id__": 242
       },
       {
-        "__id__": 242
+        "__id__": 243
       }
     ],
     "_id": "43mNUpyHRC3YXIFu81Z5rA"
@@ -5631,14 +5673,14 @@
     "__type__": "cc.SkeletalAnimation.Socket",
     "path": "Bara",
     "target": {
-      "__id__": 232
+      "__id__": 233
     }
   },
   {
     "__type__": "cc.SkeletalAnimation.Socket",
     "path": "Vetrenjaca",
     "target": {
-      "__id__": 236
+      "__id__": 237
     }
   },
   {
@@ -5664,31 +5706,31 @@
     },
     "_children": [
       {
-        "__id__": 245
+        "__id__": 246
       },
       {
-        "__id__": 254
+        "__id__": 255
       },
       {
-        "__id__": 262
+        "__id__": 263
       },
       {
-        "__id__": 270
+        "__id__": 271
       },
       {
-        "__id__": 278
+        "__id__": 279
       },
       {
-        "__id__": 286
+        "__id__": 287
       },
       {
-        "__id__": 294
+        "__id__": 295
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 302
+        "__id__": 303
       }
     ],
     "_prefab": null,
@@ -5725,23 +5767,23 @@
     "_name": "Checkpoint1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 244
+      "__id__": 245
     },
     "_children": [
       {
-        "__id__": 246
+        "__id__": 247
       },
       {
-        "__id__": 248
+        "__id__": 249
       },
       {
-        "__id__": 251
+        "__id__": 252
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 253
+        "__id__": 254
       }
     ],
     "_prefab": null,
@@ -5778,13 +5820,13 @@
     "_name": "Task0",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 245
+      "__id__": 246
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 247
+        "__id__": 248
       }
     ],
     "_prefab": null,
@@ -5822,7 +5864,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 246
+      "__id__": 247
     },
     "_enabled": true,
     "__prefab": null,
@@ -5832,7 +5874,6 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 0,
     "remoteName": "task0-4.txt",
     "taskType": 0,
     "_id": "2763XLlxdJUofik6LGGTxx"
@@ -5842,16 +5883,16 @@
     "_name": "Task1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 245
+      "__id__": 246
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 249
+        "__id__": 250
       },
       {
-        "__id__": 250
+        "__id__": 251
       }
     ],
     "_prefab": null,
@@ -5888,7 +5929,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 248
+      "__id__": 249
     },
     "_enabled": true,
     "__prefab": null,
@@ -5903,13 +5944,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 248
+      "__id__": 249
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 246
+        "__id__": 247
       }
     ],
     "uvodniTask": false,
@@ -5917,8 +5958,8 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 4,
     "remoteName": "task1.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "d9JXJ2sPxLdLjldl1zf7uw"
   },
@@ -5927,13 +5968,13 @@
     "_name": "Task2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 245
+      "__id__": 246
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 252
+        "__id__": 253
       }
     ],
     "_prefab": null,
@@ -5970,13 +6011,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 251
+      "__id__": 252
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 248
+        "__id__": 249
       }
     ],
     "uvodniTask": false,
@@ -5984,7 +6025,6 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "1",
     "_id": "17c8acZoBO7pZavyO3ec/H"
   },
@@ -5993,7 +6033,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 245
+      "__id__": 246
     },
     "_enabled": true,
     "__prefab": null,
@@ -6004,20 +6044,20 @@
     "_name": "Checkpoint2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 244
+      "__id__": 245
     },
     "_children": [
       {
-        "__id__": 255
+        "__id__": 256
       },
       {
-        "__id__": 259
+        "__id__": 260
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 261
+        "__id__": 262
       }
     ],
     "_prefab": null,
@@ -6054,19 +6094,19 @@
     "_name": "Task3",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 254
+      "__id__": 255
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 256
-      },
-      {
         "__id__": 257
       },
       {
         "__id__": 258
+      },
+      {
+        "__id__": 259
       }
     ],
     "_prefab": null,
@@ -6103,13 +6143,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 255
+      "__id__": 256
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 251
+        "__id__": 252
       }
     ],
     "uvodniTask": false,
@@ -6117,8 +6157,8 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "task3.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "10CpJvWH1A26DVJ/GZlTv8"
   },
@@ -6127,7 +6167,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 255
+      "__id__": 256
     },
     "_enabled": true,
     "__prefab": null,
@@ -6148,7 +6188,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 255
+      "__id__": 256
     },
     "_enabled": true,
     "__prefab": null,
@@ -6184,13 +6224,13 @@
     "_name": "Task4",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 254
+      "__id__": 255
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 260
+        "__id__": 261
       }
     ],
     "_prefab": null,
@@ -6227,13 +6267,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 259
+      "__id__": 260
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 255
+        "__id__": 256
       }
     ],
     "uvodniTask": false,
@@ -6241,7 +6281,6 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "1",
     "_id": "d5j4gjj8hO2LTuzQviZsad"
   },
@@ -6250,7 +6289,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 254
+      "__id__": 255
     },
     "_enabled": true,
     "__prefab": null,
@@ -6261,20 +6300,20 @@
     "_name": "Checkpoint3",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 244
+      "__id__": 245
     },
     "_children": [
       {
-        "__id__": 263
+        "__id__": 264
       },
       {
-        "__id__": 267
+        "__id__": 268
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 269
+        "__id__": 270
       }
     ],
     "_prefab": null,
@@ -6311,19 +6350,19 @@
     "_name": "Task5",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 262
+      "__id__": 263
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 264
-      },
-      {
         "__id__": 265
       },
       {
         "__id__": 266
+      },
+      {
+        "__id__": 267
       }
     ],
     "_prefab": null,
@@ -6360,13 +6399,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 263
+      "__id__": 264
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 259
+        "__id__": 260
       }
     ],
     "uvodniTask": false,
@@ -6374,8 +6413,8 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "task5.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "9dXdcO0QdGrokiwU9UjYxD"
   },
@@ -6384,7 +6423,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 263
+      "__id__": 264
     },
     "_enabled": true,
     "__prefab": null,
@@ -6405,7 +6444,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 263
+      "__id__": 264
     },
     "_enabled": true,
     "__prefab": null,
@@ -6441,13 +6480,13 @@
     "_name": "Task6",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 262
+      "__id__": 263
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 268
+        "__id__": 269
       }
     ],
     "_prefab": null,
@@ -6484,13 +6523,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 267
+      "__id__": 268
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 263
+        "__id__": 264
       }
     ],
     "uvodniTask": false,
@@ -6498,7 +6537,6 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "1",
     "_id": "85g+/jmP5JEK/r7403lGCe"
   },
@@ -6507,7 +6545,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 262
+      "__id__": 263
     },
     "_enabled": true,
     "__prefab": null,
@@ -6518,20 +6556,20 @@
     "_name": "Checkpoint4",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 244
+      "__id__": 245
     },
     "_children": [
       {
-        "__id__": 271
+        "__id__": 272
       },
       {
-        "__id__": 275
+        "__id__": 276
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 277
+        "__id__": 278
       }
     ],
     "_prefab": null,
@@ -6568,19 +6606,19 @@
     "_name": "Task7",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 270
+      "__id__": 271
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 272
-      },
-      {
         "__id__": 273
       },
       {
         "__id__": 274
+      },
+      {
+        "__id__": 275
       }
     ],
     "_prefab": null,
@@ -6617,13 +6655,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 271
+      "__id__": 272
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 267
+        "__id__": 268
       }
     ],
     "uvodniTask": false,
@@ -6631,8 +6669,8 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "task7.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "e3H806kqFEIIIsaVd1GmTA"
   },
@@ -6641,7 +6679,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 271
+      "__id__": 272
     },
     "_enabled": true,
     "__prefab": null,
@@ -6662,7 +6700,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 271
+      "__id__": 272
     },
     "_enabled": true,
     "__prefab": null,
@@ -6698,13 +6736,13 @@
     "_name": "Task8",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 270
+      "__id__": 271
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 276
+        "__id__": 277
       }
     ],
     "_prefab": null,
@@ -6741,13 +6779,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 275
+      "__id__": 276
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 271
+        "__id__": 272
       }
     ],
     "uvodniTask": false,
@@ -6755,7 +6793,6 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "1",
     "_id": "f6dHBQKY5GhahuDd1KwoKA"
   },
@@ -6764,7 +6801,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 270
+      "__id__": 271
     },
     "_enabled": true,
     "__prefab": null,
@@ -6775,20 +6812,20 @@
     "_name": "Checkpoint5",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 244
+      "__id__": 245
     },
     "_children": [
       {
-        "__id__": 279
+        "__id__": 280
       },
       {
-        "__id__": 283
+        "__id__": 284
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 285
+        "__id__": 286
       }
     ],
     "_prefab": null,
@@ -6825,19 +6862,19 @@
     "_name": "Task9",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 278
+      "__id__": 279
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 280
-      },
-      {
         "__id__": 281
       },
       {
         "__id__": 282
+      },
+      {
+        "__id__": 283
       }
     ],
     "_prefab": null,
@@ -6874,13 +6911,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 279
+      "__id__": 280
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 275
+        "__id__": 276
       }
     ],
     "uvodniTask": false,
@@ -6888,8 +6925,8 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "task9.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "a2cnnHaYJDobENisDz3pgU"
   },
@@ -6898,7 +6935,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 279
+      "__id__": 280
     },
     "_enabled": true,
     "__prefab": null,
@@ -6919,7 +6956,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 279
+      "__id__": 280
     },
     "_enabled": true,
     "__prefab": null,
@@ -6955,13 +6992,13 @@
     "_name": "Task10",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 278
+      "__id__": 279
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 284
+        "__id__": 285
       }
     ],
     "_prefab": null,
@@ -6998,13 +7035,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 283
+      "__id__": 284
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 279
+        "__id__": 280
       }
     ],
     "uvodniTask": false,
@@ -7012,7 +7049,6 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "1",
     "_id": "02hOYXZaJOlYPHRXvQSrn1"
   },
@@ -7021,7 +7057,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 278
+      "__id__": 279
     },
     "_enabled": true,
     "__prefab": null,
@@ -7032,20 +7068,20 @@
     "_name": "Checkpoint6",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 244
+      "__id__": 245
     },
     "_children": [
       {
-        "__id__": 287
+        "__id__": 288
       },
       {
-        "__id__": 291
+        "__id__": 292
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 293
+        "__id__": 294
       }
     ],
     "_prefab": null,
@@ -7082,19 +7118,19 @@
     "_name": "Task11",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 286
+      "__id__": 287
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 288
-      },
-      {
         "__id__": 289
       },
       {
         "__id__": 290
+      },
+      {
+        "__id__": 291
       }
     ],
     "_prefab": null,
@@ -7131,13 +7167,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 287
+      "__id__": 288
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 283
+        "__id__": 284
       }
     ],
     "uvodniTask": false,
@@ -7145,8 +7181,8 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "task11.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "09pWX7xoFDI4dly2l4vbcj"
   },
@@ -7155,7 +7191,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 287
+      "__id__": 288
     },
     "_enabled": true,
     "__prefab": null,
@@ -7176,7 +7212,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 287
+      "__id__": 288
     },
     "_enabled": true,
     "__prefab": null,
@@ -7212,13 +7248,13 @@
     "_name": "Task12",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 286
+      "__id__": 287
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 292
+        "__id__": 293
       }
     ],
     "_prefab": null,
@@ -7255,13 +7291,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 291
+      "__id__": 292
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 287
+        "__id__": 288
       }
     ],
     "uvodniTask": false,
@@ -7269,7 +7305,6 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "1",
     "_id": "1eKysdALRJ/ogmqOmHTvP+"
   },
@@ -7278,7 +7313,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 286
+      "__id__": 287
     },
     "_enabled": true,
     "__prefab": null,
@@ -7289,20 +7324,20 @@
     "_name": "Checkpoint7",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 244
+      "__id__": 245
     },
     "_children": [
       {
-        "__id__": 295
+        "__id__": 296
       },
       {
-        "__id__": 299
+        "__id__": 300
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 301
+        "__id__": 302
       }
     ],
     "_prefab": null,
@@ -7339,19 +7374,19 @@
     "_name": "Task13",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 294
+      "__id__": 295
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 296
-      },
-      {
         "__id__": 297
       },
       {
         "__id__": 298
+      },
+      {
+        "__id__": 299
       }
     ],
     "_prefab": null,
@@ -7388,13 +7423,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 295
+      "__id__": 296
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 291
+        "__id__": 292
       }
     ],
     "uvodniTask": false,
@@ -7402,8 +7437,8 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "task13.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "11Kp/VgmVBVKLj5BzXCYH7"
   },
@@ -7412,7 +7447,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 295
+      "__id__": 296
     },
     "_enabled": true,
     "__prefab": null,
@@ -7433,7 +7468,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 295
+      "__id__": 296
     },
     "_enabled": true,
     "__prefab": null,
@@ -7469,13 +7504,13 @@
     "_name": "Task14",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 294
+      "__id__": 295
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 300
+        "__id__": 301
       }
     ],
     "_prefab": null,
@@ -7512,13 +7547,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 299
+      "__id__": 300
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 295
+        "__id__": 296
       }
     ],
     "uvodniTask": false,
@@ -7526,7 +7561,6 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
     "remoteName": "1",
     "_id": "98AW4261ZLx4p55aHFqZQJ"
   },
@@ -7535,7 +7569,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 294
+      "__id__": 295
     },
     "_enabled": true,
     "__prefab": null,
@@ -7546,7 +7580,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 244
+      "__id__": 245
     },
     "_enabled": true,
     "__prefab": null,
@@ -7588,17 +7622,14 @@
     },
     "_children": [
       {
-        "__id__": 304
+        "__id__": 305
       },
       {
-        "__id__": 305
+        "__id__": 306
       }
     ],
     "_active": true,
     "_components": [
-      {
-        "__id__": 307
-      },
       {
         "__id__": 308
       },
@@ -7613,6 +7644,9 @@
       },
       {
         "__id__": 312
+      },
+      {
+        "__id__": 313
       }
     ],
     "_prefab": null,
@@ -7650,7 +7684,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 303
+      "__id__": 304
     },
     "_children": [],
     "_active": true,
@@ -7689,13 +7723,13 @@
     "_name": "Camera",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 303
+      "__id__": 304
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 306
+        "__id__": 307
       }
     ],
     "_prefab": null,
@@ -7732,7 +7766,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 305
+      "__id__": 306
     },
     "_enabled": true,
     "__prefab": null,
@@ -7773,7 +7807,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 303
+      "__id__": 304
     },
     "_enabled": true,
     "__prefab": null,
@@ -7791,7 +7825,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 303
+      "__id__": 304
     },
     "_enabled": true,
     "__prefab": null,
@@ -7821,7 +7855,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 303
+      "__id__": 304
     },
     "_enabled": true,
     "__prefab": null,
@@ -7832,7 +7866,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 303
+      "__id__": 304
     },
     "_enabled": true,
     "__prefab": null,
@@ -7853,7 +7887,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 303
+      "__id__": 304
     },
     "_enabled": true,
     "__prefab": null,
@@ -7869,7 +7903,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 303
+      "__id__": 304
     },
     "_enabled": true,
     "__prefab": null,
@@ -7941,19 +7975,19 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 315
-    },
-    "shadows": {
       "__id__": 316
     },
-    "_skybox": {
+    "shadows": {
       "__id__": 317
     },
-    "fog": {
+    "_skybox": {
       "__id__": 318
     },
-    "octree": {
+    "fog": {
       "__id__": 319
+    },
+    "octree": {
+      "__id__": 320
     }
   },
   {

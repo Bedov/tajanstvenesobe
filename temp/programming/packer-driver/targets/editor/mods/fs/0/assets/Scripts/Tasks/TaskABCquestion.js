@@ -126,6 +126,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         showTask() {
+          console.log("ShowTask!!!");
+
           if (this.isItOkToExecute()) {
             var _getInstance$loadingH2;
 

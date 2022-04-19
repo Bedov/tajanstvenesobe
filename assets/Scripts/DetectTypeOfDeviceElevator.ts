@@ -47,23 +47,28 @@ export class DetectTypeOfDeviceElevator extends Component {
     _lookCounter = 0.2;
 
     _tutorialEnded = false;
+    _preTutorailEnded = false;
 
     onLoad() {
+        this.scheduleOnce(this.startTutorial, 6);
+
+        this.MobileMoveJoystick = this.node.getChildByName("joystick")!;
+
+    }
+
+    startTutorial() {
         systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
 
         this.KeyboardMoveSymbol = this.node.getChildByName("DesktopMoveTutorial")!;
         this.KeyboardSeeSymbol = this.node.getChildByName("DesktopLookTutorial")!;
         this.MobileSeeSymbol = this.node.getChildByName("MobileLookTutorial")!;
         this.MobileMoveSymbol = this.node.getChildByName("MobileMoveTutorial")!;
-
-        this.MobileMoveJoystick = this.node.getChildByName("joystick")!;
-
-        //this.checkProgressForTutorial();
-        //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
+        this.setPlatform();
+        
     }
 
     start() {
-        this.setPlatform();
+        
         //this.scheduleOnce(, 0.1); 
 
     }
@@ -181,12 +186,12 @@ export class DetectTypeOfDeviceElevator extends Component {
 
     }
     keyboard_Move() {
-        if(!this._movedontRepeatTutorialEndevent)
+        if(!this._movedontRepeatTutorialEndevent && this._preTutorailEnded)
             this._moveTutorialEndBool = true;
     }
 
     joystick_Mouse_Move() {
-        if(!this._lookdontRepeatTutorialEndevent)
+        if(!this._lookdontRepeatTutorialEndevent && this._preTutorailEnded)
             this._lookTutorialEndBool = true;
     }
     // update (deltaTime: number) {

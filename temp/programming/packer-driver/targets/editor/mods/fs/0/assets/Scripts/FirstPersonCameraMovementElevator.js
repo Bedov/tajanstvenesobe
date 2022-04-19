@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, Vec3, geometry, KeyCode, PhysicsSystem, RigidBody, GameStatuType, GlobalManager, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, KEYCODE, _pointerLockGeneral, _keyEvent, FirstPersonCameraMovementElevator;
+  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, Vec3, geometry, KeyCode, PhysicsSystem, RigidBody, find, GameStatuType, GlobalManager, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, KEYCODE, _pointerLockGeneral, _keyEvent, FirstPersonCameraMovementElevator;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -37,6 +37,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       KeyCode = _cc.KeyCode;
       PhysicsSystem = _cc.PhysicsSystem;
       RigidBody = _cc.RigidBody;
+      find = _cc.find;
     }, function (_unresolved_2) {
       GameStatuType = _unresolved_2.GameStatuType;
     }, function (_unresolved_3) {
@@ -261,10 +262,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         tutorialEnd() {
+          var canvas = find("Canvas");
+
           if (this._tutorialEnded == false) {
-            var detectType = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-              error: Error()
-            }), GlobalManager) : GlobalManager).instance.canvas.getComponent("DetectTypeOfDeviceElevator");
+            var detectType = canvas.getComponent("DetectTypeOfDeviceElevator");
             detectType.keyboard_Move();
             this._tutorialEnded = true;
           }

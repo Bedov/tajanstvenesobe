@@ -37,8 +37,6 @@ export class Task extends Component {
     @property([Consequence])
     consequencesToResolve: Consequence[] = [];
 
-    @property(Number)
-    checkPointBelong: Number = 0;
 
     taskManager!: TaskManager;
 

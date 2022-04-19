@@ -88,6 +88,7 @@ export class TaskAutoActive extends Task {
 
 
     showTask() {
+
         if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
             GameManager.getInstance().loadingHandler?.turnOnLoading();
             this.scheduleOnce(this.showTask, 0.2);

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, Animation, Prefab, instantiate, Checkpoint, FollowGoForward, GameManager, localSceneData, GlobalManager, TrophiesManagment, ButtonDisabler, Task, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _temp, _crd, ccclass, property, TaskManager;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, Animation, Prefab, instantiate, Checkpoint, FollowGoForward, GameManager, GlobalManager, TrophiesManagment, ButtonDisabler, Task, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _temp, _crd, ccclass, property, TaskManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -21,10 +21,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOflocalSceneData(extras) {
-    _reporterNs.report("localSceneData", "../GameManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGlobalManager(extras) {
@@ -62,7 +58,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       FollowGoForward = _unresolved_3.FollowGoForward;
     }, function (_unresolved_4) {
       GameManager = _unresolved_4.GameManager;
-      localSceneData = _unresolved_4.localSceneData;
     }, function (_unresolved_5) {
       GlobalManager = _unresolved_5.GlobalManager;
     }, function (_unresolved_6) {
@@ -198,15 +193,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameManager) : GameManager).getInstance().trophies) === null || _getInstance$trophies === void 0 ? void 0 : (_getInstance$trophies2 = _getInstance$trophies.getComponent(_crd && TrophiesManagment === void 0 ? (_reportPossibleCrUseOfTrophiesManagment({
             error: Error()
           }), TrophiesManagment) : TrophiesManagment)) === null || _getInstance$trophies2 === void 0 ? void 0 : _getInstance$trophies2.calculateLockedWithEffect();
+          console.log("Level Data WAKA " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);
           (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().levelsArray.forEach(element => {
-            if ((_crd && localSceneData === void 0 ? (_reportPossibleCrUseOflocalSceneData({
-              error: Error()
-            }), localSceneData) : localSceneData).sceneName == element.sceneName) element.setData(_crd && localSceneData === void 0 ? (_reportPossibleCrUseOflocalSceneData({
-              error: Error()
-            }), localSceneData) : localSceneData);
-          });
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = Number(newProgress);
         }
 
         checkReadinesForTasks() {

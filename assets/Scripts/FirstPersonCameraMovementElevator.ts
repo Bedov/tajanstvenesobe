@@ -20,7 +20,8 @@ import { _decorator,
     PhysicsRayResult,
     PhysicsSystem,
     RigidBody,
-    Layers} from 'cc';
+    Layers,
+    find} from 'cc';
 const { ccclass, property } = _decorator;
 //const outRay = new ray(0, -1, 0, 0, 1, 0);
 
@@ -257,8 +258,9 @@ export class FirstPersonCameraMovementElevator extends Component {
     }
 
     tutorialEnd() {
+        var canvas = find("Canvas")!;
         if(this._tutorialEnded == false) {
-            var detectType = GlobalManager.instance.canvas!.getComponent("DetectTypeOfDeviceElevator") as DetectTypeOfDeviceElevator;
+            var detectType = canvas!.getComponent("DetectTypeOfDeviceElevator") as DetectTypeOfDeviceElevator;
             detectType.keyboard_Move();
 
             this._tutorialEnded = true;

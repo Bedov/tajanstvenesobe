@@ -118,7 +118,7 @@ export class DbuttonRaycast extends Component {
                     else
                         this.gameStatus = GameManager.getInstance().gameStatus;
 
-                        console.log("this.gameStatus " + this.gameStatus?.toString());
+                      
                         
                     if(rayCastItem.collider.node == touchStartItem && this.gameStatus == GameStatuType.gameActive) {
                         touchStartItem.getComponent(DbuttonActivate)?.startAnimation();

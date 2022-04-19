@@ -9,6 +9,7 @@ import { DetectTypeOfDevice } from "../DetectTypeOfDevice";
 import { Task } from './Task';
 import { GameManager } from '../GameManager';
 import { JSONimage, JSONquestTekst } from '../RemoteScripts/JSONloader';
+import { GlobalManager, levelStatus } from '../GlobalManager';
 
 
 
@@ -18,7 +19,8 @@ export class TaskEnding extends Task {
     myTimeHasCome = true;
 
 
-
+    @property (Boolean)
+    debugEnding = false;
 
     start(){
         this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
@@ -40,8 +42,18 @@ export class TaskEnding extends Task {
 
 
     showTask() {
+        GlobalManager.getInstance().activeLevelData.levelProgress = 0;
+        GlobalManager.getInstance().activeLevelData.status = levelStatus.finished;
+        var indexOfCurrentScene = GlobalManager.getInstance().levelsArray.indexOf(GlobalManager.getInstance().activeLevelData);
+
+        if(indexOfCurrentScene < GlobalManager.getInstance().levelsArray.length)
+            GlobalManager.getInstance().levelsArray[indexOfCurrentScene + 1].status = levelStatus.unlocked;
+
         GameManager.getInstance().Progress = 0;
+
+
         director.loadScene("MainMenu");
+
 
         
     }

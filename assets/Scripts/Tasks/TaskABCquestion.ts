@@ -44,6 +44,7 @@ export class TaskABCquestion extends Task {
     }
 
     isItMyTimeForDownloading() {
+
         if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted) {
             this.getQuestions();
             this.downloadStarted = true;
@@ -94,7 +95,7 @@ export class TaskABCquestion extends Task {
     }
 
     showTask () {
-        
+        console.log("ShowTask!!!");
         if(this.isItOkToExecute()) {
             if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
                 GameManager.getInstance().loadingHandler?.turnOnLoading();
@@ -104,7 +105,7 @@ export class TaskABCquestion extends Task {
                 console.log("this.orderNumber : " + this.orderNumber);
                 return;
             }
-
+            
             GameManager.getInstance().loadingHandler?.turnOffLoading();
             this.taskManager.genericUIABC!.active = true;
             this.taskManager.genericUIABC!.getComponent(GenericUIABC)!.turnOnGenericTask(this.node); //Čestitam! Stigao si do časovničara.

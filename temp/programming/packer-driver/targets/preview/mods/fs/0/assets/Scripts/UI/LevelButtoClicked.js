@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, GlobalManager, ButtonColorsLogic, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, LevelButtonClicked;
+  var _reporterNs, _cclegacy, _decorator, Component, find, ButtonColorsLogic, OpenLevelByName, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, LevelButtonClicked;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,12 +11,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
-  function _reportPossibleCrUseOfGlobalManager(extras) {
-    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
-  }
-
   function _reportPossibleCrUseOfButtonColorsLogic(extras) {
     _reporterNs.report("ButtonColorsLogic", "../Goldberg/ButtonColorsLogic", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfOpenLevelByName(extras) {
+    _reporterNs.report("OpenLevelByName", "../Utilities/OpenLevelByName", _context.meta, extras);
   }
 
   return {
@@ -26,10 +26,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
       Component = _cc.Component;
+      find = _cc.find;
     }, function (_unresolved_2) {
-      GlobalManager = _unresolved_2.GlobalManager;
+      ButtonColorsLogic = _unresolved_2.ButtonColorsLogic;
     }, function (_unresolved_3) {
-      ButtonColorsLogic = _unresolved_3.ButtonColorsLogic;
+      OpenLevelByName = _unresolved_3.OpenLevelByName;
     }],
     execute: function () {
       _crd = true;
@@ -70,12 +71,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         levelButtonClicked() {
-          if (!this.lockedButton) {
-            var _getInstance$openLeve;
+          var canvas = find("Canvas");
 
-            (_getInstance$openLeve = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+          if (!this.lockedButton) {
+            canvas.getComponent(_crd && OpenLevelByName === void 0 ? (_reportPossibleCrUseOfOpenLevelByName({
               error: Error()
-            }), GlobalManager) : GlobalManager).getInstance().openLevelByName) === null || _getInstance$openLeve === void 0 ? void 0 : _getInstance$openLeve.loadAndPlaySceneByNameD(this.levelName.toString());
+            }), OpenLevelByName) : OpenLevelByName).loadAndPlaySceneByNameD(this.levelName.toString());
             this.buttonColorsLogic.lockAllButtons();
           }
         } // update (deltaTime: number) {

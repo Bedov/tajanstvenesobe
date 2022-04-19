@@ -1,5 +1,5 @@
 export class GeneralInformations {
-    public globalProgress : number = 0;
+    //public globalProgress : number = 0;
 
     springFest?: string;
     playfullCity?: string;
@@ -49,7 +49,7 @@ var settingData = false;
 
 
 
-import { _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, AffineTransform, sys } from 'cc';
+import { _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, AffineTransform, sys, game, director, Scene, find } from 'cc';
 import { GameStatuType } from './GameManager';
 import { OpenLevelByName } from './Utilities/OpenLevelByName';
 const { ccclass, property } = _decorator;
@@ -83,6 +83,7 @@ var globalInformations = new GeneralInformations;
 //Prvi Razred
 var kinderGardenData = new levelObject();
 kinderGardenData.sceneName = "KinderGarden";
+//kinderGardenData.levelProgress = 6;
 
 var birthdayPartyData = new levelObject();
 birthdayPartyData.sceneName = "BirthdayParty";
@@ -127,8 +128,7 @@ export class GlobalManager extends Component {
 
     levelsArray: Array<levelObject> = [];
 
-    @property(Node)
-    canvas?: Node;
+    activeLevelData = new levelObject;
 
 
     @property(String)
@@ -155,12 +155,6 @@ export class GlobalManager extends Component {
     @property(Label)
     invisablePeopleCity?: Label;
 
-    
-    @property(Node)
-    Player?: Node;
-    
-
-    openLevelByName?: OpenLevelByName;
 
     @property(EditBoxComponent)
     LanguageBox?: EditBoxComponent;
@@ -200,18 +194,29 @@ export class GlobalManager extends Component {
     }
     
 
+
     onLoad() {
+        
+
+
         GlobalManager.instance = this;
 
         this.setWorldArray();
 
-        this.openLevelByName = this.canvas!.getComponent(OpenLevelByName)!;
+        
         this.setPlatformType();
+
+        game.addPersistRootNode(this.node);
     }
 
+
     addProgressTest () {
-        globalInformations.globalProgress ++;
+        //globalInformations.globalProgress ++;
         this.refreshLevelButtons();
+    }
+
+    refreshLevelsStatus(){
+
     }
 
     refreshLevelButtons() {

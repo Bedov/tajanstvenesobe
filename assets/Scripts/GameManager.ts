@@ -1,6 +1,6 @@
 
-import { _decorator, Component, Node, director, Label, sys, AudioSource } from 'cc';
-import { levelObject } from './GlobalManager';
+import { _decorator, Component, Node, director, Label, sys, AudioSource, Scene, LightComponent, find } from 'cc';
+import { GlobalManager, levelObject } from './GlobalManager';
 const { ccclass, property } = _decorator;
 
 /**
@@ -19,9 +19,10 @@ import { JSONloader } from "./RemoteScripts/JSONloader";
 import { LoadingHandler } from './RemoteScripts/LoadingHandler';
 
 
-
+/*
 var localSceneData = new  levelObject();
 export { localSceneData };
+*/
 
  export enum GameStatuType {
     gamePaused =    0,
@@ -75,6 +76,9 @@ export class GameManager extends Component {
 
     trophies? : Node ;
 
+
+    debugMode = true;
+
     public static getInstance(): GameManager {
         if (!this.instance) {
             GameManager.instance = new GameManager();
@@ -85,15 +89,19 @@ export class GameManager extends Component {
 
     static instance: GameManager;
 
+
     setProgress(tempProgress: number){
-        localSceneData.levelProgress = tempProgress;
+        GlobalManager.getInstance().activeLevelData!.levelProgress = tempProgress;
     }
 
     getProgress() {
-        return localSceneData.levelProgress;
+        return  GlobalManager.getInstance().activeLevelData!.levelProgress;
     }
 
     onLoad() {
+
+
+
         GameManager.instance = this;
         this.jsonLoader = this.node.getComponent(JSONloader)!;
         this.loadingHandler = this.node.getComponent(LoadingHandler)!;
@@ -102,7 +110,10 @@ export class GameManager extends Component {
     
         this.trophies = this.Canvas!.getChildByName("BottomUI")!.getChildByName("TrofejiLayout")!;
 
-        this.Progress = Number (localSceneData.levelProgress);
+        console.log("GlobalManager.getInstance().activeLevelData  + " + GlobalManager.getInstance().activeLevelData);
+        
+
+        this.Progress = Number ( GlobalManager.getInstance().activeLevelData!.levelProgress);
 
         this.setPlatformType();
     }
@@ -164,7 +175,10 @@ export class GameManager extends Component {
 
 
     backToMenu() {
-        director.loadScene("MainMenu");
+        if(this.debugMode == true)
+            director.loadScene("MainMenu");
+        else
+            director.loadScene("MainMenuLift1");
     }
 
     // update (deltaTime: number) {
