@@ -72,7 +72,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          this.getTekstRemotely();
+          //this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
+          this.schedule(this.isItMyTimeForDownloading, 0.1);
         }
 
         getTekstRemotely() {
@@ -83,6 +84,29 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), GameManager) : GameManager).getInstance().jsonLoader) === null || _getInstance$jsonLoad === void 0 ? void 0 : _getInstance$jsonLoad.fetchQuestTekst(this.remoteName.toString(), this.tekstObject);
           }
+        }
+
+        checkExecution() {
+          var _getInstance$detectTy, _getInstance$detectTy2;
+
+          if (this.isItOkToExecute() && ((_getInstance$detectTy = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy === void 0 ? void 0 : _getInstance$detectTy._moveTutorialEndBool) && ((_getInstance$detectTy2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy2 === void 0 ? void 0 : _getInstance$detectTy2._lookTutorialEndBool)) this.showTask();
+        }
+
+        isItMyTimeForDownloading() {
+          if (this.orderNumber <= (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().downloadedCheckpoint && !this.downloadStarted) {
+            this.fetchTheData();
+            this.downloadStarted = true;
+          }
+        }
+
+        fetchTheData() {
+          this.getTekstRemotely();
         }
 
         showTask() {
@@ -98,9 +122,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         execute() {
-          this.executed = true;
-          this.taskManager.refreshExecutedTasks(this.node.parent);
-          this.executeNextTasksByForce();
+          console.log("ShowTask!!!");
+
+          if (this.isItOkToExecute()) {
+            var _getInstance$loadingH2;
+
+            if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().downloadedCheckpoint <= this.orderNumber) {
+              var _getInstance$loadingH;
+
+              (_getInstance$loadingH = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+                error: Error()
+              }), GameManager) : GameManager).getInstance().loadingHandler) === null || _getInstance$loadingH === void 0 ? void 0 : _getInstance$loadingH.turnOnLoading();
+              this.scheduleOnce(this.showTask, 0.2);
+              console.log("DownloadedCheckpoint : " + (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+                error: Error()
+              }), GameManager) : GameManager).getInstance().downloadedCheckpoint);
+              console.log("this.orderNumber : " + this.orderNumber);
+              return;
+            }
+
+            (_getInstance$loadingH2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().loadingHandler) === null || _getInstance$loadingH2 === void 0 ? void 0 : _getInstance$loadingH2.turnOffLoading();
+            this.taskManager.genericUI.active = true;
+            this.taskManager.genericUI.getComponent(_crd && GenericUI === void 0 ? (_reportPossibleCrUseOfGenericUI({
+              error: Error()
+            }), GenericUI) : GenericUI).turnOnGenericTaskJSONwithReturn(this.tekstObject, this);
+            this.executed = true; //this.taskManager.refreshExecutedTasks(this.node.parent!);
+
+            this.executeNextTasksByForce();
+          }
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "remoteName", [_dec2], {

@@ -82,11 +82,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           _defineProperty(this, "_lookCounter", 0.2);
 
           _defineProperty(this, "_tutorialEnded", false);
+
+          _defineProperty(this, "_preTutorailEnded", false);
         }
 
         onLoad() {
-          this.scheduleOnce(this.startTutorial, 6); //this.checkProgressForTutorial();
-          //this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.joystick_Mouse_Move, this);
+          this.scheduleOnce(this.startTutorial, 6);
+          this.scheduleOnce(this.endPretutoral, 5);
+          this.MobileMoveJoystick = this.node.getChildByName("joystick");
+        }
+
+        endPretutoral() {
+          this._preTutorailEnded = true;
         }
 
         startTutorial() {
@@ -95,11 +102,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.KeyboardSeeSymbol = this.node.getChildByName("DesktopLookTutorial");
           this.MobileSeeSymbol = this.node.getChildByName("MobileLookTutorial");
           this.MobileMoveSymbol = this.node.getChildByName("MobileMoveTutorial");
-          this.MobileMoveJoystick = this.node.getChildByName("joystick");
+          this.setPlatform();
         }
 
         start() {
-          this.setPlatform(); //this.scheduleOnce(, 0.1); 
+          this.setPlatformInitial();
+        }
+
+        setPlatformInitial() {
+          if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().isMobileOrTablet) {
+            this.MobileMoveJoystick.active = true;
+          } else this.MobileMoveJoystick.active = false;
         }
 
         setPlatform() {
@@ -107,13 +122,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().isMobileOrTablet) {
             this.KeyboardMoveSymbol.active = false;
-            this.MobileMoveJoystick.active = true;
             this.MobileMoveSymbol.active = true;
             this.KeyboardSeeSymbol.active = false;
             this.MobileSeeSymbol.active = true;
           } else {
             this.KeyboardMoveSymbol.active = true;
-            this.MobileMoveJoystick.active = false;
             this.MobileMoveSymbol.active = false;
             this.KeyboardSeeSymbol.active = true;
             this.MobileSeeSymbol.active = false;
@@ -137,6 +150,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         update(deltaTime) {
+          if (this._preTutorailEnded == false) return;
+
           if (this._lookTutorialEndBool && this._lookdontRepeatTutorialEndevent == false) {
             var mobileSeeSymbole = this.MobileSeeSymbol.getComponent('ScriptEffects');
             var keyboardSeeSymbol = this.KeyboardSeeSymbol.getComponent('ScriptEffects');
@@ -200,11 +215,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         keyboard_Move() {
-          if (!this._movedontRepeatTutorialEndevent) this._moveTutorialEndBool = true;
+          if (!this._movedontRepeatTutorialEndevent && this._preTutorailEnded) this._moveTutorialEndBool = true;
         }
 
         joystick_Mouse_Move() {
-          if (!this._lookdontRepeatTutorialEndevent) this._lookTutorialEndBool = true;
+          if (!this._lookdontRepeatTutorialEndevent && this._preTutorailEnded) this._lookTutorialEndBool = true;
         } // update (deltaTime: number) {
         //     // [4]
         // }

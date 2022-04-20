@@ -113,8 +113,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         start() {
-          systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-          systemEvent.on(SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+          this.scheduleOnce(this.startListening, 5);
           this.scaledSpeedCoeficient = 1; //GameManager.getInstance().WorldRoot!.scale.x / 100 ;
           //director.getPhysicsManager().enabled = true;
 
@@ -122,6 +121,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().isMobileOrTablet) this.phoneCoeficient = 1;
           Vec3.copy(this._position, this.node.position);
+        }
+
+        startListening() {
+          systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+          systemEvent.on(SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
         }
 
         onDestroy() {

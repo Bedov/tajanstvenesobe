@@ -1,5 +1,7 @@
 
 import { _decorator, Component, Node, director, Label, sys, AudioSource, Scene, LightComponent, find } from 'cc';
+import { DetectTypeOfDevice } from './DetectTypeOfDevice';
+import { DetectTypeOfDeviceElevator } from './DetectTypeOfDeviceElevator';
 import { GlobalManager, levelObject } from './GlobalManager';
 const { ccclass, property } = _decorator;
 
@@ -37,6 +39,9 @@ export class GameManager extends Component {
     typeInputResult? : Label ;
     jsonLoader? : JSONloader ;
     loadingHandler? : LoadingHandler;
+
+    @property(Boolean)
+    elevatorScript = false;
 
     inputKeyboard? : Node ;
 
@@ -76,8 +81,9 @@ export class GameManager extends Component {
 
     trophies? : Node ;
 
+    detectType: DetectTypeOfDevice | DetectTypeOfDeviceElevator | undefined ;
 
-    debugMode = true;
+    debugMode = false;
 
     public static getInstance(): GameManager {
         if (!this.instance) {
@@ -100,7 +106,10 @@ export class GameManager extends Component {
 
     onLoad() {
 
-
+        if(this.elevatorScript)
+            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;  // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
+        else
+            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDevice)!;
 
         GameManager.instance = this;
         this.jsonLoader = this.node.getComponent(JSONloader)!;
@@ -177,13 +186,25 @@ export class GameManager extends Component {
     backToMenu() {
         if(this.debugMode == true)
             director.loadScene("MainMenu");
-        else
+        else {
+            GlobalManager.getInstance().activeLevelData = this.findSceneDataByName("MainMenuLift1");
             director.loadScene("MainMenuLift1");
+        }
+            
     }
 
-    // update (deltaTime: number) {
-    //     // [4]
-    // }
+    findSceneDataByName(sceneName: string) {
+        var levelsArray = GlobalManager.getInstance().levelsArray;
+        
+        var returnLevel = new levelObject;
+        
+        levelsArray.forEach(element => {
+            if(element.sceneName == sceneName) 
+              returnLevel = element;
+        });
+  
+        return returnLevel;
+      }
 }
 
 

@@ -19,6 +19,7 @@ export enum TypeOfTask {
 @ccclass('TaskAutoActive')
 export class TaskAutoActive extends Task {
 
+
     myTimeHasCome = true;
 
     @property(String)
@@ -80,7 +81,7 @@ export class TaskAutoActive extends Task {
     }
 
     checkExecution() {
-        if(this.isItOkToExecute() && this.taskManager.canvas?.getComponent(DetectTypeOfDevice)?._moveTutorialEndBool && this.taskManager.canvas?.getComponent(DetectTypeOfDevice)?._lookTutorialEndBool)
+        if(this.isItOkToExecute() && GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool)
             this.showTask();
 
         

@@ -87,8 +87,7 @@ export class FirstPersonCameraMovementElevator extends Component {
     phoneCoeficient: number = 1.3;
 
     start() {
-        systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        systemEvent.on(SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+        this.scheduleOnce(this.startListening, 5);
 
         this.scaledSpeedCoeficient = 1;//GameManager.getInstance().WorldRoot!.scale.x / 100 ;
         //director.getPhysicsManager().enabled = true;
@@ -97,6 +96,11 @@ export class FirstPersonCameraMovementElevator extends Component {
             this.phoneCoeficient = 1;
 
         Vec3.copy(this._position, this.node.position);
+    }
+
+    startListening() {
+        systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        systemEvent.on(SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
     }
  
     onDestroy() {

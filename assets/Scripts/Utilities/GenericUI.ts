@@ -141,6 +141,8 @@ export class GenericUI extends Component {
 
     turnOffGenericTask() {
 
+        
+
         if(this.audioSource?.playing)
             this.audioSource.stop();
 
@@ -149,6 +151,7 @@ export class GenericUI extends Component {
         GameManager.getInstance().gameStatus = GameStatuType.gameActive; 
 
         if(this.tempTask != undefined) {
+
             this.tempTask.taskCompleted();
             this.tempTask = undefined;
         }

@@ -99,8 +99,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), GenericUI) : GenericUI).turnOnGenericTaskJSON(this.tekstObject); //Čestitam! Stigao si do časovničara.
 
-            this.executed = true;
-            this.taskManager.refreshExecutedTasks(this.node.parent);
+            this.executed = true; // this.taskManager.refreshExecutedTasks(this.node.parent!);
           }
         }
 

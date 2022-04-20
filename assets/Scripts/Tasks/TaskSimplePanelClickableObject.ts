@@ -18,14 +18,33 @@ export class TaskSimplePanelClickableObject extends Task {
     tekstObject: JSONquestTekst = new JSONquestTekst ;
 
     start () {
-        
-        this.getTekstRemotely();
+        //this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
+        this.schedule(this.isItMyTimeForDownloading, 0.1);
+
     }
     
     getTekstRemotely() {
         if(this.remoteName != "") {
             GameManager.getInstance().jsonLoader?.fetchQuestTekst(this.remoteName.toString(), this.tekstObject)!;
         }
+    }
+
+    
+    checkExecution() {
+        if(this.isItOkToExecute() && GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool)
+            this.showTask();
+
+    }
+    isItMyTimeForDownloading() {
+        if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted ) {
+            this.fetchTheData();
+            this.downloadStarted = true;
+        }
+            
+    }
+
+    fetchTheData() {
+            this.getTekstRemotely();
     }
 
     showTask () {
@@ -37,10 +56,26 @@ export class TaskSimplePanelClickableObject extends Task {
     }
 
     execute() {
-        this.executed = true;
-        this.taskManager.refreshExecutedTasks(this.node.parent!);
+        console.log("ShowTask!!!");
+            if(this.isItOkToExecute()) {
+                if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
+                    GameManager.getInstance().loadingHandler?.turnOnLoading();
+                    this.scheduleOnce(this.showTask, 0.2);
+                    console.log("DownloadedCheckpoint : " + GameManager.getInstance().downloadedCheckpoint);
+        
+                    console.log("this.orderNumber : " + this.orderNumber);
+                    return;
+                }
+                
+                GameManager.getInstance().loadingHandler?.turnOffLoading();
+                this.taskManager.genericUI!.active = true;
+                this.taskManager.genericUI!.getComponent(GenericUI)!.turnOnGenericTaskJSONwithReturn(this.tekstObject,this);
+
+            this.executed = true;
+            //this.taskManager.refreshExecutedTasks(this.node.parent!);
 
         this.executeNextTasksByForce();
+        }
     }
 
 

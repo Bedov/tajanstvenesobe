@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, Touch, Canvas, game, Game } from 'cc';
+import { _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, Touch, Canvas, game, Game, find } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -37,6 +37,7 @@ export class TouchInputElevator extends Component {
     Joystick_Max = 1;
 
     _JoystickSize = 0;
+    _canvasTemp = new Node;
     _firstPersonCameraMovement!: FirstPersonCameraMovementElevator;
 
     update() {
@@ -46,7 +47,7 @@ export class TouchInputElevator extends Component {
         this._firstPersonCameraMovement.creatingFinalVectorTouch( vec3ForMovement );
         
         
-        //this.Joystick_Ball.position.x
+        this._canvasTemp = find("Canvas")!;
     }
 
     start () {
@@ -85,7 +86,8 @@ export class TouchInputElevator extends Component {
     }
 
     Joystick_Touch_Move(event: Touch){
-        var detectType = GlobalManager.instance.canvas!.getComponent("DetectTypeOfDeviceElevator") as DetectTypeOfDeviceElevator;
+        
+        var detectType = this._canvasTemp!.getComponent("DetectTypeOfDeviceElevator") as DetectTypeOfDeviceElevator;
         detectType.joystick_Mouse_Move();
 
         

@@ -68,14 +68,19 @@ export class SlideRotateCameraElevator extends Component {
     }
 
     start() {
-        systemEvent.on(SystemEvent.EventType.MOUSE_WHEEL, this.onMouseWheel, this);
-        systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onTouchStart, this);
-        systemEvent.on(SystemEvent.EventType.TOUCH_MOVE, this.onTouchMove, this);
-        systemEvent.on(SystemEvent.EventType.TOUCH_END, this.onTouchEnd, this);
+        this.scheduleOnce(this.startListening, 5);
+
         Vec3.copy(this._euler, this.node.eulerAngles);
         Vec3.copy(this._position, this.node.position);
 
         setDisplayStats(false); // 关闭左下角显示FPS
+    }
+
+    startListening() {
+        systemEvent.on(SystemEvent.EventType.MOUSE_WHEEL, this.onMouseWheel, this);
+        systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onTouchStart, this);
+        systemEvent.on(SystemEvent.EventType.TOUCH_MOVE, this.onTouchMove, this);
+        systemEvent.on(SystemEvent.EventType.TOUCH_END, this.onTouchEnd, this);
     }
  
     onDestroy() {

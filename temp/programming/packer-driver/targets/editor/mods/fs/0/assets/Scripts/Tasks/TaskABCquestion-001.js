@@ -45,7 +45,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     execute: function () {
       _crd = true;
 
-      _cclegacy._RF.push({}, "bb336jeYOJGp6RDu8CiAMLy", "TaskABCquestion-001", undefined);
+      _cclegacy._RF.push({}, "0c4c0jq5sxINZAUJC+sP2DL", "TaskABCquestion-001", undefined);
 
       ({
         ccclass,
@@ -126,6 +126,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         showTask() {
+          console.log("ShowTask!!!");
+
           if (this.isItOkToExecute()) {
             var _getInstance$loadingH2;
 

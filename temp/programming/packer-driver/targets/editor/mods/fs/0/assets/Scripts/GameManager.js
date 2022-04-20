@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, GlobalManager, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, find, DetectTypeOfDevice, DetectTypeOfDeviceElevator, GlobalManager, levelObject, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,8 +11,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
+  function _reportPossibleCrUseOfDetectTypeOfDevice(extras) {
+    _reporterNs.report("DetectTypeOfDevice", "./DetectTypeOfDevice", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfDetectTypeOfDeviceElevator(extras) {
+    _reporterNs.report("DetectTypeOfDeviceElevator", "./DetectTypeOfDeviceElevator", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfGlobalManager(extras) {
     _reporterNs.report("GlobalManager", "./GlobalManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOflevelObject(extras) {
+    _reporterNs.report("levelObject", "./GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfJSONloader(extras) {
@@ -36,12 +48,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       director = _cc.director;
       Label = _cc.Label;
       sys = _cc.sys;
+      find = _cc.find;
     }, function (_unresolved_2) {
-      GlobalManager = _unresolved_2.GlobalManager;
+      DetectTypeOfDevice = _unresolved_2.DetectTypeOfDevice;
     }, function (_unresolved_3) {
-      JSONloader = _unresolved_3.JSONloader;
+      DetectTypeOfDeviceElevator = _unresolved_3.DetectTypeOfDeviceElevator;
     }, function (_unresolved_4) {
-      LoadingHandler = _unresolved_4.LoadingHandler;
+      GlobalManager = _unresolved_4.GlobalManager;
+      levelObject = _unresolved_4.levelObject;
+    }, function (_unresolved_5) {
+      JSONloader = _unresolved_5.JSONloader;
+    }, function (_unresolved_6) {
+      LoadingHandler = _unresolved_6.LoadingHandler;
     }],
     execute: function () {
       _crd = true;
@@ -71,7 +89,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         GameStatuType[GameStatuType["gameTutorial"] = 2] = "gameTutorial";
       })(GameStatuType || _export("GameStatuType", GameStatuType = {}));
 
-      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(String), _dec7 = property(String), _dec8 = property(Number), _dec(_class = (_class2 = (_temp = _class3 = class GameManager extends Component {
+      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Boolean), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(String), _dec8 = property(String), _dec9 = property(Number), _dec(_class = (_class2 = (_temp = _class3 = class GameManager extends Component {
         constructor(...args) {
           super(...args);
 
@@ -83,23 +101,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "loadingHandler", void 0);
 
+          _initializerDefineProperty(this, "elevatorScript", _descriptor, this);
+
           _defineProperty(this, "inputKeyboard", void 0);
 
           _defineProperty(this, "settingsUI", void 0);
 
-          _initializerDefineProperty(this, "Canvas", _descriptor, this);
+          _initializerDefineProperty(this, "Canvas", _descriptor2, this);
 
-          _initializerDefineProperty(this, "WorldRoot", _descriptor2, this);
+          _initializerDefineProperty(this, "WorldRoot", _descriptor3, this);
 
-          _initializerDefineProperty(this, "TaskManager", _descriptor3, this);
+          _initializerDefineProperty(this, "TaskManager", _descriptor4, this);
 
-          _initializerDefineProperty(this, "Player", _descriptor4, this);
+          _initializerDefineProperty(this, "Player", _descriptor5, this);
 
-          _initializerDefineProperty(this, "LevelName", _descriptor5, this);
+          _initializerDefineProperty(this, "LevelName", _descriptor6, this);
 
-          _initializerDefineProperty(this, "LanguageName", _descriptor6, this);
+          _initializerDefineProperty(this, "LanguageName", _descriptor7, this);
 
-          _initializerDefineProperty(this, "Progress", _descriptor7, this);
+          _initializerDefineProperty(this, "Progress", _descriptor8, this);
 
           _defineProperty(this, "moveSpeed", 1.5);
 
@@ -115,7 +135,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "trophies", void 0);
 
-          _defineProperty(this, "debugMode", true);
+          _defineProperty(this, "detectType", void 0);
+
+          _defineProperty(this, "debugMode", false);
         }
 
         static getInstance() {
@@ -141,6 +163,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onLoad() {
           var _this$Canvas, _this$Canvas$getChild, _this$Canvas$getChild2;
 
+          if (this.elevatorScript) this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
+            error: Error()
+          }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator); // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
+          else this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
+              error: Error()
+            }), DetectTypeOfDevice) : DetectTypeOfDevice);
           GameManager.instance = this;
           this.jsonLoader = this.node.getComponent(_crd && JSONloader === void 0 ? (_reportPossibleCrUseOfJSONloader({
             error: Error()
@@ -204,43 +232,65 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         backToMenu() {
-          if (this.debugMode == true) director.loadScene("MainMenu");else director.loadScene("MainMenuLift1");
-        } // update (deltaTime: number) {
-        //     // [4]
-        // }
+          if (this.debugMode == true) director.loadScene("MainMenu");else {
+            (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData = this.findSceneDataByName("MainMenuLift1");
+            director.loadScene("MainMenuLift1");
+          }
+        }
 
+        findSceneDataByName(sceneName) {
+          var levelsArray = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().levelsArray;
+          var returnLevel = new (_crd && levelObject === void 0 ? (_reportPossibleCrUseOflevelObject({
+            error: Error()
+          }), levelObject) : levelObject)();
+          levelsArray.forEach(element => {
+            if (element.sceneName == sceneName) returnLevel = element;
+          });
+          return returnLevel;
+        }
 
-      }, _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "Canvas", [_dec2], {
+      }, _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "elevatorScript", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return false;
+        }
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "Canvas", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "WorldRoot", [_dec3], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "WorldRoot", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "TaskManager", [_dec4], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "TaskManager", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "Player", [_dec5], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "Player", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "LevelName", [_dec6], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "LevelName", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "LanguageName", [_dec7], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "LanguageName", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "Progress", [_dec8], {
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "Progress", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,

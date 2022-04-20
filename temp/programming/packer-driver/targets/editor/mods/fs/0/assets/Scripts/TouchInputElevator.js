@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, GameManager, GlobalManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TouchInputElevator;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec2, SystemEvent, Vec3, UITransform, find, GameManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TouchInputElevator;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,10 +23,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("DetectTypeOfDeviceElevator", "./DetectTypeOfDeviceElevator", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGlobalManager(extras) {
-    _reporterNs.report("GlobalManager", "./GlobalManager", _context.meta, extras);
-  }
-
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -39,10 +35,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       SystemEvent = _cc.SystemEvent;
       Vec3 = _cc.Vec3;
       UITransform = _cc.UITransform;
+      find = _cc.find;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
-    }, function (_unresolved_3) {
-      GlobalManager = _unresolved_3.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -78,6 +73,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           _initializerDefineProperty(this, "Joystick_Max", _descriptor3, this);
 
           _defineProperty(this, "_JoystickSize", 0);
+
+          _defineProperty(this, "_canvasTemp", new Node());
         }
 
         update() {
@@ -85,8 +82,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           vec3ForMovement.multiplyScalar(1 / this.Joystick_Max);
 
-          this._firstPersonCameraMovement.creatingFinalVectorTouch(vec3ForMovement); //this.Joystick_Ball.position.x
+          this._firstPersonCameraMovement.creatingFinalVectorTouch(vec3ForMovement);
 
+          this._canvasTemp = find("Canvas");
         }
 
         start() {
@@ -119,9 +117,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         Joystick_Touch_Move(event) {
-          var detectType = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).instance.canvas.getComponent("DetectTypeOfDeviceElevator");
+          var detectType = this._canvasTemp.getComponent("DetectTypeOfDeviceElevator");
+
           detectType.joystick_Mouse_Move(); //Treba mozda pokriti dva prsta
 
           let touch_pos = new Vec3(event.getUILocation().x, event.getUILocation().y, 0);

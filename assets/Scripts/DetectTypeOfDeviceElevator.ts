@@ -51,9 +51,13 @@ export class DetectTypeOfDeviceElevator extends Component {
 
     onLoad() {
         this.scheduleOnce(this.startTutorial, 6);
+        this.scheduleOnce(this.endPretutoral, 5);
 
         this.MobileMoveJoystick = this.node.getChildByName("joystick")!;
+    }
 
+    endPretutoral() {
+        this._preTutorailEnded = true;
     }
 
     startTutorial() {
@@ -69,7 +73,16 @@ export class DetectTypeOfDeviceElevator extends Component {
 
     start() {
         
-        //this.scheduleOnce(, 0.1); 
+        this.setPlatformInitial();
+
+    }
+
+    setPlatformInitial() {
+        
+        if(GlobalManager.getInstance().isMobileOrTablet) {
+            this.MobileMoveJoystick.active = true;
+        } else 
+            this.MobileMoveJoystick.active = false;
 
     }
 
@@ -77,17 +90,12 @@ export class DetectTypeOfDeviceElevator extends Component {
         
         if(GlobalManager.getInstance().isMobileOrTablet) {
             this.KeyboardMoveSymbol.active = false;
-            this.MobileMoveJoystick.active = true;
             this.MobileMoveSymbol.active = true;
-
-
             this.KeyboardSeeSymbol.active = false;
             this.MobileSeeSymbol.active = true;
         } else {
             this.KeyboardMoveSymbol.active = true;
-            this.MobileMoveJoystick.active = false;
             this.MobileMoveSymbol.active = false;
-
             this.KeyboardSeeSymbol.active = true;
             this.MobileSeeSymbol.active = false;
         }
@@ -114,7 +122,9 @@ export class DetectTypeOfDeviceElevator extends Component {
     }
 
     update(deltaTime: number) {
-        
+        if(this._preTutorailEnded == false)
+            return;
+
         if(this._lookTutorialEndBool && this._lookdontRepeatTutorialEndevent == false) {
             
             var mobileSeeSymbole = this.MobileSeeSymbol.getComponent('ScriptEffects') as ScriptEffects;

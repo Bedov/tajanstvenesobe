@@ -47,7 +47,7 @@ export class TaskSimplePanel extends Task {
             this.taskManager.genericUI!.getComponent(GenericUI)!.turnOnGenericTaskJSON(this.tekstObject); //Čestitam! Stigao si do časovničara.
             
             this.executed = true;
-            this.taskManager.refreshExecutedTasks(this.node.parent!);
+           // this.taskManager.refreshExecutedTasks(this.node.parent!);
         }
 
     }

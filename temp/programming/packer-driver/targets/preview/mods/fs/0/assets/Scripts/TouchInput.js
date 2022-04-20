@@ -98,16 +98,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         start() {
           this.Player = find("Player");
-          this.node.on(SystemEvent.EventType.TOUCH_START, this.Joystick_Touch_Start, this);
-          this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.Joystick_Touch_Move, this);
-          this.node.on(SystemEvent.EventType.TOUCH_END, this.Joystick_Touch_End, this);
-          this.node.on(SystemEvent.EventType.TOUCH_CANCEL, this.Joystick_Touch_End, this);
+          this.scheduleOnce(this.startListening, 5);
           if (this.elevatorScript) this._firstPersonCameraMovement = this.Player.getComponent(_crd && FirstPersonCameraMovementElevator === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovementElevator({
             error: Error()
           }), FirstPersonCameraMovementElevator) : FirstPersonCameraMovementElevator);else this._firstPersonCameraMovement = this.Player.getComponent(_crd && FirstPersonCameraMovementTest === void 0 ? (_reportPossibleCrUseOfFirstPersonCameraMovementTest({
             error: Error()
           }), FirstPersonCameraMovementTest) : FirstPersonCameraMovementTest);
           if (this.getComponent(UITransform) != null) this._JoystickSize = this.getComponent(UITransform).width;
+        }
+
+        startListening() {
+          this.node.on(SystemEvent.EventType.TOUCH_START, this.Joystick_Touch_Start, this);
+          this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.Joystick_Touch_Move, this);
+          this.node.on(SystemEvent.EventType.TOUCH_END, this.Joystick_Touch_End, this);
+          this.node.on(SystemEvent.EventType.TOUCH_CANCEL, this.Joystick_Touch_End, this);
         }
 
         onDestroy() {
@@ -127,9 +131,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         Joystick_Touch_Move(event) {
-          if (this.elevatorScript) var detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
+          var detectType;
+          if (this.elevatorScript) detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
             error: Error()
-          }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator);else var detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
+          }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator);else detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
             error: Error()
           }), DetectTypeOfDevice) : DetectTypeOfDevice);
           detectType.joystick_Mouse_Move(); //Treba mozda pokriti dva prsta

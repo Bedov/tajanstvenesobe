@@ -9,7 +9,7 @@ import { DetectTypeOfDevice } from "../DetectTypeOfDevice";
 import { Task } from './Task';
 import { GameManager } from '../GameManager';
 import { JSONimage, JSONquestTekst } from '../RemoteScripts/JSONloader';
-import { GlobalManager, levelStatus } from '../GlobalManager';
+import { GlobalManager, levelObject, levelStatus } from '../GlobalManager';
 
 
 
@@ -52,11 +52,25 @@ export class TaskEnding extends Task {
         GameManager.getInstance().Progress = 0;
 
 
-        director.loadScene("MainMenu");
-
+        
+        GlobalManager.getInstance().activeLevelData = this.findSceneDataByName("MainMenuLift1");
+        director.loadScene("MainMenuLift1");
 
         
     }
+
+    findSceneDataByName(sceneName: string) {
+        var levelsArray = GlobalManager.getInstance().levelsArray;
+        
+        var returnLevel = new levelObject;
+        
+        levelsArray.forEach(element => {
+            if(element.sceneName == sceneName) 
+              returnLevel = element;
+        });
+  
+        return returnLevel;
+      }
 
 }
 

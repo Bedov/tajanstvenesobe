@@ -85,6 +85,9 @@ var kinderGardenData = new levelObject();
 kinderGardenData.sceneName = "KinderGarden";
 //kinderGardenData.levelProgress = 6;
 
+var elevator = new levelObject();
+elevator.sceneName = "MainMenuLift1";
+
 var birthdayPartyData = new levelObject();
 birthdayPartyData.sceneName = "BirthdayParty";
 
@@ -128,7 +131,7 @@ export class GlobalManager extends Component {
 
     levelsArray: Array<levelObject> = [];
 
-    activeLevelData = new levelObject;
+    activeLevelData = elevator;
 
 
     @property(String)

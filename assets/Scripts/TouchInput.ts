@@ -52,10 +52,7 @@ export class TouchInput extends Component {
     start () {
         this.Player = find("Player")!;
 
-        this.node.on(SystemEvent.EventType.TOUCH_START, this.Joystick_Touch_Start, this);
-        this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.Joystick_Touch_Move, this);
-        this.node.on(SystemEvent.EventType.TOUCH_END, this.Joystick_Touch_End, this);
-        this.node.on(SystemEvent.EventType.TOUCH_CANCEL, this.Joystick_Touch_End, this);
+        this.scheduleOnce(this.startListening, 5);
 
         if(this.elevatorScript)
             this._firstPersonCameraMovement = this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
@@ -65,6 +62,13 @@ export class TouchInput extends Component {
 
         if(this.getComponent(UITransform) != null)
             this._JoystickSize = this.getComponent(UITransform)!.width;
+    }
+
+    startListening() {
+        this.node.on(SystemEvent.EventType.TOUCH_START, this.Joystick_Touch_Start, this);
+        this.node.on(SystemEvent.EventType.TOUCH_MOVE, this.Joystick_Touch_Move, this);
+        this.node.on(SystemEvent.EventType.TOUCH_END, this.Joystick_Touch_End, this);
+        this.node.on(SystemEvent.EventType.TOUCH_CANCEL, this.Joystick_Touch_End, this);
     }
 
 

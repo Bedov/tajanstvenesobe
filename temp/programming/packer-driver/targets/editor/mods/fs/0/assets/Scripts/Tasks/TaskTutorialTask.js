@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Enum, ScriptEffects, GenericUI, DetectTypeOfDevice, Task, GameManager, GameStatuType, JSONimage, JSONquestTekst, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, TypeOfTask, TaskTutorialTask;
+  var _reporterNs, _cclegacy, _decorator, Enum, ScriptEffects, GenericUI, Task, GameManager, GameStatuType, JSONimage, JSONquestTekst, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TypeOfTask, TaskTutorialTask;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -17,10 +17,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfGenericUI(extras) {
     _reporterNs.report("GenericUI", "../Utilities/GenericUI", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfDetectTypeOfDevice(extras) {
-    _reporterNs.report("DetectTypeOfDevice", "../DetectTypeOfDevice", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfTask(extras) {
@@ -57,15 +53,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       GenericUI = _unresolved_3.GenericUI;
     }, function (_unresolved_4) {
-      DetectTypeOfDevice = _unresolved_4.DetectTypeOfDevice;
+      Task = _unresolved_4.Task;
     }, function (_unresolved_5) {
-      Task = _unresolved_5.Task;
+      GameManager = _unresolved_5.GameManager;
+      GameStatuType = _unresolved_5.GameStatuType;
     }, function (_unresolved_6) {
-      GameManager = _unresolved_6.GameManager;
-      GameStatuType = _unresolved_6.GameStatuType;
-    }, function (_unresolved_7) {
-      JSONimage = _unresolved_7.JSONimage;
-      JSONquestTekst = _unresolved_7.JSONquestTekst;
+      JSONimage = _unresolved_6.JSONimage;
+      JSONquestTekst = _unresolved_6.JSONquestTekst;
     }],
     execute: function () {
       _crd = true;
@@ -82,7 +76,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         TypeOfTask[TypeOfTask["imageType"] = 1] = "imageType";
       })(TypeOfTask || _export("TypeOfTask", TypeOfTask = {}));
 
-      _export("TaskTutorialTask", TaskTutorialTask = (_dec = ccclass('TaskTutorialTask'), _dec2 = property(String), _dec3 = property({
+      _export("TaskTutorialTask", TaskTutorialTask = (_dec = ccclass('TaskTutorialTask'), _dec2 = property(String), _dec3 = property(Boolean), _dec4 = property({
         type: Enum(TypeOfTask)
       }), _dec(_class = (_class2 = (_temp = class TaskTutorialTask extends (_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
         error: Error()
@@ -94,7 +88,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "remoteName", _descriptor, this);
 
-          _initializerDefineProperty(this, "taskType", _descriptor2, this);
+          _initializerDefineProperty(this, "elevatorScript", _descriptor2, this);
+
+          _initializerDefineProperty(this, "taskType", _descriptor3, this);
 
           _defineProperty(this, "tekstObject", new (_crd && JSONquestTekst === void 0 ? (_reportPossibleCrUseOfJSONquestTekst({
             error: Error()
@@ -140,13 +136,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         update() {
-          var _this$taskManager$can, _this$taskManager$can2, _this$taskManager$can3, _this$taskManager$can4;
+          var _getInstance$detectTy, _getInstance$detectTy2;
 
-          if (((_this$taskManager$can = this.taskManager.canvas) === null || _this$taskManager$can === void 0 ? void 0 : (_this$taskManager$can2 = _this$taskManager$can.getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
+          if (((_getInstance$detectTy = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), DetectTypeOfDevice) : DetectTypeOfDevice)) === null || _this$taskManager$can2 === void 0 ? void 0 : _this$taskManager$can2._moveTutorialEndBool) && ((_this$taskManager$can3 = this.taskManager.canvas) === null || _this$taskManager$can3 === void 0 ? void 0 : (_this$taskManager$can4 = _this$taskManager$can3.getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy === void 0 ? void 0 : _getInstance$detectTy._moveTutorialEndBool) && ((_getInstance$detectTy2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), DetectTypeOfDevice) : DetectTypeOfDevice)) === null || _this$taskManager$can4 === void 0 ? void 0 : _this$taskManager$can4._lookTutorialEndBool) && !this.executed) {
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy2 === void 0 ? void 0 : _getInstance$detectTy2._lookTutorialEndBool) && !this.executed) {
             this.showUI();
             (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
@@ -210,7 +206,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "taskType", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "elevatorScript", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return false;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "taskType", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,

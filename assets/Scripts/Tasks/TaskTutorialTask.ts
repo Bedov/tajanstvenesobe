@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, director, Collider, game, Canvas, Enum } from 'cc';
+import { _decorator, Component, Node, director, Collider, game, Canvas, Enum, find } from 'cc';
 const { ccclass, property } = _decorator;
 
 import { TaskManager } from "./TaskManager";
@@ -9,6 +9,8 @@ import { DetectTypeOfDevice } from "../DetectTypeOfDevice";
 import { Task } from './Task';
 import { GameManager, GameStatuType } from '../GameManager';
 import { JSONimage, JSONquestTekst } from '../RemoteScripts/JSONloader';
+import { GlobalManager } from '../GlobalManager';
+import { DetectTypeOfDeviceElevator } from '../DetectTypeOfDeviceElevator';
 
 export enum TypeOfTask {
     tekstType=    0,
@@ -23,6 +25,8 @@ export class TaskTutorialTask extends Task {
     @property(String)
     remoteName!: String;
 
+    @property(Boolean)
+    elevatorScript = false;
     
     @property ({type:Enum(TypeOfTask)})
     taskType:TypeOfTask = TypeOfTask.tekstType;
@@ -30,9 +34,14 @@ export class TaskTutorialTask extends Task {
     tekstObject: JSONquestTekst = new JSONquestTekst ;
     imageObject: JSONimage = new JSONimage ;
 
+
     start(){
         
         this.schedule(this.isItMyTimeForDownloading, 0.1);
+
+
+
+
      
     }
 
@@ -61,7 +70,8 @@ export class TaskTutorialTask extends Task {
     }
 
     update() {
-        if(this.taskManager.canvas?.getComponent(DetectTypeOfDevice)?._moveTutorialEndBool && this.taskManager.canvas?.getComponent(DetectTypeOfDevice)?._lookTutorialEndBool && !this.executed ) {
+        
+        if(GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool && !this.executed ) {
             this.showUI();
             GameManager.getInstance().gameStatus = GameStatuType.gamePaused;
         }
