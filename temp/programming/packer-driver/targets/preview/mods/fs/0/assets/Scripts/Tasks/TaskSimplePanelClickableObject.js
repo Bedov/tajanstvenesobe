@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, JSONquestTekst, ScriptEffects, GenericUI, Task, GameManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TaskSimplePanelClickableObject;
+  var _reporterNs, _cclegacy, _decorator, JSONquestTekst, ScriptEffects, GenericUI, Task, GameManager, GlobalManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TaskSimplePanelClickableObject;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -31,6 +31,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -47,6 +51,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Task = _unresolved_5.Task;
     }, function (_unresolved_6) {
       GameManager = _unresolved_6.GameManager;
+    }, function (_unresolved_7) {
+      GlobalManager = _unresolved_7.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -119,6 +125,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), GenericUI) : GenericUI).turnOnGenericTaskJSONwithReturn(this.tekstObject, this); //Čestitam! Stigao si do časovničara.
           }
+
+          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = 1;
         }
 
         execute() {

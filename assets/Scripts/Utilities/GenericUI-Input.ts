@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Label, EventHandler, random, AudioSource, Animation, randomRangeInt, ButtonComponent, Button, Game, EditBoxComponent} from 'cc';
+import { _decorator, Component, Node, Label, EventHandler, random, AudioSource, Animation, randomRangeInt, ButtonComponent, Button, Game, EditBoxComponent, Vec3} from 'cc';
 import { Task } from '../Tasks/Task';
 import { ScriptEffects } from './ScriptEffects';
 const { ccclass, property } = _decorator;
@@ -109,6 +109,11 @@ export class GenericUIinput extends Component {
                 
     }
 
+    backToPosition() {
+        var positionTemp = this.node.position;
+        this.node.position = new Vec3(0, positionTemp.y, positionTemp.z); 
+    }
+
     answered(event: Event, customData: string) {
         
 
@@ -119,6 +124,7 @@ export class GenericUIinput extends Component {
         
     }
     rightAnwer() {
+        this.backToPosition();
         this.getComponent(Animation)?.play("CorrectAnswer");
         this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
     }

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Material, MeshRenderer, GlobalManager, levelStatus, LevelButtonClicked, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, ButtonColorsLogic;
+  var _reporterNs, _cclegacy, _decorator, Component, Material, MeshRenderer, GlobalManager, LevelButtonClicked, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, ButtonColorsLogic;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -13,10 +13,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _reportPossibleCrUseOfGlobalManager(extras) {
     _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOflevelStatus(extras) {
-    _reporterNs.report("levelStatus", "../GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfLevelButtonClicked(extras) {
@@ -34,7 +30,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       MeshRenderer = _cc.MeshRenderer;
     }, function (_unresolved_2) {
       GlobalManager = _unresolved_2.GlobalManager;
-      levelStatus = _unresolved_2.levelStatus;
     }, function (_unresolved_3) {
       LevelButtonClicked = _unresolved_3.LevelButtonClicked;
     }],
@@ -77,28 +72,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.buttonsArray.push(this.node.getChildByName("3"));
           this.buttonsArray.push(this.node.getChildByName("4"));
           this.buttonsArray.push(this.node.getChildByName("5"));
-          this.refreshColors(this.findGeneralProgress());
+          this.schedule(this.checkTutorialEnd, 0.5);
           this.setSceneNamesToButtons();
         }
 
-        findGeneralProgress() {
-          var generalProgress = 0;
-
-          for (var index = 0; index < (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+        checkTutorialEnd() {
+          if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().levelsArray.length; index++) {
-            //const element = array[index];
-            if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress != 0) {
+            this.refreshColors((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
-            }), GlobalManager) : GlobalManager).getInstance().levelsArray[index].status == (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
-              error: Error()
-            }), levelStatus) : levelStatus).unlocked) {
-              generalProgress = index;
-              return generalProgress;
-            }
+            }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress());
+            this.unscheduleAllCallbacks();
           }
-
-          return generalProgress;
         }
 
         setSceneNamesToButtons() {

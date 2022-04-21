@@ -132,9 +132,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       _export("kinderGardenData", kinderGardenData = new levelObject());
 
-      kinderGardenData.sceneName = "KinderGarden"; //kinderGardenData.levelProgress = 6;
+      kinderGardenData.sceneName = "KinderGarden";
+      kinderGardenData.levelProgress = 6;
 
-      elevator = new levelObject();
+      _export("elevator", elevator = new levelObject());
+
       elevator.sceneName = "MainMenuLift1";
 
       _export("birthdayPartyData", birthdayPartyData = new levelObject());
@@ -252,6 +254,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           game.addPersistRootNode(this.node);
         }
 
+        start() {// this.schedule( this.printProgress(this.activeLevelData) , 1);
+        }
+
         addProgressTest() {
           //globalInformations.globalProgress ++;
           this.refreshLevelButtons();
@@ -318,11 +323,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }
         }
 
+        printProgress(levelData) {
+          console.log("Name - " + levelData.sceneName);
+          console.log("Status - " + levelData.status);
+          console.log("Progress - " + levelData.levelProgress);
+        }
+
         update() {
           if (settingData == true) if (downloading == false) {
             this.setWorldsNames();
             settingData = false;
           }
+          this.printProgress(this.activeLevelData);
         }
 
         setWorldsNames() {
@@ -336,6 +348,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           this.backToKindergarden.string = globalInformations.backToKindergarden;
           this.undergroundChamber.string = globalInformations.undergroundChamber;
           this.invisablePeopleCity.string = globalInformations.invisablePeopleCity;
+        }
+
+        findGeneralProgress() {
+          var generalProgress = 0;
+
+          for (let index = 0; index < GlobalManager.getInstance().levelsArray.length; index++) {
+            //const element = array[index];
+            if (GlobalManager.getInstance().levelsArray[index].status == levelStatus.unlocked) {
+              generalProgress = index;
+              return generalProgress;
+            }
+          }
+
+          return generalProgress;
         }
 
       }, _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "projectNumber", [_dec2], {

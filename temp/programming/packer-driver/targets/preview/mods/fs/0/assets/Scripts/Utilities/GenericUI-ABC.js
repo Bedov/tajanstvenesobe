@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, randomRangeInt, Animation, Task, ScriptEffects, TaskABCquestion, GameManager, GameStatuType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, GenericUIABC;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, randomRangeInt, Animation, Vec3, Task, ScriptEffects, TaskABCquestion, GameManager, GameStatuType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, GenericUIABC;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -47,6 +47,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       AudioSource = _cc.AudioSource;
       randomRangeInt = _cc.randomRangeInt;
       Animation = _cc.Animation;
+      Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
       Task = _unresolved_2.Task;
     }, function (_unresolved_3) {
@@ -218,9 +219,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
         }
 
+        backToPosition() {
+          var positionTemp = this.node.position;
+          this.node.position = new Vec3(0, positionTemp.y, positionTemp.z);
+        }
+
         rightAnwerA() {
           var _this$getComponent, _this$corespondingTas, _this$corespondingTas2;
 
+          this.backToPosition();
           (_this$getComponent = this.getComponent(Animation)) === null || _this$getComponent === void 0 ? void 0 : _this$getComponent.play("CorrectAnswerA");
           (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()
@@ -230,6 +237,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         rightAnwerB() {
           var _this$getComponent2, _this$corespondingTas3, _this$corespondingTas4;
 
+          this.backToPosition();
           (_this$getComponent2 = this.getComponent(Animation)) === null || _this$getComponent2 === void 0 ? void 0 : _this$getComponent2.play("CorrectAnswerB");
           (_this$corespondingTas3 = this.corespondingTask) === null || _this$corespondingTas3 === void 0 ? void 0 : (_this$corespondingTas4 = _this$corespondingTas3.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()
@@ -239,6 +247,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         rightAnwerC() {
           var _this$getComponent3, _this$corespondingTas5, _this$corespondingTas6;
 
+          this.backToPosition();
           (_this$getComponent3 = this.getComponent(Animation)) === null || _this$getComponent3 === void 0 ? void 0 : _this$getComponent3.play("CorrectAnswerC");
           (_this$corespondingTas5 = this.corespondingTask) === null || _this$corespondingTas5 === void 0 ? void 0 : (_this$corespondingTas6 = _this$corespondingTas5.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()

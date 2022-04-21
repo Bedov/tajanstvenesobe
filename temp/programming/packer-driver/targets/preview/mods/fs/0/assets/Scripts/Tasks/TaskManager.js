@@ -183,22 +183,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var _getInstance$trophies, _getInstance$trophies2;
 
           var newProgress = this.checkpoints.indexOf(checkpoint) + 1;
-          if (newProgress != undefined) if (newProgress > (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().Progress) (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().Progress = newProgress;
-          (_getInstance$trophies = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().trophies) === null || _getInstance$trophies === void 0 ? void 0 : (_getInstance$trophies2 = _getInstance$trophies.getComponent(_crd && TrophiesManagment === void 0 ? (_reportPossibleCrUseOfTrophiesManagment({
-            error: Error()
-          }), TrophiesManagment) : TrophiesManagment)) === null || _getInstance$trophies2 === void 0 ? void 0 : _getInstance$trophies2.calculateLockedWithEffect();
           console.log("Level Data WAKA " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);
           (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = Number(newProgress);
+          if (newProgress != undefined) if (newProgress > (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().Progress) (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().Progress = newProgress;
+          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().trophies != undefined) (_getInstance$trophies = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().trophies) === null || _getInstance$trophies === void 0 ? void 0 : (_getInstance$trophies2 = _getInstance$trophies.getComponent(_crd && TrophiesManagment === void 0 ? (_reportPossibleCrUseOfTrophiesManagment({
+            error: Error()
+          }), TrophiesManagment) : TrophiesManagment)) === null || _getInstance$trophies2 === void 0 ? void 0 : _getInstance$trophies2.calculateLockedWithEffect();
         }
 
         checkReadinesForTasks() {

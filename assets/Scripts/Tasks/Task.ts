@@ -37,11 +37,14 @@ export class Task extends Component {
     @property([Consequence])
     consequencesToResolve: Consequence[] = [];
 
+    @property(Boolean)
+    checkpointLock: Boolean = false;
 
     taskManager!: TaskManager;
 
     onLoad() {
 
+        
         this.taskManager = this.node.parent?.parent?.getComponent("TaskManager") as TaskManager;; //  GameManager.getInstance().TaskManager?.getComponent("TaskManager") as TaskManager;
 
         console.log("My name: + " + this.name + "  My Checkpoint " + this.orderNumber);
@@ -61,6 +64,12 @@ export class Task extends Component {
     }
 
     isItOkToExecute(){
+
+        if(this.checkpointLock)
+            if( this.taskManager.node.children.indexOf(this.node.parent!) != GameManager.getInstance().progressStarted )
+                return;
+
+
         if(this.requirementForTaskCompleted) {
             if(!this.executed)
                 return true;

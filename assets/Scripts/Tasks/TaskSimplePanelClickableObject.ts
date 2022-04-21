@@ -8,6 +8,7 @@ import { ScriptEffects } from "../Utilities/ScriptEffects";
 import { GenericUI } from "../Utilities/GenericUI";
 import { Task } from './Task';
 import { GameManager } from '../GameManager';
+import { GlobalManager } from '../GlobalManager';
 
 @ccclass('TaskSimplePanelClickableObject')
 export class TaskSimplePanelClickableObject extends Task {
@@ -53,6 +54,8 @@ export class TaskSimplePanelClickableObject extends Task {
             this.taskManager.genericUI!.getComponent(ScriptEffects)!.fadeInActive();
             this.taskManager.genericUI!.getComponent(GenericUI)!.turnOnGenericTaskJSONwithReturn(this.tekstObject, this); //Čestitam! Stigao si do časovničara.
         }
+
+        GlobalManager.getInstance().activeLevelData.levelProgress = 1;
     }
 
     execute() {

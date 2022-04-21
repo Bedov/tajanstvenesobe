@@ -10,12 +10,11 @@
         [
             "cc.Material",
             [
-                "_name",
                 "_states",
                 "_defines",
                 "_props"
             ],
-            0,
+            1,
             12
         ]
     ],
@@ -25,26 +24,28 @@
             0,
             1,
             2,
-            3,
-            4
+            3
         ]
     ],
     [
         [
             0,
-            "dugme_zelena",
             [
                 {
                     "rasterizerState": {},
+                    "depthStencilState": {},
                     "blendState": {
                         "targets": [
                             {}
                         ]
-                    },
-                    "depthStencilState": {}
-                }
+                    }
+                },
+                {},
+                {}
             ],
             [
+                {},
+                {},
                 {}
             ],
             [
@@ -59,9 +60,13 @@
                             0.22880001366138458,
                             0
                         ]
-                    ]
+                    ],
+                    {},
+                    {}
                 ],
-                11
+                11,
+                0,
+                0
             ]
         ]
     ],

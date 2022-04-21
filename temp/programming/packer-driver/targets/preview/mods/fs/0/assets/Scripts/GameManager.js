@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, find, DetectTypeOfDevice, DetectTypeOfDeviceElevator, GlobalManager, levelObject, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, find, DetectTypeOfDevice, DetectTypeOfDeviceElevator, elevator, GlobalManager, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,12 +19,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("DetectTypeOfDeviceElevator", "./DetectTypeOfDeviceElevator", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGlobalManager(extras) {
-    _reporterNs.report("GlobalManager", "./GlobalManager", _context.meta, extras);
+  function _reportPossibleCrUseOfelevator(extras) {
+    _reporterNs.report("elevator", "./GlobalManager", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOflevelObject(extras) {
-    _reporterNs.report("levelObject", "./GlobalManager", _context.meta, extras);
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "./GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfJSONloader(extras) {
@@ -54,8 +54,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       DetectTypeOfDeviceElevator = _unresolved_3.DetectTypeOfDeviceElevator;
     }, function (_unresolved_4) {
+      elevator = _unresolved_4.elevator;
       GlobalManager = _unresolved_4.GlobalManager;
-      levelObject = _unresolved_4.levelObject;
     }, function (_unresolved_5) {
       JSONloader = _unresolved_5.JSONloader;
     }, function (_unresolved_6) {
@@ -135,6 +135,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "trophies", void 0);
 
+          _defineProperty(this, "progressStarted", 0);
+
           _defineProperty(this, "detectType", void 0);
 
           _defineProperty(this, "debugMode", false);
@@ -163,6 +165,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onLoad() {
           var _this$Canvas, _this$Canvas$getChild, _this$Canvas$getChild2;
 
+          this.progressStarted = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress);
           if (this.elevatorScript) this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
             error: Error()
           }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator); // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
@@ -235,22 +240,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.debugMode == true) director.loadScene("MainMenu");else {
             (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
-            }), GlobalManager) : GlobalManager).getInstance().activeLevelData = this.findSceneDataByName("MainMenuLift1");
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData = _crd && elevator === void 0 ? (_reportPossibleCrUseOfelevator({
+              error: Error()
+            }), elevator) : elevator;
             director.loadScene("MainMenuLift1");
           }
-        }
-
-        findSceneDataByName(sceneName) {
-          var levelsArray = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().levelsArray;
-          var returnLevel = new (_crd && levelObject === void 0 ? (_reportPossibleCrUseOflevelObject({
-            error: Error()
-          }), levelObject) : levelObject)();
-          levelsArray.forEach(element => {
-            if (element.sceneName == sceneName) returnLevel = element;
-          });
-          return returnLevel;
         }
 
       }, _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "elevatorScript", [_dec2], {

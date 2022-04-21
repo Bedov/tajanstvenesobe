@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Animation, EditBoxComponent, Task, ScriptEffects, GameManager, GameStatuType, TaskInput, GlobalManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, GenericUIinput;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Animation, EditBoxComponent, Vec3, Task, ScriptEffects, GameManager, GameStatuType, TaskInput, GlobalManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, GenericUIinput;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -51,6 +51,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       AudioSource = _cc.AudioSource;
       Animation = _cc.Animation;
       EditBoxComponent = _cc.EditBoxComponent;
+      Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
       Task = _unresolved_2.Task;
     }, function (_unresolved_3) {
@@ -156,6 +157,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           } else this.audioSource.stop();
         }
 
+        backToPosition() {
+          var positionTemp = this.node.position;
+          this.node.position = new Vec3(0, positionTemp.y, positionTemp.z);
+        }
+
         answered(event, customData) {
           var _this$typeInputResult;
 
@@ -165,6 +171,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         rightAnwer() {
           var _this$getComponent, _this$corespondingTas, _this$corespondingTas2;
 
+          this.backToPosition();
           (_this$getComponent = this.getComponent(Animation)) === null || _this$getComponent === void 0 ? void 0 : _this$getComponent.play("CorrectAnswer");
           (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()

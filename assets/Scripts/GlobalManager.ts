@@ -83,10 +83,12 @@ var globalInformations = new GeneralInformations;
 //Prvi Razred
 var kinderGardenData = new levelObject();
 kinderGardenData.sceneName = "KinderGarden";
-//kinderGardenData.levelProgress = 6;
+kinderGardenData.levelProgress = 6;
 
 var elevator = new levelObject();
 elevator.sceneName = "MainMenuLift1";
+
+export {elevator};
 
 var birthdayPartyData = new levelObject();
 birthdayPartyData.sceneName = "BirthdayParty";
@@ -200,7 +202,7 @@ export class GlobalManager extends Component {
 
     onLoad() {
         
-
+        
 
         GlobalManager.instance = this;
 
@@ -210,6 +212,10 @@ export class GlobalManager extends Component {
         this.setPlatformType();
 
         game.addPersistRootNode(this.node);
+    }
+
+    start() {
+       // this.schedule( this.printProgress(this.activeLevelData) , 1);
     }
 
 
@@ -297,6 +303,11 @@ export class GlobalManager extends Component {
        
     } 
 
+    printProgress(levelData: levelObject) {
+        console.log("Name - " + levelData.sceneName);
+        console.log("Status - " + levelData.status);
+        console.log("Progress - " + levelData.levelProgress);
+    }
     
 
     update(){
@@ -305,6 +316,9 @@ export class GlobalManager extends Component {
                 this.setWorldsNames();
                 settingData = false;
             }
+        
+        
+            this.printProgress(this.activeLevelData)
 
     }
 
@@ -319,6 +333,20 @@ export class GlobalManager extends Component {
         this.backToKindergarden!.string = globalInformations.backToKindergarden!;
         this.undergroundChamber!.string = globalInformations.undergroundChamber!;
         this.invisablePeopleCity!.string = globalInformations.invisablePeopleCity!;
+    }
+
+    findGeneralProgress(){
+        var generalProgress = 0;
+        for (let index = 0; index < GlobalManager.getInstance().levelsArray.length; index++) {
+            //const element = array[index];
+            if(GlobalManager.getInstance().levelsArray[index].status == levelStatus.unlocked) {
+                generalProgress = index;
+                return generalProgress;
+            }
+
+            
+        }
+        return generalProgress;
     }
     
 }

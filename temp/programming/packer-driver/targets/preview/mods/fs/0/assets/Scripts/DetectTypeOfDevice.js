@@ -94,7 +94,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         start() {
-          this.setPlatform(); //this.scheduleOnce(, 0.1); 
+          this.setPlatform();
+          this.endTutorial(); //this.scheduleOnce(, 0.1); 
+        }
+
+        turnOnTutorial() {}
+
+        endTutorial() {
+          this._moveTutorialEndBool = true;
+          this._lookTutorialEndBool = true;
+          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
+            error: Error()
+          }), GameStatuType) : GameStatuType).gameActive;
         }
 
         setPlatform() {

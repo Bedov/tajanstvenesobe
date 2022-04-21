@@ -32,24 +32,20 @@ export class ButtonColorsLogic extends Component {
         this.buttonsArray!.push(this.node.getChildByName("4")!);
         this.buttonsArray!.push(this.node.getChildByName("5")!);
 
-        this.refreshColors( this.findGeneralProgress());
+        this.schedule(this.checkTutorialEnd,0.5);
+        
 
         this.setSceneNamesToButtons();
     }
 
-    findGeneralProgress(){
-        var generalProgress = 0;
-        for (let index = 0; index < GlobalManager.getInstance().levelsArray.length; index++) {
-            //const element = array[index];
-            if(GlobalManager.getInstance().levelsArray[index].status == levelStatus.unlocked) {
-                generalProgress = index;
-                return generalProgress;
-            }
-
-            
+    checkTutorialEnd(){
+        if( GlobalManager.getInstance().activeLevelData.levelProgress != 0 ) {
+            this.refreshColors( GlobalManager.getInstance().findGeneralProgress());
+            this.unscheduleAllCallbacks();
         }
-        return generalProgress;
     }
+
+
 
     setSceneNamesToButtons() {
         var levelArray = GlobalManager.getInstance().levelsArray;

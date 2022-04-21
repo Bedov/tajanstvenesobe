@@ -1,5 +1,6 @@
 
 import { _decorator, Component, Node, Vec3, Quat, RigidBody, Animation } from 'cc';
+import { GlobalManager } from '../GlobalManager';
 import { Trigger1 } from '../Goldberg/Trigger1';
 const { ccclass, property } = _decorator;
 
@@ -56,7 +57,15 @@ export class RememberAndRestore extends Component {
             
 
             this.objectsNodePosRot.push(nodePosRot);
+
+            this.setActive();
         });
+    }
+
+    setActive() {
+        for (let index = GlobalManager.getInstance().findGeneralProgress(); index < this.objectsNodePosRot.length; index++) {
+            this.objectsNodePosRot[index].node.active = false
+        }
     }
 
     restart() {

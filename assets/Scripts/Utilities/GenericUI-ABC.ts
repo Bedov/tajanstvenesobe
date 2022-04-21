@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Label, EventHandler, random, AudioSource, randomRangeInt, ButtonComponent, Button, Animation} from 'cc';
+import { _decorator, Component, Node, Label, EventHandler, random, AudioSource, randomRangeInt, ButtonComponent, Button, Animation, Vec2, Vec3} from 'cc';
 import { Task } from '../Tasks/Task';
 import { ScriptEffects } from './ScriptEffects';
 const { ccclass, property } = _decorator;
@@ -178,17 +178,25 @@ export class GenericUIABC extends Component {
         
     }
 
+    backToPosition() {
+        var positionTemp = this.node.position;
+        this.node.position = new Vec3(0, positionTemp.y, positionTemp.z); 
+    }
+
     rightAnwerA() {
+        this.backToPosition();
         this.getComponent(Animation)?.play("CorrectAnswerA");
         this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
     }
 
     rightAnwerB() {
+        this.backToPosition();
         this.getComponent(Animation)?.play("CorrectAnswerB");
         this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
     }
 
     rightAnwerC() {
+        this.backToPosition();
         this.getComponent(Animation)?.play("CorrectAnswerC");
         this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
     }

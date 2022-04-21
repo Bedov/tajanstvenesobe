@@ -51,7 +51,7 @@ export class OpenLevelByName extends Component {
         
         GlobalManager.getInstance().activeLevelData = this.findSceneDataByName(customEventData);
 
-        console.log("ActiveLevel " + GlobalManager.getInstance().activeLevelData.sceneName );
+        
 
         director.preloadScene(customEventData, function  (completedCount, totalCount, item) {
             if (labelTemp) {
@@ -71,6 +71,7 @@ export class OpenLevelByName extends Component {
       this.loadingPanel.getComponent(ScriptEffects)?.fadeInActive();
       
       GlobalManager.getInstance().activeLevelData = this.findSceneDataByName(customEventData);
+      console.log("ActiveLevel " + GlobalManager.getInstance().activeLevelData.sceneName );
 
       director.preloadScene(customEventData, function  (completedCount, totalCount, item) {
           if (labelTemp) {

@@ -63,8 +63,20 @@ export class DetectTypeOfDevice extends Component {
 
     start() {
         this.setPlatform();
+
+        this.endTutorial();
         //this.scheduleOnce(, 0.1); 
 
+    }
+
+    turnOnTutorial(){
+
+    }
+
+    endTutorial() {
+        this._moveTutorialEndBool = true;
+        this._lookTutorialEndBool = true;
+        GameManager.getInstance().gameStatus = GameStatuType.gameActive; 
     }
 
     setPlatform() {

@@ -58,6 +58,10 @@ export class DetectTypeOfDeviceElevator extends Component {
 
     endPretutoral() {
         this._preTutorailEnded = true;
+        if(GlobalManager.getInstance().activeLevelData.levelProgress != 0) {
+            this._moveTutorialEndBool = true;
+            this._lookTutorialEndBool = true;
+        }
     }
 
     startTutorial() {

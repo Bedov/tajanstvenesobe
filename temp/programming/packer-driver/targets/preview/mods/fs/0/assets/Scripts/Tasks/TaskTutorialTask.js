@@ -138,6 +138,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         update() {
           var _getInstance$detectTy, _getInstance$detectTy2;
 
+          if (this.checkpointLock) if (this.taskManager.node.children.indexOf(this.node.parent) != (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().progressStarted) return;
+
           if (((_getInstance$detectTy = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy === void 0 ? void 0 : _getInstance$detectTy._moveTutorialEndBool) && ((_getInstance$detectTy2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
@@ -196,7 +200,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), GenericUI) : GenericUI).turnOnGenericTaskJSONimagewithReturn(this.imageObject, this, false);
           }
 
-          (_getComponent = this.taskManager.subtitle.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
+          if (this.taskManager.subtitle != undefined) (_getComponent = this.taskManager.subtitle.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
           }), ScriptEffects) : ScriptEffects)) === null || _getComponent === void 0 ? void 0 : _getComponent.fadeOutActive();
         }

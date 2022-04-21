@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, director, macro, Task, GameManager, GlobalManager, levelObject, levelStatus, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TaskEnding;
+  var _reporterNs, _cclegacy, _decorator, director, macro, Task, GameManager, elevator, GlobalManager, levelObject, levelStatus, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TaskEnding;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -17,6 +17,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfelevator(extras) {
+    _reporterNs.report("elevator", "../GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfGlobalManager(extras) {
@@ -44,6 +48,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       GameManager = _unresolved_3.GameManager;
     }, function (_unresolved_4) {
+      elevator = _unresolved_4.elevator;
       GlobalManager = _unresolved_4.GlobalManager;
       levelObject = _unresolved_4.levelObject;
       levelStatus = _unresolved_4.levelStatus;
@@ -105,7 +110,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameManager) : GameManager).getInstance().Progress = 0;
           (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData = this.findSceneDataByName("MainMenuLift1");
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData = _crd && elevator === void 0 ? (_reportPossibleCrUseOfelevator({
+            error: Error()
+          }), elevator) : elevator; //  this.findSceneDataByName("MainMenuLift1");
+
+          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = 2;
           director.loadScene("MainMenuLift1");
         }
 

@@ -2,7 +2,7 @@
 import { _decorator, Component, Node, director, Label, sys, AudioSource, Scene, LightComponent, find } from 'cc';
 import { DetectTypeOfDevice } from './DetectTypeOfDevice';
 import { DetectTypeOfDeviceElevator } from './DetectTypeOfDeviceElevator';
-import { GlobalManager, levelObject } from './GlobalManager';
+import { elevator, GlobalManager, levelObject } from './GlobalManager';
 const { ccclass, property } = _decorator;
 
 /**
@@ -81,6 +81,8 @@ export class GameManager extends Component {
 
     trophies? : Node ;
 
+    progressStarted = 0;
+
     detectType: DetectTypeOfDevice | DetectTypeOfDeviceElevator | undefined ;
 
     debugMode = false;
@@ -105,6 +107,7 @@ export class GameManager extends Component {
     }
 
     onLoad() {
+        this.progressStarted = Number( GlobalManager.getInstance().activeLevelData.levelProgress);
 
         if(this.elevatorScript)
             this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;  // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
@@ -187,24 +190,12 @@ export class GameManager extends Component {
         if(this.debugMode == true)
             director.loadScene("MainMenu");
         else {
-            GlobalManager.getInstance().activeLevelData = this.findSceneDataByName("MainMenuLift1");
+            GlobalManager.getInstance().activeLevelData = elevator;
             director.loadScene("MainMenuLift1");
         }
             
     }
 
-    findSceneDataByName(sceneName: string) {
-        var levelsArray = GlobalManager.getInstance().levelsArray;
-        
-        var returnLevel = new levelObject;
-        
-        levelsArray.forEach(element => {
-            if(element.sceneName == sceneName) 
-              returnLevel = element;
-        });
-  
-        return returnLevel;
-      }
 }
 
 

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, GenericUI, Consequence, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _temp, _crd, ccclass, property, Task;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, GenericUI, Consequence, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, Task;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -54,7 +54,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _export("Task", Task = (_dec = ccclass('Task'), _dec2 = property([Node]), _dec3 = property(Boolean), _dec4 = property(Boolean), _dec5 = property(Boolean), _dec6 = property([Node]), _dec7 = property([_crd && Consequence === void 0 ? (_reportPossibleCrUseOfConsequence({
         error: Error()
-      }), Consequence) : Consequence]), _dec(_class = (_class2 = (_temp = class Task extends Component {
+      }), Consequence) : Consequence]), _dec8 = property(Boolean), _dec(_class = (_class2 = (_temp = class Task extends Component {
         constructor() {
           super(...arguments);
 
@@ -77,6 +77,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "taskToExecuteByForce", _descriptor5, this);
 
           _initializerDefineProperty(this, "consequencesToResolve", _descriptor6, this);
+
+          _initializerDefineProperty(this, "checkpointLock", _descriptor7, this);
         }
 
         onLoad() {
@@ -100,6 +102,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         isItOkToExecute() {
+          if (this.checkpointLock) if (this.taskManager.node.children.indexOf(this.node.parent) != (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().progressStarted) return;
+
           if (this.requirementForTaskCompleted) {
             if (!this.executed) return true;else {
               if (this.repeatToogle) return true;else {
@@ -218,6 +224,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: function initializer() {
           return [];
+        }
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "checkpointLock", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return false;
         }
       })), _class2)) || _class));
       /**

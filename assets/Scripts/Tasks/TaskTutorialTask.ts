@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, director, Collider, game, Canvas, Enum, find } from 'cc';
+import { _decorator, Component, Node, director, Collider, game, Canvas, Enum, find, Game } from 'cc';
 const { ccclass, property } = _decorator;
 
 import { TaskManager } from "./TaskManager";
@@ -70,6 +70,9 @@ export class TaskTutorialTask extends Task {
     }
 
     update() {
+        if(this.checkpointLock)
+            if( this.taskManager.node.children.indexOf(this.node.parent!) != GameManager.getInstance().progressStarted )
+                return;
         
         if(GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool && !this.executed ) {
             this.showUI();
@@ -106,7 +109,8 @@ export class TaskTutorialTask extends Task {
             this.taskManager.genericUIimage!.getComponent(GenericUI)!.turnOnGenericTaskJSONimagewithReturn(this.imageObject, this, false); 
         }
 
-        this.taskManager.subtitle!.getComponent(ScriptEffects)?.fadeOutActive();
+        if(this.taskManager.subtitle != undefined)
+            this.taskManager.subtitle!.getComponent(ScriptEffects)?.fadeOutActive();
 
 
     }

@@ -104,15 +104,18 @@ export class TaskManager extends Component {
 
     refreshCheckpoint(checkpoint: Node) {
         var newProgress = this.checkpoints.indexOf(checkpoint) + 1;
-        
+
+        console.log("Level Data WAKA " +  GlobalManager.getInstance().activeLevelData.sceneName );
+        GlobalManager.getInstance().activeLevelData!.levelProgress = Number( newProgress );
+
         if(newProgress != undefined)
             if(newProgress > GameManager.getInstance().Progress)
                 GameManager.getInstance().Progress = newProgress;
 
-        GameManager.getInstance().trophies?.getComponent(TrophiesManagment)?.calculateLockedWithEffect();
+        if(GameManager.getInstance().trophies != undefined)
+            GameManager.getInstance().trophies?.getComponent(TrophiesManagment)?.calculateLockedWithEffect();
 
-        console.log("Level Data WAKA " +  GlobalManager.getInstance().activeLevelData.sceneName );
-       GlobalManager.getInstance().activeLevelData!.levelProgress = Number( newProgress );
+       
     }
 
     checkReadinesForTasks() {
