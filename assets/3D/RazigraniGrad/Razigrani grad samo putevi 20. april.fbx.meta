@@ -1,0 +1,110 @@
+{
+  "ver": "2.1.10",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "259a09d8-5537-473a-a744-5f329daf89fe",
+  "files": [],
+  "subMetas": {
+    "475e8": {
+      "importer": "gltf-mesh",
+      "uuid": "259a09d8-5537-473a-a744-5f329daf89fe@475e8",
+      "displayName": "",
+      "id": "475e8",
+      "name": "Putevi.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a349b": {
+      "importer": "gltf-embeded-image",
+      "uuid": "259a09d8-5537-473a-a744-5f329daf89fe@a349b",
+      "displayName": "",
+      "id": "a349b",
+      "name": "Atlas-MiniToonStore_01.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0975f": {
+      "importer": "texture",
+      "uuid": "259a09d8-5537-473a-a744-5f329daf89fe@0975f",
+      "displayName": "",
+      "id": "0975f",
+      "name": "Atlas-MiniToonStore_01.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "259a09d8-5537-473a-a744-5f329daf89fe@a349b"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "65c3a": {
+      "importer": "gltf-scene",
+      "uuid": "259a09d8-5537-473a-a744-5f329daf89fe@65c3a",
+      "displayName": "",
+      "id": "65c3a",
+      "name": "Razigrani grad samo putevi 20. april.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Atlas-MiniToonStore_01.png",
+        "uri": "259a09d8-5537-473a-a744-5f329daf89fe@a349b"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "redirect": "259a09d8-5537-473a-a744-5f329daf89fe@65c3a",
+    "assetFinder": {
+      "meshes": [
+        "259a09d8-5537-473a-a744-5f329daf89fe@475e8"
+      ],
+      "skeletons": [],
+      "textures": [
+        "259a09d8-5537-473a-a744-5f329daf89fe@0975f"
+      ],
+      "materials": [
+        "1a15114c-a9fe-4366-af40-f97ee1df34b1"
+      ],
+      "scenes": [
+        "259a09d8-5537-473a-a744-5f329daf89fe@65c3a"
+      ]
+    },
+    "dumpMaterials": true,
+    "depthWriteInAlphaModeBlend": true,
+    "materialDumpDir": "db://assets/3D/RazigraniGrad/Materials_Razigrani grad samo putevi 20. april"
+  }
+}

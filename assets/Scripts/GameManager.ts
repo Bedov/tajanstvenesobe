@@ -85,7 +85,7 @@ export class GameManager extends Component {
 
     detectType: DetectTypeOfDevice | DetectTypeOfDeviceElevator | undefined ;
 
-    debugMode = false;
+    debugMode = true;
 
     public static getInstance(): GameManager {
         if (!this.instance) {

@@ -318,7 +318,7 @@ export class GlobalManager extends Component {
             }
         
         
-            this.printProgress(this.activeLevelData)
+            this.printProgress(this.activeLevelData);
 
     }
 

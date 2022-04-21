@@ -212,7 +212,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task0.txt",
+    "elevatorScript": false,
     "taskType": 1,
     "_id": "1evv/RaZFK44HTEb4OGSmK"
   },
@@ -284,6 +286,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task0-1.txt",
     "lastTask": false,
     "taskType": 0,
@@ -411,6 +414,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "1dzmlIQiVIPbzf7WImqJ5l"
   },
@@ -577,6 +581,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task1.txt",
     "lastTask": false,
     "taskType": 0,
@@ -644,6 +649,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "fdxO+2ab9N2ZJu2Wa1yh8f"
   },
@@ -795,6 +801,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task0.txt",
     "lastTask": false,
     "taskType": 0,
@@ -862,6 +869,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "16vBi374hFVpbOLc7GH9V0"
   },
@@ -1305,7 +1313,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 368.2142857142857,
+    "_orthoHeight": 310.7142857142857,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -1579,7 +1587,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -27.31899999999996,
+      "x": -28.758000000000038,
       "y": 0,
       "z": 0
     }
@@ -2029,7 +2037,7 @@
     "value": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 36.98700000000002,
       "z": 0
     }
   },
@@ -3052,6 +3060,7 @@
     },
     "_enabled": true,
     "__prefab": null,
+    "elevatorScript": false,
     "Canvas": {
       "__id__": 30
     },
@@ -3537,7 +3546,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "2f5jPFog9E5oAx4UcgNGn7"
+    "_id": "93wERZbpZCyr5FkCTlk+JD"
   },
   {
     "__type__": "cc.MeshRenderer",
@@ -3563,13 +3572,13 @@
       "__id__": 195
     },
     "_mesh": {
-      "__uuid__": "4140d1de-8c79-4c91-b452-5f1743fe4c9a@527ee",
+      "__uuid__": "97c67fa2-32bb-4e37-94fa-7f3805f323d5@527ee",
       "__expectedType__": "cc.Mesh"
     },
     "_shadowCastingMode": 0,
     "_shadowReceivingMode": 1,
     "_enableMorph": true,
-    "_id": "89nNZUf79DRJ503ApubRWn"
+    "_id": "ddjUQpAnFE6IUF6WMOeIMa"
   },
   {
     "__type__": "cc.ModelLightmapSettings",

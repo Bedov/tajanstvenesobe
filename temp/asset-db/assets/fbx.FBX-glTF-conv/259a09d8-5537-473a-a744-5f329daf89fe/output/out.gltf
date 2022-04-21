@@ -1,0 +1,135 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 6706,
+      "max": [
+        14.925572395324707,
+        0.04562545195221901,
+        12.582701683044434
+      ],
+      "min": [
+        -12.334485054016113,
+        -0.03806082159280777,
+        -11.432409286499023
+      ],
+      "name": "Putevi/POSITION",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12,
+      "componentType": 5126,
+      "count": 6706,
+      "name": "Putevi/NORMAL",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24,
+      "componentType": 5126,
+      "count": 6706,
+      "name": "Putevi/TEXCOORD_0",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 11004,
+      "name": "Putevi/INDICES",
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "copyright": "Copyright (c) 2018-2020 Chukong Technologies Inc.",
+    "generator": "FBX-glTF-conv",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 214592,
+      "byteStride": 32,
+      "name": "Putevi",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 44016,
+      "byteOffset": 214592
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 258608,
+      "uri": "out.bin"
+    }
+  ],
+  "extras": {
+    "FBX-glTF-conv": {
+      "animationFrameRate": 24.0
+    }
+  },
+  "images": [
+    {
+      "extras": {
+        "FBX-glTF-conv": {
+          "fileName": "/Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/temp/asset-db/assets/fbx.FBX-glTF-conv/259a09d8-5537-473a-a744-5f329daf89fe/output/.fbm/5E78304E/Razigrani grad samo putevi 20. april.fbm/Atlas-MiniToonStore_01.png",
+          "relativeFileName": "../../../temp/asset-db/assets/fbx.FBX-glTF-conv/259a09d8-5537-473a-a744-5f329daf89fe/output/.fbm/5E78304E/Razigrani grad samo putevi 20. april.fbm/Atlas-MiniToonStore_01.png"
+        }
+      },
+      "name": "Atlas-MiniToonStore_01.png",
+      "uri": "Atlas-MiniToonStore_01.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "Atlas_MiniToonStore_01",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Putevi",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Putevi"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "Atlas-MiniToonStore_01.png",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
