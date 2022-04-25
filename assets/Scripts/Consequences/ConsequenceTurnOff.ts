@@ -26,7 +26,7 @@ export class ConsequenceTurnOff extends Consequence {
     }
 
     resolve() {
-        this.node.getComponent(ParticleSystem).loop = false;
+        this.node.getComponent(ParticleSystem)!.loop = false;
         //this.node.active = false;
     }
 

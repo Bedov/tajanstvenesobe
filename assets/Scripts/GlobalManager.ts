@@ -1,3 +1,17 @@
+
+export enum levelStatus {
+    locked =    0,
+    unlocked =   1,
+    finished =   2,
+    }
+
+    
+export class globalProgress {
+
+    //Needs to fetch the data from the server
+    KinderGardenLevel : levelObject = new levelObject; 
+
+}
 export class GeneralInformations {
     //public globalProgress : number = 0;
 
@@ -84,6 +98,7 @@ var globalInformations = new GeneralInformations;
 var kinderGardenData = new levelObject();
 kinderGardenData.sceneName = "KinderGarden";
 kinderGardenData.levelProgress = 6;
+//kinderGardenData.status = levelStatus.finished;
 
 var elevator = new levelObject();
 elevator.sceneName = "MainMenuLift1";
@@ -92,15 +107,20 @@ export {elevator};
 
 var birthdayPartyData = new levelObject();
 birthdayPartyData.sceneName = "BirthdayParty";
+birthdayPartyData.levelProgress = 6;
+//birthdayPartyData.status = levelStatus.unlocked;
 
 var playfulCityData = new levelObject();
 playfulCityData.sceneName = "RaziganiGrad";
+playfulCityData.levelProgress = 6;
 
 var springFestData = new levelObject();
 springFestData.sceneName = "ProlecniKarneval";
+springFestData.levelProgress = 6;
 
 var medivalVillageData = new levelObject();
 medivalVillageData.sceneName = "MedivalVillage";
+medivalVillageData.levelProgress = 6;
 
 //Drugi Razred
 var christmasVillage = new levelObject();
@@ -351,19 +371,7 @@ export class GlobalManager extends Component {
     
 }
 
-export enum levelStatus {
-    locked =    0,
-    unlocked =   1,
-    finished =   2,
-    }
 
-    
-export class globalProgress {
-
-    //Needs to fetch the data from the server
-    KinderGardenLevel : levelObject = new levelObject; 
-
-}
 
 /**
  * [1] Class member could be defined like this.

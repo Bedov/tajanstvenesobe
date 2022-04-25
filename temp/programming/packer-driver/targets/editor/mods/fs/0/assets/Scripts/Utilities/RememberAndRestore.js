@@ -82,7 +82,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           _initializerDefineProperty(this, "triggersToRestart", _descriptor7, this);
         }
 
-        start() {
+        start() {}
+
+        onLoad() {
           this.animatedObjects[0].getComponent(RigidBody).isStatic = true;
           this.animatedObjects.forEach(element => {
             var nodePosRot = new NodePosRot();

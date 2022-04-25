@@ -2409,6 +2409,7 @@
     },
     "_enabled": true,
     "__prefab": null,
+    "elevatorScript": false,
     "Canvas": {
       "__id__": 68
     },
@@ -2501,7 +2502,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 490.00000000000006,
+      "x": 490,
       "y": 300,
       "z": 0
     },
@@ -3002,7 +3003,7 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": -28.758000000000038,
       "y": 0,
       "z": 0
     }
@@ -3618,8 +3619,7 @@
     },
     "_prefab": {
       "__id__": 150
-    },
-    "__editorExtras__": {}
+    }
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -3627,17 +3627,17 @@
       "__id__": 149
     },
     "asset": {
-      "__uuid__": "d3152edf-410d-47bd-b00d-265e276426df",
+      "__uuid__": "c2b6033d-ca9d-4499-b2cd-495f10cae49a",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "82H1Rqs2tL2p+4NBLalKFh",
+    "fileId": "e9ZWNyzJVGBIYNRgbu0cSz",
     "instance": {
       "__id__": 151
     }
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "afKj2/aVZNJYIunT46MzJF",
+    "fileId": "40Oms0EGdIi5IvHircbfUN",
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
@@ -3664,12 +3664,12 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "GenericUI-Input"
+    "value": "GenericUI-Image"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "82H1Rqs2tL2p+4NBLalKFh"
+      "e9ZWNyzJVGBIYNRgbu0cSz"
     ]
   },
   {
@@ -3726,7 +3726,8 @@
     },
     "_prefab": {
       "__id__": 158
-    }
+    },
+    "__editorExtras__": {}
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -3734,17 +3735,17 @@
       "__id__": 157
     },
     "asset": {
-      "__uuid__": "e8cc764b-9e47-45d6-852a-4bca73976361",
+      "__uuid__": "d3152edf-410d-47bd-b00d-265e276426df",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "92X+fL2EtL56hsWYSdqLWJ",
+    "fileId": "82H1Rqs2tL2p+4NBLalKFh",
     "instance": {
       "__id__": 159
     }
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "340RqDND5CAqyHwYhK2p5z",
+    "fileId": "afKj2/aVZNJYIunT46MzJF",
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
@@ -3771,12 +3772,12 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "GenericUI-ABC"
+    "value": "GenericUI-Input"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "92X+fL2EtL56hsWYSdqLWJ"
+      "82H1Rqs2tL2p+4NBLalKFh"
     ]
   },
   {
@@ -3841,17 +3842,17 @@
       "__id__": 165
     },
     "asset": {
-      "__uuid__": "c2b6033d-ca9d-4499-b2cd-495f10cae49a",
+      "__uuid__": "e8cc764b-9e47-45d6-852a-4bca73976361",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "e9ZWNyzJVGBIYNRgbu0cSz",
+    "fileId": "92X+fL2EtL56hsWYSdqLWJ",
     "instance": {
       "__id__": 167
     }
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "40Oms0EGdIi5IvHircbfUN",
+    "fileId": "340RqDND5CAqyHwYhK2p5z",
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
@@ -3878,12 +3879,12 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "GenericUI-Image"
+    "value": "GenericUI-ABC"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "e9ZWNyzJVGBIYNRgbu0cSz"
+      "92X+fL2EtL56hsWYSdqLWJ"
     ]
   },
   {
@@ -4005,7 +4006,7 @@
     "value": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 36.98700000000002,
       "z": 0
     }
   },
@@ -4302,8 +4303,8 @@
     "__prefab": null,
     "_alignFlags": 45,
     "_target": null,
-    "_left": 5.684341886080802e-14,
-    "_right": 5.684341886080802e-14,
+    "_left": 0,
+    "_right": 0.2816901408451713,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -4517,8 +4518,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 0,
+    "checkpointLock": false,
     "remoteName": "task0.txt",
+    "elevatorScript": false,
     "taskType": 0,
     "_id": "c9aSA1ADxB5KWpq6S4iTgo"
   },
@@ -4608,7 +4610,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 0,
+    "checkpointLock": false,
     "remoteName": "",
     "taskType": 0,
     "_id": "b6PqLaM4hJArd0vr+EDuz7"
@@ -4695,8 +4697,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "task3.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "28onDYntNABI2XRj2UVz2L"
   },
@@ -4819,7 +4822,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "beRgmcQGtD0Ll3a4NRrpRK"
   },
@@ -4955,8 +4958,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "task5.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "c8Du4+hdNGpKyqXRf0PJ+B"
   },
@@ -5085,8 +5089,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "task5-2.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "ee4UINatdN1bUlC4Ot62wO"
   },
@@ -5209,7 +5214,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "38tJy7f5hPepIZvNXRcW7B"
   },
@@ -5342,8 +5347,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "task7.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "bcmEoRxc1IEYqTNzUVbiio"
   },
@@ -5466,7 +5472,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "3dEkI5N9BBrJ8jO0B1b3YP"
   },
@@ -5599,8 +5605,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "task9.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "b3wh8AHfpILom0RBs34hs3"
   },
@@ -5723,7 +5730,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "b7869stKRFtY0I78SUlcKr"
   },
@@ -5865,8 +5872,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "task11.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "cfT3o97lRCEacEPALrtRH7"
   },
@@ -5993,7 +6001,7 @@
       }
     ],
     "consequencesToResolve": [],
-    "checkPointBelong": 0,
+    "checkpointLock": false,
     "remoteName": "task12.txt",
     "_id": "67Wia5LRFISaIz5s4wRPjT"
   },
@@ -6069,8 +6077,9 @@
       }
     ],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "task13.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "b67JJGYhNHNLZaqgcFiA3f"
   },
@@ -6142,8 +6151,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "task14.txt",
+    "lastTask": false,
     "taskType": 0,
     "_id": "ebfkAd5xxGA5McSr8ZUK+L"
   },
@@ -6323,7 +6333,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
-    "checkPointBelong": 1,
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "8cE4LBvDtAJ6Xy6wylkdJ+"
   },
@@ -6351,13 +6361,13 @@
       "__id__": 141
     },
     "genericUIimage": {
-      "__id__": 165
+      "__id__": 149
     },
     "genericUIABC": {
-      "__id__": 157
+      "__id__": 165
     },
     "genericUIinput": {
-      "__id__": 149
+      "__id__": 157
     },
     "canvas": {
       "__id__": 68

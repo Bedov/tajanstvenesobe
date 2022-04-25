@@ -139,7 +139,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "detectType", void 0);
 
-          _defineProperty(this, "debugMode", true);
+          _defineProperty(this, "debugMode", false);
         }
 
         static getInstance() {

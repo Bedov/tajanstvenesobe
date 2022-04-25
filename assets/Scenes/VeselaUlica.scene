@@ -282,6 +282,7 @@
     },
     "_enabled": true,
     "__prefab": null,
+    "elevatorScript": false,
     "Canvas": {
       "__id__": 10
     },
@@ -372,8 +373,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 490.00000000000006,
-      "y": 300.00000000000006,
+      "x": 490,
+      "y": 299.99999999999994,
       "z": 0
     },
     "_lrot": {
@@ -460,7 +461,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 368.2142857142857,
+    "_orthoHeight": 300,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -893,8 +894,8 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": -577.319,
-      "y": -325,
+      "x": -28.758000000000038,
+      "y": 0,
       "z": 0
     }
   },
@@ -1557,17 +1558,17 @@
       "__id__": 102
     },
     "asset": {
-      "__uuid__": "e8cc764b-9e47-45d6-852a-4bca73976361",
+      "__uuid__": "e837b4c0-aec3-4a8d-84d8-8895b13a5316",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "92X+fL2EtL56hsWYSdqLWJ",
+    "fileId": "b4+vvl3pxAlJnTi89jX8bm",
     "instance": {
       "__id__": 104
     }
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "94KTMj7/ZCSoegqPTp6wt5",
+    "fileId": "8ePs5N2KVNEL+MNqaAQPNt",
     "prefabRootNode": null,
     "mountedChildren": [],
     "mountedComponents": [],
@@ -1595,12 +1596,12 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "GenericUI-ABC"
+    "value": "GenericUI"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "92X+fL2EtL56hsWYSdqLWJ"
+      "b4+vvl3pxAlJnTi89jX8bm"
     ]
   },
   {
@@ -1621,7 +1622,7 @@
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "92X+fL2EtL56hsWYSdqLWJ"
+      "b4+vvl3pxAlJnTi89jX8bm"
     ]
   },
   {
@@ -1643,7 +1644,7 @@
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "92X+fL2EtL56hsWYSdqLWJ"
+      "b4+vvl3pxAlJnTi89jX8bm"
     ]
   },
   {
@@ -1664,7 +1665,7 @@
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "92X+fL2EtL56hsWYSdqLWJ"
+      "b4+vvl3pxAlJnTi89jX8bm"
     ]
   },
   {
@@ -1684,17 +1685,17 @@
       "__id__": 113
     },
     "asset": {
-      "__uuid__": "d3152edf-410d-47bd-b00d-265e276426df",
+      "__uuid__": "e8cc764b-9e47-45d6-852a-4bca73976361",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "82H1Rqs2tL2p+4NBLalKFh",
+    "fileId": "92X+fL2EtL56hsWYSdqLWJ",
     "instance": {
       "__id__": 115
     }
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "76T0F0cq9MXLZzmUkF1+hJ",
+    "fileId": "94KTMj7/ZCSoegqPTp6wt5",
     "prefabRootNode": null,
     "mountedChildren": [],
     "mountedComponents": [],
@@ -1722,12 +1723,12 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "GenericUI-Input"
+    "value": "GenericUI-ABC"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "82H1Rqs2tL2p+4NBLalKFh"
+      "92X+fL2EtL56hsWYSdqLWJ"
     ]
   },
   {
@@ -1741,14 +1742,14 @@
     "value": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 33.363999999999976,
+      "y": 33.364000000000004,
       "z": 0
     }
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "82H1Rqs2tL2p+4NBLalKFh"
+      "92X+fL2EtL56hsWYSdqLWJ"
     ]
   },
   {
@@ -1770,7 +1771,7 @@
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "82H1Rqs2tL2p+4NBLalKFh"
+      "92X+fL2EtL56hsWYSdqLWJ"
     ]
   },
   {
@@ -1791,7 +1792,7 @@
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "82H1Rqs2tL2p+4NBLalKFh"
+      "92X+fL2EtL56hsWYSdqLWJ"
     ]
   },
   {
@@ -1811,17 +1812,17 @@
       "__id__": 124
     },
     "asset": {
-      "__uuid__": "e837b4c0-aec3-4a8d-84d8-8895b13a5316",
+      "__uuid__": "d3152edf-410d-47bd-b00d-265e276426df",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "b4+vvl3pxAlJnTi89jX8bm",
+    "fileId": "82H1Rqs2tL2p+4NBLalKFh",
     "instance": {
       "__id__": 126
     }
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "8ePs5N2KVNEL+MNqaAQPNt",
+    "fileId": "76T0F0cq9MXLZzmUkF1+hJ",
     "prefabRootNode": null,
     "mountedChildren": [],
     "mountedComponents": [],
@@ -1849,12 +1850,12 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "GenericUI"
+    "value": "GenericUI-Input"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "b4+vvl3pxAlJnTi89jX8bm"
+      "82H1Rqs2tL2p+4NBLalKFh"
     ]
   },
   {
@@ -1868,14 +1869,14 @@
     "value": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 33.364000000000004,
+      "y": 33.363999999999976,
       "z": 0
     }
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "b4+vvl3pxAlJnTi89jX8bm"
+      "82H1Rqs2tL2p+4NBLalKFh"
     ]
   },
   {
@@ -1897,7 +1898,7 @@
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "b4+vvl3pxAlJnTi89jX8bm"
+      "82H1Rqs2tL2p+4NBLalKFh"
     ]
   },
   {
@@ -1918,7 +1919,7 @@
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "b4+vvl3pxAlJnTi89jX8bm"
+      "82H1Rqs2tL2p+4NBLalKFh"
     ]
   },
   {
@@ -2732,10 +2733,10 @@
     "__prefab": null,
     "_alignFlags": 45,
     "_target": null,
-    "_left": 5.684341886080802e-14,
-    "_right": 5.684341886080802e-14,
+    "_left": 0,
+    "_right": 0.2816901408451713,
     "_top": 5.684341886080802e-14,
-    "_bottom": 5.684341886080802e-14,
+    "_bottom": -5.684341886080802e-14,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
     "_isAbsLeft": true,
@@ -2946,7 +2947,9 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task0.txt",
+    "elevatorScript": false,
     "taskType": 0,
     "_id": "e7CAcGZmBLnYi6vlo9ELGY"
   },
@@ -3031,6 +3034,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task1.txt",
     "lastTask": false,
     "taskType": 0,
@@ -3098,6 +3102,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "6bowqeW3BMbZAAACVDfk6r"
   },
@@ -3230,6 +3235,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task3-2.txt",
     "lastTask": false,
     "taskType": 1,
@@ -3354,6 +3360,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "1efhwJDbdBv6hY3ciylg4i"
   },
@@ -3489,6 +3496,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task5.txt",
     "lastTask": false,
     "taskType": 0,
@@ -3619,6 +3627,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task5-2.txt",
     "lastTask": false,
     "taskType": 0,
@@ -3743,6 +3752,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "deEcZTbZ5EM6eLiwyKHuyQ"
   },
@@ -3875,6 +3885,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task7.txt",
     "lastTask": false,
     "taskType": 0,
@@ -4003,6 +4014,7 @@
         "__id__": 225
       }
     ],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "663EjedExNkJP4cpihq2Fc"
   },
@@ -8240,6 +8252,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task9.txt",
     "lastTask": false,
     "taskType": 0,
@@ -8370,6 +8383,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task9-2.txt",
     "lastTask": false,
     "taskType": 0,
@@ -8494,6 +8508,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "dcYa+WR/RLlI513Ex2Rncb"
   },
@@ -8626,6 +8641,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task11.txt",
     "lastTask": false,
     "taskType": 0,
@@ -8750,6 +8766,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "ebPglU1SBF4oO9Kmw4P+UV"
   },
@@ -8882,6 +8899,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task13.txt",
     "lastTask": false,
     "taskType": 0,
@@ -9069,6 +9087,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "d8cyRX+ldLxJrURE+oepiS"
   },
@@ -9198,6 +9217,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task15.txt",
     "lastTask": false,
     "taskType": 0,
@@ -9265,6 +9285,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task15-2.txt",
     "lastTask": false,
     "taskType": 0,
@@ -9395,6 +9416,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "69yVCG/YlK8Kq/CFxRbNNK"
   },
@@ -9524,6 +9546,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task17.txt",
     "lastTask": false,
     "taskType": 0,
@@ -9591,6 +9614,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task17-2.txt",
     "lastTask": false,
     "taskType": 0,
@@ -9721,6 +9745,7 @@
     "reportToUser": true,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "25i5XqKEVCbag/85Zojy7j"
   },
@@ -9850,6 +9875,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task19.txt",
     "lastTask": false,
     "taskType": 0,
@@ -9917,6 +9943,7 @@
     "reportToUser": false,
     "taskToExecuteByForce": [],
     "consequencesToResolve": [],
+    "checkpointLock": false,
     "remoteName": "task19-2.txt",
     "lastTask": false,
     "taskType": 0,
@@ -10049,6 +10076,7 @@
     "consequencesToResolve": [
       null
     ],
+    "checkpointLock": false,
     "remoteName": "1",
     "_id": "8a+kZNdlFOM7uKRP/rYPlI"
   },
@@ -10073,16 +10101,16 @@
     "_enabled": true,
     "__prefab": null,
     "genericUI": {
-      "__id__": 124
+      "__id__": 102
     },
     "genericUIimage": {
       "__id__": 88
     },
     "genericUIABC": {
-      "__id__": 102
+      "__id__": 113
     },
     "genericUIinput": {
-      "__id__": 113
+      "__id__": 124
     },
     "canvas": {
       "__id__": 10
@@ -10985,7 +11013,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 102
+      "__id__": 113
     },
     "sourceInfo": {
       "__id__": 498
@@ -10994,7 +11022,7 @@
       "_target"
     ],
     "target": {
-      "__id__": 102
+      "__id__": 113
     },
     "targetInfo": {
       "__id__": 499
@@ -11015,7 +11043,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 102
+      "__id__": 113
     },
     "sourceInfo": {
       "__id__": 501
@@ -11024,7 +11052,7 @@
       "_target"
     ],
     "target": {
-      "__id__": 102
+      "__id__": 113
     },
     "targetInfo": {
       "__id__": 502
@@ -11045,7 +11073,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 102
+      "__id__": 113
     },
     "sourceInfo": {
       "__id__": 504
@@ -11054,7 +11082,7 @@
       "_target"
     ],
     "target": {
-      "__id__": 102
+      "__id__": 113
     },
     "targetInfo": {
       "__id__": 505
@@ -11105,7 +11133,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 124
+      "__id__": 102
     },
     "sourceInfo": {
       "__id__": 510
@@ -11114,7 +11142,7 @@
       "_target"
     ],
     "target": {
-      "__id__": 124
+      "__id__": 102
     },
     "targetInfo": {
       "__id__": 511
@@ -11135,7 +11163,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 113
+      "__id__": 124
     },
     "sourceInfo": {
       "__id__": 513
@@ -11144,7 +11172,7 @@
       "_target"
     ],
     "target": {
-      "__id__": 113
+      "__id__": 124
     },
     "targetInfo": {
       "__id__": 514
@@ -11165,7 +11193,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 113
+      "__id__": 124
     },
     "sourceInfo": {
       "__id__": 516
@@ -11174,7 +11202,7 @@
       "_textLabel"
     ],
     "target": {
-      "__id__": 113
+      "__id__": 124
     },
     "targetInfo": {
       "__id__": 517
@@ -11195,7 +11223,7 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 113
+      "__id__": 124
     },
     "sourceInfo": {
       "__id__": 519
@@ -11204,7 +11232,7 @@
       "_placeholderLabel"
     ],
     "target": {
-      "__id__": 113
+      "__id__": 124
     },
     "targetInfo": {
       "__id__": 520

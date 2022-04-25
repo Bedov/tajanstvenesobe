@@ -10,12 +10,11 @@
         [
             "cc.Material",
             [
-                "_name",
                 "_states",
                 "_defines",
                 "_props"
             ],
-            0,
+            1,
             12
         ]
     ],
@@ -25,46 +24,58 @@
             0,
             1,
             2,
-            3,
-            4
+            3
         ]
     ],
     [
         [
             0,
-            "metalni_deo_kod_creva",
             [
                 {
                     "rasterizerState": {},
+                    "depthStencilState": {},
                     "blendState": {
                         "targets": [
                             {}
                         ]
-                    },
-                    "depthStencilState": {}
-                }
+                    }
+                },
+                {},
+                {}
             ],
             [
+                {},
+                {},
                 {}
             ],
             [
                 [
                     [
                         {
-                            "metallic": 0.4000000059604645,
-                            "roughness": 0.30151134729385376
+                            "roughness": 0.30151134729385376,
+                            "metallic": 0.4000000059604645
                         },
+                        "mainColor",
+                        8,
+                        [
+                            4,
+                            4293847248
+                        ],
                         "albedoScale",
                         8,
                         [
                             1,
-                            0.4000000059604645,
-                            0.4000000059604645,
-                            0.4000000059604645
+                            0.6,
+                            0.6,
+                            0.6
                         ]
-                    ]
+                    ],
+                    {},
+                    {}
                 ],
-                11
+                11,
+                0,
+                0
             ]
         ]
     ],

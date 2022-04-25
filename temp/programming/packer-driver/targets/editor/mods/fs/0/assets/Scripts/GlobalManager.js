@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, GeneralInformations, _decorator, Component, assetManager, Label, EditBoxComponent, Animation, sys, game, GameStatuType, levelObject, globalProgress, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _class3, _temp, _crd, downloading, settingData, ccclass, property, globalInformations, kinderGardenData, elevator, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, christmasVillage, easterVillageData, happyStreetData, undergroundChamberData, invisablePeopleCity, GlobalManager, levelStatus;
+  var _reporterNs, _cclegacy, globalProgress, GeneralInformations, _decorator, Component, assetManager, Label, EditBoxComponent, Animation, sys, game, GameStatuType, levelObject, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _class3, _temp, _crd, levelStatus, downloading, settingData, ccclass, property, globalInformations, kinderGardenData, elevator, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, christmasVillage, easterVillageData, happyStreetData, undergroundChamberData, invisablePeopleCity, GlobalManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -16,9 +16,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
   }
 
   _export({
+    globalProgress: void 0,
     GeneralInformations: void 0,
     levelObject: void 0,
-    globalProgress: void 0,
     levelStatus: void 0
   });
 
@@ -42,6 +42,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _crd = true;
 
       _cclegacy._RF.push({}, "b73808StSRJNbd0es5AR9IN", "GlobalManager", undefined);
+
+      (function (levelStatus) {
+        levelStatus[levelStatus["locked"] = 0] = "locked";
+        levelStatus[levelStatus["unlocked"] = 1] = "unlocked";
+        levelStatus[levelStatus["finished"] = 2] = "finished";
+      })(levelStatus || _export("levelStatus", levelStatus = {}));
+
+      _export("globalProgress", globalProgress = class globalProgress {
+        constructor() {
+          _defineProperty(this, "KinderGardenLevel", new levelObject());
+        }
+
+      });
 
       _export("GeneralInformations", GeneralInformations = class GeneralInformations {
         //public globalProgress : number = 0;
@@ -133,7 +146,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _export("kinderGardenData", kinderGardenData = new levelObject());
 
       kinderGardenData.sceneName = "KinderGarden";
-      kinderGardenData.levelProgress = 6;
+      kinderGardenData.levelProgress = 6; //kinderGardenData.status = levelStatus.finished;
 
       _export("elevator", elevator = new levelObject());
 
@@ -142,18 +155,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _export("birthdayPartyData", birthdayPartyData = new levelObject());
 
       birthdayPartyData.sceneName = "BirthdayParty";
+      birthdayPartyData.levelProgress = 6; //birthdayPartyData.status = levelStatus.unlocked;
 
       _export("playfulCityData", playfulCityData = new levelObject());
 
       playfulCityData.sceneName = "RaziganiGrad";
+      playfulCityData.levelProgress = 6;
 
       _export("springFestData", springFestData = new levelObject());
 
       springFestData.sceneName = "ProlecniKarneval";
+      springFestData.levelProgress = 6;
 
       _export("medivalVillageData", medivalVillageData = new levelObject());
 
-      medivalVillageData.sceneName = "MedivalVillage"; //Drugi Razred
+      medivalVillageData.sceneName = "MedivalVillage";
+      medivalVillageData.levelProgress = 6; //Drugi Razred
 
       _export("christmasVillage", christmasVillage = new levelObject());
 
@@ -432,19 +449,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         writable: true,
         initializer: null
       })), _class2)) || _class));
-
-      (function (levelStatus) {
-        levelStatus[levelStatus["locked"] = 0] = "locked";
-        levelStatus[levelStatus["unlocked"] = 1] = "unlocked";
-        levelStatus[levelStatus["finished"] = 2] = "finished";
-      })(levelStatus || _export("levelStatus", levelStatus = {}));
-
-      _export("globalProgress", globalProgress = class globalProgress {
-        constructor() {
-          _defineProperty(this, "KinderGardenLevel", new levelObject());
-        }
-
-      });
       /**
        * [1] Class member could be defined like this.
        * [2] Use `property` decorator if your want the member to be serializable.

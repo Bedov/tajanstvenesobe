@@ -46,6 +46,10 @@ export class RememberAndRestore extends Component {
     triggersToRestart: Trigger1[] = [];
 
     start () {
+
+    }
+
+    onLoad() {
         this.animatedObjects[0].getComponent(RigidBody)!.isStatic = true;
 
         this.animatedObjects.forEach(element => {

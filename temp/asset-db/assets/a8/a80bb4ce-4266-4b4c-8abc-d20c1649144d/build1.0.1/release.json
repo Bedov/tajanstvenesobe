@@ -10,12 +10,11 @@
         [
             "cc.Material",
             [
-                "_name",
                 "_states",
                 "_defines",
                 "_props"
             ],
-            0,
+            1,
             12
         ]
     ],
@@ -25,46 +24,52 @@
             0,
             1,
             2,
-            3,
-            4
+            3
         ]
     ],
     [
         [
             0,
-            "zlatni_metal_cevi",
             [
                 {
                     "rasterizerState": {},
+                    "depthStencilState": {},
                     "blendState": {
                         "targets": [
                             {}
                         ]
-                    },
-                    "depthStencilState": {}
-                }
+                    }
+                },
+                {},
+                {}
             ],
             [
+                {},
+                {},
                 {}
             ],
             [
                 [
                     [
                         {
-                            "metallic": 0.4000000059604645,
-                            "roughness": 0.30151134729385376
+                            "roughness": 0.877,
+                            "metallic": 0.04
                         },
                         "albedoScale",
                         8,
                         [
                             1,
-                            0.800000011920929,
-                            0.5258883833885193,
-                            0.09759998321533203
+                            0.85,
+                            0.4,
+                            0
                         ]
-                    ]
+                    ],
+                    {},
+                    {}
                 ],
-                11
+                11,
+                0,
+                0
             ]
         ]
     ],

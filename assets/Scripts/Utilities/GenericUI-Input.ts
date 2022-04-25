@@ -182,6 +182,7 @@ export class GenericUIinput extends Component {
     }
 
     setRandomTask() {
+
         this.JSONtask = this.corespondingTask!.getComponent(TaskInput)!.getRandomTask();
         this.genericTekst.getComponent(Label)!.string = this.JSONtask.question!;
 

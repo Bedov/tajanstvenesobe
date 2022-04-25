@@ -240,7 +240,7 @@
         "__id__": 78
       },
       {
-        "__id__": 87
+        "__id__": 86
       },
       {
         "__id__": 95
@@ -276,7 +276,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 490.00000000000006,
+      "x": 490,
       "y": 300,
       "z": 0
     },
@@ -364,7 +364,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 310.7142857142857,
+    "_orthoHeight": 300,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -1279,17 +1279,17 @@
       "__id__": 78
     },
     "asset": {
-      "__uuid__": "e8cc764b-9e47-45d6-852a-4bca73976361",
+      "__uuid__": "c2b6033d-ca9d-4499-b2cd-495f10cae49a",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "92X+fL2EtL56hsWYSdqLWJ",
+    "fileId": "e9ZWNyzJVGBIYNRgbu0cSz",
     "instance": {
       "__id__": 80
     }
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "2a6kGX9OJDrJQezaeg5ORp",
+    "fileId": "b3ddHjZJJBLLapuB3Hgvju",
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
@@ -1304,9 +1304,6 @@
       },
       {
         "__id__": 85
-      },
-      {
-        "__id__": 86
       }
     ],
     "removedComponents": []
@@ -1319,12 +1316,12 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "GenericUI-ABC"
+    "value": "GenericUI-Image"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "92X+fL2EtL56hsWYSdqLWJ"
+      "e9ZWNyzJVGBIYNRgbu0cSz"
     ]
   },
   {
@@ -1374,48 +1371,41 @@
     }
   },
   {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 82
-    },
-    "propertyPath": [
-      "_active"
-    ],
-    "value": false
-  },
-  {
     "__type__": "cc.Node",
     "_objFlags": 0,
     "_parent": {
       "__id__": 8
     },
     "_prefab": {
-      "__id__": 88
+      "__id__": 87
     },
     "__editorExtras__": {}
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 87
+      "__id__": 86
     },
     "asset": {
-      "__uuid__": "c2b6033d-ca9d-4499-b2cd-495f10cae49a",
+      "__uuid__": "e8cc764b-9e47-45d6-852a-4bca73976361",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "e9ZWNyzJVGBIYNRgbu0cSz",
+    "fileId": "92X+fL2EtL56hsWYSdqLWJ",
     "instance": {
-      "__id__": 89
+      "__id__": 88
     }
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "b3ddHjZJJBLLapuB3Hgvju",
+    "fileId": "2a6kGX9OJDrJQezaeg5ORp",
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
       {
-        "__id__": 90
+        "__id__": 89
+      },
+      {
+        "__id__": 91
       },
       {
         "__id__": 92
@@ -1432,23 +1422,23 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 91
+      "__id__": 90
     },
     "propertyPath": [
       "_name"
     ],
-    "value": "GenericUI-Image"
+    "value": "GenericUI-ABC"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "e9ZWNyzJVGBIYNRgbu0cSz"
+      "92X+fL2EtL56hsWYSdqLWJ"
     ]
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 91
+      "__id__": 90
     },
     "propertyPath": [
       "_lpos"
@@ -1463,7 +1453,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 91
+      "__id__": 90
     },
     "propertyPath": [
       "_lrot"
@@ -1479,7 +1469,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 91
+      "__id__": 90
     },
     "propertyPath": [
       "_euler"
@@ -1490,6 +1480,16 @@
       "y": 0,
       "z": 0
     }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 90
+    },
+    "propertyPath": [
+      "_active"
+    ],
+    "value": false
   },
   {
     "__type__": "cc.Node",
@@ -2096,8 +2096,8 @@
     "__prefab": null,
     "_alignFlags": 45,
     "_target": null,
-    "_left": 5.684341886080802e-14,
-    "_right": 5.684341886080802e-14,
+    "_left": 0,
+    "_right": 0.2816901408451713,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -9251,10 +9251,10 @@
       "__id__": 70
     },
     "genericUIimage": {
-      "__id__": 87
+      "__id__": 78
     },
     "genericUIABC": {
-      "__id__": 78
+      "__id__": 86
     },
     "genericUIinput": {
       "__id__": 95
@@ -9616,7 +9616,7 @@
         "__id__": 78
       },
       {
-        "__id__": 87
+        "__id__": 86
       },
       {
         "__id__": 95

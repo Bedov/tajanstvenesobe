@@ -10,13 +10,11 @@
         [
             "cc.Material",
             [
-                "_name",
+                "_props",
                 "_states",
-                "_defines",
-                "_props"
+                "_defines"
             ],
-            0,
-            12
+            0
         ]
     ],
     [
@@ -25,46 +23,37 @@
             0,
             1,
             2,
-            3,
             4
         ]
     ],
     [
         [
             0,
-            "Lift_SAMO_RAM_LIFTA_I_GOLDBERG:Srebrni_plafon",
+            [
+                {
+                    "roughness": 0.6433210968971252,
+                    "metallic": 0.4000000059604645
+                },
+                {},
+                {}
+            ],
             [
                 {
                     "rasterizerState": {},
+                    "depthStencilState": {},
                     "blendState": {
                         "targets": [
                             {}
                         ]
-                    },
-                    "depthStencilState": {}
-                }
-            ],
-            [
+                    }
+                },
+                {},
                 {}
             ],
             [
-                [
-                    [
-                        {
-                            "metallic": 0.4000000059604645,
-                            "roughness": 0.6433210968971252
-                        },
-                        "albedoScale",
-                        8,
-                        [
-                            1,
-                            0.6412214040756226,
-                            0.6412214040756226,
-                            0.6412214040756226
-                        ]
-                    ]
-                ],
-                11
+                {},
+                {},
+                {}
             ]
         ]
     ],

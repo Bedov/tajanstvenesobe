@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "metalni_deo_kod_creva",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -9,29 +9,42 @@
   },
   "_techIdx": 0,
   "_defines": [
+    {},
+    {},
     {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 208,
+        "g": 232,
+        "b": 238,
+        "a": 255
+      },
       "albedoScale": {
         "__type__": "cc.Vec3",
-        "x": 0.4000000059604645,
-        "y": 0.4000000059604645,
-        "z": 0.4000000059604645
+        "x": 0.6,
+        "y": 0.6,
+        "z": 0.6
       },
-      "metallic": 0.4000000059604645,
-      "roughness": 0.30151134729385376
-    }
+      "roughness": 0.30151134729385376,
+      "metallic": 0.4000000059604645
+    },
+    {},
+    {}
   ]
 }
