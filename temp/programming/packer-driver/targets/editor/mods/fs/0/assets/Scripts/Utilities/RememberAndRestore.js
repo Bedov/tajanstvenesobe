@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, RigidBody, Animation, GlobalManager, Trigger1, NodePosRot, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, RememberAndRestore;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Quat, RigidBody, Animation, GlobalManager, Trigger1, NodePosRot, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, RememberAndRestore;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -59,7 +59,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
        *
        */
 
-      _export("RememberAndRestore", RememberAndRestore = (_dec = ccclass('RememberAndRestore'), _dec2 = property([Node]), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(Node), _dec8 = property([_crd && Trigger1 === void 0 ? (_reportPossibleCrUseOfTrigger({
+      _export("RememberAndRestore", RememberAndRestore = (_dec = ccclass('RememberAndRestore'), _dec2 = property([Node]), _dec3 = property([Node]), _dec4 = property([_crd && Trigger1 === void 0 ? (_reportPossibleCrUseOfTrigger({
         error: Error()
       }), Trigger1) : Trigger1]), _dec(_class = (_class2 = (_temp = class RememberAndRestore extends Component {
         constructor(...args) {
@@ -67,24 +67,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           _initializerDefineProperty(this, "animatedObjects", _descriptor, this);
 
-          _initializerDefineProperty(this, "node1", _descriptor2, this);
-
-          _initializerDefineProperty(this, "node2", _descriptor3, this);
-
-          _initializerDefineProperty(this, "node3", _descriptor4, this);
-
-          _initializerDefineProperty(this, "node4", _descriptor5, this);
-
-          _initializerDefineProperty(this, "node5", _descriptor6, this);
-
           _defineProperty(this, "objectsNodePosRot", []);
 
-          _initializerDefineProperty(this, "triggersToRestart", _descriptor7, this);
+          _initializerDefineProperty(this, "parentObjects", _descriptor2, this);
+
+          _initializerDefineProperty(this, "triggersToRestart", _descriptor3, this);
         }
 
-        start() {}
-
-        onLoad() {
+        start() {
           this.animatedObjects[0].getComponent(RigidBody).isStatic = true;
           this.animatedObjects.forEach(element => {
             var nodePosRot = new NodePosRot();
@@ -92,15 +82,33 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             nodePosRot.position = new Vec3(element.position);
             nodePosRot.rotation = new Quat(element.rotation);
             this.objectsNodePosRot.push(nodePosRot);
-            this.setActive();
           });
+          this.scheduleOnce(this.setActive, 0.5); //this.setActive();
         }
 
+        onLoad() {}
+
         setActive() {
+          for (let index = 0; index < this.parentObjects.length; index++) {
+            if (this.parentObjects[index].children != null) this.parentObjects[index].children.forEach(element => {
+              element.active = true;
+            });
+            this.parentObjects[index].active = true;
+          }
+
+          console.log("General Progress: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress());
+
           for (let index = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress(); index < this.objectsNodePosRot.length; index++) {
-            this.objectsNodePosRot[index].node.active = false;
+          }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress(); index < this.parentObjects.length; index++) {
+            if (this.parentObjects[index].children != null) this.parentObjects[index].children.forEach(element => {
+              element.active = false;
+              console.log("Gasim element " + element.name);
+            });
+            this.parentObjects[index].active = false;
+            console.log("Gasim element " + this.parentObjects[index].name);
           }
         }
 
@@ -125,26 +133,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           });
         }
 
-        node1func() {
-          this.node1.active = !this.node1.active;
-        }
-
-        node2func() {
-          this.node2.active = !this.node2.active;
-        }
-
-        node3func() {
-          this.node3.active = !this.node3.active;
-        }
-
-        node4func() {
-          this.node4.active = !this.node4.active;
-        }
-
-        node5func() {
-          this.node5.active = !this.node5.active;
-        }
-
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "animatedObjects", [_dec2], {
         configurable: true,
         enumerable: true,
@@ -152,32 +140,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         initializer: function () {
           return [];
         }
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "node1", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "parentObjects", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
-        initializer: null
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "node2", [_dec4], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "node3", [_dec5], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "node4", [_dec6], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "node5", [_dec7], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: null
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "triggersToRestart", [_dec8], {
+        initializer: function () {
+          return [];
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "triggersToRestart", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,

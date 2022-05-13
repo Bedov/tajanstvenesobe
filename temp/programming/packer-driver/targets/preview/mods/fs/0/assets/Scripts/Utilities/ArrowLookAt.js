@@ -95,7 +95,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameManager) : GameManager).getInstance().WorldRoot.scale.z;
           this.helpButon = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Canvas.getChildByName("BottomUI").getChildByName("HelpNavigation");
+          }), GameManager) : GameManager).getInstance().Canvas.getChildByName("HelpPanel").getChildByName("HelpNavigation");
         }
 
         update(deltaTime) {
@@ -104,7 +104,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.sceduled == false && Number(this.node.scale.x) == 1) {
             this.scheduleOnce(this.turnOffArrow, 5);
             this.sceduled = true;
-          }
+          } //console.log("COnsole " + GameManager.getInstance().Progress);
+          //console.log("COnsole " +  this.checkPoints[ Number(GameManager.getInstance().Progress)]);
+          //console.log("COnsole " +  this.checkPoints[ Number(GameManager.getInstance().Progress)].getComponent(Checkpoint));
+          //console.log("COnsole " +  this.checkPoints[ Number(GameManager.getInstance().Progress)].getComponent(Checkpoint)!.QuestionItem);
+
 
           if (this.node.scale.x > 0) {
             var itemPosition = new Vec3(this.checkPoints[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({

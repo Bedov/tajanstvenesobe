@@ -1,5 +1,6 @@
 
 import { _decorator, Component, Node } from 'cc';
+import { AudioManager } from '../AudioManager';
 import { RememberAndRestore } from '../Utilities/RememberAndRestore';
 const { ccclass, property } = _decorator;
 
@@ -26,6 +27,7 @@ export class DbuttonRestart extends Component {
     }
 
     restartGolderg() {
+        AudioManager.getInstance().clickSoundPlay();
         this.goldberg.getComponent(RememberAndRestore)?.restart();
     }
 }

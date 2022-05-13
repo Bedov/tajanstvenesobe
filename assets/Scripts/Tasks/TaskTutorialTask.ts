@@ -71,7 +71,7 @@ export class TaskTutorialTask extends Task {
 
     update() {
         if(this.checkpointLock)
-            if( this.taskManager.node.children.indexOf(this.node.parent!) != GameManager.getInstance().progressStarted )
+            if( this.taskManager.node.children.indexOf(this.node.parent!) != GlobalManager.getInstance().activeLevelData.levelProgress )
                 return;
         
         if(GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool && !this.executed ) {

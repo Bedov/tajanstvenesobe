@@ -1,6 +1,6 @@
 {
   "__type__": "cc.Material",
-  "_name": "SE_Vessels_01b_Mat4",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
@@ -10,19 +10,24 @@
   "_techIdx": 0,
   "_defines": [
     {
+      "USE_BATCHING": true,
       "USE_ALBEDO_MAP": true
-    }
+    },
+    {},
+    {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
           {}
         ]
-      },
-      "depthStencilState": {}
-    }
+      }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
@@ -30,6 +35,8 @@
         "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@f298d",
         "__expectedType__": "cc.Texture2D"
       }
-    }
+    },
+    {},
+    {}
   ]
 }

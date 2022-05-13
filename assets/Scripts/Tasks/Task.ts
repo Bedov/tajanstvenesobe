@@ -7,6 +7,7 @@ import { ScriptEffects } from "../Utilities/ScriptEffects";
 import { GenericUI } from "../Utilities/GenericUI";
 import { Consequence } from '../Consequences/Consequence';
 import { GameManager } from '../GameManager';
+import { GlobalManager } from '../GlobalManager';
 
 @ccclass('Task')
 export class Task extends Component {
@@ -63,10 +64,9 @@ export class Task extends Component {
         
     }
 
-    isItOkToExecute(){
-
+    isItOkToExecute(){  
         if(this.checkpointLock)
-            if( this.taskManager.node.children.indexOf(this.node.parent!) != GameManager.getInstance().progressStarted )
+            if( this.taskManager.node.children.indexOf(this.node.parent!) != GlobalManager.getInstance().activeLevelData.levelProgress )
                 return;
 
 

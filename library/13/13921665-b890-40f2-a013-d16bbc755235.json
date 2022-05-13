@@ -27,10 +27,13 @@
         "__id__": 180
       },
       {
-        "__id__": 459
+        "__id__": 274
       },
       {
-        "__id__": 223
+        "__id__": 282
+      },
+      {
+        "__id__": 226
       },
       {
         "__id__": 10
@@ -39,11 +42,11 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 470
+      "__id__": 370
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 473
+      "__id__": 371
     },
     "_id": "13921665-b890-40f2-a013-d16bbc755235"
   },
@@ -224,7 +227,7 @@
         "__id__": 9
       },
       {
-        "__id__": 469
+        "__id__": 369
       }
     ],
     "_prefab": null,
@@ -284,10 +287,10 @@
       "__id__": 179
     },
     "TaskManager": {
-      "__id__": 223
+      "__id__": 226
     },
     "Player": {
-      "__id__": 459
+      "__id__": 282
     },
     "LevelName": "birthday",
     "LanguageName": "SRB",
@@ -692,7 +695,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 300,
+    "_orthoHeight": 326.6666666666667,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -2470,7 +2473,7 @@
     "_alignFlags": 45,
     "_target": null,
     "_left": 0,
-    "_right": 0.2816901408451713,
+    "_right": 0,
     "_top": 0,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -2507,55 +2510,55 @@
     },
     "_children": [
       {
-        "__id__": 380
+        "__id__": 216
       },
       {
-        "__id__": 388
+        "__id__": 298
       },
       {
-        "__id__": 395
+        "__id__": 305
       },
       {
-        "__id__": 403
+        "__id__": 313
       },
       {
-        "__id__": 408
+        "__id__": 318
       },
       {
-        "__id__": 415
+        "__id__": 325
       },
       {
-        "__id__": 422
+        "__id__": 332
       },
       {
-        "__id__": 430
+        "__id__": 340
       },
       {
-        "__id__": 435
+        "__id__": 345
       },
       {
-        "__id__": 438
+        "__id__": 348
       },
       {
-        "__id__": 441
+        "__id__": 351
       },
       {
-        "__id__": 444
+        "__id__": 354
       },
       {
-        "__id__": 447
+        "__id__": 357
       },
       {
-        "__id__": 452
+        "__id__": 362
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 456
+        "__id__": 366
       },
       {
-        "__id__": 458
+        "__id__": 368
       }
     ],
     "_prefab": null,
@@ -2621,12 +2624,6 @@
       },
       {
         "__id__": 212
-      },
-      {
-        "__id__": 372
-      },
-      {
-        "__id__": 376
       }
     ],
     "_active": true,
@@ -3440,70 +3437,27 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Rodjendanska 5. april",
+    "_name": "Ground002",
     "_objFlags": 0,
     "_parent": {
       "__id__": 180
     },
-    "_children": [
+    "_children": [],
+    "_active": true,
+    "_components": [
       {
         "__id__": 213
       },
       {
-        "__id__": 301
-      },
-      {
-        "__id__": 308
-      },
-      {
-        "__id__": 316
-      },
-      {
-        "__id__": 321
-      },
-      {
-        "__id__": 328
-      },
-      {
-        "__id__": 335
-      },
-      {
-        "__id__": 343
-      },
-      {
-        "__id__": 348
-      },
-      {
-        "__id__": 351
-      },
-      {
-        "__id__": 354
-      },
-      {
-        "__id__": 357
-      },
-      {
-        "__id__": 360
-      },
-      {
-        "__id__": 365
-      }
-    ],
-    "_active": false,
-    "_components": [
-      {
-        "__id__": 369
-      },
-      {
-        "__id__": 371
+        "__id__": 215
       }
     ],
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -2.889,
-      "y": 0,
-      "z": 5.405
+      "x": 0,
+      "y": -0.048,
+      "z": 0
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -3514,9 +3468,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 30,
-      "y": 30,
-      "z": 30
+      "x": 18,
+      "y": 18,
+      "z": 18
     },
     "_layer": 1073741824,
     "_euler": {
@@ -3525,24 +3479,92 @@
       "y": 0,
       "z": 0
     },
-    "_id": "d1ZsCfGP1KWLf1Ik9wxRZe"
+    "_id": "a0e2t2kLJAboVEtSO0W7cx"
+  },
+  {
+    "__type__": "cc.MeshRenderer",
+    "_name": "Plane<ModelComponent>",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 212
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_materials": [
+      {
+        "__uuid__": "d0461631-50d2-462f-9d28-c2ba19a486d5",
+        "__expectedType__": "cc.Material"
+      }
+    ],
+    "_visFlags": 0,
+    "lightmapSettings": {
+      "__id__": 214
+    },
+    "_mesh": {
+      "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@2e76e",
+      "__expectedType__": "cc.Mesh"
+    },
+    "_shadowCastingMode": 0,
+    "_shadowReceivingMode": 1,
+    "_enableMorph": true,
+    "_id": "010jj7/mpP2atnbP3nzT5f"
+  },
+  {
+    "__type__": "cc.ModelLightmapSettings",
+    "texture": null,
+    "uvParam": {
+      "__type__": "cc.Vec4",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "_bakeable": false,
+    "_castShadow": false,
+    "_receiveShadow": false,
+    "_recieveShadow": false,
+    "_lightmapSize": 64
+  },
+  {
+    "__type__": "cc.MeshCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 212
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_material": null,
+    "_isTrigger": false,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_mesh": {
+      "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@2e76e",
+      "__expectedType__": "cc.Mesh"
+    },
+    "_convex": false,
+    "_id": "43yPE20MRGsrOUT/jlg9ER"
   },
   {
     "__type__": "cc.Node",
     "_name": "NOVA_Rodjendanska_proslava_9:Klackalica",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 212
+      "__id__": 179
     },
     "_children": [
       {
-        "__id__": 214
+        "__id__": 217
       },
       {
-        "__id__": 215
+        "__id__": 218
       },
       {
-        "__id__": 216
+        "__id__": 219
       }
     ],
     "_active": true,
@@ -3574,14 +3596,14 @@
       "y": 0,
       "z": 0
     },
-    "_id": "8cxJiax05LcK5FtM6ewiju"
+    "_id": "66F1qZxEVKAYiFK+kMGg5w"
   },
   {
     "__type__": "cc.Node",
     "_name": "NOVA_Rodjendanska_proslava_9:joint8",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 213
+      "__id__": 216
     },
     "_children": [],
     "_active": true,
@@ -3613,14 +3635,14 @@
       "y": 0,
       "z": 0
     },
-    "_id": "1eaqN58eJAt5nkAOemXtpc"
+    "_id": "13ubKb/1hKR60lXU2GehCH"
   },
   {
     "__type__": "cc.Node",
     "_name": "NOVA_Rodjendanska_proslava_9:joint9",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 213
+      "__id__": 216
     },
     "_children": [],
     "_active": true,
@@ -3634,10 +3656,10 @@
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": -0.113160893541324,
-      "y": 0.000654766453773347,
-      "z": 0.053035725011356435,
-      "w": 0.99215996458552
+      "x": -0.08465616925628336,
+      "y": -0.0000494329893254135,
+      "z": 0.03909273341963802,
+      "w": 0.9956430528844221
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -3648,30 +3670,27 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": -13.053901463031986,
-      "y": 0.7664385860086683,
-      "z": 6.03244740413427
+      "x": -9.734564379461666,
+      "y": 0.3747341308767144,
+      "z": 4.465177440843962
     },
-    "_id": "c0w1ifZhJOsKUpdzRyoL7u"
+    "_id": "c4xEgJczRLR5NQvx4jkmXx"
   },
   {
     "__type__": "cc.Node",
     "_name": "NOVA_Rodjendanska_proslava_9:Klackalica",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 213
+      "__id__": 216
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 217
+        "__id__": 220
       },
       {
-        "__id__": 219
-      },
-      {
-        "__id__": 300
+        "__id__": 222
       }
     ],
     "_prefab": null,
@@ -3701,42 +3720,42 @@
       "y": 115.96396096382364,
       "z": 3.071955169880942e-15
     },
-    "_id": "378KMlryJL+7z0l3uXMWfL"
+    "_id": "adBcI/0N9BhbpJoL+SzBpv"
   },
   {
     "__type__": "cc.SkinnedMeshRenderer",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 216
+      "__id__": 219
     },
     "_enabled": true,
     "__prefab": null,
     "_materials": [
       {
-        "__uuid__": "f5618695-65f0-45dd-ba1c-9d8e77bc082d",
+        "__uuid__": "7c941a80-ab2f-4bfc-9f07-21abca6c8302",
         "__expectedType__": "cc.Material"
       }
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 218
+      "__id__": 221
     },
     "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@3ca5e",
+      "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@3ca5e",
       "__expectedType__": "cc.Mesh"
     },
     "_shadowCastingMode": 0,
     "_shadowReceivingMode": 1,
     "_enableMorph": true,
     "_skeleton": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@2224c",
+      "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@2224c",
       "__expectedType__": "cc.Skeleton"
     },
     "_skinningRoot": {
-      "__id__": 212
+      "__id__": 179
     },
-    "_id": "c3SV4y1pJHEb1MKN+drgOK"
+    "_id": "83B2/7+0lMa5y9pqBYPkc9"
   },
   {
     "__type__": "cc.ModelLightmapSettings",
@@ -3759,17 +3778,17 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 216
+      "__id__": 219
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 220
+      "__id__": 223
     },
     "myTask": {
-      "__id__": 221
+      "__id__": 224
     },
     "taskCompletedAutomaticly": false,
-    "_id": "a0gPfj8rtNTKyvMEOV3kBl"
+    "_id": "e72JB0lMJJw79wWBSZbyRq"
   },
   {
     "__type__": "cc.CompPrefabInfo",
@@ -3780,16 +3799,16 @@
     "_name": "Task1ABC",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 222
+      "__id__": 225
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 298
+        "__id__": 296
       },
       {
-        "__id__": 299
+        "__id__": 297
       }
     ],
     "_prefab": null,
@@ -3826,23 +3845,23 @@
     "_name": "Checkpoint1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 223
+      "__id__": 226
     },
     "_children": [
+      {
+        "__id__": 291
+      },
       {
         "__id__": 293
       },
       {
-        "__id__": 295
-      },
-      {
-        "__id__": 221
+        "__id__": 224
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 297
+        "__id__": 295
       }
     ],
     "_prefab": null,
@@ -3883,34 +3902,34 @@
     },
     "_children": [
       {
-        "__id__": 222
+        "__id__": 225
       },
       {
-        "__id__": 224
+        "__id__": 227
       },
       {
-        "__id__": 230
+        "__id__": 233
       },
       {
-        "__id__": 236
+        "__id__": 239
       },
       {
-        "__id__": 242
+        "__id__": 245
       },
       {
-        "__id__": 248
+        "__id__": 251
       },
       {
-        "__id__": 254
+        "__id__": 257
       },
       {
-        "__id__": 260
+        "__id__": 263
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 270
+        "__id__": 273
       }
     ],
     "_prefab": null,
@@ -3947,20 +3966,20 @@
     "_name": "Checkpoint2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 223
+      "__id__": 226
     },
     "_children": [
       {
-        "__id__": 225
+        "__id__": 228
       },
       {
-        "__id__": 227
+        "__id__": 230
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 229
+        "__id__": 232
       }
     ],
     "_prefab": null,
@@ -3997,13 +4016,13 @@
     "_name": "Task2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 224
+      "__id__": 227
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 226
+        "__id__": 229
       }
     ],
     "_prefab": null,
@@ -4041,13 +4060,13 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 225
+      "__id__": 228
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 221
+        "__id__": 224
       }
     ],
     "uvodniTask": false,
@@ -4066,13 +4085,13 @@
     "_name": "Task2ABC",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 224
+      "__id__": 227
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 228
+        "__id__": 231
       }
     ],
     "_prefab": null,
@@ -4109,13 +4128,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 227
+      "__id__": 230
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 225
+        "__id__": 228
       }
     ],
     "uvodniTask": false,
@@ -4133,7 +4152,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 224
+      "__id__": 227
     },
     "_enabled": true,
     "__prefab": null,
@@ -4144,20 +4163,20 @@
     "_name": "Checkpoint3",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 223
+      "__id__": 226
     },
     "_children": [
       {
-        "__id__": 231
+        "__id__": 234
       },
       {
-        "__id__": 233
+        "__id__": 236
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 235
+        "__id__": 238
       }
     ],
     "_prefab": null,
@@ -4194,13 +4213,13 @@
     "_name": "Task3",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 230
+      "__id__": 233
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 232
+        "__id__": 235
       }
     ],
     "_prefab": null,
@@ -4238,13 +4257,13 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 231
+      "__id__": 234
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 227
+        "__id__": 230
       }
     ],
     "uvodniTask": false,
@@ -4263,13 +4282,13 @@
     "_name": "Task3ABC",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 230
+      "__id__": 233
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 234
+        "__id__": 237
       }
     ],
     "_prefab": null,
@@ -4306,13 +4325,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 233
+      "__id__": 236
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 231
+        "__id__": 234
       }
     ],
     "uvodniTask": false,
@@ -4330,7 +4349,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 230
+      "__id__": 233
     },
     "_enabled": true,
     "__prefab": null,
@@ -4341,20 +4360,20 @@
     "_name": "Checkpoint4",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 223
+      "__id__": 226
     },
     "_children": [
       {
-        "__id__": 237
+        "__id__": 240
       },
       {
-        "__id__": 239
+        "__id__": 242
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 241
+        "__id__": 244
       }
     ],
     "_prefab": null,
@@ -4391,13 +4410,13 @@
     "_name": "Task4",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 236
+      "__id__": 239
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 238
+        "__id__": 241
       }
     ],
     "_prefab": null,
@@ -4435,13 +4454,13 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 237
+      "__id__": 240
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 233
+        "__id__": 236
       }
     ],
     "uvodniTask": false,
@@ -4460,13 +4479,13 @@
     "_name": "Task4ABC",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 236
+      "__id__": 239
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 240
+        "__id__": 243
       }
     ],
     "_prefab": null,
@@ -4503,13 +4522,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 239
+      "__id__": 242
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 237
+        "__id__": 240
       }
     ],
     "uvodniTask": false,
@@ -4527,7 +4546,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 236
+      "__id__": 239
     },
     "_enabled": true,
     "__prefab": null,
@@ -4538,20 +4557,20 @@
     "_name": "Checkpoint5",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 223
+      "__id__": 226
     },
     "_children": [
       {
-        "__id__": 243
+        "__id__": 246
       },
       {
-        "__id__": 245
+        "__id__": 248
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 247
+        "__id__": 250
       }
     ],
     "_prefab": null,
@@ -4588,13 +4607,13 @@
     "_name": "Task5",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 242
+      "__id__": 245
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 244
+        "__id__": 247
       }
     ],
     "_prefab": null,
@@ -4632,13 +4651,13 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 243
+      "__id__": 246
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 239
+        "__id__": 242
       }
     ],
     "uvodniTask": false,
@@ -4657,13 +4676,13 @@
     "_name": "Task5ABC",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 242
+      "__id__": 245
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 246
+        "__id__": 249
       }
     ],
     "_prefab": null,
@@ -4700,13 +4719,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 245
+      "__id__": 248
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 243
+        "__id__": 246
       }
     ],
     "uvodniTask": false,
@@ -4724,7 +4743,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 242
+      "__id__": 245
     },
     "_enabled": true,
     "__prefab": null,
@@ -4735,20 +4754,20 @@
     "_name": "Checkpoint6",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 223
+      "__id__": 226
     },
     "_children": [
       {
-        "__id__": 249
+        "__id__": 252
       },
       {
-        "__id__": 251
+        "__id__": 254
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 253
+        "__id__": 256
       }
     ],
     "_prefab": null,
@@ -4785,13 +4804,13 @@
     "_name": "Task6",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 248
+      "__id__": 251
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 250
+        "__id__": 253
       }
     ],
     "_prefab": null,
@@ -4829,13 +4848,13 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 249
+      "__id__": 252
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 245
+        "__id__": 248
       }
     ],
     "uvodniTask": false,
@@ -4854,13 +4873,13 @@
     "_name": "Task6ABC",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 248
+      "__id__": 251
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 252
+        "__id__": 255
       }
     ],
     "_prefab": null,
@@ -4897,13 +4916,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 251
+      "__id__": 254
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 249
+        "__id__": 252
       }
     ],
     "uvodniTask": false,
@@ -4921,7 +4940,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 248
+      "__id__": 251
     },
     "_enabled": true,
     "__prefab": null,
@@ -4932,20 +4951,20 @@
     "_name": "Checkpoint7",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 223
+      "__id__": 226
     },
     "_children": [
       {
-        "__id__": 255
+        "__id__": 258
       },
       {
-        "__id__": 257
+        "__id__": 260
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 259
+        "__id__": 262
       }
     ],
     "_prefab": null,
@@ -4982,13 +5001,13 @@
     "_name": "Task7",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 254
+      "__id__": 257
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 256
+        "__id__": 259
       }
     ],
     "_prefab": null,
@@ -5026,13 +5045,13 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 255
+      "__id__": 258
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 251
+        "__id__": 254
       }
     ],
     "uvodniTask": false,
@@ -5051,13 +5070,13 @@
     "_name": "Task7ABC",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 254
+      "__id__": 257
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 258
+        "__id__": 261
       }
     ],
     "_prefab": null,
@@ -5094,13 +5113,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 257
+      "__id__": 260
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 255
+        "__id__": 258
       }
     ],
     "uvodniTask": false,
@@ -5118,7 +5137,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 254
+      "__id__": 257
     },
     "_enabled": true,
     "__prefab": null,
@@ -5129,23 +5148,23 @@
     "_name": "Checkpoint8",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 223
+      "__id__": 226
     },
     "_children": [
       {
-        "__id__": 261
+        "__id__": 264
       },
       {
-        "__id__": 263
+        "__id__": 266
       },
       {
-        "__id__": 265
+        "__id__": 268
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 269
+        "__id__": 272
       }
     ],
     "_prefab": null,
@@ -5182,13 +5201,13 @@
     "_name": "Task8",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 260
+      "__id__": 263
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 262
+        "__id__": 265
       }
     ],
     "_prefab": null,
@@ -5226,13 +5245,13 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 261
+      "__id__": 264
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 257
+        "__id__": 260
       }
     ],
     "uvodniTask": false,
@@ -5251,13 +5270,13 @@
     "_name": "Task8ABC",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 260
+      "__id__": 263
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 264
+        "__id__": 267
       }
     ],
     "_prefab": null,
@@ -5294,13 +5313,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 263
+      "__id__": 266
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 261
+        "__id__": 264
       }
     ],
     "uvodniTask": false,
@@ -5318,19 +5337,19 @@
     "_name": "TaskEnding",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 260
+      "__id__": 263
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 266
+        "__id__": 269
       },
       {
-        "__id__": 267
+        "__id__": 270
       },
       {
-        "__id__": 268
+        "__id__": 271
       }
     ],
     "_prefab": null,
@@ -5368,7 +5387,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 265
+      "__id__": 268
     },
     "_enabled": true,
     "__prefab": null,
@@ -5390,7 +5409,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 265
+      "__id__": 268
     },
     "_enabled": true,
     "__prefab": null,
@@ -5426,13 +5445,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 265
+      "__id__": 268
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 263
+        "__id__": 266
       }
     ],
     "uvodniTask": false,
@@ -5449,7 +5468,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 260
+      "__id__": 263
     },
     "_enabled": true,
     "__prefab": null,
@@ -5460,7 +5479,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 223
+      "__id__": 226
     },
     "_enabled": true,
     "__prefab": null,
@@ -5487,7 +5506,7 @@
     },
     "helpButton": null,
     "arrow": {
-      "__id__": 271
+      "__id__": 274
     },
     "loadingPanel": {
       "__id__": 11
@@ -5498,83 +5517,204 @@
   },
   {
     "__type__": "cc.Node",
+    "_name": "Arrow",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_parent": {
-      "__id__": 272
+      "__id__": 1
     },
-    "_prefab": {
-      "__id__": 286
-    },
-    "__editorExtras__": {}
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Player",
-    "_objFlags": 1,
-    "_parent": null,
     "_children": [
       {
-        "__id__": 273
-      },
-      {
-        "__id__": 274
-      },
-      {
-        "__id__": 276
-      },
-      {
-        "__id__": 271
+        "__id__": 275
       }
     ],
     "_active": true,
     "_components": [
       {
+        "__id__": 279
+      },
+      {
         "__id__": 280
-      },
-      {
-        "__id__": 281
-      },
-      {
-        "__id__": 282
-      },
-      {
-        "__id__": 283
-      },
-      {
-        "__id__": 284
-      },
-      {
-        "__id__": 285
       }
     ],
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 4.195,
-      "y": 0.648,
-      "z": 2.498
+      "x": -9.617,
+      "y": 0.721,
+      "z": -0.365
     },
     "_lrot": {
       "__type__": "cc.Quat",
       "x": 0,
       "y": 0,
-      "z": -6.938893903907228e-18,
+      "z": 6.938893903907228e-18,
       "w": 1
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.9999999999999999,
-      "y": 1,
-      "z": 1
+      "x": 0,
+      "y": 0,
+      "z": 0
     },
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": -7.951386703658792e-16
+      "z": 7.951386703658792e-16
     },
-    "_id": "30MA9OjjVO3b4DFUoy1Mcy"
+    "_id": "e2gJcwvcdE76oe/rsaQYwg"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Arrow5",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 274
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 276
+      },
+      {
+        "__id__": 278
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 0.0254,
+      "y": 0.0154,
+      "z": 0.0154
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    },
+    "_id": "4dvD+my5VGPLiglNF5Flfy"
+  },
+  {
+    "__type__": "cc.MeshRenderer",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 275
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_materials": [
+      {
+        "__uuid__": "4ad8f02e-1500-4b2b-93d2-e5ad8154aa6a",
+        "__expectedType__": "cc.Material"
+      }
+    ],
+    "_visFlags": 0,
+    "lightmapSettings": {
+      "__id__": 277
+    },
+    "_mesh": {
+      "__uuid__": "92bd926b-ce01-4dbd-b826-8cf62e61d532@6f07a",
+      "__expectedType__": "cc.Mesh"
+    },
+    "_shadowCastingMode": 0,
+    "_shadowReceivingMode": 1,
+    "_enableMorph": true,
+    "_id": "09WuE97tZLWKw66/qCGWVu"
+  },
+  {
+    "__type__": "cc.ModelLightmapSettings",
+    "texture": null,
+    "uvParam": {
+      "__type__": "cc.Vec4",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "_bakeable": false,
+    "_castShadow": false,
+    "_receiveShadow": false,
+    "_recieveShadow": false,
+    "_lightmapSize": 64
+  },
+  {
+    "__type__": "cc.Animation",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 275
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "playOnLoad": true,
+    "_clips": [
+      {
+        "__uuid__": "857930ad-da7c-4a05-a2d0-20072cf0bec1",
+        "__expectedType__": "cc.AnimationClip"
+      }
+    ],
+    "_defaultClip": {
+      "__uuid__": "857930ad-da7c-4a05-a2d0-20072cf0bec1",
+      "__expectedType__": "cc.AnimationClip"
+    },
+    "_id": "9c0pNMuhRFNKaf+ddeeFcY"
+  },
+  {
+    "__type__": "cc.Animation",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 274
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "playOnLoad": false,
+    "_clips": [
+      {
+        "__uuid__": "745a589b-bee1-48c1-8610-0a8eeea9167a",
+        "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "6188a538-7a66-4414-99df-cc7562aea953",
+        "__expectedType__": "cc.AnimationClip"
+      }
+    ],
+    "_defaultClip": null,
+    "_id": "19n+APBy9IPJkACd10njR7"
+  },
+  {
+    "__type__": "3607dRmrqJLM7d1d76n8BmS",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 274
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "arrowDot": {
+      "__id__": 281
+    },
+    "arrowHeight": 0.35,
+    "_id": "d2MSUB+tlPXpTQeC7dLfvD"
   },
   {
     "__type__": "cc.Node",
@@ -5582,7 +5722,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
-      "__id__": 272
+      "__id__": 282
     },
     "_children": [],
     "_active": true,
@@ -5614,20 +5754,86 @@
       "y": -1.5902773407317584e-15,
       "z": -7.951386703658792e-16
     },
-    "_id": "96QkzLG7ZJk5GY3+1jOtZg"
+    "_id": "58OTUqr8JB8Zj9m1LJaT4d"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Player",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 281
+      },
+      {
+        "__id__": 283
+      }
+    ],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 285
+      },
+      {
+        "__id__": 286
+      },
+      {
+        "__id__": 287
+      },
+      {
+        "__id__": 288
+      },
+      {
+        "__id__": 289
+      },
+      {
+        "__id__": 290
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 4.195,
+      "y": 0.648,
+      "z": 2.498
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": -6.938893903907228e-18,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 0.9999999999999999,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": -7.951386703658792e-16
+    },
+    "_id": "96B4H5MvZEMKnKJklHj7Py"
   },
   {
     "__type__": "cc.Node",
     "_name": "Camera",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 272
+      "__id__": 282
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 275
+        "__id__": 284
       }
     ],
     "_prefab": null,
@@ -5657,14 +5863,14 @@
       "y": 0,
       "z": 0
     },
-    "_id": "334tSUCYhBp44BJUHlOuSH"
+    "_id": "96fY5IKBRDnokLaE363tB3"
   },
   {
     "__type__": "cc.Camera",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 274
+      "__id__": 283
     },
     "_enabled": true,
     "__prefab": null,
@@ -5673,7 +5879,7 @@
     "_fov": 45,
     "_fovAxis": 0,
     "_orthoHeight": 320,
-    "_near": 0.04,
+    "_near": 0.1,
     "_far": 1000,
     "_color": {
       "__type__": "cc.Color",
@@ -5698,129 +5904,14 @@
     "_screenScale": 1,
     "_visibility": 1822425087,
     "_targetTexture": null,
-    "_id": "3e58NVOVhB9Zl20sFxjhuR"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Capsule",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 272
-    },
-    "_children": [],
-    "_active": false,
-    "_components": [
-      {
-        "__id__": 277
-      },
-      {
-        "__id__": 279
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": -0.577
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "06IIcdZL5Nn7F8BOFcuEdk"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "Capsule<ModelComponent>",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 276
-    },
-    "_enabled": false,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "d3c7820c-2a98-4429-8bc7-b8453bc9ac41",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 278
-    },
-    "_mesh": {
-      "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@801ec",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "f0XjX5u3pOYZEwTxcNO7yL"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.BoxCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 276
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_material": null,
-    "_isTrigger": false,
-    "_center": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_size": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 0.2,
-      "z": 1
-    },
-    "_id": "adxd2cEnpPgbFnUoctl2dW"
+    "_id": "benwXYVPVIoouEk1nV32lh"
   },
   {
     "__type__": "6f152n/6stPc7v81ZlKK38A",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 272
+      "__id__": 282
     },
     "_enabled": true,
     "__prefab": null,
@@ -5831,30 +5922,14 @@
     "rotateSpeed": 2,
     "maxAngleUp": 45,
     "maxAngleDown": 10,
-    "_id": "56pAOpItFEobD2HdwBVAZK"
-  },
-  {
-    "__type__": "84d9dkwZCBG2p2oRkV2v82r",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 272
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "moveSpeed": 1.5,
-    "forceStrenght": 11,
-    "damp": 0.2,
-    "_eventOn": false,
-    "heightFromGround": 0.6,
-    "_id": "31uX0mMCFMmK+LVRsFixBt"
+    "_id": "4dgLsGFVpOD5hBfEeg4/23"
   },
   {
     "__type__": "cc.RigidBody",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 272
+      "__id__": 282
     },
     "_enabled": true,
     "__prefab": null,
@@ -5862,9 +5937,9 @@
     "_type": 1,
     "_mass": 55,
     "_allowSleep": true,
-    "_linearDamping": 0.99,
+    "_linearDamping": 0.95,
     "_angularDamping": 1,
-    "_useGravity": false,
+    "_useGravity": true,
     "_linearFactor": {
       "__type__": "cc.Vec3",
       "x": 1,
@@ -5877,174 +5952,90 @@
       "y": 0,
       "z": 0
     },
-    "_id": "2bRoYDHN1IbKg4zNNrr+mJ"
-  },
-  {
-    "__type__": "cc.CylinderCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 272
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_material": {
-      "__uuid__": "cb271832-898a-4ec7-a257-a9b9ac95be51",
-      "__expectedType__": "cc.PhysicsMaterial"
-    },
-    "_isTrigger": false,
-    "_center": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": -0.2,
-      "z": -0.23
-    },
-    "_radius": 0.07,
-    "_height": 0.3,
-    "_direction": 1,
-    "_id": "0aSxMUnfNPca17FBqlyA92"
+    "_id": "37L+/INchAvYNHly9VAbfB"
   },
   {
     "__type__": "934004W0apF6p4lgxoYjh2m",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 272
+      "__id__": 282
     },
     "_enabled": true,
     "__prefab": null,
-    "_id": "2773jAJBxCjo3KOKMo1R3A"
+    "_id": "83yLHmjhlBILT4F9UhIlUw"
   },
   {
     "__type__": "96ae6+09F5HYa6C01wPMta+",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 272
+      "__id__": 282
     },
     "_enabled": true,
     "__prefab": null,
-    "distanceScale": 3,
+    "distanceScale": 3.5,
     "eulerRotation": {
       "__type__": "cc.Vec3",
-      "x": -38,
-      "y": -59.879,
+      "x": -41,
+      "y": -63,
       "z": 0
     },
     "pin": {
       "__id__": 201
     },
-    "_id": "fdEItay3ZPLKxtLSmavZEf"
+    "_id": "15TdAC8EpODqSTe/7lUb/5"
   },
   {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 271
+    "__type__": "aff9fcmgnRAv6/ZwXTsi9l9",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 282
     },
-    "asset": {
-      "__uuid__": "765cc720-ce46-41d2-8d23-df3d2c5076b9",
-      "__expectedType__": "cc.Prefab"
+    "_enabled": true,
+    "__prefab": null,
+    "moveSpeed": 1,
+    "forceStrenght": 1,
+    "damp": 0.2,
+    "_eventOn": false,
+    "heightFromGround": 0.6,
+    "_id": "10O2NMULVE0bazijTUfeF0"
+  },
+  {
+    "__type__": "cc.CapsuleCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 282
     },
-    "fileId": "1dptesWm1Db758h6U8JFxX",
-    "instance": {
-      "__id__": 287
-    }
-  },
-  {
-    "__type__": "cc.PrefabInstance",
-    "fileId": "deSp1ah1lIIYJyblX+CYA+",
-    "mountedChildren": [],
-    "mountedComponents": [],
-    "propertyOverrides": [
-      {
-        "__id__": 288
-      },
-      {
-        "__id__": 290
-      },
-      {
-        "__id__": 291
-      },
-      {
-        "__id__": 292
-      }
-    ],
-    "removedComponents": []
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 289
-    },
-    "propertyPath": [
-      "_name"
-    ],
-    "value": "Arrow"
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "1dptesWm1Db758h6U8JFxX"
-    ]
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 289
-    },
-    "propertyPath": [
-      "_lpos"
-    ],
-    "value": {
+    "_enabled": true,
+    "__prefab": null,
+    "_material": null,
+    "_isTrigger": false,
+    "_center": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -0.056,
-      "z": -0.365
-    }
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 289
+      "y": -0.3,
+      "z": -0.23
     },
-    "propertyPath": [
-      "_lrot"
-    ],
-    "value": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 6.938893903907228e-18,
-      "w": 1
-    }
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 289
-    },
-    "propertyPath": [
-      "_euler"
-    ],
-    "value": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 7.951386703658792e-16
-    }
+    "_radius": 0.08,
+    "_cylinderHeight": 0.4,
+    "_direction": 1,
+    "_id": "a727GouylHnpkqPQHqbHfx"
   },
   {
     "__type__": "cc.Node",
     "_name": "Task0",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 222
+      "__id__": 225
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 294
+        "__id__": 292
       }
     ],
     "_prefab": null,
@@ -6082,7 +6073,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 293
+      "__id__": 291
     },
     "_enabled": true,
     "__prefab": null,
@@ -6103,13 +6094,13 @@
     "_name": "Task1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 222
+      "__id__": 225
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 296
+        "__id__": 294
       }
     ],
     "_prefab": null,
@@ -6147,13 +6138,13 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 295
+      "__id__": 293
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 293
+        "__id__": 291
       }
     ],
     "uvodniTask": false,
@@ -6172,7 +6163,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 222
+      "__id__": 225
     },
     "_enabled": true,
     "__prefab": null,
@@ -6183,13 +6174,13 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 221
+      "__id__": 224
     },
     "_enabled": true,
     "__prefab": null,
     "dependencies": [
       {
-        "__id__": 295
+        "__id__": 293
       }
     ],
     "uvodniTask": false,
@@ -6207,7 +6198,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 221
+      "__id__": 224
     },
     "_enabled": true,
     "__prefab": null,
@@ -6218,2693 +6209,6 @@
     "_id": "b9wg3tP+hNvoR4TkaIK+5E"
   },
   {
-    "__type__": "cc.MeshCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 216
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_material": null,
-    "_isTrigger": false,
-    "_center": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@3ca5e",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_convex": false,
-    "_id": "ccjeLQ9tRLD6rPFwH5k78p"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Ljuljaska",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [
-      {
-        "__id__": 302
-      },
-      {
-        "__id__": 307
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "caBCIPw7tBAb6xqjN37YC7"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Ljuljaska_klupa",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 301
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 303
-      },
-      {
-        "__id__": 305
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.11602441966533661,
-      "y": 0.022841094061732292,
-      "z": -0.3090977966785431
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "e06K4cm2FF34yT+ISEROKM"
-  },
-  {
-    "__type__": "cc.SkinnedMeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 302
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "19fed11b-3803-459d-920c-0301f649bdbb",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 304
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@46931",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_skeleton": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@30732",
-      "__expectedType__": "cc.Skeleton"
-    },
-    "_skinningRoot": {
-      "__id__": 212
-    },
-    "_id": "96YBWB/4dA960t6ANsu9t0"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "39cafqCRjhLgY4Ri2Nc42rg",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 302
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 306
-    },
-    "myTask": {
-      "__id__": 257
-    },
-    "taskCompletedAutomaticly": false,
-    "_id": "8a4z9MbL9C35ZR2cx0+vVA"
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "acG9aFs69M/YIrDNp7t3aM"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint1",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 301
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.12082982063293457,
-      "y": 0.03909984976053238,
-      "z": -0.29867157340049744
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": -0.03723686661728639,
-      "w": 0.9993064673885217
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": -4.268017314282173
-    },
-    "_id": "81snamAjlC86ea0Dry8Lul"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Suncobran",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [
-      {
-        "__id__": 309
-      },
-      {
-        "__id__": 311
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "b4ViMF6ntIg4bYxI66lP/r"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint11",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 308
-    },
-    "_children": [
-      {
-        "__id__": 310
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.24093109369277954,
-      "y": 0.022476602345705032,
-      "z": -0.2536171078681946
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0.05433788664676822,
-      "z": 0,
-      "w": 0.9985226056904085
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 6.229731370541052,
-      "z": 0
-    },
-    "_id": "falLOAd/JBdqAWgf+pjU0H"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint10",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 309
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.005187956150621176,
-      "y": 0.011031638830900192,
-      "z": -0.004356320481747389
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": -0.0020407940587973228,
-      "y": -0.0251297272749786,
-      "z": -0.014964750524713702,
-      "w": 0.9995701016979389
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": -0.27697475496449125,
-      "y": -2.8844161923282416,
-      "z": -1.7084732747091464
-    },
-    "_id": "ddFjR81odK3adpgEx21F58"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Suncobran",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 308
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 312
-      },
-      {
-        "__id__": 314
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.24116697907447815,
-      "y": 0.022314781323075294,
-      "z": -0.2530186176300049
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "48F9zNZKtFi7ssuf6i6iXX"
-  },
-  {
-    "__type__": "cc.SkinnedMeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 311
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "a67366b4-0edb-402b-ab87-a1ff9c717e03",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 313
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@77c48",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_skeleton": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@62756",
-      "__expectedType__": "cc.Skeleton"
-    },
-    "_skinningRoot": {
-      "__id__": 212
-    },
-    "_id": "c2vktML3xN+bwSd7HSBeI1"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "39cafqCRjhLgY4Ri2Nc42rg",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 311
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 315
-    },
-    "myTask": {
-      "__id__": 227
-    },
-    "taskCompletedAutomaticly": false,
-    "_id": "d6/X1RPetLUYDMeI34BkVu"
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "acG9aFs69M/YIrDNp7t3aM"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Pesak",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 317
-      },
-      {
-        "__id__": 319
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.28091999888420105,
-      "y": -0.0005132578662596643,
-      "z": -0.06054619327187538
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 0.00402833754196763,
-      "y": 0.0040283361449837685,
-      "z": 0.004028336610645056
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "e2h0JOJapLXonU4SJpzOq4"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 316
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "9f28c9f3-7221-44ec-8f7c-70bbe14af47a",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 318
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@9771a",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "b7J/9SFg5C6LegP3w0BgOl"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "39cafqCRjhLgY4Ri2Nc42rg",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 316
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 320
-    },
-    "myTask": {
-      "__id__": 233
-    },
-    "taskCompletedAutomaticly": false,
-    "_id": "0fo1WMirJNwrbz9c2aAMw3"
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "acG9aFs69M/YIrDNp7t3aM"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Zastavice",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [
-      {
-        "__id__": 322
-      },
-      {
-        "__id__": 327
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "43jdVeshRJP6zMRFNa545A"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Zastavice",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 321
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 323
-      },
-      {
-        "__id__": 325
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.20642946660518646,
-      "y": 0.021794257685542107,
-      "z": -0.2594392001628876
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "3cbk25k7JDo7xfTWCNJUQ4"
-  },
-  {
-    "__type__": "cc.SkinnedMeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 322
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "0001387f-962f-4366-b946-a6612f41690e",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 324
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@b7a57",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_skeleton": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@f1394",
-      "__expectedType__": "cc.Skeleton"
-    },
-    "_skinningRoot": {
-      "__id__": 212
-    },
-    "_id": "ddW9u9z59DBqoJd8XAYQrl"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "39cafqCRjhLgY4Ri2Nc42rg",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 322
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 326
-    },
-    "myTask": {
-      "__id__": 239
-    },
-    "taskCompletedAutomaticly": false,
-    "_id": "63QIGYeBhI3I7Ijjpcdu/3"
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "acG9aFs69M/YIrDNp7t3aM"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint2",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 321
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.24339942634105682,
-      "y": 0.030041856691241264,
-      "z": -0.2566238045692444
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0.04407397963334116,
-      "y": -0.004679944760917679,
-      "z": 0.0007258956792595558,
-      "w": 0.9990170446552838
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1.0005650520324707,
-      "y": 0.9626361131668091,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 5.05247920059997,
-      "y": -0.5394294249365957,
-      "z": 0.05946367525853395
-    },
-    "_id": "c1hsDLwvdB+pcdz4nmv+GG"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Zuta_ruza",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [
-      {
-        "__id__": 329
-      },
-      {
-        "__id__": 334
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "75TPX6/aVKgbJOIa5SqUO6"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Zuta_ruza",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 328
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 330
-      },
-      {
-        "__id__": 332
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.15336273610591888,
-      "y": -0.0018768326845020056,
-      "z": -0.11376168578863144
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 7.007351863801234e-9,
-      "y": 0.5177215213511378,
-      "z": 1.1579843472662122e-8,
-      "w": 0.8555491957391247
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 0.003761864034458995,
-      "y": 0.0037618624046444893,
-      "z": 0.003761863335967064
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 8.211805886591074e-15,
-      "y": 62.35907876203651,
-      "z": 0.0000015509947618106974
-    },
-    "_id": "d3VAMRE9RMVYsw0+ZTH30F"
-  },
-  {
-    "__type__": "cc.SkinnedMeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 329
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "162fc640-5ef1-41b8-8e2d-56ac11f0322c",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "5060b2c8-6aff-4cb7-9353-71f2f93d8c0a",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 331
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@77920",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_skeleton": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@75ee4",
-      "__expectedType__": "cc.Skeleton"
-    },
-    "_skinningRoot": {
-      "__id__": 212
-    },
-    "_id": "90XFRwq/BDyqUpOx9dNMCQ"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "39cafqCRjhLgY4Ri2Nc42rg",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 329
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 333
-    },
-    "myTask": {
-      "__id__": 251
-    },
-    "taskCompletedAutomaticly": false,
-    "_id": "8cCgi8geFJJIRq++ZC2Cc1"
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "acG9aFs69M/YIrDNp7t3aM"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint7",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 328
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.15353718400001526,
-      "y": -0.0019457116723060608,
-      "z": -0.11401621997356415
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0.003239957325017984,
-      "y": 0.003009014010687566,
-      "z": -0.01439884186143325,
-      "w": 0.9998865544971915
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 0.9882676601409912,
-      "z": 1.0064926147460938
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0.3763530190516983,
-      "y": 0.3502615914579723,
-      "z": -1.6489089934112657
-    },
-    "_id": "a9/fN7YXdBeYJwVUUcjBQF"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Baloni",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [
-      {
-        "__id__": 336
-      },
-      {
-        "__id__": 340
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "c1wbEkuRhBs46C/bcR1+7g"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint3",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 335
-    },
-    "_children": [
-      {
-        "__id__": 337
-      },
-      {
-        "__id__": 338
-      },
-      {
-        "__id__": 339
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.14919181168079376,
-      "y": 0.009420221671462059,
-      "z": -0.17055445909500122
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": -0.02851628728305931,
-      "y": 0,
-      "z": 0,
-      "w": 0.9995933279887325
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1.0198688507080078,
-      "z": 1.0604429244995117
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": -3.2681688536829228,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "4eHvy3DadJh6+hzHqxaw0Z"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint6",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 336
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": -0.0022617559880018234,
-      "y": 0.0126444511115551,
-      "z": 0.004298181273043156
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": -0.01407844595745542,
-      "y": 0.05454165575595821,
-      "z": 0.02728368758029479,
-      "w": 0.9980393807555104
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 0.9991962313652039,
-      "y": 0.9805578589439392,
-      "z": 0.9438126087188721
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": -1.7834184828596866,
-      "y": 6.3032987057584196,
-      "z": 3.033777387242933
-    },
-    "_id": "141OdBeGxJgIzR1xVz74Tg"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint5",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 336
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": -0.0034449344966560602,
-      "y": 0.01007565576583147,
-      "z": -0.003960328176617622
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": -0.030710090265401384,
-      "y": -0.0060306219999992665,
-      "z": 0.028300769916135206,
-      "w": 0.9991093976018531
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 0.99992835521698,
-      "y": 0.980431318283081,
-      "z": 0.9431685209274292
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": -3.5042879674974787,
-      "y": -0.5918192443594225,
-      "z": 3.26312730393723
-    },
-    "_id": "0eDkfX4JxAFZF6+zb0st+9"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint4",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 336
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.0032266327179968357,
-      "y": 0.007256655488163233,
-      "z": 0.0009852517396211624
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0.06346163825867693,
-      "y": 0,
-      "z": 0,
-      "w": 0.9979842786685192
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 0.9798821806907654,
-      "z": 0.9436630606651306
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 7.277058230959608,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "2chjON4CVDfL5SYYkhfCZF"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Baloni",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 335
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 341
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.14908847212791443,
-      "y": 0.01197855081409216,
-      "z": -0.16939955949783325
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 6.469614463238711e-17,
-      "y": 0.998301025064906,
-      "z": 6.469614463238711e-17,
-      "w": -0.058267172184324416
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 0.004655295051634312,
-      "y": 0.004655295051634312,
-      "z": 0.004655295051634312
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": -7.833007878038912e-15,
-      "y": -173.31929001770987,
-      "z": 6.969065124624384e-15
-    },
-    "_id": "7a1T+Ur2BJ0ZDXmM8AtVV2"
-  },
-  {
-    "__type__": "cc.SkinnedMeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 340
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "14e5c99b-9a0e-4b46-8dbc-a815fcaac2ca",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 342
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@2f576",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_skeleton": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@a72ab",
-      "__expectedType__": "cc.Skeleton"
-    },
-    "_skinningRoot": {
-      "__id__": 212
-    },
-    "_id": "60bnIsJXhMz4uPD73WxqLU"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Kolica_sa_slatkisima",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 344
-      },
-      {
-        "__id__": 346
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.11591672152280807,
-      "y": 0.0019819489680230618,
-      "z": -0.07585854828357697
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 8.321715639693525e-17,
-      "y": 0.8751034823894003,
-      "z": -8.321715639693525e-17,
-      "w": 0.48393583780284777
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 1.29597767904013e-14,
-      "y": 122.11445019958,
-      "z": 3.730168278539306e-15
-    },
-    "_id": "5edyxIiqlG5qQQIYGQEWyG"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 343
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "9526e0a0-5fee-451b-8111-8f7f6d480874",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "998e9ccf-3588-4a58-82f6-6a13c3294f96",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "28aa1dd8-f6c5-4503-af84-25238c386fb7",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "0d68d7d2-0d6d-4653-8e75-e5a388f7223c",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "97fefbd9-c258-43f6-aa3f-41df4e1176fa",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 345
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@e28b6",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "a7DG0m++ZBA4oznf7eiZbj"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "39cafqCRjhLgY4Ri2Nc42rg",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 343
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 347
-    },
-    "myTask": {
-      "__id__": 245
-    },
-    "taskCompletedAutomaticly": false,
-    "_id": "6cRajdp6BDOZbAQZ4xEsEI"
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "acG9aFs69M/YIrDNp7t3aM"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Bela_ograda",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 349
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "08rmMlrmRFipJrGAnOQI2f"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 348
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "b925d6c3-a5e6-4c21-91ac-60d3fdd70fbf",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 350
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@5bb89",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "5b6HDYICNEwZ5ewHVzMtzT"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_scena",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 352
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "25PNmEKvZH1ovIy1Xlvt+u"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 351
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "c7fd1940-062c-4995-8f79-d20fdd88d464",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "d08c0f55-2a6e-4091-bac5-dd0cd5ab535d",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "36097cad-42cc-46ba-a31d-58e78aa00025",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "ea983485-5ddc-4b2d-9c6a-0a26c99e746f",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "578e3096-6fee-4b73-8120-c27c2a02064c",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "c2a818bb-8dea-405b-af5d-4180d91bcdb9",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "4a91c336-978a-47d6-8b26-966d47d1ec0e",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "da5563f7-dbae-4ac7-a0c0-0f1ea609cd68",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "ffc8914b-87bb-4ed6-be3c-bc4f205ca157",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "8b936e64-f235-4106-a281-748c693bf69a",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "0113d40a-7599-4417-af34-4b5d1be16c62",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "92df2bcb-ec88-4f45-80c1-c302ffe5a97c",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "8633d602-4f44-4afb-b34f-e3b8a541c14c",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "8c3f4118-5113-413d-8618-6f57bea7c22d",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 353
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@26106",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "50kseLh+RL6YvJ/ykii4Ht"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Ziva_ograda",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 355
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": -1.3877787807814457e-17,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "69rPyPamxEuZ9Rc14JXMJg"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 354
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "2843b59f-2e4d-4402-9696-2cf93639badf",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "acfe0082-bc1a-406d-bcee-b3bd4fcf01b8",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "1d52a6ff-aaed-4599-bd61-5e86b37145d0",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "764d20b9-7269-4710-a32f-3671b4f8911a",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "c0f00913-552e-4c27-8cfd-f5aadff02ab9",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 356
-    },
-    "_mesh": {
-      "__uuid__": "a40e3861-927f-4178-a59d-8ce0d97386bc@d3951",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "07KN4lRmZE1qCw79Vgc3ZG"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Piknik",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 358
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "acbMQW8CRKiqSnJGZnyzgK"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 357
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "5e55e19a-34de-47b0-8d0a-21bbde489cf7",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "57758ebc-9625-4b5c-8ddb-9e9d3d1fb35d",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "2381be2f-9b34-48aa-a061-0068a54c1916",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "8b936e64-f235-4106-a281-748c693bf69a",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "6d546ffe-3a6a-49a1-9954-8f16a3d86bde",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "73cb22a0-e3d3-4d7f-ab6a-40474b282895",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "add0d5bf-0dd5-4aee-873b-cc9449a40a28",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "a9c8172b-11f2-4e88-8530-ddb39bf2a7c2",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "28aa1dd8-f6c5-4503-af84-25238c386fb7",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "d8c662fb-aeff-4200-a651-45b4926c66fe",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "76a89846-5c78-485a-b7d9-9797c3346efb",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "9d466841-6964-4f7e-8a32-c661181897ec",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "c7fd1940-062c-4995-8f79-d20fdd88d464",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "40e646fd-81c5-4054-9e3c-b4bfaccdd803",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "ffc8914b-87bb-4ed6-be3c-bc4f205ca157",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 359
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@f8a46",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "e4Lnst4Q1BuYenJBOzUeoN"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Poklon",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 361
-      },
-      {
-        "__id__": 363
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.2307061403989792,
-      "y": 0.0008672294206917286,
-      "z": -0.18036755919456482
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "ce0ohOxxhEyoig7gcDKrYI"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 360
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "5e55e19a-34de-47b0-8d0a-21bbde489cf7",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 362
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@2ff34",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "51OAVmh15Nm5w+bd8aBLPw"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "39cafqCRjhLgY4Ri2Nc42rg",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 360
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 364
-    },
-    "myTask": {
-      "__id__": 263
-    },
-    "taskCompletedAutomaticly": false,
-    "_id": "933SC1ZhNABado+EB83aKA"
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "acG9aFs69M/YIrDNp7t3aM"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Ljuljaska Socket",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 212
-    },
-    "_children": [
-      {
-        "__id__": 366
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "75rKkUwMpBhpEJmU1kae9K"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Ljuljaska_stub",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 365
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 367
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.004310110583901405,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "af2DA4ZQ9N1I1vWozyx19X"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 366
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "19fed11b-3803-459d-920c-0301f649bdbb",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 368
-    },
-    "_mesh": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@bad06",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "5ccL7XLWJOh6/yQ8RlV2UW"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.SkeletalAnimation",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 212
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "playOnLoad": true,
-    "_clips": [
-      {
-        "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@73b7f",
-        "__expectedType__": "cc.AnimationClip"
-      }
-    ],
-    "_defaultClip": {
-      "__uuid__": "ee5cc775-87d8-40c9-a1cb-7204bb6c0944@73b7f",
-      "__expectedType__": "cc.AnimationClip"
-    },
-    "_useBakedAnimation": true,
-    "_sockets": [
-      {
-        "__id__": 370
-      }
-    ],
-    "_id": "52m/3U1H1FyYz8F/dyLwLS"
-  },
-  {
-    "__type__": "cc.SkeletalAnimation.Socket",
-    "path": "NOVA_Rodjendanska_proslava_9:Ljuljaska",
-    "target": {
-      "__id__": 365
-    }
-  },
-  {
-    "__type__": "a66f8v69b1JzKZyFYaNNW8n",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 212
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "turnOffMesh": false,
-    "turnOnConvex": false,
-    "rigidBody": false,
-    "_id": "e1cMsM8MRDzY5wJ8kuLP8f"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Ground002",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 180
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 373
-      },
-      {
-        "__id__": 375
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": -0.048,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 18,
-      "y": 18,
-      "z": 18
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "a0e2t2kLJAboVEtSO0W7cx"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "Plane<ModelComponent>",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 372
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "d0461631-50d2-462f-9d28-c2ba19a486d5",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 374
-    },
-    "_mesh": {
-      "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@2e76e",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "010jj7/mpP2atnbP3nzT5f"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.MeshCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 372
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_material": null,
-    "_isTrigger": false,
-    "_center": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_mesh": {
-      "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@2e76e",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_convex": false,
-    "_id": "43yPE20MRGsrOUT/jlg9ER"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Rodjendanska samo prohodni elementi 18. april",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 180
-    },
-    "_children": [
-      {
-        "__id__": 377
-      }
-    ],
-    "_active": false,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": -2.889,
-      "y": 0,
-      "z": 5.405
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 30,
-      "y": 30,
-      "z": 30
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "78G+oe1ptGFKJWt+HcDdvs"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Prohodni_elementi",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 376
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 378
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "cfsp1PCfZHYYXuj6bfb0Fo"
-  },
-  {
-    "__type__": "cc.MeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {},
-    "node": {
-      "__id__": 377
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "402f9e4c-5d28-4606-8249-df0b6300e941",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "a6be28df-eb21-421b-91d0-16cfb275048e",
-        "__expectedType__": "cc.Material"
-      },
-      {
-        "__uuid__": "c1f7c4a7-e5ba-49d6-ba00-3458544c47a4",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 379
-    },
-    "_mesh": {
-      "__uuid__": "9696dcc4-a55f-4197-b07b-0c9959b5b093@2f2e4",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_id": "2azFMAdXJCB5/N2anQohvl"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Klackalica",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 179
-    },
-    "_children": [
-      {
-        "__id__": 381
-      },
-      {
-        "__id__": 382
-      },
-      {
-        "__id__": 383
-      }
-    ],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "66F1qZxEVKAYiFK+kMGg5w"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint8",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 380
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.16283155977725983,
-      "y": -0.00021563783229794353,
-      "z": -0.053654227405786514
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "13ubKb/1hKR60lXU2GehCH"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:joint9",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 380
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.16273602843284607,
-      "y": 0.006087373476475477,
-      "z": -0.05388549715280533
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": -0.08465616925628336,
-      "y": -0.0000494329893254135,
-      "z": 0.03909273341963802,
-      "w": 0.9956430528844221
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": -9.734564379461666,
-      "y": 0.3747341308767144,
-      "z": 4.465177440843962
-    },
-    "_id": "c4xEgJczRLR5NQvx4jkmXx"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "NOVA_Rodjendanska_proslava_9:Klackalica",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 380
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 384
-      },
-      {
-        "__id__": 386
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0.16272982954978943,
-      "y": -0.001123254420235753,
-      "z": -0.053859543055295944
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 1.9453233701502712e-17,
-      "y": 0.8478813946525239,
-      "z": 1.9453233701502712e-17,
-      "w": 0.5301859490802177
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 0.005329473409801722,
-      "y": 0.005329473409801722,
-      "z": 0.005329473409801722
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": -7.081991826538399e-16,
-      "y": 115.96396096382364,
-      "z": 3.071955169880942e-15
-    },
-    "_id": "adBcI/0N9BhbpJoL+SzBpv"
-  },
-  {
-    "__type__": "cc.SkinnedMeshRenderer",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 383
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_materials": [
-      {
-        "__uuid__": "7c941a80-ab2f-4bfc-9f07-21abca6c8302",
-        "__expectedType__": "cc.Material"
-      }
-    ],
-    "_visFlags": 0,
-    "lightmapSettings": {
-      "__id__": 385
-    },
-    "_mesh": {
-      "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@3ca5e",
-      "__expectedType__": "cc.Mesh"
-    },
-    "_shadowCastingMode": 0,
-    "_shadowReceivingMode": 1,
-    "_enableMorph": true,
-    "_skeleton": {
-      "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@2224c",
-      "__expectedType__": "cc.Skeleton"
-    },
-    "_skinningRoot": {
-      "__id__": 179
-    },
-    "_id": "83B2/7+0lMa5y9pqBYPkc9"
-  },
-  {
-    "__type__": "cc.ModelLightmapSettings",
-    "texture": null,
-    "uvParam": {
-      "__type__": "cc.Vec4",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 0
-    },
-    "_bakeable": false,
-    "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
-    "_lightmapSize": 64
-  },
-  {
-    "__type__": "39cafqCRjhLgY4Ri2Nc42rg",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 383
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 387
-    },
-    "myTask": {
-      "__id__": 221
-    },
-    "taskCompletedAutomaticly": false,
-    "_id": "e72JB0lMJJw79wWBSZbyRq"
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "acG9aFs69M/YIrDNp7t3aM"
-  },
-  {
     "__type__": "cc.Node",
     "_name": "NOVA_Rodjendanska_proslava_9:Ljuljaska",
     "_objFlags": 0,
@@ -8913,10 +6217,10 @@
     },
     "_children": [
       {
-        "__id__": 389
+        "__id__": 299
       },
       {
-        "__id__": 394
+        "__id__": 304
       }
     ],
     "_active": true,
@@ -8955,16 +6259,16 @@
     "_name": "NOVA_Rodjendanska_proslava_9:Ljuljaska_klupa",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 388
+      "__id__": 298
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 390
+        "__id__": 300
       },
       {
-        "__id__": 392
+        "__id__": 302
       }
     ],
     "_prefab": null,
@@ -9001,7 +6305,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 389
+      "__id__": 299
     },
     "_enabled": true,
     "__prefab": null,
@@ -9013,7 +6317,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 391
+      "__id__": 301
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@46931",
@@ -9052,14 +6356,14 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 389
+      "__id__": 299
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 393
+      "__id__": 303
     },
     "myTask": {
-      "__id__": 257
+      "__id__": 260
     },
     "taskCompletedAutomaticly": false,
     "_id": "a3OrMY6s1LaJWtiqQlIDzo"
@@ -9073,7 +6377,7 @@
     "_name": "NOVA_Rodjendanska_proslava_9:joint1",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 388
+      "__id__": 298
     },
     "_children": [],
     "_active": true,
@@ -9116,10 +6420,10 @@
     },
     "_children": [
       {
-        "__id__": 396
+        "__id__": 306
       },
       {
-        "__id__": 398
+        "__id__": 308
       }
     ],
     "_active": true,
@@ -9158,11 +6462,11 @@
     "_name": "NOVA_Rodjendanska_proslava_9:joint11",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 395
+      "__id__": 305
     },
     "_children": [
       {
-        "__id__": 397
+        "__id__": 307
       }
     ],
     "_active": true,
@@ -9201,7 +6505,7 @@
     "_name": "NOVA_Rodjendanska_proslava_9:joint10",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 396
+      "__id__": 306
     },
     "_children": [],
     "_active": true,
@@ -9240,16 +6544,16 @@
     "_name": "NOVA_Rodjendanska_proslava_9:Suncobran",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 395
+      "__id__": 305
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 399
+        "__id__": 309
       },
       {
-        "__id__": 401
+        "__id__": 311
       }
     ],
     "_prefab": null,
@@ -9286,7 +6590,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 398
+      "__id__": 308
     },
     "_enabled": true,
     "__prefab": null,
@@ -9298,7 +6602,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 400
+      "__id__": 310
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@77c48",
@@ -9337,14 +6641,14 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 398
+      "__id__": 308
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 402
+      "__id__": 312
     },
     "myTask": {
-      "__id__": 227
+      "__id__": 230
     },
     "taskCompletedAutomaticly": false,
     "_id": "d8lJK5V15OPIULtnUKrGwx"
@@ -9364,10 +6668,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 404
+        "__id__": 314
       },
       {
-        "__id__": 406
+        "__id__": 316
       }
     ],
     "_prefab": null,
@@ -9404,7 +6708,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 403
+      "__id__": 313
     },
     "_enabled": true,
     "__prefab": null,
@@ -9416,7 +6720,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 405
+      "__id__": 315
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@9771a",
@@ -9448,14 +6752,14 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 403
+      "__id__": 313
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 407
+      "__id__": 317
     },
     "myTask": {
-      "__id__": 233
+      "__id__": 236
     },
     "taskCompletedAutomaticly": false,
     "_id": "0fctck4V5Lt6yvXHtCs3Ve"
@@ -9473,10 +6777,10 @@
     },
     "_children": [
       {
-        "__id__": 409
+        "__id__": 319
       },
       {
-        "__id__": 414
+        "__id__": 324
       }
     ],
     "_active": true,
@@ -9515,16 +6819,16 @@
     "_name": "NOVA_Rodjendanska_proslava_9:Zastavice",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 408
+      "__id__": 318
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 410
+        "__id__": 320
       },
       {
-        "__id__": 412
+        "__id__": 322
       }
     ],
     "_prefab": null,
@@ -9561,7 +6865,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 409
+      "__id__": 319
     },
     "_enabled": true,
     "__prefab": null,
@@ -9573,7 +6877,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 411
+      "__id__": 321
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@b7a57",
@@ -9612,14 +6916,14 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 409
+      "__id__": 319
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 413
+      "__id__": 323
     },
     "myTask": {
-      "__id__": 239
+      "__id__": 242
     },
     "taskCompletedAutomaticly": false,
     "_id": "6eyQ/NtUxCiq/GIRUht/n/"
@@ -9633,7 +6937,7 @@
     "_name": "NOVA_Rodjendanska_proslava_9:joint2",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 408
+      "__id__": 318
     },
     "_children": [],
     "_active": true,
@@ -9676,10 +6980,10 @@
     },
     "_children": [
       {
-        "__id__": 416
+        "__id__": 326
       },
       {
-        "__id__": 421
+        "__id__": 331
       }
     ],
     "_active": true,
@@ -9718,16 +7022,16 @@
     "_name": "NOVA_Rodjendanska_proslava_9:Zuta_ruza",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 415
+      "__id__": 325
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 417
+        "__id__": 327
       },
       {
-        "__id__": 419
+        "__id__": 329
       }
     ],
     "_prefab": null,
@@ -9764,7 +7068,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 416
+      "__id__": 326
     },
     "_enabled": true,
     "__prefab": null,
@@ -9780,7 +7084,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 418
+      "__id__": 328
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@77920",
@@ -9819,14 +7123,14 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 416
+      "__id__": 326
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 420
+      "__id__": 330
     },
     "myTask": {
-      "__id__": 251
+      "__id__": 254
     },
     "taskCompletedAutomaticly": false,
     "_id": "40VsUkGjBOuJNDwkT2d9Q4"
@@ -9840,7 +7144,7 @@
     "_name": "NOVA_Rodjendanska_proslava_9:joint7",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 415
+      "__id__": 325
     },
     "_children": [],
     "_active": true,
@@ -9883,10 +7187,10 @@
     },
     "_children": [
       {
-        "__id__": 423
+        "__id__": 333
       },
       {
-        "__id__": 427
+        "__id__": 337
       }
     ],
     "_active": true,
@@ -9925,17 +7229,17 @@
     "_name": "NOVA_Rodjendanska_proslava_9:joint3",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 422
+      "__id__": 332
     },
     "_children": [
       {
-        "__id__": 424
+        "__id__": 334
       },
       {
-        "__id__": 425
+        "__id__": 335
       },
       {
-        "__id__": 426
+        "__id__": 336
       }
     ],
     "_active": true,
@@ -9974,7 +7278,7 @@
     "_name": "NOVA_Rodjendanska_proslava_9:joint6",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 423
+      "__id__": 333
     },
     "_children": [],
     "_active": true,
@@ -10013,7 +7317,7 @@
     "_name": "NOVA_Rodjendanska_proslava_9:joint5",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 423
+      "__id__": 333
     },
     "_children": [],
     "_active": true,
@@ -10052,7 +7356,7 @@
     "_name": "NOVA_Rodjendanska_proslava_9:joint4",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 423
+      "__id__": 333
     },
     "_children": [],
     "_active": true,
@@ -10091,13 +7395,13 @@
     "_name": "NOVA_Rodjendanska_proslava_9:Baloni",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 422
+      "__id__": 332
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 428
+        "__id__": 338
       }
     ],
     "_prefab": null,
@@ -10134,7 +7438,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 427
+      "__id__": 337
     },
     "_enabled": true,
     "__prefab": null,
@@ -10146,7 +7450,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 429
+      "__id__": 339
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@2f576",
@@ -10191,10 +7495,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 431
+        "__id__": 341
       },
       {
-        "__id__": 433
+        "__id__": 343
       }
     ],
     "_prefab": null,
@@ -10231,7 +7535,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 430
+      "__id__": 340
     },
     "_enabled": true,
     "__prefab": null,
@@ -10259,7 +7563,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 432
+      "__id__": 342
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@e28b6",
@@ -10291,14 +7595,14 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 430
+      "__id__": 340
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 434
+      "__id__": 344
     },
     "myTask": {
-      "__id__": 245
+      "__id__": 248
     },
     "taskCompletedAutomaticly": false,
     "_id": "c7j1bgbqlP3LtPu1zjiseg"
@@ -10318,7 +7622,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 436
+        "__id__": 346
       }
     ],
     "_prefab": null,
@@ -10355,7 +7659,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 435
+      "__id__": 345
     },
     "_enabled": true,
     "__prefab": null,
@@ -10367,7 +7671,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 437
+      "__id__": 347
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@5bb89",
@@ -10405,7 +7709,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 439
+        "__id__": 349
       }
     ],
     "_prefab": null,
@@ -10442,7 +7746,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 438
+      "__id__": 348
     },
     "_enabled": true,
     "__prefab": null,
@@ -10506,7 +7810,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 440
+      "__id__": 350
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@26106",
@@ -10544,7 +7848,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 442
+        "__id__": 352
       }
     ],
     "_prefab": null,
@@ -10581,7 +7885,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 441
+      "__id__": 351
     },
     "_enabled": true,
     "__prefab": null,
@@ -10609,7 +7913,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 443
+      "__id__": 353
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@d3951",
@@ -10647,7 +7951,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 445
+        "__id__": 355
       }
     ],
     "_prefab": null,
@@ -10684,7 +7988,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 444
+      "__id__": 354
     },
     "_enabled": true,
     "__prefab": null,
@@ -10752,7 +8056,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 446
+      "__id__": 356
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@f8a46",
@@ -10790,10 +8094,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 448
+        "__id__": 358
       },
       {
-        "__id__": 450
+        "__id__": 360
       }
     ],
     "_prefab": null,
@@ -10830,7 +8134,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 447
+      "__id__": 357
     },
     "_enabled": true,
     "__prefab": null,
@@ -10842,7 +8146,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 449
+      "__id__": 359
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@2ff34",
@@ -10874,14 +8178,14 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 447
+      "__id__": 357
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 451
+      "__id__": 361
     },
     "myTask": {
-      "__id__": 263
+      "__id__": 266
     },
     "taskCompletedAutomaticly": false,
     "_id": "d2kZO35oVFf62Ab3Q8Yxtw"
@@ -10899,7 +8203,7 @@
     },
     "_children": [
       {
-        "__id__": 453
+        "__id__": 363
       }
     ],
     "_active": true,
@@ -10938,13 +8242,13 @@
     "_name": "NOVA_Rodjendanska_proslava_9:Ljuljaska_stub",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 452
+      "__id__": 362
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 454
+        "__id__": 364
       }
     ],
     "_prefab": null,
@@ -10981,7 +8285,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 453
+      "__id__": 363
     },
     "_enabled": true,
     "__prefab": null,
@@ -10993,7 +8297,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 455
+      "__id__": 365
     },
     "_mesh": {
       "__uuid__": "e6f5b961-9905-4523-ab1d-9833c499ce27@bad06",
@@ -11043,7 +8347,7 @@
     "_useBakedAnimation": true,
     "_sockets": [
       {
-        "__id__": 457
+        "__id__": 367
       }
     ],
     "_id": "13m9c2VfZGwI6ujhENPxvm"
@@ -11052,7 +8356,7 @@
     "__type__": "cc.SkeletalAnimation.Socket",
     "path": "NOVA_Rodjendanska_proslava_9:Ljuljaska",
     "target": {
-      "__id__": 452
+      "__id__": 362
     }
   },
   {
@@ -11071,314 +8375,6 @@
     "_id": "9cf8PW1qNEPIGdYW+iZQZ9"
   },
   {
-    "__type__": "cc.Node",
-    "_name": "Player",
-    "_objFlags": 0,
-    "__editorExtras__": {},
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [
-      {
-        "__id__": 460
-      },
-      {
-        "__id__": 461
-      }
-    ],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 463
-      },
-      {
-        "__id__": 464
-      },
-      {
-        "__id__": 465
-      },
-      {
-        "__id__": 466
-      },
-      {
-        "__id__": 467
-      },
-      {
-        "__id__": 468
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 4.195,
-      "y": 0.648,
-      "z": 2.498
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": -6.938893903907228e-18,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 0.9999999999999999,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": -7.951386703658792e-16
-    },
-    "_id": "96B4H5MvZEMKnKJklHj7Py"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "TackaOkretanja",
-    "_objFlags": 0,
-    "__editorExtras__": {},
-    "_parent": {
-      "__id__": 459
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": -1.7763568394002505e-15,
-      "z": -1.004999999999999
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": -1.3877787807814457e-17,
-      "y": -1.3877787807814457e-17,
-      "z": -6.938893903907228e-18,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": -1.5902773407317584e-15,
-      "y": -1.5902773407317584e-15,
-      "z": -7.951386703658792e-16
-    },
-    "_id": "58OTUqr8JB8Zj9m1LJaT4d"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Camera",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 459
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 462
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "96fY5IKBRDnokLaE363tB3"
-  },
-  {
-    "__type__": "cc.Camera",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 461
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_projection": 1,
-    "_priority": 0,
-    "_fov": 45,
-    "_fovAxis": 0,
-    "_orthoHeight": 320,
-    "_near": 0.1,
-    "_far": 1000,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 133,
-      "g": 211,
-      "b": 255,
-      "a": 255
-    },
-    "_depth": 1,
-    "_stencil": 0,
-    "_clearFlags": 14,
-    "_rect": {
-      "__type__": "cc.Rect",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    "_aperture": 19,
-    "_shutter": 7,
-    "_iso": 0,
-    "_screenScale": 1,
-    "_visibility": 1822425087,
-    "_targetTexture": null,
-    "_id": "benwXYVPVIoouEk1nV32lh"
-  },
-  {
-    "__type__": "6f152n/6stPc7v81ZlKK38A",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 459
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "moveSpeed": 0.2,
-    "moveSpeedShiftScale": 5,
-    "damp": 0.2,
-    "_eventOn": false,
-    "rotateSpeed": 2,
-    "maxAngleUp": 45,
-    "maxAngleDown": 10,
-    "_id": "4dgLsGFVpOD5hBfEeg4/23"
-  },
-  {
-    "__type__": "cc.RigidBody",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 459
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_group": 1,
-    "_type": 1,
-    "_mass": 55,
-    "_allowSleep": true,
-    "_linearDamping": 0.95,
-    "_angularDamping": 1,
-    "_useGravity": true,
-    "_linearFactor": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_angularFactor": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_id": "37L+/INchAvYNHly9VAbfB"
-  },
-  {
-    "__type__": "934004W0apF6p4lgxoYjh2m",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 459
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_id": "83yLHmjhlBILT4F9UhIlUw"
-  },
-  {
-    "__type__": "96ae6+09F5HYa6C01wPMta+",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 459
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "distanceScale": 3.5,
-    "eulerRotation": {
-      "__type__": "cc.Vec3",
-      "x": -41,
-      "y": -63,
-      "z": 0
-    },
-    "pin": {
-      "__id__": 201
-    },
-    "_id": "15TdAC8EpODqSTe/7lUb/5"
-  },
-  {
-    "__type__": "aff9fcmgnRAv6/ZwXTsi9l9",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 459
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "moveSpeed": 1,
-    "forceStrenght": 1,
-    "damp": 0.2,
-    "_eventOn": false,
-    "heightFromGround": 0.6,
-    "_id": "10O2NMULVE0bazijTUfeF0"
-  },
-  {
-    "__type__": "cc.CapsuleCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 459
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_material": null,
-    "_isTrigger": false,
-    "_center": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": -0.3,
-      "z": -0.23
-    },
-    "_radius": 0.08,
-    "_cylinderHeight": 0.4,
-    "_direction": 1,
-    "_id": "a727GouylHnpkqPQHqbHfx"
-  },
-  {
     "__type__": "c1a91TDAYxGxoE8SUSQ4ovd",
     "_name": "",
     "_objFlags": 0,
@@ -11395,11 +8391,6 @@
   {
     "__type__": "cc.PrefabInfo",
     "fileId": "13921665-b890-40f2-a013-d16bbc755235",
-    "targetOverrides": [
-      {
-        "__id__": 471
-      }
-    ],
     "nestedPrefabInstanceRoots": [
       {
         "__id__": 201
@@ -11452,43 +8443,21 @@
     ]
   },
   {
-    "__type__": "cc.TargetOverrideInfo",
-    "source": {
-      "__id__": 270
-    },
-    "sourceInfo": null,
-    "propertyPath": [
-      "helpButton"
-    ],
-    "target": {
-      "__id__": 19
-    },
-    "targetInfo": {
-      "__id__": 472
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "eaYryKn2pGTrGprwNXSCeA"
-    ]
-  },
-  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 474
+      "__id__": 372
     },
     "shadows": {
-      "__id__": 475
+      "__id__": 373
     },
     "_skybox": {
-      "__id__": 476
+      "__id__": 374
     },
     "fog": {
-      "__id__": 477
+      "__id__": 375
     },
     "octree": {
-      "__id__": 478
+      "__id__": 376
     }
   },
   {
@@ -11533,9 +8502,9 @@
     "_skyIllumLDR": 1.1719531250000002,
     "_groundAlbedoLDR": {
       "__type__": "cc.Vec4",
-      "x": 0.2,
-      "y": 0.2,
-      "z": 0.2,
+      "x": 0.4784313725490196,
+      "y": 0.4784313725490196,
+      "z": 0.4784313725490196,
       "w": 1
     }
   },

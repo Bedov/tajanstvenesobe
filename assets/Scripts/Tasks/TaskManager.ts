@@ -159,7 +159,7 @@ export class TaskManager extends Component {
     }
     getDirection() {
         
-        GameManager.getInstance().Canvas!.getChildByName("BottomUI")!.getChildByName("HelpNavigation")!.getComponent(ButtonDisabler)!.lockedByOutside = true;
+        GameManager.getInstance().Canvas!.getChildByName("HelpPanel")!.getChildByName("HelpNavigation")!.getComponent(ButtonDisabler)!.lockedByOutside = true;
         
         if(this.arrow != null)
             this.arrow!.getComponent(Animation)?.play("ScaleIn");

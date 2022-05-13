@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, macro, Task, ScriptEffects, GameManager, DetectTypeOfDevice, _dec, _class, _temp, _crd, ccclass, property, TaskLoading;
+  var _reporterNs, _cclegacy, _decorator, macro, Task, ScriptEffects, GameManager, GameStatuType, DetectTypeOfDevice, _dec, _class, _temp, _crd, ccclass, property, TaskLoading;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -15,6 +15,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGameStatuType(extras) {
+    _reporterNs.report("GameStatuType", "../GameManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfDetectTypeOfDevice(extras) {
@@ -34,6 +38,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       ScriptEffects = _unresolved_3.ScriptEffects;
     }, function (_unresolved_4) {
       GameManager = _unresolved_4.GameManager;
+      GameStatuType = _unresolved_4.GameStatuType;
     }, function (_unresolved_5) {
       DetectTypeOfDevice = _unresolved_5.DetectTypeOfDevice;
     }],
@@ -77,6 +82,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         showTask() {
           super.showTask();
+          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().gameStatus == (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
+            error: Error()
+          }), GameStatuType) : GameStatuType).gameActive) (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
+            error: Error()
+          }), GameStatuType) : GameStatuType).gamePaused;
           this.taskManager.loadingPanel.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
             error: Error()
           }), ScriptEffects) : ScriptEffects).fadeInActive();
@@ -105,6 +119,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.taskManager.loadingPanel.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
               error: Error()
             }), ScriptEffects) : ScriptEffects).fadeOutActive();
+            if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().gameStatus == (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
+              error: Error()
+            }), GameStatuType) : GameStatuType).gamePaused) (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+              error: Error()
+            }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
+              error: Error()
+            }), GameStatuType) : GameStatuType).gameActive;
             this.loadingCompleted = true;
           }
 

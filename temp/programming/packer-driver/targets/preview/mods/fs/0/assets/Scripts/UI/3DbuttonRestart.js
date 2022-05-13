@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, RememberAndRestore, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, DbuttonRestart;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, AudioManager, RememberAndRestore, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, DbuttonRestart;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -10,6 +10,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  function _reportPossibleCrUseOfAudioManager(extras) {
+    _reporterNs.report("AudioManager", "../AudioManager", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfRememberAndRestore(extras) {
     _reporterNs.report("RememberAndRestore", "../Utilities/RememberAndRestore", _context.meta, extras);
@@ -24,7 +28,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Component = _cc.Component;
       Node = _cc.Node;
     }, function (_unresolved_2) {
-      RememberAndRestore = _unresolved_2.RememberAndRestore;
+      AudioManager = _unresolved_2.AudioManager;
+    }, function (_unresolved_3) {
+      RememberAndRestore = _unresolved_3.RememberAndRestore;
     }],
     execute: function () {
       _crd = true;
@@ -59,6 +65,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         restartGolderg() {
           var _this$goldberg$getCom;
 
+          (_crd && AudioManager === void 0 ? (_reportPossibleCrUseOfAudioManager({
+            error: Error()
+          }), AudioManager) : AudioManager).getInstance().clickSoundPlay();
           (_this$goldberg$getCom = this.goldberg.getComponent(_crd && RememberAndRestore === void 0 ? (_reportPossibleCrUseOfRememberAndRestore({
             error: Error()
           }), RememberAndRestore) : RememberAndRestore)) === null || _this$goldberg$getCom === void 0 ? void 0 : _this$goldberg$getCom.restart();

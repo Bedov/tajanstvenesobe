@@ -1,9 +1,9 @@
 
-import { _decorator, Component, Node, macro } from 'cc';
+import { _decorator, Component, Node, macro, Game } from 'cc';
 import { Task } from './Task';
 import { ScriptEffects } from "../Utilities/ScriptEffects";
 import { JSONloader } from '../RemoteScripts/JSONloader';
-import { GameManager } from '../GameManager';
+import { GameManager, GameStatuType } from '../GameManager';
 import { DetectTypeOfDevice } from '../DetectTypeOfDevice';
 const { ccclass, property } = _decorator;
 
@@ -33,6 +33,8 @@ export class TaskLoading extends Task {
     showTask() {
         super.showTask();
 
+        if(GameManager.getInstance().gameStatus == GameStatuType.gameActive)
+            GameManager.getInstance().gameStatus = GameStatuType.gamePaused;
         this.taskManager.loadingPanel!.getComponent(ScriptEffects)!.fadeInActive();
     }
 
@@ -46,6 +48,8 @@ export class TaskLoading extends Task {
         
         if(  GameManager.instance.taskInProgressManager  == 0) {
             this.taskManager.loadingPanel!.getComponent(ScriptEffects)!.fadeOutActive();
+            if(GameManager.getInstance().gameStatus == GameStatuType.gamePaused)
+                GameManager.getInstance().gameStatus = GameStatuType.gameActive;
             this.loadingCompleted = true;
             
         }

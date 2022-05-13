@@ -35,8 +35,11 @@ export class Checkpoint extends Component {
 
     findQuestion() {
         this.node.children?.forEach(task => {
-            if( task.getComponent(TaskABCquestion) != undefined || task.getComponent(TaskInput) != undefined )
+            if( task.getComponent(TaskABCquestion) != undefined || task.getComponent(TaskInput) != undefined ) {
                 this.Question = task;
+                
+                
+            }
         });
 
         var arrayItems = GameManager.getInstance().WorldRoot!.children;
@@ -61,15 +64,18 @@ export class Checkpoint extends Component {
 
         });
 
-        //if(this.QuestionItem != undefined)
-         //   console.log("ITEM " + this.QuestionItem?.name);
+        if(this.QuestionItem != undefined)
+            console.log("ITEM " + this.QuestionItem?.name);
         
     }
 
     testElement(element: Node) {
         if( element.getComponent(DbuttonActivate) != undefined)
-                if( element.getComponent(DbuttonActivate)?.myTask == this.Question) 
+                if( element.getComponent(DbuttonActivate)?.myTask == this.Question) {
                      this.QuestionItem = element;
+                     console.log("Question Item : " + element.name);
+                     
+                }
     }
 
     findQuestPrvi() {

@@ -42,7 +42,7 @@ export class ArrowLookAt extends Component {
 
         this.worldScale = GameManager.getInstance().WorldRoot!.scale.z;
 
-        this.helpButon = GameManager.getInstance().Canvas!.getChildByName("BottomUI")!.getChildByName("HelpNavigation")!;
+        this.helpButon = GameManager.getInstance().Canvas!.getChildByName("HelpPanel")!.getChildByName("HelpNavigation")!;
     }
 
     update (deltaTime: number) {
@@ -56,6 +56,14 @@ export class ArrowLookAt extends Component {
             this.sceduled = true;
         }
 
+        //console.log("COnsole " + GameManager.getInstance().Progress);
+        //console.log("COnsole " +  this.checkPoints[ Number(GameManager.getInstance().Progress)]);
+        //console.log("COnsole " +  this.checkPoints[ Number(GameManager.getInstance().Progress)].getComponent(Checkpoint));
+        //console.log("COnsole " +  this.checkPoints[ Number(GameManager.getInstance().Progress)].getComponent(Checkpoint)!.QuestionItem);
+
+
+        
+        
         if(this.node.scale.x > 0) {
             var itemPosition: Vec3 = new Vec3( this.checkPoints[ Number(GameManager.getInstance().Progress)].getComponent(Checkpoint)!.QuestionItem!.worldPosition ) ;
   

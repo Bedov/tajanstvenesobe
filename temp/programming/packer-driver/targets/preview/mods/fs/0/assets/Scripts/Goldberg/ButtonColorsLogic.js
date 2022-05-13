@@ -82,8 +82,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress != 0) {
             this.refreshColors((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
-            }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress());
-            this.unscheduleAllCallbacks();
+            }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress()); //this.unscheduleAllCallbacks();
           }
         }
 

@@ -135,8 +135,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "trophies", void 0);
 
-          _defineProperty(this, "progressStarted", 0);
-
           _defineProperty(this, "detectType", void 0);
 
           _defineProperty(this, "debugMode", false);
@@ -165,16 +163,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onLoad() {
           var _this$Canvas, _this$Canvas$getChild, _this$Canvas$getChild2;
 
-          this.progressStarted = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress);
-          if (this.elevatorScript) this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
-            error: Error()
-          }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator); // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
-          else this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
-              error: Error()
-            }), DetectTypeOfDevice) : DetectTypeOfDevice);
           GameManager.instance = this;
+
+          if (this.elevatorScript) {
+            this.Progress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress());
+            this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
+              error: Error()
+            }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator);
+          } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
+          else {
+              this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
+                error: Error()
+              }), DetectTypeOfDevice) : DetectTypeOfDevice);
+              this.Progress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+                error: Error()
+              }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress);
+            }
+
           this.jsonLoader = this.node.getComponent(_crd && JSONloader === void 0 ? (_reportPossibleCrUseOfJSONloader({
             error: Error()
           }), JSONloader) : JSONloader);
@@ -183,12 +190,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), LoadingHandler) : LoadingHandler);
           this.typeInputResult = ((_this$Canvas = this.Canvas) === null || _this$Canvas === void 0 ? void 0 : (_this$Canvas$getChild = _this$Canvas.getChildByName("GenericUI-Input")) === null || _this$Canvas$getChild === void 0 ? void 0 : (_this$Canvas$getChild2 = _this$Canvas$getChild.getChildByName("EditBoxPC")) === null || _this$Canvas$getChild2 === void 0 ? void 0 : _this$Canvas$getChild2.getChildByName("Result")).getComponent(Label);
           this.trophies = this.Canvas.getChildByName("BottomUI").getChildByName("TrofejiLayout");
-          console.log("GlobalManager.getInstance().activeLevelData  + " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+          console.log("GameManager onLoad aktivan level: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData);
-          this.Progress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress);
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);
           this.setPlatformType();
         }
 
@@ -207,8 +211,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         getTaskManager() {
           return this.TaskManager;
         }
-
-        start() {}
 
         pushMeToAudioArray(audioComponent) {
           var _this$audioArray;
@@ -237,6 +239,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         backToMenu() {
+          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData = _crd && elevator === void 0 ? (_reportPossibleCrUseOfelevator({
+            error: Error()
+          }), elevator) : elevator; //  this.findSceneDataByName("MainMenuLift1");
+
+          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = 2;
           if (this.debugMode == true) director.loadScene("MainMenu");else {
             (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()

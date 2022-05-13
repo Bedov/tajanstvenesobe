@@ -110,7 +110,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           try {
             tasksInProgress++;
-            console.log("Task Added 1");
             assetManager.loadRemote(remoteUrlRoot.toString(), function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
@@ -157,7 +156,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             assetManager.loadRemote(questionURL, function (err, textAsset) {
               try {
                 tasksInProgress++;
-                console.log("Task Added 3");
+                console.log("Task Added 3 : " + questionURL);
                 var tempTask = new JSONtask1();
                 var parsedJSON = JSON.parse(textAsset.toString());
                 tempTask.question = parsedJSON["question"];
@@ -186,7 +185,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (tempTask.question != undefined) taskJSON.push(tempTask);
                 tasksInProgress--;
-                console.log("Task reduced 3");
+                console.log("Task reduced 3" + questionURL);
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;

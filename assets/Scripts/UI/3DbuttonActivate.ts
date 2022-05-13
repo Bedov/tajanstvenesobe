@@ -15,6 +15,7 @@ const { ccclass, property } = _decorator;
  */
  import { ScriptEffects } from "../Utilities/ScriptEffects";
  import { Task } from "../Tasks/Task";
+import { AudioManager } from '../AudioManager';
 
 @ccclass('DbuttonActivate')
 export class DbuttonActivate extends Component {
@@ -26,6 +27,7 @@ export class DbuttonActivate extends Component {
     taskCompletedAutomaticly: boolean = false;
 
     execute () {
+        AudioManager.getInstance().clickSoundPlay();
         
         if(this.myTask.getComponent(Task)) {
             if(this.taskCompletedAutomaticly) 

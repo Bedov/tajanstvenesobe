@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Animation, EditBoxComponent, Vec3, Task, ScriptEffects, GameManager, GameStatuType, TaskInput, GlobalManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, GenericUIinput;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, Animation, EditBoxComponent, Vec3, Task, ScriptEffects, GameManager, GameStatuType, TaskInput, GlobalManager, AudioManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, GenericUIinput;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -39,6 +39,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfAudioManager(extras) {
+    _reporterNs.report("AudioManager", "../AudioManager", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -63,6 +67,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       TaskInput = _unresolved_5.TaskInput;
     }, function (_unresolved_6) {
       GlobalManager = _unresolved_6.GlobalManager;
+    }, function (_unresolved_7) {
+      AudioManager = _unresolved_7.AudioManager;
     }],
     execute: function () {
       _crd = true;
@@ -176,6 +182,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()
           }), Task) : Task)) === null || _this$corespondingTas2 === void 0 ? void 0 : _this$corespondingTas2.taskQuestionCompleted();
+          (_crd && AudioManager === void 0 ? (_reportPossibleCrUseOfAudioManager({
+            error: Error()
+          }), AudioManager) : AudioManager).getInstance().positiveSoundPlay();
         }
 
         rightAnwerAfterTheAnimation() {
@@ -196,6 +205,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.node.getComponent(Animation).play("WrongNudge");
           this.setRandomTask();
           this.clearStringFromEditBox();
+          (_crd && AudioManager === void 0 ? (_reportPossibleCrUseOfAudioManager({
+            error: Error()
+          }), AudioManager) : AudioManager).getInstance().negativeSoundPlay();
         }
 
         turnOnGenericTask(task) {

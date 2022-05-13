@@ -146,7 +146,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _export("kinderGardenData", kinderGardenData = new levelObject());
 
       kinderGardenData.sceneName = "KinderGarden";
-      kinderGardenData.levelProgress = 6; //kinderGardenData.status = levelStatus.finished;
+      kinderGardenData.levelProgress = 5; //kinderGardenData.status = levelStatus.finished;
 
       _export("elevator", elevator = new levelObject());
 
@@ -155,12 +155,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _export("birthdayPartyData", birthdayPartyData = new levelObject());
 
       birthdayPartyData.sceneName = "BirthdayParty";
-      birthdayPartyData.levelProgress = 6; //birthdayPartyData.status = levelStatus.unlocked;
+      birthdayPartyData.levelProgress = 7; //birthdayPartyData.status = levelStatus.finished;
 
       _export("playfulCityData", playfulCityData = new levelObject());
 
       playfulCityData.sceneName = "RaziganiGrad";
-      playfulCityData.levelProgress = 6;
+      playfulCityData.levelProgress = 6; //playfulCityData.status = levelStatus.unlocked;
 
       _export("springFestData", springFestData = new levelObject());
 
@@ -271,7 +271,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           game.addPersistRootNode(this.node);
         }
 
-        start() {// this.schedule( this.printProgress(this.activeLevelData) , 1);
+        start() {
+          // this.schedule( this.printProgress(this.activeLevelData) , 1);
+          if (this.findGeneralProgress() > 0) GlobalManager.getInstance().activeLevelData.levelProgress = 1;
         }
 
         addProgressTest() {
@@ -350,8 +352,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           if (settingData == true) if (downloading == false) {
             this.setWorldsNames();
             settingData = false;
-          }
-          this.printProgress(this.activeLevelData);
+          } //this.printProgress(this.activeLevelData);
         }
 
         setWorldsNames() {
@@ -372,11 +373,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           for (let index = 0; index < GlobalManager.getInstance().levelsArray.length; index++) {
             //const element = array[index];
+            //console.log("Level name + " + GlobalManager.getInstance().levelsArray[index].sceneName);
+            //console.log("Level status + " + GlobalManager.getInstance().levelsArray[index].status);
             if (GlobalManager.getInstance().levelsArray[index].status == levelStatus.unlocked) {
               generalProgress = index;
               return generalProgress;
             }
-          }
+          } //console.log("General Progress " + generalProgress);
+
 
           return generalProgress;
         }

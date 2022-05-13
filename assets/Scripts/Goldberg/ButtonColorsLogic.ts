@@ -24,7 +24,9 @@ export class ButtonColorsLogic extends Component {
 
     buttonsArray : Array<Node> = [];
 
+
     start () {
+
 
         this.buttonsArray!.push(this.node.getChildByName("1")!);
         this.buttonsArray!.push(this.node.getChildByName("2")!);
@@ -41,7 +43,7 @@ export class ButtonColorsLogic extends Component {
     checkTutorialEnd(){
         if( GlobalManager.getInstance().activeLevelData.levelProgress != 0 ) {
             this.refreshColors( GlobalManager.getInstance().findGeneralProgress());
-            this.unscheduleAllCallbacks();
+            //this.unscheduleAllCallbacks();
         }
     }
 

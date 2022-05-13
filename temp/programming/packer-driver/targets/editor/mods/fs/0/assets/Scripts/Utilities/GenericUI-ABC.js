@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, randomRangeInt, Animation, Vec3, Task, ScriptEffects, TaskABCquestion, GameManager, GameStatuType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, GenericUIABC;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Label, AudioSource, randomRangeInt, Animation, Vec3, Task, ScriptEffects, TaskABCquestion, GameManager, GameStatuType, AudioManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp, _crd, ccclass, property, GenericUIABC;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -35,6 +35,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GameStatuType", "../GameManager", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfAudioManager(extras) {
+    _reporterNs.report("AudioManager", "../AudioManager", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -57,6 +61,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_5) {
       GameManager = _unresolved_5.GameManager;
       GameStatuType = _unresolved_5.GameStatuType;
+    }, function (_unresolved_6) {
+      AudioManager = _unresolved_6.AudioManager;
     }],
     execute: function () {
       _crd = true;
@@ -232,6 +238,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_this$corespondingTas = this.corespondingTask) === null || _this$corespondingTas === void 0 ? void 0 : (_this$corespondingTas2 = _this$corespondingTas.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()
           }), Task) : Task)) === null || _this$corespondingTas2 === void 0 ? void 0 : _this$corespondingTas2.taskQuestionCompleted();
+          (_crd && AudioManager === void 0 ? (_reportPossibleCrUseOfAudioManager({
+            error: Error()
+          }), AudioManager) : AudioManager).getInstance().positiveSoundPlay();
         }
 
         rightAnwerB() {
@@ -242,6 +251,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_this$corespondingTas3 = this.corespondingTask) === null || _this$corespondingTas3 === void 0 ? void 0 : (_this$corespondingTas4 = _this$corespondingTas3.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()
           }), Task) : Task)) === null || _this$corespondingTas4 === void 0 ? void 0 : _this$corespondingTas4.taskQuestionCompleted();
+          (_crd && AudioManager === void 0 ? (_reportPossibleCrUseOfAudioManager({
+            error: Error()
+          }), AudioManager) : AudioManager).getInstance().positiveSoundPlay();
         }
 
         rightAnwerC() {
@@ -252,6 +264,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_this$corespondingTas5 = this.corespondingTask) === null || _this$corespondingTas5 === void 0 ? void 0 : (_this$corespondingTas6 = _this$corespondingTas5.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()
           }), Task) : Task)) === null || _this$corespondingTas6 === void 0 ? void 0 : _this$corespondingTas6.taskQuestionCompleted();
+          (_crd && AudioManager === void 0 ? (_reportPossibleCrUseOfAudioManager({
+            error: Error()
+          }), AudioManager) : AudioManager).getInstance().positiveSoundPlay();
         }
 
         rightAnwerAfterTheAnimation() {
@@ -265,6 +280,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if ((_this$audioSource3 = this.audioSource) === null || _this$audioSource3 === void 0 ? void 0 : _this$audioSource3.playing) this.audioSource.stop();
           this.node.getComponent(Animation).play("WrongNudge");
           this.setRandomTask();
+          (_crd && AudioManager === void 0 ? (_reportPossibleCrUseOfAudioManager({
+            error: Error()
+          }), AudioManager) : AudioManager).getInstance().negativeSoundPlay();
         }
 
         putAnwersInPlace() {

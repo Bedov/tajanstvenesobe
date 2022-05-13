@@ -20,6 +20,7 @@ const { ccclass, property } = _decorator;
 import { TaskABCquestion } from '../Tasks/TaskABCquestion';
 import { GameManager, GameStatuType } from '../GameManager';
 import { GlobalManager } from '../GlobalManager';
+import { AudioManager } from '../AudioManager';
  
 @ccclass('GenericUI-ABC')
 export class GenericUIABC extends Component {
@@ -187,18 +188,21 @@ export class GenericUIABC extends Component {
         this.backToPosition();
         this.getComponent(Animation)?.play("CorrectAnswerA");
         this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
+        AudioManager.getInstance().positiveSoundPlay();
     }
 
     rightAnwerB() {
         this.backToPosition();
         this.getComponent(Animation)?.play("CorrectAnswerB");
         this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
+        AudioManager.getInstance().positiveSoundPlay();
     }
 
     rightAnwerC() {
         this.backToPosition();
         this.getComponent(Animation)?.play("CorrectAnswerC");
         this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
+        AudioManager.getInstance().positiveSoundPlay();
     }
 
     rightAnwerAfterTheAnimation(){
@@ -215,6 +219,8 @@ export class GenericUIABC extends Component {
         this.node.getComponent(Animation)!.play("WrongNudge");
 
         this.setRandomTask();
+
+        AudioManager.getInstance().negativeSoundPlay();
 
     }
 

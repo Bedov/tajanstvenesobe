@@ -97,22 +97,24 @@ var globalInformations = new GeneralInformations;
 //Prvi Razred
 var kinderGardenData = new levelObject();
 kinderGardenData.sceneName = "KinderGarden";
-kinderGardenData.levelProgress = 6;
+kinderGardenData.levelProgress = 5;
 //kinderGardenData.status = levelStatus.finished;
 
 var elevator = new levelObject();
 elevator.sceneName = "MainMenuLift1";
 
+
 export {elevator};
 
 var birthdayPartyData = new levelObject();
 birthdayPartyData.sceneName = "BirthdayParty";
-birthdayPartyData.levelProgress = 6;
-//birthdayPartyData.status = levelStatus.unlocked;
+birthdayPartyData.levelProgress = 7;
+//birthdayPartyData.status = levelStatus.finished;
 
 var playfulCityData = new levelObject();
 playfulCityData.sceneName = "RaziganiGrad";
 playfulCityData.levelProgress = 6;
+//playfulCityData.status = levelStatus.unlocked;
 
 var springFestData = new levelObject();
 springFestData.sceneName = "ProlecniKarneval";
@@ -236,6 +238,8 @@ export class GlobalManager extends Component {
 
     start() {
        // this.schedule( this.printProgress(this.activeLevelData) , 1);
+       if(this.findGeneralProgress() > 0) 
+        GlobalManager.getInstance().activeLevelData.levelProgress = 1;
     }
 
 
@@ -338,7 +342,7 @@ export class GlobalManager extends Component {
             }
         
         
-            this.printProgress(this.activeLevelData);
+            //this.printProgress(this.activeLevelData);
 
     }
 
@@ -359,6 +363,9 @@ export class GlobalManager extends Component {
         var generalProgress = 0;
         for (let index = 0; index < GlobalManager.getInstance().levelsArray.length; index++) {
             //const element = array[index];
+            //console.log("Level name + " + GlobalManager.getInstance().levelsArray[index].sceneName);
+            //console.log("Level status + " + GlobalManager.getInstance().levelsArray[index].status);
+            
             if(GlobalManager.getInstance().levelsArray[index].status == levelStatus.unlocked) {
                 generalProgress = index;
                 return generalProgress;
@@ -366,6 +373,8 @@ export class GlobalManager extends Component {
 
             
         }
+        //console.log("General Progress " + generalProgress);
+        
         return generalProgress;
     }
     

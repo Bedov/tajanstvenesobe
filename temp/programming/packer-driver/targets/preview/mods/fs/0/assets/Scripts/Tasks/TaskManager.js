@@ -248,7 +248,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Canvas.getChildByName("BottomUI").getChildByName("HelpNavigation").getComponent(_crd && ButtonDisabler === void 0 ? (_reportPossibleCrUseOfButtonDisabler({
+          }), GameManager) : GameManager).getInstance().Canvas.getChildByName("HelpPanel").getChildByName("HelpNavigation").getComponent(_crd && ButtonDisabler === void 0 ? (_reportPossibleCrUseOfButtonDisabler({
             error: Error()
           }), ButtonDisabler) : ButtonDisabler).lockedByOutside = true;
           if (this.arrow != null) (_getComponent = this.arrow.getComponent(Animation)) === null || _getComponent === void 0 ? void 0 : _getComponent.play("ScaleIn");else (_getComponent2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({

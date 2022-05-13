@@ -25,31 +25,15 @@ export class RememberAndRestore extends Component {
     @property([Node])
     animatedObjects: Node[] = [];
 
-    @property(Node)
-    node1!: Node;
-
-    @property(Node)
-    node2!: Node;
-
-    @property(Node)
-    node3!: Node;
-
-    @property(Node)
-    node4!: Node;
-
-    @property(Node)
-    node5!: Node;
-
     objectsNodePosRot: NodePosRot[] = [];
+
+    @property([Node])
+    parentObjects: Node[] = [];
         
     @property([Trigger1])
     triggersToRestart: Trigger1[] = [];
 
     start () {
-
-    }
-
-    onLoad() {
         this.animatedObjects[0].getComponent(RigidBody)!.isStatic = true;
 
         this.animatedObjects.forEach(element => {
@@ -58,17 +42,44 @@ export class RememberAndRestore extends Component {
             nodePosRot.position = new Vec3( element.position);
             nodePosRot.rotation = new Quat(element.rotation) ;
 
-            
-
             this.objectsNodePosRot.push(nodePosRot);
 
-            this.setActive();
+            
         });
+
+        this.scheduleOnce(this.setActive, 0.5);
+
+        //this.setActive();
+    }
+
+    onLoad() {
+
     }
 
     setActive() {
-        for (let index = GlobalManager.getInstance().findGeneralProgress(); index < this.objectsNodePosRot.length; index++) {
-            this.objectsNodePosRot[index].node.active = false
+        for (let index = 0; index < this.parentObjects.length; index++) {
+            if(this.parentObjects[index].children != null)
+                this.parentObjects[index].children.forEach(element => {
+                    element.active = true;
+                });
+            
+            this.parentObjects[index].active = true;
+        }
+
+        console.log("General Progress: " + GlobalManager.getInstance().findGeneralProgress());
+        
+
+        for (let index = GlobalManager.getInstance().findGeneralProgress(); index < this.parentObjects.length; index++) {
+            if(this.parentObjects[index].children != null)
+                this.parentObjects[index].children.forEach(element => {
+                    element.active = false;
+                    console.log("Gasim element " + element.name);
+                    
+                });
+        
+        this.parentObjects[index].active = false;
+        console.log("Gasim element " + this.parentObjects[index].name);
+
         }
     }
 
@@ -93,22 +104,6 @@ export class RememberAndRestore extends Component {
         });
     }
 
-    node1func() {
-        this.node1.active = !this.node1.active;
-    }
-
-    node2func() {
-        this.node2.active = !this.node2.active;
-    }
-    node3func() {
-        this.node3.active = !this.node3.active;
-    }
-    node4func() {
-        this.node4.active = !this.node4.active;
-    }
-    node5func() {
-        this.node5.active = !this.node5.active;
-    }
 
 }
 

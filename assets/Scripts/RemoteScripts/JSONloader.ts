@@ -79,7 +79,6 @@ export class JSONloader extends Component {
 
         try {
             tasksInProgress++;
-console.log("Task Added 1");
 
              assetManager.loadRemote(remoteUrlRoot.toString(), function (err, textAsset) {
 
@@ -133,9 +132,9 @@ console.log("Task reduced 1");
 
              assetManager.loadRemote(questionURL, function (err, textAsset) {
 
-                 try {
+                 try {              
                     tasksInProgress++;
-                    console.log("Task Added 3");
+                    console.log("Task Added 3 : " + questionURL);
                     var tempTask = new JSONtask1;
                     var parsedJSON = JSON.parse(textAsset.toString());
                     tempTask.question = parsedJSON["question"];
@@ -171,7 +170,7 @@ console.log("Task reduced 1");
                         taskJSON.push(tempTask);
 
                     tasksInProgress--;
-console.log("Task reduced 3");
+                    console.log("Task reduced 3" + questionURL);
                 } catch (error) {
                     console.log("Nisam nasao trazeno polje za parsiranje" + error );
                     return false;

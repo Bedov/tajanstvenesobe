@@ -1,5 +1,6 @@
 
 import { _decorator, Component, Node, ButtonComponent, find } from 'cc';
+import { AudioManager } from '../AudioManager';
 import { GlobalManager } from '../GlobalManager';
 import { ButtonColorsLogic } from '../Goldberg/ButtonColorsLogic';
 import { OpenLevelByName } from '../Utilities/OpenLevelByName';
@@ -33,6 +34,7 @@ export class LevelButtonClicked extends Component {
     }
 
     levelButtonClicked() {
+        AudioManager.getInstance().clickSoundPlay();
         var canvas = find("Canvas")!;
         
         if(!this.lockedButton) {

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Animation, Task, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, DbuttonActivate;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Animation, Task, AudioManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, DbuttonActivate;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,6 +15,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     _reporterNs.report("Task", "../Tasks/Task", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfAudioManager(extras) {
+    _reporterNs.report("AudioManager", "../AudioManager", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -26,6 +30,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Animation = _cc.Animation;
     }, function (_unresolved_2) {
       Task = _unresolved_2.Task;
+    }, function (_unresolved_3) {
+      AudioManager = _unresolved_3.AudioManager;
     }],
     execute: function () {
       _crd = true;
@@ -58,6 +64,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         execute() {
+          (_crd && AudioManager === void 0 ? (_reportPossibleCrUseOfAudioManager({
+            error: Error()
+          }), AudioManager) : AudioManager).getInstance().clickSoundPlay();
+
           if (this.myTask.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
             error: Error()
           }), Task) : Task)) {

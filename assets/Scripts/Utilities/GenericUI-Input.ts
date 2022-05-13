@@ -20,6 +20,7 @@ const { ccclass, property } = _decorator;
 import { GameManager, GameStatuType } from '../GameManager';
 import { TaskInput } from '../Tasks/TaskInput';
 import { GlobalManager } from '../GlobalManager';
+import { AudioManager } from '../AudioManager';
  
 @ccclass('GenericUI-Input')
 export class GenericUIinput extends Component {
@@ -127,6 +128,8 @@ export class GenericUIinput extends Component {
         this.backToPosition();
         this.getComponent(Animation)?.play("CorrectAnswer");
         this.corespondingTask?.getComponent(Task)?.taskQuestionCompleted();
+
+        AudioManager.getInstance().positiveSoundPlay();
     }
 
     rightAnwerAfterTheAnimation() {
@@ -156,7 +159,7 @@ export class GenericUIinput extends Component {
 
         this.clearStringFromEditBox();
         
-
+        AudioManager.getInstance().negativeSoundPlay();
     }
 
 

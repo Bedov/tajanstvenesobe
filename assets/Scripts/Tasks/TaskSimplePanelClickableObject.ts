@@ -55,6 +55,8 @@ export class TaskSimplePanelClickableObject extends Task {
             this.taskManager.genericUI!.getComponent(GenericUI)!.turnOnGenericTaskJSONwithReturn(this.tekstObject, this); //Čestitam! Stigao si do časovničara.
         }
 
+        console.log("Show Task, elevator level progress = 1");
+        
         GlobalManager.getInstance().activeLevelData.levelProgress = 1;
     }
 

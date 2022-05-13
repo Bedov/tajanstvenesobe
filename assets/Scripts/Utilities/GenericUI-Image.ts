@@ -1,5 +1,6 @@
 
 import { _decorator, Component, Node, Label, AudioSource, Sprite } from 'cc';
+import { AudioManager } from '../AudioManager';
 import { GameManager, GameStatuType } from '../GameManager';
 import { GlobalManager } from '../GlobalManager';
 import { JSONimage, JSONquestTekst, JSONtask1 } from '../RemoteScripts/JSONloader';
@@ -86,6 +87,8 @@ export class GenericUIimage extends Component {
     }
 
     turnOffGenericTask() {
+        AudioManager.getInstance().clickSoundPlay();
+
         if(this.audioSource.playing)
             this.audioSource.stop();
 

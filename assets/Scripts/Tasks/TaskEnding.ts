@@ -51,14 +51,15 @@ export class TaskEnding extends Task {
 
         GameManager.getInstance().Progress = 0;
 
+        console.log("Task ending active level: " + GlobalManager.getInstance().activeLevelData.sceneName);
 
-        
+        console.log("Task ending,.findGeneralProgress() : " + GlobalManager.getInstance().findGeneralProgress());
         GlobalManager.getInstance().activeLevelData =  elevator; //  this.findSceneDataByName("MainMenuLift1");
-        GlobalManager.getInstance().activeLevelData.levelProgress = 2;
+        GlobalManager.getInstance().activeLevelData.levelProgress = 1;
         
         director.loadScene("MainMenuLift1");
-
         
+        this.executed = true;
     }
 
     findSceneDataByName(sceneName: string) {

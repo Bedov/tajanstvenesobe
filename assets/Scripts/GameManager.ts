@@ -81,7 +81,6 @@ export class GameManager extends Component {
 
     trophies? : Node ;
 
-    progressStarted = 0;
 
     detectType: DetectTypeOfDevice | DetectTypeOfDeviceElevator | undefined ;
 
@@ -107,14 +106,16 @@ export class GameManager extends Component {
     }
 
     onLoad() {
-        this.progressStarted = Number( GlobalManager.getInstance().activeLevelData.levelProgress);
-
-        if(this.elevatorScript)
-            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;  // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
-        else
-            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDevice)!;
-
         GameManager.instance = this;
+        
+        if(this.elevatorScript) {
+            this.Progress = Number( GlobalManager.getInstance().findGeneralProgress());
+            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!; } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
+        else {
+            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDevice)!; 
+            this.Progress = Number ( GlobalManager.getInstance().activeLevelData!.levelProgress);
+        }
+        
         this.jsonLoader = this.node.getComponent(JSONloader)!;
         this.loadingHandler = this.node.getComponent(LoadingHandler)!;
 
@@ -122,10 +123,7 @@ export class GameManager extends Component {
     
         this.trophies = this.Canvas!.getChildByName("BottomUI")!.getChildByName("TrofejiLayout")!;
 
-        console.log("GlobalManager.getInstance().activeLevelData  + " + GlobalManager.getInstance().activeLevelData);
-        
-
-        this.Progress = Number ( GlobalManager.getInstance().activeLevelData!.levelProgress);
+        console.log("GameManager onLoad aktivan level: " + GlobalManager.getInstance().activeLevelData.sceneName);
 
         this.setPlatformType();
     }
@@ -150,11 +148,6 @@ export class GameManager extends Component {
         return this.TaskManager;
     }
 
-    start () {
-       
-       
-        
-    }
 
     pushMeToAudioArray(audioComponent: AudioSource) {
         this.audioArray?.push(audioComponent);
@@ -187,6 +180,9 @@ export class GameManager extends Component {
 
 
     backToMenu() {
+        GlobalManager.getInstance().activeLevelData =  elevator; //  this.findSceneDataByName("MainMenuLift1");
+        GlobalManager.getInstance().activeLevelData.levelProgress = 2;
+
         if(this.debugMode == true)
             director.loadScene("MainMenu");
         else {

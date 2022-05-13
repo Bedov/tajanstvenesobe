@@ -75,14 +75,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         findQuestion() {
-          var _this$node$children;
+          var _this$node$children, _this$QuestionItem;
 
           (_this$node$children = this.node.children) === null || _this$node$children === void 0 ? void 0 : _this$node$children.forEach(task => {
             if (task.getComponent(_crd && TaskABCquestion === void 0 ? (_reportPossibleCrUseOfTaskABCquestion({
               error: Error()
             }), TaskABCquestion) : TaskABCquestion) != undefined || task.getComponent(_crd && TaskInput === void 0 ? (_reportPossibleCrUseOfTaskInput({
               error: Error()
-            }), TaskInput) : TaskInput) != undefined) this.Question = task;
+            }), TaskInput) : TaskInput) != undefined) {
+              this.Question = task;
+            }
           });
           var arrayItems = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
@@ -104,8 +106,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 });
               });
             });
-          }); //if(this.QuestionItem != undefined)
-          //   console.log("ITEM " + this.QuestionItem?.name);
+          });
+          if (this.QuestionItem != undefined) console.log("ITEM " + ((_this$QuestionItem = this.QuestionItem) === null || _this$QuestionItem === void 0 ? void 0 : _this$QuestionItem.name));
         }
 
         testElement(element) {
@@ -115,7 +117,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), DbuttonActivate) : DbuttonActivate) != undefined) if (((_element$getComponent = element.getComponent(_crd && DbuttonActivate === void 0 ? (_reportPossibleCrUseOfDbuttonActivate({
             error: Error()
-          }), DbuttonActivate) : DbuttonActivate)) === null || _element$getComponent === void 0 ? void 0 : _element$getComponent.myTask) == this.Question) this.QuestionItem = element;
+          }), DbuttonActivate) : DbuttonActivate)) === null || _element$getComponent === void 0 ? void 0 : _element$getComponent.myTask) == this.Question) {
+            this.QuestionItem = element;
+            console.log("Question Item : " + element.name);
+          }
         }
 
         findQuestPrvi() {
