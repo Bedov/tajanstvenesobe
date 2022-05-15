@@ -71,9 +71,13 @@ export class TaskTutorialTask extends Task {
 
     update() {
         if(this.checkpointLock)
-            if( this.taskManager.node.children.indexOf(this.node.parent!) != GlobalManager.getInstance().activeLevelData.levelProgress )
+            if( this.taskManager.node.children.indexOf(this.node.parent!) !=  GlobalManager.getInstance().activeLevelData!.levelProgress ) {
+                
+            
                 return;
-        
+            }
+            console.log("_moveTutorialEndBool " + GameManager.getInstance().detectType?._moveTutorialEndBool);
+            console.log("_lookTutorialEndBool " + GameManager.getInstance().detectType?._lookTutorialEndBool);
         if(GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool && !this.executed ) {
             this.showUI();
             GameManager.getInstance().gameStatus = GameStatuType.gamePaused;
@@ -81,6 +85,8 @@ export class TaskTutorialTask extends Task {
     }
 
     showUI (){
+        console.log("Debug 1");
+        
         if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
             GameManager.getInstance().loadingHandler?.turnOnLoading();
             this.scheduleOnce(this.showTask, 0.2);

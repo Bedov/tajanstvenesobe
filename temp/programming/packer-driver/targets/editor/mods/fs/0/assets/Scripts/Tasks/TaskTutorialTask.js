@@ -142,17 +142,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         update() {
-          var _getInstance$detectTy, _getInstance$detectTy2;
+          var _getInstance$detectTy, _getInstance$detectTy2, _getInstance$detectTy3, _getInstance$detectTy4;
 
           if (this.checkpointLock) if (this.taskManager.node.children.indexOf(this.node.parent) != (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress) return;
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress) {
+            return;
+          }
+          console.log("_moveTutorialEndBool " + ((_getInstance$detectTy = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy === void 0 ? void 0 : _getInstance$detectTy._moveTutorialEndBool));
+          console.log("_lookTutorialEndBool " + ((_getInstance$detectTy2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy2 === void 0 ? void 0 : _getInstance$detectTy2._lookTutorialEndBool));
 
-          if (((_getInstance$detectTy = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          if (((_getInstance$detectTy3 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy === void 0 ? void 0 : _getInstance$detectTy._moveTutorialEndBool) && ((_getInstance$detectTy2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy3 === void 0 ? void 0 : _getInstance$detectTy3._moveTutorialEndBool) && ((_getInstance$detectTy4 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy2 === void 0 ? void 0 : _getInstance$detectTy2._lookTutorialEndBool) && !this.executed) {
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy4 === void 0 ? void 0 : _getInstance$detectTy4._lookTutorialEndBool) && !this.executed) {
             this.showUI();
             (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
@@ -164,6 +172,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         showUI() {
           var _getInstance$loadingH2, _getComponent;
+
+          console.log("Debug 1");
 
           if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()

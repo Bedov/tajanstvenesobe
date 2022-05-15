@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, director, Label, sys, AudioSource, Scene, LightComponent, find } from 'cc';
+import { _decorator, Component, Node, director, Label, sys, AudioSource, Scene, LightComponent, find, loader, assetManager } from 'cc';
 import { DetectTypeOfDevice } from './DetectTypeOfDevice';
 import { DetectTypeOfDeviceElevator } from './DetectTypeOfDeviceElevator';
 import { elevator, GlobalManager, levelObject } from './GlobalManager';
@@ -65,9 +65,6 @@ export class GameManager extends Component {
     @property(String)
     LanguageName?: String;
 
-    @property(Number)
-    Progress: Number = 0;
-
     moveSpeed : number = 1.5;
     invertedRotation : boolean = false;
 
@@ -107,13 +104,21 @@ export class GameManager extends Component {
 
     onLoad() {
         GameManager.instance = this;
-        
+
         if(this.elevatorScript) {
-            this.Progress = Number( GlobalManager.getInstance().findGeneralProgress());
-            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!; } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
+
+            
+
+            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;
+        
+            //assetManager.cacheManager!.autoClear = true;
+            //assetManager.cacheManager!.clearCache();
+            //assetManager.releaseUnusedAssets();
+
+            //sys.garbageCollect();
+        } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
         else {
             this.detectType = find("Canvas")!.getComponent(DetectTypeOfDevice)!; 
-            this.Progress = Number ( GlobalManager.getInstance().activeLevelData!.levelProgress);
         }
         
         this.jsonLoader = this.node.getComponent(JSONloader)!;

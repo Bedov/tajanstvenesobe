@@ -49,7 +49,6 @@ export class TaskEnding extends Task {
         if(indexOfCurrentScene < GlobalManager.getInstance().levelsArray.length)
             GlobalManager.getInstance().levelsArray[indexOfCurrentScene + 1].status = levelStatus.unlocked;
 
-        GameManager.getInstance().Progress = 0;
 
         console.log("Task ending active level: " + GlobalManager.getInstance().activeLevelData.sceneName);
 
@@ -58,7 +57,7 @@ export class TaskEnding extends Task {
         GlobalManager.getInstance().activeLevelData.levelProgress = 1;
         
         director.loadScene("MainMenuLift1");
-        
+
         this.executed = true;
     }
 

@@ -189,11 +189,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = Number(newProgress);
-          if (newProgress != undefined) if (newProgress > (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          if (newProgress != undefined) if (newProgress > (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress) (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress) (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress = newProgress;
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = newProgress;
           if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().trophies != undefined) (_getInstance$trophies = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
@@ -218,13 +218,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         checkDoneTasks() {
           var children = this.getTasks();
-          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress == 0) return;
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress == 0) return;
 
-          for (var index = Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          for (var index = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress) - 1; index >= 0; index--) {
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress) - 1; index >= 0; index--) {
             console.log("PETLJA " + index);
             var checkpoint = this.checkpoints[index];
             checkpoint.children.forEach(task => {
@@ -257,17 +257,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         getDirectionFollow() {
-          var itemPosition = new Vec3(this.checkpoints[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          var itemPosition = new Vec3(this.checkpoints[Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
             error: Error()
           }), Checkpoint) : Checkpoint).QuestionItem.worldPosition);
           var node1 = instantiate(this.followPrefab);
           node1.getComponent(_crd && FollowGoForward === void 0 ? (_reportPossibleCrUseOfFollowGoForward({
             error: Error()
-          }), FollowGoForward) : FollowGoForward).setTarget(this.checkpoints[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          }), FollowGoForward) : FollowGoForward).setTarget(this.checkpoints[Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
             error: Error()
           }), Checkpoint) : Checkpoint).QuestionItem); //let node1: Node= instantiate(this.followPrefab);  //instantiate(this.follow);
 
@@ -282,14 +282,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         readAgain() {
-          this.checkpoints[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          this.checkpoints[Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress)].children.forEach(taskInCheckpoint => {
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress)].children.forEach(taskInCheckpoint => {
             var _this$checkpoints$Num;
 
-            if (((_this$checkpoints$Num = this.checkpoints[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            if (((_this$checkpoints$Num = this.checkpoints[Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
-            }), GameManager) : GameManager).getInstance().Progress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
               error: Error()
             }), Checkpoint) : Checkpoint)) === null || _this$checkpoints$Num === void 0 ? void 0 : _this$checkpoints$Num.Question) != taskInCheckpoint) {
               if (taskInCheckpoint.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
@@ -307,9 +307,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         checkActivityOfHelpButton() {
           var _this$checkpoints$Num2;
 
-          if (((_this$checkpoints$Num2 = this.checkpoints[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          if (((_this$checkpoints$Num2 = this.checkpoints[Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
             error: Error()
           }), Checkpoint) : Checkpoint)) === null || _this$checkpoints$Num2 === void 0 ? void 0 : _this$checkpoints$Num2.QuestionItem) != undefined) this.helpButton.active = false;else this.helpButton.active = true;
         }

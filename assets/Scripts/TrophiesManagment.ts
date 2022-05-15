@@ -1,6 +1,7 @@
 
 import { _decorator, Component, Node, instantiate, Vec3, Animation, ParticleSystem2D } from 'cc';
 import { GameManager } from './GameManager';
+import { GlobalManager } from './GlobalManager';
 import { TaskManager } from './Tasks/TaskManager';
 const { ccclass, property } = _decorator;
 
@@ -25,11 +26,11 @@ export class TrophiesManagment extends Component {
     }
 
     calculateLocked() {
-        for (let index = 0; index < GameManager.getInstance().Progress; index++) {
+        for (let index = 0; index < Number(GlobalManager.getInstance().activeLevelData!.levelProgress); index++) {
             this.node.children[index].children[0].active = true;
         }
 
-        for (let index = Number(GameManager.getInstance().Progress); index < this.node.children.length; index++) {
+        for (let index = Number(GlobalManager.getInstance().activeLevelData!.levelProgress); index < this.node.children.length; index++) {
             this.node.children[index].children[0].active = false;
         }
 
@@ -47,7 +48,7 @@ export class TrophiesManagment extends Component {
     }
 
     calculateLockedWithEffect() {
-        var checkpointForEffect =  Number(GameManager.getInstance().Progress) - 1;
+        var checkpointForEffect =  Number(GlobalManager.getInstance().activeLevelData!.levelProgress) - 1;
         
         //this.calculateLocked();
 

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, find, DetectTypeOfDevice, DetectTypeOfDeviceElevator, elevator, GlobalManager, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, find, DetectTypeOfDevice, DetectTypeOfDeviceElevator, elevator, GlobalManager, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -89,7 +89,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         GameStatuType[GameStatuType["gameTutorial"] = 2] = "gameTutorial";
       })(GameStatuType || _export("GameStatuType", GameStatuType = {}));
 
-      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Boolean), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(String), _dec8 = property(String), _dec9 = property(Number), _dec(_class = (_class2 = (_temp = _class3 = class GameManager extends Component {
+      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Boolean), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(Node), _dec7 = property(String), _dec8 = property(String), _dec(_class = (_class2 = (_temp = _class3 = class GameManager extends Component {
         constructor(...args) {
           super(...args);
 
@@ -118,8 +118,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "LevelName", _descriptor6, this);
 
           _initializerDefineProperty(this, "LanguageName", _descriptor7, this);
-
-          _initializerDefineProperty(this, "Progress", _descriptor8, this);
 
           _defineProperty(this, "moveSpeed", 1.5);
 
@@ -166,20 +164,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           GameManager.instance = this;
 
           if (this.elevatorScript) {
-            this.Progress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-              error: Error()
-            }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress());
             this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
               error: Error()
-            }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator);
+            }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator); //assetManager.cacheManager!.autoClear = true;
+            //assetManager.cacheManager!.clearCache();
+            //assetManager.releaseUnusedAssets();
+            //sys.garbageCollect();
           } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
           else {
               this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
                 error: Error()
               }), DetectTypeOfDevice) : DetectTypeOfDevice);
-              this.Progress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-                error: Error()
-              }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress);
             }
 
           this.jsonLoader = this.node.getComponent(_crd && JSONloader === void 0 ? (_reportPossibleCrUseOfJSONloader({
@@ -295,13 +290,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: null
-      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "Progress", [_dec9], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: function () {
-          return 0;
-        }
       })), _class2)) || _class));
 
       _cclegacy._RF.pop();

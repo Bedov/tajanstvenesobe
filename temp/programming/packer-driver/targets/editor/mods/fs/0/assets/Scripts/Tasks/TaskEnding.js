@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, director, macro, Task, GameManager, elevator, GlobalManager, levelObject, levelStatus, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TaskEnding;
+  var _reporterNs, _cclegacy, _decorator, director, macro, Task, elevator, GlobalManager, levelObject, levelStatus, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TaskEnding;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -13,10 +13,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfTask(extras) {
     _reporterNs.report("Task", "./Task", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfGameManager(extras) {
-    _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfelevator(extras) {
@@ -46,12 +42,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       Task = _unresolved_2.Task;
     }, function (_unresolved_3) {
-      GameManager = _unresolved_3.GameManager;
-    }, function (_unresolved_4) {
-      elevator = _unresolved_4.elevator;
-      GlobalManager = _unresolved_4.GlobalManager;
-      levelObject = _unresolved_4.levelObject;
-      levelStatus = _unresolved_4.levelStatus;
+      elevator = _unresolved_3.elevator;
+      GlobalManager = _unresolved_3.GlobalManager;
+      levelObject = _unresolved_3.levelObject;
+      levelStatus = _unresolved_3.levelStatus;
     }],
     execute: function () {
       _crd = true;
@@ -105,9 +99,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GlobalManager) : GlobalManager).getInstance().levelsArray[indexOfCurrentScene + 1].status = (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
             error: Error()
           }), levelStatus) : levelStatus).unlocked;
-          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().Progress = 0;
           console.log("Task ending active level: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);

@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, instantiate, Animation, GameManager, TaskManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TrophiesManagment;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, instantiate, Animation, GameManager, GlobalManager, TaskManager, _dec, _dec2, _class, _class2, _descriptor, _temp, _crd, ccclass, property, TrophiesManagment;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -13,6 +13,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "./GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfTaskManager(extras) {
@@ -32,7 +36,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }, function (_unresolved_3) {
-      TaskManager = _unresolved_3.TaskManager;
+      GlobalManager = _unresolved_3.GlobalManager;
+    }, function (_unresolved_4) {
+      TaskManager = _unresolved_4.TaskManager;
     }],
     execute: function () {
       _crd = true;
@@ -69,15 +75,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         calculateLocked() {
-          for (var index = 0; index < (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          for (var index = 0; index < Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress; index++) {
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress); index++) {
             this.node.children[index].children[0].active = true;
           }
 
-          for (var _index = Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          for (var _index = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress); _index < this.node.children.length; _index++) {
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress); _index < this.node.children.length; _index++) {
             this.node.children[_index].children[0].active = false;
           }
           /*
@@ -94,9 +100,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         calculateLockedWithEffect() {
-          var checkpointForEffect = Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          var checkpointForEffect = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress) - 1; //this.calculateLocked();
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress) - 1; //this.calculateLocked();
           //console.log("Sta sam to ulovio:  " +  this.node.children[ Number(GameManager.getInstance().Progress)].getComponent(Animation));
 
           this.node.children[checkpointForEffect].getComponent(Animation).play();
