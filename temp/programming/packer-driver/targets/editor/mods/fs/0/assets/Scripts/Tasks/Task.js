@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, GenericUI, Consequence, GameManager, GlobalManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, Task;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, GenericUI, Consequence, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _temp, _crd, ccclass, property, Task;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -27,10 +27,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGlobalManager(extras) {
-    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
-  }
-
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -45,8 +41,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Consequence = _unresolved_3.Consequence;
     }, function (_unresolved_4) {
       GameManager = _unresolved_4.GameManager;
-    }, function (_unresolved_5) {
-      GlobalManager = _unresolved_5.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -108,9 +102,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         isItOkToExecute() {
-          if (this.checkpointLock) if (this.taskManager.node.children.indexOf(this.node.parent) != (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+          if (this.checkpointLock) if (this.taskManager.node.children.indexOf(this.node.parent) != (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress) return;
+          }), GameManager) : GameManager).getInstance().startProgress) return;
 
           if (this.requirementForTaskCompleted) {
             if (!this.executed) return true;else {

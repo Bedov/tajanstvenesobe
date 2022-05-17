@@ -1,6 +1,6 @@
 
 import { _decorator, Component, Node, Game } from 'cc';
-import { GameManager } from '../GameManager';
+import { GameManager, GameStatuType } from '../GameManager';
 import { Task } from '../Tasks/Task';
 import { TaskManager } from '../Tasks/TaskManager';
 import { ScriptEffects } from '../Utilities/ScriptEffects';
@@ -25,10 +25,14 @@ export class LoadingHandler extends Component {
 
     turnOnLoading(){
         this.loadingPanel!.getComponent(ScriptEffects)?.fadeInActive();
+        if(GameManager.getInstance().gameStatus != GameStatuType.gameTutorial) 
+            GameManager.getInstance().gameStatus = GameStatuType.gamePaused;
     }
 
     turnOffLoading(){
         this.loadingPanel!.getComponent(ScriptEffects)?.fadeOutActive();
+        if(GameManager.getInstance().gameStatus != GameStatuType.gameTutorial) 
+            GameManager.getInstance().gameStatus = GameStatuType.gamePaused;
     }
 
     start () {

@@ -78,6 +78,8 @@ export class GameManager extends Component {
 
     trophies? : Node ;
 
+    startProgress: number = 0;
+
 
     detectType: DetectTypeOfDevice | DetectTypeOfDeviceElevator | undefined ;
 
@@ -107,7 +109,7 @@ export class GameManager extends Component {
 
         if(this.elevatorScript) {
 
-            
+            this.startProgress = Number(GlobalManager.getInstance().activeLevelData!.levelProgress);
 
             this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;
         

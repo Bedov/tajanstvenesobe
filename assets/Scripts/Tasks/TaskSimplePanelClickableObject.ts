@@ -50,6 +50,7 @@ export class TaskSimplePanelClickableObject extends Task {
 
     showTask () {
         if(this.isItOkToExecute()) {
+            
             this.taskManager.genericUI!.active = true;
             this.taskManager.genericUI!.getComponent(ScriptEffects)!.fadeInActive();
             this.taskManager.genericUI!.getComponent(GenericUI)!.turnOnGenericTaskJSONwithReturn(this.tekstObject, this); //Čestitam! Stigao si do časovničara.

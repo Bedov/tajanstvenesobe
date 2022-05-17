@@ -68,16 +68,14 @@ export class TaskTutorialTask extends Task {
             GameManager.getInstance().jsonLoader?.fetchImageQuestTekst(this.remoteName.toString(), this.imageObject)!;
         }
     }
-
-    update() {
+ 
+    update() { 
         if(this.checkpointLock)
-            if( this.taskManager.node.children.indexOf(this.node.parent!) !=  GlobalManager.getInstance().activeLevelData!.levelProgress ) {
+            if( this.taskManager.node.children.indexOf(this.node.parent!) !=  GameManager.getInstance().startProgress ) {
                 
             
                 return;
             }
-            console.log("_moveTutorialEndBool " + GameManager.getInstance().detectType?._moveTutorialEndBool);
-            console.log("_lookTutorialEndBool " + GameManager.getInstance().detectType?._lookTutorialEndBool);
         if(GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool && !this.executed ) {
             this.showUI();
             GameManager.getInstance().gameStatus = GameStatuType.gamePaused;

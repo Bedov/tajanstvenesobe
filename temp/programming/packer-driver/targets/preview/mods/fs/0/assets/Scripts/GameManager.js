@@ -133,6 +133,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "trophies", void 0);
 
+          _defineProperty(this, "startProgress", 0);
+
           _defineProperty(this, "detectType", void 0);
 
           _defineProperty(this, "debugMode", false);
@@ -164,6 +166,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           GameManager.instance = this;
 
           if (this.elevatorScript) {
+            this.startProgress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress);
             this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
               error: Error()
             }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator); //assetManager.cacheManager!.autoClear = true;

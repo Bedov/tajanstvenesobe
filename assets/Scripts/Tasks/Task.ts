@@ -66,7 +66,7 @@ export class Task extends Component {
 
     isItOkToExecute(){  
         if(this.checkpointLock)
-            if( this.taskManager.node.children.indexOf(this.node.parent!) != GlobalManager.getInstance().activeLevelData.levelProgress )
+            if( this.taskManager.node.children.indexOf(this.node.parent!) !=  GameManager.getInstance().startProgress )
                 return;
 
 

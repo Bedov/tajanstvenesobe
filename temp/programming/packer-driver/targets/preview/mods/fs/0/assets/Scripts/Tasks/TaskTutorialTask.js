@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Enum, ScriptEffects, GenericUI, Task, GameManager, GameStatuType, JSONimage, JSONquestTekst, GlobalManager, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TypeOfTask, TaskTutorialTask;
+  var _reporterNs, _cclegacy, _decorator, Enum, ScriptEffects, GenericUI, Task, GameManager, GameStatuType, JSONimage, JSONquestTekst, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, TypeOfTask, TaskTutorialTask;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -39,10 +39,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("JSONquestTekst", "../RemoteScripts/JSONloader", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfGlobalManager(extras) {
-    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
-  }
-
   _export("TypeOfTask", void 0);
 
   return {
@@ -64,8 +60,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_6) {
       JSONimage = _unresolved_6.JSONimage;
       JSONquestTekst = _unresolved_6.JSONquestTekst;
-    }, function (_unresolved_7) {
-      GlobalManager = _unresolved_7.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -142,25 +136,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         update() {
-          var _getInstance$detectTy, _getInstance$detectTy2, _getInstance$detectTy3, _getInstance$detectTy4;
+          var _getInstance$detectTy, _getInstance$detectTy2;
 
-          if (this.checkpointLock) if (this.taskManager.node.children.indexOf(this.node.parent) != (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+          if (this.checkpointLock) if (this.taskManager.node.children.indexOf(this.node.parent) != (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress) {
+          }), GameManager) : GameManager).getInstance().startProgress) {
             return;
           }
-          console.log("_moveTutorialEndBool " + ((_getInstance$detectTy = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy === void 0 ? void 0 : _getInstance$detectTy._moveTutorialEndBool));
-          console.log("_lookTutorialEndBool " + ((_getInstance$detectTy2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy2 === void 0 ? void 0 : _getInstance$detectTy2._lookTutorialEndBool));
 
-          if (((_getInstance$detectTy3 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          if (((_getInstance$detectTy = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy3 === void 0 ? void 0 : _getInstance$detectTy3._moveTutorialEndBool) && ((_getInstance$detectTy4 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy === void 0 ? void 0 : _getInstance$detectTy._moveTutorialEndBool) && ((_getInstance$detectTy2 = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy4 === void 0 ? void 0 : _getInstance$detectTy4._lookTutorialEndBool) && !this.executed) {
+          }), GameManager) : GameManager).getInstance().detectType) === null || _getInstance$detectTy2 === void 0 ? void 0 : _getInstance$detectTy2._lookTutorialEndBool) && !this.executed) {
             this.showUI();
             (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
               error: Error()
