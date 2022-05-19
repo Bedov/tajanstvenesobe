@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, MeshRenderer } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -24,12 +24,26 @@ export class DisplayScreenChange extends Component {
     // serializableDummy = 0;
     static instance: Node;
 
+
+
     start () {
-        //DisplayScreenChange.instance = this.node;
+        
+        DisplayScreenChange.instance = this.node;
+
+        this.turnOffNodes();
+        this.node.getChildByName("Ekran")!.active = true;
     }
 
     static setDisplayToSceneName(sceneName:string) {
+        DisplayScreenChange.instance.getComponent(DisplayScreenChange)?.turnOffNodes();
         DisplayScreenChange.instance.getChildByName(sceneName)!.active = true;
+    }
+
+    turnOffNodes() {
+        var children = DisplayScreenChange.instance.children;
+        children.forEach(element => {
+            element.active = false;
+        });
     }
 
     // update (deltaTime: number) {

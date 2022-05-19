@@ -132,7 +132,7 @@ springFestData.status = levelStatus.finished;
 
 var medivalVillageData = new levelObject();
 medivalVillageData.sceneName = "MedivalVillage";
-medivalVillageData.setLevelProgress(8);
+medivalVillageData.setLevelProgress(0);
 medivalVillageData.status = levelStatus.unlocked;
 
 //Drugi Razred

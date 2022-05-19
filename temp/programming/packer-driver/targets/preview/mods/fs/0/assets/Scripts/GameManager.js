@@ -230,7 +230,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), elevator) : elevator; //  this.findSceneDataByName("MainMenuLift1");
 
-          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+          if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress() != (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().levelsArray.length) (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().activeLevelData.setLevelProgress(2);
           if (this.debugMode == true) director.loadScene("MainMenu");else {

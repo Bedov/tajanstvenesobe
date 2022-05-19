@@ -1,44 +1,44 @@
 {
   "__type__": "cc.Material",
-  "_name": "blinn1",
+  "_name": "",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+    "__uuid__": "61436bd3-503a-458c-bef8-06a3b583155c",
     "__expectedType__": "cc.EffectAsset"
   },
-  "_techIdx": 0,
+  "_techIdx": "1",
   "_defines": [
+    {},
+    {},
     {}
   ],
   "_states": [
     {
       "rasterizerState": {},
+      "depthStencilState": {},
       "blendState": {
         "targets": [
-          {
-            "blend": true,
-            "blendSrc": 2,
-            "blendDst": 4,
-            "blendDstAlpha": 4
-          }
+          {}
         ]
-      },
-      "depthStencilState": {
-        "depthWrite": false
       }
-    }
+    },
+    {},
+    {}
   ],
   "_props": [
     {
-      "albedoScale": {
-        "__type__": "cc.Vec3",
-        "x": 0.800000011920929,
-        "y": 0.800000011920929,
-        "z": 0.800000011920929
+      "rimLightColor": {
+        "__type__": "cc.Color",
+        "r": 3,
+        "g": 3,
+        "b": 3,
+        "a": 255
       },
-      "metallic": 0.4000000059604645,
-      "roughness": 0.49053239822387695
-    }
+      "roughness": 0.49053239822387695,
+      "metallic": 0.4000000059604645
+    },
+    {},
+    {}
   ]
 }

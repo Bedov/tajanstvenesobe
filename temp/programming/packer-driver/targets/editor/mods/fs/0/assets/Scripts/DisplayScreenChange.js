@@ -38,11 +38,24 @@ System.register(["cc"], function (_export, _context) {
         // [2]
         // @property
         // serializableDummy = 0;
-        start() {//DisplayScreenChange.instance = this.node;
+        start() {
+          DisplayScreenChange.instance = this.node;
+          this.turnOffNodes();
+          this.node.getChildByName("Ekran").active = true;
         }
 
         static setDisplayToSceneName(sceneName) {
+          var _DisplayScreenChange$;
+
+          (_DisplayScreenChange$ = DisplayScreenChange.instance.getComponent(DisplayScreenChange)) === null || _DisplayScreenChange$ === void 0 ? void 0 : _DisplayScreenChange$.turnOffNodes();
           DisplayScreenChange.instance.getChildByName(sceneName).active = true;
+        }
+
+        turnOffNodes() {
+          var children = DisplayScreenChange.instance.children;
+          children.forEach(element => {
+            element.active = false;
+          });
         } // update (deltaTime: number) {
         //     // [4]
         // }

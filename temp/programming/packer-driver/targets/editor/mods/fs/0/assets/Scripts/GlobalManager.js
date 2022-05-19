@@ -183,7 +183,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _export("medivalVillageData", medivalVillageData = new levelObject());
 
       medivalVillageData.sceneName = "MedivalVillage";
-      medivalVillageData.setLevelProgress(8);
+      medivalVillageData.setLevelProgress(0);
       medivalVillageData.status = levelStatus.unlocked; //Drugi Razred
 
       _export("christmasVillage", christmasVillage = new levelObject());
