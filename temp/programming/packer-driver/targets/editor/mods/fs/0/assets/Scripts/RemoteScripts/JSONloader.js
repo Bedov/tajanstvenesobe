@@ -117,17 +117,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 taskJSON.tacanOdgovor = parsedJSON["tacanOdgovor"];
 
                 if (parsedJSON["questionAudio"] != undefined) {
+                  /*
                   try {
-                    //tasksInProgress++;
-                    //console.log("Task Added 2");
-                    assetManager.loadRemote(audioURL + parsedJSON["questionAudio"], AudioClip, (err, audioClip) => {
-                      taskJSON.questionAudio = audioClip; //tasksInProgress--;
-                      //console.log("Task reduced 2");
-                    });
-                  } catch (error) {
-                    console.log("Zvuk nije dobro ucitan");
-                    taskJSON.audioIsLoaded = false;
-                  }
+                      assetManager.loadRemote<AudioClip>(audioURL + parsedJSON["questionAudio"], (AudioClip), (err, audioClip) =>  {
+                          taskJSON.questionAudio = audioClip ;
+                      });
+                      
+                  } catch (error) { */
+                  console.log("Zvuk nije dobro ucitan");
+                  taskJSON.audioIsLoaded = false; //} 
                 } else console.log("Ne postoje zvukovi za ovu putanju");
 
                 tasksInProgress--;
@@ -169,18 +167,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (parsedJSON["questionAudio"] != undefined) {
                   console.log("Sta je : parsedJSON[questionAudio] " + parsedJSON["questionAudio"]);
-
+                  /*
                   try {
-                    //tasksInProgress++;
-                    //console.log("Task Added 4");
-                    assetManager.loadRemote(remoteUrlRoot + parsedJSON["questionAudio"], AudioClip, (err, audioClip) => {
-                      tempTask.questionAudio = audioClip; //tasksInProgress--;
-                      //console.log("Task reduced 4");
-                    });
-                  } catch (error) {
-                    console.log("Zvuk nije dobro ucitan");
-                    tempTask.audioIsLoaded = false;
-                  }
+                      //tasksInProgress++;
+                      //console.log("Task Added 4");
+                      assetManager.loadRemote<AudioClip>(remoteUrlRoot + parsedJSON["questionAudio"], (AudioClip), (err, audioClip) =>  {
+                          tempTask.questionAudio =  audioClip ;
+                          //tasksInProgress--;
+                          //console.log("Task reduced 4");
+                      });
+                    } catch (error) { */
+
+                  console.log("Zvuk nije dobro ucitan");
+                  tempTask.audioIsLoaded = false; //} 
                 } else console.log("Ne postoje zvukovi za ovu putanju");
 
                 if (tempTask.question != undefined) taskJSON.push(tempTask);

@@ -98,7 +98,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
+          this.schedule(this.checkExecution, 0.2, macro.REPEAT_FOREVER);
           this.schedule(this.isItMyTimeForDownloading, 0.1);
         }
 
@@ -110,6 +110,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameManager) : GameManager).getInstance().downloadedCheckpoint && !this.downloadStarted) {
             this.fetchTheData();
             this.downloadStarted = true;
+            this.unschedule(this.isItMyTimeForDownloading);
           }
         }
 

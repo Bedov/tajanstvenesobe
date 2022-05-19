@@ -95,33 +95,33 @@ export class GameManager extends Component {
 
     static instance: GameManager;
 
-
-    setProgress(tempProgress: number){
-        GlobalManager.getInstance().activeLevelData!.levelProgress = tempProgress;
-    }
-
-    getProgress() {
-        return  GlobalManager.getInstance().activeLevelData!.levelProgress;
-    }
-
-    onLoad() {
+    start() {
         GameManager.instance = this;
 
         if(this.elevatorScript) {
 
             this.startProgress = Number(GlobalManager.getInstance().activeLevelData!.levelProgress);
 
+            console.log("Start progress" + this.startProgress);
+            
             this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;
         
-            //assetManager.cacheManager!.autoClear = true;
-            //assetManager.cacheManager!.clearCache();
-            //assetManager.releaseUnusedAssets();
 
-            //sys.garbageCollect();
+
+            
         } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
         else {
             this.detectType = find("Canvas")!.getComponent(DetectTypeOfDevice)!; 
         }
+    }
+
+
+    onLoad() {
+
+
+        
+
+        
         
         this.jsonLoader = this.node.getComponent(JSONloader)!;
         this.loadingHandler = this.node.getComponent(LoadingHandler)!;
@@ -130,7 +130,6 @@ export class GameManager extends Component {
     
         this.trophies = this.Canvas!.getChildByName("BottomUI")!.getChildByName("TrofejiLayout")!;
 
-        console.log("GameManager onLoad aktivan level: " + GlobalManager.getInstance().activeLevelData.sceneName);
 
         this.setPlatformType();
     }

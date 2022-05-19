@@ -146,7 +146,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _export("kinderGardenData", kinderGardenData = new levelObject());
 
       kinderGardenData.sceneName = "KinderGarden";
-      kinderGardenData.levelProgress = 5; //kinderGardenData.status = levelStatus.finished;
+      kinderGardenData.levelProgress = 6;
+      kinderGardenData.status = levelStatus.finished;
 
       _export("elevator", elevator = new levelObject());
 
@@ -155,22 +156,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _export("birthdayPartyData", birthdayPartyData = new levelObject());
 
       birthdayPartyData.sceneName = "BirthdayParty";
-      birthdayPartyData.levelProgress = 7; //birthdayPartyData.status = levelStatus.finished;
+      birthdayPartyData.levelProgress = 6;
+      birthdayPartyData.status = levelStatus.finished;
 
       _export("playfulCityData", playfulCityData = new levelObject());
 
       playfulCityData.sceneName = "RaziganiGrad";
-      playfulCityData.levelProgress = 6; //playfulCityData.status = levelStatus.unlocked;
+      playfulCityData.levelProgress = 6;
+      playfulCityData.status = levelStatus.finished;
 
       _export("springFestData", springFestData = new levelObject());
 
       springFestData.sceneName = "ProlecniKarneval";
       springFestData.levelProgress = 6;
+      springFestData.status = levelStatus.finished;
 
       _export("medivalVillageData", medivalVillageData = new levelObject());
 
       medivalVillageData.sceneName = "MedivalVillage";
-      medivalVillageData.levelProgress = 6; //Drugi Razred
+      medivalVillageData.levelProgress = 6;
+      medivalVillageData.status = levelStatus.unlocked; //Drugi Razred
 
       _export("christmasVillage", christmasVillage = new levelObject());
 
@@ -234,10 +239,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         static getInstance() {
-          if (!this.instance) {
-            GlobalManager.instance = new GlobalManager();
-          }
-
+          //if (!this.instance) {
+          //    GlobalManager.instance = new GlobalManager();
+          // }
           return GlobalManager.instance;
         }
 
@@ -266,14 +270,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         onLoad() {
           GlobalManager.instance = this;
+          if (this.findGeneralProgress() > 0) GlobalManager.getInstance().activeLevelData.levelProgress = 1;
           this.setWorldArray();
           this.setPlatformType();
           game.addPersistRootNode(this.node);
         }
 
-        start() {
-          // this.schedule( this.printProgress(this.activeLevelData) , 1);
-          if (this.findGeneralProgress() > 0) GlobalManager.getInstance().activeLevelData.levelProgress = 1;
+        start() {// this.schedule( this.printProgress(this.activeLevelData) , 1);
         }
 
         addProgressTest() {
@@ -373,15 +376,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           for (var index = 0; index < GlobalManager.getInstance().levelsArray.length; index++) {
             //const element = array[index];
-            //console.log("Level name + " + GlobalManager.getInstance().levelsArray[index].sceneName);
-            //console.log("Level status + " + GlobalManager.getInstance().levelsArray[index].status);
+            console.log("Level name + " + GlobalManager.getInstance().levelsArray[index].sceneName);
+            console.log("Level status + " + GlobalManager.getInstance().levelsArray[index].status);
+
             if (GlobalManager.getInstance().levelsArray[index].status == levelStatus.unlocked) {
               generalProgress = index;
               return generalProgress;
             }
-          } //console.log("General Progress " + generalProgress);
+          }
 
-
+          console.log("General Progress " + generalProgress);
           return generalProgress;
         }
 

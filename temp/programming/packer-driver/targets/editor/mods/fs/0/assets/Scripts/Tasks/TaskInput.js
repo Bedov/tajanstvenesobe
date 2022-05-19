@@ -89,6 +89,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameManager) : GameManager).getInstance().downloadedCheckpoint && !this.downloadStarted) {
             this.getQuestions();
             this.downloadStarted = true;
+            this.unschedule(this.isItMyTimeForDownloading);
           }
         }
 
@@ -124,6 +125,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return this.questionsTempArray[randomIndex];
         }
 
+        printDownloadStatus() {
+          console.log("DownloadedCheckpoint : " + (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().downloadedCheckpoint);
+          console.log("this.orderNumber : " + this.orderNumber);
+        }
+
         showTask() {
           if (this.isItOkToExecute()) {
             var _getInstance$loadingH2;
@@ -137,10 +145,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), GameManager) : GameManager).getInstance().loadingHandler) === null || _getInstance$loadingH === void 0 ? void 0 : _getInstance$loadingH.turnOnLoading();
               this.scheduleOnce(this.showTask, 0.2);
-              console.log("DownloadedCheckpoint : " + (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-                error: Error()
-              }), GameManager) : GameManager).getInstance().downloadedCheckpoint);
-              console.log("this.orderNumber : " + this.orderNumber);
               return;
             }
 

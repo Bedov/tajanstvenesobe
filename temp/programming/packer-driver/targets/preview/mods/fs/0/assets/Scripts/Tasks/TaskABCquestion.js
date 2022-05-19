@@ -84,6 +84,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), GameManager) : GameManager).getInstance().downloadedCheckpoint && !this.downloadStarted) {
             this.getQuestions();
             this.downloadStarted = true;
+            this.unschedule(this.isItMyTimeForDownloading);
           }
         }
 

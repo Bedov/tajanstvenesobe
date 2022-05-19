@@ -75,7 +75,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         update() {}
 
         checkExecution() {
-          if (this.isItOkToExecute()) this.showTask();
+          if (this.isItOkToExecute()) {
+            this.showTask();
+            this.unschedule(this.checkExecution);
+          }
         }
 
         showTask() {
@@ -92,6 +95,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), GlobalManager) : GlobalManager).getInstance().levelsArray.indexOf((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().activeLevelData);
+          console.log("Task ending active level: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);
+          console.log("indexOfCurrentScene " + indexOfCurrentScene);
+          console.log("GlobalManager.getInstance().levelsArray.length: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().levelsArray.length);
           if (indexOfCurrentScene < (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().levelsArray.length) (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
@@ -99,9 +109,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), GlobalManager) : GlobalManager).getInstance().levelsArray[indexOfCurrentScene + 1].status = (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
             error: Error()
           }), levelStatus) : levelStatus).unlocked;
-          console.log("Task ending active level: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);
           console.log("Task ending,.findGeneralProgress() : " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress());

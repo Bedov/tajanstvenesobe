@@ -91,19 +91,16 @@ export class JSONloader extends Component {
                     
                     if( parsedJSON["questionAudio"] != undefined)  {
 
+                        /*
                         try {
-                            //tasksInProgress++;
-                            //console.log("Task Added 2");
                             assetManager.loadRemote<AudioClip>(audioURL + parsedJSON["questionAudio"], (AudioClip), (err, audioClip) =>  {
-                                taskJSON.questionAudio =  audioClip ;
-                                //tasksInProgress--;
-                                //console.log("Task reduced 2");
+                                taskJSON.questionAudio = audioClip ;
                             });
                             
-                        } catch (error) {
+                        } catch (error) { */
                             console.log("Zvuk nije dobro ucitan");
                             taskJSON.audioIsLoaded = false;
-                        } 
+                        //} 
                     } else 
                         console.log("Ne postoje zvukovi za ovu putanju");
 
@@ -149,6 +146,7 @@ console.log("Task reduced 1");
 
                         console.log("Sta je : parsedJSON[questionAudio] " + parsedJSON["questionAudio"]);
 
+                        /*
                         try {
                             //tasksInProgress++;
                             //console.log("Task Added 4");
@@ -158,10 +156,10 @@ console.log("Task reduced 1");
                                 //console.log("Task reduced 4");
                             });
 
-                        } catch (error) {
+                        } catch (error) { */
                             console.log("Zvuk nije dobro ucitan");
                             tempTask.audioIsLoaded = false;
-                        } 
+                        //} 
                     } else 
                         console.log("Ne postoje zvukovi za ovu putanju");
                         

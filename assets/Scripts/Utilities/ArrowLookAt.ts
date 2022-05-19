@@ -2,6 +2,7 @@
 import { _decorator, Component, Node, Vec3, Animation } from 'cc';
 import { Checkpoint } from '../Checkpoint/Checkpoint';
 import { GameManager } from '../GameManager';
+import { GlobalManager } from '../GlobalManager';
 import { TaskManager } from '../Tasks/TaskManager';
 import { ButtonDisabler } from './ButtonDisabler';
 const { ccclass, property } = _decorator;
@@ -65,7 +66,7 @@ export class ArrowLookAt extends Component {
         
         
         if(this.node.scale.x > 0) {
-            var itemPosition: Vec3 = new Vec3( this.checkPoints[ Number(GameManager.getInstance().Progress)].getComponent(Checkpoint)!.QuestionItem!.worldPosition ) ;
+            var itemPosition: Vec3 = new Vec3( this.checkPoints[ Number(GlobalManager.getInstance().activeLevelData.levelProgress)].getComponent(Checkpoint)!.QuestionItem!.worldPosition ) ;
   
             if(this.arrowDot != undefined  ) 
                 this.node.worldPosition = new Vec3 (this.arrowDot!.worldPosition.x, Number(this.arrowHeight), this.arrowDot!.worldPosition.z);

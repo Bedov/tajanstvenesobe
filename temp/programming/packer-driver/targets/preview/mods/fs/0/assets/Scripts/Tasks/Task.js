@@ -175,6 +175,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           var weHaveUnresolvedDependency = false;
           this.dependencies.forEach(element => {
+            console.log("element in loop : " + element.name);
+
             if (element.getComponent(Task).executed == false) {
               this.requirementForTaskCompleted = false;
               weHaveUnresolvedDependency = true;

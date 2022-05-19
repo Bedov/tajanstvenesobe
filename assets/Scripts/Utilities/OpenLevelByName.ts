@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, director, loader, Label, assetManager, AssetManager, Scene, Game } from 'cc';
+import { _decorator, Component, Node, director, loader, Label, assetManager, AssetManager, Scene, Game, sys } from 'cc';
 import { GameManager } from '../GameManager';
 import { GlobalManager, levelObject } from '../GlobalManager';
 import { ScriptEffects } from './ScriptEffects';
@@ -51,7 +51,10 @@ export class OpenLevelByName extends Component {
         
         GlobalManager.getInstance().activeLevelData = this.findSceneDataByName(customEventData);
 
-        
+        //assetManager.releaseUnusedAssets();
+        //assetManager.cacheManager!.autoClear = true;
+        //assetManager.cacheManager!.clearCache();
+        sys.garbageCollect();
 
         director.preloadScene(customEventData, function  (completedCount, totalCount, item) {
             if (labelTemp) {

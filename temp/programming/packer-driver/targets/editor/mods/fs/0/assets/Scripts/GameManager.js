@@ -148,39 +148,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return GameManager.instance;
         }
 
-        setProgress(tempProgress) {
-          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = tempProgress;
-        }
-
-        getProgress() {
-          return (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress;
-        }
-
-        onLoad() {
-          var _this$Canvas, _this$Canvas$getChild, _this$Canvas$getChild2;
-
+        start() {
           GameManager.instance = this;
 
           if (this.elevatorScript) {
             this.startProgress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
             }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress);
+            console.log("Start progress" + this.startProgress);
             this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
               error: Error()
-            }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator); //assetManager.cacheManager!.autoClear = true;
-            //assetManager.cacheManager!.clearCache();
-            //assetManager.releaseUnusedAssets();
-            //sys.garbageCollect();
+            }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator);
           } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
           else {
               this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
                 error: Error()
               }), DetectTypeOfDevice) : DetectTypeOfDevice);
             }
+        }
+
+        onLoad() {
+          var _this$Canvas, _this$Canvas$getChild, _this$Canvas$getChild2;
 
           this.jsonLoader = this.node.getComponent(_crd && JSONloader === void 0 ? (_reportPossibleCrUseOfJSONloader({
             error: Error()
@@ -190,9 +178,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), LoadingHandler) : LoadingHandler);
           this.typeInputResult = ((_this$Canvas = this.Canvas) === null || _this$Canvas === void 0 ? void 0 : (_this$Canvas$getChild = _this$Canvas.getChildByName("GenericUI-Input")) === null || _this$Canvas$getChild === void 0 ? void 0 : (_this$Canvas$getChild2 = _this$Canvas$getChild.getChildByName("EditBoxPC")) === null || _this$Canvas$getChild2 === void 0 ? void 0 : _this$Canvas$getChild2.getChildByName("Result")).getComponent(Label);
           this.trophies = this.Canvas.getChildByName("BottomUI").getChildByName("TrofejiLayout");
-          console.log("GameManager onLoad aktivan level: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);
           this.setPlatformType();
         }
 

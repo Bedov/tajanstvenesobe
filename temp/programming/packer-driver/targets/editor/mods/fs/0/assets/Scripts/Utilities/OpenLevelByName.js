@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, GlobalManager, levelObject, ScriptEffects, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, labelTemp, OpenLevelByName;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, GlobalManager, levelObject, ScriptEffects, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, labelTemp, OpenLevelByName;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -33,6 +33,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       Node = _cc.Node;
       director = _cc.director;
       Label = _cc.Label;
+      sys = _cc.sys;
     }, function (_unresolved_2) {
       GlobalManager = _unresolved_2.GlobalManager;
       levelObject = _unresolved_2.levelObject;
@@ -94,7 +95,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), ScriptEffects) : ScriptEffects)) === null || _this$loadingPanel$ge === void 0 ? void 0 : _this$loadingPanel$ge.fadeInActive();
           (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData = this.findSceneDataByName(customEventData);
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData = this.findSceneDataByName(customEventData); //assetManager.releaseUnusedAssets();
+          //assetManager.cacheManager!.autoClear = true;
+          //assetManager.cacheManager!.clearCache();
+
+          sys.garbageCollect();
           director.preloadScene(customEventData, function (completedCount, totalCount, item) {
             if (labelTemp) {
               var percent = 0;

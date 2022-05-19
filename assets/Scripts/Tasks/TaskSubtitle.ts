@@ -36,7 +36,7 @@ export class TaskSubtitle extends Task {
         this.taskManager.genericUI!.getComponent(GenericUI)!.turnOnGenericTask(String( this.tekst) ); //Čestitam! Stigao si do časovničara.
         
     
-        this.taskManager.refreshExecutedTasks(this.node.parent!);
+        //this.taskManager.refreshExecutedTasks(this.node.parent!);
     }
 
 

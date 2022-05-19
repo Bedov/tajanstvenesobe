@@ -49,6 +49,7 @@ export class TaskInput extends Task {
         if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted ) {
             this.getQuestions();
             this.downloadStarted = true;
+            this.unschedule(this.isItMyTimeForDownloading);
         }
     }
 
@@ -64,7 +65,7 @@ export class TaskInput extends Task {
         var imamoNekoriscene = false;
         var nasaoNekoriscenog = false;
         var randomIndex = randomRangeInt(0, this.questionsShown.length);
-        
+   
 
         this.questionsShown.forEach(element => {
             if(element == false)
@@ -89,15 +90,18 @@ export class TaskInput extends Task {
         return this.questionsTempArray[randomIndex];
     }
 
+    printDownloadStatus(){
+        console.log("DownloadedCheckpoint : " + GameManager.getInstance().downloadedCheckpoint);
+        console.log("this.orderNumber : " + this.orderNumber);
+    }
+
     showTask () {
         
         if(this.isItOkToExecute()) {
             if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
                 GameManager.getInstance().loadingHandler?.turnOnLoading();
                 this.scheduleOnce(this.showTask, 0.2);
-                console.log("DownloadedCheckpoint : " + GameManager.getInstance().downloadedCheckpoint);
-    
-                console.log("this.orderNumber : " + this.orderNumber);
+
                 return;
             }
 

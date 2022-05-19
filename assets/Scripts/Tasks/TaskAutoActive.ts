@@ -40,7 +40,7 @@ export class TaskAutoActive extends Task {
 
 
     start(){
-        this.schedule(this.checkExecution, 0.1, macro.REPEAT_FOREVER);
+        this.schedule(this.checkExecution, 0.2, macro.REPEAT_FOREVER);
         this.schedule(this.isItMyTimeForDownloading, 0.1);
         
     }
@@ -53,6 +53,7 @@ export class TaskAutoActive extends Task {
         if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted ) {
             this.fetchTheData();
             this.downloadStarted = true;
+            this.unschedule(this.isItMyTimeForDownloading);
         }
             
     }

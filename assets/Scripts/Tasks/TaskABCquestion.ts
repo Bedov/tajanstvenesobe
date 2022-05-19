@@ -48,6 +48,8 @@ export class TaskABCquestion extends Task {
         if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted) {
             this.getQuestions();
             this.downloadStarted = true;
+
+            this.unschedule(this.isItMyTimeForDownloading);
         }
     }
 

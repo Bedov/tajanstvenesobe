@@ -134,7 +134,6 @@ export class TaskManager extends Component {
             return;
 
         for (let index = Number(GlobalManager.getInstance().activeLevelData.levelProgress) -1 ; index >= 0; index--) {
-            console.log("PETLJA " + index);
             
             const checkpoint = this.checkpoints[index];
             checkpoint.children.forEach(task => {
@@ -146,7 +145,7 @@ export class TaskManager extends Component {
 
         this.checkReadinesForTasks();
 
-        this.checkActivityOfHelpButton();
+        //this.checkActivityOfHelpButton();
         /*
         children.forEach(task => {
 
@@ -184,7 +183,6 @@ export class TaskManager extends Component {
         var Vec3EulerRot: Vec3 = new Vec3;
         Quat.toEuler(Vec3EulerRot, node1!.rotation );
 
-        console.log("Rotation " + Vec3EulerRot.toString() );
         
     }
 

@@ -40,9 +40,15 @@ export class TaskTutorialTask extends Task {
         this.schedule(this.isItMyTimeForDownloading, 0.1);
 
 
-
+        if(this.checkpointLock)
+            this.schedule(this.checkpointCheck, 0.1);
 
      
+    }
+
+    checkpointCheck() {
+        if( this.taskManager.node.children.indexOf(this.node.parent!) ==  GameManager.getInstance().startProgress )
+            this.schedule(this.tutorialFinishCheck, 0.1);
     }
 
     isItMyTimeForDownloading() {
@@ -53,6 +59,8 @@ export class TaskTutorialTask extends Task {
                 this.getImageRemotely();
 
                 this.downloadStarted = true;
+
+            this.unschedule(this.isItMyTimeForDownloading);
         }
             
     }
@@ -68,6 +76,15 @@ export class TaskTutorialTask extends Task {
             GameManager.getInstance().jsonLoader?.fetchImageQuestTekst(this.remoteName.toString(), this.imageObject)!;
         }
     }
+
+    tutorialFinishCheck() {
+        if(GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool && !this.executed ) {
+            this.showUI();
+            GameManager.getInstance().gameStatus = GameStatuType.gamePaused;
+
+            this.unschedule(this.tutorialFinishCheck);
+        }
+    }
  
     update() { 
         if(this.checkpointLock)
@@ -76,14 +93,10 @@ export class TaskTutorialTask extends Task {
             
                 return;
             }
-        if(GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool && !this.executed ) {
-            this.showUI();
-            GameManager.getInstance().gameStatus = GameStatuType.gamePaused;
-        }
+        
     }
 
     showUI (){
-        console.log("Debug 1");
         
         if(GameManager.getInstance().downloadedCheckpoint <= this.orderNumber) {
             GameManager.getInstance().loadingHandler?.turnOnLoading();

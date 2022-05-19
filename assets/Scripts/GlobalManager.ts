@@ -97,8 +97,8 @@ var globalInformations = new GeneralInformations;
 //Prvi Razred
 var kinderGardenData = new levelObject();
 kinderGardenData.sceneName = "KinderGarden";
-kinderGardenData.levelProgress = 5;
-//kinderGardenData.status = levelStatus.finished;
+kinderGardenData.levelProgress = 6;
+kinderGardenData.status = levelStatus.finished;
 
 var elevator = new levelObject();
 elevator.sceneName = "MainMenuLift1";
@@ -108,21 +108,23 @@ export {elevator};
 
 var birthdayPartyData = new levelObject();
 birthdayPartyData.sceneName = "BirthdayParty";
-birthdayPartyData.levelProgress = 7;
-//birthdayPartyData.status = levelStatus.finished;
+birthdayPartyData.levelProgress = 6;
+birthdayPartyData.status = levelStatus.finished;
 
 var playfulCityData = new levelObject();
 playfulCityData.sceneName = "RaziganiGrad";
 playfulCityData.levelProgress = 6;
-//playfulCityData.status = levelStatus.unlocked;
+playfulCityData.status = levelStatus.finished;
 
 var springFestData = new levelObject();
 springFestData.sceneName = "ProlecniKarneval";
 springFestData.levelProgress = 6;
+springFestData.status = levelStatus.finished;
 
 var medivalVillageData = new levelObject();
 medivalVillageData.sceneName = "MedivalVillage";
 medivalVillageData.levelProgress = 6;
+medivalVillageData.status = levelStatus.unlocked;
 
 //Drugi Razred
 var christmasVillage = new levelObject();
@@ -187,10 +189,10 @@ export class GlobalManager extends Component {
     LanguageBox?: EditBoxComponent;
 
     public static getInstance(): GlobalManager {
-        if (!this.instance) {
-            GlobalManager.instance = new GlobalManager();
+        //if (!this.instance) {
+        //    GlobalManager.instance = new GlobalManager();
             
-        }
+       // }
         return GlobalManager.instance;
     }
 
@@ -202,11 +204,19 @@ export class GlobalManager extends Component {
     setWorldArray() {
         switch (this.projectNumber) {
             case 1:
+                
+                
+                
+                
                 this.levelsArray.push(kinderGardenData);
                 this.levelsArray.push(birthdayPartyData);
                 this.levelsArray.push(playfulCityData);
                 this.levelsArray.push(springFestData);
                 this.levelsArray.push(medivalVillageData);
+                
+                
+
+                
                 break;
             case 2:
                 this.levelsArray.push(christmasVillage);
@@ -223,10 +233,15 @@ export class GlobalManager extends Component {
 
 
     onLoad() {
-        
-        
-
         GlobalManager.instance = this;
+        
+        
+        if(this.findGeneralProgress() > 0) 
+            GlobalManager.getInstance().activeLevelData.levelProgress = 1;
+
+
+        
+        
 
         this.setWorldArray();
 
@@ -238,8 +253,7 @@ export class GlobalManager extends Component {
 
     start() {
        // this.schedule( this.printProgress(this.activeLevelData) , 1);
-       if(this.findGeneralProgress() > 0) 
-        GlobalManager.getInstance().activeLevelData.levelProgress = 1;
+
     }
 
 
@@ -363,8 +377,8 @@ export class GlobalManager extends Component {
         var generalProgress = 0;
         for (let index = 0; index < GlobalManager.getInstance().levelsArray.length; index++) {
             //const element = array[index];
-            //console.log("Level name + " + GlobalManager.getInstance().levelsArray[index].sceneName);
-            //console.log("Level status + " + GlobalManager.getInstance().levelsArray[index].status);
+            console.log("Level name + " + GlobalManager.getInstance().levelsArray[index].sceneName);
+            console.log("Level status + " + GlobalManager.getInstance().levelsArray[index].status);
             
             if(GlobalManager.getInstance().levelsArray[index].status == levelStatus.unlocked) {
                 generalProgress = index;
@@ -373,7 +387,7 @@ export class GlobalManager extends Component {
 
             
         }
-        //console.log("General Progress " + generalProgress);
+        console.log("General Progress " + generalProgress);
         
         return generalProgress;
     }

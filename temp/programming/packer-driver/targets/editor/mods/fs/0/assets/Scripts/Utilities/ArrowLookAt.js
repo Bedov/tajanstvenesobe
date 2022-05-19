@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Animation, Checkpoint, GameManager, TaskManager, ButtonDisabler, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, ArrowLookAt;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Vec3, Animation, Checkpoint, GameManager, GlobalManager, TaskManager, ButtonDisabler, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, ArrowLookAt;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -17,6 +17,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfTaskManager(extras) {
@@ -42,9 +46,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       GameManager = _unresolved_3.GameManager;
     }, function (_unresolved_4) {
-      TaskManager = _unresolved_4.TaskManager;
+      GlobalManager = _unresolved_4.GlobalManager;
     }, function (_unresolved_5) {
-      ButtonDisabler = _unresolved_5.ButtonDisabler;
+      TaskManager = _unresolved_5.TaskManager;
+    }, function (_unresolved_6) {
+      ButtonDisabler = _unresolved_6.ButtonDisabler;
     }],
     execute: function () {
       _crd = true;
@@ -111,9 +117,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
           if (this.node.scale.x > 0) {
-            var itemPosition = new Vec3(this.checkPoints[Number((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            var itemPosition = new Vec3(this.checkPoints[Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
-            }), GameManager) : GameManager).getInstance().Progress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
               error: Error()
             }), Checkpoint) : Checkpoint).QuestionItem.worldPosition);
             if (this.arrowDot != undefined) this.node.worldPosition = new Vec3(this.arrowDot.worldPosition.x, Number(this.arrowHeight), this.arrowDot.worldPosition.z);

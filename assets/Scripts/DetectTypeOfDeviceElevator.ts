@@ -50,15 +50,15 @@ export class DetectTypeOfDeviceElevator extends Component {
     _preTutorailEnded = false;
 
     onLoad() {
-        this.scheduleOnce(this.startTutorial, 6);
-        this.scheduleOnce(this.endPretutoral, 5);
+        this.scheduleOnce(this.startTutorial, 5);
+        this.scheduleOnce(this.endPretutoral, 4);
 
         this.MobileMoveJoystick = this.node.getChildByName("joystick")!;
     }
 
     endPretutoral() {
         this._preTutorailEnded = true;
-        if(GlobalManager.getInstance().activeLevelData.levelProgress != 0) {
+        if(GameManager.getInstance().startProgress != 0) {
             this._moveTutorialEndBool = true;
             this._lookTutorialEndBool = true;
         }
@@ -66,12 +66,15 @@ export class DetectTypeOfDeviceElevator extends Component {
 
     startTutorial() {
         systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-
         this.KeyboardMoveSymbol = this.node.getChildByName("DesktopMoveTutorial")!;
         this.KeyboardSeeSymbol = this.node.getChildByName("DesktopLookTutorial")!;
         this.MobileSeeSymbol = this.node.getChildByName("MobileLookTutorial")!;
         this.MobileMoveSymbol = this.node.getChildByName("MobileMoveTutorial")!;
-        this.setPlatform();
+
+        if(GameManager.getInstance().startProgress == 0) {
+            this.setPlatform();
+        }
+        
         
     }
 

@@ -225,7 +225,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           for (var index = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress) - 1; index >= 0; index--) {
-            console.log("PETLJA " + index);
             var checkpoint = this.checkpoints[index];
             checkpoint.children.forEach(task => {
               task.getComponent(_crd && Task === void 0 ? (_reportPossibleCrUseOfTask({
@@ -234,8 +233,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             });
           }
 
-          this.checkReadinesForTasks();
-          this.checkActivityOfHelpButton();
+          this.checkReadinesForTasks(); //this.checkActivityOfHelpButton();
+
           /*
           children.forEach(task => {
                 if( GameManager.getInstance().Progress > task.getComponent(Task)!.checkPointBelong)
@@ -278,7 +277,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           node1.lookAt(itemPosition);
           var Vec3EulerRot = new Vec3();
           Quat.toEuler(Vec3EulerRot, node1.rotation);
-          console.log("Rotation " + Vec3EulerRot.toString());
         }
 
         readAgain() {

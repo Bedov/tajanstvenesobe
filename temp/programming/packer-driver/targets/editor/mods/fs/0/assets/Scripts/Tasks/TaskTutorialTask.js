@@ -103,6 +103,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         start() {
           this.schedule(this.isItMyTimeForDownloading, 0.1);
+          if (this.checkpointLock) this.schedule(this.checkpointCheck, 0.1);
+        }
+
+        checkpointCheck() {
+          if (this.taskManager.node.children.indexOf(this.node.parent) == (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().startProgress) this.schedule(this.tutorialFinishCheck, 0.1);
         }
 
         isItMyTimeForDownloading() {
@@ -112,6 +119,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if (this.taskType == TypeOfTask.tekstType) this.getTekstRemotely();
             if (this.taskType == TypeOfTask.imageType) this.getImageRemotely();
             this.downloadStarted = true;
+            this.unschedule(this.isItMyTimeForDownloading);
           }
         }
 
@@ -135,14 +143,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
         }
 
-        update() {
+        tutorialFinishCheck() {
           var _getInstance$detectTy, _getInstance$detectTy2;
-
-          if (this.checkpointLock) if (this.taskManager.node.children.indexOf(this.node.parent) != (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().startProgress) {
-            return;
-          }
 
           if (((_getInstance$detectTy = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
@@ -155,13 +157,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), GameManager) : GameManager).getInstance().gameStatus = (_crd && GameStatuType === void 0 ? (_reportPossibleCrUseOfGameStatuType({
               error: Error()
             }), GameStatuType) : GameStatuType).gamePaused;
+            this.unschedule(this.tutorialFinishCheck);
+          }
+        }
+
+        update() {
+          if (this.checkpointLock) if (this.taskManager.node.children.indexOf(this.node.parent) != (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().startProgress) {
+            return;
           }
         }
 
         showUI() {
           var _getInstance$loadingH2, _getComponent;
-
-          console.log("Debug 1");
 
           if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()

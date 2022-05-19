@@ -69,8 +69,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.taskManager.genericUI.getComponent(_crd && GenericUI === void 0 ? (_reportPossibleCrUseOfGenericUI({
             error: Error()
           }), GenericUI) : GenericUI).turnOnGenericTask(String(this.tekst)); //Čestitam! Stigao si do časovničara.
-
-          this.taskManager.refreshExecutedTasks(this.node.parent);
+          //this.taskManager.refreshExecutedTasks(this.node.parent!);
         }
 
       }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "tekst", [_dec2], {

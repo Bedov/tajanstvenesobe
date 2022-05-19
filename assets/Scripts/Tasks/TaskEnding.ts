@@ -36,8 +36,11 @@ export class TaskEnding extends Task {
     }
 
     checkExecution() {
-        if(this.isItOkToExecute())
+        if(this.isItOkToExecute()) {
             this.showTask();
+            this.unschedule(this.checkExecution);
+        }
+            
     }
 
 
@@ -46,11 +49,15 @@ export class TaskEnding extends Task {
         GlobalManager.getInstance().activeLevelData.status = levelStatus.finished;
         var indexOfCurrentScene = GlobalManager.getInstance().levelsArray.indexOf(GlobalManager.getInstance().activeLevelData);
 
+        console.log("Task ending active level: " + GlobalManager.getInstance().activeLevelData.sceneName);
+        console.log("indexOfCurrentScene " + indexOfCurrentScene);
+        console.log("GlobalManager.getInstance().levelsArray.length: " + GlobalManager.getInstance().levelsArray.length);
+
         if(indexOfCurrentScene < GlobalManager.getInstance().levelsArray.length)
             GlobalManager.getInstance().levelsArray[indexOfCurrentScene + 1].status = levelStatus.unlocked;
 
 
-        console.log("Task ending active level: " + GlobalManager.getInstance().activeLevelData.sceneName);
+        
 
         console.log("Task ending,.findGeneralProgress() : " + GlobalManager.getInstance().findGeneralProgress());
         GlobalManager.getInstance().activeLevelData =  elevator; //  this.findSceneDataByName("MainMenuLift1");

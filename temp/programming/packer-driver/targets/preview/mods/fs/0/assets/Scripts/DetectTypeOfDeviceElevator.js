@@ -1,9 +1,13 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, macro, GameStatuType, GlobalManager, _dec, _class, _temp, _crd, ccclass, property, KEYCODE, DetectTypeOfDeviceElevator;
+  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, macro, GameManager, GameStatuType, GlobalManager, _dec, _class, _temp, _crd, ccclass, property, KEYCODE, DetectTypeOfDeviceElevator;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _reportPossibleCrUseOfGameManager(extras) {
+    _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfGameStatuType(extras) {
     _reporterNs.report("GameStatuType", "./GameManager", _context.meta, extras);
@@ -28,6 +32,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       SystemEvent = _cc.SystemEvent;
       macro = _cc.macro;
     }, function (_unresolved_2) {
+      GameManager = _unresolved_2.GameManager;
       GameStatuType = _unresolved_2.GameStatuType;
     }, function (_unresolved_3) {
       GlobalManager = _unresolved_3.GlobalManager;
@@ -87,17 +92,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         onLoad() {
-          this.scheduleOnce(this.startTutorial, 6);
-          this.scheduleOnce(this.endPretutoral, 5);
+          this.scheduleOnce(this.startTutorial, 5);
+          this.scheduleOnce(this.endPretutoral, 4);
           this.MobileMoveJoystick = this.node.getChildByName("joystick");
         }
 
         endPretutoral() {
           this._preTutorailEnded = true;
 
-          if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress != 0) {
+          }), GameManager) : GameManager).getInstance().startProgress != 0) {
             this._moveTutorialEndBool = true;
             this._lookTutorialEndBool = true;
           }
@@ -109,7 +114,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.KeyboardSeeSymbol = this.node.getChildByName("DesktopLookTutorial");
           this.MobileSeeSymbol = this.node.getChildByName("MobileLookTutorial");
           this.MobileMoveSymbol = this.node.getChildByName("MobileMoveTutorial");
-          this.setPlatform();
+
+          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().startProgress == 0) {
+            this.setPlatform();
+          }
         }
 
         start() {
