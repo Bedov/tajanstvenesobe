@@ -1,6 +1,7 @@
 
 import { _decorator, Component, Node, ButtonComponent, find } from 'cc';
 import { AudioManager } from '../AudioManager';
+import { DisplayScreenChange } from '../DisplayScreenChange';
 import { GlobalManager } from '../GlobalManager';
 import { ButtonColorsLogic } from '../Goldberg/ButtonColorsLogic';
 import { OpenLevelByName } from '../Utilities/OpenLevelByName';
@@ -29,6 +30,8 @@ export class LevelButtonClicked extends Component {
 
     buttonColorsLogic?: ButtonColorsLogic;
 
+    displayLogic?: DisplayScreenChange;
+
     start () {
         this.buttonColorsLogic = this.node.parent!.getComponent(ButtonColorsLogic)!;
     }
@@ -39,6 +42,7 @@ export class LevelButtonClicked extends Component {
         
         if(!this.lockedButton) {
             canvas.getComponent(OpenLevelByName)!.loadAndPlaySceneByNameD( this.levelName.toString() );
+            DisplayScreenChange.setDisplayToSceneName(this.levelName.toString());
             this.buttonColorsLogic!.lockAllButtons();
         }
     }

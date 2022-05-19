@@ -26,11 +26,11 @@ export class TrophiesManagment extends Component {
     }
 
     calculateLocked() {
-        for (let index = 0; index < Number(GlobalManager.getInstance().activeLevelData!.levelProgress); index++) {
+        for (let index = 0; index < Number(GlobalManager.getInstance().activeLevelData!.getLevelProgress()); index++) {
             this.node.children[index].children[0].active = true;
         }
 
-        for (let index = Number(GlobalManager.getInstance().activeLevelData!.levelProgress); index < this.node.children.length; index++) {
+        for (let index = Number(GlobalManager.getInstance().activeLevelData!.getLevelProgress()); index < this.node.children.length; index++) {
             this.node.children[index].children[0].active = false;
         }
 
@@ -48,7 +48,7 @@ export class TrophiesManagment extends Component {
     }
 
     calculateLockedWithEffect() {
-        var checkpointForEffect =  Number(GlobalManager.getInstance().activeLevelData!.levelProgress) - 1;
+        var checkpointForEffect =  Number(GlobalManager.getInstance().activeLevelData!.getLevelProgress()) - 1;
         
         //this.calculateLocked();
 

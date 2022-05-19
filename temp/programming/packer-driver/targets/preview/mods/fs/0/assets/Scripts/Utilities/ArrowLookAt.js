@@ -119,7 +119,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.node.scale.x > 0) {
             var itemPosition = new Vec3(this.checkPoints[Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
-            }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress)].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData.getLevelProgress())].getComponent(_crd && Checkpoint === void 0 ? (_reportPossibleCrUseOfCheckpoint({
               error: Error()
             }), Checkpoint) : Checkpoint).QuestionItem.worldPosition);
             if (this.arrowDot != undefined) this.node.worldPosition = new Vec3(this.arrowDot.worldPosition.x, Number(this.arrowHeight), this.arrowDot.worldPosition.z);

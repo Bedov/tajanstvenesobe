@@ -96,13 +96,11 @@ export class GameManager extends Component {
     static instance: GameManager;
 
     start() {
-        GameManager.instance = this;
+        
 
         if(this.elevatorScript) {
 
-            this.startProgress = Number(GlobalManager.getInstance().activeLevelData!.levelProgress);
-
-            console.log("Start progress" + this.startProgress);
+            this.startProgress = Number(GlobalManager.getInstance().activeLevelData!.getLevelProgress());
             
             this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;
         
@@ -116,13 +114,13 @@ export class GameManager extends Component {
     }
 
 
+    puttingThingsTogether() {
+
+    }
+
     onLoad() {
+        GameManager.instance = this;
 
-
-        
-
-        
-        
         this.jsonLoader = this.node.getComponent(JSONloader)!;
         this.loadingHandler = this.node.getComponent(LoadingHandler)!;
 
@@ -187,7 +185,7 @@ export class GameManager extends Component {
 
     backToMenu() {
         GlobalManager.getInstance().activeLevelData =  elevator; //  this.findSceneDataByName("MainMenuLift1");
-        GlobalManager.getInstance().activeLevelData.levelProgress = 2;
+        GlobalManager.getInstance().activeLevelData.setLevelProgress(2);
 
         if(this.debugMode == true)
             director.loadScene("MainMenu");

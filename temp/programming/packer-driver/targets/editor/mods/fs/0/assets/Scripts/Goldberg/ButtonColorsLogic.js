@@ -79,7 +79,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         checkTutorialEnd() {
           if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress != 0) {
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.getLevelProgress() != 0) {
             this.refreshColors((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
             }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress()); //this.unscheduleAllCallbacks();
@@ -110,10 +110,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             const element = this.buttonsArray[index].getComponent(MeshRenderer).setMaterial(this.finishedMaterial, 0);
           }
 
-          this.buttonsArray[Number(progress)].getComponent(_crd && LevelButtonClicked === void 0 ? (_reportPossibleCrUseOfLevelButtonClicked({
-            error: Error()
-          }), LevelButtonClicked) : LevelButtonClicked).lockedButton = false;
-          this.buttonsArray[Number(progress)].getComponent(MeshRenderer).setMaterial(this.unlockedMaterial, 0);
+          if (progress < this.buttonsArray.length) {
+            this.buttonsArray[Number(progress)].getComponent(_crd && LevelButtonClicked === void 0 ? (_reportPossibleCrUseOfLevelButtonClicked({
+              error: Error()
+            }), LevelButtonClicked) : LevelButtonClicked).lockedButton = false;
+            this.buttonsArray[Number(progress)].getComponent(MeshRenderer).setMaterial(this.unlockedMaterial, 0);
+          }
         }
 
         lockAllButtons() {

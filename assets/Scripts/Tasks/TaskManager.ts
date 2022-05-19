@@ -106,11 +106,11 @@ export class TaskManager extends Component {
         var newProgress = this.checkpoints.indexOf(checkpoint) + 1;
 
         console.log("Level Data WAKA " +  GlobalManager.getInstance().activeLevelData.sceneName );
-        GlobalManager.getInstance().activeLevelData!.levelProgress = Number( newProgress );
+        GlobalManager.getInstance().activeLevelData!.setLevelProgress(newProgress);
 
         if(newProgress != undefined)
-            if(newProgress > GlobalManager.getInstance().activeLevelData.levelProgress!)
-            GlobalManager.getInstance().activeLevelData.levelProgress = newProgress;
+            if(newProgress > GlobalManager.getInstance().activeLevelData.getLevelProgress()!)
+            GlobalManager.getInstance().activeLevelData.setLevelProgress(newProgress);
 
         if(GameManager.getInstance().trophies != undefined)
             GameManager.getInstance().trophies?.getComponent(TrophiesManagment)?.calculateLockedWithEffect();
@@ -130,10 +130,10 @@ export class TaskManager extends Component {
     checkDoneTasks() {
         var children = this.getTasks();
 
-        if(GlobalManager.getInstance().activeLevelData.levelProgress == 0)
+        if(GlobalManager.getInstance().activeLevelData.getLevelProgress() == 0)
             return;
 
-        for (let index = Number(GlobalManager.getInstance().activeLevelData.levelProgress) -1 ; index >= 0; index--) {
+        for (let index = Number(GlobalManager.getInstance().activeLevelData.getLevelProgress()) -1 ; index >= 0; index--) {
             
             const checkpoint = this.checkpoints[index];
             checkpoint.children.forEach(task => {
@@ -168,11 +168,11 @@ export class TaskManager extends Component {
     }
 
     getDirectionFollow() {
-        var itemPosition: Vec3 = new Vec3( this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.levelProgress)].getComponent(Checkpoint)!.QuestionItem!.worldPosition ) ;
+        var itemPosition: Vec3 = new Vec3( this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.getLevelProgress())].getComponent(Checkpoint)!.QuestionItem!.worldPosition ) ;
     
 
         const node1 = instantiate(this.followPrefab);
-        node1!.getComponent(FollowGoForward)!.setTarget( this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.levelProgress)].getComponent(Checkpoint)!.QuestionItem!);
+        node1!.getComponent(FollowGoForward)!.setTarget( this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.getLevelProgress())].getComponent(Checkpoint)!.QuestionItem!);
         //let node1: Node= instantiate(this.followPrefab);  //instantiate(this.follow);
 
         node1!.parent = this.node;
@@ -187,8 +187,8 @@ export class TaskManager extends Component {
     }
 
     readAgain() {
-        this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.levelProgress)].children.forEach(taskInCheckpoint => {
-            if( this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.levelProgress)].getComponent(Checkpoint)?.Question != taskInCheckpoint ) {
+        this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.getLevelProgress())].children.forEach(taskInCheckpoint => {
+            if( this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.getLevelProgress())].getComponent(Checkpoint)?.Question != taskInCheckpoint ) {
                 if(taskInCheckpoint.getComponent(Task)!.uvodniTask == false) {
                     taskInCheckpoint.getComponent(Task)!.executed = false;
                     //taskInCheckpoint.getComponent(Task)?.startScheduling();
@@ -200,7 +200,7 @@ export class TaskManager extends Component {
     }
 
     checkActivityOfHelpButton() {
-        if(this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.levelProgress)].getComponent(Checkpoint)?.QuestionItem != undefined)
+        if(this.checkpoints[ Number(GlobalManager.getInstance().activeLevelData.getLevelProgress())].getComponent(Checkpoint)?.QuestionItem != undefined)
             this.helpButton!.active = false;
         else
             this.helpButton!.active = true;

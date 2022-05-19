@@ -77,13 +77,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         calculateLocked() {
           for (var index = 0; index < Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress); index++) {
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.getLevelProgress()); index++) {
             this.node.children[index].children[0].active = true;
           }
 
           for (var _index = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress); _index < this.node.children.length; _index++) {
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.getLevelProgress()); _index < this.node.children.length; _index++) {
             this.node.children[_index].children[0].active = false;
           }
           /*
@@ -102,7 +102,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         calculateLockedWithEffect() {
           var checkpointForEffect = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress) - 1; //this.calculateLocked();
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.getLevelProgress()) - 1; //this.calculateLocked();
           //console.log("Sta sam to ulovio:  " +  this.node.children[ Number(GameManager.getInstance().Progress)].getComponent(Animation));
 
           this.node.children[checkpointForEffect].getComponent(Animation).play();

@@ -41,7 +41,7 @@ export class ButtonColorsLogic extends Component {
     }
 
     checkTutorialEnd(){
-        if( GlobalManager.getInstance().activeLevelData.levelProgress != 0 ) {
+        if( GlobalManager.getInstance().activeLevelData.getLevelProgress() != 0 ) {
             this.refreshColors( GlobalManager.getInstance().findGeneralProgress());
             //this.unscheduleAllCallbacks();
         }
@@ -61,6 +61,7 @@ export class ButtonColorsLogic extends Component {
     }
 
     refreshColors(progress: Number) {
+
         for (let index = 0; index < this.buttonsArray.length; index++) {
             const element = this.buttonsArray[index].getComponent(MeshRenderer)!.setMaterial(this.lockedMaterial!, 0);
         }
@@ -70,8 +71,10 @@ export class ButtonColorsLogic extends Component {
             const element = this.buttonsArray[index].getComponent(MeshRenderer)!.setMaterial(this.finishedMaterial!, 0);
         }
 
-        this.buttonsArray[Number(progress)].getComponent(LevelButtonClicked)!.lockedButton = false;
-        this.buttonsArray[Number(progress)].getComponent(MeshRenderer)!.setMaterial(this.unlockedMaterial!, 0);
+        if( progress < this.buttonsArray.length) {
+            this.buttonsArray[Number(progress)].getComponent(LevelButtonClicked)!.lockedButton = false;
+            this.buttonsArray[Number(progress)].getComponent(MeshRenderer)!.setMaterial(this.unlockedMaterial!, 0);
+        }
     }
 
     lockAllButtons() {

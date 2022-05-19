@@ -84,43 +84,61 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         showTask() {
           (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = 0;
-          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.status = (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
-            error: Error()
-          }), levelStatus) : levelStatus).finished;
-          var indexOfCurrentScene = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().levelsArray.indexOf((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData);
-          console.log("Task ending active level: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);
-          console.log("indexOfCurrentScene " + indexOfCurrentScene);
-          console.log("GlobalManager.getInstance().levelsArray.length: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().levelsArray.length);
-          if (indexOfCurrentScene < (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().levelsArray.length) (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().levelsArray[indexOfCurrentScene + 1].status = (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
-            error: Error()
-          }), levelStatus) : levelStatus).unlocked;
-          console.log("Task ending,.findGeneralProgress() : " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress());
-          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData = _crd && elevator === void 0 ? (_reportPossibleCrUseOfelevator({
-            error: Error()
-          }), elevator) : elevator; //  this.findSceneDataByName("MainMenuLift1");
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.setLevelProgress(0);
 
-          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+          if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.levelProgress = 1;
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.status == (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
+            error: Error()
+          }), levelStatus) : levelStatus).unlocked) {
+            (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData.status = (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
+              error: Error()
+            }), levelStatus) : levelStatus).finished;
+            var indexOfCurrentScene = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().levelsArray.indexOf((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData);
+            console.log("Task ending active level: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);
+            console.log("indexOfCurrentScene " + indexOfCurrentScene);
+            console.log("GlobalManager.getInstance().levelsArray.length: " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().levelsArray.length);
+
+            if (indexOfCurrentScene < (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().levelsArray.length - 1) {
+              (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+                error: Error()
+              }), GlobalManager) : GlobalManager).getInstance().levelsArray[indexOfCurrentScene + 1].status = (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
+                error: Error()
+              }), levelStatus) : levelStatus).unlocked;
+              (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+                error: Error()
+              }), GlobalManager) : GlobalManager).getInstance().activeLevelData = _crd && elevator === void 0 ? (_reportPossibleCrUseOfelevator({
+                error: Error()
+              }), elevator) : elevator; //  
+
+              (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+                error: Error()
+              }), GlobalManager) : GlobalManager).getInstance().activeLevelData.setLevelProgress(1);
+            } else {
+              (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+                error: Error()
+              }), GlobalManager) : GlobalManager).getInstance().activeLevelData = _crd && elevator === void 0 ? (_reportPossibleCrUseOfelevator({
+                error: Error()
+              }), elevator) : elevator; //  
+
+              (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+                error: Error()
+              }), GlobalManager) : GlobalManager).getInstance().activeLevelData.setLevelProgress(3);
+            }
+          }
+
           director.loadScene("MainMenuLift1");
           this.executed = true;
         }

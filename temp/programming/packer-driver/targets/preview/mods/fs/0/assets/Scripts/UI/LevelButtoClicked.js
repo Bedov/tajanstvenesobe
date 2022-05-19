@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, find, AudioManager, ButtonColorsLogic, OpenLevelByName, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, LevelButtonClicked;
+  var _reporterNs, _cclegacy, _decorator, Component, find, AudioManager, DisplayScreenChange, ButtonColorsLogic, OpenLevelByName, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, LevelButtonClicked;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -13,6 +13,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfAudioManager(extras) {
     _reporterNs.report("AudioManager", "../AudioManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfDisplayScreenChange(extras) {
+    _reporterNs.report("DisplayScreenChange", "../DisplayScreenChange", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfButtonColorsLogic(extras) {
@@ -34,9 +38,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       AudioManager = _unresolved_2.AudioManager;
     }, function (_unresolved_3) {
-      ButtonColorsLogic = _unresolved_3.ButtonColorsLogic;
+      DisplayScreenChange = _unresolved_3.DisplayScreenChange;
     }, function (_unresolved_4) {
-      OpenLevelByName = _unresolved_4.OpenLevelByName;
+      ButtonColorsLogic = _unresolved_4.ButtonColorsLogic;
+    }, function (_unresolved_5) {
+      OpenLevelByName = _unresolved_5.OpenLevelByName;
     }],
     execute: function () {
       _crd = true;
@@ -68,6 +74,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "lockedButton", _descriptor2, this);
 
           _defineProperty(this, "buttonColorsLogic", void 0);
+
+          _defineProperty(this, "displayLogic", void 0);
         }
 
         start() {
@@ -86,6 +94,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             canvas.getComponent(_crd && OpenLevelByName === void 0 ? (_reportPossibleCrUseOfOpenLevelByName({
               error: Error()
             }), OpenLevelByName) : OpenLevelByName).loadAndPlaySceneByNameD(this.levelName.toString());
+            (_crd && DisplayScreenChange === void 0 ? (_reportPossibleCrUseOfDisplayScreenChange({
+              error: Error()
+            }), DisplayScreenChange) : DisplayScreenChange).setDisplayToSceneName(this.levelName.toString());
             this.buttonColorsLogic.lockAllButtons();
           }
         } // update (deltaTime: number) {

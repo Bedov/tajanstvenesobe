@@ -45,23 +45,27 @@ export class TaskEnding extends Task {
 
 
     showTask() {
-        GlobalManager.getInstance().activeLevelData.levelProgress = 0;
-        GlobalManager.getInstance().activeLevelData.status = levelStatus.finished;
-        var indexOfCurrentScene = GlobalManager.getInstance().levelsArray.indexOf(GlobalManager.getInstance().activeLevelData);
+        GlobalManager.getInstance().activeLevelData.setLevelProgress(0);
 
-        console.log("Task ending active level: " + GlobalManager.getInstance().activeLevelData.sceneName);
-        console.log("indexOfCurrentScene " + indexOfCurrentScene);
-        console.log("GlobalManager.getInstance().levelsArray.length: " + GlobalManager.getInstance().levelsArray.length);
-
-        if(indexOfCurrentScene < GlobalManager.getInstance().levelsArray.length)
-            GlobalManager.getInstance().levelsArray[indexOfCurrentScene + 1].status = levelStatus.unlocked;
+        if(GlobalManager.getInstance().activeLevelData.status == levelStatus.unlocked ) {
+            GlobalManager.getInstance().activeLevelData.status = levelStatus.finished;
+            var indexOfCurrentScene = GlobalManager.getInstance().levelsArray.indexOf(GlobalManager.getInstance().activeLevelData);
 
 
-        
+            console.log("Task ending active level: " + GlobalManager.getInstance().activeLevelData.sceneName);
+            console.log("indexOfCurrentScene " + indexOfCurrentScene);
+            console.log("GlobalManager.getInstance().levelsArray.length: " + GlobalManager.getInstance().levelsArray.length);
 
-        console.log("Task ending,.findGeneralProgress() : " + GlobalManager.getInstance().findGeneralProgress());
-        GlobalManager.getInstance().activeLevelData =  elevator; //  this.findSceneDataByName("MainMenuLift1");
-        GlobalManager.getInstance().activeLevelData.levelProgress = 1;
+            if(indexOfCurrentScene < GlobalManager.getInstance().levelsArray.length -1) {
+                GlobalManager.getInstance().levelsArray[indexOfCurrentScene + 1].status = levelStatus.unlocked;
+                GlobalManager.getInstance().activeLevelData =  elevator; //  
+                GlobalManager.getInstance().activeLevelData.setLevelProgress(1); 
+            } else {
+                GlobalManager.getInstance().activeLevelData =  elevator; //  
+                GlobalManager.getInstance().activeLevelData.setLevelProgress(3); 
+            }
+        }
+
         
         director.loadScene("MainMenuLift1");
 
