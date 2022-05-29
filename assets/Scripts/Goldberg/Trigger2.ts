@@ -30,7 +30,7 @@ export class Trigger2 extends Component {
     animationPlayed = false;
 
     start () {
-        this.endGameLogic = GameManager.getInstance().node.getComponent(EndGameLogic)!;
+       // this.endGameLogic = GameManager.getInstance().node.getComponent(EndGameLogic)!;
 
         let collider = this.getComponent(MeshCollider)!;
         collider.on("onTriggerEnter", this.onTrigger, this);
@@ -38,7 +38,8 @@ export class Trigger2 extends Component {
     }
 
     onTrigger (event: ITriggerEvent) {
-        this.endGameLogic?.startEndGame();
+        EndGameLogic.startEndGame();
+        //this.endGameLogic?.startEndGame();
         
 
 

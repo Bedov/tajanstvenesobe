@@ -1,5 +1,6 @@
 
 import { _decorator, Component, Node } from 'cc';
+import { Task } from './Tasks/Task';
 const { ccclass, property } = _decorator;
 
 /**
@@ -19,16 +20,19 @@ export class EndGameLogic extends Component {
     // [1]
     // dummy = '';
 
-    // [2]
-    // @property
-    // serializableDummy = 0;
+    @property({type: Task})
+    public task: Task | null = null;
+
+    static instance: EndGameLogic;
 
     start () {
-        // [3]
+        EndGameLogic.instance = this;
     }
 
-    startEndGame() {
+    static startEndGame() {
         console.log("EndGame Activate");
+
+        EndGameLogic.instance.task?.showTask();
         
     }
 

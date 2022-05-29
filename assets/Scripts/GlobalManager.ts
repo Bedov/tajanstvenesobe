@@ -106,7 +106,7 @@ var globalInformations = new GeneralInformations;
 //Prvi Razred
 var kinderGardenData = new levelObject();
 kinderGardenData.sceneName = "KinderGarden";
-kinderGardenData.setLevelProgress(6);
+//kinderGardenData.setLevelProgress(6);
 kinderGardenData.status = levelStatus.finished;
 
 var elevator = new levelObject();
@@ -117,30 +117,49 @@ export {elevator};
 
 var birthdayPartyData = new levelObject();
 birthdayPartyData.sceneName = "BirthdayParty";
-birthdayPartyData.setLevelProgress(6);
-birthdayPartyData.status = levelStatus.finished;
+//birthdayPartyData.setLevelProgress(6);
+birthdayPartyData.status = levelStatus.unlocked;
 
 var playfulCityData = new levelObject();
 playfulCityData.sceneName = "RaziganiGrad";
-playfulCityData.setLevelProgress(6);
-playfulCityData.status = levelStatus.finished;
+//playfulCityData.setLevelProgress(6);
+//playfulCityData.status = levelStatus.unlocked;
 
 var springFestData = new levelObject();
 springFestData.sceneName = "ProlecniKarneval";
-springFestData.setLevelProgress(6);
-springFestData.status = levelStatus.finished;
+//springFestData.setLevelProgress(6);
+//springFestData.status = levelStatus.finished;
 
 var medivalVillageData = new levelObject();
 medivalVillageData.sceneName = "MedivalVillage";
-medivalVillageData.setLevelProgress(0);
-medivalVillageData.status = levelStatus.unlocked;
+//medivalVillageData.setLevelProgress(8);
+//medivalVillageData.status = levelStatus.unlocked;
+
+
 
 //Drugi Razred
-var christmasVillage = new levelObject();
-var easterVillageData = new levelObject();
-var happyStreetData = new levelObject();
+
 var undergroundChamberData = new levelObject();
+undergroundChamberData.sceneName = "PodzemnaOdaja";
+undergroundChamberData.status = levelStatus.finished;
+
+var christmasVillage = new levelObject();
+christmasVillage.sceneName = "Bozicna2";
+christmasVillage.status = levelStatus.unlocked;
+
+var happyStreetData = new levelObject();
+happyStreetData.sceneName = "VeselaUlica";
+
+var easterVillageData = new levelObject();
+easterVillageData.sceneName = "Uskrs";
+//easterVillageData.status = levelStatus.unlocked;
+
+
+
+
+
 var invisablePeopleCity = new levelObject();
+invisablePeopleCity.sceneName = "GradNevidljivihStanovnika";
 
 export { kinderGardenData, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, christmasVillage, easterVillageData, happyStreetData, undergroundChamberData, invisablePeopleCity, globalInformations};
  
@@ -220,10 +239,12 @@ export class GlobalManager extends Component {
                 this.levelsArray.push(medivalVillageData);
                 break;
             case 2:
-                this.levelsArray.push(christmasVillage);
-                this.levelsArray.push(easterVillageData);
-                this.levelsArray.push(happyStreetData);
                 this.levelsArray.push(undergroundChamberData);
+                this.levelsArray.push(christmasVillage);
+                this.levelsArray.push(happyStreetData);
+                this.levelsArray.push(easterVillageData);
+                
+                
                 this.levelsArray.push(invisablePeopleCity);
                 break;
             default:

@@ -26,19 +26,52 @@ export class TaskAutoActiveLocalAudio extends Task {
     @property(String)
     remoteName!: String;
 
+    @property(Node)
+    bellIcon!: Node;
+
     counterForExecution = 0;
     timerOn = false;
 
     @property ({type:Enum(TypeOfTask)})
     taskType:TypeOfTask = TypeOfTask.tekstType;
 
-
+    tekstObject: JSONquestTekst = new JSONquestTekst ;
+    imageObject: JSONimage = new JSONimage ;
 
     start(){
         this.schedule(this.checkExecution, 1, macro.REPEAT_FOREVER);
+        this.schedule(this.isItMyTimeForDownloading, 0.1);
 
     }
 
+    
+    getTekstRemotely() {
+        if(this.remoteName != "") {
+            GameManager.getInstance().jsonLoader?.fetchQuestTekst(this.remoteName.toString(), this.tekstObject)!;
+        }
+    }
+
+    getImageRemotely() {
+        if(this.remoteName != "") {
+            GameManager.getInstance().jsonLoader?.fetchImageQuestTekst(this.remoteName.toString(), this.imageObject)!;
+        }
+    }
+
+    fetchTheData() {
+        if(this.taskType == TypeOfTask.tekstType)
+            this.getTekstRemotely();
+        if(this.taskType == TypeOfTask.imageType)
+         this.getImageRemotely();
+    }
+
+    isItMyTimeForDownloading() {
+        if(this.orderNumber <= GameManager.getInstance().downloadedCheckpoint && !this.downloadStarted ) {
+            this.fetchTheData();
+            this.downloadStarted = true;
+            this.unschedule(this.isItMyTimeForDownloading);
+        }
+            
+    }
 
     update(deltaTime: number) {
         if(this.timerOn) 
@@ -46,10 +79,12 @@ export class TaskAutoActiveLocalAudio extends Task {
         else    
             return;
         
+        this.bellIcon.active = true;
         if(this.counterForExecution > 6) {
             if(this.executed == false)
                 this.taskCompleted();
             this.timerOn = false;
+            this.bellIcon.active = false;
         }
 
     }

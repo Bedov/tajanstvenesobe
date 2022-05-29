@@ -236,14 +236,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().levelsArray.length) (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.setLevelProgress(2);
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.setLevelProgress(2);else (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.setLevelProgress(4);
           if (this.debugMode == true) director.loadScene("MainMenu");else {
             (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
             }), GlobalManager) : GlobalManager).getInstance().activeLevelData = _crd && elevator === void 0 ? (_reportPossibleCrUseOfelevator({
               error: Error()
             }), elevator) : elevator;
-            director.loadScene("MainMenuLift1");
+            director.loadScene("MainMenuLift" + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().projectNumber.toString()); //director.loadScene("MainMenuLift1");
           }
         }
 

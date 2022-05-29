@@ -187,12 +187,16 @@ export class GameManager extends Component {
         GlobalManager.getInstance().activeLevelData =  elevator; //  this.findSceneDataByName("MainMenuLift1");
         if(GlobalManager.getInstance().findGeneralProgress() != GlobalManager.getInstance().levelsArray.length)
             GlobalManager.getInstance().activeLevelData.setLevelProgress(2);
+        else
+            GlobalManager.getInstance().activeLevelData.setLevelProgress(4);
+
 
         if(this.debugMode == true)
             director.loadScene("MainMenu");
         else {
             GlobalManager.getInstance().activeLevelData = elevator;
-            director.loadScene("MainMenuLift1");
+            director.loadScene("MainMenuLift"+ GlobalManager.getInstance().projectNumber.toString());
+            //director.loadScene("MainMenuLift1");
         }
             
     }

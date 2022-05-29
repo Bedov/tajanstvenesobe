@@ -1,16 +1,12 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, MeshCollider, EndGameLogic, GameManager, _dec, _class, _temp, _crd, ccclass, property, Trigger2;
+  var _reporterNs, _cclegacy, _decorator, Component, MeshCollider, EndGameLogic, _dec, _class, _temp, _crd, ccclass, property, Trigger2;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
   function _reportPossibleCrUseOfEndGameLogic(extras) {
     _reporterNs.report("EndGameLogic", "../EndGameLogic", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfGameManager(extras) {
-    _reporterNs.report("GameManager", "../GameManager", _context.meta, extras);
   }
 
   return {
@@ -23,8 +19,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       MeshCollider = _cc.MeshCollider;
     }, function (_unresolved_2) {
       EndGameLogic = _unresolved_2.EndGameLogic;
-    }, function (_unresolved_3) {
-      GameManager = _unresolved_3.GameManager;
     }],
     execute: function () {
       _crd = true;
@@ -57,19 +51,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         start() {
-          this.endGameLogic = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().node.getComponent(_crd && EndGameLogic === void 0 ? (_reportPossibleCrUseOfEndGameLogic({
-            error: Error()
-          }), EndGameLogic) : EndGameLogic);
+          // this.endGameLogic = GameManager.getInstance().node.getComponent(EndGameLogic)!;
           let collider = this.getComponent(MeshCollider);
           collider.on("onTriggerEnter", this.onTrigger, this);
         }
 
         onTrigger(event) {
-          var _this$endGameLogic;
-
-          (_this$endGameLogic = this.endGameLogic) === null || _this$endGameLogic === void 0 ? void 0 : _this$endGameLogic.startEndGame(); //console.log(event.type, event);
+          (_crd && EndGameLogic === void 0 ? (_reportPossibleCrUseOfEndGameLogic({
+            error: Error()
+          }), EndGameLogic) : EndGameLogic).startEndGame(); //this.endGameLogic?.startEndGame();
+          //console.log(event.type, event);
           //console.log("DODIRUJEM ");
         }
 

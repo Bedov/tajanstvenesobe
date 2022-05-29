@@ -42,7 +42,9 @@ export class LevelButtonClicked extends Component {
         
         if(!this.lockedButton) {
             canvas.getComponent(OpenLevelByName)!.loadAndPlaySceneByNameD( this.levelName.toString() );
+
             DisplayScreenChange.setDisplayToSceneName(this.levelName.toString());
+            
             this.buttonColorsLogic!.lockAllButtons();
         }
     }
