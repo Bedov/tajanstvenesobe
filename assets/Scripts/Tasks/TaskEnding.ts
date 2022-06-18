@@ -57,7 +57,8 @@ export class TaskEnding extends Task {
             // console.log("GlobalManager.getInstance().levelsArray.length: " + GlobalManager.getInstance().levelsArray.length);
 
         if(indexOfCurrentScene < GlobalManager.getInstance().levelsArray.length -1) {
-            GlobalManager.getInstance().levelsArray[indexOfCurrentScene + 1].status = levelStatus.unlocked;
+            if(GlobalManager.getInstance().levelsArray[indexOfCurrentScene + 1].status == levelStatus.locked)
+                 GlobalManager.getInstance().levelsArray[indexOfCurrentScene + 1].status = levelStatus.unlocked;
             GlobalManager.getInstance().activeLevelData =  elevator; //  
             GlobalManager.getInstance().activeLevelData.setLevelProgress(1); 
         } else {

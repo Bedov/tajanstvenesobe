@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, globalProgress, GeneralInformations, _decorator, Component, assetManager, Label, EditBoxComponent, Animation, sys, game, GameStatuType, levelObject, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _class3, _temp, _crd, levelStatus, downloading, settingData, ccclass, property, globalInformations, kinderGardenData, elevator, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, undergroundChamberData, christmasVillage, happyStreetData, easterVillageData, invisablePeopleCity, GlobalManager;
+  var _reporterNs, _cclegacy, globalProgress, GeneralInformations, _decorator, Component, assetManager, Label, EditBoxComponent, Animation, sys, game, GameStatuType, levelObject, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _class3, _temp, _crd, levelStatus, downloading, settingData, ccclass, property, globalInformations, elevator, kinderGardenData, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, undergroundChamberData, christmasVillage, happyStreetData, easterVillageData, invisablePeopleCity, GlobalManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -149,40 +149,42 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       });
 
-      _export("globalInformations", globalInformations = new GeneralInformations()); //Prvi Razred
-
-
-      _export("kinderGardenData", kinderGardenData = new levelObject());
-
-      kinderGardenData.sceneName = "KinderGarden"; //kinderGardenData.setLevelProgress(6);
-
-      kinderGardenData.status = levelStatus.finished;
+      _export("globalInformations", globalInformations = new GeneralInformations());
 
       _export("elevator", elevator = new levelObject());
 
       elevator.sceneName = "MainMenuLift1";
 
+      //Prvi Razred
+      _export("kinderGardenData", kinderGardenData = new levelObject());
+
+      kinderGardenData.sceneName = "KinderGarden"; //kinderGardenData.setLevelProgress(6);
+
+      kinderGardenData.status = levelStatus.unlocked;
+
       _export("birthdayPartyData", birthdayPartyData = new levelObject());
 
       birthdayPartyData.sceneName = "BirthdayParty"; //birthdayPartyData.setLevelProgress(6);
 
-      birthdayPartyData.status = levelStatus.unlocked;
+      birthdayPartyData.status = levelStatus.locked;
 
       _export("playfulCityData", playfulCityData = new levelObject());
 
       playfulCityData.sceneName = "RaziganiGrad"; //playfulCityData.setLevelProgress(6);
-      //playfulCityData.status = levelStatus.unlocked;
+
+      playfulCityData.status = levelStatus.locked;
 
       _export("springFestData", springFestData = new levelObject());
 
       springFestData.sceneName = "ProlecniKarneval"; //springFestData.setLevelProgress(6);
-      //springFestData.status = levelStatus.finished;
+
+      springFestData.status = levelStatus.locked;
 
       _export("medivalVillageData", medivalVillageData = new levelObject());
 
       medivalVillageData.sceneName = "MedivalVillage"; //medivalVillageData.setLevelProgress(8);
-      //medivalVillageData.status = levelStatus.unlocked;
-      //Drugi Razred
+
+      medivalVillageData.status = levelStatus.locked; //Drugi Razred
 
       _export("undergroundChamberData", undergroundChamberData = new levelObject());
 
@@ -192,19 +194,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _export("christmasVillage", christmasVillage = new levelObject());
 
       christmasVillage.sceneName = "Bozicna2";
-      christmasVillage.status = levelStatus.unlocked;
+      christmasVillage.status = levelStatus.finished;
 
       _export("happyStreetData", happyStreetData = new levelObject());
 
       happyStreetData.sceneName = "VeselaUlica";
+      happyStreetData.status = levelStatus.finished;
 
       _export("easterVillageData", easterVillageData = new levelObject());
 
-      easterVillageData.sceneName = "Uskrs"; //easterVillageData.status = levelStatus.unlocked;
+      easterVillageData.sceneName = "Uskrs";
+      easterVillageData.status = levelStatus.finished;
 
       _export("invisablePeopleCity", invisablePeopleCity = new levelObject());
 
       invisablePeopleCity.sceneName = "GradNevidljivihStanovnika";
+      invisablePeopleCity.status = levelStatus.unlocked;
 
       _export("GlobalManager", GlobalManager = (_dec = ccclass('GlobalManager'), _dec2 = property(Number), _dec3 = property(String), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(EditBoxComponent), _dec(_class = (_class2 = (_temp = _class3 = class GlobalManager extends Component {
         constructor(...args) {

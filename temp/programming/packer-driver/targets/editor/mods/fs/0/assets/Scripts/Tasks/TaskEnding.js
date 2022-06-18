@@ -105,7 +105,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           if (indexOfCurrentScene < (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().levelsArray.length - 1) {
-            (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().levelsArray[indexOfCurrentScene + 1].status == (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
+              error: Error()
+            }), levelStatus) : levelStatus).locked) (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
               error: Error()
             }), GlobalManager) : GlobalManager).getInstance().levelsArray[indexOfCurrentScene + 1].status = (_crd && levelStatus === void 0 ? (_reportPossibleCrUseOflevelStatus({
               error: Error()

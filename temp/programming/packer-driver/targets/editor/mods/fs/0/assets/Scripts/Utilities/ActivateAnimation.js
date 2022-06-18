@@ -49,8 +49,10 @@ System.register(["cc"], function (_export, _context) {
 
         activateAnimation() {
           this.objectsToAnimate.forEach(element => {
-            var parentAnimation = element.getComponent(Animation);
-            parentAnimation.play();
+            if (element.active == true) {
+              var parentAnimation = element.getComponent(Animation);
+              parentAnimation.play();
+            }
           });
         }
 

@@ -28,9 +28,11 @@ export class ActivateAnimation extends Component {
         
         
         this.objectsToAnimate.forEach(element => {
+            if(element.active == true) {
             var parentAnimation = element.getComponent(Animation)!;
 
                 parentAnimation.play();
+            }
         
         });
     }

@@ -97,7 +97,7 @@ export class GameManager extends Component {
 
     start() {
         
-
+        this.LanguageName = GlobalManager.getInstance().LanguageName;
         if(this.elevatorScript) {
 
             this.startProgress = Number(GlobalManager.getInstance().activeLevelData!.getLevelProgress());

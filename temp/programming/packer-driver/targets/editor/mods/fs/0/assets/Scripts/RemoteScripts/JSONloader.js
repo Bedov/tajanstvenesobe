@@ -110,6 +110,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           try {
             tasksInProgress++;
+            console.log("Task Added input question 1 : " + questionURL);
             assetManager.loadRemote(remoteUrlRoot.toString(), function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
@@ -129,7 +130,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                 } else console.log("Ne postoje zvukovi za ovu putanju");
 
                 tasksInProgress--;
-                console.log("Task reduced 1");
+                console.log("Task input reduced 1" + questionURL);
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -154,7 +155,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             assetManager.loadRemote(questionURL, function (err, textAsset) {
               try {
                 tasksInProgress++;
-                console.log("Task Added 3 : " + questionURL);
+                console.log("Task Added return question 3 : " + questionURL);
                 var tempTask = new JSONtask1();
                 var parsedJSON = JSON.parse(textAsset.toString());
                 tempTask.question = parsedJSON["question"];
@@ -184,7 +185,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (tempTask.question != undefined) taskJSON.push(tempTask);
                 tasksInProgress--;
-                console.log("Task reduced 3" + questionURL);
+                console.log("Task reduced return question 3" + questionURL);
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -219,7 +220,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           try {
             tasksInProgress++;
-            console.log("Task Added 5");
+            console.log("Task Added quest 5" + questURL);
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
@@ -239,8 +240,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                   }
                 } else console.log("Ne postoje zvukovi za ovu putanju");
 
+                console.log("Task reduced quest 5" + questURL);
                 tasksInProgress--;
-                console.log("Task reduced 5");
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
@@ -262,7 +263,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           try {
             tasksInProgress++;
-            console.log("Task Added 7");
+            console.log("Task Image-Text Quest Added 7" + questURL);
             assetManager.loadRemote(remoteUrlRoot, function (err, textAsset) {
               try {
                 var parsedJSON = JSON.parse(textAsset.toString());
@@ -270,7 +271,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
                 if (parsedJSON["questImage"] != undefined) {
                   tasksInProgress++;
-                  console.log("Task Added 9");
+                  console.log("Task Image-Image Quest Added 9" + questURL);
 
                   try {
                     assetManager.loadRemote(rootURL + parsedJSON["questImage"], (err, fetchedImage) => {
@@ -281,7 +282,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                       spriteFrame.texture = texture;
                       imageObject.questImage = spriteFrame;
                       tasksInProgress--;
-                      console.log("Task reduced 9");
+                      console.log("Task Image-Image Quest reduced 9" + questURL);
                     });
                   } catch (error) {
                     console.log("Slika nije dobro ucitana");
@@ -303,8 +304,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                   }
                 } else console.log("Ne postoje zvukovi za ovu putanju");
 
+                console.log("Task Image-Text Quest Reduced 7" + questURL);
                 tasksInProgress--;
-                console.log("Task reduced 7");
               } catch (error) {
                 console.log("Nisam nasao trazeno polje za parsiranje" + error);
                 return false;
