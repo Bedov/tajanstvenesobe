@@ -115,13 +115,6 @@
     "physicalLocation": "fs/0/assets/Scripts/Utilities/GetFPS.js",
     "mTimestamp": 1652801024587
   },
-  "assets/Scripts/Utilities/ScriptEffects.js": {
-    "imports": {
-      "cc": "quick-pack:/cce/internal/x/cc.js"
-    },
-    "physicalLocation": "fs/0/assets/Scripts/Utilities/ScriptEffects.js",
-    "mTimestamp": 1652801024757
-  },
   "assets/migrate-canvas.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js"
@@ -623,9 +616,9 @@
   "assets/Scripts/Tasks/TaskAutoActive.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_3": "assets/Scripts/Tasks/Task.js",
       "__unresolved_4": "assets/Scripts/GameManager.js",
       "__unresolved_5": "assets/Scripts/RemoteScripts/JSONloader.js",
-      "__unresolved_3": "assets/Scripts/Tasks/Task.js",
       "__unresolved_2": "assets/Scripts/Utilities/GenericUI.js",
       "__unresolved_1": "assets/Scripts/Utilities/ScriptEffects.js",
       "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
@@ -636,8 +629,8 @@
   "assets/Scripts/Tasks/TaskABCquestion.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js",
-      "__unresolved_3": "assets/Scripts/GameManager.js",
       "__unresolved_2": "assets/Scripts/Tasks/Task.js",
+      "__unresolved_3": "assets/Scripts/GameManager.js",
       "__unresolved_1": "assets/Scripts/Utilities/GenericUI-ABC.js",
       "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
     },
@@ -825,9 +818,9 @@
   "assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js": {
     "imports": {
       "cc": "quick-pack:/cce/internal/x/cc.js",
+      "__unresolved_1": "assets/Scripts/Tasks/Task.js",
       "__unresolved_2": "assets/Scripts/GameManager.js",
       "__unresolved_3": "assets/Scripts/RemoteScripts/JSONloader.js",
-      "__unresolved_1": "assets/Scripts/Tasks/Task.js",
       "__unresolved_0": "quick-pack:/cce/internal/code-quality/cr.js"
     },
     "physicalLocation": "fs/0/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js",
@@ -891,6 +884,13 @@
     },
     "physicalLocation": "fs/0/assets/Scripts/GlobalManager.js",
     "mTimestamp": 1655570944002
+  },
+  "assets/Scripts/Utilities/ScriptEffects.js": {
+    "imports": {
+      "cc": "quick-pack:/cce/internal/x/cc.js"
+    },
+    "physicalLocation": "fs/0/assets/Scripts/Utilities/ScriptEffects.js",
+    "mTimestamp": 1655820335148
   },
   "quick-pack:/cce/internal/x/cc.js": {
     "imports": {
@@ -980,7 +980,7 @@
       }
     },
     "physicalLocation": "cce/internal/x/cc.js",
-    "mTimestamp": 1655571467644,
+    "mTimestamp": 1656337785695,
     "isEntry": true,
     "exposeAs": "cce:/internal/x/cc"
   },
@@ -1019,10 +1019,10 @@
       "__unresolved_30": "assets/Scripts/RoomTranslator.js",
       "__unresolved_31": "assets/Scripts/SlideRotateCamera.js",
       "__unresolved_32": "assets/Scripts/SlideRotateCameraElevator.js",
-      "__unresolved_35": "assets/Scripts/Tasks/TaskAutoActive.js",
-      "__unresolved_34": "assets/Scripts/Tasks/TaskABCquestion.js",
-      "__unresolved_36": "assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js",
       "__unresolved_33": "assets/Scripts/Tasks/Task.js",
+      "__unresolved_34": "assets/Scripts/Tasks/TaskABCquestion.js",
+      "__unresolved_35": "assets/Scripts/Tasks/TaskAutoActive.js",
+      "__unresolved_36": "assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js",
       "__unresolved_37": "assets/Scripts/Tasks/TaskEnding.js",
       "__unresolved_38": "assets/Scripts/Tasks/TaskInput.js",
       "__unresolved_39": "assets/Scripts/Tasks/TaskLoading.js",
@@ -1073,13 +1073,13 @@
       "__unresolved_84": "assets/resources/qfw/components/TitleBar.js"
     },
     "physicalLocation": "cce/internal/x/prerequisite-imports.js",
-    "mTimestamp": 1655571467753,
+    "mTimestamp": 1656337786475,
     "isEntry": true,
     "exposeAs": "cce:/internal/x/prerequisite-imports"
   },
   "quick-pack:/cce/internal/code-quality/cr.js": {
     "imports": {},
     "physicalLocation": "cce/internal/code-quality/cr.js",
-    "mTimestamp": 1655571467807
+    "mTimestamp": 1656337786508
   }
 }

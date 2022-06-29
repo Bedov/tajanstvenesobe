@@ -64,9 +64,6 @@
     "./mods/fs/0/assets/Scripts/Utilities/GetFPS.js": {
       "cc": "./mods/cce/internal/x/cc.js"
     },
-    "./mods/fs/0/assets/Scripts/Utilities/ScriptEffects.js": {
-      "cc": "./mods/cce/internal/x/cc.js"
-    },
     "./mods/fs/0/assets/migrate-canvas.js": {
       "cc": "./mods/cce/internal/x/cc.js"
     },
@@ -355,17 +352,17 @@
     },
     "./mods/fs/0/assets/Scripts/Tasks/TaskAutoActive.js": {
       "cc": "./mods/cce/internal/x/cc.js",
+      "__unresolved_3": "./mods/fs/0/assets/Scripts/Tasks/Task.js",
       "__unresolved_4": "./mods/fs/0/assets/Scripts/GameManager.js",
       "__unresolved_5": "./mods/fs/0/assets/Scripts/RemoteScripts/JSONloader.js",
-      "__unresolved_3": "./mods/fs/0/assets/Scripts/Tasks/Task.js",
       "__unresolved_2": "./mods/fs/0/assets/Scripts/Utilities/GenericUI.js",
       "__unresolved_1": "./mods/fs/0/assets/Scripts/Utilities/ScriptEffects.js",
       "__unresolved_0": "./mods/cce/internal/code-quality/cr.js"
     },
     "./mods/fs/0/assets/Scripts/Tasks/TaskABCquestion.js": {
       "cc": "./mods/cce/internal/x/cc.js",
-      "__unresolved_3": "./mods/fs/0/assets/Scripts/GameManager.js",
       "__unresolved_2": "./mods/fs/0/assets/Scripts/Tasks/Task.js",
+      "__unresolved_3": "./mods/fs/0/assets/Scripts/GameManager.js",
       "__unresolved_1": "./mods/fs/0/assets/Scripts/Utilities/GenericUI-ABC.js",
       "__unresolved_0": "./mods/cce/internal/code-quality/cr.js"
     },
@@ -481,9 +478,9 @@
     },
     "./mods/fs/0/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js": {
       "cc": "./mods/cce/internal/x/cc.js",
+      "__unresolved_1": "./mods/fs/0/assets/Scripts/Tasks/Task.js",
       "__unresolved_2": "./mods/fs/0/assets/Scripts/GameManager.js",
       "__unresolved_3": "./mods/fs/0/assets/Scripts/RemoteScripts/JSONloader.js",
-      "__unresolved_1": "./mods/fs/0/assets/Scripts/Tasks/Task.js",
       "__unresolved_0": "./mods/cce/internal/code-quality/cr.js"
     },
     "./mods/fs/0/assets/Scripts/TrophiesManagment.js": {
@@ -520,6 +517,9 @@
       "cc": "./mods/cce/internal/x/cc.js",
       "__unresolved_1": "./mods/fs/0/assets/Scripts/GameManager.js",
       "__unresolved_0": "./mods/cce/internal/code-quality/cr.js"
+    },
+    "./mods/fs/0/assets/Scripts/Utilities/ScriptEffects.js": {
+      "cc": "./mods/cce/internal/x/cc.js"
     },
     "./mods/cce/internal/x/cc.js": {
       "__unresolved_0": "cce:/internal/x/cc-fu/base",
@@ -578,10 +578,10 @@
       "__unresolved_30": "./mods/fs/0/assets/Scripts/RoomTranslator.js",
       "__unresolved_31": "./mods/fs/0/assets/Scripts/SlideRotateCamera.js",
       "__unresolved_32": "./mods/fs/0/assets/Scripts/SlideRotateCameraElevator.js",
-      "__unresolved_35": "./mods/fs/0/assets/Scripts/Tasks/TaskAutoActive.js",
-      "__unresolved_34": "./mods/fs/0/assets/Scripts/Tasks/TaskABCquestion.js",
-      "__unresolved_36": "./mods/fs/0/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js",
       "__unresolved_33": "./mods/fs/0/assets/Scripts/Tasks/Task.js",
+      "__unresolved_34": "./mods/fs/0/assets/Scripts/Tasks/TaskABCquestion.js",
+      "__unresolved_35": "./mods/fs/0/assets/Scripts/Tasks/TaskAutoActive.js",
+      "__unresolved_36": "./mods/fs/0/assets/Scripts/Tasks/TaskAutoActiveLocalAudio.js",
       "__unresolved_37": "./mods/fs/0/assets/Scripts/Tasks/TaskEnding.js",
       "__unresolved_38": "./mods/fs/0/assets/Scripts/Tasks/TaskInput.js",
       "__unresolved_39": "./mods/fs/0/assets/Scripts/Tasks/TaskLoading.js",

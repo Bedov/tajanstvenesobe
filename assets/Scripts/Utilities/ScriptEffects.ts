@@ -67,6 +67,7 @@ export class ScriptEffects extends Component {
                 if( this.node.getComponent(UIOpacity)!.opacity >= time / this._fadeOutCounterMax * 255 && time / this._fadeOutCounterMax * 255 >= 0 ) {
                     this.node.getComponent(UIOpacity)!.opacity =  time / this._fadeOutCounterMax * 255;
                 }
+                    
     }
 
     fadeIn(time: number) { 
@@ -86,6 +87,7 @@ export class ScriptEffects extends Component {
             this.fadeOut(this._fadeOutCounter);
             if( this._fadeOutCounter < 0) {
                 this._fadeOutBool = false;
+                this.node.getComponent(UIOpacity)!.opacity = 0;
                 this._fadeOutCounter = this._fadeOutCounterMax;
                 this.node.active = false;
             }
@@ -95,6 +97,7 @@ export class ScriptEffects extends Component {
             this.fadeIn(this._fadeInCounter);
 
             if( this._fadeInCounter > this._fadeOutCounterMax) {
+                this.node.getComponent(UIOpacity)!.opacity = 255;
                 this._fadeInBool = false;
                 this._fadeInCounter = 0;
             }

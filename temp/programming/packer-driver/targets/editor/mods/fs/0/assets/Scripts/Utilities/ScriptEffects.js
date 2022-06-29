@@ -99,6 +99,7 @@ System.register(["cc"], function (_export, _context) {
 
             if (this._fadeOutCounter < 0) {
               this._fadeOutBool = false;
+              this.node.getComponent(UIOpacity).opacity = 0;
               this._fadeOutCounter = this._fadeOutCounterMax;
               this.node.active = false;
             }
@@ -109,6 +110,7 @@ System.register(["cc"], function (_export, _context) {
             this.fadeIn(this._fadeInCounter);
 
             if (this._fadeInCounter > this._fadeOutCounterMax) {
+              this.node.getComponent(UIOpacity).opacity = 255;
               this._fadeInBool = false;
               this._fadeInCounter = 0;
             }
