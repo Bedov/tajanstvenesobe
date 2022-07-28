@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, find, DetectTypeOfDevice, DetectTypeOfDeviceElevator, elevator, GlobalManager, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, director, Label, sys, AudioSource, find, DetectTypeOfDevice, DetectTypeOfDeviceElevator, elevator, GlobalManager, JSONloader, LoadingHandler, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _temp, _crd, ccclass, property, GameStatuType, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -48,6 +48,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       director = _cc.director;
       Label = _cc.Label;
       sys = _cc.sys;
+      AudioSource = _cc.AudioSource;
       find = _cc.find;
     }, function (_unresolved_2) {
       DetectTypeOfDevice = _unresolved_2.DetectTypeOfDevice;
@@ -107,6 +108,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _defineProperty(this, "settingsUI", void 0);
 
+          _defineProperty(this, "localAudioSource", void 0);
+
           _initializerDefineProperty(this, "Canvas", _descriptor2, this);
 
           _initializerDefineProperty(this, "WorldRoot", _descriptor3, this);
@@ -149,6 +152,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
+          this.getComponent(AudioSource).volume = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).volume;
+          this.getComponent(AudioSource).play();
           this.LanguageName = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
           }), GlobalManager) : GlobalManager).getInstance().LanguageName;
@@ -174,6 +181,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var _this$Canvas, _this$Canvas$getChild, _this$Canvas$getChild2;
 
           GameManager.instance = this;
+          this.localAudioSource = this.getComponent(AudioSource);
           this.jsonLoader = this.node.getComponent(_crd && JSONloader === void 0 ? (_reportPossibleCrUseOfJSONloader({
             error: Error()
           }), JSONloader) : JSONloader);
@@ -199,25 +207,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         getTaskManager() {
           return this.TaskManager;
-        }
-
-        pushMeToAudioArray(audioComponent) {
-          var _this$audioArray;
-
-          (_this$audioArray = this.audioArray) === null || _this$audioArray === void 0 ? void 0 : _this$audioArray.push(audioComponent);
-        }
-
-        setVolume(volume) {
-          var _this$audioArray2, _this$audioArray3, _this$audioArray4;
-
-          console.log("Lenght " + ((_this$audioArray2 = this.audioArray) === null || _this$audioArray2 === void 0 ? void 0 : _this$audioArray2.length));
-          (_this$audioArray3 = this.audioArray) === null || _this$audioArray3 === void 0 ? void 0 : _this$audioArray3.forEach(element => {
-            console.log("element " + element.name + "  VOLUME: " + element.volume);
-          });
-          (_this$audioArray4 = this.audioArray) === null || _this$audioArray4 === void 0 ? void 0 : _this$audioArray4.forEach(element => {
-            element.volume = volume;
-            console.log("Volumen " + element.volume);
-          });
         }
 
         setPlatformType() {

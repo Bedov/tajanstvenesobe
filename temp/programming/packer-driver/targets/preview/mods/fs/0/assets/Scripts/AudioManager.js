@@ -1,7 +1,7 @@
-System.register(["cc"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, _decorator, Component, AudioClip, AudioSource, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _class3, _temp, _crd, ccclass, property, AudioManager;
+  var _reporterNs, _cclegacy, _decorator, Component, AudioClip, AudioSource, assert, clamp01, GlobalManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _class3, _temp, _crd, ccclass, property, AudioManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,13 +11,23 @@ System.register(["cc"], function (_export, _context) {
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "./GlobalManager", _context.meta, extras);
+  }
+
   return {
-    setters: [function (_cc) {
+    setters: [function (_unresolved_) {
+      _reporterNs = _unresolved_;
+    }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
       Component = _cc.Component;
       AudioClip = _cc.AudioClip;
       AudioSource = _cc.AudioSource;
+      assert = _cc.assert;
+      clamp01 = _cc.clamp01;
+    }, function (_unresolved_2) {
+      GlobalManager = _unresolved_2.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -40,7 +50,7 @@ System.register(["cc"], function (_export, _context) {
        *
        */
 
-      _export("AudioManager", AudioManager = (_dec = ccclass('AudioManager'), _dec2 = property(AudioClip), _dec3 = property(AudioClip), _dec4 = property(AudioClip), _dec5 = property(AudioClip), _dec(_class = (_class2 = (_temp = _class3 = class AudioManager extends Component {
+      _export("AudioManager", AudioManager = (_dec = ccclass('AudioManager'), _dec2 = property(AudioClip), _dec3 = property(AudioClip), _dec4 = property(AudioClip), _dec5 = property(AudioClip), _dec6 = property(AudioClip), _dec(_class = (_class2 = (_temp = _class3 = class AudioManager extends Component {
         constructor() {
           super(...arguments);
 
@@ -51,6 +61,8 @@ System.register(["cc"], function (_export, _context) {
           _initializerDefineProperty(this, "negativeSound", _descriptor3, this);
 
           _initializerDefineProperty(this, "clickSound", _descriptor4, this);
+
+          _initializerDefineProperty(this, "music", _descriptor5, this);
 
           _defineProperty(this, "audioSource", null);
         }
@@ -68,23 +80,45 @@ System.register(["cc"], function (_export, _context) {
           this.audioSource = this.node.getComponent(AudioSource);
         }
 
-        start() {// [3]
+        start() {
+          this.playMusic(true);
+          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().setVolume((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).volume);
+        }
+
+        playMusic(loop) {
+          var audioSource = this.audioSource;
+          assert(audioSource, 'AudioManager not inited!');
+          audioSource.loop = loop; //if (!audioSource.playing) {
+          ///    audioSource.playing();
+          //}
         }
 
         positiveSoundPlay() {
-          this.audioSource.playOneShot(this.positiveSound);
+          //this.audioSource.play()
+          this.audioSource.playOneShot(this.positiveSound, this.audioSource.volume);
         }
 
         winSoundPlay() {
-          this.audioSource.playOneShot(this.winSound);
+          this.audioSource.playOneShot(this.winSound, this.audioSource.volume);
         }
 
         negativeSoundPlay() {
-          this.audioSource.playOneShot(this.negativeSound);
+          this.audioSource.playOneShot(this.negativeSound, this.audioSource.volume);
         }
 
         clickSoundPlay() {
-          this.audioSource.playOneShot(this.clickSound);
+          this.audioSource.playOneShot(this.clickSound, this.audioSource.volume);
+        }
+
+        setMusicVolume(flag) {
+          var audioSource = this.audioSource;
+          assert(audioSource, 'AudioManager not inited!');
+          flag = clamp01(flag);
+          audioSource.volume = flag;
         }
 
       }, _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "winSound", [_dec2], {
@@ -103,6 +137,11 @@ System.register(["cc"], function (_export, _context) {
         writable: true,
         initializer: null
       }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "clickSound", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "music", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,

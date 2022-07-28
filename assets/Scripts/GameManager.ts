@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, director, Label, sys, AudioSource, Scene, LightComponent, find, loader, assetManager } from 'cc';
+import { _decorator, Component, Node, AudioClip, director, Label, sys, AudioSource, Scene, LightComponent, find, loader, assetManager } from 'cc';
 import { DetectTypeOfDevice } from './DetectTypeOfDevice';
 import { DetectTypeOfDeviceElevator } from './DetectTypeOfDeviceElevator';
 import { elevator, GlobalManager, levelObject } from './GlobalManager';
@@ -46,6 +46,8 @@ export class GameManager extends Component {
     inputKeyboard? : Node ;
 
     settingsUI? : Node;
+
+    localAudioSource? : AudioSource;
 
     @property(Node)
     Canvas?: Node;
@@ -95,7 +97,11 @@ export class GameManager extends Component {
 
     static instance: GameManager;
 
+
+
     start() {
+        this.getComponent(AudioSource)!.volume = GlobalManager.volume;
+        this.getComponent(AudioSource)!.play();
         
         this.LanguageName = GlobalManager.getInstance().LanguageName;
         if(this.elevatorScript) {
@@ -104,9 +110,6 @@ export class GameManager extends Component {
             
             this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;
         
-
-
-            
         } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
         else {
             this.detectType = find("Canvas")!.getComponent(DetectTypeOfDevice)!; 
@@ -120,6 +123,9 @@ export class GameManager extends Component {
 
     onLoad() {
         GameManager.instance = this;
+
+        this.localAudioSource = this.getComponent(AudioSource)!;
+
 
         this.jsonLoader = this.node.getComponent(JSONloader)!;
         this.loadingHandler = this.node.getComponent(LoadingHandler)!;
@@ -153,23 +159,7 @@ export class GameManager extends Component {
     }
 
 
-    pushMeToAudioArray(audioComponent: AudioSource) {
-        this.audioArray?.push(audioComponent);
-    }
 
-    setVolume(volume: number){
-        console.log("Lenght " +  this.audioArray?.length );
-        
-        this.audioArray?.forEach(element => {
-            console.log("element " + element.name + "  VOLUME: " + element.volume);
-            
-        });
-        
-        this.audioArray?.forEach(element => {
-            element.volume = volume;
-            console.log("Volumen " +  element.volume);
-        });
-    }
 
     setPlatformType() {
         this.inputKeyboard = this.Canvas!.getChildByName("BottomUI")!.getChildByName("Keyboard")!;

@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 10673.101208984852,
+    "mTimestamp": 13364.525417029858,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -389,7 +389,7 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 52071.23020899296,
+    "mTimestamp": 4173888.0523340106,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
@@ -1986,11 +1986,15 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/AudioManager.ts": {
     "mTimestamp": {
-      "mtime": 1651241843833.449,
+      "mtime": 1656711821602.8108,
       "uuid": "f030b0f3-1ab0-4228-af3e-b32430bc1822"
     },
     "chunkId": "assets/Scripts/AudioManager.js",
     "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
       {
         "value": "cc"
       },
@@ -1999,11 +2003,25 @@
         "loc": {
           "start": {
             "line": 2,
-            "column": 68
+            "column": 85
           },
           "end": {
             "line": 2,
-            "column": 72
+            "column": 89
+          }
+        }
+      },
+      {
+        "value": "./GlobalManager",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 30
+          },
+          "end": {
+            "line": 3,
+            "column": 47
           }
         }
       }
@@ -2014,11 +2032,19 @@
     "resolvedImports": [
       {
         "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
         "url": "cce:/internal/x/cc"
       },
       {
         "isExternal": false,
         "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GlobalManager.ts"
       }
     ]
   },
@@ -2280,7 +2306,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GlobalManager.ts": {
     "mTimestamp": {
-      "mtime": 1655570939055.156,
+      "mtime": 1658997322795.064,
       "uuid": "b7380f12-b524-4935-b774-7ace4047d20d"
     },
     "chunkId": "assets/Scripts/GlobalManager.js",
@@ -2306,16 +2332,30 @@
         }
       },
       {
-        "value": "./GameManager",
+        "value": "./AudioManager",
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
             "line": 67,
-            "column": 30
+            "column": 29
           },
           "end": {
             "line": 67,
             "column": 45
+          }
+        }
+      },
+      {
+        "value": "./GameManager",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 68,
+            "column": 43
+          },
+          "end": {
+            "line": 68,
+            "column": 58
           }
         }
       }
@@ -2335,6 +2375,10 @@
       {
         "isExternal": false,
         "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/AudioManager.ts"
       },
       {
         "isExternal": false,
@@ -2472,7 +2516,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GameManager.ts": {
     "mTimestamp": {
-      "mtime": 1655388138882.8533,
+      "mtime": 1656712353062.25,
       "uuid": "69fcfb76-de3f-4141-be46-42dade9e6168"
     },
     "chunkId": "assets/Scripts/GameManager.js",
@@ -2489,11 +2533,11 @@
         "loc": {
           "start": {
             "line": 2,
-            "column": 130
+            "column": 141
           },
           "end": {
             "line": 2,
-            "column": 134
+            "column": 145
           }
         }
       },
@@ -6410,7 +6454,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-ABC.ts": {
     "mTimestamp": {
-      "mtime": 1651242035038.734,
+      "mtime": 1656963298417.1406,
       "uuid": "8b0d1f0b-72d2-405a-a370-06e7e6c13545"
     },
     "chunkId": "assets/Scripts/Utilities/GenericUI-ABC.js",
@@ -6806,7 +6850,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Input.ts": {
     "mTimestamp": {
-      "mtime": 1651242149410.3992,
+      "mtime": 1656963285395.6965,
       "uuid": "6be174f5-7000-4e78-ae40-0f6f7ae5de3b"
     },
     "chunkId": "assets/Scripts/Utilities/GenericUI-Input.js",
@@ -7134,7 +7178,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI-Image.ts": {
     "mTimestamp": {
-      "mtime": 1651242108919.165,
+      "mtime": 1656963292547.4998,
       "uuid": "d304a130-91a8-4acf-8db1-e11de732ed72"
     },
     "chunkId": "assets/Scripts/Utilities/GenericUI-Image.js",
@@ -7526,7 +7570,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/GenericUI.ts": {
     "mTimestamp": {
-      "mtime": 1651242543434.0154,
+      "mtime": 1656963306585.4832,
       "uuid": "27b26b57-849a-409a-ac97-d1957206d7b5"
     },
     "chunkId": "assets/Scripts/Utilities/GenericUI.js",
@@ -7860,7 +7904,7 @@
   },
   "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/SettingsUI.ts": {
     "mTimestamp": {
-      "mtime": 1648478509484.6555,
+      "mtime": 1656713219110.047,
       "uuid": "861c454b-4606-4a60-90e1-21bd82463011"
     },
     "chunkId": "assets/Scripts/Utilities/SettingsUI.js",
@@ -7912,6 +7956,20 @@
             "column": 47
           }
         }
+      },
+      {
+        "value": "../GlobalManager",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 31
+          },
+          "end": {
+            "line": 18,
+            "column": 49
+          }
+        }
       }
     ],
     "modLoMetadata": {
@@ -7937,11 +7995,15 @@
       {
         "isExternal": false,
         "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/Utilities/ScriptEffects.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///Users/aleksandarbedov/Documents/CocosCreator/tajanstvenesobe2/assets/Scripts/GlobalManager.ts"
       }
     ]
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1656337733793,
+    "mTimestamp": 1658993150994,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {

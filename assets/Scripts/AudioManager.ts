@@ -1,5 +1,6 @@
 
-import { _decorator, Component, Node, AudioClip, AudioSource } from 'cc';
+import { _decorator, Component, Node, AudioClip, AudioSource, assert, clamp01 } from 'cc';
+import { GlobalManager } from './GlobalManager';
 const { ccclass, property } = _decorator;
 
 /**
@@ -16,6 +17,9 @@ const { ccclass, property } = _decorator;
  
 @ccclass('AudioManager')
 export class AudioManager extends Component {
+    
+    
+    
     @property(AudioClip)
     winSound?: AudioClip;
 
@@ -27,6 +31,9 @@ export class AudioManager extends Component {
 
     @property(AudioClip)
     clickSound?: AudioClip;
+
+    @property(AudioClip)
+    music?: AudioClip;
     
     private audioSource: AudioSource = null!;
 
@@ -46,23 +53,46 @@ export class AudioManager extends Component {
     }
 
     start () {
-        // [3]
+        this.playMusic(true);
+
+        GlobalManager.getInstance().setVolume(GlobalManager.volume);
+    }
+
+    playMusic (loop: boolean) {
+        const audioSource = this.audioSource!;
+        assert(audioSource, 'AudioManager not inited!');
+
+        audioSource.loop = loop;
+        //if (!audioSource.playing) {
+        ///    audioSource.playing();
+        //}
     }
 
     positiveSoundPlay() {
-        this.audioSource.playOneShot(this.positiveSound!);
+        //this.audioSource.play()
+        this.audioSource.playOneShot(this.positiveSound!, this.audioSource.volume);
     }
 
     winSoundPlay() {
-        this.audioSource.playOneShot(this.winSound!);
+        this.audioSource.playOneShot(this.winSound!, this.audioSource.volume);
     }
 
     negativeSoundPlay() {
-        this.audioSource.playOneShot(this.negativeSound!);
+        this.audioSource.playOneShot(this.negativeSound!, this.audioSource.volume);
     }
 
     clickSoundPlay() {
-        this.audioSource.playOneShot(this.clickSound!);
+        this.audioSource.playOneShot(this.clickSound!, this.audioSource.volume);
+    }
+
+    setMusicVolume (flag: number) {
+        
+        const audioSource = this.audioSource!;
+        assert(audioSource, 'AudioManager not inited!');
+
+        flag = clamp01(flag);
+        audioSource.volume = flag;
+        
     }
 
 }

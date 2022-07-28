@@ -78,7 +78,7 @@ export class GenericUIABC extends Component {
 
 
         this.audioSource = this.node.getComponent(AudioSource)!;
-        GameManager.getInstance().pushMeToAudioArray(this.audioSource);
+        //GameManager.getInstance().pushMeToAudioArray(this.audioSource);
 
         if(this.node.getChildByName("Wrong") != undefined && this.node.getChildByName("Wrong") != null)
             this.ScriptableFromWrong =  this.node.getChildByName("Wrong")!.getComponent(ScriptEffects)! ;

@@ -64,7 +64,8 @@ var settingData = false;
 
 
 import { _decorator, Component, Node, assetManager, Label, EditBoxComponent, Animation, AffineTransform, sys, game, director, Scene, find } from 'cc';
-import { GameStatuType } from './GameManager';
+import { AudioManager } from './AudioManager';
+import { GameManager, GameStatuType } from './GameManager';
 import { OpenLevelByName } from './Utilities/OpenLevelByName';
 const { ccclass, property } = _decorator;
 
@@ -114,28 +115,28 @@ export {elevator};
 var kinderGardenData = new levelObject();
 kinderGardenData.sceneName = "KinderGarden";
 //kinderGardenData.setLevelProgress(6);
-kinderGardenData.status = levelStatus.unlocked;
+kinderGardenData.status = levelStatus.finished;
 
 
 var birthdayPartyData = new levelObject();
 birthdayPartyData.sceneName = "BirthdayParty";
 //birthdayPartyData.setLevelProgress(6);
-birthdayPartyData.status = levelStatus.locked;
+birthdayPartyData.status = levelStatus.finished;
 
 var playfulCityData = new levelObject();
 playfulCityData.sceneName = "RaziganiGrad";
 //playfulCityData.setLevelProgress(6);
-playfulCityData.status = levelStatus.locked;
+playfulCityData.status = levelStatus.finished;
 
 var springFestData = new levelObject();
 springFestData.sceneName = "ProlecniKarneval";
 //springFestData.setLevelProgress(6);
-springFestData.status = levelStatus.locked;
+springFestData.status = levelStatus.finished;
 
 var medivalVillageData = new levelObject();
 medivalVillageData.sceneName = "MedivalVillage";
 //medivalVillageData.setLevelProgress(8);
-medivalVillageData.status = levelStatus.locked;
+medivalVillageData.status = levelStatus.unlocked;
 
 
 
@@ -165,6 +166,8 @@ export { kinderGardenData, birthdayPartyData, playfulCityData, springFestData, m
  
 @ccclass('GlobalManager')
 export class GlobalManager extends Component {
+
+    static volume  : number = 1; 
 
     static getGlobal() {
         return globalInformations;
@@ -286,6 +289,15 @@ export class GlobalManager extends Component {
 
     }
 
+
+    
+    setVolume(volume: number){
+        GlobalManager.volume = volume;
+        AudioManager.getInstance().setMusicVolume(volume);
+        GameManager.getInstance().localAudioSource!.volume = volume;
+        
+
+    }
     
     setPlatformType() {
         

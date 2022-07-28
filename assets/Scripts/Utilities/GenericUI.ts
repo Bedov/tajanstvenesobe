@@ -47,7 +47,7 @@ export class GenericUI extends Component {
     start () {
         this.audioSource = this.node.getComponent(AudioSource)!;
 
-        GameManager.getInstance().pushMeToAudioArray(this.audioSource);
+        //GameManager.getInstance().pushMeToAudioArray(this.audioSource);
 
     }
 

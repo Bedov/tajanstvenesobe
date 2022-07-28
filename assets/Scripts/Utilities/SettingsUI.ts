@@ -16,6 +16,7 @@ const { ccclass, property } = _decorator;
  *
  */
  import { GlobalManager } from '../GlobalManager';
+import { AudioManager } from '../AudioManager';
  
 @ccclass('SettingsUI')
 export class SettingsUI extends Component {
@@ -61,6 +62,20 @@ export class SettingsUI extends Component {
 
     start () {
         this.defaultMoveSpeed = GameManager.getInstance().moveSpeed;
+        this.setStartingMuteCheck();
+    }
+
+    setStartingMuteCheck() {
+        if(GlobalManager.volume == 1) {
+            this.normalSoundIcon.active = true;
+            this.muteSoundIcon.active = false;
+        }
+        else {
+            this.normalSoundIcon.active = false;
+            this.muteSoundIcon.active = true;
+        }
+           
+
     }
 
     sliderChanged(event: Event, customEventData: string){
@@ -77,7 +92,8 @@ export class SettingsUI extends Component {
         else
             volume = 0;
 
-        GameManager.getInstance().setVolume(volume);
+        
+        GlobalManager.getInstance().setVolume(volume);
     }
 
     toggleChecked(event: Event, customEventData: string){

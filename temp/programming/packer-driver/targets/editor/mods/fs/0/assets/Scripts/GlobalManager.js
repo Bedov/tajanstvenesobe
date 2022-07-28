@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, globalProgress, GeneralInformations, _decorator, Component, assetManager, Label, EditBoxComponent, Animation, sys, game, GameStatuType, levelObject, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _class3, _temp, _crd, levelStatus, downloading, settingData, ccclass, property, globalInformations, elevator, kinderGardenData, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, undergroundChamberData, christmasVillage, happyStreetData, easterVillageData, invisablePeopleCity, GlobalManager;
+  var _reporterNs, _cclegacy, globalProgress, GeneralInformations, _decorator, Component, assetManager, Label, EditBoxComponent, Animation, sys, game, AudioManager, GameManager, GameStatuType, levelObject, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _class3, _temp, _crd, levelStatus, downloading, settingData, ccclass, property, globalInformations, elevator, kinderGardenData, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, undergroundChamberData, christmasVillage, happyStreetData, easterVillageData, invisablePeopleCity, GlobalManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -10,6 +10,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _reportPossibleCrUseOfAudioManager(extras) {
+    _reporterNs.report("AudioManager", "./AudioManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGameManager(extras) {
+    _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
+  }
 
   function _reportPossibleCrUseOfGameStatuType(extras) {
     _reporterNs.report("GameStatuType", "./GameManager", _context.meta, extras);
@@ -36,7 +44,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       sys = _cc.sys;
       game = _cc.game;
     }, function (_unresolved_2) {
-      GameStatuType = _unresolved_2.GameStatuType;
+      AudioManager = _unresolved_2.AudioManager;
+    }, function (_unresolved_3) {
+      GameManager = _unresolved_3.GameManager;
+      GameStatuType = _unresolved_3.GameStatuType;
     }],
     execute: function () {
       _crd = true;
@@ -160,31 +171,31 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       kinderGardenData.sceneName = "KinderGarden"; //kinderGardenData.setLevelProgress(6);
 
-      kinderGardenData.status = levelStatus.unlocked;
+      kinderGardenData.status = levelStatus.finished;
 
       _export("birthdayPartyData", birthdayPartyData = new levelObject());
 
       birthdayPartyData.sceneName = "BirthdayParty"; //birthdayPartyData.setLevelProgress(6);
 
-      birthdayPartyData.status = levelStatus.locked;
+      birthdayPartyData.status = levelStatus.finished;
 
       _export("playfulCityData", playfulCityData = new levelObject());
 
       playfulCityData.sceneName = "RaziganiGrad"; //playfulCityData.setLevelProgress(6);
 
-      playfulCityData.status = levelStatus.locked;
+      playfulCityData.status = levelStatus.finished;
 
       _export("springFestData", springFestData = new levelObject());
 
       springFestData.sceneName = "ProlecniKarneval"; //springFestData.setLevelProgress(6);
 
-      springFestData.status = levelStatus.locked;
+      springFestData.status = levelStatus.finished;
 
       _export("medivalVillageData", medivalVillageData = new levelObject());
 
       medivalVillageData.sceneName = "MedivalVillage"; //medivalVillageData.setLevelProgress(8);
 
-      medivalVillageData.status = levelStatus.locked; //Drugi Razred
+      medivalVillageData.status = levelStatus.unlocked; //Drugi Razred
 
       _export("undergroundChamberData", undergroundChamberData = new levelObject());
 
@@ -313,6 +324,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         refreshLevelButtons() {}
 
+        setVolume(volume) {
+          GlobalManager.volume = volume;
+          (_crd && AudioManager === void 0 ? (_reportPossibleCrUseOfAudioManager({
+            error: Error()
+          }), AudioManager) : AudioManager).getInstance().setMusicVolume(volume);
+          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance().localAudioSource.volume = volume;
+        }
+
         setPlatformType() {
           if (sys.os == sys.OS.ANDROID || sys.os == sys.OS.IOS || sys.platform == sys.Platform.MOBILE_BROWSER) this.isMobileOrTablet = true;
         }
@@ -414,7 +435,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           return generalProgress;
         }
 
-      }, _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "projectNumber", [_dec2], {
+      }, _defineProperty(_class3, "volume", 1), _defineProperty(_class3, "instance", void 0), _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "projectNumber", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,

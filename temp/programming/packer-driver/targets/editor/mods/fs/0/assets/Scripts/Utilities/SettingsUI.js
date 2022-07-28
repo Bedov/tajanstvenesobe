@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Node, Slider, Toggle, GameManager, GameStatuType, ScriptEffects, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, SettingsUI;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Slider, Toggle, GameManager, GameStatuType, ScriptEffects, GlobalManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp, _crd, ccclass, property, SettingsUI;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,6 +23,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("ScriptEffects", "./ScriptEffects", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "../GlobalManager", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -38,6 +42,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       GameStatuType = _unresolved_2.GameStatuType;
     }, function (_unresolved_3) {
       ScriptEffects = _unresolved_3.ScriptEffects;
+    }, function (_unresolved_4) {
+      GlobalManager = _unresolved_4.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -98,6 +104,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.defaultMoveSpeed = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance().moveSpeed;
+          this.setStartingMuteCheck();
+        }
+
+        setStartingMuteCheck() {
+          if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).volume == 1) {
+            this.normalSoundIcon.active = true;
+            this.muteSoundIcon.active = false;
+          } else {
+            this.normalSoundIcon.active = false;
+            this.muteSoundIcon.active = true;
+          }
         }
 
         sliderChanged(event, customEventData) {
@@ -111,9 +130,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.muteSoundIcon.active = !this.zvukCheckpoint.isChecked;
           var volume;
           if (this.zvukCheckpoint.isChecked) volume = 1;else volume = 0;
-          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().setVolume(volume);
+          }), GlobalManager) : GlobalManager).getInstance().setVolume(volume);
         }
 
         toggleChecked(event, customEventData) {

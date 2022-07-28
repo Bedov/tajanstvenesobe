@@ -110,10 +110,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         start() {
-          this.audioSource = this.node.getComponent(AudioSource);
-          (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance().pushMeToAudioArray(this.audioSource);
+          this.audioSource = this.node.getComponent(AudioSource); //GameManager.getInstance().pushMeToAudioArray(this.audioSource);
         }
 
         turnOnGenericTaskJSONwithReturn(JSONtask, tempTask) {
