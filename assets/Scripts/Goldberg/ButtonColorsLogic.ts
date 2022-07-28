@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, find, Material, Mesh, MeshRenderer, Button } from 'cc';
+import { _decorator, Component, Node, find, Material, Mesh, MeshRenderer, Button, Vec2, Vec3 } from 'cc';
 import { globalInformations, GlobalManager, levelStatus } from '../GlobalManager';
 import { LevelButtonClicked } from '../UI/LevelButtoClicked';
 const { ccclass, property } = _decorator;
@@ -15,6 +15,9 @@ export class ButtonColorsLogic extends Component {
 
     @property(Material)
     finishedMaterial?: Material ;
+
+    @property(Node)
+    polugaTutorial?: Node ;
 
     button1? : Node; 
     button2? : Node; 
@@ -40,6 +43,7 @@ export class ButtonColorsLogic extends Component {
         this.setSceneNamesToButtons();
     }
 
+
     checkTutorialEnd(){
         if( GlobalManager.getInstance().activeLevelData.getLevelProgress() != 0 ) {
             this.refreshColors( GlobalManager.getInstance().findGeneralProgress());
@@ -61,6 +65,8 @@ export class ButtonColorsLogic extends Component {
     }
 
     refreshColors(progress: Number) {
+        
+        this.setPolugaPosition(progress);
 
         for (let index = 0; index < this.buttonsArray.length; index++) {
             const element = this.buttonsArray[index].getComponent(MeshRenderer)!.setMaterial(this.lockedMaterial!, 0);
@@ -74,6 +80,29 @@ export class ButtonColorsLogic extends Component {
         if( progress < this.buttonsArray.length) {
             this.buttonsArray[Number(progress)].getComponent(LevelButtonClicked)!.lockedButton = false;
             this.buttonsArray[Number(progress)].getComponent(MeshRenderer)!.setMaterial(this.unlockedMaterial!, 0);
+        }
+    }
+
+    setPolugaPosition(progress: Number) {
+        switch (progress) {
+            case 0:
+                this.polugaTutorial?.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 11.648 , this.polugaTutorial.getPosition().z));
+                break;
+            case 1:
+                this.polugaTutorial?.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 10.848 , this.polugaTutorial.getPosition().z));
+                break;
+            case 2:
+                this.polugaTutorial?.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 10.018 , this.polugaTutorial.getPosition().z));
+                break;
+            case 3:
+                this.polugaTutorial?.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 9.268 , this.polugaTutorial.getPosition().z));
+                break;
+            case 4:
+                this.polugaTutorial?.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 8.428 , this.polugaTutorial.getPosition().z));
+                break;
+            default:
+                this.polugaTutorial?.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 10.108 , this.polugaTutorial.getPosition().z));
+                break;
         }
     }
 

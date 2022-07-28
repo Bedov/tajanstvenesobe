@@ -144,8 +144,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         static getInstance() {
-          if (!this.instance) {
-            GameManager.instance = new GameManager();
+          if (!GameManager.instance) {
+            console.log("LATE INSTANCE");
           }
 
           return GameManager.instance;
@@ -156,23 +156,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), GlobalManager) : GlobalManager).volume;
           this.getComponent(AudioSource).play();
-          this.LanguageName = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-            error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().LanguageName;
-
-          if (this.elevatorScript) {
-            this.startProgress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
-              error: Error()
-            }), GlobalManager) : GlobalManager).getInstance().activeLevelData.getLevelProgress());
-            this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
-              error: Error()
-            }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator);
-          } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
-          else {
-              this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
-                error: Error()
-              }), DetectTypeOfDevice) : DetectTypeOfDevice);
-            }
         }
 
         puttingThingsTogether() {}
@@ -181,6 +164,31 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var _this$Canvas, _this$Canvas$getChild, _this$Canvas$getChild2;
 
           GameManager.instance = this;
+
+          if (this.elevatorScript) {
+            this.startProgress = Number((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+              error: Error()
+            }), GlobalManager) : GlobalManager).getInstance().activeLevelData.getLevelProgress());
+            console.log("1  ", find("Canvas"));
+            console.log("2  ", find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
+              error: Error()
+            }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator));
+            this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDeviceElevator === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDeviceElevator({
+              error: Error()
+            }), DetectTypeOfDeviceElevator) : DetectTypeOfDeviceElevator);
+          } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
+          else {
+              console.log("3  ", find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
+                error: Error()
+              }), DetectTypeOfDevice) : DetectTypeOfDevice));
+              this.detectType = find("Canvas").getComponent(_crd && DetectTypeOfDevice === void 0 ? (_reportPossibleCrUseOfDetectTypeOfDevice({
+                error: Error()
+              }), DetectTypeOfDevice) : DetectTypeOfDevice);
+            }
+
+          this.LanguageName = (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
+            error: Error()
+          }), GlobalManager) : GlobalManager).getInstance().LanguageName;
           this.localAudioSource = this.getComponent(AudioSource);
           this.jsonLoader = this.node.getComponent(_crd && JSONloader === void 0 ? (_reportPossibleCrUseOfJSONloader({
             error: Error()

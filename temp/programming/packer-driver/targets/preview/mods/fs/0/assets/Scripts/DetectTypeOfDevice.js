@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, macro, GameManager, GameStatuType, _dec, _class, _temp, _crd, ccclass, property, KEYCODE, DetectTypeOfDevice;
+  var _reporterNs, _cclegacy, _decorator, Component, systemEvent, SystemEvent, macro, GameManager, GameStatuType, GlobalManager, _dec, _class, _temp, _crd, ccclass, property, KEYCODE, DetectTypeOfDevice;
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -11,6 +11,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
   function _reportPossibleCrUseOfGameStatuType(extras) {
     _reporterNs.report("GameStatuType", "./GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGlobalManager(extras) {
+    _reporterNs.report("GlobalManager", "./GlobalManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfScriptEffects(extras) {
@@ -30,6 +34,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
       GameStatuType = _unresolved_2.GameStatuType;
+    }, function (_unresolved_3) {
+      GlobalManager = _unresolved_3.GlobalManager;
     }],
     execute: function () {
       _crd = true;
@@ -129,9 +135,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         checkProgressForTutorial() {
-          if ((_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+          if ((_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GameManager) : GameManager).getInstance().Progress != 0) {
+          }), GlobalManager) : GlobalManager).getInstance().findGeneralProgress() != 0) {
             this._moveTutorialEndBool = true;
             this._moveTimerBool = false;
             this._lookdontRepeatTutorialEndevent = true;

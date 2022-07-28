@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, AudioClip, director, Label, sys, AudioSource, Scene, LightComponent, find, loader, assetManager } from 'cc';
+import { _decorator, Component, Node, AudioClip, director, Label, sys, AudioSource, Scene, LightComponent, find, loader, assetManager, Game } from 'cc';
 import { DetectTypeOfDevice } from './DetectTypeOfDevice';
 import { DetectTypeOfDeviceElevator } from './DetectTypeOfDeviceElevator';
 import { elevator, GlobalManager, levelObject } from './GlobalManager';
@@ -88,9 +88,9 @@ export class GameManager extends Component {
     debugMode = false;
 
     public static getInstance(): GameManager {
-        if (!this.instance) {
-            GameManager.instance = new GameManager();
-            
+        if (!GameManager.instance) {
+            console.log("LATE INSTANCE");
+
         }
         return GameManager.instance;
     }
@@ -102,18 +102,8 @@ export class GameManager extends Component {
     start() {
         this.getComponent(AudioSource)!.volume = GlobalManager.volume;
         this.getComponent(AudioSource)!.play();
-        
-        this.LanguageName = GlobalManager.getInstance().LanguageName;
-        if(this.elevatorScript) {
 
-            this.startProgress = Number(GlobalManager.getInstance().activeLevelData!.getLevelProgress());
-            
-            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;
-        
-        } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
-        else {
-            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDevice)!; 
-        }
+  
     }
 
 
@@ -123,6 +113,25 @@ export class GameManager extends Component {
 
     onLoad() {
         GameManager.instance = this;
+
+        if(this.elevatorScript) {
+
+            this.startProgress = Number(GlobalManager.getInstance().activeLevelData!.getLevelProgress());
+            
+            console.log("1  ", find("Canvas"));
+            console.log("2  ", find("Canvas")!.getComponent(DetectTypeOfDeviceElevator));
+            
+            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDeviceElevator)!;
+        
+        } // this.Player!.getComponent(FirstPersonCameraMovementElevator)!;
+        else {
+            console.log("3  ", find("Canvas")!.getComponent(DetectTypeOfDevice));
+            this.detectType = find("Canvas")!.getComponent(DetectTypeOfDevice)!; 
+        }
+
+        this.LanguageName = GlobalManager.getInstance().LanguageName;
+        
+        
 
         this.localAudioSource = this.getComponent(AudioSource)!;
 

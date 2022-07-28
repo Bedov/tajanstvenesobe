@@ -115,28 +115,28 @@ export {elevator};
 var kinderGardenData = new levelObject();
 kinderGardenData.sceneName = "KinderGarden";
 //kinderGardenData.setLevelProgress(6);
-kinderGardenData.status = levelStatus.finished;
+kinderGardenData.status = levelStatus.unlocked;
 
 
 var birthdayPartyData = new levelObject();
 birthdayPartyData.sceneName = "BirthdayParty";
 //birthdayPartyData.setLevelProgress(6);
-birthdayPartyData.status = levelStatus.finished;
+birthdayPartyData.status = levelStatus.locked;
 
 var playfulCityData = new levelObject();
 playfulCityData.sceneName = "RaziganiGrad";
 //playfulCityData.setLevelProgress(6);
-playfulCityData.status = levelStatus.finished;
+playfulCityData.status = levelStatus.locked;
 
 var springFestData = new levelObject();
 springFestData.sceneName = "ProlecniKarneval";
 //springFestData.setLevelProgress(6);
-springFestData.status = levelStatus.finished;
+springFestData.status = levelStatus.locked;
 
 var medivalVillageData = new levelObject();
 medivalVillageData.sceneName = "MedivalVillage";
 //medivalVillageData.setLevelProgress(8);
-medivalVillageData.status = levelStatus.unlocked;
+medivalVillageData.status = levelStatus.locked;
 
 
 
@@ -412,6 +412,7 @@ export class GlobalManager extends Component {
 
             if(GlobalManager.getInstance().levelsArray[index].status == levelStatus.finished)
                 generalProgress++;
+
             
             //if(GlobalManager.getInstance().levelsArray[index].status == levelStatus.unlocked) {
             //    generalProgress = index;

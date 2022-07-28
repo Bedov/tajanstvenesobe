@@ -82,6 +82,7 @@ export class TaskAutoActive extends Task {
     }
 
     checkExecution() {
+        
         if(this.isItOkToExecute() && GameManager.getInstance().detectType?._moveTutorialEndBool && GameManager.getInstance().detectType?._lookTutorialEndBool)
             this.showTask();
 

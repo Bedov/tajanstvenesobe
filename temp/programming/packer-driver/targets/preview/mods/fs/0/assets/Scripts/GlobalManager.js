@@ -171,31 +171,31 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
       kinderGardenData.sceneName = "KinderGarden"; //kinderGardenData.setLevelProgress(6);
 
-      kinderGardenData.status = levelStatus.finished;
+      kinderGardenData.status = levelStatus.unlocked;
 
       _export("birthdayPartyData", birthdayPartyData = new levelObject());
 
       birthdayPartyData.sceneName = "BirthdayParty"; //birthdayPartyData.setLevelProgress(6);
 
-      birthdayPartyData.status = levelStatus.finished;
+      birthdayPartyData.status = levelStatus.locked;
 
       _export("playfulCityData", playfulCityData = new levelObject());
 
       playfulCityData.sceneName = "RaziganiGrad"; //playfulCityData.setLevelProgress(6);
 
-      playfulCityData.status = levelStatus.finished;
+      playfulCityData.status = levelStatus.locked;
 
       _export("springFestData", springFestData = new levelObject());
 
       springFestData.sceneName = "ProlecniKarneval"; //springFestData.setLevelProgress(6);
 
-      springFestData.status = levelStatus.finished;
+      springFestData.status = levelStatus.locked;
 
       _export("medivalVillageData", medivalVillageData = new levelObject());
 
       medivalVillageData.sceneName = "MedivalVillage"; //medivalVillageData.setLevelProgress(8);
 
-      medivalVillageData.status = levelStatus.unlocked; //Drugi Razred
+      medivalVillageData.status = levelStatus.locked; //Drugi Razred
 
       _export("undergroundChamberData", undergroundChamberData = new levelObject());
 

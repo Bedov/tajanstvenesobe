@@ -1,6 +1,7 @@
 
 import { _decorator, Component, Node, sys, systemEvent, SystemEvent, macro, KeyCode, UIOpacityComponent } from 'cc';
 import { GameManager, GameStatuType } from './GameManager';
+import { GlobalManager } from './GlobalManager';
 const { ccclass, property } = _decorator;
 
 /**
@@ -100,7 +101,7 @@ export class DetectTypeOfDevice extends Component {
     }
 
     checkProgressForTutorial() {
-        if(GameManager.getInstance().Progress != 0) {
+        if(GlobalManager.getInstance().findGeneralProgress() != 0) {
             this._moveTutorialEndBool = true;
             this._moveTimerBool = false;
             this._lookdontRepeatTutorialEndevent = true;

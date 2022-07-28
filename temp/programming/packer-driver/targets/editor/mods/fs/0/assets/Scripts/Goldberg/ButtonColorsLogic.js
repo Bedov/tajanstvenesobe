@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Component, Material, MeshRenderer, GlobalManager, LevelButtonClicked, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp, _crd, ccclass, property, ButtonColorsLogic;
+  var _reporterNs, _cclegacy, _decorator, Component, Node, Material, MeshRenderer, Vec3, GlobalManager, LevelButtonClicked, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp, _crd, ccclass, property, ButtonColorsLogic;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -26,8 +26,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       _cclegacy = _cc.cclegacy;
       _decorator = _cc._decorator;
       Component = _cc.Component;
+      Node = _cc.Node;
       Material = _cc.Material;
       MeshRenderer = _cc.MeshRenderer;
+      Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
       GlobalManager = _unresolved_2.GlobalManager;
     }, function (_unresolved_3) {
@@ -43,7 +45,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         property
       } = _decorator);
 
-      _export("ButtonColorsLogic", ButtonColorsLogic = (_dec = ccclass('ButtonColorsLogic'), _dec2 = property(Material), _dec3 = property(Material), _dec4 = property(Material), _dec(_class = (_class2 = (_temp = class ButtonColorsLogic extends Component {
+      _export("ButtonColorsLogic", ButtonColorsLogic = (_dec = ccclass('ButtonColorsLogic'), _dec2 = property(Material), _dec3 = property(Material), _dec4 = property(Material), _dec5 = property(Node), _dec(_class = (_class2 = (_temp = class ButtonColorsLogic extends Component {
         constructor(...args) {
           super(...args);
 
@@ -52,6 +54,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           _initializerDefineProperty(this, "unlockedMaterial", _descriptor2, this);
 
           _initializerDefineProperty(this, "finishedMaterial", _descriptor3, this);
+
+          _initializerDefineProperty(this, "polugaTutorial", _descriptor4, this);
 
           _defineProperty(this, "button1", void 0);
 
@@ -99,6 +103,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         refreshColors(progress) {
+          this.setPolugaPosition(progress);
+
           for (let index = 0; index < this.buttonsArray.length; index++) {
             const element = this.buttonsArray[index].getComponent(MeshRenderer).setMaterial(this.lockedMaterial, 0);
           }
@@ -115,6 +121,36 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               error: Error()
             }), LevelButtonClicked) : LevelButtonClicked).lockedButton = false;
             this.buttonsArray[Number(progress)].getComponent(MeshRenderer).setMaterial(this.unlockedMaterial, 0);
+          }
+        }
+
+        setPolugaPosition(progress) {
+          var _this$polugaTutorial, _this$polugaTutorial2, _this$polugaTutorial3, _this$polugaTutorial4, _this$polugaTutorial5, _this$polugaTutorial6;
+
+          switch (progress) {
+            case 0:
+              (_this$polugaTutorial = this.polugaTutorial) === null || _this$polugaTutorial === void 0 ? void 0 : _this$polugaTutorial.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 11.648, this.polugaTutorial.getPosition().z));
+              break;
+
+            case 1:
+              (_this$polugaTutorial2 = this.polugaTutorial) === null || _this$polugaTutorial2 === void 0 ? void 0 : _this$polugaTutorial2.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 10.848, this.polugaTutorial.getPosition().z));
+              break;
+
+            case 2:
+              (_this$polugaTutorial3 = this.polugaTutorial) === null || _this$polugaTutorial3 === void 0 ? void 0 : _this$polugaTutorial3.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 10.018, this.polugaTutorial.getPosition().z));
+              break;
+
+            case 3:
+              (_this$polugaTutorial4 = this.polugaTutorial) === null || _this$polugaTutorial4 === void 0 ? void 0 : _this$polugaTutorial4.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 9.268, this.polugaTutorial.getPosition().z));
+              break;
+
+            case 4:
+              (_this$polugaTutorial5 = this.polugaTutorial) === null || _this$polugaTutorial5 === void 0 ? void 0 : _this$polugaTutorial5.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 8.428, this.polugaTutorial.getPosition().z));
+              break;
+
+            default:
+              (_this$polugaTutorial6 = this.polugaTutorial) === null || _this$polugaTutorial6 === void 0 ? void 0 : _this$polugaTutorial6.setPosition(new Vec3(this.polugaTutorial.getPosition().x, 10.108, this.polugaTutorial.getPosition().z));
+              break;
           }
         }
 
@@ -140,6 +176,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         writable: true,
         initializer: null
       }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "finishedMaterial", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: null
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "polugaTutorial", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
