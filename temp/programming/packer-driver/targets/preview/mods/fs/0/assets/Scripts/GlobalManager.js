@@ -200,27 +200,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       _export("undergroundChamberData", undergroundChamberData = new levelObject());
 
       undergroundChamberData.sceneName = "PodzemnaOdaja";
-      undergroundChamberData.status = levelStatus.finished;
+      undergroundChamberData.status = levelStatus.unlocked;
 
       _export("christmasVillage", christmasVillage = new levelObject());
 
       christmasVillage.sceneName = "Bozicna2";
-      christmasVillage.status = levelStatus.finished;
+      christmasVillage.status = levelStatus.locked;
 
       _export("happyStreetData", happyStreetData = new levelObject());
 
       happyStreetData.sceneName = "VeselaUlica";
-      happyStreetData.status = levelStatus.finished;
+      happyStreetData.status = levelStatus.locked;
 
       _export("easterVillageData", easterVillageData = new levelObject());
 
       easterVillageData.sceneName = "Uskrs";
-      easterVillageData.status = levelStatus.finished;
+      easterVillageData.status = levelStatus.locked;
 
       _export("invisablePeopleCity", invisablePeopleCity = new levelObject());
 
       invisablePeopleCity.sceneName = "GradNevidljivihStanovnika";
-      invisablePeopleCity.status = levelStatus.unlocked;
+      invisablePeopleCity.status = levelStatus.locked;
 
       _export("GlobalManager", GlobalManager = (_dec = ccclass('GlobalManager'), _dec2 = property(Number), _dec3 = property(String), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property(Label), _dec9 = property(Label), _dec10 = property(Label), _dec11 = property(Label), _dec12 = property(Label), _dec13 = property(Label), _dec14 = property(EditBoxComponent), _dec(_class = (_class2 = (_temp = _class3 = class GlobalManager extends Component {
         constructor() {

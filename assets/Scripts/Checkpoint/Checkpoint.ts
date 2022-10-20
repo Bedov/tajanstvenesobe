@@ -31,6 +31,8 @@ export class Checkpoint extends Component {
     start () {
         this.findQuestion();
         this.findQuestPrvi();
+
+        
     }
 
     findQuestion() {

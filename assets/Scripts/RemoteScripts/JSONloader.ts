@@ -2,10 +2,6 @@
 import { _decorator, Component, Node, JsonAsset, assetManager, Game, AudioClip, AudioSource, SpriteFrame, ImageAsset, Texture2D, Sprite, game} from 'cc';
 const { ccclass, property } = _decorator;
 
-//const fs = require('fs');
-//import{  fs} from 'fs-extra';
-//https://docs.cocos.com/creator/3.1/manual/en/asset/dynamic-load-resources.html
-
 /**
  * Predefined variables
  * Name = JSONloader
@@ -18,7 +14,6 @@ const { ccclass, property } = _decorator;
  *
  */
 
-//var static instance: JSONloader;
 var tasksInProgress = 0;
 
  
@@ -37,9 +32,10 @@ export class JSONloader extends Component {
     public downloadedCheckpoint = -1;
 
     originUrl = "https://stickandrope.com/klett/json"; 
-    //originUrl = "http://abedov.com/json"; 
 
     onLoad(){
+        console.log("Tasks in prigress : ", tasksInProgress);
+        
 
         this.gameManager = this.node.getComponent(GameManager)!;
 

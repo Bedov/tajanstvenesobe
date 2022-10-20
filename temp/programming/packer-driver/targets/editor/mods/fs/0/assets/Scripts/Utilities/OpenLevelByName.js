@@ -87,7 +87,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           return returnLevel;
         }
 
-        loadAndPlaySceneByName(event, customEventData) {
+        loadAndPlaySceneByName(customEventData) {
           var _this$loadingPanel$ge;
 
           (_this$loadingPanel$ge = this.loadingPanel.getComponent(_crd && ScriptEffects === void 0 ? (_reportPossibleCrUseOfScriptEffects({
@@ -126,7 +126,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), GlobalManager) : GlobalManager).getInstance().activeLevelData = this.findSceneDataByName(customEventData);
           console.log("ActiveLevel " + (_crd && GlobalManager === void 0 ? (_reportPossibleCrUseOfGlobalManager({
             error: Error()
-          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName);
+          }), GlobalManager) : GlobalManager).getInstance().activeLevelData.sceneName); //director.loadScene(customEventData); 
+
           director.preloadScene(customEventData, function (completedCount, totalCount, item) {
             if (labelTemp) {
               var percent = 0;

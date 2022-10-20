@@ -144,23 +144,23 @@ medivalVillageData.status = levelStatus.locked;
 
 var undergroundChamberData = new levelObject();
 undergroundChamberData.sceneName = "PodzemnaOdaja";
-undergroundChamberData.status = levelStatus.finished;
+undergroundChamberData.status = levelStatus.unlocked;
 
 var christmasVillage = new levelObject();
 christmasVillage.sceneName = "Bozicna2";
-christmasVillage.status = levelStatus.finished;
+christmasVillage.status = levelStatus.locked;
 
 var happyStreetData = new levelObject();
 happyStreetData.sceneName = "VeselaUlica";
-happyStreetData.status = levelStatus.finished;
+happyStreetData.status = levelStatus.locked;
 
 var easterVillageData = new levelObject();
 easterVillageData.sceneName = "Uskrs";
-easterVillageData.status = levelStatus.finished;
+easterVillageData.status = levelStatus.locked;
 
 var invisablePeopleCity = new levelObject();
 invisablePeopleCity.sceneName = "GradNevidljivihStanovnika";
-invisablePeopleCity.status = levelStatus.unlocked;
+invisablePeopleCity.status = levelStatus.locked;
 
 export { kinderGardenData, birthdayPartyData, playfulCityData, springFestData, medivalVillageData, christmasVillage, easterVillageData, happyStreetData, undergroundChamberData, invisablePeopleCity, globalInformations};
  

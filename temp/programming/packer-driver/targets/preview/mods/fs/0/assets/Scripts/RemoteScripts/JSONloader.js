@@ -39,10 +39,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       ({
         ccclass,
         property
-      } = _decorator); //const fs = require('fs');
-      //import{  fs} from 'fs-extra';
-      //https://docs.cocos.com/creator/3.1/manual/en/asset/dynamic-load-resources.html
-
+      } = _decorator);
       /**
        * Predefined variables
        * Name = JSONloader
@@ -54,7 +51,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
        * ManualUrl = https://docs.cocos.com/creator/3.3/manual/en/
        *
        */
-      //var static instance: JSONloader;
 
       tasksInProgress = 0;
 
@@ -73,8 +69,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _defineProperty(this, "originUrl", "https://stickandrope.com/klett/json");
         }
 
-        //originUrl = "http://abedov.com/json"; 
         onLoad() {
+          console.log("Tasks in prigress : ", tasksInProgress);
           this.gameManager = this.node.getComponent(_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager);

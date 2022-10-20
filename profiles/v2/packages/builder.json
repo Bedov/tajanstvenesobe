@@ -4,42 +4,43 @@
     "level": 4
   },
   "common": {
-    "outputName": "builds2",
+    "outputName": "2Razred",
     "mainBundleCompressionType": "merge_dep",
     "platform": "web-mobile",
     "replaceSplashScreen": true,
     "scenes": [
       {
-        "url": "db://assets/Scenes/MainMenuLift1.scene",
-        "uuid": "3bfe40cd-b7db-4537-8813-4314ffa47ea5"
+        "url": "db://assets/Scenes/Bozicna2.scene",
+        "uuid": "ab126a89-938d-47f9-86f3-a7853bb5102e"
       },
       {
-        "url": "db://assets/Scenes/KinderGarden.scene",
-        "uuid": "8822f1d8-0a2d-4e4b-a8eb-f111477f7dd0"
+        "url": "db://assets/Scenes/GradNevidljivihStanovnika.scene",
+        "uuid": "b561f411-013a-44f6-8d78-d920e66c1400"
       },
       {
-        "url": "db://assets/Scenes/ProlecniKarneval.scene",
-        "uuid": "a4271d7b-ed0a-4834-9123-b4f2184f1bb2"
+        "url": "db://assets/Scenes/MainMenuLift2.scene",
+        "uuid": "e3e5f7cd-d138-4d09-9113-79711fab1f51"
       },
       {
-        "url": "db://assets/Scenes/MedivalVillage.scene",
-        "uuid": "1ee3d23c-74a6-4240-952d-b55439fb517c"
+        "url": "db://assets/Scenes/PodzemnaOdaja.scene",
+        "uuid": "1ffaae6b-617a-49fa-8e53-7ce9b8bfa560"
       },
       {
-        "url": "db://assets/Scenes/BirthdayParty.scene",
-        "uuid": "13921665-b890-40f2-a013-d16bbc755235"
+        "url": "db://assets/Scenes/Uskrs.scene",
+        "uuid": "86ffd746-92f8-4624-99a9-abdabcec3dfd"
       },
       {
-        "url": "db://assets/Scenes/RaziganiGrad.scene",
-        "uuid": "9f511e12-84ed-4087-9760-8d61d9167c86"
+        "url": "db://assets/Scenes/VeselaUlica.scene",
+        "uuid": "25db96da-2222-4689-a936-8f0927316525"
       }
     ],
     "mainBundleIsRemote": false,
     "sourceMaps": false,
     "md5Cache": true,
-    "startScene": "3bfe40cd-b7db-4537-8813-4314ffa47ea5",
+    "startScene": "e3e5f7cd-d138-4d09-9113-79711fab1f51",
     "experimentalEraseModules": false,
-    "buildPath": "project://.."
+    "buildPath": "project://..",
+    "name": "Klett - Drugi Razred"
   },
   "BuildTaskManager": {
     "taskMap": {
@@ -47,10 +48,79 @@
         "id": "1632530368217",
         "progress": 1,
         "state": "success",
-        "message": "25-09-2021 02:53 Build success in 20329 ms!",
+        "message": "14-09-2022 15:19 Build success in 25579 ms!",
+        "options": {
+          "name": "Klett - Drugi Razred",
+          "platform": "web-mobile",
+          "buildPath": "project://build",
+          "debug": false,
+          "md5Cache": false,
+          "sourceMaps": false,
+          "replaceSplashScreen": true,
+          "mainBundleCompressionType": "merge_dep",
+          "mainBundleIsRemote": false,
+          "mergeStartScene": false,
+          "experimentalEraseModules": false,
+          "compressTexture": true,
+          "packAutoAtlas": true,
+          "startScene": "e3e5f7cd-d138-4d09-9113-79711fab1f51",
+          "scenes": [
+            {
+              "url": "db://assets/Scenes/Bozicna2.scene",
+              "uuid": "ab126a89-938d-47f9-86f3-a7853bb5102e",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/Scenes/GradNevidljivihStanovnika.scene",
+              "uuid": "b561f411-013a-44f6-8d78-d920e66c1400",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/Scenes/MainMenuLift2.scene",
+              "uuid": "e3e5f7cd-d138-4d09-9113-79711fab1f51",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/Scenes/PodzemnaOdaja.scene",
+              "uuid": "1ffaae6b-617a-49fa-8e53-7ce9b8bfa560",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/Scenes/Uskrs.scene",
+              "uuid": "86ffd746-92f8-4624-99a9-abdabcec3dfd",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/Scenes/VeselaUlica.scene",
+              "uuid": "25db96da-2222-4689-a936-8f0927316525",
+              "inBundle": false
+            }
+          ],
+          "outputName": "2Razred",
+          "packages": {
+            "web-mobile": {
+              "orientation": "landscape",
+              "polyfills": {
+                "asyncFunctions": true
+              }
+            },
+            "cocos-service": {
+              "configID": "8e3570",
+              "services": []
+            }
+          }
+        },
+        "time": "14-09-2022 15:18",
+        "dirty": false
+      },
+      "1632530848059": {
+        "id": "1632530848059",
+        "progress": 1,
+        "state": "success",
+        "message": "25-09-2021 18:10 Build success in 24325 ms!",
         "options": {
           "name": "Klett - Demo scene",
-          "platform": "web-mobile",
+          "platform": "web-desktop",
           "buildPath": "project://build",
           "debug": false,
           "md5Cache": false,
@@ -65,15 +135,18 @@
           "startScene": "9f511e12-84ed-4087-9760-8d61d9167c86",
           "scenes": [
             {
-              "url": "db://assets/scene.scene",
+              "url": "db://assets/Scenes/RaziganiGrad.scene",
               "uuid": "9f511e12-84ed-4087-9760-8d61d9167c86",
               "inBundle": false
             }
           ],
-          "outputName": "web-mobile",
+          "outputName": "web-desktop",
           "packages": {
-            "web-mobile": {
-              "orientation": "auto",
+            "web-desktop": {
+              "resolution": {
+                "designWidth": 1280,
+                "designHeight": 960
+              },
               "polyfills": {
                 "asyncFunctions": true
               }
@@ -84,15 +157,9 @@
             }
           }
         },
-        "time": "25-09-2021 02:53",
-        "dirty": false
-      },
-      "1632530848059": {
-        "id": "1632530848059",
-        "progress": 1,
-        "state": "success",
-        "message": "25-09-2021 18:10 Build success in 24325 ms!",
-        "options": {
+        "time": "25-09-2021 18:10",
+        "dirty": true,
+        "rawOptions": {
           "name": "Klett - Demo scene",
           "platform": "web-desktop",
           "buildPath": "project://build",
@@ -130,15 +197,13 @@
               "services": []
             }
           }
-        },
-        "time": "25-09-2021 18:10",
-        "dirty": false
+        }
       },
       "1636460932344": {
         "id": "1636460932344",
         "progress": 1,
         "state": "success",
-        "message": "28-07-2022 14:15 Build success in 118298 ms!",
+        "message": "20-10-2022 20:42 Build success in 32793 ms!",
         "options": {
           "name": "Klett - Demo scene",
           "platform": "web-mobile",
@@ -200,7 +265,7 @@
             }
           }
         },
-        "time": "28-07-2022 14:13",
+        "time": "20-10-2022 20:42",
         "dirty": false
       }
     }
